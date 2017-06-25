@@ -1,0 +1,21 @@
+/* Footer
+ ----------------------------------------------------------------------------- */
+.footer {
+	position: relative;
+	height: $footer_height;
+	// background: $footer_bg_color;
+	background-color: #454545;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	border-top: 20px solid #f1ad1d;
+	a {
+		color: #ffffff;
+	}
+	@extend %clear_all;
+	.container_center {
+		padding-top: 35px;
+		padding-bottom: 10px;
+	}
+}
+

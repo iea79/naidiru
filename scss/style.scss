@@ -1,0 +1,278 @@
+/*
+//  ==========================
+//  Evgeniy Ivanov
+//  Email: busforward@gmail.com
+//  Skype: ivanov_ea
+//  ==========================
+ */
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+// Compass extention 
+@import 'compass/css3';
+@import "core/variable";
+@import "core/mixin";
+@import "core/reset";
+@import "core/header";
+@import "core/footer";
+@import "core/breadcrumb";
+@import "core/pagination";
+@import "core/template";
+@import "core/form";
+@import "core/grid";
+
+
+/* Responsive styles
+----------------------------------------------------------------------------- */
+// max-width: 1200px ===========================================================
+@media (max-width: $breakpoint-xlarge) {
+}
+
+// max-width: 960px ===========================================================
+@media (max-width: $breakpoint-large) {
+	
+}
+
+// max-width: 760px ===========================================================
+@media (max-width: $breakpoint-medium) {
+	
+}
+
+// max-width: 480px ===========================================================
+@media (max-width: $breakpoint-small) {
+	
+}
+
+// @import 'modal';
+
+// Icon ==========
+
+[class*="icon_"],[class^="icon_"] {
+	display: inline-block;
+	vertical-align: baseline;
+	font-style: normal;
+}
+.icon {
+	&__gift {
+		&:before {
+			content: image-url('icon-gift.png');
+		}
+	}
+	&__star {
+		&:before {
+			content: image-url('icon-star.png');
+		}
+	}
+	// Icon social ========================
+	&__vk {
+		&:before {
+			content: image-url('icon-vk.png');
+		}
+	}
+	&__fb {
+		&:before {
+			content: image-url('icon-fb.png');
+		}
+	}
+	&__google {
+		&:before {
+			content: image-url('icon-google.png');
+		}
+	}
+	&__odnoklassniki {
+		&:before {
+			content: image-url('icon-odn.png');
+		}
+	}
+	&__twitter {
+		&:before {
+			content: image-url('icon-twit.png');
+		}
+	}
+	&__instagramm {
+		&:before {
+			content: image-url('icon-insta.png');
+		}
+	}
+}
+
+// Header ========
+.header {
+	@extend %clear_a;
+	.container_center {}
+	&__top {
+		@extend %clear_a;
+		background-color: #454545;
+		padding: 8px 0;
+		overflow: hidden;
+		line-height: 19px;
+		font-size: 14px;
+		font-weight: 400;
+		color: #ffffff;
+		&_left {
+			float: left;
+			font-style: italic;
+		}
+		&_right {
+			float: right;
+		}
+		&_item {
+			display: inline-block;
+			padding: 0 20px;
+			position: relative;
+			font-weight: 600;
+			&:nth-child(n+2) {
+				&:before {
+					content: '';
+					width: 1px;
+					height: 19px;
+					background-color: #828282;
+					position: absolute;
+					left: 0;
+				}
+			}
+			i {
+				margin-right: 10px;
+			}			
+		}
+		a {
+			color: #ffffff;
+		}
+		&_promo {
+			position: relative;
+			padding: 8px 8px 8px 40px;
+			margin-top: -8px;
+			margin-bottom: -8px;
+			background-color: #ab0505;
+			display: inline-block;
+			font-weight: 600;
+			&:before {
+				content: image-url('sale-bord.png');
+				position: absolute;
+				top: 0;
+				left: -6px;
+				width: 6px;
+				height: 100%;
+				// background: image-url('sale-bord.png') no-repeat top right;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				top: 0;
+				right: -100%;
+				height: 100%;
+				width: 100%;
+				background-color: #ab0505;
+			}
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__bottom {
+		background-color: #f1ad1d;
+		padding: 7px 0;
+		@extend %clear_a;
+		&_center {
+			overflow: hidden;
+			margin-top: 8px;
+		}
+	}
+	.logo {
+		float: left;
+		margin-right: 37px;
+		margin-top: 8px;
+	}
+	&__search {
+		position: relative;
+		overflow: hidden;
+		margin-right: 73px;
+		margin-top: 8px;
+		input {
+			@include border-radius(0);
+			border: none;
+			width: 100%;
+			padding: 13px 49px 13px 20px;
+		}
+		&_btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: 100%;
+			width: 49px;
+			border: none;
+			cursor: pointer;
+			background: image-url('icon-zoom.png') no-repeat center center #cf3135;
+			@include trs(.3);
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
+}
+
+// Login box
+.login__box {
+	float: right;
+	padding: 6px 30px 6px 12px;
+	position: relative;
+	width: 220px;
+	background-color: transparentize(#e49e0a, .5);
+	cursor: pointer;
+	@extend %clear_a;
+	&:after {
+		content: image-url('icon-carret-down.png');
+		position: absolute;
+		top: 50%;
+		right: 12px;
+		margin-top: -7px;
+	}
+	&_avatar {
+		width: 48px;
+		height: 48px;
+		// border: 1px solid #3e3e3e;
+		background-color: #838282;
+		float: left;
+		margin-right: 14px;
+		@include border-radius(50%);
+		overflow: hidden;
+		img {
+			width: 100%;
+			display: block;
+		}
+	}
+	&_text {
+		overflow: hidden;
+		color: #ffffff;
+		font-family: Arial;
+		font-size: 15px;
+		font-weight: 700;
+		margin-top: 6px;
+	}
+	&_email {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+}
+
+// Nav header
+.navbar {
+	float: right;
+	padding-right: 6.3%;
+	padding-left: 6%;
+	margin-bottom: 6px;
+	@extend %clear_a;
+	&__item {
+		float: left;
+		padding: 22px 28px;
+	}
+	&__link {
+		color: #fff;
+		font-size: 17px;
+		font-weight: 700;
+		font-family: Arial;
+	}
+}
+

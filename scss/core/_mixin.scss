@@ -1,0 +1,111 @@
+// Mixin =======================================================================
+
+// Style for columns text 
+// Используется для многоколоночного адаптивного текста, а также для списков
+// $width - минимальная ширина колонок
+// $count - количество колонок (при уменьшении экрана меняются автоматически в зависимости от первого значения)
+// $padding - отступ между колонками
+// $divider_widh - ширина разделительной линии между колонками
+// $divider_line - стиль разделительной линии 
+// $divider_color - цвет разделительной линии 
+// Лишнее можно просто закомментировать
+// ---------------------------------
+// Example for html 
+// div class="column"
+// ---------------------------------
+// Example for scss 
+// .column {
+// 	@include columns-text(300px, 3, 40px, 1px, solid, #000);
+// }
+@mixin columns-text($width, $count, $padding, $divider_widh, $divider_line, $divider_color) {
+	@include columns($width $count); // Count and width or columns
+	@include column-gap($padding); // Padding for columns
+	@include column-rule($divider_widh $divider_line $divider_color); // Divider for columns
+}
+
+
+// Float el clear
+%clear_a {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+%clear_b {
+	&:before {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+%clear_all {
+	@extend %clear_a;
+	@extend %clear_b;
+}
+
+// Transition speed for element
+@mixin trs($trs_speed) {
+	@include transition(all $trs_speed+s);
+}
+
+
+// Placeholder for input
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content};
+	&:-moz-placeholder           {@content};
+	&::-moz-placeholder          {@content};
+	&:-ms-input-placeholder      {@content}; 
+}
+
+// 
+// @TODO: Add docs to flexbox!
+// 
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex($values) {
+	-webkit-box-flex: $values;
+	-moz-box-flex:  $values;
+	-webkit-flex:  $values;
+	-ms-flex:  $values;
+	flex:  $values;
+}
+
+@mixin order($val) {
+	-webkit-order: $val;  
+	order: $val;
+}
+
+// 
+// @TODO: Add docs to flex-flow!
+// flex-flow: flex-direction flex-wrap|initial|inherit;
+//
+@mixin flex-flow($params) {
+    -webkit-flex-flow: $params; /* Safari 6.1+ */
+    flex-flow: $params;
+}
+
+// 
+// @TODO: Add docs to justify-content!
+// justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;
+// 
+@mixin justify-content($params) {
+    -webkit-justify-content: $params; /* Safari 6.1+ */
+    justify-content: $params;
+}
+
+// 
+// @TODO: Add docs to     -webkit-align-content!
+//
+@mixin align-content($params) {
+    -webkit-align-content: $params;
+    align-content: $params;
+}
