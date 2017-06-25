@@ -36,5 +36,23 @@ $(document).ready(function() {
     //             }
     //     });
     // });
+	$('.slider__fullwidth').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true
+	});
 
+	$('.sale__list_more').on('click', function(event) {
+		event.preventDefault();
+		var wrap = $(this).closest('.sale__list_terms');
+
+		$(this).closest('.sale__list_terms').toggleClass('open');
+
+		if (wrap.hasClass('open')) {
+			$(this).text('Скрыть')
+		} else {
+			$(this).text('Подробнее')
+		}
+	});
 });

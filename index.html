@@ -9,6 +9,7 @@
     <link href="css/style.css" rel="stylesheet"/>
     <script src="js/jquery.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/function.js"></script>
   </head>
   <body>
@@ -56,9 +57,126 @@
         <!-- end header__bottom -->
       </header>
       <!-- end header -->
+      <!-- begin slider__fullwide-->
+      <div class="slider slider__fullwidth">
+        <div class="slider_item"><img src="img/top-slide.jpg" alt=""/></div>
+        <div class="slider_item"><img src="img/top-slide.jpg" alt=""/></div>
+        <div class="slider_item"><img src="img/top-slide.jpg" alt=""/></div>
+        <div class="slider_item"><img src="img/top-slide.jpg" alt=""/></div>
+        <div class="slider_item"><img src="img/top-slide.jpg" alt=""/></div>
+      </div>
+      <!-- end slider__fullwide -->
       <!-- begin main__content-->
       <main class="main__content">
+        <div class="white__line">
+          <div class="container_center">
+            <!-- begin home__promo -->
+            <div class="home__promo">
+              <div class="home__promo_code">
+                <div class="home__promo_code_title">Как использовать промокод и получить подарок?</div>
+                <!-- begin home__promo_code_grid-->
+                <div class="grid grid__3 home__promo_code_grid">
+                  <div class="grid__wrapper"><img src="img/how1.png" alt=""/>
+                    <p>Сначала зарегистрируйтесь, потом найдите промокод любимого магазина и скопируйте его код</p>
+                  </div>
+                  <div class="grid__wrapper"><img src="img/how2.png" alt=""/>
+                    <p>Вставьте код промокода в специальное поле, при оформлении заказа и получите скидку!</p>
+                  </div>
+                  <div class="grid__wrapper"><img src="img/how3.png" alt=""/>
+                    <p>Получайте баллы за чеки, меняйте их на лотереи и участвуйте в ежемесячных розыгрышах. <a href="#">Подробнее о розыгрышах ></a></p>
+                  </div>
+                </div>
+                <!-- end home__promo_code_grid-->
+                <div class="home__promo_code_bottom"><a href="#" class="btn btn__lg btn__danger">Зарегистрироваться</a><span>Уже зарегистрированы? </span><a href="#"> <b>Войти в аккаунт ></b></a></div>
+              </div>
+              <div class="home__promo_shop">
+                <div class="home__promo_shop_title">Самые лучшие магазины</div>
+                <!-- begin home__promo_shop_grid-->
+                <div class="grid grid__ home__promo_shop_grid">
+                  <div class="grid__wrapper"><img src="img/shop1.jpg" alt=""/></div>
+                  <div class="grid__wrapper"><img src="img/shop2.jpg" alt=""/></div>
+                  <div class="grid__wrapper"><img src="img/shop3.jpg" alt=""/></div>
+                  <div class="grid__wrapper"><img src="img/shop4.jpg" alt=""/></div>
+                  <div class="grid__wrapper"><img src="img/shop5.jpg" alt=""/></div>
+                  <div class="grid__wrapper"><img src="img/shop6.jpg" alt=""/></div>
+                </div>
+                <!-- end home__promo_shop_grid-->
+              </div>
+            </div>
+            <!-- end home__promo -->
+          </div>
+        </div>
         <div class="container_center">
+          <!-- begin sale__list -->
+          <div class="sale__list">
+            <div class="sale__list_title">Лучшие предложения для вас</div>
+            <!-- Row 1-->
+            <div class="sale__list_row">
+              <div class="sale__list_left"><img src="img/sale-list1.png" alt=""/><a href="#" class="btn btn__success">Новый</a></div>
+              <div class="sale__list_right"><a href="#" class="sale__list_save">Сохранить</a><a href="#" class="btn btn__primary btn__code">Показать код</a>Использовано: 1283 раза</div>
+              <div class="sale__list_center">
+                <div class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</div>
+                <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
+                <div class="sale__list_terms">Условия акции: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum perspiciatis sint nihil culpa totam quam optio magni suscipit beatae ab praesentium blanditiis maiores obcaecati, harum nam ipsa repellat vitae assumenda! Ullam, fugit rerum natus tempora, non ducimus omnis sed voluptate fuga eius cum quaerat repudiandae mollitia vel, porro impedit sunt, iure delectus incidunt facilis aut adipisci minus earum quia illum. Delectus blanditiis dolores atque ipsum, quo distinctio saepe nulla, doloremque vitae dolorem optio! Tempora enim aliquam autem vero, nemo inventore ducimus similique, aperiam cumque nobis fuga odio. Natus, corporis asperiores, adipisci, aspernatur tenetur quia ex voluptatibus aperiam excepturi voluptate ullam.<a href="#" class="sale__list_more">Подробнее</a></div>
+                <div class="sale__list_bottom">
+                  <div class="sale__list_info">Используй купон, участвуй в розыгрыше!<i class="icon__question"></i></div>Все промокоды Bon prix
+                </div>
+              </div>
+            </div>
+            <!-- Row 2-->
+            <div class="sale__list_row">
+              <div class="sale__list_left"><img src="img/sale-list2.png" alt=""/><a href="#" class="btn btn__danger">Горящий</a></div>
+              <div class="sale__list_right"><a href="#" class="sale__list_save active">Сохранить</a><a href="#" class="btn btn__primary btn__code">Показать код</a>Использовано: 1283 раза</div>
+              <div class="sale__list_center">
+                <div class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</div>
+                <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
+                <div class="sale__list_terms">Условия акции: Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол<a href="#" class="sale__list_more">Подробнее</a></div>
+                <div class="sale__list_bottom">
+                  <div class="sale__list_info">Используй купон, участвуй в розыгрыше!<i class="icon__question"></i></div>Все промокоды Bon prix
+                </div>
+              </div>
+            </div>
+            <!-- Row 3-->
+            <div class="sale__list_row">
+              <div class="sale__list_left"><img src="img/sale-list3.png" alt=""/><a href="#" class="btn btn__warning">Бесплатная доставка</a></div>
+              <div class="sale__list_right"><a href="#" class="sale__list_save">Сохранить</a><a href="#" class="btn btn__primary btn__code">Показать код</a>Использовано: 1283 раза</div>
+              <div class="sale__list_center">
+                <div class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</div>
+                <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
+                <div class="sale__list_terms">Условия акции: Промокод действителен после ввода промокода, промокод действителен после промокода пол...<a href="#" class="sale__list_more">Подробнее</a></div>
+                <div class="sale__list_bottom">
+                  <div class="sale__list_info">Используй купон, участвуй в розыгрыше!<i class="icon__question"></i></div>Все промокоды Bon prix
+                </div>
+              </div>
+            </div>
+            <!-- Row 4-->
+            <div class="sale__list_row">
+              <div class="sale__list_left"><img src="img/sale-list4.png" alt=""/><a href="#" class="btn btn__warning">Подарок</a></div>
+              <div class="sale__list_right"><a href="#" class="sale__list_save">Сохранить</a><a href="#" class="btn btn__primary btn__code">Показать код</a>Использовано: 1283 раза</div>
+              <div class="sale__list_center">
+                <div class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</div>
+                <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
+                <div class="sale__list_terms">Условия акции: Промокод действителен после ввода промокода, промокод действителен после промокода пол...<a href="#" class="sale__list_more">Подробнее</a></div>
+                <div class="sale__list_bottom">
+                  <div class="sale__list_info">Используй купон, участвуй в розыгрыше!<i class="icon__question"></i></div>Все промокоды Bon prix
+                </div>
+              </div>
+            </div>
+            <!-- Row 5-->
+            <div class="sale__list_row">
+              <div class="sale__list_left"><img src="img/sale-list5.png" alt=""/><a href="#" class="btn btn__warning">-50% скидка</a></div>
+              <div class="sale__list_right"><a href="#" class="sale__list_save">Сохранить</a><a href="#" class="btn btn__primary btn__code">Показать код</a>Использовано: 1283 раза</div>
+              <div class="sale__list_center">
+                <div class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</div>
+                <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
+                <div class="sale__list_terms">Условия акции: Промокод действителен после ввода промокода, промокод действителен после промокода пол...<a href="#" class="sale__list_more">Подробнее</a></div>
+                <div class="sale__list_bottom">
+                  <div class="sale__list_info">Используй купон, участвуй в розыгрыше!<i class="icon__question"></i></div>Все промокоды Bon prix
+                </div>
+              </div>
+            </div><a href="#" class="btn btn__danger btn__lg">Посмотреть все промокоды</a>
+          </div>
+          <!-- end sale__list -->
         </div>
       </main>
       <!-- end main__content -->
@@ -70,7 +188,9 @@
         <div class="grid grid__4 footer__grid">
           <div class="grid__wrapper">
             <div class="grid__item"><a href="/" class="footer__logo"><img src="img/footer-logo.png" alt=""/></a>
-              <div class="footer__social"><a href="#" class="icon__vk"></a><a href="#" class="icon__fb"></a><a href="#" class="icon__google"></a><a href="#" class="icon__odnoklassniki"></a><a href="#" class="icon__twitter"></a><a href="#" class="icon__instagramm"></a></div>
+              <div class="footer__social">
+                <div class="footer__social_title">Мы в соцсетях:</div><a href="#" class="icon__vk"></a><a href="#" class="icon__fb"></a><a href="#" class="icon__google"></a><a href="#" class="icon__odnoklassniki"></a><a href="#" class="icon__twitter"></a><a href="#" class="icon__instagramm"></a>
+              </div>
             </div>
           </div>
           <div class="grid__wrapper">
@@ -110,7 +230,12 @@
         </div>
         <!-- end footer__grid-->
         <!-- begin footer__bottom -->
-        <div class="footer__bottom"></div>
+        <div class="footer__bottom">
+          <div class="footer__bottom_item">© 2012-2017 Найди.ру </div>
+          <div class="footer__bottom_item"><a href="#">Пользовательское соглашение</a></div>
+          <div class="footer__bottom_item"><a href="#">Правила покупок</a></div>
+          <div class="footer__bottom_item"><a href="#">Карта сайта</a></div>
+        </div>
         <!-- end footer__bottom -->
       </div>
     </footer>

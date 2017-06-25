@@ -4,7 +4,7 @@
 	position: relative;
 	height: $footer_height;
 	// background: $footer_bg_color;
-	background-color: #454545;
+	background-color: $footer_bg_color;
 	color: #ffffff;
 	font-size: 14px;
 	font-weight: 400;
@@ -17,5 +17,49 @@
 		padding-top: 35px;
 		padding-bottom: 10px;
 	}
+	&__grid {
+		.grid__wrapper {}
+		.grid__item {}
+	}
+	&__logo {
+		display: block;
+		margin-bottom: 40px;
+	}
+	&__social {
+		max-width: 140px;
+		&_title {
+			font-size: 18px;
+			margin-bottom: 24px;
+		}
+		a {
+			display: inline-block;
+			margin-right: 9px;
+			margin-bottom: 13px;
+			@include trs(.3);
+			&:hover {
+				@include rotateY(180deg);
+			}
+		}
+	}
+	&__title {
+		font-size: 18px;
+		margin-bottom: 35px;
+	}
+	&__rubric {
+		&_item {
+			margin-bottom: 18px;
+		}
+	}
+	&__bottom {
+		border-top: 1px solid #b2b2b2;
+		margin-top: 23px;
+		padding: 20px 40px 15px;
+		position: relative;
+		&_item {
+			display: inline-block;
+			margin-right: 30px;
+		}
+	}
 }
+
 

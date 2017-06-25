@@ -16,7 +16,7 @@
 .grid {
 	margin-left: -$grid_padding;
 	@include flexbox();
-	@include flex-flow(row nowrap);
+	@include flex-flow(row wrap);
 	@extend %clear_all;
 	&__wrapper {
 		padding-left: $grid_padding;

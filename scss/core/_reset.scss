@@ -18,6 +18,7 @@ html,body,.wrapper {
 body { 
 	font: 14px $main_font_family;
 	line-height: 1.2;
+	color: $main-color;
 }
 
 input, textarea {
@@ -27,6 +28,8 @@ input, textarea {
 a {
 	text-decoration: none;
 	outline: 0;
+	color: $link-color;
+	@include trs(.3);
 	&:hover {
 		text-decoration: underline;
 	}

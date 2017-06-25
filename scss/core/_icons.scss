@@ -1,0 +1,71 @@
+// Icon ==========
+
+[class*="icon_"],[class^="icon_"] {
+	display: inline-block;
+	vertical-align: baseline;
+	font-style: normal;
+}
+.icon {
+	&__gift {
+		&:before {
+			content: image-url('icon-gift.png');
+		}
+	}
+	&__time_end {
+		&:before {
+			content: image-url('icon-time-end.png');
+		}
+	}
+	&__star {
+		&:before {
+			content: image-url('icon-star.png');
+		}
+		&_white {
+			&:before {
+				content: image-url('star-white.svg');
+			}
+		}
+		&_red {
+			&:before {
+				content: image-url('star-red.svg');
+			}
+		}
+	}
+	&__question {
+		&:before {
+			content: image-url('icon-quest.png');
+		}
+	}
+
+	// Icon social ========================
+	&__vk {
+		&:before {
+			content: image-url('icon-vk.png');
+		}
+	}
+	&__fb {
+		&:before {
+			content: image-url('icon-fb.png');
+		}
+	}
+	&__google {
+		&:before {
+			content: image-url('icon-google.png');
+		}
+	}
+	&__odnoklassniki {
+		&:before {
+			content: image-url('icon-odn.png');
+		}
+	}
+	&__twitter {
+		&:before {
+			content: image-url('icon-twit.png');
+		}
+	}
+	&__instagramm {
+		&:before {
+			content: image-url('icon-insta.png');
+		}
+	}
+}
