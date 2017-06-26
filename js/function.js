@@ -100,7 +100,7 @@ $(document).ready(function() {
     });
 
     function buttonToTop() {
-        if( $(window).scrollTop() > 800 ) {
+        if( $(window).scrollTop() > ($(window).height()) ) {
             $('.to_top').addClass('to_top_show');
 	        if( $(window).scrollTop() > (pageHei  - footerHei) ) {
 	        	$('.to_top').addClass('to_top_bottom');

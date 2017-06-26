@@ -1082,18 +1082,20 @@
 }
 
 .to_top {
-	display: none;
+	// display: none;
+	opacity: 0;
 	position: fixed;
-	bottom: -100%;
+	bottom: -45px;
 	right: 5%;
 	color: #767676 !important;
 	font-family: Tahoma;
 	font-size: 17px;
-	padding: 10px 14px;
+	padding: 0px 14px;
 	background-color: #e8e7e7;
-	opacity: 0;
+	overflow: hidden;
+	height: 0;
 	z-index: 100;
-	@include trs(.5);
+	@include trs(.8);
 	&:after {
 		content: image-url('to-top.png');
 		display: inline-block;
@@ -1108,7 +1110,10 @@
 	&_show {
 		opacity: 1;
 		bottom: 0;
-		display: block;
+		height: auto;
+		// display: block;
+		padding: 10px 14px;
+		@include trs(0);
 	}
 	&_bottom {
 		position: absolute;
