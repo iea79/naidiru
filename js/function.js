@@ -72,7 +72,7 @@ $(document).ready(function() {
 		}
 	});
 
-
+	// Mobile menu
 	$('.mobile__menu_toggle').on('click', function(event) {
 		event.preventDefault();
 		$('.mobile__menu').toggleClass('open');
@@ -81,12 +81,19 @@ $(document).ready(function() {
 		}
 	});
 
+	// Mobile search
 	$('.header__search_toggle').on('click', function(event) {
 		event.preventDefault();
 		$('.header__bottom_center').toggleClass('open');
 		if ($('.mobile__menu').hasClass('open')) {
 			$('.mobile__menu').removeClass('open');
 		}
+	});
+
+	// Code open
+	$('.code__btn').on('click', function(event) {
+		event.preventDefault();
+		$(this).closest('.code__wrap').addClass('open');
 	});
 
     // To top scroll

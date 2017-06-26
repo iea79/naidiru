@@ -417,11 +417,11 @@
 		text-align: center;
 		.btn {
 			width: 100%;
-			margin-bottom: 22px;
+			// margin-bottom: 22px;
 		}
 	}
 	&_save {
-		display: block;
+		display: inline-block;
 		float: right;
 		margin-bottom: 22px;
 		color: $main-color;
@@ -490,6 +490,62 @@
 			&:hover {
 				opacity: .8;
 			}
+		}
+	}
+	.code {
+		&__wrap {
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			overflow: hidden;
+			@include border-radius(5px);
+			margin-bottom: 22px;
+			&:after,&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0px;
+				width: 100%;
+			}
+			&:after {
+				background: image-url('open-code.png') no-repeat center right;
+				z-index: 3;
+				@include trs(.8);
+			}
+			&:before {
+				background-color: #0095e1;
+				width: 50%;
+				z-index: 2;
+				@include trs(.4);
+			}
+			&.open {
+				&:after,&:before {
+					width: 0;
+				}
+				.code__filed {
+				}	
+				.code__btn {
+					z-index: 0;
+				}
+			}
+		}
+		&__field {
+			// overflow: hidden;
+			@include border-radius(5px);
+			padding: 11px 15px 11px;
+			border: 1px solid #000;
+			position: absolute;
+			z-index: 1;
+			background-color: #fff;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+		&__btn {
+			position: relative;
+			z-index: 4;
 		}
 	}
 	@media (max-width: 1199px) {
