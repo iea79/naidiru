@@ -142,7 +142,7 @@ Buttons
     text-align: center;
     max-width: 100%;
     cursor: pointer;
-    @include border-radius(5px);
+    @include border-radius(3px);
     @include trs(.3);
     &:hover {
         background-color: lighten($btn_default_bg_color, 10%);
@@ -165,5 +165,6 @@ Buttons
     }
     &__lg {
         padding: 14px 15px 15px;
+        @include border-radius(5px);
     }  
 }

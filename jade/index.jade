@@ -6,15 +6,15 @@ block title
 block content
 	// begin slider__fullwide
 	.slider.slider__fullwidth
-		.slider_item
+		.slider__item
 			img(src="img/top-slide.jpg", alt="")
-		.slider_item
+		.slider__item
 			img(src="img/top-slide.jpg", alt="")
-		.slider_item
+		.slider__item
 			img(src="img/top-slide.jpg", alt="")
-		.slider_item
+		.slider__item
 			img(src="img/top-slide.jpg", alt="")
-		.slider_item
+		.slider__item
 			img(src="img/top-slide.jpg", alt="")
 
 	// end slider__fullwide 
@@ -77,7 +77,7 @@ block content
 
 			// begin sale__list 
 			.sale__list
-				.sale__list_title Лучшие предложения для вас
+				.section__title Лучшие предложения для вас
 				
 				// Row 1
 				.sale__list_row
@@ -197,5 +197,81 @@ block content
 				a(href="#").btn.btn__danger.btn__lg Посмотреть все промокоды
 
 			// end sale__list 
+
+		.white__line
+			.container_center
+
+				.section__title Самые лучшие предложения дня
+					a(href="#").btn.btn__danger Смотреть все  >>
+
+				// begin slider__grid 
+				.slider.slider__grid
+					// Slide 1
+					.slider__item
+						.slider__grid_img
+							img(src="img/most1.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+					// Slide 2
+					.slider__item
+						.slider__grid_img
+							img(src="img/most2.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Смартфон Самсунг со скидкой -45%!
+
+					// Slide 3
+					.slider__item
+						.slider__grid_img
+							img(src="img/most3.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Снежная королева
+							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+
+					// Slide 4
+					.slider__item
+						.slider__grid_img
+							img(src="img/most4.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Купите стиральную машину и получите подарок!
+
+					// Slide 5
+					.slider__item
+						.slider__grid_img
+							img(src="img/most1.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+				// end slider__grid 
 
 	// end main__content 

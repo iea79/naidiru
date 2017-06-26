@@ -37,10 +37,20 @@ $(document).ready(function() {
     //     });
     // });
 	$('.slider__fullwidth').slick({
-		infinite: true,
+		// infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: true
+	});
+
+	$('.slider__grid').slick({
+		// infinite: false,
+		// lazyLoad: 'progressive',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		// centerMode: true,
+		variableWidth: true
 	});
 
 	$('.sale__list_more').on('click', function(event) {
