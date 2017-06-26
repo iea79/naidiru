@@ -36,6 +36,7 @@ $(document).ready(function() {
     //             }
     //     });
     // });
+
 	$('.slider__fullwidth').slick({
 		// infinite: true,
 		slidesToShow: 1,
@@ -70,4 +71,34 @@ $(document).ready(function() {
 			$(this).text('Подробнее')
 		}
 	});
+
+    var pageHei = ($('.wrapper').height());
+    var footerHei = $('.footer').height() + 20;
+    var contentHei = (pageHei - footerHei);
+
+    // To top scroll
+    $('.to_top').on('click', function(event) {
+    	event.preventDefault();
+    	$('html, body').animate({ scrollTop: $('body').offset().top }, 500);
+    });
+
+    function buttonToTop() {
+        if( $(window).scrollTop() > 800 ) {
+            $('.to_top').addClass('to_top_show');
+	        if( $(window).scrollTop() > (pageHei  - footerHei) ) {
+	        	$('.to_top').addClass('to_top_bottom');
+	        } else {
+	        	$('.to_top').removeClass('to_top_bottom');
+	        }
+        } else {
+            $('.to_top').removeClass('to_top_show');
+        }
+    }
+
+    buttonToTop();
+    
+    $(window).scroll(function(){
+    	buttonToTop();
+    });
+
 });
