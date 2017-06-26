@@ -549,6 +549,7 @@
 .simple__grid {
 	max-width: 1180px;
 	margin: auto;
+	@include flex-flow(row nowrap);
 	.grid__wrapper {}
 	.grid__item {
 		background-color: #fff;
