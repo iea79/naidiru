@@ -127,6 +127,7 @@
 		}
 	}
 	&__grid {
+		padding-bottom: 50px;
 		.slider__item {
 			width: 280px;
 			margin-right: 20px;
@@ -167,8 +168,79 @@
 				font-weight: 700;
 			}
 		}
-		.slick-list {
-			overflow-x: hidden;
+		.slick {
+			&-arrow {
+				background-color: #fff;
+				top: 74px;
+				width: 48px;
+				height: 132px;
+				@include trs(.3);
+				background-size: 47%;
+				&:hover {
+					opacity: .8;
+				}
+			}
+			&-prev {
+				background-image: image-url('slide-prev-dark.svg');
+				left: 0;
+				background-position: center left;
+				@include border-radius(0 8px 8px 0);
+			}
+			&-next {
+				background-image: image-url('slide-next-dark.svg');
+				right: 0;
+				background-position: center right;
+				@include border-radius(8px 0 0 8px);
+			}
+			&-dots {
+				position: relative;
+				width: 100%;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				margin-top: 30px;
+				@include flexbox();
+				@include flex-flow(row nowrap);
+				// @include align-content(stretch);
+				&:before {
+					content: '';
+					width: 100%;
+					position: absolute;
+					height: 1px;
+					top: 6px;
+					background-color: #8e8e8e;
+					z-index: 0;
+				}
+				li {
+					display: block;
+					margin: -6px 0 0;
+					@include flex(1 0 auto);
+					button {
+						@include border-radius(6px);
+						font-size: 0;
+						border: none;
+						width: 100%;
+						height: 12px;
+						background-color: transparent;
+						@include trs(0);
+						position: relative;
+						z-index: 2;
+						&:hover {
+							opacity: 1;
+						}
+					}
+					&.slick-active {
+						@include flex-grow(10);
+						button {
+							background-color: #8e8e8e;
+							&:hover {
+								background-color: lighten(#8e8e8e, 10%);
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 }
@@ -228,25 +300,19 @@
 	}
 }
 
-.section__title {
-	font-family: Tahoma;
-	font-size: 25px;
-	margin-bottom: 35px;
-	text-align: center;
-	.btn {
-		float: right;
-	}
-}
-
 .sale__list {
-	padding: 50px 0;
+	padding: 0 0 50px;
 	text-align: center;
 	&_row {
 		border: 1px solid #d1d1d1;
 		background-color: #ffffff;
 		margin-bottom: 16px;
 		text-align: left;
+		position: relative;
 		@extend %clear_a;
+		&:nth-child(n+6) {
+			display: none;
+		}
 		&_title {
 			font-size: 22px;
 			margin-bottom: 14px;
@@ -254,12 +320,21 @@
 		&+.btn {
 			margin-top: 20px;
 		}
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 162px;
+			top: 0;
+			bottom: 0;
+			width: 1px;
+			background-color: #d1d1d1;
+		}
 	}
 	&_left {
 		float: left;
 		width: 162px;
 		padding: 30px 25px;
-		border-right: 1px solid #d1d1d1;
 		.btn {
 			width: 100%;
 			@include border-radius(0);

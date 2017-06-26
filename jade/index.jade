@@ -75,12 +75,13 @@ block content
 
 		.container_center
 
+			.section__title Лучшие предложения для вас
+
 			// begin sale__list 
-			.sale__list
-				.section__title Лучшие предложения для вас
+			.sale__list.js_more_wrap
 				
 				// Row 1
-				.sale__list_row
+				.sale__list_row.js_more_item
 					.sale__list_left
 						img(src="img/sale-list1.png", alt="")
 						a(href="#").btn.btn__success Новый
@@ -103,7 +104,7 @@ block content
 							| Все промокоды Bon prix
 				
 				// Row 2
-				.sale__list_row
+				.sale__list_row.js_more_item
 					.sale__list_left
 						img(src="img/sale-list2.png", alt="")
 						a(href="#").btn.btn__danger Горящий
@@ -126,7 +127,7 @@ block content
 							| Все промокоды Bon prix
 				
 				// Row 3
-				.sale__list_row
+				.sale__list_row.js_more_item
 					.sale__list_left
 						img(src="img/sale-list3.png", alt="")
 						a(href="#").btn.btn__warning Бесплатная доставка
@@ -149,7 +150,7 @@ block content
 							| Все промокоды Bon prix
 				
 				// Row 4
-				.sale__list_row
+				.sale__list_row.js_more_item
 					.sale__list_left
 						img(src="img/sale-list4.png", alt="")
 						a(href="#").btn.btn__warning Подарок
@@ -172,7 +173,7 @@ block content
 							| Все промокоды Bon prix
 				
 				// Row 5
-				.sale__list_row
+				.sale__list_row.js_more_item
 					.sale__list_left
 						img(src="img/sale-list5.png", alt="")
 						a(href="#").btn.btn__warning -50% скидка
@@ -194,7 +195,53 @@ block content
 								i.icon__question
 							| Все промокоды Bon prix
 
-				a(href="#").btn.btn__danger.btn__lg Посмотреть все промокоды
+				// Row 6
+				.sale__list_row.js_more_item
+					.sale__list_left
+						img(src="img/sale-list1.png", alt="")
+						a(href="#").btn.btn__warning -50% скидка
+					.sale__list_right
+						a(href="#").sale__list_save Сохранить
+						a(href="#").btn.btn__primary.btn__code Показать код
+						| Использовано: 1283 раза
+					.sale__list_center
+						.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
+						.sale__list_deadline
+							i.icon__time_end
+							| Заканчивается через 15 дней
+						.sale__list_terms
+							|Условия акции: Промокод действителен после ввода промокода, промокод действителен после промокода пол...
+							a(href="#").sale__list_more Подробнее
+						.sale__list_bottom
+							.sale__list_info
+								|Используй купон, участвуй в розыгрыше!
+								i.icon__question
+							| Все промокоды Bon prix
+
+				// Row 7
+				.sale__list_row.js_more_item
+					.sale__list_left
+						img(src="img/sale-list2.png", alt="")
+						a(href="#").btn.btn__warning -50% скидка
+					.sale__list_right
+						a(href="#").sale__list_save Сохранить
+						a(href="#").btn.btn__primary.btn__code Показать код
+						| Использовано: 1283 раза
+					.sale__list_center
+						.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
+						.sale__list_deadline
+							i.icon__time_end
+							| Заканчивается через 15 дней
+						.sale__list_terms
+							|Условия акции: Промокод действителен после ввода промокода, промокод действителен после промокода пол...
+							a(href="#").sale__list_more Подробнее
+						.sale__list_bottom
+							.sale__list_info
+								|Используй купон, участвуй в розыгрыше!
+								i.icon__question
+							| Все промокоды Bon prix
+
+				a(href="#").btn.btn__danger.btn__lg.js_more_btn Посмотреть все промокоды
 
 			// end sale__list 
 
@@ -271,6 +318,46 @@ block content
 								|Магазин: 
 								a(href="#") Lamoda
 							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+					// Slide 6
+					.slider__item
+						.slider__grid_img
+							img(src="img/most2.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Смартфон Самсунг со скидкой -45%!
+
+					// Slide 7
+					.slider__item
+						.slider__grid_img
+							img(src="img/most3.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Снежная королева
+							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+
+					// Slide 8
+					.slider__item
+						.slider__grid_img
+							img(src="img/most4.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Купите стиральную машину и получите подарок!
 
 				// end slider__grid 
 

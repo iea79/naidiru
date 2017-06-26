@@ -44,13 +44,18 @@ $(document).ready(function() {
 	});
 
 	$('.slider__grid').slick({
-		// infinite: false,
+		infinite: false,
 		// lazyLoad: 'progressive',
-		slidesToShow: 1,
+		slidesToShow: 4,
 		slidesToScroll: 1,
-		dots: false,
+		dots: true,
 		// centerMode: true,
 		variableWidth: true
+	});
+
+	$('.js_more_btn ').on('click', function(event) {
+		event.preventDefault();
+		$(this).closest('.js_more_wrap').find('.js_more_item').show();
 	});
 
 	$('.sale__list_more').on('click', function(event) {
