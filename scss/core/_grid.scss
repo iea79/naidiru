@@ -24,12 +24,20 @@
 			padding-left: 80px;
 			&:first-child {
 				@include flex-basis(56.5%);
-				// width: 59.9%;
-				// margin-right: 9%;
 			}
 			&:last-child {
 				@include flex-basis(43%);
-				// width: 40%;
+			}
+		}
+		@media (max-width: 991px) {
+			&>.grid__wrapper {
+				padding-left: 80px;
+				&:first-child {
+					@include flex-basis(100%);
+				}
+				&:last-child {
+					@include flex-basis(100%);
+				}
 			}
 		}
 	}

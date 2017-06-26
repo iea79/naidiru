@@ -37,6 +37,12 @@
 		}
 	}
 
+	&__search {
+		&:before {
+			content: image-url('search-lg.png');
+		}
+	}
+
 	// Icon social ========================
 	&__vk {
 		&:before {

@@ -20,7 +20,7 @@
 	&__grid {
 		@include flex-flow(row nowrap);
 		.grid__wrapper {
-			width: 25%;
+			// width: 25%;
 		}
 		.grid__item {}
 	}
@@ -61,6 +61,40 @@
 		&_item {
 			display: inline-block;
 			margin-right: 30px;
+		}
+	}
+	@media (max-width: 1199px) {
+		
+	}
+	@media (max-width: 991px) {
+		height: auto;
+		&__grid {
+			margin-left: -60px;
+			@include flex-flow(row wrap);
+			.grid__wrapper {
+				padding-left: 60px;		
+				@include flex-basis(auto);
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		text-align: center;
+		&__grid {
+			.grid__wrapper {
+				@include flex-basis(100%);
+			}
+		}
+		&__social {
+			max-width: none;
+		}
+		&__bottom {
+			padding-left: 0;
+			padding-right: 0;
+			&_item {
+				margin-right: 0;
+				display: block;
+				margin-bottom: 8px;
+			}
 		}
 	}
 }
