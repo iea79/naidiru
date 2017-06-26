@@ -1,7 +1,9 @@
 // Header ========
 .header {
 	@extend %clear_a;
-	.container_center {}
+	.container_center {
+		max-width: 1450px;
+	}
 	&__top {
 		@extend %clear_a;
 		background-color: #454545;

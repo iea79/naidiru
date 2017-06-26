@@ -18,31 +18,48 @@
 	@include flexbox();
 	@include flex-flow(row wrap);
 	@extend %clear_all;
+	&__duble {
+		margin-left: -80px;
+		&>.grid__wrapper {
+			padding-left: 80px;
+			&:first-child {
+				@include flex-basis(56.5%);
+				// width: 59.9%;
+				// margin-right: 9%;
+			}
+			&:last-child {
+				@include flex-basis(43%);
+				// width: 40%;
+			}
+		}
+	}
 	&__wrapper {
 		padding-left: $grid_padding;
 		padding-bottom: $grid_padding;
-		@include flex(1 0 auto);
+		@include flex-grow(0);
+		@include flex-shrink(1);
+		@include flex-basis(content);
 		&.width {
 			&_1_1 {
-				@include flex(1 0 100%);
+				@include flex-basis(100%);
 			}
 			&_1_2 {
-				@include flex(1 0 50%);
+				@include flex-basis(50%);
 			}
 			&_1_3 {
-				@include flex(1 0 33%);
+				@include flex-basis(33%);
 			}
 			&_1_4 {
-				@include flex(1 0 25%);
+				@include flex-basis(25%);
 			}
 			&_1_5 {
-				@include flex(1 0 20%);
+				@include flex-basis(20%);
 			}
 			&_2_3 {
-				@include flex(1 0 66%);
+				@include flex-basis(66%);
 			}
 			&_3_4 {
-				@include flex(1 0 75%);
+				@include flex-basis(75%);
 			}
 		}
 	}
@@ -53,27 +70,27 @@
 	}
 	&__1 {
 		.grid__wrapper {		
-			@include flex(1 0 100%);
+			@include flex-basis(100%);
 		}
 	}
 	&__2 {
 		.grid__wrapper {		
-			@include flex(1 0 50%);
+			@include flex-basis(50%);
 		}
 	}
 	&__3 {
-		.grid__wrapper {		;
-			@include flex(1 0 33%);
+		.grid__wrapper {
+			@include flex-basis(33%);
 		}
 	}
 	&__4 {
 		.grid__wrapper {		
-			@include flex(1 0 25%);
+			@include flex-basis(25%);
 		}
 	}
 	&__5 {
 		.grid__wrapper {		
-			@include flex(1 0 20%);
+			@include flex-basis(20%);
 		}
 	}
 }
