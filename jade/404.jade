@@ -17,9 +17,9 @@ block content
 				img.error__pages_img(src="img/error-img6.png", alt="")
 				.error__pages_message
 					h1
-						span(class="first") Без паники, 
+						span.error__pages_message_first Без паники, 
 						сработал код 
-						span(class="last") 404 
+						span.error__pages_message_last 404 
 						&#8230;
 					p Мы должны сообщить Вам кое-что ужасное, запрашиваемая Вами страница не существует или была удалена. Но Вы не волнуйтесь! Ее можно найти, но только с Вашей помощью...
 					.search
@@ -35,276 +35,274 @@ block content
 	.white__line
 		.container_center
 
-			//- begin breadcrumb
+			// begin breadcrumb
 			.breadcrumb
 				li
 					a(href="/") Главная
 				li
 					a(href="#") Ошибка 404			
-			//- end breadcrumb
+			// end breadcrumb
 
 
-			//- begin Popular categories & shops
-			.popular
-				// begin grid__duble
-				.grid.grid__duble
-					.grid__wrapper
-						.section__title.section__title_link Популярные категории
-							a(href="#") Все категории
-						.box.box__gray.category__box
-							// begin category__box_grid
-							.grid.grid__3.category__box_grid
-								.grid__wrapper
-									.grid__item
-										img(src="img/cat1.png", alt="")
-										p Детские товары
-								.grid__wrapper
-									.grid__item
-										img(src="img/cat2.png", alt="")
-										p Бытовая техника
-								.grid__wrapper
-									.grid__item
-										img(src="img/cat3.png", alt="")
-										p Одежда
-								.grid__wrapper
-									.grid__item
-										img(src="img/cat4.png", alt="")
-										p Электроника
-								.grid__wrapper
-									.grid__item
-										img(src="img/cat5.png", alt="")
-										p Аксессуары
-								.grid__wrapper
-									.grid__item
-										img(src="img/cat6.png", alt="")
-										p Apple
-								.grid__wrapper
-									.grid__item
-										img(src="img/cat7.png", alt="")
-										p Подгузники и памперсы
-								.grid__wrapper
-									.grid__item
-										img(src="img/cat8.png", alt="")
-										p Смартфоны
-								.grid__wrapper
-									.grid__item
-										img(src="img/cat9.png", alt="")
-										p Обувь
-							// end category__box_grid
+			// begin Popular categories & shops
+			// begin grid__duble
+			.grid.grid__duble.mb_40
+				.grid__wrapper
+					.section__title.section__title_link Популярные категории
+						a(href="#") Все категории
+					.box.box__gray.category__box
+						// begin category__box_grid
+						.grid.grid__3.category__box_grid
+							.grid__wrapper
+								.grid__item
+									img(src="img/cat1.png", alt="")
+									p Детские товары
+							.grid__wrapper
+								.grid__item
+									img(src="img/cat2.png", alt="")
+									p Бытовая техника
+							.grid__wrapper
+								.grid__item
+									img(src="img/cat3.png", alt="")
+									p Одежда
+							.grid__wrapper
+								.grid__item
+									img(src="img/cat4.png", alt="")
+									p Электроника
+							.grid__wrapper
+								.grid__item
+									img(src="img/cat5.png", alt="")
+									p Аксессуары
+							.grid__wrapper
+								.grid__item
+									img(src="img/cat6.png", alt="")
+									p Apple
+							.grid__wrapper
+								.grid__item
+									img(src="img/cat7.png", alt="")
+									p Подгузники и памперсы
+							.grid__wrapper
+								.grid__item
+									img(src="img/cat8.png", alt="")
+									p Смартфоны
+							.grid__wrapper
+								.grid__item
+									img(src="img/cat9.png", alt="")
+									p Обувь
+						// end category__box_grid
 
-							// begin category__box_list 
-							ul.columns__list
-								li 
-									a(href="#") Путешествия и развлечения
-								li 
-									a(href="#") Детские товары и Игрушки
-								li 
-									a(href="#") Аксессуары
-								li 
-									a(href="#") Электроника
-								li 
-									a(href="#") Одежда
-								li 
-									a(href="#") Обувь
-								li 
-									a(href="#") Аксессуары
-								li 
-									a(href="#") Спортивные товары
-								li 
-									a(href="#") Еда и продукты
-								li 
-									a(href="#") Цветы и подарки
-								li 
-									a(href="#") Автотовары и Инструменты
-								li 
-									a(href="#") Книги, Игры, Фильмы
-								li 
-									a(href="#") Дом, мебель, сад
-
-
-							// end category__box_list 
-							
-					.grid__wrapper
-						.section__title.section__title_link Популярные магазины
-							a(href="#") Все магазины
-						.box.box__gray
-							ul.columns__list
-								li 
-									a(href="#") Lamoda
-								li 
-									a(href="#") Ozon
-								li 
-									a(href="#") Ebay
-								li 
-									a(href="#") Билайн
-								li 
-									a(href="#") Техносила
-								li 
-									a(href="#") Снежная королева
-								li 
-									a(href="#") Lamoda
-								li 
-									a(href="#") Техносила
-								li 
-									a(href="#") Снежная королева
-								li 
-									a(href="#") Lamoda
-								li 
-									a(href="#") Lamoda
-								li 
-									a(href="#") Ozon
-								li
-									a(href="#") Ebay
-								li 
-									a(href="#") Lamoda
-								li 
-									a(href="#") Ozon
-								li 
-									a(href="#") Ebay
-								li 
-									a(href="#") Билайн
-								li 
-									a(href="#") Техносила
-								li 
-									a(href="#") Снежная королева
-								li 
-									a(href="#") Lamoda
-								li 
-									a(href="#") Техносила
-								li 
-									a(href="#") Снежная королева
-								li 
-									a(href="#") Lamoda
-								li 
-									a(href="#") Lamoda
-								li 
-									a(href="#") Ozon
-								li
-									a(href="#") Ebay
-
-				// end grid__duble
-			//- end Popular categories & shops
+						// begin category__box_list 
+						ul.columns__list
+							li 
+								a(href="#") Путешествия и развлечения
+							li 
+								a(href="#") Детские товары и Игрушки
+							li 
+								a(href="#") Аксессуары
+							li 
+								a(href="#") Электроника
+							li 
+								a(href="#") Одежда
+							li 
+								a(href="#") Обувь
+							li 
+								a(href="#") Аксессуары
+							li 
+								a(href="#") Спортивные товары
+							li 
+								a(href="#") Еда и продукты
+							li 
+								a(href="#") Цветы и подарки
+							li 
+								a(href="#") Автотовары и Инструменты
+							li 
+								a(href="#") Книги, Игры, Фильмы
+							li 
+								a(href="#") Дом, мебель, сад
 
 
-			//- begin Best offers
-			.offers
-				.section__title.section__title_btn Самые лучшие предложения дня
-					a(href="#").btn.btn__danger Смотреть все  &raquo;
-			
-				// begin slider__grid 
-				.slider.slider__grid
-					// Slide 1
-					.slider__item
-						.slider__grid_img
-							img(src="img/most1.png", alt="")
-							.slider__grid_overlay 
-								|1240р. 
-								span 2120р.
-						.slider__grid_text
-							.slider__grid_name
-								|Магазин: 
+						// end category__box_list 
+						
+				.grid__wrapper
+					.section__title.section__title_link Популярные магазины
+						a(href="#") Все магазины
+					.box.box__gray
+						ul.columns__list
+							li 
 								a(href="#") Lamoda
-							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
-
-					// Slide 2
-					.slider__item
-						.slider__grid_img
-							img(src="img/most2.png", alt="")
-							.slider__grid_overlay 
-								|1240р. 
-								span 2120р.
-						.slider__grid_text
-							.slider__grid_name
-								|Магазин: 
-								a(href="#") Lamoda
-							|Смартфон Самсунг со скидкой -45%!
-
-					// Slide 3
-					.slider__item
-						.slider__grid_img
-							img(src="img/most3.png", alt="")
-							.slider__grid_overlay 
-								|1240р. 
-								span 2120р.
-						.slider__grid_text
-							.slider__grid_name
-								|Магазин: 
+							li 
+								a(href="#") Ozon
+							li 
+								a(href="#") Ebay
+							li 
+								a(href="#") Билайн
+							li 
+								a(href="#") Техносила
+							li 
 								a(href="#") Снежная королева
-							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
-
-
-					// Slide 4
-					.slider__item
-						.slider__grid_img
-							img(src="img/most4.png", alt="")
-							.slider__grid_overlay 
-								|1240р. 
-								span 2120р.
-						.slider__grid_text
-							.slider__grid_name
-								|Магазин: 
+							li 
 								a(href="#") Lamoda
-							|Купите стиральную машину и получите подарок!
-
-					// Slide 5
-					.slider__item
-						.slider__grid_img
-							img(src="img/most1.png", alt="")
-							.slider__grid_overlay 
-								|1240р. 
-								span 2120р.
-						.slider__grid_text
-							.slider__grid_name
-								|Магазин: 
-								a(href="#") Lamoda
-							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
-
-					// Slide 6
-					.slider__item
-						.slider__grid_img
-							img(src="img/most2.png", alt="")
-							.slider__grid_overlay 
-								|1240р. 
-								span 2120р.
-						.slider__grid_text
-							.slider__grid_name
-								|Магазин: 
-								a(href="#") Lamoda
-							|Смартфон Самсунг со скидкой -45%!
-
-					// Slide 7
-					.slider__item
-						.slider__grid_img
-							img(src="img/most3.png", alt="")
-							.slider__grid_overlay 
-								|1240р. 
-								span 2120р.
-						.slider__grid_text
-							.slider__grid_name
-								|Магазин: 
+							li 
+								a(href="#") Техносила
+							li 
 								a(href="#") Снежная королева
-							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
-
-
-					// Slide 8
-					.slider__item
-						.slider__grid_img
-							img(src="img/most4.png", alt="")
-							.slider__grid_overlay 
-								|1240р. 
-								span 2120р.
-						.slider__grid_text
-							.slider__grid_name
-								|Магазин: 
+							li 
 								a(href="#") Lamoda
-							|Купите стиральную машину и получите подарок!
+							li 
+								a(href="#") Lamoda
+							li 
+								a(href="#") Ozon
+							li
+								a(href="#") Ebay
+							li 
+								a(href="#") Lamoda
+							li 
+								a(href="#") Ozon
+							li 
+								a(href="#") Ebay
+							li 
+								a(href="#") Билайн
+							li 
+								a(href="#") Техносила
+							li 
+								a(href="#") Снежная королева
+							li 
+								a(href="#") Lamoda
+							li 
+								a(href="#") Техносила
+							li 
+								a(href="#") Снежная королева
+							li 
+								a(href="#") Lamoda
+							li 
+								a(href="#") Lamoda
+							li 
+								a(href="#") Ozon
+							li
+								a(href="#") Ebay
 
-				// end slider__grid
-			//- end Best offers
+			// end grid__duble
+			// end Popular categories & shops
+
+
+			// begin Best offers
+			.section__title.section__title_btn Самые лучшие предложения дня
+				a(href="#").btn.btn__danger Смотреть все  &raquo;
+		
+			// begin slider__grid 
+			.slider.slider__grid.pb_reset
+				// Slide 1
+				.slider__item
+					.slider__grid_img
+						img(src="img/most1.png", alt="")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+				// Slide 2
+				.slider__item
+					.slider__grid_img
+						img(src="img/most2.png", alt="")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						|Смартфон Самсунг со скидкой -45%!
+
+				// Slide 3
+				.slider__item
+					.slider__grid_img
+						img(src="img/most3.png", alt="")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Снежная королева
+						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+
+				// Slide 4
+				.slider__item
+					.slider__grid_img
+						img(src="img/most4.png", alt="")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						|Купите стиральную машину и получите подарок!
+
+				// Slide 5
+				.slider__item
+					.slider__grid_img
+						img(src="img/most1.png", alt="")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+				// Slide 6
+				.slider__item
+					.slider__grid_img
+						img(src="img/most2.png", alt="")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						|Смартфон Самсунг со скидкой -45%!
+
+				// Slide 7
+				.slider__item
+					.slider__grid_img
+						img(src="img/most3.png", alt="")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Снежная королева
+						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+
+				// Slide 8
+				.slider__item
+					.slider__grid_img
+						img(src="img/most4.png", alt="")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						|Купите стиральную машину и получите подарок!
+
+			// end slider__grid
+			// end Best offers
 
 
 	.container_center
-		//- begin lots
+		// begin lots
 		.lots
 			h2 Покупайте и участвуйте в ежемесячных розыгрышах
 			p Покупайте и копите баллы. Меняйте баллы на лотереи и участвуйте. 
@@ -316,4 +314,4 @@ block content
 			p У вас есть свой аккаунт? 
 				a(href="#") Войдите
 
-		//- end lots
+		// end lots

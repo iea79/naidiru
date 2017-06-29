@@ -54,11 +54,18 @@ $(document).ready(function() {
 		variableWidth: true
 	});
 
+	// Login box
+	$('.login__box').on('click', function(event) {
+		event.preventDefault();
+		$(this).toggleClass('open');
+	});
+
 	$('.js_more_btn ').on('click', function(event) {
 		event.preventDefault();
 		$(this).closest('.js_more_wrap').find('.js_more_item').show();
 	});
 
+	// Sale list open text
 	$('.sale__list_more').on('click', function(event) {
 		event.preventDefault();
 		var wrap = $(this).closest('.sale__list_terms');
@@ -66,9 +73,23 @@ $(document).ready(function() {
 		$(this).closest('.sale__list_terms').toggleClass('open');
 
 		if (wrap.hasClass('open')) {
-			$(this).text('Скрыть')
+			$(this).text('Скрыть');
 		} else {
-			$(this).text('Подробнее')
+			$(this).text('Подробнее');
+		}
+	});
+
+	// Click for open more text
+	$('.js_more').on('click', function(event) {
+		event.preventDefault();
+		var wrap = $(this).closest('.js_more_wrap');
+		var text = $(this).data('text');
+		$(this).parent().toggleClass('open');
+
+		if (wrap.hasClass('open')) {
+			$(this).text('Скрыть');
+		} else {
+			$(this).text(text);
 		}
 	});
 
@@ -108,14 +129,14 @@ $(document).ready(function() {
 
     function buttonToTop() {
         if( $(window).scrollTop() > ($(window).height()) ) {
-            $('.to_top').addClass('to_top_show');
+            $('.to_top_float').addClass('to_top_show');
 	        if( $(window).scrollTop() > (pageHei  - footerHei) ) {
-	        	$('.to_top').addClass('to_top_bottom');
+	        	$('.to_top_float').addClass('to_top_bottom');
 	        } else {
-	        	$('.to_top').removeClass('to_top_bottom');
+	        	$('.to_top_float').removeClass('to_top_bottom');
 	        }
         } else {
-            $('.to_top').removeClass('to_top_show');
+            $('.to_top_float').removeClass('to_top_show');
         }
     }
 

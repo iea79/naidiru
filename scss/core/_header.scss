@@ -50,6 +50,7 @@
 			background-color: #ab0505;
 			display: inline-block;
 			font-weight: 600;
+			margin-left: 6px;
 			&:before {
 				content: image-url('sale-bord.png');
 				position: absolute;
@@ -128,12 +129,23 @@
 	background-color: transparentize(#e49e0a, .5);
 	cursor: pointer;
 	@extend %clear_a;
+	&.open {
+		background-color: #e49e0a;
+		.login__box_drop {
+			height: auto;
+			padding: 23px 31px;
+		}
+		&:after {
+			@include rotate(180deg);
+		}
+	}
 	&:after {
 		content: image-url('icon-carret-down.png');
 		position: absolute;
 		top: 50%;
 		right: 12px;
 		margin-top: -7px;
+		@include trs(.5);
 	}
 	&_avatar {
 		width: 48px;
@@ -162,6 +174,26 @@
 		white-space: nowrap;
 		text-overflow: ellipsis;
 	}
+	&_drop {
+		background-color: #e49e0a;
+		position: absolute;
+		top: 60px;
+		right: 0;
+		width: 240px;
+		z-index: 50;
+		padding: 0 31px;
+		overflow: hidden;
+		height: 0;
+		@include trs(.3);
+		li {
+			&:not(:last-of-type) {			
+				margin-bottom: 15px;
+			}
+			a {
+				color: #fff;
+			}
+		}
+	}
 }
 
 // Nav header
@@ -173,16 +205,25 @@
 	@extend %clear_a;
 	width: 55%;
 	text-align: center;
+	display: table;
 	&__item {
 		float: left;
 		width: 33.3%;
-		padding: 22px 5px;
+		padding: 4px 0 10px;
+		display: table-cell;
 	}
 	&__link {
 		color: #fff;
 		font-size: 17px;
 		font-weight: 700;
 		font-family: Arial;
+		padding: 15px 10px;
+		display: block;
+		&:hover,&:active {
+			background-color: transparentize(#e49e0a, .5);
+			text-decoration: none;
+
+		}
 	}
 }
 

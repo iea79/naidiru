@@ -46,8 +46,8 @@ block content
 					.home__promo_code_bottom
 						a(href="#").btn.btn__lg.btn__danger Зарегистрироваться
 						span Уже зарегистрированы? 
-						a(href="#") 
-							b Войти в аккаунт >
+							a(href="#") 
+								b Войти в аккаунт >
 					
 
 				.home__promo_shop.box.box__gray
@@ -55,17 +55,23 @@ block content
 					// begin home__promo_shop_grid
 					.grid.grid__.home__promo_shop_grid
 						.grid__wrapper
-							img(src="img/shop1.jpg", alt="")
+							a(href="#")
+								img(src="img/shop1.jpg", alt="")
 						.grid__wrapper
-							img(src="img/shop2.jpg", alt="")
+							a(href="#")
+								img(src="img/shop2.jpg", alt="")
 						.grid__wrapper
-							img(src="img/shop3.jpg", alt="")
+							a(href="#")
+								img(src="img/shop3.jpg", alt="")
 						.grid__wrapper
-							img(src="img/shop4.jpg", alt="")
+							a(href="#")
+								img(src="img/shop4.jpg", alt="")
 						.grid__wrapper
-							img(src="img/shop5.jpg", alt="")
+							a(href="#")
+								img(src="img/shop5.jpg", alt="")
 						.grid__wrapper
-							img(src="img/shop6.jpg", alt="")
+							a(href="#")
+								img(src="img/shop6.jpg", alt="")
 					// end home__promo_shop_grid
 					
 
@@ -82,7 +88,7 @@ block content
 			.sale__list_row.js_more_item
 				.sale__list_left
 					img(src="img/sale-list1.png", alt="")
-					a(href="#").btn.btn__success Новый
+					.btn.btn__success Новый
 				.sale__list_right
 					a(href="#").sale__list_save Сохранить
 					.code__wrap
@@ -101,18 +107,18 @@ block content
 						.sale__list_info
 							|Используй купон, участвуй в розыгрыше!
 							i.icon__question
-						| Все промокоды Bon prix
+						a(href="#") Все промокоды Bon prix
 			
 			// Row 2
 			.sale__list_row.js_more_item
 				.sale__list_left
 					img(src="img/sale-list2.png", alt="")
-					a(href="#").btn.btn__danger Горящий
+					.btn.btn__danger Горящий
 				.sale__list_right
 					a(href="#").sale__list_save.active Сохранить
-					.code__wrap
-						.code__field D146SAFR
-						a(href="#").btn.btn__primary.code__btn Показать код
+					//- .code__wrap
+					//- 	.code__field D146SAFR
+					a(href="#").btn.btn__primary Открыть акцию
 					| Использовано: 1283 раза
 				.sale__list_center
 					.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
@@ -126,13 +132,13 @@ block content
 						.sale__list_info
 							|Используй купон, участвуй в розыгрыше!
 							i.icon__question
-						| Все промокоды Bon prix
+						a(href="#") Все промокоды Bon prix
 			
 			// Row 3
 			.sale__list_row.js_more_item
 				.sale__list_left
 					img(src="img/sale-list3.png", alt="")
-					a(href="#").btn.btn__warning Бесплатная доставка
+					.btn.btn__warning Бесплатная доставка
 				.sale__list_right
 					a(href="#").sale__list_save Сохранить
 					.code__wrap
@@ -151,13 +157,13 @@ block content
 						.sale__list_info
 							|Используй купон, участвуй в розыгрыше!
 							i.icon__question
-						| Все промокоды Bon prix
+						a(href="#") Все промокоды Bon prix
 			
 			// Row 4
 			.sale__list_row.js_more_item
 				.sale__list_left
 					img(src="img/sale-list4.png", alt="")
-					a(href="#").btn.btn__warning Подарок
+					.btn.btn__warning Подарок
 				.sale__list_right
 					a(href="#").sale__list_save Сохранить
 					.code__wrap
@@ -176,13 +182,13 @@ block content
 						.sale__list_info
 							|Используй купон, участвуй в розыгрыше!
 							i.icon__question
-						| Все промокоды Bon prix
+						a(href="#") Все промокоды Bon prix
 			
 			// Row 5
 			.sale__list_row.js_more_item
 				.sale__list_left
 					img(src="img/sale-list5.png", alt="")
-					a(href="#").btn.btn__warning -50% скидка
+					.btn.btn__warning -50% скидка
 				.sale__list_right
 					a(href="#").sale__list_save Сохранить
 					.code__wrap
@@ -201,59 +207,9 @@ block content
 						.sale__list_info
 							|Используй купон, участвуй в розыгрыше!
 							i.icon__question
-						| Все промокоды Bon prix
+						a(href="#") Все промокоды Bon prix
 
-			// Row 6
-			.sale__list_row.js_more_item
-				.sale__list_left
-					img(src="img/sale-list1.png", alt="")
-					a(href="#").btn.btn__warning -50% скидка
-				.sale__list_right
-					a(href="#").sale__list_save Сохранить
-					.code__wrap
-						.code__field D146SAFR
-						a(href="#").btn.btn__primary.code__btn Показать код
-					| Использовано: 1283 раза
-				.sale__list_center
-					.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
-					.sale__list_deadline
-						i.icon__time_end
-						| Заканчивается через 15 дней
-					.sale__list_terms
-						|Условия акции: Промокод действителен после ввода промокода, промокод действителен после промокода пол...
-						a(href="#").sale__list_more Подробнее
-					.sale__list_bottom
-						.sale__list_info
-							|Используй купон, участвуй в розыгрыше!
-							i.icon__question
-						| Все промокоды Bon prix
-
-			// Row 7
-			.sale__list_row.js_more_item
-				.sale__list_left
-					img(src="img/sale-list2.png", alt="")
-					a(href="#").btn.btn__warning -50% скидка
-				.sale__list_right
-					a(href="#").sale__list_save Сохранить
-					.code__wrap
-						.code__field D146SAFR
-						a(href="#").btn.btn__primary.code__btn Показать код
-					| Использовано: 1283 раза
-				.sale__list_center
-					.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
-					.sale__list_deadline
-						i.icon__time_end
-						| Заканчивается через 15 дней
-					.sale__list_terms
-						|Условия акции: Промокод действителен после ввода промокода, промокод действителен после промокода пол...
-						a(href="#").sale__list_more Подробнее
-					.sale__list_bottom
-						.sale__list_info
-							|Используй купон, участвуй в розыгрыше!
-							i.icon__question
-						| Все промокоды Bon prix
-
-			a(href="#").btn.btn__danger.btn__lg.js_more_btn Посмотреть все промокоды
+			a(href="#").btn.btn__danger.btn__lg Посмотреть все промокоды
 
 		// end sale__list 
 
@@ -516,13 +472,18 @@ block content
 	.container_center
 		
 		.banner__box
-			a(href="#").banner__box_img
+			a(href="#").banner__box_link
 				img(src="img/banner.jpg", alt="")
 
-			.banner__box_text
-				b Найди.ру - 
-				|это сайт скидок и акций. Сегодня большинство интернет-магазинов ищут любые пути, чтобы привлечь к себе как можно больше покупателей. К такой ситуации приводит в основном большая конкуренция на современном рынке чтобы привлечь к себе как можно больше покупателей конкуренция на современном рынке... 
-				a(href="#") Больше >>
+				.banner__box_text.js_more_wrap
+					b Найди.ру - 
+					|это сайт скидок и акций. Сегодня большинство интернет-магазинов ищут любые пути, чтобы привлечь к себе как можно больше покупателей. К такой ситуации приводит в основном большая конкуренция на современном рынке чтобы привлечь к себе как можно больше покупателей конкуренция на современном рынке.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					|tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					|quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					|consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					|cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					|proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					span.banner__box_more.js_more(data-text="Больше >>") Больше >>
 
 		.counter__box
 			.counter__box_top
@@ -540,10 +501,11 @@ block content
 					.counter__box_auth
 						a(href="#").btn.btn__danger.btn__lg Зарегистрироваться
 						p Уже зарегистрированы? 
-							a(href="#") Войти >
+							a(href="#") 
+								b Войти >
 
 				.counter__box_right
-					img(src="img/counter.png", alt="")
+					img(src="img/counter.jpg", alt="")
 			.counter__box_bottom
 				.counter__box_rev
 					.counter__box_rev_photo
