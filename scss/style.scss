@@ -1242,3 +1242,215 @@
 	@media (max-width: 767px) {
 	}
 }
+
+
+
+// Страница 404 ошибка 404.html ///////////////
+// ============================================
+
+// Повторяющиеся элементы
+h1 {
+	font-size: 23px;
+	.first {font-size: 32px;}
+	.last {
+		font-size: 35px;
+		font-weight: 700;
+	}
+	@media (max-width: 767px) {
+		font-size: 24px;
+		.first,
+		.last {font-size: 26px;}
+	}
+}
+
+h2 {
+	margin-bottom: 13px;
+	font-size: 22px;
+}
+
+.search {
+	position: relative;
+	overflow: hidden;
+	input {
+		@include border-radius(0);
+		width: 100%;
+		padding: 13px 49px 13px 20px;
+	}
+	&_btn {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 15px;
+		height: 100%;
+		width: 49px;
+		border: none;
+		outline: 0;
+		cursor: pointer;
+		background: image-url('icon-zoom.png') no-repeat center center $danger-color;
+		@include trs(.3);
+		&:hover {
+			opacity: .8;
+		}
+	}
+	&_toggle {
+		display: none;
+	}
+}
+
+//- begin breadcrumb
+.breadcrumb {
+	margin: -8px 0 22px;
+	li {
+		display: inline-block;
+		vertical-align: baseline;
+		&:not(:first-child) {
+			&:before {
+				content: '>';
+				display: inline-block;
+				margin-right: 3px;
+			}
+		}
+		&:last-child {
+			a {
+				cursor: default;
+				text-decoration: none;
+			}
+		}
+		
+		a {
+			color: #292929;
+			font-size: 13px;
+		}
+	}
+}
+//- end breadcrumb
+
+
+// begin Error 404
+.error {
+	padding: 60px 0;
+	background: url('../img/404-bg.jpg') no-repeat center center;
+	background-size: cover;
+	// background: linear-gradient(to right, #FEF3D1, #DBF3F3);
+	&__area {
+		position: relative;
+		padding: 0 240px;
+	}
+	&__img {
+		position: absolute;
+		&:nth-child(1) {top: 17px; left: 60px;}
+		&:nth-child(2) {top: 21.5px; right: 64.5px;}
+		&:nth-child(3) {top: 172px; left: 0;}
+		&:nth-child(4) {top: 179px; right: 7px;}
+		&:nth-child(5) {bottom: 14px; left: 100px;}
+		&:nth-child(6) {bottom: 18px; right: 100px;}
+	}
+	&__message {
+		padding: 78px 77px;
+		background-color: #fff;
+	}
+	h1 {
+		margin-bottom: 39px;
+		text-align: center;
+	}
+	p {text-align: justify;}
+	.search {
+		margin-top: 47px;
+		padding: 0 15px;
+	}
+	@media (max-width: 1199px) {
+		&__area {padding: 0 175px;}
+		&__img {
+			&:nth-child(1) {left: 15px;}
+			&:nth-child(2) {right: 19.5px;}
+			&:nth-child(5) {left: 24px;}
+			&:nth-child(6) {right: 28px;}
+		}
+		&__message {padding: 78px 30px;}
+	}
+	@media (max-width: 991px) {
+		&__area {padding: 0;}
+		&__img {display: none;}
+		&__message {padding: 78px 77px;}
+	}
+	@media (max-width: 767px) {
+		&__message {padding: 40px 20px;}
+		.search {padding: 0;}
+		.search_btn {right: 0;}
+	}
+}
+
+.search__self {
+	margin-top: 50px;
+	padding: 0 15px;
+	@extend %clear_a;
+	p {
+		float: left;
+		padding: 15px 0;
+		margin-right: 25px;
+		font-size: 18px;
+	}
+	&_btn {
+		float: left;
+		height: 49px;
+		width: 220px;
+		color: #ffffff;
+		font-size: 15px;
+		display: block;
+		cursor: pointer;
+		background-color: #454545;
+		border: 0;
+		outline: 0;
+		// @include trs(.3);
+		@include border-radius(0);
+		&:hover {opacity: .8;}
+	}
+	@media (max-width: 767px) {
+		margin-top: 30px;
+		padding: 0;
+		p {
+			float: none;
+			margin-right: 0;
+		}
+		&_btn {
+			float: none;
+			width: 100%;
+		}
+	}
+}
+// end Error 404
+
+
+// begin Popular categories & shops
+.popular {margin-bottom: 44px;}
+// end Popular categories & shops
+
+
+// begin Best offers
+.offers {margin-bottom: -48px;}
+// end Best offers
+
+
+//- begin lots
+.lots {
+	padding: 57px 20px 11px;
+	text-align: center;
+	p {margin-bottom: 2px;}
+	&__btn {
+		width: 245px;
+		padding: 9px 20px;
+		margin: 30px auto 16px;
+		color: #fff;
+		display: block;
+		cursor: pointer;
+		font-size: 15px;
+		font-weight: 700;
+		background-color: #cf3135;
+		@include border-radius(0);
+		&:hover {
+			text-decoration: none;
+			opacity: .8;
+		}
+	}
+}
+//- end lots
