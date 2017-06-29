@@ -141,26 +141,12 @@ Buttons
     background-color: $btn_default_bg_color;
     text-align: center;
     max-width: 100%;
-    cursor: pointer;
     @include border-radius(3px);
     @include trs(.3);
-    &:hover {
-        background-color: lighten($btn_default_bg_color, 10%);
-        text-decoration: none;
-    }
-    &:active {
-        background-color: darken($btn_default_bg_color, 10%);
-    }
     @each $status_el, $color_el_bg in $el_bg_colors {
         &__#{$status_el} {
             background-color: $color_el_bg;
             color: $btn_contrast_text_color;
-            &:hover {
-                background-color: lighten($color_el_bg, 10%);
-            }
-            &:active {
-                background-color: darken($color_el_bg, 10%);
-            }
         }
     }
     &__lg {
@@ -168,3 +154,28 @@ Buttons
         @include border-radius(5px);
     }  
 }
+
+input,
+a,
+button {  
+    &.btn {
+        cursor: pointer;
+        &:hover {
+            background-color: darken($btn_default_bg_color, 5%);
+            text-decoration: none;
+        }
+        // &:active {
+        //     background-color: darken($btn_default_bg_color, 10%);
+        // }
+        @each $status_el, $color_el_bg in $el_bg_colors {
+            &__#{$status_el} {
+                &:hover {
+                    background-color: darken($color_el_bg, 5%);
+                }
+                // &:active {
+                //     background-color: darken($color_el_bg, 10%);
+                // }
+            }
+        }
+    }
+}  

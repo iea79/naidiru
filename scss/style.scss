@@ -60,13 +60,18 @@
 	position: relative;
 	&__fullwidth {
 		img {
-			min-width: 100%;
-			max-width: none;
 			display: block;
-			height: 100%;
+			// height: 100%;
+			// float: right;
+			width: 100%;
+			// max-width: none;
+			// position: absolute;
+			// right: 0;
+			// top: 0;
 		}
 		.slider__item {
-			height: 299px;
+			position: relative;
+			// height: 299px;
 		}
 	}
 	&__item {
@@ -96,16 +101,16 @@
 		}
 		&-prev {
 			background-image: image-url('slide-prev.png');
-			left: 7%;
+			left: 58px;
 		}
 		&-next {
 			background-image: image-url('slide-next.png');
-			right: 7%;
+			right: 58px;
 		}
 		&-dots {
 			position: absolute;
 			bottom: 14px;
-			right: 13%;
+			right: 178px;
 			li {
 				display: inline-block;
 				margin: 5px;
@@ -212,6 +217,39 @@
 			}
 		}
 	}
+	@media (max-width: 1199px) {
+		
+	}
+	@media (max-width: 991px) {
+		.slick {
+			&-arrow {
+				&:hover {
+				}
+			}
+			&-prev {
+				left: 15px;
+			}
+			&-next {
+				right: 15px;
+			}
+			&-dots {
+				right: 45px;
+				li {
+					button {
+						&:hover {
+						}
+					}
+					&.slick-active {
+						button {
+						}
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		
+	}
 }
 
 
@@ -236,6 +274,7 @@
 				img {
 					display: inline-block;
 					margin-bottom: 13px;
+					margin-right: -17px;
 				}
 			}
 		}
@@ -243,8 +282,12 @@
 			&>* {
 				display: inline-block;
 				vertical-align: middle;
-				margin-right: 20px;
+				margin-right: 35px;
 				margin-bottom: 15px;
+			}
+			.btn {
+				width: 100%;
+				max-width: 245px;
 			}
 		}
 	}
@@ -415,9 +458,9 @@
 		width: 239px;
 		padding: 15px 24px;
 		text-align: center;
-		.btn {
+		.btn:not(.code__btn) {
 			width: 100%;
-			// margin-bottom: 22px;
+			margin-bottom: 22px;
 		}
 	}
 	&_save {
@@ -435,7 +478,7 @@
 			@include trs(.3);
 		}
 		&:hover,&.active {
-			color: $warning-color;
+			// color: $warning-color;
 			text-decoration: none;
 			&:before {
 				content: image-url('star-red.svg');
@@ -474,7 +517,9 @@
 		bottom: 0;
 	}
 	&_bottom {
-		color: #919191;
+		a {
+			color: #919191;
+		}
 	}
 	&_info {
 		background-color: $muted-color;

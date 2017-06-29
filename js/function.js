@@ -54,6 +54,12 @@ $(document).ready(function() {
 		variableWidth: true
 	});
 
+	// Login box
+	$('.login__box').on('click', function(event) {
+		event.preventDefault();
+		$(this).toggleClass('open');
+	});
+
 	$('.js_more_btn ').on('click', function(event) {
 		event.preventDefault();
 		$(this).closest('.js_more_wrap').find('.js_more_item').show();
