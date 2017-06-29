@@ -472,13 +472,18 @@ block content
 	.container_center
 		
 		.banner__box
-			a(href="#").banner__box_img
+			a(href="#").banner__box_link
 				img(src="img/banner.jpg", alt="")
 
-			.banner__box_text
-				b Найди.ру - 
-				|это сайт скидок и акций. Сегодня большинство интернет-магазинов ищут любые пути, чтобы привлечь к себе как можно больше покупателей. К такой ситуации приводит в основном большая конкуренция на современном рынке чтобы привлечь к себе как можно больше покупателей конкуренция на современном рынке... 
-				a(href="#") Больше >>
+				.banner__box_text.js_more_wrap
+					b Найди.ру - 
+					|это сайт скидок и акций. Сегодня большинство интернет-магазинов ищут любые пути, чтобы привлечь к себе как можно больше покупателей. К такой ситуации приводит в основном большая конкуренция на современном рынке чтобы привлечь к себе как можно больше покупателей конкуренция на современном рынке.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					|tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					|quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					|consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					|cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					|proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+					span.banner__box_more.js_more(data-text="Больше >>") Больше >>
 
 		.counter__box
 			.counter__box_top
@@ -496,10 +501,11 @@ block content
 					.counter__box_auth
 						a(href="#").btn.btn__danger.btn__lg Зарегистрироваться
 						p Уже зарегистрированы? 
-							a(href="#") Войти >
+							a(href="#") 
+								b Войти >
 
 				.counter__box_right
-					img(src="img/counter.png", alt="")
+					img(src="img/counter.jpg", alt="")
 			.counter__box_bottom
 				.counter__box_rev
 					.counter__box_rev_photo

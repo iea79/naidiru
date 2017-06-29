@@ -65,6 +65,7 @@ $(document).ready(function() {
 		$(this).closest('.js_more_wrap').find('.js_more_item').show();
 	});
 
+	// Sale list open text
 	$('.sale__list_more').on('click', function(event) {
 		event.preventDefault();
 		var wrap = $(this).closest('.sale__list_terms');
@@ -72,9 +73,23 @@ $(document).ready(function() {
 		$(this).closest('.sale__list_terms').toggleClass('open');
 
 		if (wrap.hasClass('open')) {
-			$(this).text('Скрыть')
+			$(this).text('Скрыть');
 		} else {
-			$(this).text('Подробнее')
+			$(this).text('Подробнее');
+		}
+	});
+
+	// Click for open more text
+	$('.js_more').on('click', function(event) {
+		event.preventDefault();
+		var wrap = $(this).closest('.js_more_wrap');
+		var text = $(this).data('text');
+		$(this).parent().toggleClass('open');
+
+		if (wrap.hasClass('open')) {
+			$(this).text('Скрыть');
+		} else {
+			$(this).text(text);
 		}
 	});
 

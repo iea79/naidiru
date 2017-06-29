@@ -46,8 +46,11 @@
 	padding: 0 50px;
 	margin-left: auto;
 	margin-right: auto;
-	@media (max-width: 991) {
+	@media (max-width: 991px) {
 		padding: 0 15px;
+	}
+	@media (max-width: 767px) {
+		padding: 0;
 	}
 }
 
@@ -59,8 +62,8 @@
 	text-align: center;
 	position: relative;
 	&_btn {
-		padding-left: 200px;
-		padding-right: 200px;
+		padding-left: 220px;
+		padding-right: 220px;
 		.btn {
 			float: right;
 			top: -5px;
@@ -79,18 +82,23 @@
 			text-decoration: underline;
 		}
 	}
-	@media (max-width: 767px) {
-		margin-top: 24px;
-		margin-bottom: 15px;
-		font-size: 22px;
+	@media (max-width: 991px) {
 		&_btn {
+			padding-left: 10px;
+			padding-right: 10px;
 			.btn {
+				position: static;
 				display: block;
 				margin: 10px auto;
 				max-width: 220px;
 				float: none;
 			}
 		}
+	}
+	@media (max-width: 767px) {
+		margin-top: 24px;
+		margin-bottom: 15px;
+		font-size: 22px;
 		
 	}
 }
