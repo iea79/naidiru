@@ -458,8 +458,10 @@
 		width: 239px;
 		padding: 15px 24px;
 		text-align: center;
-		.btn:not(.code__btn) {
+		.btn {
 			width: 100%;
+		}
+		.btn:not(.code__btn) {
 			margin-bottom: 22px;
 		}
 	}
@@ -543,54 +545,92 @@
 			display: inline-block;
 			width: 100%;
 			overflow: hidden;
-			@include border-radius(5px);
+			text-align: left;
+			@include border-radius(4px);
 			margin-bottom: 22px;
-			&:after,&:before {
-				content: '';
-				display: block;
-				position: absolute;
-				top: 0;
-				left: 0;
-				bottom: 0px;
-				width: 100%;
-			}
-			&:after {
-				background: image-url('open-code.png') no-repeat center right;
-				z-index: 3;
-				@include trs(.8);
-			}
-			&:before {
-				background-color: #0095e1;
-				width: 50%;
-				z-index: 2;
-				@include trs(.4);
-			}
+			min-height: 40px;
 			&.open {
-				&:after,&:before {
-					width: 0;
-				}
-				.code__filed {
+				// &:after,&:before {
+				// 	width: 0;
+				// }
+				// text-align: center;
+				.code__field {
+					text-align: center;
 				}	
 				.code__btn {
-					z-index: 0;
+					// z-index: 0;
+					width: 0;
+					padding: 11px 0;
+					// font-size: 0;
+					white-space: nowrap;
+					// @include trs(.5s);
+					height: 40px;
 				}
 			}
 		}
 		&__field {
 			// overflow: hidden;
-			@include border-radius(5px);
-			padding: 11px 15px 11px;
-			border: 1px solid #000;
+			@include border-radius(4px);
+			padding: 11px 10px 11px;
+			border: 1px solid #c7c7c7;
 			position: absolute;
 			z-index: 1;
 			background-color: #fff;
 			top: 0;
 			left: 0;
 			width: 100%;
+			text-align: right;
 		}
 		&__btn {
 			position: relative;
 			z-index: 4;
+			width: 86%;
+			min-height: 40px;
+			overflow: hidden;
+			@include border-radius(4px 0 4px 4px);
+			@include trs(.5s);
+			&:hover {
+				// background-color: #fff;
+			}
+			&:after,&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				// top: 0;
+				// ri: 0px;
+				// width: 100%;
+			}
+			&:after {
+				// left: 0;
+				// background: image-url('open-code.png') no-repeat center right transparent;
+				z-index: 1;
+				@include trs(.8);
+				right: 3px;
+				top: 4px;
+				// width: 0px;
+				// height: 0px;
+				border: 10px solid transparent;
+				border-right-color: #075794;
+				// background-color: #075794;
+				@include rotate(-45deg);
+			}
+			&:before {
+				// background-color: #0095e1;
+				// width: 52%;
+				// z-index: 2;
+				// @include trs(.4);
+				
+				z-index: 0;
+				right: -9px;
+				top: -8px;
+				// width: 0px;
+				// height: 0px;
+				border: 9px solid transparent;
+				border-right-color: #fff;
+				border-bottom-color: #c7c7c7;
+				@include rotate(135deg);
+				// background-color: #fff;
+			}
 		}
 	}
 	@media (max-width: 1199px) {
@@ -1196,19 +1236,25 @@
 
 .to_top {
 	// display: none;
-	opacity: 0;
-	position: fixed;
-	bottom: -45px;
+	position: absolute;
+	top: -60px;
 	right: 5%;
 	color: #767676 !important;
 	font-family: Tahoma;
 	font-size: 17px;
-	padding: 0px 14px;
+	padding: 10px 14px;
 	background-color: #e8e7e7;
-	overflow: hidden;
-	height: 0;
 	z-index: 100;
 	@include trs(.8);
+	&_float {
+		padding: 0px 14px;
+		overflow: hidden;
+		height: 0;
+		opacity: 0;
+		position: fixed;
+		bottom: -45px;
+		top: inherit;
+	}
 	&:after {
 		content: image-url('to-top.png');
 		display: inline-block;

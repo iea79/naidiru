@@ -114,14 +114,14 @@ $(document).ready(function() {
 
     function buttonToTop() {
         if( $(window).scrollTop() > ($(window).height()) ) {
-            $('.to_top').addClass('to_top_show');
+            $('.to_top_float').addClass('to_top_show');
 	        if( $(window).scrollTop() > (pageHei  - footerHei) ) {
-	        	$('.to_top').addClass('to_top_bottom');
+	        	$('.to_top_float').addClass('to_top_bottom');
 	        } else {
-	        	$('.to_top').removeClass('to_top_bottom');
+	        	$('.to_top_float').removeClass('to_top_bottom');
 	        }
         } else {
-            $('.to_top').removeClass('to_top_show');
+            $('.to_top_float').removeClass('to_top_show');
         }
     }
 
