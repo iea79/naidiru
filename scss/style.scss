@@ -1282,16 +1282,16 @@ h2 {
 
 
 // begin Error 404
-.error {
+.error__pages {
 	padding: 60px 0;
 	background: url('../img/404-bg.jpg') no-repeat center center;
 	background-size: cover;
 	// background: linear-gradient(to right, #FEF3D1, #DBF3F3);
-	&__area {
+	&_area {
 		position: relative;
 		padding: 0 240px;
 	}
-	&__img {
+	&_img {
 		position: absolute;
 		&:nth-child(1) {top: 17px; left: 60px;}
 		&:nth-child(2) {top: 21.5px; right: 64.5px;}
@@ -1300,7 +1300,7 @@ h2 {
 		&:nth-child(5) {bottom: 14px; left: 100px;}
 		&:nth-child(6) {bottom: 18px; right: 100px;}
 	}
-	&__message {
+	&_message {
 		padding: 78px 77px;
 		background-color: #fff;
 	}
@@ -1314,22 +1314,22 @@ h2 {
 		padding: 0 15px;
 	}
 	@media (max-width: 1199px) {
-		&__area {padding: 0 175px;}
-		&__img {
+		&_area {padding: 0 175px;}
+		&_img {
 			&:nth-child(1) {left: 15px;}
 			&:nth-child(2) {right: 19.5px;}
 			&:nth-child(5) {left: 24px;}
 			&:nth-child(6) {right: 28px;}
 		}
-		&__message {padding: 78px 30px;}
+		&_message {padding: 78px 30px;}
 	}
 	@media (max-width: 991px) {
-		&__area {padding: 0;}
-		&__img {display: none;}
-		&__message {padding: 78px 77px;}
+		&_area {padding: 0;}
+		&_img {display: none;}
+		&_message {padding: 78px 77px;}
 	}
 	@media (max-width: 767px) {
-		&__message {padding: 40px 20px;}
+		&_message {padding: 40px 20px;}
 		.search {padding: 0;}
 		.search_btn {right: 0;}
 	}
