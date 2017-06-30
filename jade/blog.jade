@@ -1,0 +1,41 @@
+extends template.jade
+
+block title
+	title Blog Главная
+
+block content	
+	.white__line
+		.container_center
+
+
+			// begin breadcrumb
+			.breadcrumb.ind
+				li
+					a(href="/") Главная
+				li
+					a(href="#") Блог			
+			// end breadcrumb
+
+			h1.mb_40.ind Блог (Советы, лайфхаки)
+
+
+			// begin blog__top
+			.blog__top
+				.blog__top_left
+					a.blog__top_big(href="#")
+						img(src="img/blog-img1.jpg", alt="#")
+						.blog__top_big_name Какой телевизор лучше выбрать. Мнение специалиста в этой области. Супер распродажа!
+				.blog__top_right.ind
+					a.blog__top_item(href="#")
+						img(src="img/blog-img2.jpg", alt="#")
+						.blog__top_item_text
+							.blog__top_item_name Какой телевизор самый лучший выбрать. Мнение специалиста
+					a.blog__top_item(href="#")
+						img(src="img/blog-img3.jpg", alt="#")
+						.blog__top_item_text
+							.blog__top_item_name Какой телевизор самый лучший выбрать.
+					a.blog__top_item(href="#")
+						img(src="img/blog-img4.jpg", alt="#")
+						.blog__top_item_text
+							.blog__top_item_name Какой телевизор самый лучший выбрать. Мнение специалиста в этой области и его советы по уходу за техникой
+			// end blog__top
