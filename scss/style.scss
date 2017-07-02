@@ -1342,13 +1342,13 @@
 }
 
 
-
-// Страница 404 ошибка 404.html ///////////////
-// ============================================
-
+// ---------------------------------------------
 // Повторяющиеся элементы
 h1 {
 	font-size: 23px;
+	@media (max-width: 767px) {
+		text-align: center;
+	}
 }
 
 h2 {
@@ -1382,6 +1382,30 @@ h2 {
 	}
 	&_toggle {
 		display: none;
+	}
+}
+
+.mt {
+	&_10 {
+		margin-top: 10px;
+	}
+	&_20 {
+		margin-top: 20px;
+	}
+	&_30 {
+		margin-top: 30px;
+	}
+	&_40 {
+		margin-top: 40px;
+	}
+	&_50 {
+		margin-top: 50px;
+	}
+	&_60 {
+		margin-top: 60px;
+	}
+	&_reset {
+		margin-top: 0;
 	}
 }
 
@@ -1440,6 +1464,10 @@ h2 {
 	}
 }
 
+.red_color {
+	color: #cf3135;
+}
+
 // begin breadcrumb
 .breadcrumb {
 	margin: -8px 0 22px;
@@ -1468,6 +1496,35 @@ h2 {
 }
 // end breadcrumb
 
+.main__content {
+	@extend %clear_a;
+	&_sidebar {
+		width: 280px;
+	}
+	&_center {
+		overflow: hidden;
+	}
+	@media (max-width: 1199px) {
+		&_sidebar {
+			display: none;
+		}
+	}
+}
+
+.fl {
+	&_left {
+		float: left;
+	}
+	&_right {
+		float: right;
+		margin-left: 80px;
+	}
+}
+
+// ---------------------------------------------------
+
+// Страница 404 ошибка 404.html ///////////////
+// ============================================
 
 // begin Error 404
 .error__pages {
@@ -1526,6 +1583,9 @@ h2 {
 	.search {
 		margin-top: 47px;
 		padding: 0 15px;
+		white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
 	}
 	@media (max-width: 1199px) {
 		&_area {
@@ -1629,9 +1689,8 @@ h2 {
 	p {
 		margin-bottom: 2px;
 	}
-	&__btn {
+	.btn {
 		width: 245px;
-		padding: 9px 20px;
 		margin: 30px auto 16px;
 		color: #fff;
 		display: block;
@@ -1687,9 +1746,8 @@ h2 {
 		flex-grow: 1px;
 		justify-content: space-between;
 		img {
-			// width: 44.5%;
+			width: 220px;
 			height: auto;
-			float: left;
 			margin-right: 23px;
 			display: block;
 		}
@@ -1702,8 +1760,10 @@ h2 {
 			overflow: hidden;
 			color: #292929;
 			font-size: 18px;
-		}
-		&:hover {text-decoration: none;}                                 
+		}                               
+	}
+	a {
+		text-decoration: none;
 	}
 	@media (max-width: 1199px) {
 		flex-direction: column;
@@ -1720,5 +1780,356 @@ h2 {
 			margin-top: 20px;
 		}
 	}
+	@media (max-width: 767px) {
+		&_big {
+			&_name {
+				position: static;
+				margin-top: -3px;
+				text-align: center;
+			}
+		}
+		&_item {
+			height: auto;
+			flex-direction: column;
+			img {
+				height: auto;
+				margin: 0 auto 20px;
+			}
+			&_text {
+				text-align: center;
+			}
+			&_name {
+				max-height: auto;
+				overflow: visible;
+			}                               
+		}
+	}
 }
 // end blog__top
+
+
+// begin sidebar
+.sidebar__section {
+	padding-top: 26px;
+	padding-bottom: 45px;
+	border-bottom: 1px solid #dadada;
+	&:last-child {border-bottom: 0;}
+	&_name {
+		margin-bottom: 26px;
+		font-size: 18px;
+	}
+	.btn {
+		width: 190px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	.columns__list {
+	@include columns-text(110px, 2, 50px, 0px, solid, #000);
+		a {
+			color: #292929;
+		}
+	}
+}
+
+.slider {
+	&__sidebar {
+		height: 280px;
+		.slick-prev {
+			display: none !important;
+		}
+		.slick-next {
+			position: absolute;
+			top: 20px;
+			right: 0;
+			width: 40px;
+			height: 257px;
+			background: #dadada url('../img/arrow-next.png') no-repeat center center;
+		}
+	}
+	&__item {
+		.category__box_grid {
+			width: 240px;
+			padding: 0;
+			margin: 0;
+		}
+		.grid__wrapper {
+			padding: 0 20px 15px 0;
+			float: left;
+		}
+		.grid__item {
+			color: #2d2d2d;
+		}
+	}
+}
+
+.b__hashtag {
+	&_item {
+		margin-top: 18px;
+		display: block;
+		color: #292929;
+		font-size: 15px;
+		&:first-child {margin-top: 0;}
+		&:hover {
+			text-decoration: none;
+		}
+		&:before {
+			content: '#';
+		}
+	}
+}
+// end sidebar
+
+
+// begin main__content_center
+
+// Список хештегов
+.b__hashtag {
+	&_list {
+		margin-left: -20px;
+		display: inline-block;
+		&:before {
+			content: 'Искать по хештегу:';
+			margin-left: 25px;
+			font-size: 18px;
+		}
+	}
+	&_item {
+		&.ib {
+			padding: 8px 15px;
+			margin-left: 20px;
+			display: inline-block;
+			font-size: 14px;
+			background-color: #f1f1f1;
+			border-radius: 5px;
+		}
+	}
+	&.center {
+		margin-bottom: 50px;
+		padding: 12px 35px 32px;
+		background-color: #fff;
+		border: 1px solid #d1d1d1;
+	}
+	@media (max-width: 479px) {
+		&_list {
+			display: block;
+			&:before {
+				content: 'Искать по хештегу:';
+				display: block;
+			}
+		}
+		&.center {
+			padding: 32px 20px;
+			border-left: 0;
+			border-right: 0;
+		}
+	}
+}
+
+// Список статей
+.b__article {
+	&_item {
+		height: 237px;
+		margin-top: 40px;
+		background-color: #fff;
+		border: 1px solid #d1d1d1;
+		@extend %clear_a;
+	}
+	&_img {
+		float: left;
+		display: block;
+		cursor: pointer;
+	}
+	&_info {
+		position: relative;
+		overflow: hidden;
+		padding: 30px 40px 24px;
+	}
+	&_name {
+		height: 50px;
+		margin-bottom: 10px;
+		overflow: hidden;
+		font-size: 21px;
+	}
+	&_text {
+		height: 32px;
+		margin-bottom: 23px;
+		overflow: hidden;
+		text-align: justify;
+	}
+	&_p {
+		color: #838282;
+		@extend %clear_a;
+		.date:after {
+			content: '|';
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		.category {
+			cursor: pointer;
+			color: #2893e5;
+			&:before {
+				content: '#';
+			}
+		}
+		.comments__img {
+			float: left;
+			margin-right: 10px;
+			display: block;
+		}
+	}
+	&_more {
+		position: absolute;
+		bottom: 20px;
+		right: 42px;
+		cursor: pointer;
+		color: #2893e5;
+		font-size: 17px;
+	}
+	&_hero {
+		font-size: 13px;
+	}
+	@media (max-width: 767px) {
+		&_item {
+			height: auto;
+			background-color: transparent;
+			border: 0;
+		}
+		&_img {
+			width: 339px;
+			float: none;
+			margin: 0 auto 20px;
+		}
+		&_info {
+		    padding: 20px;
+		    margin-left: 20px;
+			margin-right: 20px;
+		    overflow: visible;
+			background-color: #fff;
+			border: 1px solid #d1d1d1;	
+		}
+		&_name,
+		&_text {
+			height: auto;
+			overflow: visible;
+			text-align: center;
+		}
+		&_hero {
+			margin-left: 20px;
+			margin-right: 20px;
+			text-align: center;
+		}
+	}
+	@media (max-width: 479px) {
+		&_item {
+			background-color: #fff;
+		}
+		&_img {
+			width: 100%;
+			margin-bottom: 0;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&_info {
+			padding: 20px 20px 60px;
+			margin-left: 0;
+			margin-right: 0;
+			border: 0;
+			border-bottom: 1px solid #d1d1d1;
+		}
+	}
+}
+
+// Рекламный пост
+.b__article_ad {
+	margin-top: 40px;
+	margin-bottom: 10px;
+	background-color: #e8e7e7;
+	border: 2px dashed #B5B4B4;
+	@extend %clear_a;
+	&_img {
+		float: left;
+		display: block;
+	}
+	&_info {
+		overflow: hidden;
+		padding: 40px 30px 35px;
+	}
+	h2 {
+		height: 26px;
+		overflow: hidden;
+	}
+	&_text {
+		height: 16px;
+		overflow: hidden;
+	}
+	&_in {
+		margin-top: 27px;                               
+		@extend %clear_a;
+		.btn {
+			width: 217px;
+			float: left;
+			margin-right: 25px;
+			display: block;
+		}
+		p {
+			padding-top: 12px;
+			overflow: hidden;
+		}
+	}
+	@media (max-width: 767px) {
+		margin-left: 20px;
+		margin-right: 20px;
+		&_img {
+			width: 184px;
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&_info {
+			padding: 10px 20px 35px;
+		}
+		h2,
+		&_text {
+			text-align: center;
+			height: auto;
+			overflow: visible;
+		}
+		&_in {
+			.btn {
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			p {
+				text-align: center;
+			}
+		}
+	}
+	@media (max-width: 479px) {
+		margin-left: 0;
+		margin-right: 0;
+		border-left: 0;
+		border-right: 0;
+	}
+}
+
+// Продолжение следует
+.b__continue {
+	width: 280px;
+	margin: 50px auto 0;
+	@extend %clear_a;
+	&_img {
+		float: left;
+		margin-right: 24px;
+		display: block;
+	}
+	&_text {
+	    padding-top: 16px;
+		overflow: hidden;
+		font-size: 17px;
+	}
+}
+// end main__content_center
