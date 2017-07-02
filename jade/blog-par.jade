@@ -1,50 +1,24 @@
 extends template.jade
 
 block title
-	title Blog Главная
+	title Blog Разделы
 
-block content	
-	.white__line.pb_50
-		.container_center
-
-
-			// begin breadcrumb
-			.breadcrumb.ind
-				li
-					a(href="/") Главная
-				li
-					a(href="#") Блог			
-			// end breadcrumb
-
-			h1.mb_30.ind Блог (Советы, лайфхаки)
-
-
-			// begin blog__top
-			.blog__top
-				.blog__top_left
-					a.blog__top_big(href="#")
-						img(src="img/blog-img1.jpg", alt="#")
-						.blog__top_big_name Какой телевизор лучше выбрать. Мнение специалиста в этой области. Супер распродажа!
-				.blog__top_right.ind
-					a.blog__top_item(href="#")
-						img(src="img/blog-img2.jpg", alt="#")
-						.blog__top_item_text
-							.blog__top_item_name Какой телевизор самый лучший выбрать. Мнение специалиста
-					a.blog__top_item(href="#")
-						img(src="img/blog-img3.jpg", alt="#")
-						.blog__top_item_text
-							.blog__top_item_name Какой телевизор самый лучший выбрать.
-					a.blog__top_item(href="#")
-						img(src="img/blog-img4.jpg", alt="#")
-						.blog__top_item_text
-							.blog__top_item_name Какой телевизор самый лучший выбрать. Мнение специалиста в этой области и его советы по уходу за техникой
-			// end blog__top
-
-
+block content
 	.container_center
-		.banner__box.mb_50
-			a(href="#").banner__box_link
-				img(src="img/banner2.jpg", alt="")
+
+
+		// begin breadcrumb
+		.breadcrumb.ind.mt_40
+			li
+				a(href="/") Главная
+			li
+				a(href="#") Блог
+			li
+				a(href="#") #Мода                   			
+		// end breadcrumb
+
+
+		h1.mb_30.ind #Мода
 
 
 		.main__content.pb_60
@@ -201,20 +175,9 @@ block content
 
 			// begin main__content_center
 			.main__content_center
-				
-				.b__hashtag.center
-					.b__hashtag_list
-						a.b__hashtag_item.ib(href="#") Мода
-						a.b__hashtag_item.ib(href="#") Победители_лотереи
-						a.b__hashtag_item.ib(href="#") Подборки_с_Алиэкспресс
-						a.b__hashtag_item.ib(href="#") Шоппинг
-						a.b__hashtag_item.ib(href="#") Подборки_образов
-
-
-				h1.ind Самые популярные статьи
 
 				.b__article
-					.b__article_item
+					.b__article_item.mt_reset
 						a.b__article_img
 							img(src="img/b-article-img1.jpg", alt="")
 						.b__article_info

@@ -1396,7 +1396,7 @@ h2 {
 		margin-top: 30px;
 	}
 	&_40 {
-		margin-top: 40px;
+		margin-top: 40px !important;
 	}
 	&_50 {
 		margin-top: 50px;
@@ -1405,7 +1405,7 @@ h2 {
 		margin-top: 60px;
 	}
 	&_reset {
-		margin-top: 0;
+		margin-top: 0 !important;
 	}
 }
 
@@ -1462,6 +1462,10 @@ h2 {
 		padding-left: 20px;
 		padding-right: 20px;
 	}
+}
+
+.dn {
+	display: none;
 }
 
 .red_color {
@@ -1975,7 +1979,11 @@ h2 {
 				content: '#';
 			}
 		}
-		.comments__img {
+	}
+	&_comments {
+		color: #838282;
+		@extend %clear_a;
+		&_img {
 			float: left;
 			margin-right: 10px;
 			display: block;
