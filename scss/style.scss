@@ -1342,22 +1342,12 @@
 }
 
 
-
-// Страница 404 ошибка 404.html ///////////////
-// ============================================
-
+// ---------------------------------------------
 // Повторяющиеся элементы
 h1 {
 	font-size: 23px;
-	.first {font-size: 32px;}
-	.last {
-		font-size: 35px;
-		font-weight: 700;
-	}
 	@media (max-width: 767px) {
-		font-size: 24px;
-		.first,
-		.last {font-size: 26px;}
+		text-align: center;
 	}
 }
 
@@ -1395,7 +1385,94 @@ h2 {
 	}
 }
 
-//- begin breadcrumb
+.mt {
+	&_10 {
+		margin-top: 10px;
+	}
+	&_20 {
+		margin-top: 20px;
+	}
+	&_30 {
+		margin-top: 30px;
+	}
+	&_40 {
+		margin-top: 40px !important;
+	}
+	&_50 {
+		margin-top: 50px;
+	}
+	&_60 {
+		margin-top: 60px;
+	}
+	&_reset {
+		margin-top: 0 !important;
+	}
+}
+
+.mb {
+	&_10 {
+		margin-bottom: 10px;
+	}
+	&_20 {
+		margin-bottom: 20px;
+	}
+	&_30 {
+		margin-bottom: 30px;
+	}
+	&_40 {
+		margin-bottom: 40px;
+	}
+	&_50 {
+		margin-bottom: 50px;
+	}
+	&_60 {
+		margin-bottom: 60px;
+	}
+	&_reset {
+		margin-bottom: 0;
+	}
+}
+
+.pb {
+	&_10 {
+		padding-bottom: 10px;
+	}
+	&_20 {
+		padding-bottom: 20px;
+	}
+	&_30 {
+		padding-bottom: 30px;
+	}
+	&_40 {
+		padding-bottom: 40px;
+	}
+	&_50 {
+		padding-bottom: 50px;
+	}
+	&_60 {
+		padding-bottom: 60px;
+	}
+	&_reset {
+		padding-bottom: 0;
+	}
+}
+
+.ind {
+	@media (max-width: 767px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.dn {
+	display: none;
+}
+
+.red_color {
+	color: #cf3135;
+}
+
+// begin breadcrumb
 .breadcrumb {
 	margin: -8px 0 22px;
 	li {
@@ -1421,60 +1498,148 @@ h2 {
 		}
 	}
 }
-//- end breadcrumb
+// end breadcrumb
 
+.main__content {
+	@extend %clear_a;
+	&_sidebar {
+		width: 280px;
+	}
+	&_center {
+		overflow: hidden;
+	}
+	@media (max-width: 1199px) {
+		&_sidebar {
+			display: none;
+		}
+	}
+}
+
+.fl {
+	&_left {
+		float: left;
+	}
+	&_right {
+		float: right;
+		margin-left: 80px;
+	}
+}
+
+// ---------------------------------------------------
+
+// Страница 404 ошибка 404.html ///////////////
+// ============================================
 
 // begin Error 404
-.error {
+.error__pages {
 	padding: 60px 0;
 	background: url('../img/404-bg.jpg') no-repeat center center;
 	background-size: cover;
 	// background: linear-gradient(to right, #FEF3D1, #DBF3F3);
-	&__area {
+	&_area {
 		position: relative;
 		padding: 0 240px;
 	}
-	&__img {
+	&_img {
 		position: absolute;
-		&:nth-child(1) {top: 17px; left: 60px;}
-		&:nth-child(2) {top: 21.5px; right: 64.5px;}
-		&:nth-child(3) {top: 172px; left: 0;}
-		&:nth-child(4) {top: 179px; right: 7px;}
-		&:nth-child(5) {bottom: 14px; left: 100px;}
-		&:nth-child(6) {bottom: 18px; right: 100px;}
+		&:nth-child(1) {
+			top: 17px;
+			left: 60px;
+		}
+		&:nth-child(2) {
+			top: 21.5px;
+			right: 64.5px;
+		}
+		&:nth-child(3) {
+			top: 172px;
+			left: 0;
+		}
+		&:nth-child(4) {
+			top: 179px;
+			right: 7px;
+		}
+		&:nth-child(5) {
+			bottom: 14px;
+			left: 100px;
+		}
+		&:nth-child(6) {
+			bottom: 18px;
+			right: 100px;
+		}
 	}
-	&__message {
+	&_message {
 		padding: 78px 77px;
 		background-color: #fff;
+		&_first {
+			font-size: 32px;
+		}
+		&_last {
+			font-size: 35px;
+			font-weight: 700;
+		}
 	}
 	h1 {
-		margin-bottom: 39px;
 		text-align: center;
 	}
-	p {text-align: justify;}
+	p {
+		text-align: justify;
+	}
 	.search {
 		margin-top: 47px;
 		padding: 0 15px;
+		white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
 	}
 	@media (max-width: 1199px) {
-		&__area {padding: 0 175px;}
-		&__img {
-			&:nth-child(1) {left: 15px;}
-			&:nth-child(2) {right: 19.5px;}
-			&:nth-child(5) {left: 24px;}
-			&:nth-child(6) {right: 28px;}
+		&_area {
+			padding: 0 175px;
 		}
-		&__message {padding: 78px 30px;}
+		&_img {
+			&:nth-child(1) {
+				left: 15px;
+			}
+			&:nth-child(2) {
+				right: 19.5px;
+			}
+			&:nth-child(5) {
+				left: 24px;
+			}
+			&:nth-child(6) {
+				right: 28px;
+			}
+		}
+		&_message {
+			padding: 78px 30px;
+		}
 	}
 	@media (max-width: 991px) {
-		&__area {padding: 0;}
-		&__img {display: none;}
-		&__message {padding: 78px 77px;}
+		&_area {
+			padding: 0;
+		}
+		&_img {
+			display: none;
+		}
+		&_message {
+			padding: 78px 77px;
+		}
 	}
 	@media (max-width: 767px) {
-		&__message {padding: 40px 20px;}
-		.search {padding: 0;}
-		.search_btn {right: 0;}
+		&_message {
+			padding: 40px 20px;
+			&_first {
+				font-size: 24px;
+			}
+			&_last {
+				font-size: 26px;
+			}
+		}
+		.search {
+			padding: 0;
+		}
+		.search_btn {
+			right: 0;
+		}
 	}
 }
 
@@ -1501,7 +1666,9 @@ h2 {
 		outline: 0;
 		// @include trs(.3);
 		@include border-radius(0);
-		&:hover {opacity: .8;}
+		&:hover {
+			opacity: .8;
+		}
 	}
 	@media (max-width: 767px) {
 		margin-top: 30px;
@@ -1519,24 +1686,18 @@ h2 {
 // end Error 404
 
 
-// begin Popular categories & shops
-.popular {margin-bottom: 44px;}
-// end Popular categories & shops
-
-
-// begin Best offers
-.offers {margin-bottom: -48px;}
-// end Best offers
-
-
-//- begin lots
+// begin lots
 .lots {
 	padding: 57px 20px 11px;
 	text-align: center;
-	p {margin-bottom: 2px;}
-	&__btn {
+	h2 {
+		font-weight: 400;
+	}
+	p {
+		margin-bottom: 2px;
+	}
+	.btn {
 		width: 245px;
-		padding: 9px 20px;
 		margin: 30px auto 16px;
 		color: #fff;
 		display: block;
@@ -1551,4 +1712,435 @@ h2 {
 		}
 	}
 }
-//- end lots
+// end lots
+
+
+// Блог Главная blog.html ///////////////
+// ======================================
+
+// begin blog__top
+.blog__top {
+	display: flex;
+	&_left {
+		position: relative;
+		margin-right: 20px;
+		flex-grow: 1;
+		img {
+			width: 100%;
+		}
+	}
+	&_big {
+		&_name {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			padding: 23px 39px;
+			color: #fff;
+			font-size: 21px;
+			background-color: rgba(0, 0, 0, 0.75);
+		}
+	}
+	&_right {
+		width: 39.5%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&_item {
+		height: 29%;
+		display: flex;
+		flex-grow: 1px;
+		justify-content: space-between;
+		img {
+			width: 220px;
+			height: auto;
+			margin-right: 23px;
+			display: block;
+		}
+		&_text {
+			align-self: center;
+			flex-grow: 1;
+		}
+		&_name {
+			max-height: 84px;
+			overflow: hidden;
+			color: #292929;
+			font-size: 18px;
+		}                               
+	}
+	a {
+		text-decoration: none;
+	}
+	@media (max-width: 1199px) {
+		flex-direction: column;
+		&_left {
+			margin-right: 0;
+			img {
+				width: 100%;
+			}
+		}
+		&_right {
+			width: 100%;
+		}
+		&_item {
+			margin-top: 20px;
+		}
+	}
+	@media (max-width: 767px) {
+		&_big {
+			&_name {
+				position: static;
+				margin-top: -3px;
+				text-align: center;
+			}
+		}
+		&_item {
+			height: auto;
+			flex-direction: column;
+			img {
+				height: auto;
+				margin: 0 auto 20px;
+			}
+			&_text {
+				text-align: center;
+			}
+			&_name {
+				max-height: auto;
+				overflow: visible;
+			}                               
+		}
+	}
+}
+// end blog__top
+
+
+// begin sidebar
+.sidebar__section {
+	padding-top: 26px;
+	padding-bottom: 45px;
+	border-bottom: 1px solid #dadada;
+	&:last-child {border-bottom: 0;}
+	&_name {
+		margin-bottom: 26px;
+		font-size: 18px;
+	}
+	.btn {
+		width: 190px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+	}
+	.columns__list {
+	@include columns-text(110px, 2, 50px, 0px, solid, #000);
+		a {
+			color: #292929;
+		}
+	}
+}
+
+.slider {
+	&__sidebar {
+		height: 280px;
+		.slick-prev {
+			display: none !important;
+		}
+		.slick-next {
+			position: absolute;
+			top: 20px;
+			right: 0;
+			width: 40px;
+			height: 257px;
+			background: #dadada url('../img/arrow-next.png') no-repeat center center;
+		}
+	}
+	&__item {
+		.category__box_grid {
+			width: 240px;
+			padding: 0;
+			margin: 0;
+		}
+		.grid__wrapper {
+			padding: 0 20px 15px 0;
+			float: left;
+		}
+		.grid__item {
+			color: #2d2d2d;
+		}
+	}
+}
+
+.b__hashtag {
+	&_item {
+		margin-top: 18px;
+		display: block;
+		color: #292929;
+		font-size: 15px;
+		&:first-child {margin-top: 0;}
+		&:hover {
+			text-decoration: none;
+		}
+		&:before {
+			content: '#';
+		}
+	}
+}
+// end sidebar
+
+
+// begin main__content_center
+
+// Список хештегов
+.b__hashtag {
+	&_list {
+		margin-left: -20px;
+		display: inline-block;
+		&:before {
+			content: 'Искать по хештегу:';
+			margin-left: 25px;
+			font-size: 18px;
+		}
+	}
+	&_item {
+		&.ib {
+			padding: 8px 15px;
+			margin-left: 20px;
+			display: inline-block;
+			font-size: 14px;
+			background-color: #f1f1f1;
+			border-radius: 5px;
+		}
+	}
+	&.center {
+		margin-bottom: 50px;
+		padding: 12px 35px 32px;
+		background-color: #fff;
+		border: 1px solid #d1d1d1;
+	}
+	@media (max-width: 479px) {
+		&_list {
+			display: block;
+			&:before {
+				content: 'Искать по хештегу:';
+				display: block;
+			}
+		}
+		&.center {
+			padding: 32px 20px;
+			border-left: 0;
+			border-right: 0;
+		}
+	}
+}
+
+// Список статей
+.b__article {
+	&_item {
+		height: 237px;
+		margin-top: 40px;
+		background-color: #fff;
+		border: 1px solid #d1d1d1;
+		@extend %clear_a;
+	}
+	&_img {
+		float: left;
+		display: block;
+		cursor: pointer;
+	}
+	&_info {
+		position: relative;
+		overflow: hidden;
+		padding: 30px 40px 24px;
+	}
+	&_name {
+		height: 50px;
+		margin-bottom: 10px;
+		overflow: hidden;
+		font-size: 21px;
+	}
+	&_text {
+		height: 32px;
+		margin-bottom: 23px;
+		overflow: hidden;
+		text-align: justify;
+	}
+	&_p {
+		color: #838282;
+		@extend %clear_a;
+		.date:after {
+			content: '|';
+			margin-left: 5px;
+			margin-right: 5px;
+		}
+		.category {
+			cursor: pointer;
+			color: #2893e5;
+			&:before {
+				content: '#';
+			}
+		}
+	}
+	&_comments {
+		color: #838282;
+		@extend %clear_a;
+		&_img {
+			float: left;
+			margin-right: 10px;
+			display: block;
+		}
+	}
+	&_more {
+		position: absolute;
+		bottom: 20px;
+		right: 42px;
+		cursor: pointer;
+		color: #2893e5;
+		font-size: 17px;
+	}
+	&_hero {
+		font-size: 13px;
+	}
+	@media (max-width: 767px) {
+		&_item {
+			height: auto;
+			background-color: transparent;
+			border: 0;
+		}
+		&_img {
+			width: 339px;
+			float: none;
+			margin: 0 auto 20px;
+		}
+		&_info {
+		    padding: 20px;
+		    margin-left: 20px;
+			margin-right: 20px;
+		    overflow: visible;
+			background-color: #fff;
+			border: 1px solid #d1d1d1;	
+		}
+		&_name,
+		&_text {
+			height: auto;
+			overflow: visible;
+			text-align: center;
+		}
+		&_hero {
+			margin-left: 20px;
+			margin-right: 20px;
+			text-align: center;
+		}
+	}
+	@media (max-width: 479px) {
+		&_item {
+			background-color: #fff;
+		}
+		&_img {
+			width: 100%;
+			margin-bottom: 0;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		&_info {
+			padding: 20px 20px 60px;
+			margin-left: 0;
+			margin-right: 0;
+			border: 0;
+			border-bottom: 1px solid #d1d1d1;
+		}
+	}
+}
+
+// Рекламный пост
+.b__article_ad {
+	margin-top: 40px;
+	margin-bottom: 10px;
+	background-color: #e8e7e7;
+	border: 2px dashed #B5B4B4;
+	@extend %clear_a;
+	&_img {
+		float: left;
+		display: block;
+	}
+	&_info {
+		overflow: hidden;
+		padding: 40px 30px 35px;
+	}
+	h2 {
+		height: 26px;
+		overflow: hidden;
+	}
+	&_text {
+		height: 16px;
+		overflow: hidden;
+	}
+	&_in {
+		margin-top: 27px;                               
+		@extend %clear_a;
+		.btn {
+			width: 217px;
+			float: left;
+			margin-right: 25px;
+			display: block;
+		}
+		p {
+			padding-top: 12px;
+			overflow: hidden;
+		}
+	}
+	@media (max-width: 767px) {
+		margin-left: 20px;
+		margin-right: 20px;
+		&_img {
+			width: 184px;
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&_info {
+			padding: 10px 20px 35px;
+		}
+		h2,
+		&_text {
+			text-align: center;
+			height: auto;
+			overflow: visible;
+		}
+		&_in {
+			.btn {
+				float: none;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			p {
+				text-align: center;
+			}
+		}
+	}
+	@media (max-width: 479px) {
+		margin-left: 0;
+		margin-right: 0;
+		border-left: 0;
+		border-right: 0;
+	}
+}
+
+// Продолжение следует
+.b__continue {
+	width: 280px;
+	margin: 50px auto 0;
+	@extend %clear_a;
+	&_img {
+		float: left;
+		margin-right: 24px;
+		display: block;
+	}
+	&_text {
+	    padding-top: 16px;
+		overflow: hidden;
+		font-size: 17px;
+	}
+}
+// end main__content_center
