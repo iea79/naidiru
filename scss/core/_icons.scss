@@ -8,17 +8,17 @@
 .icon {
 	&__gift {
 		&:before {
-			content: image-url('icon-gift.png');
+			content: image-url('icon-gift.svg');
 		}
 	}
 	&__time_end {
 		&:before {
-			content: image-url('icon-time-end.png');
+			content: image-url('icon-time-end.svg');
 		}
 	}
 	&__star {
 		&:before {
-			content: image-url('icon-star.png');
+			content: image-url('icon-star.svg');
 		}
 		&_white {
 			&:before {
@@ -33,45 +33,45 @@
 	}
 	&__question {
 		&:before {
-			content: image-url('icon-quest.png');
+			content: image-url('icon-quest.svg');
 		}
 	}
 
 	&__search {
 		&:before {
-			content: image-url('search-lg.png');
+			content: image-url('icon-zoom2.svg');
 		}
 	}
 
 	// Icon social ========================
 	&__vk {
 		&:before {
-			content: image-url('icon-vk.png');
+			content: image-url('icon-vk.svg');
 		}
 	}
 	&__fb {
 		&:before {
-			content: image-url('icon-fb.png');
+			content: image-url('icon-fb.svg');
 		}
 	}
 	&__google {
 		&:before {
-			content: image-url('icon-google.png');
+			content: image-url('icon-google.svg');
 		}
 	}
 	&__odnoklassniki {
 		&:before {
-			content: image-url('icon-odn.png');
+			content: image-url('icon-odn.svg');
 		}
 	}
 	&__twitter {
 		&:before {
-			content: image-url('icon-twit.png');
+			content: image-url('icon-twitt.svg');
 		}
 	}
 	&__instagramm {
 		&:before {
-			content: image-url('icon-insta.png');
+			content: image-url('icon-insta.svg');
 		}
 	}
 }
