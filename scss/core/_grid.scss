@@ -29,9 +29,15 @@
 				@include flex-basis(43%);
 			}
 		}
+		@media (max-width: 1366px) {
+			margin-left: -40px;
+			&>.grid__wrapper {
+				padding-left: 40px;
+			}
+		}
 		@media (max-width: 991px) {
 			&>.grid__wrapper {
-				padding-left: 80px;
+				// padding-left: 80px;
 				&:first-child {
 					@include flex-basis(100%);
 				}
