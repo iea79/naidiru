@@ -223,7 +223,7 @@ $(document).ready(function() {
 
 	$('.home__promo_code_title').on('click', function(event) {
 		event.preventDefault();
-		if (winWidth <= 480) {
+		if (winWidth <= 767) {
 			$('.home__promo_code').toggleClass('open');
 		}
 	});
