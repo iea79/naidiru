@@ -54,6 +54,10 @@
 	}
 }
 
+.body-overflow {
+	overflow: hidden;
+}
+
 .section__title {
 	font-family: Tahoma;
 	font-size: 25px;
@@ -98,8 +102,21 @@
 	@media (max-width: 767px) {
 		margin-top: 24px;
 		margin-bottom: 15px;
-		font-size: 22px;
-		
+		font-size: 18px;
+		&_btn {
+			text-align: center;
+			.btn {
+				display: none;
+			}
+		}
+		&_link {
+			padding-left: 10px;
+			padding-right: 10px;
+			text-align: center;
+			a {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -122,10 +139,6 @@
 			}
 			&_link {
 				a {
-					margin-left: 0;
-					margin-top: 8px;
-					display: block;
-					float: none;
 				}
 			}
 		}
@@ -139,6 +152,11 @@
 
 				}
 			}
+		}
+	}
+	@media (max-width: 767px) {
+		.box__gray {
+			background-color: #fff;
 		}
 	}
 }

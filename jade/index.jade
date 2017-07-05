@@ -5,17 +5,22 @@ block title
 
 block content
 	// begin slider__fullwide
-	.slider.slider__fullwidth
+	.slider.slider__fullwide
 		.slider__item
-			img(src="img/top-slide.jpg", alt="")
+			img(src="img/top-slide.jpg", alt="").slider__fullwide_lg
+			img(src="img/top-slide-sm.jpg", alt="").slider__fullwide_sm
 		.slider__item
-			img(src="img/top-slide.jpg", alt="")
+			img(src="img/top-slide.jpg", alt="").slider__fullwide_lg
+			img(src="img/top-slide-sm.jpg", alt="").slider__fullwide_sm
 		.slider__item
-			img(src="img/top-slide.jpg", alt="")
+			img(src="img/top-slide.jpg", alt="").slider__fullwide_lg
+			img(src="img/top-slide-sm.jpg", alt="").slider__fullwide_sm
 		.slider__item
-			img(src="img/top-slide.jpg", alt="")
+			img(src="img/top-slide.jpg", alt="").slider__fullwide_lg
+			img(src="img/top-slide-sm.jpg", alt="").slider__fullwide_sm
 		.slider__item
-			img(src="img/top-slide.jpg", alt="")
+			img(src="img/top-slide.jpg", alt="").slider__fullwide_lg
+			img(src="img/top-slide-sm.jpg", alt="").slider__fullwide_sm
 
 	// end slider__fullwide 
 
@@ -30,15 +35,15 @@ block content
 					// begin home__promo_code_grid
 					.grid.grid__3.home__promo_code_grid
 						.grid__wrapper
-							img(src="img/how1.png", alt="")
+							img(src="img/how1.svg", alt="")
 							p Сначала зарегистрируйтесь, потом найдите промокод любимого магазина и скопируйте его код
 
 						.grid__wrapper
-							img(src="img/how2.png", alt="")
+							img(src="img/how2.svg", alt="")
 							p Вставьте код промокода в специальное поле, при оформлении заказа и получите скидку!
 
 						.grid__wrapper
-							img(src="img/how3.png", alt="")
+							img(src="img/how3.svg", alt="")
 							p Получайте баллы за чеки, меняйте их на лотереи и участвуйте в ежемесячных розыгрышах. 
 								a(href="#") Подробнее о розыгрышах >
 					// end home__promo_code_grid
@@ -86,6 +91,7 @@ block content
 			
 			// Row 1
 			.sale__list_row.js_more_item
+				a(href="#").sale__list_mob-link
 				.sale__list_left
 					img(src="img/sale-list1.png", alt="")
 					.btn.btn__success Новый
@@ -111,6 +117,7 @@ block content
 			
 			// Row 2
 			.sale__list_row.js_more_item
+				a(href="#").sale__list_mob-link
 				.sale__list_left
 					img(src="img/sale-list2.png", alt="")
 					.btn.btn__danger Горящий
@@ -136,6 +143,7 @@ block content
 			
 			// Row 3
 			.sale__list_row.js_more_item
+				a(href="#").sale__list_mob-link
 				.sale__list_left
 					img(src="img/sale-list3.png", alt="")
 					.btn.btn__warning Бесплатная доставка
@@ -161,6 +169,7 @@ block content
 			
 			// Row 4
 			.sale__list_row.js_more_item
+				a(href="#").sale__list_mob-link
 				.sale__list_left
 					img(src="img/sale-list4.png", alt="")
 					.btn.btn__warning Подарок
@@ -186,6 +195,7 @@ block content
 			
 			// Row 5
 			.sale__list_row.js_more_item
+				a(href="#").sale__list_mob-link
 				.sale__list_left
 					img(src="img/sale-list5.png", alt="")
 					.btn.btn__warning -50% скидка
@@ -473,7 +483,8 @@ block content
 		
 		.banner__box
 			a(href="#").banner__box_link
-				img(src="img/banner.jpg", alt="")
+				img(src="img/banner.jpg", alt="").banner__box_img_lg
+				img(src="img/banner-sm.jpg", alt="").banner__box_img_sm
 
 				.banner__box_text.js_more_wrap
 					b Найди.ру - 
