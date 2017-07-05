@@ -67,9 +67,9 @@ $link-color:									#2fa8e6;
 $el-bg-colors: (
 	primary: $primary-color, // color for .element_primary
 	success: $success-color, // color for .element_success
-	danger: $danger-color, // color for .element_warning
-	warning: $warning-color, // color for .element_danger
-	muted: $muted-color, // color for .element_danger
+	danger: $danger-color, // color for .element_danger
+	warning: $warning-color, // color for .element_warning
+	muted: $muted-color, // color for .element_muted
 	// link: $link-color, // color for .element_info
 );
 

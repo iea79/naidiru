@@ -1,0 +1,403 @@
+extends template.jade
+
+block title
+	title Blog Статья
+
+block content
+	.container_center
+
+
+		// begin breadcrumb
+		.breadcrumb.ind.mt_40
+			li
+				a(href="/") Главная
+			li
+				a(href="blog.html") Блог
+			li
+				a(href="#") Какой телевизор лучше выбрать. Мнение специалиста                   			
+		// end breadcrumb
+
+
+		.main__content.pb_60
+
+			// begin sidebar
+			.main__content_sidebar.fl_right
+				.banner__box.mt_reset.mb_20
+					a(href="#").banner__box_link
+						img(src="img/banner3.jpg", alt="")
+				.sidebar__section
+					.sidebar__section_name Узнайте интересное в блоге:
+					.b__hashtag
+						a.b__hashtag_item(href="#") Мода
+						a.b__hashtag_item(href="#") Победители_лотереи
+						a.b__hashtag_item(href="#") Подборки_с_Алиэкспресс
+						a.b__hashtag_item(href="#") Подборки_образов
+						a.b__hashtag_item(href="#") Шоппинг
+				.sidebar__section
+					.sidebar__section_name Найдите купон на нужный товар
+
+					// begin slider__sidebar
+					.slider.slider__sidebar
+						.slider__item
+							.grid.grid__2.category__box_grid
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat1.png", alt="")
+										p Детские товары
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat9.png", alt="")
+										p Обувь
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat4.png", alt="")
+										p Электроника
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat2.png", alt="")
+										p Бытовая техника
+						.slider__item
+							.grid.grid__2.category__box_grid
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat1.png", alt="")
+										p Детские товары
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat9.png", alt="")
+										p Обувь
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat4.png", alt="")
+										p Электроника
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat2.png", alt="")
+										p Бытовая техника	
+						.slider__item
+							.grid.grid__2.category__box_grid
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat1.png", alt="")
+										p Детские товары
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat9.png", alt="")
+										p Обувь
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat4.png", alt="")
+										p Электроника
+								.grid__wrapper
+									a.grid__item(href="#")
+										img(src="img/cat2.png", alt="")
+										p Бытовая техника	
+					// end slider__sidebar
+
+				.sidebar__section
+					.sidebar__section_name Лучшие предложения для Вас:
+
+					// begin slider__grid 
+					.slider
+						// Slide 1
+						.slider__item.mb_30
+							.slider__grid_img
+								img(src="img/most1.png", alt="")
+							.slider__grid_text
+								.slider__grid_name
+									|Магазин: 
+									a(href="#") Lamoda
+								|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+						// Slide 2
+						.slider__item.mb_20
+							.slider__grid_img
+								img(src="img/most2.png", alt="")
+								.slider__grid_overlay 
+									|1240р. 
+									span 2120р.
+							.slider__grid_text
+								.slider__grid_name
+									|Магазин: 
+									a(href="#") Lamoda
+								|Смартфон Самсунг со скидкой -45%!
+						<a href="#" class="btn btn__danger">Больше скидок  &gt;&gt;</a>
+
+				.sidebar__section
+					.sidebar__section_name Найдите купон для магазина
+					ul.columns__list
+						li 
+							a(href="#") Lamoda
+						li 
+							a(href="#") Nike
+						li 
+							a(href="#") Алиэкспресс
+						li 
+							a(href="#") Wildberries
+						li 
+							a(href="#") Lamoda
+						li 
+							a(href="#") Nike
+						li 
+							a(href="#") Nike
+						li 
+							a(href="#") Алиэкспресс
+						li 
+							a(href="#") Nike
+						li 
+							a(href="#") Алиэкспресс
+						li 
+							a(href="#") Lamoda
+						li 
+							a(href="#") Sapato
+						li
+							a(href="#") Nike
+						li 
+							a(href="#") Алиэкспресс
+						li 
+							a(href="#") Wildberries
+						li 
+							a(href="#") Lamoda
+						li 
+							a(href="#") Ebay
+						li 
+							a(href="#") Nike
+						li 
+							a(href="#") Nike
+						li 
+							a(href="#") Алиэкспресс
+
+			// end sidebar
+				
+
+			// begin main__content_center
+			.main__content_center
+
+				.white__line.mb_50
+					// Верхний блок кнопки соц.сетей+картинка
+					.b__article_p.date.mb_20.ind 20 марта 2017 
+					h1.mb_20.ind Какой телевизор лучше выбрать. Мнение специалиста
+					p.b__article_text_top.ind Чтоб понять какой телевизор лучше выбрать, мнение специалиста станет основополагающим в решении данного вопроса. И это важно, ведь полки магазинов пестрят различными предложениями. Моделей становится всё больше, выбор расширяется и окончательно определиться с выбором все сложнее.
+
+
+					// begin b__article_top 
+					.b__article_top
+						.b__article_top_left.b__article_social
+							a.b__article_social_icon(href="#")
+								img(src="img/icon-vk2.png", alt="#")
+							a.b__article_social_icon(href="#")
+								img(src="img/icon-fb2.png", alt="#")
+							a.b__article_social_icon(href="#")
+								img(src="img/icon-twit2.png", alt="#")
+							a.b__article_social_icon(href="#")
+								img(src="img/icon-odn2.png", alt="#")
+							a.b__article_social_icon(href="#")
+								img(src="img/icon-google2.png", alt="#")
+							a.b__article_social_icon(href="#")
+								img(src="img/icon-mm2.png", alt="#")
+							.b__article_social_comments
+								.b__article_social_text 252
+						.b__article_top_right
+							img.b__article_top_img(src="img/blog-img1.jpg", alt="#")
+					// end b__article_top
+
+
+					p.ind Говоря простым языком, источник сигнала – это тот канал. По которому до вас доходят телепередачи. Это может быть аналоговое эфирное телевидение (обычный прием сигнала антенной с ближайшей телевышки, как было ещё во времена СССР), кабельное телевидение, спутниковое телевидение, цифровое эфирное телевидение (приемники DVB-T2, мы рассмотрим их немного позже) и IPTV (метод передачи изображения через Интернет-подключение). Итак, первое, что нужно сделать – это определиться, какой метод получения сигнала используется у вас.
+
+					
+					// begin b__article_sale
+					.b__article_sale_name.ind Сумка от Chanel				
+					.b__article_sale
+						img.b__article_sale_img(src="img/sale-img.jpg", alt="#")
+						a.b__article_sale_btn.btn.btn__primary(href="#") Купить сумку
+					// end b__article_sale
+
+					
+					p.ind Отдельно стоит выделить IPTV. Этот канал предоставляет на данный момент самое высокое качество изображен
+
+					// Выделенный текст
+					p.note.ind Данные телевизоры обладают собственной операционной системой и, по сути, представляют собой компьютер, предназначенный для просмотра онлайн-контента, а в последнее время ещё и для игр. Если у вас дома есть Wi-Fi роутер, то обратите внимание на модели телевизоров, поддерживающие этот тип подключения, чтобы избавиться от лишних проводов.
+
+					p.ind Учитывая высокую стоимость таких моделей, есть смысл пытаться сэкономить, обращая внимание на распродажи и супер sale.
+
+
+					// begin b__article_discount 
+					.b__article_discount
+						.sale__list_row.js_more_item
+							.sale__list_left
+								img(src="img/sale-list4.png", alt="")
+							.sale__list_right
+								.code__wrap
+									a(href="#").btn.btn__primary.code__btn Используй меня
+							.sale__list_center
+								.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+					// end b__article_discount
+
+
+					p.ind Учитывая высокую стоимость таких моделей, есть смысл пытаться сэкономить, обращая внимание на распродажи. Данные телевизоры обладают собственной операционной системой и, по сути, представляют собой компьютер, предназначенный для просмотра онлайн-контента, а в последнее время ещё и для игр. Если у вас дома есть Wi-Fi роутер, то обратите внимание на модели телевизоров, поддерживающие этот тип подключения, чтобы избавиться от лишних проводов.
+
+
+					.line
+
+
+					// begin b__article_end 
+					.b__article_end.ind
+						.b__article_end_left
+							p Поделитесь с друзьями:
+							img.social_widget(src="img/social-img.png", alt="#")
+						.b__article_end_right
+							p.mb_10 Фото или источник: GETTY IMAGES
+							p.b__hashtag
+								a.b__hashtag_item(href="#") техника
+								a.b__hashtag_item(href="#") мода
+								
+					// end b__article_end
+
+
+					.line
+
+					
+					// begin b__article_com 
+					.b__article_com.ind
+						.b__article_com_h Комментарии (25)
+						.b__article_com_list
+							.b__article_com_item
+								.b__article_com_left
+									img.b__article_com_user(src="img/user1.png", alt="#")
+								.b__article_com_right.area
+									textarea(placeholder="Ваше сообщение ...")
+									.b__article_com_up
+										button.btn__danger.btn Комментировать
+										.b__article_com_text Что Вы думаете о нас? Поделитесь своим мнением о нас со всеми! <br>Помогите нам стать лучше!
+							.b__article_com_item
+								.b__article_com_left
+									img.b__article_com_user(src="img/user1.png", alt="#")
+								.b__article_com_right
+									.b__article_com_info
+										.b__article_com_user-name Дарья
+										.date 25.02.2016
+									p Делала заказ на этом сайте впервые, заказывала пальто. Нашла и по той цене, по которой планировала. Забирала самовывозом (так мне было удобнее) в ТЦ КронПарк на Водном стадионе, там все очень удобно, несколько больших примерочных, вежливые консультанты. Доставка туда была бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей.
+							.b__article_com_item
+								.b__article_com_left
+									img.b__article_com_user(src="img/user2.png", alt="#")
+								.b__article_com_right
+									.b__article_com_info
+										.b__article_com_user-name Александра
+										.date 25.02.2016
+									p Делала заказ на этом сайте впервые, заказывала пальто. Нашла и по той цене, по которой планировала. Забирала самовывозом (так мне было удобнее) в ТЦ КронПарк на Водном стадионе, там все очень удобно, несколько больших примерочных, вежливые консультанты. Доставка туда была бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей.
+							.b__article_com_item
+								.b__article_com_left
+									img.b__article_com_user(src="img/user3.png", alt="#")
+								.b__article_com_right
+									.b__article_com_info
+										.b__article_com_user-name Артем
+										.date 25.02.2016
+									p Делала заказ на этом сайте впервые, заказывала пальто. Нашла и по той цене, по которой планировала. Забирала самовывозом (так мне было удобнее) в ТЦ КронПарк на Водном стадионе, там все очень удобно, несколько больших примерочных, вежливые консультанты. Доставка туда была бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей.
+							.b__article_com_item
+								.b__article_com_left
+									img.b__article_com_user(src="img/user_no.png", alt="#")
+								.b__article_com_right
+									.b__article_com_info
+										.b__article_com_user-name Мария
+										.date 25.02.2016
+									p Делала заказ на этом сайте впервые, заказывала пальто. Нашла и по той цене, по которой планировала. Забирала самовывозом (так мне было удобнее) в ТЦ КронПарк на Водном стадионе, там все очень удобно, несколько больших примерочных, вежливые консультанты. Доставка туда была бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей.
+							.b__article_com_item
+								.b__article_com_left
+									img.b__article_com_user(src="img/user1.png", alt="#")
+								.b__article_com_right
+									.b__article_com_info
+										.b__article_com_user-name Дарья
+										.date 25.02.2016
+									p Делала заказ на этом сайте впервые, заказывала пальто. Нашла и по той цене, по которой планировала. Забирала самовывозом (так мне было удобнее) в ТЦ КронПарк на Водном стадионе, там все очень удобно, несколько больших примерочных, вежливые консультанты. Доставка туда была бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей.
+							btn.btn__danger.btn.b__article_com_btn Показать больше комментариев
+						
+					// end b__article_com
+
+				.b__article
+					
+					// begin b__article_ad.white
+					.b__article_ad.white
+						img.b__article_ad_img(src="img/hero2.png", alt="")
+						.b__article_ad_info
+							h2.mb_10 Экономьте по полной + подарок каждый месяц!
+							.b__article_ad_text Зарегистрируйтесь и узнавайте первым о лучших купонах.
+							.b__article_ad_text.txt__danger + Участвуйте в ежемесячных розыгрышах и получите шанс выиграть подарок мечты!
+							.b__article_ad_in
+								a(href="#", class="btn btn__danger") Зарегистрироваться
+								p У вас есть свой аккаунт? 
+									a(href="#") Войти
+					.b__article_hero.mb_60 Это Шоппел - супергерой Найди.ру. Она помогает экономить тысячам людям по всей России. Каждый день, она находить супер-купоны и рассылает их своим подписчикам. Будьте с ней всегда на связи, зарегистрируйтесь!
+					// end b__article_ad.white
+
+
+					h1.mb_40 Эти статьи должны Вам понравиться:
+
+
+					.b__article_item.mt_reset
+						a.b__article_img
+							img(src="img/b-article-img1.jpg", alt="")
+						.b__article_info
+							.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+							.b__article_p.mb_30
+								span.date 20 марта 2017
+								a.category техника
+							.b__article_comments
+								img.b__article_comments_img(src="img/comment.png", alt="")
+								span.comments 25 
+								комментариев
+							a.b__article_more Читать сейчас &gt;
+					.b__article_item
+						a.b__article_img
+							img(src="img/b-article-img5.jpg", alt="")
+						.b__article_info
+							.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+							.b__article_p.mb_30
+								span.date 20 марта 2017
+								a.category техника
+							.b__article_comments
+								img.b__article_comments_img(src="img/comment.png", alt="")
+								span.comments 25 
+								комментариев
+							a.b__article_more Читать сейчас &gt;
+					.b__article_item
+						a.b__article_img
+							img(src="img/b-article-img2.jpg", alt="")
+						.b__article_info
+							.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+							.b__article_p.mb_30
+								span.date 20 марта 2017
+								a.category техника
+							.b__article_comments
+								img.b__article_comments_img(src="img/comment.png", alt="")
+								span.comments 25 
+								комментариев
+							a.b__article_more Читать сейчас &gt;
+					.b__article_item
+						a.b__article_img
+							img(src="img/b-article-img5.jpg", alt="")
+						.b__article_info
+							.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+							.b__article_p.mb_30
+								span.date 20 марта 2017
+								a.category техника
+							.b__article_comments
+								img.b__article_comments_img(src="img/comment.png", alt="")
+								span.comments 25 
+								комментариев
+							a.b__article_more Читать сейчас &gt;
+
+
+					.b__continue
+						img.b__continue_img(src="img/continue.gif", alt="#")
+						.b__continue_text Продолжение следует ...
+                                         
+
+			// end main__content_center
+			

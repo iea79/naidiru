@@ -144,6 +144,15 @@
 }
 
 
+.txt {
+    @each $status_el, $color_el_bg in $el_bg_colors {
+        &__#{$status_el} {
+            color: $color_el_bg;
+        }
+    }
+}
+
+
 .white__line {
 	background-color: #fff;
 	@include box-shadow(1px 2px 4px 1px rgba(0, 0, 0, 0.03));
