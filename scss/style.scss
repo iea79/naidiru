@@ -1738,7 +1738,7 @@
 			.grid__wrapper {
 				@include flex-basis(25%);
 				&:nth-child(n+7) {
-					display: block;
+					display: inline-block;
 				}
 				&:last-child {
 					display: none;
@@ -1758,9 +1758,9 @@
 			padding-right: 0;
 			margin-bottom: 0;
 			.grid__wrapper {
-				@include flex-basis(33%);
+				@include flex-basis(33.3%);
 				&:last-child {
-					display: block;
+					display: inline-block;
 				}
 			}
 			img {
@@ -2123,8 +2123,12 @@
 .simple__grid {
 	max-width: 1180px;
 	margin: auto;
+	overflow: auto;
+	white-space: nowrap;
 	@include flex-flow(row nowrap);
-	.grid__wrapper {}
+	.grid__wrapper {
+		white-space: normal;
+	}
 	.grid__item {
 		background-color: #fff;
 		img {
@@ -2149,7 +2153,6 @@
 	}
 	@media (max-width: 767px) {
 		// margin-left: 0;
-		overflow: auto;
 		max-width: 100%;
 		margin-left: 0;
 		@include flex-flow(row nowrap);
