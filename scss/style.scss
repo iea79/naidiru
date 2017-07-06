@@ -166,7 +166,7 @@
 		background-color: #e49e0a;
 		.login__box_drop {
 			height: auto;
-			padding: 23px 31px;
+			padding: 16px 0;
 		}
 		&:after {
 			@include rotate(180deg);
@@ -215,16 +215,22 @@
 		right: 0;
 		width: 240px;
 		z-index: 50;
-		padding: 0 31px;
+		padding: 0 0;
 		overflow: hidden;
 		height: 0;
 		@include trs(.3);
 		li {
 			&:not(:last-of-type) {			
-				margin-bottom: 15px;
+				// margin-bottom: 15px;
 			}
 			a {
+				display: block;
+				padding: 11px 31px;
 				color: #fff;
+				&:hover {
+					background-color: #eaa513;
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -478,6 +484,7 @@
 			    // width: 240px;
 			    height: 100%;
 			    width: 100%;
+			    background-color: #454545;
 			}
 		}
 		&_avatar {
@@ -501,6 +508,13 @@
 			right: -100%;
 			text-align: right;
 			height: 100%;
+			li {
+				a {
+					&:hover {
+						background-color: #535252;
+					}
+				}
+			}
 		}
 	}
 
@@ -952,6 +966,7 @@
 	}
 	@media (max-width: 767px) {
 		&__fullwide {
+			display: none;
 			img {
 				// width: 100%;
 			}
@@ -998,6 +1013,9 @@
 				vertical-align: middle;
 				margin-right: 35px;
 				margin-bottom: 15px;
+				a {
+					margin: 0 6px;
+				}
 			}
 			.btn {
 				width: 100%;
@@ -1438,7 +1456,7 @@
 			}
 		}
 	}
-	@media (max-width: 1199px) {
+	@media (max-width: 1366px) {
 		&_row {
 			&:nth-child(n+6) {
 			}
@@ -1491,6 +1509,69 @@
 			}
 		}
 	}
+	@media (max-width: 1199px) {
+		&_row {
+			&:nth-child(n+6) {
+			}
+			&_title {
+			}
+			&+.btn {
+			}
+			&:before {
+			}
+		}
+		&_left {
+			.btn {
+			}
+			img {
+				margin-bottom: 10px;
+			}
+		}
+		&_right {
+			font-size: 0;
+			.btn {
+			}
+		}
+		&_save {
+			&:before {
+			}
+			&:hover,&.active {
+				&:before {
+				}
+			}
+		}
+		&_center {
+		}
+		&_deadline {
+			i {
+			}
+		}
+		&_terms {
+			&.open {
+			}
+		}
+		&_more {
+		}
+		&_bottom {
+			display: none;
+		}
+		.code {
+			&__wrap {
+			}
+			&__field {
+				font-size: 14px;
+			}
+		}
+		&_info {
+			display: block;
+			margin-right: 0;
+			margin-bottom: 8px;
+			i {
+				&:hover {
+				}
+			}
+		}
+	}
 	@media (max-width: 991px) {
 		&_row {
 			// &:nth-child(n+4) {
@@ -1520,7 +1601,6 @@
 		&_right {
 			padding: 15px;
 			width: 188px;
-			font-size: 0;
 			.btn {
 			}
 		}
@@ -1552,7 +1632,6 @@
 			&__wrap {
 			}
 			&__field {
-				font-size: 14px;
 			}
 		}
 		&_info {
@@ -1715,6 +1794,13 @@
 	.columns__list {
 		width: 32%;
 	}
+	@media (max-width: 1366px) {
+		&_grid {
+			.grid__wrapper {
+				font-size: 14px;
+			}
+		}
+	}
 	@media (max-width: 1280px) {
 		&_grid {
 			.grid__wrapper {
@@ -1836,9 +1922,9 @@
 		color: $link-color;
 		cursor: pointer;
 		position: absolute;
-		right: 0;
+		right: 50px;
 		bottom: 0;
-		background-color: $body_bg_color;
+		background-color: #f1f1f1;
 		&:hover {
 			text-decoration: underline;
 		}
@@ -2122,10 +2208,12 @@
 
 .simple__grid {
 	max-width: 1180px;
+	width: 100%;
 	margin: auto;
 	overflow: auto;
 	white-space: nowrap;
 	@include flex-flow(row nowrap);
+	@include justify-content(flex-start);
 	.grid__wrapper {
 		white-space: normal;
 	}
@@ -2141,11 +2229,12 @@
 		min-height: 92px;
 	}
 	@media (max-width: 1199px) {
-		@include flex-flow(row wrap);
-		@include justify-content(center);
-		margin-left: -20px;
+		// @include flex-flow(row wrap);
+		// @include justify-content(center);
+		margin-left: -10px;
 		.grid__wrapper {
-			@include flex-basis(218px);
+			@include flex-basis(215px);
+			min-width: 215px;
 		}
 	}
 	@media (max-width: 991px) {
@@ -2153,11 +2242,11 @@
 	}
 	@media (max-width: 767px) {
 		// margin-left: 0;
-		max-width: 100%;
-		margin-left: 0;
-		@include flex-flow(row nowrap);
-		@include justify-content(flex-start);
-		position: relative;
+		// max-width: 100%;
+		// margin-left: -10px;
+		// @include flex-flow(row nowrap);
+		// @include justify-content(flex-start);
+		// position: relative;
 		&:after {
 			// content: '';
 			// position: absolute;
@@ -2170,9 +2259,10 @@
 		}
 		.grid__wrapper {
 			// padding-left: 0;
-			// @include flex-basis(50%);
-			width: 215px;
-			min-width: 215px;
+			// @include flex-basis(215px);
+			// min-width: 215px;
+			// width: 215px;
+			// min-width: 215px;
 		}
 	}
 	@media (max-width: 400px) {
