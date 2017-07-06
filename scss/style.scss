@@ -2651,11 +2651,11 @@ p {
 
 // begin blog__top
 .blog__top {
-	display: flex;
+	@include flexbox();
 	&_left {
 		position: relative;
 		margin-right: 20px;
-		flex-grow: 1;
+		@include flex(1);
 		img {
 			width: 100%;
 		}
@@ -2674,15 +2674,14 @@ p {
 	}
 	&_right {
 		width: 39.5%;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		@include flexbox();
+		@include flex-flow(column nowrap);
+		@include justify-content(space-between);
 	}
 	&_item {
 		height: 29%;
-		display: flex;
-		flex-grow: 1px;
-		justify-content: space-between;
+		@include flexbox();
+		@include justify-content(space-between);
 		img {
 			width: 220px;
 			height: auto;
@@ -2690,8 +2689,8 @@ p {
 			display: block;
 		}
 		&_text {
-			align-self: center;
-			flex-grow: 1;
+			@include align-self(center);
+			@include flex-grow(1);
 		}
 		&_name {
 			max-height: 84px;
@@ -2704,7 +2703,7 @@ p {
 		text-decoration: none;
 	}
 	@media (max-width: 1199px) {
-		flex-direction: column;
+		@include flex-flow(column nowrap);
 		&_left {
 			margin-right: 0;
 			img {
@@ -2728,7 +2727,7 @@ p {
 		}
 		&_item {
 			height: auto;
-			flex-direction: column;
+			@include flex-flow(column nowrap);
 			img {
 				height: auto;
 				margin: 0 auto 20px;
@@ -2839,7 +2838,7 @@ p {
 			display: inline-block;
 			font-size: 14px;
 			background-color: $muted-color;
-			border-radius: 5px;
+			@include border-radius(5px);
 		}
 	}
 	&.center {
@@ -3088,29 +3087,26 @@ p {
 
 // begin b__article_text_top 
 .b__article_top {
-	// @extend %clear_a;
 	margin-bottom: 34px;
-	display: flex;
+	@include flexbox();
 	&_left {
 		width: 35px;
-		// float: left;
 		margin-right: 25px;
 	}
 	&_right {
-		// overflow: hidden;
-		flex-grow: 1px;
+		@include flex-grow(1);
 		&_img {
 			width: 100%;
 			height: auto;
 		}
 	}
 	@media (max-width: 767px) {
-		flex-direction: column;
+		@include flex-flow(column nowrap);
 		&_left {
 			width: 334px;
 			margin-left: auto;
 			margin-right: auto;
-			order: 1;
+			@include order(1);
 		}
 	}
 	@media (max-width: 479px) {
@@ -3279,22 +3275,23 @@ p {
 		}
 	}
 	@media (max-width: 767px) {
-		padding-bottom: 90px;
 		border-top: 1px solid #d1d1d1;
 		border-bottom: 1px solid #d1d1d1;
 		.sale__list_left {
-			width: auto;
+			width: 100%;
 			padding: 20px 0 0;
 			border: 0;
 			img {
-				margin-left: auto;
-				margin-right: auto;
+				margin: 0 auto 20px;
+				display: block;
 			}
 		}
 		.sale__list_right {
-			margin-top: 10px;
+			width: 100%;
+			margin-top: 0;
 			padding: 0;
 			border: 0;
+			overflow: visible;
 			.code__wrap {
 				margin-left: auto;
 				margin-right: auto;
@@ -3302,16 +3299,26 @@ p {
 			}
 		}
 		.sale__list_row {
+			height: auto;
+			margin-bottom: 0;
 			border: 0;
+			overflow: visible;
 			&_title {
 				text-align: center;
 			}
+			&:before {
+				display: none;
+			}
 		}
 		.sale__list_deadline {
-			width: 200px;
+			width: 230px;
 			margin-left: auto;
 			margin-right: auto;
+			overflow: visible;
 		}
+	}
+	@media (max-width: 600px) {
+		display: none;
 	}
 }
 // end b__article_discount
@@ -3401,7 +3408,7 @@ p {
 			height: 65px;
 			padding: 7px 12px;
 			margin-bottom: 16px;
-			border-radius: 0;
+			@include border-radius(0);
 		}
 		&.area:before {
 			content: url('../img/tri-area.png');
@@ -3440,7 +3447,7 @@ p {
 	&_btn {
 		width: 320px;
 		margin: 30px auto 0;
-		display: block;
+		display: block !important;
 	}
 	@media (max-width: 767px) {
 		text-align: center;
