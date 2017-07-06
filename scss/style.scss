@@ -2241,6 +2241,7 @@
 // Повторяющиеся элементы
 h1 {
 	font-size: 23px;
+	font-weight: 400;
 	@media (max-width: 767px) {
 		text-align: center;
 	}
@@ -2249,6 +2250,7 @@ h1 {
 h2 {
 	margin-bottom: 13px;
 	font-size: 22px;
+	font-weight: 400;
 }
 
 p {
@@ -2642,6 +2644,9 @@ p {
 			opacity: .8;
 		}
 	}
+	&_a {
+		margin-left: 8px;
+	}
 }
 // end lots
 
@@ -2839,6 +2844,9 @@ p {
 			font-size: 14px;
 			background-color: $muted-color;
 			@include border-radius(5px);
+			&:hover {
+				background-color: #e8e7e7;
+			}
 		}
 	}
 	&.center {
@@ -2916,12 +2924,14 @@ p {
 		}
 	}
 	&_comments {
-		color: #838282;
 		@extend %clear_a;
 		&_img {
 			float: left;
 			margin-right: 10px;
 			display: block;
+		}
+		&_link {
+			color: #838282;
 		}
 	}
 	&_more {
@@ -3023,6 +3033,9 @@ p {
 		p {
 			padding-top: 12px;
 			overflow: hidden;
+			a {
+				margin-left: 8px;
+			}
 		}
 	}
 	@media (max-width: 767px) {
