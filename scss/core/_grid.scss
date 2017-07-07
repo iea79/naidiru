@@ -107,4 +107,14 @@
 			@include flex-basis(20%);
 		}
 	}
+	&__6 {
+		.grid__wrapper {		
+			@include flex-basis(16.666%);
+		}
+	}
+	&__7 {
+		.grid__wrapper {		
+			@include flex-basis(14.285%);
+		}
+	}
 }
