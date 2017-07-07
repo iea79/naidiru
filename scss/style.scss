@@ -3647,6 +3647,19 @@ p {
 			height: auto;
 		}
 	}
+	.grid__item {
+		position: relative;
+		z-index: 1;
+		&_like {
+			position: absolute;
+			top: 6px;
+			right: 6px;
+			z-index: 3;
+			width: 25px;
+			height: 25px;
+			background: url('../img/heart.png') no-repeat;
+		}
+	}
 	.line {
 		margin-top: 25px;
 		margin-bottom: 36px; 
