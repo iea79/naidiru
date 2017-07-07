@@ -66,13 +66,14 @@
 	text-align: center;
 	position: relative;
 	&_btn {
-		padding-left: 220px;
-		padding-right: 220px;
+		padding-left: 240px;
+		padding-right: 240px;
 		.btn {
 			float: right;
 			top: -5px;
 			right: 50px;
 			position: absolute;
+			width: 170px;
 		}
 	}
 	&_link {

@@ -64,12 +64,33 @@
 // @TODO: Add docs to flexbox!
 // 
 @mixin flexbox() {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	letter-spacing: -1px;
+	&>* {
+		display: -moz-inline-stack!important;
+		display: inline-block;
+		vertical-align: top;
+		letter-spacing:normal;
+		line-height:normal;
+		font-size: initial;
+	}
+	@supports (display: -webkit-flex) or
+	          (display: -moz-flex) or
+	          (display: flex) {
+
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		&>* {
+			display: block;
+		}
+	}
 }
+
 
 @mixin flex($values) {
 	-webkit-box-flex: $values;
@@ -89,8 +110,11 @@
 // flex-flow: flex-direction flex-wrap|initial|inherit;
 //
 @mixin flex-flow($params) {
-    -webkit-flex-flow: $params; /* Safari 6.1+ */
-    flex-flow: $params;
+	@supports (-webkit-flex-flow: $params) or
+	          (flex-flow: $params) {
+	    -webkit-flex-flow: $params; /* Safari 6.1+ */
+	    flex-flow: $params;
+	}
 }
 
 // 
@@ -98,40 +122,58 @@
 // justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;
 // 
 @mixin justify-content($params) {
-    -webkit-justify-content: $params; /* Safari 6.1+ */
-    justify-content: $params;
+	@supports (-webkit-justify-content: $params) or
+	          (justify-content: $params) {
+	    -webkit-justify-content: $params; /* Safari 6.1+ */
+	    justify-content: $params;
+	}
 }
 
 // 
 // @TODO: Add docs to     -webkit-align-content!
 // The align-content property aligns a flex container’s lines within the flex container when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis. Note, this property has no effect on a single-line flex container. Values have the following meanings:
 @mixin align-content($params) {
-    -webkit-align-content: $params;
-    align-content: $params;
+	@supports (-webkit-align-content: $params) or
+	          (align-content: $params) {
+	    -webkit-align-content: $params;
+	    align-content: $params;
+	}
 }
 
 // 
 // @TODO: Add docs to     -webkit-flex-grow!
 // The flex-grow property sets the flex grow factor to the provided <number>. Negative numbers are invalid.
 @mixin flex-grow($params) {
-    -webkit-flex-grow: $params;
-    flex-grow: $params;
+	@supports (-webkit-flex-grow: $params) or
+	          (flex-grow: $params) {
+	    -webkit-flex-grow: $params;
+	    flex-grow: $params;
+	}
 }
 
 //
 // @TODO: Add docs to     -webkit-flex-shrink!
 // The flex-shrink property sets the flex shrink factor to the provided <number>. Negative numbers are invalid.
 @mixin flex-shrink($params) {
-    -webkit-flex-shrink: $params;
-    flex-shrink: $params;
+	@supports (-webkit-flex-shrink: $params) or
+	          (flex-shrink: $params) {
+	    -webkit-flex-shrink: $params;
+	    flex-shrink: $params;
+	}
 }
 
 // 
 // @TODO: Add docs to     -webkit-flex-basis!
 // The flex-basis property sets the flex basis. It accepts the same values as the width and height property, plus content.
 @mixin flex-basis($params) {
-    -webkit-flex-basis: $params;
-    flex-basis: $params;
+	width: $params;
+	@supports (-webkit-flex-basis: $params) or
+	          (flex-basis: $params) {
+
+    	-webkit-flex-basis: $params;
+    	flex-basis: $params;
+    	width: initial;
+	}
 }
 
 // 
