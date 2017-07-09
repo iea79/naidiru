@@ -302,4 +302,19 @@ $(document).ready(function() {
         }
     });
 
+    // Blog article - b__article_com767
+	var touch3 = $('.b__article_com_trigger');
+    var menu3 = $('.b__article_com_first');
+ 
+    $(touch3).on('click', function(e) {
+        e.preventDefault();
+        menu3.slideToggle();
+    });
+    $(window).resize(function(){
+        var wid = $(window).width();
+        if(wid > 760 && menu3.is(':hidden')) {
+            menu3.removeAttr('style');
+        }
+    });
+
 });

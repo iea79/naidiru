@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link href="css/style.css" rel="stylesheet"/>
     <script src="js/jquery.js"></script>
+    <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script src="//yastatic.net/share2/share.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/function.js"></script>
@@ -180,10 +182,14 @@
                 <p class="b__article_text_top ind">Чтоб понять какой телевизор лучше выбрать, мнение специалиста станет основополагающим в решении данного вопроса. И это важно, ведь полки магазинов пестрят различными предложениями. Моделей становится всё больше, выбор расширяется и окончательно определиться с выбором все сложнее.</p>
                 <!-- begin b__article_top -->
                 <div class="b__article_top">
-                  <div class="b__article_top_left b__article_social"><a href="#" class="b__article_social_icon"><img src="img/icon-vk2.png" alt="#"/></a><a href="#" class="b__article_social_icon"><img src="img/icon-fb2.png" alt="#"/></a><a href="#" class="b__article_social_icon"><img src="img/icon-twit2.png" alt="#"/></a><a href="#" class="b__article_social_icon"><img src="img/icon-odn2.png" alt="#"/></a><a href="#" class="b__article_social_icon"><img src="img/icon-google2.png" alt="#"/></a><a href="#" class="b__article_social_icon"><img src="img/icon-mm2.png" alt="#"/></a>
-                    <div class="b__article_social_comments">
-                      <div class="b__article_social_text">252</div>
-                    </div>
+                  <div class="b__article_top_left b__article_social">
+                    <div data-services="vkontakte" class="b__article_social_icon ya-share2"></div>
+                    <div data-services="facebook" class="b__article_social_icon ya-share2"></div>
+                    <div data-services="twitter" class="b__article_social_icon ya-share2"></div>
+                    <div data-services="odnoklassniki" class="b__article_social_icon ya-share2"></div>
+                    <div data-services="gplus" class="b__article_social_icon ya-share2"></div>
+                    <div data-services="moimir" class="b__article_social_icon ya-share2"></div><a href="#comments" class="b__article_social_comments btn btn__danger"></a>
+                    <div class="b__article_social_text">252</div>
                   </div>
                   <div class="b__article_top_right"><img src="img/blog-img1.jpg" alt="#" class="b__article_top_img"/></div>
                 </div>
@@ -218,7 +224,14 @@
                 <!-- begin b__article_end -->
                 <div class="b__article_end ind">
                   <div class="b__article_end_left">
-                    <p>Поделитесь с друзьями:</p><img src="img/social-img.png" alt="#" class="social_widget"/>
+                    <p>Поделитесь с друзьями:</p>
+                    <div class="b__article_social">
+                      <div data-services="vkontakte" class="b__article_social_icon ya-share2"></div>
+                      <div data-services="facebook" class="b__article_social_icon ya-share2">				</div>
+                      <div data-services="odnoklassniki" class="b__article_social_icon ya-share2"></div>
+                      <div data-services="gplus" class="b__article_social_icon ya-share2"></div>
+                      <div data-services="twitter" class="b__article_social_icon ya-share2"></div>
+                    </div>
                   </div>
                   <div class="b__article_end_right">
                     <p class="mb_10">Фото или источник: GETTY IMAGES</p>
@@ -230,9 +243,10 @@
                 <div class="line"></div>
                 <!-- begin b__article_com -->
                 <div class="b__article_com ind">
-                  <div class="b__article_com_h">Комментарии (25)</div>
+                  <div id="comments" class="b__article_com_h">Комментарии (25)</div>
                   <div class="b__article_com_list">
-                    <div class="b__article_com_item">
+                    <div class="b__article_com_trigger"> <span>&#9658;</span>Написать отзыв о статье</div>
+                    <div class="b__article_com_item b__article_com_first">
                       <div class="b__article_com_left"><img src="img/user1.png" alt="#" class="b__article_com_user"/></div>
                       <div class="b__article_com_right area">
                         <textarea placeholder="Ваше сообщение ..."></textarea>
