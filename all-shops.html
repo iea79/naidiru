@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Все магазины</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/function.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- begin header -->
+      <header class="header">
+        <!-- begin header__top -->
+        <div class="header__top">
+          <div class="container_center">
+            <div class="header__top_left">Бесплатные купоны и промокоды</div>
+            <div class="header__top_right"><a href="#" class="header__top_item"><i class="icon__gift"></i>Розыгрыш призов каждый месяц</a><a href="#" class="header__top_item"><i class="icon__star"></i>Блог</a><a href="#" class="header__top_promo">SALE! Новогодняя распродажа</a></div>
+          </div>
+        </div>
+        <!-- end header__top -->
+        <!-- begin header__bottom -->
+        <div class="header__bottom">
+          <div class="container_center"><a href="#" class="mobile__menu_toggle"></a><a href="/" class="logo"><img src="img/logo.svg"/></a>
+            <!-- begin login__box -->
+            <div class="login__box">
+              <div class="login__box_avatar"><img src="img/icon-user.svg"/></div>
+              <div class="login__box_text">Привет,
+                <div class="login__box_email">emailpriilpri@mail.ru</div>
+              </div>
+              <ul class="login__box_drop">
+                <li><a href="#">Ваши лотереи и покупки</a></li>
+                <li><a href="#">Сохраненные купоны</a></li>
+                <li><a href="#">Любимые магазины</a></li>
+                <li><a href="#">Изменить данные</a></li>
+                <li><a href="#">Настройки рассылки</a></li>
+                <li><a href="#">Выйти</a></li>
+              </ul>
+            </div>
+            <!-- end login__box -->
+            <!-- begin header__bottom_center -->
+            <div class="header__bottom_center">
+              <!-- begin navbar -->
+              <ul class="navbar">
+                <li class="navbar__item"><a href="#" class="navbar__link">Магазины</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Категории</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Все скидки</a></li>
+              </ul>
+              <!-- end navbar -->
+              <!-- begin header__search -->
+              <div class="header__search">
+                <input placeholder="Найти: смартфон, Nike, Aliexpress ..."/>
+                <button class="header__search_btn"></button>
+              </div>
+              <!-- end header__search -->
+            </div>
+            <div class="icon__search header__search_toggle"></div>
+            <!-- end header__bottom_center -->
+          </div>
+        </div>
+        <!-- end header__bottom -->
+        <!-- begin mobile__menu -->
+        <ul class="mobile__menu">
+          <li><a href="#">Магазины</a></li>
+          <li><a href="#">Категории</a></li>
+          <li><a href="#">Все скидки</a></li>
+          <li><a href="#">Розыгрыш призов каждый месяц</a></li>
+          <li><a href="#">Как использовать промокод?</a></li>
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">Написать нам и FAQ</a></li>
+          <li><a href="#" class="mobile__menu_action">Sale! Новогодняя распродажа</a></li>
+        </ul>
+        <!-- en mobile__menu -->
+      </header>
+      <!-- end header -->
+      <!-- begin main__content-->
+      <main class="main__content">
+        <div class="all-shops">
+          <div class="white__line">
+            <div class="container_center">
+              <!-- begin breadcrumb-->
+              <div class="breadcrumb ind">
+                <li><a href="/">Главная</a></li>
+                <li><a href="#">Все магазины</a></li>
+                <li><a href="#">Обувь и Аксессуары	</a></li>
+              </div>
+              <!-- end breadcrumb-->
+              
+              <h1>Самые лучшие магазины</h1>
+              <div class="shops__categories_trigger">Фильтр магазинов<span>&gt;</span></div>
+              <!-- begin shops__categories-->
+              <div class="shops__categories ind">
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Все магазины</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Одежда</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link active">Обувь и Аксессуары</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Техника и Электроника</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Красота и Здоровье</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Детские товары и Игрушки</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Спорт и Хобби</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Зоотовары   </a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Дом, Мебель, Сад</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Путешествия и Развлечения </a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Продукты и Доставка еды   </a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Продукты и Доставка еды</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Цветы и Подарки </a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Автотовары и Инструменты</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Финансы, Образование, Услуги</a></div>
+                <div class="shops__categories_item"><a href="#" class="shops__categories_link">Китайские магазины</a></div>
+              </div>
+              <!-- end shops__categories-->
+              
+              <div class="shops__sort_trigger">Сортировать магазины<span>&gt;</span></div>
+              <!-- begin shops__sort-->
+              <div class="shops__sort ind">
+                <div class="shops__sort_top">
+                  <div class="shops__sort_left">
+                    <div class="shops__sort_sort">Сортировать:</div>
+                    <div class="shops__sort_list">
+                      <div class="shops__sort_item"><a href="#" class="shops__sort_link">По популярности</a></div>
+                      <div class="shops__sort_item"><a href="#" class="shops__sort_link active">По алфавиту</a></div>
+                      <div class="shops__sort_item"><a href="#" class="shops__sort_link">По рейтингу (отзывам)</a></div>
+                      <div class="shops__sort_item"><a href="#" class="shops__sort_link">Кто участвует в розыгрыше</a></div>
+                    </div>
+                  </div>
+                  <div class="shops__sort_checkbox">
+                    <input type="checkbox" id="shops__sort_checkbox"/>
+                    <label for="shops__sort_checkbox">Магазины с бесплатной доставкой</label>
+                  </div>
+                </div>
+                <div class="shops__sort_abc">
+                  <div class="shops__sort_abc_list">
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link active">Все</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">A</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">B</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">C</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">D</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">E</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">F</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">G</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">H</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">I</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">J</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">K</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">L</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">M</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">N</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">O</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">P</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Q</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">R</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">S</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">T</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">U</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">V</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">W</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">X</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Y</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Z	</a></div>
+                  </div>
+                  <div class="shops__sort_abc_list">
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">0-9</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">А</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Б</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">В</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Г</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Д</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Е</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Ж</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">З</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">И</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">К</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Л</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">М</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Н</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">О</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">П</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Р</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">С</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Т</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">У</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Ф</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Ц</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Ч</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Ш</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Э</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Ю</a></div>
+                    <div class="shops__sort_abc_item"><a href="#" class="shops__sort_abc_link">Я</a></div>
+                  </div>
+                </div>
+              </div>
+              <!-- end shops__sort-->
+              
+              <div class="shops__box ind">
+                <!-- begin shops__box_grid -->
+                <div class="grid grid__7 shops__box_grid">
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>MyToys</p><img src="img/shop-img1.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item active">
+                      <p>Aliexpress</p><img src="img/shop-img2.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>bonprix</p><img src="img/shop-img3.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Lamoda                     </p><img src="img/shop-img4.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Летуаль</p><img src="img/shop-img5.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Юлмарт</p><img src="img/shop-img6.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Media Markt</p><img src="img/shop-img7.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>MyToys</p><img src="img/shop-img1.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item active">
+                      <p>Aliexpress</p><img src="img/shop-img2.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>bonprix</p><img src="img/shop-img3.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Lamoda                     </p><img src="img/shop-img4.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Летуаль</p><img src="img/shop-img5.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Юлмарт</p><img src="img/shop-img6.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Media Markt</p><img src="img/shop-img7.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>MyToys</p><img src="img/shop-img1.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item active">
+                      <p>Aliexpress</p><img src="img/shop-img2.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>bonprix</p><img src="img/shop-img3.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Lamoda                     </p><img src="img/shop-img4.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Летуаль</p><img src="img/shop-img5.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Юлмарт</p><img src="img/shop-img6.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Media Markt</p><img src="img/shop-img7.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>MyToys</p><img src="img/shop-img1.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item active">
+                      <p>Aliexpress</p><img src="img/shop-img2.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>bonprix</p><img src="img/shop-img3.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Lamoda                     </p><img src="img/shop-img4.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Летуаль</p><img src="img/shop-img5.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Юлмарт</p><img src="img/shop-img6.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Media Markt</p><img src="img/shop-img7.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>MyToys</p><img src="img/shop-img1.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item active">
+                      <p>Aliexpress</p><img src="img/shop-img2.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>bonprix</p><img src="img/shop-img3.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Lamoda                     </p><img src="img/shop-img4.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Летуаль</p><img src="img/shop-img5.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Юлмарт</p><img src="img/shop-img6.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="grid__wrapper">
+                    <div class="grid__item">
+                      <p>Media Markt</p><img src="img/shop-img7.png" alt="#"/>
+                      <div class="grid__item_like"></div>
+                      <div class="grid__item_rate">
+                        <div class="grid__item_stars">
+                          <div style="width: 90%" class="grid__item_stars_full"></div>
+                        </div>
+                        <div class="grid__item_rate_number">(182)</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end shops__box_grid-->
+                
+              </div>
+              <div class="line"></div>
+              <!-- begin pagination-->
+              <ul class="pagination">
+                <li class="prev"><a href="#" class="passive"></a></li>
+                <li><a href="#" class="active">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="sm"><a href="#">6</a></li>
+                <li class="sm"><a href="#">7</a></li>
+                <li class="sm"><a href="#">8</a></li>
+                <li class="sm"><a href="#">9</a></li>
+                <li class="sm"><a href="#">10</a></li>
+                <li class="lg"><a href="#">11</a></li>
+                <li class="lg"><a href="#">12</a></li>
+                <li class="lg"><a href="#">13</a></li>
+                <li class="lg"><a href="#">14</a></li>
+                <li class="lg"><a href="#">15</a></li>
+                <li><a href="#" class="hellip">&hellip;</a></li>
+                <li class="sm"><a href="#">81</a></li>
+                <li><a href="#">82                   </a></li>
+                <li class="next"><a href="#"></a></li>
+              </ul>
+              <!-- end pagination-->
+              
+            </div>
+          </div>
+          <div class="container_center">
+            <!-- begin lots-->
+            <div class="lots">
+              <h2>Покупайте и участвуйте в ежемесячных розыгрышах</h2>
+              <p>Покупайте и копите баллы. Меняйте баллы на лотереи и участвуйте. <a href="#">Подробнее о розыгрышах &gt;</a></p>
+              <p>+ Никогда не пропускайте! Получайте лучшие скидки магазинов к себе на почту.</p><a href="#" class="btn btn__danger">Зарегистрироваться</a>
+              <p>У вас есть свой аккаунт?<a href="#" class="lots_a">Войдите</a></p>
+            </div>
+            <!-- end lots-->
+          </div>
+        </div>
+      </main>
+      <!-- end main__content-->
+    </div>
+    <!-- begin footer -->
+    <footer class="footer">
+      <div class="container_center">
+        <!-- begin footer__grid-->
+        <div class="grid grid__4 footer__grid">
+          <div class="grid__wrapper">
+            <div class="grid__item"><a href="/" class="footer__logo"><img src="img/footer-logo.png" alt=""/></a>
+              <div class="footer__social">
+                <div class="footer__social_title">Мы в соцсетях:</div><a href="#" class="icon__vk"></a><a href="#" class="icon__fb"></a><a href="#" class="icon__google"></a><a href="#" class="icon__odnoklassniki"></a><a href="#" class="icon__twitter"></a><a href="#" class="icon__instagramm"></a>
+              </div>
+            </div>
+          </div>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <div class="footer__title">Позвольте нам помочь</div>
+              <ul class="footer__rubric">
+                <li class="footer__rubric_item"><a href="#">Обратная связь</a></li>
+                <li class="footer__rubric_item"><a href="#">Часто задаваемые вопросы</a></li>
+                <li class="footer__rubric_item"><a href="#">О нас и наши отзывы</a></li>
+                <li class="footer__rubric_item"><a href="#">Как использовать промокод?</a></li>
+                <li class="footer__rubric_item"><a href="#">О ежемесячных розыгрышах</a></li>
+                <li class="footer__rubric_item"><a href="#">Мой аккаунт</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <div class="footer__title">Сотрудничество</div>
+              <ul class="footer__rubric">
+                <li class="footer__rubric_item"><a href="#">Реклама на сайте</a></li>
+                <li class="footer__rubric_item"><a href="#">FAQ для бизнеса</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <div class="footer__title">Специальные страницы</div>
+              <ul class="footer__rubric">
+                <li class="footer__rubric_item"><a href="#">Черная пятница</a></li>
+                <li class="footer__rubric_item"><a href="#">Киберпонедельник</a></li>
+                <li class="footer__rubric_item"><a href="#">Lamoda</a></li>
+                <li class="footer__rubric_item"><a href="#">Новогодняя распродажа</a></li>
+                <li class="footer__rubric_item"><a href="#">День Влюбленных</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- end footer__grid-->
+        <!-- begin footer__bottom -->
+        <div class="footer__bottom">
+          <div class="footer__bottom_item">© 2012-2017 Найди.ру </div>
+          <div class="footer__bottom_item"><a href="#">Пользовательское соглашение</a></div>
+          <div class="footer__bottom_item"><a href="#">Правила покупок</a></div>
+          <div class="footer__bottom_item"><a href="#">Карта сайта</a></div>
+        </div>
+        <!-- end footer__bottom -->
+      </div>
+      <!-- Если нужна плавающая кнопка добавить класс .to_top_float--><a href="#" class="to_top">Наверх</a>
+    </footer>
+    <!-- end footer -->
+  </body>
+</html>

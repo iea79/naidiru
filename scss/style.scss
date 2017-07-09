@@ -2336,6 +2336,7 @@ h1 {
 	font-size: 23px;
 	font-weight: 400;
 	@media (max-width: 767px) {
+		font-size: 18px;
 		text-align: center;
 	}
 }
@@ -2478,33 +2479,6 @@ p {
 	display: none;
 }
 
-// begin breadcrumb
-.breadcrumb {
-	margin: -8px 0 22px;
-	li {
-		display: inline-block;
-		vertical-align: baseline;
-		&:not(:first-child) {
-			&:before {
-				content: '>';
-				display: inline-block;
-				margin-right: 3px;
-			}
-		}
-		&:last-child {
-			a {
-				cursor: default;
-				text-decoration: none;
-			}
-		}
-		
-		a {
-			color: #292929;
-			font-size: 13px;
-		}
-	}
-}
-// end breadcrumb
 
 .main__content {
 	@extend %clear_a;
@@ -2869,7 +2843,7 @@ p {
 
 
 .sidebar__coupon {
-	@extend %clear_a;
+	@extend %clear_all;
 	&_link {
 		float: right;
 		width: 40px;
@@ -3657,6 +3631,7 @@ p {
 			z-index: 3;
 			width: 25px;
 			height: 25px;
+			cursor: pointer;
 			background: url('../img/heart.png') no-repeat;
 		}
 	}
@@ -3669,9 +3644,9 @@ p {
 		@include columns-text(100px, 5, 75px, 0px, solid, #000);
 		li {
 			margin-bottom: 18px;
-			&.pl {
-				padding-left: 20px;
-			}
+			// &.pl {
+			// 	padding-left: 20px;
+			// }
 		}
 	}
 	@media (max-width: 1280px) {
@@ -3704,9 +3679,9 @@ p {
 		.columns__list {
 			@include columns-text(100px, 4, 75px, 0px, solid, #000);
 			li {
-				&.pl {
-					padding-left: 0;
-				}
+				// &.pl {
+				// 	padding-left: 0;
+				// }
 			}
 		}
 	}
@@ -3734,3 +3709,357 @@ p {
 	}
 }
 // end category__box_grid
+
+
+
+// Страница Все магазины all-shops.html ///////////////
+// ====================================================
+
+// begin shops__categories
+.shops__categories {
+	margin: 10px 0 40px -15px;
+	@extend %clear_a;
+	&_item {
+		float: left;
+		margin-top: 15px;
+		margin-left: 15px;
+	}
+	&_link {
+		padding: 9px 15px;
+		display: block;
+		color: $main-color;
+		background-color: $muted-color;
+		@include border-radius(6px);
+		&:hover {
+			text-decoration: none;
+			background-color: #e8e7e7;
+		}
+		&.active {
+			text-decoration: none;
+			color: #fff;
+			background-color: $primary-color;
+		}
+	}
+	@media (max-width: 767px) {
+		margin: 20px 0;
+		display: none;
+		&_item {
+			margin-left: 0;
+			float: none;
+			text-align: center;
+		}
+	}
+}
+// end shops__categories
+
+
+// begin shops__sort
+.shops__sort {
+	&_top {
+		margin-bottom: 23px;
+		@extend %clear_all;
+	}
+	&_left {
+		float: left;
+		font-size: 15px;
+		@extend %clear_a;
+	}
+	&_sort {
+		float: left;
+		font-weight: 700;
+	}
+	&_list {
+		overflow: hidden;
+		@extend %clear_a;
+	}
+	&_item {
+		float: left;
+		margin-left: 44px;
+	}
+	&_link {
+		padding: 5px 2px;
+		color: $main-color;
+		&:hover {
+			color: #767676;
+			text-decoration: none;
+		}
+		&.active {
+			border-bottom: 2px solid $warning-color;
+		}                                                       
+	}
+	&_checkbox {
+		float: right;
+		input[type="checkbox"] {
+			width: 17px;
+			height: 17px;
+			margin-right: 8px;
+			background-color: #fff;
+			border: 1px solid #9d9d9d;
+			@include border-radius(3px);
+			&:before {
+				padding-top: 2px;
+			}
+		}
+		label {
+			padding-right: 20px;
+		}
+	}
+	@media (max-width: 1279px) {
+		&_item {
+			margin-left: 25px;
+		}
+	}
+	@media (max-width: 1199px) {
+		&_left {
+			float: none;
+			margin-bottom: 15px;
+		}
+		&_checkbox {
+			float: none;
+		}
+	}
+	@media (max-width: 991px) {
+		&_item {
+			margin-bottom: 10px;
+		}
+	}
+	@media (max-width: 767px) {
+		display: none;
+		margin: 20px 0 0;
+		padding-bottom: 20px;
+		border-bottom: 1px solid #dadada;
+		&_left {
+			margin-bottom: 10px;
+		}
+		&_sort {
+			display: none;
+		}
+		&_item {
+			float: none;
+			margin-left: 0;
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		&_checkbox {
+			text-align: center;
+		}
+	}
+}
+
+.shops__sort_abc {
+	&_list {
+		margin-left: -12px;
+		margin-bottom: 5px;
+		@extend %clear_a;
+	}
+	&_item {
+		float: left;
+		margin-left: 12px;
+		&:nth-child(2) {
+			margin-left: 20px;
+		}
+	}
+	&_link {
+		color: $main-color;
+		&:hover {
+			color: #767676;
+			text-decoration: none;
+		}
+		&:hover,
+		&.active {
+			border-bottom: 1px solid $warning-color;
+		}
+	}
+	@media (max-width: 767px) {
+		&_list {
+			@include flexbox();
+			@include justify-content(center);
+			@include flex-flow(row wrap);
+		}
+		&_item {
+			float: none;
+			margin-bottom: 5px;
+		}
+	}
+}
+// end shops__sort
+
+
+// begin triggers
+.shops__categories_trigger,
+.shops__sort_trigger {
+	padding: 12px;
+	display: none;
+	cursor: pointer;
+	font-family: Tahoma;
+	font-size: 16px;
+	text-align: center;
+	border-top: 1px solid #d1d1d1;
+	border-bottom: 1px solid #d1d1d1;
+	span {
+		margin-left: 15px;
+		font-family: Tahoma;
+		font-size: 16px;
+	}
+	@media (max-width: 767px) {
+		display: block;
+	}
+}
+.shops__categories_trigger {
+	margin-top: 19px;
+	margin-bottom: 10px;
+	padding: 7px 11px 11px;
+	line-height: 20px;
+	&:before {
+		content: url('../img/filter-img.png');
+		position: relative;
+		top: 4px;
+		margin-right: 17px;
+		display: inline-block;
+	}
+}
+// end triggers
+
+
+// begin shops__box_grid
+.shops__box {
+	margin-top: 16px;
+	margin-bottom: -20px;
+	@extend %clear_a;
+	&>* {
+		
+	}
+	&_grid {
+		width: 100%;
+		float: left;
+		color: $main-color;
+		padding: 0;
+		@include justify-content(flex-start);
+		.grid__wrapper {
+			margin-top: 27px;
+			@include flex-basis(14.285%);
+		}
+		.grid__item {
+			position: relative;
+			&_like {
+				position: absolute;
+				top: 32px;
+				right: 8px;
+				width: 17px;
+				height: 15px;
+				background: url('../img/heart-gray.png') no-repeat;
+			}
+			&.active {
+				.grid__item_like {
+					background: url('../img/heart-red.png') no-repeat;
+				}
+			}
+			&_rate {
+				position: absolute;
+				bottom: 12px;
+				left: 0;
+				right: 0;
+				@include flexbox();
+				@include justify-content(center);
+				&_number {
+					padding-top: 2px;
+					font-size: 12px;
+					margin-left: 5px;
+				}
+			}
+			&_stars {
+				width: 75px;
+				height: 15px;
+				background: url('../img/star-white.svg') repeat-x;
+				background-size: 15px 15px;
+				&_full {
+					width: 0;
+					height: 100%;
+					background: url('../img/star-red.svg') repeat-x;
+					background-size: 15px 15px;
+				}
+			} 
+			// &_star {
+			// 	width: 15px;
+			// 	height: 15px;
+			// 	float: left;
+			// 	margin-left: 3px;
+			// 	background: url('../img/star-red.svg') no-repeat;
+			// 	background-size: 15px 15px;
+			// }
+		}
+		img {
+			display: block;
+			width: 100%;
+		}
+		p {
+			margin-bottom: 8px;
+			font-size: 14px;
+		}
+	}
+	@media (max-width: 1199px) {
+		&_grid {
+			.grid__wrapper {		
+				@include flex-basis(20%);
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		&_grid {
+			.grid__wrapper {		
+				@include flex-basis(25%);
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		margin-top: 4px;
+		margin-bottom: -12px;
+		&_grid {
+			padding: 0 0 0 20px;
+			@include justify-content(center);
+			.grid__wrapper {
+				margin-top: 20px;
+				@include flex-basis(40%);
+			}
+		}
+	}
+	@media (max-width: 479px) {
+		.grid {
+			margin-left: 0;
+		}
+		&_grid {
+			padding: 0;
+			display: block;
+			.grid__wrapper {
+				padding-left: 0;
+				padding-bottom: 0 !important;
+				margin-top: 20px;	
+				width: 160px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+// end shops__box_grid
+
+.all-shops {
+	.white__line {
+		padding: 20px 0;
+	}
+	.pagination {
+		margin-top: 23px;
+		margin-bottom: 10px;
+	}
+	@media (max-width: 767px) {
+		.line {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+		.pagination {
+			margin-top: 19px;
+			margin-bottom: 5px;
+		}
+	}
+}

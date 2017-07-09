@@ -1,10 +1,31 @@
 // Pagination ==================================================================
 .pagination {
 	li {
+		margin-left: 1px;
 		display: inline-block;
 		a {
+			padding: 3px 6px;
 			display: block;
+			color: $primary-color;
+			font-size: 15px;
 			text-align: center;
+			&:hover {
+				color: #292929;
+				text-decoration: none;
+			}
+			&.active {
+				color: #292929;
+				background-color: $muted-color;
+			}
+			&.passive {
+				color: #bfbebe;
+				cursor: default;
+			}
+			&.hellip {
+				padding: 3px 10px;
+				color: #bfbebe;
+				cursor: default;
+			}
 		}
 		&.prev, &.next {
 			a {
@@ -13,18 +34,66 @@
 			}
 		}
 		&.prev {
+			margin-right: 30px;
 			a {
 				&:before {
-					content: '<';
+					content: 'Предыдущая страница';
 					
 				}
 			}
 		}
 		&.next {
+			margin-left: 30px;
 			a {
 				&:before {
-					content: '>';
+					content: 'Следующая страница';
 					
+				}
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		li {
+			&.lg {
+				display: none;
+			}
+			&.prev {
+				margin-right: 16px;
+			}
+			&.next {
+				margin-left: 16px;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		width: 280px;
+		margin-left: auto;
+		margin-right: auto;
+		li {
+			&.sm {
+				display: none;
+			}
+			&.prev, &.next {
+				a {
+					font-weight: bold;
+					&:before {					
+					}
+				}
+			}
+			&.prev {
+				a {
+					&:before {
+						content: '<';
+						
+					}
+				}
+			}
+			&.next {
+				a {
+					&:before {
+						content: '>';
+						
+					}
 				}
 			}
 		}

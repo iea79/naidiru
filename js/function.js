@@ -272,4 +272,34 @@ $(document).ready(function() {
     	buttonToTop();
     });
 
+    // All shops - shops__categories767
+	var touch1 = $('.shops__categories_trigger');
+    var menu1 = $('.shops__categories');
+ 
+    $(touch1).on('click', function(e) {
+        e.preventDefault();
+        menu1.slideToggle();
+    });
+    $(window).resize(function(){
+        var wid = $(window).width();
+        if(wid > 760 && menu1.is(':hidden')) {
+            menu1.removeAttr('style');
+        }
+    });
+
+    // All shops - shops__sort767
+	var touch2 = $('.shops__sort_trigger');
+    var menu2 = $('.shops__sort');
+ 
+    $(touch2).on('click', function(e) {
+        e.preventDefault();
+        menu2.slideToggle();
+    });
+    $(window).resize(function(){
+        var wid = $(window).width();
+        if(wid > 760 && menu2.is(':hidden')) {
+            menu2.removeAttr('style');
+        }
+    });
+
 });
