@@ -98,4 +98,64 @@
 			}
 		}
 	}
+	&.short {
+		width: 822px;
+		padding: 18px 32px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #fff;                                         
+		.lg {
+			display: none;
+		}
+		li.prev {
+			padding: 0;
+			margin-right: 21px;
+		}
+		li.next {
+			padding: 0;
+			margin-left: 21px;
+		}
+		@media (max-width: 991px) {
+			width: 330px;
+			padding: 9px 20px;
+			.sm {
+				display: none;
+			}
+			li {
+				&.prev, 
+				&.next {
+					a {
+						font-weight: bold;
+						&:before {					
+						}
+					}
+				}
+				&.prev {
+					a {
+						&:before {
+							content: '<';
+							
+						}
+					}
+				}
+				&.next {
+					a {
+						&:before {
+							content: '>';
+							
+						}
+					}
+				}
+			}
+		}
+		@media (max-width: 479px) {
+			width: 310px;
+			li.prev {
+			margin-right: 10px;
+			}
+			li.next {
+				margin-left: 10px;
+			}
+		}
+	}
 }

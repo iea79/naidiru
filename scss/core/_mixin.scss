@@ -183,3 +183,11 @@
     -webkit-align-self: $params;
     align-self: $params;
 }
+
+// 
+// @TODO: Add docs to     -webkit-align-items!
+// Flex items can be aligned in the cross axis of the current line of the flex container, similar to justify-content but in the perpendicular direction. align-items sets the default alignment for all of the flex container’s items, including anonymous flex items. align-self allows this default alignment to be overridden for individual flex items. (For anonymous flex items, align-self always matches the value of align-items on their associated flex container.)
+@mixin align-items($params) {
+    -webkit-align-items: $params;
+    align-items: $params;
+}
