@@ -15,7 +15,7 @@
 	@extend %clear_all;
 	.container_center {
 		padding-top: 35px;
-		padding-bottom: 10px;
+		// padding-bottom: 10px;
 	}
 	&__grid {
 		@include flex-flow(row nowrap);
@@ -55,7 +55,7 @@
 	}
 	&__bottom {
 		border-top: 1px solid #b2b2b2;
-		margin-top: 23px;
+		margin-top: 20px;
 		padding: 20px 40px 15px;
 		position: relative;
 		&_item {

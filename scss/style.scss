@@ -141,7 +141,7 @@
 			width: 49px;
 			border: none;
 			cursor: pointer;
-			background: image-url('icon-zoom.png') no-repeat center center $danger-color;
+			background: image-url('icon-zoom.svg') no-repeat center center $danger-color;
 			@include trs(.3);
 			&:hover {
 				opacity: .8;
@@ -214,7 +214,7 @@
 		top: 60px;
 		right: 0;
 		width: 240px;
-		z-index: 50;
+		z-index: 100;
 		padding: 0 0;
 		overflow: hidden;
 		height: 0;
@@ -279,6 +279,18 @@
 	&_action {
 
 	}
+}
+
+.body__overlay {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	background-color: transparentize(#000, .5);
+	z-index: 90;
+	// @include trs(.5);
 }
 
 @media (max-width: 1199px) {
@@ -482,7 +494,7 @@
 			    right: 0px;
 			    // padding: 23px 31px;
 			    // width: 240px;
-			    height: 100%;
+			    // height: 100%;
 			    width: 100%;
 			    background-color: #454545;
 			}
@@ -504,9 +516,10 @@
 			// top: 125px;
 			// height: auto;
 			// width: 0;
+		    top: 83px;
 		    padding: 23px 31px;
 			right: -100%;
-			text-align: right;
+			text-align: center;
 			height: 100%;
 			li {
 				a {
@@ -533,7 +546,7 @@
 		z-index: 101;
 		background-color: #454545;
 		width: 100%;
-		height: 100%;
+		// height: 100%;
 		// max-width: 320px;
 		left: -100%;
 		overflow: hidden;
@@ -545,6 +558,7 @@
 			display: block;
 			padding: 12px 0;
 			left: 0;
+			overflow: auto;
 		}
 		&_toggle {
 			display: block;
@@ -693,6 +707,10 @@
 			&_center {
 				overflow: inherit;
 				width: 100%;
+				display: none;
+				&.open {
+					display: block;
+				}
 			}
 		}
 		.logo {
@@ -701,12 +719,19 @@
 		}
 		&__search {
 			background-color: #f1ad1d;
-			margin: 14px 8px 0;;
+			margin: 14px 8px 0;
 			input {
 			}
 			&_btn {
 				&:hover {
 				}
+			}
+			&_toggle {
+				display: block;
+				position: absolute;
+				right: 10px;
+				top: 23px;
+				cursor: pointer;
 			}
 		}
 	}
@@ -716,7 +741,11 @@
 		&:after {
 		}
 		&_avatar {
-			margin-right: 0;
+			// margin-right: 36px;
+			width: 36px;
+			height: 36px;
+			position: absolute;
+			right: 44px;
 			img {
 			}
 		}
@@ -725,7 +754,7 @@
 		&_email {
 		}
 		&_drop {
-			top: 121px;
+			top: 65px;
 			overflow: auto;
 		}
 	}
@@ -749,6 +778,82 @@
 		}
 		&_action {
 			
+		}
+	}
+	
+	// Home mobile header ======================
+	.home {
+		.header {
+			.container_center {
+			}
+			&__top {
+				&_left {
+				}
+				&_right {
+				}
+				&_item {
+					&:nth-child(n+2) {
+						&:before {
+						}
+					}
+					i {
+					}			
+				}
+				a {
+				}
+				&_promo {
+					&:before {
+					}
+					&:after {
+					}
+					&:hover {
+					}
+				}
+			}
+			&__bottom {
+				text-align: center;
+				padding: 10px;
+				&_center {
+					position: static;
+					display: block;
+				}
+			}
+			.logo {
+				display: inline-block;
+				float: none;
+			}
+			&__search {
+				background-color: #f1ad1d;
+				margin: 14px 8px 0;
+				input {
+				}
+				&_btn {
+					&:hover {
+					}
+				}
+				&_toggle {
+					display: none;
+				}
+			}
+			.login__box {
+				// right: 10px;
+				&:after {
+				}
+				&_avatar {
+					margin-right: 0;
+					right: 17px;
+					img {
+					}
+				}
+				&_text {
+				}
+				&_email {
+				}
+				&_drop {
+					top: 121px;
+					overflow: auto;
+				}
+			}
 		}
 	}
 }
@@ -975,6 +1080,7 @@
 			}
 			&_sm {
 				display: block !important;
+				width: 100%;
 			}
 			.slider__item {
 			}
@@ -1149,6 +1255,11 @@
 				.home__promo_code_grid,.home__promo_code_bottom {
 					display: block;
 				}
+				.home__promo_code_title {
+					&:before {
+						@include rotate(90deg);
+					}
+				}
 			}
 			&_title {
 				font-size: 16px;
@@ -1168,6 +1279,7 @@
 					position: absolute;
 					left: 16px;
 					top: 13px;
+					@include trs(.3);
 				}
 			}
 			&_grid {
@@ -1498,9 +1610,11 @@
 		&_more {
 		}
 		&_bottom {
+			a {
+				display: block;
+			}
 		}
 		&_info {
-			display: block;
 			margin-right: 0;
 			margin-bottom: 8px;
 			i {
@@ -1656,6 +1770,7 @@
 			&_title {
 				font-size: 15px;
 				font-weight: 400;
+				margin-bottom: 0;
 			}
 			&+.btn {
 				margin-top: 0;
@@ -4163,3 +4278,7 @@ p {
 		}
 	}
 }
+
+
+// end shops__box_grid
+
