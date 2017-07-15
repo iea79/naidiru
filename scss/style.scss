@@ -2639,11 +2639,6 @@
 
 // Блог Главная blog.html ///////////////
 // ======================================
-.blog {
-	.main__content {
-		padding-bottom: 0;
-	}
-}
 
 // begin blog__top
 .blog__top {
@@ -2796,7 +2791,6 @@
 			color: #2d2d2d;
 		}
 	}
-
 }
 
 
@@ -4583,7 +4577,6 @@
 	}
 }
 // end category__box_grid
-<<<<<<< HEAD
 
 
 
@@ -4597,7 +4590,7 @@
 		margin: -8px 0 6px;
 	}
 	.main__content {
-		padding-bottom: 18px;
+		// padding-bottom: 18px;
 		&_center {
 			padding-top: 36px;
 		}
@@ -5641,6 +5634,7 @@
 // begin office__attention
 .office__attention {
 	padding: 50px 0;
+	margin-bottom: 18px;
 	@extend %clear_a;
 	&_left {
 		width: 65px;
@@ -5678,5 +5672,3 @@
 	}
 }
 // end office__attention
-=======
->>>>>>> 25deabc4c8dca2107b00e0982c9eab1727a9d7b7
