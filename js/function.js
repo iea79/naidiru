@@ -317,4 +317,41 @@ $(document).ready(function() {
         }
     });
 
+    // office.html Показать/скрыть подтвержденные покупки - не работает
+    $('.office__history_confirmed_hide').click(function(e) {
+        e.preventDefault();
+        $('.office__history_confirmed').addClass('hide');
+        $('.office__history_confirmed_hide').addClass('active');
+    });
+    $('.office__history_confirmed_hide').click(function(e) {
+        e.preventDefault();
+        $('.office__history_confirmed').removeClass('hide');
+        $('.office__history_confirmed_hide').removeClass('active');
+    });
+
+    // office.html Редактировать чек - требует корректировок
+    $('.office__checks_edit_btn').click(function(e) {
+        e.preventDefault();
+        $('.office__checks_edit_hide').addClass('open');
+    });
+    $('.office__checks_edit_hide_btn').click(function(e) {
+        e.preventDefault();
+        $('.office__checks_edit_hide').removeClass('open');
+    });
+
+    // office.html - office__menu767
+	var touch4 = $('.office__menu_trigger');
+    var menu4 = $('.main__content_sidebar');
+ 
+    $(touch4).on('click', function(e) {
+        e.preventDefault();
+        menu4.slideToggle();
+    });
+    $(window).resize(function(){
+        var wid = $(window).width();
+        if(wid > 760 && menu4.is(':hidden')) {
+            menu4.removeAttr('style');
+        }
+    });
+
 });
