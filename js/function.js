@@ -385,4 +385,42 @@ $(document).ready(function() {
         }
     });
 
+
+    // office-news.html Кто такая Шоппел - не работает
+    $('.office__news_support_link').click(function(e) {
+        e.preventDefault();
+        $('.office__news_support_definition').addClass('open');
+    });
+    // $('.office__news_support_link').click(function(e) {
+    //     e.preventDefault();
+    //     $('.office__news_support_definition').removeClass('open');
+    // });
+
+
+    // office-news.html Галочка на новостях - Удаление/восстановление
+    // Вызов блока .office__news_item_hide с кнопкой Удаления
+    $('.office__news_item_mark').click(function(e) {
+        e.preventDefault();
+        $('.office__news_item_hide').addClass('open');
+        $('.office__news_item').addClass('marked');
+    });
+    // Возврат при повторном нажатии на галочку
+    // $('.office__news_item.marked .office__news_item_mark').click(function(e) {
+    //     e.preventDefault();
+    //     $('.office__news_item_hide').removeClass('open');
+    //     $('.office__news_item').removeClass('marked');
+    // });
+    // Нажатие на кнопку удаления
+    $('.office__news_item_btn').click(function(e) {
+        e.preventDefault();
+        $('.office__news_item_hide').removeClass('open');
+        $('.office__news_item').removeClass('marked');
+        $('.news__del').addClass('open');
+    });
+    // Нажатие на кнопку восстановления
+    $('.news__del_restore').click(function(e) {
+        e.preventDefault();
+        $('.news__del').removeClass('open');
+    });
+
 });

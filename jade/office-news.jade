@@ -1,0 +1,390 @@
+extends template.jade
+
+block variables
+	- bodyClass = "office"
+
+block title
+	title Личный кабинет - Написать нам + оповещение
+
+block content
+	.white__line
+		.container_center
+
+			// begin breadcrumb
+			.breadcrumb.ind
+				li
+					a(href="/") Главная
+				li
+					a(href="office.html") Личный кабинет
+				li
+					a(href="#") Написать нам + новости
+			// end breadcrumb
+
+
+			// begin office__top 
+			.office__top
+				.office__top_left
+					.office__top_user
+						img.office__top_user_img(src="img/rev2.png", alt="#")
+						.office__top_user_name Александра<br>Иванова
+					a.office__top_alarm(href="#")
+						.office__top_alarm_number 1
+				.office__top_center.change
+					p 
+						span.large Вы накопили: 
+							span.bold.points 24 820 
+						span.bold баллов
+					p Вы можете поменять их на: <br>
+						span.large.bold.points__left 4 
+						span.bold лотереи
+					.help ?
+				.office__top_right
+					.sm_social
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
+					.office__top_right_links
+						a.office__top_right_link(href="#") Сохраненные<br>купоны
+						a.office__top_right_link(href="#") Любимые<br>магазины
+			// end office__top
+
+
+	.container_center.main
+
+
+		// begin sidebar
+		.office__menu_trigger
+		.main__content_sidebar
+			.sidebar__section
+				.office__menu
+					.office__item
+						a.office__link(href="office.html") Ваши лотереи и покупки
+					.office__item
+						a.office__link.active(href="#") Написать нам + новости
+					.office__item
+						a.office__link(href="#") Изменить данные
+					.office__item
+						a.office__link(href="#") Настройки рассылки
+					.office__item
+						a.office__link(href="#") Розыгрыш призов
+					.office__item
+						a.office__link(href="#") Выйти из аккаунта
+			.sidebar__section
+				.sidebar__section_name Поменяйте чек на лотерею
+				p Чтобы получить лотерею, нужно подвердить покупку чеком
+				button.btn.btn__danger Отправить чек
+			.sidebar__section
+				.sidebar__section_name Лента победителей
+				p Розыгрыш апрель-2017:
+				.office__winners
+					.office__winners_title Выиграли: Смартфон 
+						span.office__winners_amount (2)
+					.office__winners_list
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm1.png", alt="#")
+							.office__winners_info
+								.user-name Анна
+								.lottery-number # A17_487524
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Светлана
+								.lottery-number # A17_414724
+					.office__winners_title Выиграли: Косметику 
+						span.office__winners_amount (25)
+					.office__winners_list
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm3.png", alt="#")
+							.office__winners_info
+								.user-name Алексей
+								.lottery-number # A17_487525
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Алина
+								.lottery-number # A17_414726
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm1.png", alt="#")
+							.office__winners_info
+								.user-name Анна
+								.lottery-number # A17_487524
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Светлана
+								.lottery-number # A17_414724
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm3.png", alt="#")
+							.office__winners_info
+								.user-name Алексей
+								.lottery-number # A17_487525
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Алина
+								.lottery-number # A17_414726
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm1.png", alt="#")
+							.office__winners_info
+								.user-name Анна
+								.lottery-number # A17_487524
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Светлана
+								.lottery-number # A17_414724
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm3.png", alt="#")
+							.office__winners_info
+								.user-name Алексей
+								.lottery-number # A17_487525
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Алина
+								.lottery-number # A17_414726
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm1.png", alt="#")
+							.office__winners_info
+								.user-name Анна
+								.lottery-number # A17_487524
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Светлана
+								.lottery-number # A17_414724
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm3.png", alt="#")
+							.office__winners_info
+								.user-name Алексей
+								.lottery-number # A17_487525
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Алина
+								.lottery-number # A17_414726
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm1.png", alt="#")
+							.office__winners_info
+								.user-name Анна
+								.lottery-number # A17_487524
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Светлана
+								.lottery-number # A17_414724
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm3.png", alt="#")
+							.office__winners_info
+								.user-name Алексей
+								.lottery-number # A17_487525
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Алина
+								.lottery-number # A17_414726
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm1.png", alt="#")
+							.office__winners_info
+								.user-name Анна
+								.lottery-number # A17_487524
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Светлана
+								.lottery-number # A17_414724
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm3.png", alt="#")
+							.office__winners_info
+								.user-name Алексей
+								.lottery-number # A17_487525
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Алина
+								.lottery-number # A17_414726
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm1.png", alt="#")
+							.office__winners_info
+								.user-name Анна
+								.lottery-number # A17_487524
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Светлана
+								.lottery-number # A17_414724
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm3.png", alt="#")
+							.office__winners_info
+								.user-name Алексей
+								.lottery-number # A17_487525
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Алина
+								.lottery-number # A17_414726
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm1.png", alt="#")
+							.office__winners_info
+								.user-name Анна
+								.lottery-number # A17_487524
+						.office__winners_item
+							img.office__winners_img(src="img/user-sm2.png", alt="#")
+							.office__winners_info
+								.user-name Светлана
+								.lottery-number # A17_414724
+				button.btn.btn__danger Увидеть всех <br>победителей
+		// end sidebar
+
+
+		// begin main__content_center 
+		.main__content_center
+
+			h1.mb_30 Ваши новости и уведомления
+
+			
+			// begin office__news
+			.office__news
+				
+				// begin office__news_left 
+				.office__news_left.column
+					.office__news_list
+						.office__news_item
+							img.office__news_item_img(src="img/news-img1.jpg", alt="#")
+							.office__news_item_info Акция в Снежной Королеве! Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. Успейте купить!
+							.office__news_item_ago
+								span.hours__ago 1 
+								час назад
+							a.office__news_item_mark(href="#") ✔
+							.office__news_item_hide
+								button.office__news_item_btn.btn Удалить, как прочитанное
+							.news__del
+								.news__del_info
+									.news__del_name Запись успешно удалена!
+									.news__del_p Так как, Вы ее отметили галочкой, как прочитанное!
+									.news__del_p Пока не поздно, ее можно вернуть!
+									button.news__del_restore.btn Восстановить запись
+						.office__news_item
+							img.office__news_item_img(src="img/news-img2.jpg", alt="#")
+							.office__news_item_info Акция в Ив Роше. Только сегодня подарок каждому за покупку!
+							.office__news_item_ago
+								span.hours__ago 1 
+								час назад
+							a.office__news_item_mark(href="#") ✔
+							.office__news_item_hide
+								button.office__news_item_btn.btn Удалить, как прочитанное
+							.news__del
+								.news__del_info
+									.news__del_name Запись успешно удалена!
+									.news__del_p Так как, Вы ее отметили галочкой, как прочитанное!
+									.news__del_p Пока не поздно, ее можно вернуть!
+									button.news__del_restore.btn Восстановить запись
+						.office__news_item.success
+							.office__news_item_name Поздравляем! Вы выиграли!
+							p Вы выиграли в розыгрыше №5, в ближайшее время с Вами свяжется наш менеджер для уточнения информации о получении подарка.
+							.office__news_item_ago
+								span.hours__ago 1 
+								час назад
+							.office__news_item_impotant важно
+							a.office__news_item_mark(href="#") ✔
+							.office__news_item_hide
+								button.office__news_item_btn.btn Удалить, как прочитанное
+							.news__del
+								.news__del_info
+									.news__del_name Запись успешно удалена!
+									.news__del_p Так как, Вы ее отметили галочкой, как прочитанное!
+									.news__del_p Пока не поздно, ее можно вернуть!
+									button.news__del_restore.btn Восстановить запись
+						.office__news_item
+							img.office__news_item_img(src="img/news-img3.jpg", alt="#")
+							.office__news_item_info Розыгрыш Март-2017. Посмотрите, кто выиграл в этом месяце!
+							.office__news_item_ago
+								span.hours__ago 1 
+								час назад
+							a.office__news_item_mark(href="#") ✔
+							.office__news_item_hide
+								button.office__news_item_btn.btn Удалить, как прочитанное
+							.news__del
+								.news__del_info
+									.news__del_name Запись успешно удалена!
+									.news__del_p Так как, Вы ее отметили галочкой, как прочитанное!
+									.news__del_p Пока не поздно, ее можно вернуть!
+									button.news__del_restore.btn Восстановить запись
+						.office__news_item.primary
+							.office__news_item_name Не подтвержден
+							p Извините, но Ваш чек был не подвержден. Причина: Чек не соотвествует с выбранным № заказом.
+							.office__news_item_ago
+								span.hours__ago 1 
+								час назад
+							.office__news_item_impotant важно
+							a.office__news_item_mark(href="#") ✔
+							.office__news_item_hide
+								button.office__news_item_btn.btn Удалить, как прочитанное
+							.news__del
+								.news__del_info
+									.news__del_name Запись успешно удалена!
+									.news__del_p Так как, Вы ее отметили галочкой, как прочитанное!
+									.news__del_p Пока не поздно, ее можно вернуть!
+									button.news__del_restore.btn Восстановить запись
+						.office__news_item
+							img.office__news_item_img(src="img/news-img4.jpg", alt="#")
+							.office__news_item_info Большая распродажа в Aliexspress! Шанс выиграть подарок мечты!
+							.office__news_item_ago
+								span.hours__ago 1 
+								час назад
+							a.office__news_item_mark(href="#") ✔
+							.office__news_item_hide
+								button.office__news_item_btn.btn Удалить, как прочитанное
+							.news__del
+								.news__del_info
+									.news__del_name Запись успешно удалена!
+									.news__del_p Так как, Вы ее отметили галочкой, как прочитанное!
+									.news__del_p Пока не поздно, ее можно вернуть!
+									button.news__del_restore.btn Восстановить запись
+						.office__news_item.danger
+							.office__news_item_name Получите лотерею
+							p Вы получили 5000 баллов, Вы можете обменять их на лотерею прямо сейчас! Узнайте подробнее о том, как обменять баллы на лотерейный билет.
+							.office__news_item_ago
+								span.hours__ago 1 
+								час назад
+							.office__news_item_impotant важно
+							a.office__news_item_mark(href="#") ✔
+							.office__news_item_hide
+								button.office__news_item_btn.btn Удалить, как прочитанное
+							.news__del
+								.news__del_info
+									.news__del_name Запись успешно удалена!
+									.news__del_p Так как, Вы ее отметили галочкой, как прочитанное!
+									.news__del_p Пока не поздно, ее можно вернуть!
+									button.news__del_restore.btn Восстановить запись
+				// end office__news_left 
+
+				
+				// begin office__news_right 
+				.office__news_right
+					.office__news_support
+						.office__news_support_head
+							.office__news_support_name Шоппел
+							p Служба поддержки Найди.ру
+						.office__news_support_body
+							.office__news_support_h Ваше сообщение
+							textarea(placeholder="Есть вопрос? Напишите его сюда! Шоппел ответит на Ваш вопрос электронной почтой, в ближайшее время.")
+							button.btn.btn__danger Отправить нам
+							.office__news_support_p Среднее время ожидания ответа - 15 мин.
+						a.office__news_support_link(href="#") Кто такая Шоппел?
+						.office__news_support_definition Шоппел - это супергерой Найди.ру. Она знает все о выгодных покупках и с большим удовольствием научит вас экономить. Задайте ей вопрос и она ответит на него в ближайшее время.
+							.trigon
+					.office__news_subscription
+						img.office__news_subscription_img(src="img/subscription.jpg", alt="#")
+				// end office__news_right
+
+			// end office__news
+
+		// end main__content_center
