@@ -348,4 +348,79 @@ $(document).ready(function() {
         }
     });
 
+    // office.html Показать/скрыть подтвержденные покупки - не работает
+    $('.office__history_confirmed_hide').click(function(e) {
+        e.preventDefault();
+        $('.office__history_confirmed').addClass('hide');
+        $('.office__history_confirmed_hide').addClass('active');
+    });
+    $('.office__history_confirmed_hide').click(function(e) {
+        e.preventDefault();
+        $('.office__history_confirmed').removeClass('hide');
+        $('.office__history_confirmed_hide').removeClass('active');
+    });
+
+    // office.html Редактировать чек - требует корректировок
+    $('.office__checks_edit_btn').click(function(e) {
+        e.preventDefault();
+        $('.office__checks_edit_hide').addClass('open');
+    });
+    $('.office__checks_edit_hide_btn').click(function(e) {
+        e.preventDefault();
+        $('.office__checks_edit_hide').removeClass('open');
+    });
+
+    // office.html - office__menu767
+	var touch4 = $('.office__menu_trigger');
+    var menu4 = $('.main__content_sidebar');
+ 
+    $(touch4).on('click', function(e) {
+        e.preventDefault();
+        menu4.slideToggle();
+    });
+    $(window).resize(function(){
+        var wid = $(window).width();
+        if(wid > 760 && menu4.is(':hidden')) {
+            menu4.removeAttr('style');
+        }
+    });
+
+
+    // office-news.html Кто такая Шоппел - не работает
+    $('.office__news_support_link').click(function(e) {
+        e.preventDefault();
+        $('.office__news_support_definition').addClass('open');
+    });
+    // $('.office__news_support_link').click(function(e) {
+    //     e.preventDefault();
+    //     $('.office__news_support_definition').removeClass('open');
+    // });
+
+
+    // office-news.html Галочка на новостях - Удаление/восстановление
+    // Вызов блока .office__news_item_hide с кнопкой Удаления
+    $('.office__news_item_mark').click(function(e) {
+        e.preventDefault();
+        $('.office__news_item_hide').addClass('open');
+        $('.office__news_item').addClass('marked');
+    });
+    // Возврат при повторном нажатии на галочку
+    // $('.office__news_item.marked .office__news_item_mark').click(function(e) {
+    //     e.preventDefault();
+    //     $('.office__news_item_hide').removeClass('open');
+    //     $('.office__news_item').removeClass('marked');
+    // });
+    // Нажатие на кнопку удаления
+    $('.office__news_item_btn').click(function(e) {
+        e.preventDefault();
+        $('.office__news_item_hide').removeClass('open');
+        $('.office__news_item').removeClass('marked');
+        $('.news__del').addClass('open');
+    });
+    // Нажатие на кнопку восстановления
+    $('.news__del_restore').click(function(e) {
+        e.preventDefault();
+        $('.news__del').removeClass('open');
+    });
+
 });

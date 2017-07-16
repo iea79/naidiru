@@ -218,6 +218,9 @@ p {
 
 .main__content {
 	@extend %clear_a;
+	.container_center.main {
+		@extend %clear_a;
+	}
 	&_center {
 		overflow: hidden;
 		.white__line {
@@ -256,4 +259,35 @@ p {
 
 .date {
 	color: #838282;
+}
+
+.sm_social {
+	width: 145px;
+	height: 24px;
+	@extend %clear_a;
+	&_icon {
+		float: left;
+		margin-left: 5px;
+		.ya-share2__icon {
+			width: 24px !important;
+			height: 24px !important;
+			background-size: 24px 24px;
+		}
+	}
+}
+
+.help {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 3px 0;
+	width: 24px;
+	height: 24px;
+	cursor: pointer;
+	color: #fff;
+	font-size: 17px;
+	font-weight: 700;
+	text-align: center;
+	background-color: $success-color;
+	@include border-radius(50%);
 }
