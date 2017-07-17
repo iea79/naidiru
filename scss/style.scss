@@ -16,6 +16,9 @@
 
 // Plugins
 @import "plugins/slick";
+@import "plugins/jquery.formstyler";
+@import "plugins/tooltipster.bundle";
+@import "plugins/jquery.jscrollpane";
 @import 'core/modal';
 @import 'core/tabs';
 
@@ -5714,6 +5717,7 @@
 		text-align: center;
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
+		z-index: 5;
 		&_img {
 			width: 100%;
 			height: auto;
@@ -5772,13 +5776,14 @@
 			position: absolute;
 			// top: -39px;
 			// right: -121px;
-			top: 0;
-			left: 0;
+			top: 40px;
+			right: 11px;
 			width: 227px;
 			height: 47px;
 			padding: 5px 0 6px;
 			display: block;
 			background-color: #fff;
+			z-index: 6;
 			&.open {
 				display: block !important;
 			}
@@ -6154,6 +6159,9 @@
 		margin-left: 40px;
 		display: block;
 		background-color: #f1f1f1;
+		&.hide {
+			display: none;
+		}
 		.close {
 			position: absolute;
 			top: 14px;
@@ -6409,3 +6417,122 @@
 	}
 }
 // end office__edit_text 
+
+
+// =======
+
+/*
+ * CSS Styles that are needed by jScrollPane for it to operate correctly.
+ *
+ * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
+ * may not operate correctly without them.
+ */
+
+.jspContainer
+{
+	overflow: hidden;
+	position: relative;
+}
+
+.jspPane
+{
+	position: absolute;
+	width: 100% !important;
+}
+
+.jspVerticalBar
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 8px;
+	height: 100%;
+}
+
+.jspHorizontalBar
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: red;
+}
+
+.jspCap
+{
+	display: none;
+}
+
+.jspHorizontalBar .jspCap
+{
+	float: left;
+}
+
+.jspTrack
+{
+	position: relative;
+}
+
+.jspDrag
+{
+	background-color: #b4b3b3;
+	position: relative;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+	@include border-radius(2px)
+}
+
+.jspHorizontalBar .jspTrack,
+.jspHorizontalBar .jspDrag
+{
+	float: left;
+	height: 100%;
+}
+
+.jspArrow
+{
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+}
+
+.jspArrow.jspDisabled
+{
+	cursor: default;
+	background: #80808d;
+}
+
+.jspVerticalBar .jspArrow
+{
+	height: 16px;
+}
+
+.jspHorizontalBar .jspArrow
+{
+	width: 16px;
+	float: left;
+	height: 100%;
+}
+
+.jspVerticalBar .jspArrow:focus
+{
+	outline: none;
+}
+
+.jspCorner
+{
+	background: #eeeef4;
+	float: left;
+	height: 100%;
+}
+
+/* Yuk! CSS Hack for IE6 3 pixel bug :( */
+* html .jspCorner
+{
+	margin: 0 -3px 0 0;
+}

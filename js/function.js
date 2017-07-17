@@ -351,23 +351,27 @@ $(document).ready(function() {
     // office.html Показать/скрыть подтвержденные покупки - не работает
     $('.office__history_confirmed_hide').click(function(e) {
         e.preventDefault();
-        $('.office__history_confirmed').addClass('hide');
-        $('.office__history_confirmed_hide').addClass('active');
-    });
-    $('.office__history_confirmed_hide').click(function(e) {
-        e.preventDefault();
-        $('.office__history_confirmed').removeClass('hide');
-        $('.office__history_confirmed_hide').removeClass('active');
+        if ($(this).hasClass('active')) {
+	        $(this).closest('.office__history_left').find('.office__history_confirmed').removeClass('hide');
+	        $('.office__history_confirmed_hide').removeClass('active');
+        } else {
+	        $(this).closest('.office__history_left').find('.office__history_confirmed').addClass('hide');
+	        $(this).addClass('active');
+        }
     });
 
     // office.html Редактировать чек - требует корректировок
     $('.office__checks_edit_btn').click(function(e) {
         e.preventDefault();
-        $('.office__checks_edit_hide').addClass('open');
+        var item = $(this).closest('.office__checks_item').find('.office__checks_edit_hide');
+        if (item.hasClass('open')) {
+        	item.removeClass('open');
+        } else {
+      		item.addClass('open');
+        }
     });
-    $('.office__checks_edit_hide_btn').click(function(e) {
-        e.preventDefault();
-        $('.office__checks_edit_hide').removeClass('open');
+    $('.office__checks_edit_hide').on('mouseleave', function() {
+    	$(this).removeClass('open');
     });
 
     // office.html - office__menu767
@@ -386,44 +390,64 @@ $(document).ready(function() {
     });
 
 
-    // office-news.html Кто такая Шоппел - не работает
-    $('.office__news_support_link').click(function(e) {
-        e.preventDefault();
-        $('.office__news_support_definition').addClass('open');
-    });
-    // $('.office__news_support_link').click(function(e) {
-    //     e.preventDefault();
-    //     $('.office__news_support_definition').removeClass('open');
-    // });
-
-
     // office-news.html Галочка на новостях - Удаление/восстановление
     // Вызов блока .office__news_item_hide с кнопкой Удаления
     $('.office__news_item_mark').click(function(e) {
         e.preventDefault();
-        $('.office__news_item_hide').addClass('open');
-        $('.office__news_item').addClass('marked');
+        // Здаем переменную только для выбранного элемента
+        var item = $(this).closest('.office__news_item');
+        if (item.find('.office__news_item_hide').hasClass('open')) {
+        	// Удаляем все всплывашки включая текущую если текущая открыта
+	        $('.office__news_item_hide').removeClass('open');
+	        $('.office__news_item').removeClass('marked');
+        } else {
+        	// Если текущая закрыта
+        	// В соседних блоках ищем и скрываем всплывашку
+        	item.siblings().find('.office__news_item_hide').removeClass('open');	
+	        item.siblings().find('.office__news_item').removeClass('marked');
+	        // Показываем всплывашку в текущем блоке
+	        item.find('.office__news_item_hide').addClass('open');
+	        item.find('.office__news_item').addClass('marked');
+        }
     });
-    // Возврат при повторном нажатии на галочку
-    // $('.office__news_item.marked .office__news_item_mark').click(function(e) {
-    //     e.preventDefault();
-    //     $('.office__news_item_hide').removeClass('open');
-    //     $('.office__news_item').removeClass('marked');
-    // });
+
+    $('.office__news_item').on('mouseleave', function() {
+    	$(this).removeClass('marked');
+    	$(this).find('.office__news_item_hide').removeClass('open');
+    });
+
     // Нажатие на кнопку удаления
     $('.office__news_item_btn').click(function(e) {
         e.preventDefault();
-        $('.office__news_item_hide').removeClass('open');
-        $('.office__news_item').removeClass('marked');
-        $('.news__del').addClass('open');
+        var item = $(this).closest('.office__news_item');
+        item.find('.office__news_item_hide').removeClass('open');
+        item.find('.office__news_item').removeClass('marked');
+        item.find('.news__del').addClass('open');
     });
+
     // Нажатие на кнопку восстановления
     $('.news__del_restore').click(function(e) {
         e.preventDefault();
-        $('.news__del').removeClass('open');
+        var item = $(this).closest('.office__news_item');
+        item.find('.news__del').removeClass('open');
+    });
+
+    // office-edit.html Скрыть текстовое уведомление office__edit_note - не работает правильно
+     $('.office__edit_note .close').click(function(e) {
+        e.preventDefault();
+        $('.office__edit_note').addClass('hide');
+    });
+
+    // Всплывающие подсказки. к элементу добавить класс tooltip и в атрибуте title написать нужный текст
+    $('.tooltip').tooltipster({
+    	trigger: 'click',
+    	animation: 'fade',
+    	theme: 'tooltipster-noir',
     });
 
     // Плагин Form Styler
     $('select').styler();
+    // Стилизаци прокрутки просто к обрезаемому блоку добавить класс scrolled__box
+    $('.scrolled__box').jScrollPane();
 
 });
