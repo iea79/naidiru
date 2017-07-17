@@ -443,4 +443,6 @@ $(document).ready(function() {
     // Стилизаци прокрутки просто к обрезаемому блоку добавить класс scrolled__box
     $('.scrolled__box').jScrollPane();
 
+    $('select').styler();
+
 });
