@@ -4589,6 +4589,9 @@
 	.breadcrumb {
 		margin: -8px 0 6px;
 	}
+	h1 {
+		margin-bottom: 23px;
+	}
 	.main__content_center {
 		padding-top: 36px;
 	}
@@ -4835,7 +4838,10 @@
 	.main__content_sidebar {
 		float: left;
 		width: 220px;
-		margin-right: 50px;
+		margin-right: 80px;
+		.narrow {
+			margin-right: 50px;
+		}
 	}
 	.sidebar__section {
 		padding-bottom: 0;
@@ -6016,3 +6022,390 @@
 	}
 }
 // end office__news_right
+
+
+
+// Страница Личн.кабинет Изменить данные office-edit.html ///////////////
+// ======================================================================
+.office__edit {
+	&_section {
+		margin-bottom: 40px;
+		&_name {
+			margin-bottom: 15px;
+			font-size: 18px;
+		}
+		&_info {
+			padding: 37px 40px 40px;
+			background-color: #fff;
+			border: 1px solid #d1d1d1;
+			input[type="text"],
+			input[type="email"],
+			input[type="tel"],
+			input[type="password"],
+			input[type="date"],
+			input[type="number"] {
+				width: 100%;
+				height: 37px;
+				padding: 10px;
+				display: block;
+				border: 1px solid #d1d1d1;
+				@include border-radius(0);
+			}
+			input[type="password"] {
+				padding-right: 30px;
+			}
+		}
+	}
+	&_list {
+		margin-bottom: 23px;
+		@extend %clear_a;
+		&_col {
+			width: 360px;
+			height: 100%;
+			float: left;
+			overflow: hidden;
+			display: block;
+			&:nth-child(2) {
+				margin-left: 60px;
+			}
+		}
+	}
+	&_row {
+		width: 100%;
+		margin-bottom: 18px;
+		@extend %clear_a;
+		&:last-child {
+			position: relative;
+		}
+		&_left {
+			width: 90px;
+			float: left;
+			margin-right: 24px;
+		}
+		&_right {
+			padding-top: 13px;
+			overflow: hidden;
+			.file__upload {
+				width: 145px;
+			    height: 35px;
+			    .download__file {
+			    	padding-top: 9px;
+					color: #fff;
+					background-color: #4d4d4d;
+				}
+			}
+		}
+		&.photo {
+			padding-top: 35px;
+			padding-bottom: 13px;
+		}
+		.help {
+			top: 28px;
+			right: 15px;
+		}
+		&.pass {
+			position: relative;
+			&:before {
+				content: '!';
+				position: absolute;
+				top: 34px;
+				right: 9px;
+				width: 15px;
+				height: 14px;
+				padding-top: 1px;
+				display: block;
+				color: #fff;
+				font-size: 10px;
+				font-weight: 900;
+				text-align: center;
+				background-color: $danger-color;
+				@include border-radius(50%);
+			}
+		}
+	}
+	&_label {
+		margin-bottom: 5px;
+		display: block;
+		font-size: 15px;
+		white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+		&.mb {
+			margin-bottom: 11px;
+		}
+	}
+	&_down {
+		position: relative;
+		@extend %clear_a;
+	}
+	&_btn {
+		padding: 15px 40px;
+		float: left;
+		display: block;
+		background-color: #cf3135;
+		@include border-radius(5px);
+	}
+	&_note {
+		position: relative;
+		width: 316px;
+		margin-top: 5px;
+		padding: 11px 40px 11px 20px;
+		float: left;
+		margin-left: 40px;
+		display: block;
+		background-color: #f1f1f1;
+		.close {
+			position: absolute;
+			top: 14px;
+			right: 17px;
+		}
+		&.lg {
+			width: 63%;
+			margin-top: -5px;
+			margin-left: 40px;
+			.close {
+				top: 21px;
+			}
+		}
+	}
+	@media (max-width: 1279px) {
+		&_list {
+			&_col {
+				width: 46%;
+				&:nth-child(2) {
+					margin-left: 8%;
+				}
+			}
+		}
+		&_note {
+			padding: 11px 32px 11px 20px;
+			&.lg {
+				width: 60%;
+				margin-left: 30px;
+				.close {
+					top: 12px;
+					right: 12px;
+				}
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		&_section {
+			padding-left: 20px;
+			padding-right: 20px;
+			&_name {
+				font-size: 16px;
+				text-align: center;
+			}
+			&_info {
+				padding: 37px 20px 42px;			}
+		}
+		&_list {
+			&_col {
+				float: none;
+				width: 360px;
+				margin-left: auto;
+				margin-right: auto;
+				&:nth-child(2) {
+					margin-left: auto;
+				}
+			}
+		}
+		&_row {
+			&.photo {
+				padding-top: 18px;
+			}
+			.help {
+				display: none;
+			}
+			&.last {
+				text-align: center;
+			}
+		}
+		&_btn {
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&_note {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			width: 100%;
+			float: none;
+			margin-left: 0 !important;
+			text-align: center;
+			&.lg {
+				width: 100%;
+				margin-left: 0;
+			}
+		}
+	}
+	@media (max-width: 479px) {
+		&_list {
+			&_col {
+				width: 100%;
+			}
+		}
+		&_row {
+			&_right {
+				.file__upload {
+					width: 100%;
+				}
+			}
+		}
+		&_note {
+			&.lg {
+				top: -30px;
+				.close {
+					top: 12px;
+				}
+			}
+			.close {
+				top: 12px;
+				right: 12px;
+			}
+		}
+	}
+}
+
+.lg_social {
+	width: 301px;
+	height: 33px;
+	margin-top: 2px;
+	@extend %clear_a;
+	&_icon {
+		float: left;
+		margin-left: 11px;
+		&:first-child {
+			margin-left: 0;
+		}
+		&:nth-child(3) {
+			.lg_social_icon_add {
+				background: url('../img/mailru-icon.png') no-repeat center center;
+			}
+		}
+		&:nth-child(4) {
+			.lg_social_icon_add {
+				background: url('../img/yandex-icon.png') no-repeat center center;
+			}
+		}
+		&_add {
+			width: 41px;
+			height: 33px;
+			display: block;
+			@include border-radius(0);
+		}
+		.ya-share2__icon {
+			width: 41px !important;
+			height: 33px !important;
+			display: block;
+			overflow: hidden;
+			background-repeat: no-repeat;
+			background-position: center center !important;
+			background-size: 41px 41px !important;
+			@include border-radius(0);
+		}
+	}
+	@media (max-width: 1279px) {
+		width: 253px;
+		&_icon {
+			&_add {
+				width: 33px;
+			}
+			.ya-share2__icon {
+				width: 33px !important;
+				background-size: 33px 33px !important;
+			}
+		}
+	}
+	@media (max-width: 1199px) {
+		width: 301px;
+		&_icon {
+			&_add {
+				width: 41px;
+			}
+			.ya-share2__icon {
+				width: 41px !important;
+				background-size: 41px 41px !important;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		width: 223px;
+		&_icon {
+			margin-left: 5px;
+			&_add {
+				width: 33px;
+			}
+			.ya-share2__icon {
+				width: 33px !important;
+				background-size: 33px 33px !important;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		width: 301px;
+		margin-left: auto;
+		margin-right: auto;
+		&_icon {
+			margin-left: 11px;
+			&_add {
+				width: 41px;
+			}
+			.ya-share2__icon {
+				width: 41px !important;
+				background-size: 41px 41px !important;
+			}
+		}
+	}
+	@media (max-width: 479px) {
+		width: 223px;
+		&_icon {
+			margin-left: 5px;
+			&_add {
+				width: 33px;
+			}
+			.ya-share2__icon {
+				width: 33px !important;
+				background-size: 33px 33px !important;
+			}
+		}
+	}
+}
+
+.file__upload {
+    position: relative;
+    display: block;
+    .download__file {
+    	height: 100%;
+		display: block;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+	}
+	input[type=file]{
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    -moz-opacity: 0;
+	    opacity: 0;
+	    cursor: pointer;
+	}
+}
+
+
+// begin office__edit_text 
+.office__edit_text {
+	padding: 28px 0;
+	margin-bottom: 41px;
+	@media (max-width: 767px) {
+		padding: 28px 20px;
+		margin-bottom: 0;
+		text-align: center;
+	}
+}
+// end office__edit_text 

@@ -152,7 +152,7 @@ Buttons
     &__lg {
         padding: 14px 15px 15px;
         @include border-radius(5px);
-    }  
+    }
 }
 
 input,
@@ -179,3 +179,19 @@ button {
         }
     }
 }  
+
+
+/* ======================================== 
+Selects
+======================================== */
+select {
+    width: 100%;
+    padding: 9px 10px;
+    background-color: $input_bg_color;
+    border: 1px solid $input_border_color;
+    outline: 0;
+    option {
+        width: 360px;
+        padding: 9px 10px;
+    }
+}

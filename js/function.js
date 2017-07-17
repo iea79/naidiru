@@ -423,4 +423,7 @@ $(document).ready(function() {
         $('.news__del').removeClass('open');
     });
 
+    // Плагин Form Styler
+    $('select').styler();
+
 });

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>Личный кабинет - Написать нам + оповещение</title>
+    <title>Личный кабинет - Главная</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -82,13 +82,13 @@
       <!-- end header -->
       <!-- begin main__content-->
       <main class="main__content">
-        <div class="white__line">
+        <div class="white__line sm">
           <div class="container_center">
             <!-- begin breadcrumb-->
             <div class="breadcrumb ind">
               <li><a href="/">Главная</a></li>
               <li><a href="office.html">Личный кабинет</a></li>
-              <li><a href="#">Написать нам + новости</a></li>
+              <li><a href="#">Изменить данные</a></li>
             </div>
             <!-- end breadcrumb-->
             
@@ -100,10 +100,9 @@
                 </div><a href="#" class="office__top_alarm">
                   <div class="office__top_alarm_number">1</div></a>
               </div>
-              <div class="office__top_center change">
-                <p> <span class="large">Вы накопили: <span class="bold points">24 820 </span></span><span class="bold">баллов</span></p>
-                <p>Вы можете поменять их на: <br><span class="large bold points__left">4 </span><span class="bold">лотереи</span></p>
-                <div class="help">?</div>
+              <div class="office__top_center">
+                <p> <span class="large">Вы накопили: <span class="bold points">2120 </span></span><span class="bold">баллов</span></p>
+                <p>До лотереи Вам осталось набрать: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
               </div>
               <div class="office__top_right">
                 <div class="sm_social">
@@ -133,12 +132,12 @@
         <div class="container_center main">
           <!-- begin sidebar-->
           <div class="office__menu_trigger"></div>
-          <div class="main__content_sidebar narrow">
+          <div class="main__content_sidebar">
             <div class="sidebar__section">
               <div class="office__menu">
                 <div class="office__item"><a href="office.html" class="office__link">Ваши лотереи и покупки</a></div>
-                <div class="office__item"><a href="#" class="office__link active">Написать нам + новости</a></div>
-                <div class="office__item"><a href="office-edit.html" class="office__link">Изменить данные</a></div>
+                <div class="office__item"><a href="office-news.html" class="office__link">Написать нам + новости</a></div>
+                <div class="office__item"><a href="#" class="office__link active">Изменить данные</a></div>
                 <div class="office__item"><a href="#" class="office__link">Настройки рассылки</a></div>
                 <div class="office__item"><a href="#" class="office__link">Розыгрыш призов</a></div>
                 <div class="office__item"><a href="#" class="office__link">Выйти из аккаунта</a></div>
@@ -347,148 +346,226 @@
           
           <!-- begin main__content_center -->
           <div class="main__content_center">
-            <h1 class="mb_30">Ваши новости и уведомления</h1>
-            <!-- begin office__news-->
-            <div class="office__news">
-              <!-- begin office__news_left -->
-              <div class="office__news_left column">
-                <div class="office__news_list">
-                  <div class="office__news_item"><img src="img/news-img1.jpg" alt="#" class="office__news_item_img"/>
-                    <div class="office__news_item_info">Акция в Снежной Королеве! Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. Успейте купить!</div>
-                    <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div><a href="#" class="office__news_item_mark">✔</a>
-                    <div class="office__news_item_hide">
-                      <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
+            <h1>Редактирование аккаунта</h1>
+            <div class="office__edit_section">
+              <div class="office__edit_section_name">Изменение личных данных</div>
+              <div class="office__edit_section_info">
+                <div class="office__edit_list">
+                  <div class="office__edit_list_col">
+                    <div class="office__edit_row">
+                      <div for="oe1" class="office__edit_label">Имя</div>
+                      <input type="text" placeholder="Мария" id="oe1"/>
                     </div>
-                    <div class="news__del">
-                      <div class="news__del_info">
-                        <div class="news__del_name">Запись успешно удалена!</div>
-                        <div class="news__del_p">Так как, Вы ее отметили галочкой, как прочитанное!</div>
-                        <div class="news__del_p">Пока не поздно, ее можно вернуть!</div>
-                        <button class="news__del_restore btn">Восстановить запись</button>
-                      </div>
+                    <div class="office__edit_row">
+                      <div for="oe2" class="office__edit_label">Фамилия</div>
+                      <input type="text" placeholder="Иванова" id="oe2"/>
                     </div>
-                  </div>
-                  <div class="office__news_item"><img src="img/news-img2.jpg" alt="#" class="office__news_item_img"/>
-                    <div class="office__news_item_info">Акция в Ив Роше. Только сегодня подарок каждому за покупку!</div>
-                    <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div><a href="#" class="office__news_item_mark">✔</a>
-                    <div class="office__news_item_hide">
-                      <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
+                    <div class="office__edit_row">
+                      <div for="oe3" class="office__edit_label">Отчество</div>
+                      <input type="text" placeholder="Петровна" id="oe3"/>
                     </div>
-                    <div class="news__del">
-                      <div class="news__del_info">
-                        <div class="news__del_name">Запись успешно удалена!</div>
-                        <div class="news__del_p">Так как, Вы ее отметили галочкой, как прочитанное!</div>
-                        <div class="news__del_p">Пока не поздно, ее можно вернуть!</div>
-                        <button class="news__del_restore btn">Восстановить запись</button>
-                      </div>
+                    <div class="office__edit_row">
+                      <div class="office__edit_label">Страна</div>
+                      <select name="country" class="office__edit_select">
+                        <option value="#">Россия</option>
+                        <option value="#">Страна №2</option>
+                      </select>
                     </div>
-                  </div>
-                  <div class="office__news_item success">
-                    <div class="office__news_item_name">Поздравляем! Вы выиграли!</div>
-                    <p>Вы выиграли в розыгрыше №5, в ближайшее время с Вами свяжется наш менеджер для уточнения информации о получении подарка.</p>
-                    <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div>
-                    <div class="office__news_item_impotant">важно</div><a href="#" class="office__news_item_mark">✔</a>
-                    <div class="office__news_item_hide">
-                      <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
+                    <div class="office__edit_row">
+                      <div for="oe4" class="office__edit_label">Адрес (куда присылать подарок)</div>
+                      <input type="text" placeholder="ул.Победная 5, д.25, кв.45" id="oe4"/>
                     </div>
-                    <div class="news__del">
-                      <div class="news__del_info">
-                        <div class="news__del_name">Запись успешно удалена!</div>
-                        <div class="news__del_p">Так как, Вы ее отметили галочкой, как прочитанное!</div>
-                        <div class="news__del_p">Пока не поздно, ее можно вернуть!</div>
-                        <button class="news__del_restore btn">Восстановить запись</button>
-                      </div>
+                    <div class="office__edit_row">
+                      <div class="office__edit_label">Пол</div>
+                      <select name="gender" class="office__edit_select">
+                        <option value="#">Мужчина</option>
+                        <option value="#">Женщина</option>
+                      </select>
                     </div>
                   </div>
-                  <div class="office__news_item"><img src="img/news-img3.jpg" alt="#" class="office__news_item_img"/>
-                    <div class="office__news_item_info">Розыгрыш Март-2017. Посмотрите, кто выиграл в этом месяце!</div>
-                    <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div><a href="#" class="office__news_item_mark">✔</a>
-                    <div class="office__news_item_hide">
-                      <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
-                    </div>
-                    <div class="news__del">
-                      <div class="news__del_info">
-                        <div class="news__del_name">Запись успешно удалена!</div>
-                        <div class="news__del_p">Так как, Вы ее отметили галочкой, как прочитанное!</div>
-                        <div class="news__del_p">Пока не поздно, ее можно вернуть!</div>
-                        <button class="news__del_restore btn">Восстановить запись</button>
+                  <div class="office__edit_list_col">
+                    <div class="office__edit_row photo"><img src="img/no-photo.png" alt="#" class="office__edit_row_left"/>
+                      <div class="office__edit_row_right">
+                        <div class="office__edit_label mb">Загрузите свою фотографию</div>
+                        <div class="file__upload"><a href="#" class="download__file">Выберите файл</a>
+                          <input type="file"/>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="office__news_item primary">
-                    <div class="office__news_item_name">Не подтвержден</div>
-                    <p>Извините, но Ваш чек был не подвержден. Причина: Чек не соотвествует с выбранным № заказом.</p>
-                    <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div>
-                    <div class="office__news_item_impotant">важно</div><a href="#" class="office__news_item_mark">✔</a>
-                    <div class="office__news_item_hide">
-                      <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
+                    <div class="office__edit_row">
+                      <div for="oe5" class="office__edit_label">Дата рождения</div>
+                      <input type="date" placeholder="25.05.1992" id="oe5"/>
                     </div>
-                    <div class="news__del">
-                      <div class="news__del_info">
-                        <div class="news__del_name">Запись успешно удалена!</div>
-                        <div class="news__del_p">Так как, Вы ее отметили галочкой, как прочитанное!</div>
-                        <div class="news__del_p">Пока не поздно, ее можно вернуть!</div>
-                        <button class="news__del_restore btn">Восстановить запись</button>
+                    <div class="office__edit_row">
+                      <div for="oe6" class="office__edit_label">Город</div>
+                      <input type="text" placeholder="Москва" id="oe6"/>
+                    </div>
+                    <div class="office__edit_row">
+                      <div for="oe7" class="office__edit_label">Почтовый индекс</div>
+                      <input type="number" placeholder="234582" id="oe7"/>
+                    </div>
+                    <div class="office__edit_row last">
+                      <div class="office__edit_label">Выберите соц.сеть и выполняйте быстрый вход</div>
+                      <div class="lg_social">
+                        <div class="lg_social_icon">
+                          <div data-services="vkontakte" class="ya-share2"></div>
+                        </div>
+                        <div class="lg_social_icon">
+                          <div data-services="odnoklassniki" class="ya-share2"></div>
+                        </div>
+                        <div class="lg_social_icon">
+                          <button class="lg_social_icon_add btn"></button>
+                        </div>
+                        <div class="lg_social_icon">
+                          <button class="lg_social_icon_add btn"></button>
+                        </div>
+                        <div class="lg_social_icon">
+                          <div data-services="facebook" class="ya-share2"></div>
+                        </div>
+                        <div class="lg_social_icon">
+                          <div data-services="gplus" class="ya-share2"></div>
+                        </div>
                       </div>
-                    </div>
-                  </div>
-                  <div class="office__news_item"><img src="img/news-img4.jpg" alt="#" class="office__news_item_img"/>
-                    <div class="office__news_item_info">Большая распродажа в Aliexspress! Шанс выиграть подарок мечты!</div>
-                    <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div><a href="#" class="office__news_item_mark">✔</a>
-                    <div class="office__news_item_hide">
-                      <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
-                    </div>
-                    <div class="news__del">
-                      <div class="news__del_info">
-                        <div class="news__del_name">Запись успешно удалена!</div>
-                        <div class="news__del_p">Так как, Вы ее отметили галочкой, как прочитанное!</div>
-                        <div class="news__del_p">Пока не поздно, ее можно вернуть!</div>
-                        <button class="news__del_restore btn">Восстановить запись</button>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="office__news_item danger">
-                    <div class="office__news_item_name">Получите лотерею</div>
-                    <p>Вы получили 5000 баллов, Вы можете обменять их на лотерею прямо сейчас! Узнайте подробнее о том, как обменять баллы на лотерейный билет.</p>
-                    <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div>
-                    <div class="office__news_item_impotant">важно</div><a href="#" class="office__news_item_mark">✔</a>
-                    <div class="office__news_item_hide">
-                      <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
-                    </div>
-                    <div class="news__del">
-                      <div class="news__del_info">
-                        <div class="news__del_name">Запись успешно удалена!</div>
-                        <div class="news__del_p">Так как, Вы ее отметили галочкой, как прочитанное!</div>
-                        <div class="news__del_p">Пока не поздно, ее можно вернуть!</div>
-                        <button class="news__del_restore btn">Восстановить запись</button>
-                      </div>
+                      <div class="help">?</div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <!-- end office__news_left -->
-              <!-- begin office__news_right -->
-              <div class="office__news_right">
-                <div class="office__news_support">
-                  <div class="office__news_support_head">
-                    <div class="office__news_support_name">Шоппел</div>
-                    <p>Служба поддержки Найди.ру</p>
-                  </div>
-                  <div class="office__news_support_body">
-                    <div class="office__news_support_h">Ваше сообщение</div>
-                    <textarea placeholder="Есть вопрос? Напишите его сюда! Шоппел ответит на Ваш вопрос электронной почтой, в ближайшее время."></textarea>
-                    <button class="btn btn__danger">Отправить нам</button>
-                    <div class="office__news_support_p">Среднее время ожидания ответа - 15 мин.</div>
-                  </div><a href="#" class="office__news_support_link">Кто такая Шоппел?</a>
-                  <div class="office__news_support_definition">Шоппел - это супергерой Найди.ру. Она знает все о выгодных покупках и с большим удовольствием научит вас экономить. Задайте ей вопрос и она ответит на него в ближайшее время.
-                    <div class="trigon"></div>
+                <div class="office__edit_down">
+                  <button class="btn btn__danger office__edit_btn">Сохранить изменения</button>
+                  <div class="office__edit_note">Информация успешно обновлена!
+                    <button class="close"></button>
                   </div>
                 </div>
-                <div class="office__news_subscription"><img src="img/subscription.jpg" alt="#" class="office__news_subscription_img"/></div>
               </div>
-              <!-- end office__news_right-->
             </div>
-            <!-- end office__news-->
+            <div class="office__edit_section">
+              <div class="office__edit_section_name">Контакты (мы свяжемся с вами в случае выигрыша)</div>
+              <div class="office__edit_section_info">
+                <div class="office__edit_list">
+                  <div class="office__edit_list_col">
+                    <div class="office__edit_row">
+                      <div for="oe8" class="office__edit_label">Электронная почта (e-mail)</div>
+                      <input type="email" placeholder="Мaria235@mail.ru" id="oe8"/>
+                    </div>
+                  </div>
+                  <div class="office__edit_list_col">
+                    <div class="office__edit_row">
+                      <div for="oe9" class="office__edit_label">Номер телефона</div>
+                      <input type="tel" placeholder="+7 962 563 38 52" id="oe9"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="office__edit_down">
+                  <button class="btn btn__danger office__edit_btn">Сохранить изменения</button>
+                  <div class="office__edit_note lg">Мы отправили вам письмо на почту: Мaria235@mail.ru <br> Пожалуйста, подтвердите свои изменения, перейдя по ссылке из письма.
+                    <button class="close"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="office__edit_section">
+              <div class="office__edit_section_name">Дополнительная информация (Эта информация, поможет нам стать лучше для Вас)</div>
+              <div class="office__edit_section_info">
+                <div class="office__edit_list">
+                  <div class="office__edit_list_col">
+                    <div class="office__edit_row">
+                      <div for="oe10" class="office__edit_label">Что бы Вы хотели тут выиграть? (через запятую)</div>
+                      <input type="text" placeholder="Смартфон, PlayStation, Робот-пылесос ..." id="oe10"/>
+                    </div>
+                    <div class="office__edit_row">
+                      <div class="office__edit_label">Ваши интересы</div>
+                      <select name="interest" class="office__edit_select">
+                        <option value="#">Шоппинг, кулинария, спорт, бег, рыбалка, цв...</option>
+                        <option value="#">Вариант №2</option>
+                      </select>
+                    </div>
+                    <div class="office__edit_row">
+                      <div class="office__edit_label">Сколько у Вас детей?</div>
+                      <select name="children" class="office__edit_select">
+                        <option value="#">Сколько у Вас детей?</option>
+                        <option value="#">Вариант №2</option>
+                      </select>
+                    </div>
+                    <div class="office__edit_row">
+                      <div class="office__edit_label">Ваше семейное положение?</div>
+                      <select name="country" class="office__edit_select">
+                        <option value="#">Замужем / Женат</option>
+                        <option value="#">Вариант №2</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="office__edit_list_col">
+                    <div class="office__edit_row">
+                      <div for="oe11" class="office__edit_label">Какой магазин Вы хотите увидеть на сайте? (через запятую)</div>
+                      <input type="text" placeholder="Forever 21, Amazon, Victoria's secret, Asos ..." id="oe11"/>
+                    </div>
+                    <div class="office__edit_row">
+                      <div class="office__edit_label">Кем Вы работаете?</div>
+                      <select name="occupation" class="office__edit_select">
+                        <option value="#">Работаю в офисе, всегда в онлайне</option>
+                        <option value="#">Вариант №2</option>
+                      </select>
+                    </div>
+                    <div class="office__edit_row">
+                      <div class="office__edit_label">Какой возраст и пол детей?</div>
+                      <select name="age" class="office__edit_select">
+                        <option value="#">Девочка - 2 года, Мальчик - 12 лет</option>
+                        <option value="#">Вариант №2</option>
+                      </select>
+                    </div>
+                    <div class="office__edit_row">            
+                      <div class="office__edit_label">Есть ли у Вас питомец? Кто этот домосед?</div>
+                      <select name="pet" class="office__edit_select">
+                        <option value="#">У меня нет дома домоседов</option>
+                        <option value="#">Вариант №2</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="office__edit_down">
+                  <button class="btn btn__danger office__edit_btn">Сохранить изменения</button>
+                  <div class="office__edit_note">Информация успешно обновлена!
+                    <button class="close"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="office__edit_section">
+              <div class="office__edit_section_name">Изменить пароль</div>
+              <div class="office__edit_section_info">
+                <div class="office__edit_list">
+                  <div class="office__edit_list_col">
+                    <div class="office__edit_row pass">
+                      <div for="oe12" class="office__edit_label">Новый пароль</div>
+                      <input type="password" id="oe12"/>
+                    </div>
+                    <div class="office__edit_row pass">
+                      <div for="oe13" class="office__edit_label">Повторите новый пароль</div>
+                      <input type="password" id="oe13"/>
+                    </div>
+                  </div>
+                  <div class="office__edit_list_col">
+                    <div class="office__edit_row pass">
+                      <div for="oe14" class="office__edit_label">Старый пароль</div>
+                      <input type="password" id="oe14"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="office__edit_down">
+                  <button class="btn btn__danger office__edit_btn">Изменить пароль</button>
+                  <div class="office__edit_note lg">Ошибка! Пароль не был изменен. Возможно, Вы неправильно ввели старый пароль. Пожалуйста, повторите попытку чуть позже.
+                    <button class="close"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="line"></div>
+            <!-- begin office__edit_text -->
+            <div class="office__edit_text">
+              <p>Вы можете <a href="#">удалить свой аккаунт</a>, но знайте, если вы сделайте это, то потеряете все, что вы накопили: баллы, все действующие лотереи и главное возможность участвовать в ежемесячных розыграшах и выиграть подарок мечты.</p>
+              <p>Но это еще не все, если вы удалите свой аккаунт, вы больше не узнаете первым о супер-скадках и не сэкономите на следующей покупке в вашем любимом интернет-магазине. Не делайте этого! Мы будем скучать!</p>
+            </div>
+            <!-- end office__edit_text -->
           </div>
           <!-- end main__content_center-->
         </div>
