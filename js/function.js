@@ -419,20 +419,28 @@ $(document).ready(function() {
     // Нажатие на кнопку удаления
     $('.office__news_item_btn').click(function(e) {
         e.preventDefault();
-        $('.office__news_item_hide').removeClass('open');
-        $('.office__news_item').removeClass('marked');
-        $('.news__del').addClass('open');
+        var item = $(this).closest('.office__news_item');
+        item.find('.office__news_item_hide').removeClass('open');
+        item.find('.office__news_item').removeClass('marked');
+        item.find('.news__del').addClass('open');
     });
+
     // Нажатие на кнопку восстановления
     $('.news__del_restore').click(function(e) {
         e.preventDefault();
-        $('.news__del').removeClass('open');
+        var item = $(this).closest('.office__news_item');
+        item.find('.news__del').removeClass('open');
     });
 
+
+    // Всплывающие подсказки. к элементу добавить класс tooltip и в атрибуте title написать нужный текст
     $('.tooltip').tooltipster({
     	trigger: 'click',
     	animation: 'fade',
     	theme: 'tooltipster-noir',
     });
+
+    // Стилизаци прокрутки просто к обрезаемому блоку добавить класс scrolled__box
+    $('.scrolled__box').jScrollPane();
 
 });
