@@ -16,6 +16,8 @@
 
 // Plugins
 @import "plugins/slick";
+@import "plugins/jquery.formstyler";
+@import "plugins/tooltipster.bundle";
 @import 'core/modal';
 @import 'core/tabs';
 
@@ -5708,6 +5710,7 @@
 		text-align: center;
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
+		z-index: 5;
 		&_img {
 			width: 100%;
 			height: auto;
@@ -5766,13 +5769,14 @@
 			position: absolute;
 			// top: -39px;
 			// right: -121px;
-			top: 0;
-			left: 0;
+			top: 40px;
+			right: 11px;
 			width: 227px;
 			height: 47px;
 			padding: 5px 0 6px;
 			display: block;
 			background-color: #fff;
+			z-index: 6;
 			&.open {
 				display: block !important;
 			}
