@@ -195,3 +195,38 @@ select {
         padding: 9px 10px;
     }
 }
+
+.jq-selectbox {
+    position: relative;
+    width: 100%;
+    padding: 9px 10px;
+    display: block;
+    border: 1px solid $input_border_color;
+    &__trigger {
+        position: absolute;
+        top: 5px;
+        right: -2px;
+        width: 8px;
+        height: 7px;
+        background: url('../img/select-arrow.png') no-repeat 0 0;
+    }
+    &__dropdown { 
+        background: #fff;
+        border: 1px solid $input_border_color;
+        ul {
+            left: 0;
+        }
+        li {
+            width: 100%;
+            padding: 9px 10px;
+            border-bottom: 1px solid $input_border_color;
+            &:last-child {
+                border-bottom: 0;
+            }
+            &.sel.selected {
+                color: #fff;
+                background-color: $primary-color;
+            }
+        }
+    }
+}
