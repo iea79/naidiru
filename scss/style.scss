@@ -2446,7 +2446,7 @@
 	// width: 100%;
 	// margin: auto;
 	// overflow: auto;
-	// white-space: nowrap;
+	white-space: nowrap;
 	@include flex-flow(row nowrap);
 	@include justify-content(flex-start);
 	.grid__wrapper {
