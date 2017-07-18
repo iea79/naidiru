@@ -18,7 +18,7 @@
 @import "plugins/slick";
 @import "plugins/jquery.formstyler";
 @import "plugins/tooltipster.bundle";
-@import "plugins/jquery.jscrollpane";
+@import "plugins/jquery.scrollbar";
 @import 'core/modal';
 @import 'core/tabs';
 
@@ -6781,4 +6781,24 @@
 .jq-selectbox__trigger {
 		right: 8px;
 		top: 14px;
+}
+
+
+// end office__raffle
+// end office__shops_coupons
+
+
+// begin office__raffle
+.scroll-element {
+}
+
+
+
+// end office__raffle
+// end office__shops_coupons
+
+
+// begin office__raffle
+.scroll-element {
+		display: none;
 }
