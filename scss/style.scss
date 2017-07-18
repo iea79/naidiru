@@ -495,10 +495,6 @@
 			    // padding: 23px 31px;
 			    // width: 240px;
 			    right: 0px;
-			    // padding: 23px 31px;
-			    // width: 240px;
-			    // height: 100%;
-			    width: 100%;
 			    background-color: #454545;
 			}
 		}
@@ -515,15 +511,13 @@
 		&_email {
 		}
 		&_drop {
-			// position: fixed;
-			// top: 125px;
-			// height: auto;
-			// width: 0;
 		    top: 83px;
 		    padding: 23px 31px;
 			right: -100%;
 			text-align: center;
-			height: 100%;
+		    background-color: #454545;
+			width: 100%;
+		    height: initial;
 			li {
 				a {
 					&:hover {
@@ -2326,10 +2320,10 @@
 
 .simple__grid {
 	max-width: 1180px;
-	width: 100%;
-	margin: auto;
-	overflow: auto;
-	white-space: nowrap;
+	// width: 100%;
+	// margin: auto;
+	// overflow: auto;
+	// white-space: nowrap;
 	@include flex-flow(row nowrap);
 	@include justify-content(flex-start);
 	.grid__wrapper {
@@ -2341,6 +2335,9 @@
 			display: block;
 			width: 100%;
 		}
+	}
+	&_wrap {
+		height: 320px;
 	}
 	&_text {
 		padding: 20px 16px;

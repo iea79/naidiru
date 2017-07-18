@@ -466,8 +466,10 @@ $(document).ready(function() {
 
     // Плагин Form Styler
     $('select').styler();
+
     // Стилизаци прокрутки просто к обрезаемому блоку добавить класс scrolled__box
     $('.scrolled__box').jScrollPane();
+    $('.scrolled__box_horizontal').jScrollPane();
 
     $('select').styler();
 
