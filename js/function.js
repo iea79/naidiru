@@ -445,6 +445,25 @@ $(document).ready(function() {
     	theme: 'tooltipster-noir',
     });
 
+    $('.js-more-link').on('click', function(event) {
+    	event.preventDefault();
+    	var wrap = $(this).closest('.js-more-wrapper');
+    	var textOpen = $(this).data('textOpen');
+    	var textClose = $(this).data('textClose');
+    	// var item = wrap.find('.js-more-item');
+    	if (!wrap.hasClass('open')) {
+    		wrap.addClass('open');
+    		if (textOpen) {
+    			$(this).html(textOpen)
+    		}
+    	} else {
+    		wrap.removeClass('open');
+    		if (textClose) {
+    			$(this).html(textClose)
+    		}
+    	}
+    });
+
     // Плагин Form Styler
     $('select').styler();
     // Стилизаци прокрутки просто к обрезаемому блоку добавить класс scrolled__box
