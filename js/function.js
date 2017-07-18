@@ -453,24 +453,28 @@ $(document).ready(function() {
     	// var item = wrap.find('.js-more-item');
     	if (!wrap.hasClass('open')) {
     		wrap.addClass('open');
-    		if (textOpen) {
+    		if (textOpen != null) {
     			$(this).html(textOpen)
     		}
     	} else {
     		wrap.removeClass('open');
-    		if (textClose) {
+    		if (textClose != null) {
     			$(this).html(textClose)
     		}
     	}
     });
 
+    $('.grid__item_like').on('click touchend', function(event) {
+    	event.preventDefault();
+    	$(this).toggleClass('active');
+    });
+
     // Плагин Form Styler
     $('select').styler();
 
-    // Стилизаци прокрутки просто к обрезаемому блоку добавить класс scrolled__box
-    $('.scrolled__box').scrollbar();
-    // $('.scrolled__box_horizontal').jScrollPane();
+    // Стилизаци прокрутки просто к обрезаемому блоку добавить класс scrollbar-inner
+    $('.scrollbar-inner').scrollbar();
 
-    
+
 
 });

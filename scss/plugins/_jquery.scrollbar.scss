@@ -100,7 +100,7 @@
 }
 
 .scrollbar-inner > .scroll-element.scroll-x {
-    bottom: 2px;
+    bottom: 0px;
     height: 8px;
     left: 0;
     width: 100%;
@@ -108,7 +108,7 @@
 
 .scrollbar-inner > .scroll-element.scroll-y {
     height: 100%;
-    right: 2px;
+    right: 0px;
     top: 0;
     width: 8px;
 }
@@ -117,25 +117,29 @@
     overflow: hidden;
 }
 
-.scrollbar-inner > .scroll-element .scroll-element_outer,
-.scrollbar-inner > .scroll-element .scroll-element_track,
+// .scrollbar-inner > .scroll-element .scroll-element_outer,
+// .scrollbar-inner > .scroll-element .scroll-element_track,
+// .scrollbar-inner > .scroll-element .scroll-bar {
+//     -webkit-border-radius: 2px;
+//     -moz-border-radius: 2px;
+//     border-radius: 2px;
+// }
+
 .scrollbar-inner > .scroll-element .scroll-bar {
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    border-radius: 8px;
+    @include border-radius(3px);
 }
 
 .scrollbar-inner > .scroll-element .scroll-element_track,
 .scrollbar-inner > .scroll-element .scroll-bar {
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
-    filter: alpha(opacity=40);
-    opacity: 0.4;
+    // -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+    // filter: alpha(opacity=40);
+    // opacity: 0.4;
 }
 
-.scrollbar-inner > .scroll-element .scroll-element_track { background-color: #e0e0e0; }
-.scrollbar-inner > .scroll-element .scroll-bar { background-color: #c2c2c2; }
-.scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #919191; }
-.scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
+// .scrollbar-inner > .scroll-element .scroll-element_track { background-color: #e0e0e0; }
+.scrollbar-inner > .scroll-element .scroll-bar { background-color: #b4b3b3; }
+// .scrollbar-inner > .scroll-element:hover .scroll-bar { background-color: #919191; }
+// .scrollbar-inner > .scroll-element.scroll-draggable .scroll-bar { background-color: #919191; }
 
 
 /* update scrollbar offset if both scrolls are visible */
@@ -808,23 +812,27 @@
     height: 8px;
     left: 0;
     bottom: 8px;
-    position: relative;
+    // position: relative;
     .scroll-bar {
-        height: 100%;
-    }
-    .scroll-element_outer {
-        width: 100%;
-        height: 100%;
+        // height: 100%;
     }
 }
+
+// .scroll-element_outer {
+//     width: 100%;
+//     height: 100%;
+// }
 
 .scroll-element.scroll-y {
     width: 8px;
     height: 100%;
     top: 0;
-    right: 8px;
+    right: 0px;
+    // position: relative;
     .scroll-bar {
-        width: 100%;
+        // width: 100%;
+        // min-height: 20px;
+        // height: 100px !important;
     }
 }
 
@@ -832,6 +840,8 @@
     background-color: #b4b3b3;
     @include border-radius(2px);
     position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 
