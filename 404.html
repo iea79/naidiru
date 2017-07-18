@@ -1,259 +1,410 @@
-
-<div id="extends">template.jade</div>
-<title>404 ошибка</title>
-<!-- begin Error 404-->
-<div class="error__pages">
-  <div class="container_center">
-    <div class="error__pages_area"><img src="img/error-img1.png" alt="#" class="error__pages_img"/><img src="img/error-img2.png" alt="#" class="error__pages_img"/><img src="img/error-img3.png" alt="#" class="error__pages_img"/><img src="img/error-img4.png" alt="#" class="error__pages_img"/><img src="img/error-img5.png" alt="#" class="error__pages_img"/><img src="img/error-img6.png" alt="#" class="error__pages_img"/>
-      <div class="error__pages_message">
-        <h1 class="mb_40"><span class="error__pages_message_first">Без паники, </span>сработал код <span class="error__pages_message_last">404 </span>&#8230;</h1>
-        <p>Мы должны сообщить Вам кое-что ужасное, запрашиваемая Вами страница не существует или была удалена. Но Вы не волнуйтесь! Ее можно найти, но только с Вашей помощью...</p>
-        <div class="search">
-          <input placeholder="Найти: смартфон, Nike, Aliexpress ..."/>
-          <button class="search_btn"></button>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>404 ошибка</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="js/jquery.js"></script>
+    <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+    <script src="//yastatic.net/share2/share.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/tooltipster.bundle.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/function.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- begin header -->
+      <header class="header">
+        <!-- begin header__top -->
+        <div class="header__top">
+          <div class="container_center">
+            <div class="header__top_left">Бесплатные купоны и промокоды</div>
+            <div class="header__top_right"><a href="#" class="header__top_item"><i class="icon__gift"></i>Розыгрыш призов каждый месяц</a><a href="#" class="header__top_item"><i class="icon__star"></i>Блог</a><a href="#" class="header__top_promo">SALE! Новогодняя распродажа</a></div>
+          </div>
         </div>
-        <div class="search__self">
-          <p>Или найдите ее сами:</p>
-          <button class="search__self_btn">Перейти на главную</button>
+        <!-- end header__top -->
+        <!-- begin header__bottom -->
+        <div class="header__bottom">
+          <div class="container_center"><a href="#" class="mobile__menu_toggle"></a><a href="/" class="logo"><img src="img/logo.svg"/></a>
+            <!-- begin login__box -->
+            <div class="login__box">
+              <div class="login__box_avatar"><img src="img/icon-user.svg"/></div>
+              <div class="login__box_text">Привет,
+                <div class="login__box_email">emailpriilpri@mail.ru</div>
+              </div>
+              <ul class="login__box_drop">
+                <li><a href="#">Ваши лотереи и покупки</a></li>
+                <li><a href="#">Сохраненные купоны</a></li>
+                <li><a href="#">Любимые магазины</a></li>
+                <li><a href="#">Изменить данные</a></li>
+                <li><a href="#">Настройки рассылки</a></li>
+                <li><a href="#">Выйти</a></li>
+              </ul>
+            </div>
+            <!-- end login__box -->
+            <!-- begin header__bottom_center -->
+            <div class="header__bottom_center">
+              <!-- begin navbar -->
+              <ul class="navbar">
+                <li class="navbar__item"><a href="#" class="navbar__link">Магазины</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Категории</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Все скидки</a></li>
+              </ul>
+              <!-- end navbar -->
+              <!-- begin header__search -->
+              <div class="header__search">
+                <input placeholder="Найти: смартфон, Nike, Aliexpress ..."/>
+                <button class="header__search_btn"></button>
+              </div>
+              <!-- end header__search -->
+            </div>
+            <div class="icon__search header__search_toggle"></div>
+            <!-- end header__bottom_center -->
+          </div>
         </div>
-      </div>
+        <!-- end header__bottom -->
+        <!-- begin mobile__menu -->
+        <ul class="mobile__menu">
+          <li><a href="#">Магазины</a></li>
+          <li><a href="#">Категории</a></li>
+          <li><a href="#">Все скидки</a></li>
+          <li><a href="#">Розыгрыш призов каждый месяц</a></li>
+          <li><a href="#">Как использовать промокод?</a></li>
+          <li><a href="#">Блог</a></li>
+          <li><a href="#">Написать нам и FAQ</a></li>
+          <li><a href="#" class="mobile__menu_action">Sale! Новогодняя распродажа</a></li>
+        </ul>
+        <!-- en mobile__menu -->
+      </header>
+      <!-- end header -->
+      <!-- begin main__content-->
+      <main class="main__content">
+        <!-- begin Error 404-->
+        <div class="error__pages">
+          <div class="container_center">
+            <div class="error__pages_area"><img src="img/error-img1.png" alt="#" class="error__pages_img"/><img src="img/error-img2.png" alt="#" class="error__pages_img"/><img src="img/error-img3.png" alt="#" class="error__pages_img"/><img src="img/error-img4.png" alt="#" class="error__pages_img"/><img src="img/error-img5.png" alt="#" class="error__pages_img"/><img src="img/error-img6.png" alt="#" class="error__pages_img"/>
+              <div class="error__pages_message">
+                <h1 class="mb_40"><span class="error__pages_message_first">Без паники, </span>сработал код <span class="error__pages_message_last">404 </span>&#8230;</h1>
+                <p>Мы должны сообщить Вам кое-что ужасное, запрашиваемая Вами страница не существует или была удалена. Но Вы не волнуйтесь! Ее можно найти, но только с Вашей помощью...</p>
+                <div class="search">
+                  <input placeholder="Найти: смартфон, Nike, Aliexpress ..."/>
+                  <button class="search_btn"></button>
+                </div>
+                <div class="search__self">
+                  <p>Или найдите ее сами:</p>
+                  <button class="search__self_btn">Перейти на главную</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end Error 404-->
+        <div class="white__line">
+          <div class="container_center">
+            <!-- begin breadcrumb-->
+            <div class="breadcrumb ind">
+              <li><a href="/">Главная</a></li>
+              <li><a href="#">Ошибка 404			</a></li>
+            </div>
+            <!-- end breadcrumb-->
+            
+            <!-- begin Popular categories & shops-->
+            <!-- begin grid__duble-->
+            <div class="grid grid__duble mb_40 ind">
+              <div class="grid__wrapper">
+                <div class="section__title section__title_link">Популярные категории<a href="#">Все категории</a></div>
+                <div class="box box__gray category__box">
+                  <!-- begin category__box_grid-->
+                  <div class="grid grid__3 category__box_grid">
+                    <div class="grid__wrapper">
+                      <div class="grid__item"><img src="img/cat1.png" alt="#"/>
+                        <p>Детские товары</p>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="grid__item"><img src="img/cat2.png" alt="#"/>
+                        <p>Бытовая техника</p>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="grid__item"><img src="img/cat3.png" alt="#"/>
+                        <p>Одежда</p>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="grid__item"><img src="img/cat4.png" alt="#"/>
+                        <p>Электроника</p>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="grid__item"><img src="img/cat5.png" alt="#"/>
+                        <p>Аксессуары</p>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="grid__item"><img src="img/cat6.png" alt="#"/>
+                        <p>Apple</p>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="grid__item"><img src="img/cat7.png" alt="#"/>
+                        <p>Подгузники и памперсы</p>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="grid__item"><img src="img/cat8.png" alt="#"/>
+                        <p>Смартфоны</p>
+                      </div>
+                    </div>
+                    <div class="grid__wrapper">
+                      <div class="grid__item"><img src="img/cat9.png" alt="#"/>
+                        <p>Обувь</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end category__box_grid-->
+                  <!-- begin category__box_list -->
+                  <ul class="columns__list">
+                    <li> <a href="#">Путешествия и развлечения</a></li>
+                    <li> <a href="#">Детские товары и Игрушки</a></li>
+                    <li> <a href="#">Аксессуары</a></li>
+                    <li> <a href="#">Электроника</a></li>
+                    <li> <a href="#">Одежда</a></li>
+                    <li> <a href="#">Обувь</a></li>
+                    <li> <a href="#">Аксессуары</a></li>
+                    <li> <a href="#">Спортивные товары</a></li>
+                    <li> <a href="#">Еда и продукты</a></li>
+                    <li> <a href="#">Цветы и подарки</a></li>
+                    <li> <a href="#">Автотовары и Инструменты</a></li>
+                    <li> <a href="#">Книги, Игры, Фильмы</a></li>
+                    <li> <a href="#">Дом, мебель, сад</a></li>
+                  </ul>
+                  <!-- end category__box_list -->
+                </div>
+              </div>
+              <div class="grid__wrapper">
+                <div class="section__title section__title_link">Популярные магазины<a href="#">Все магазины</a></div>
+                <div class="box box__gray">
+                  <ul class="columns__list">
+                    <li> <a href="#">Lamoda</a></li>
+                    <li> <a href="#">Ozon</a></li>
+                    <li> <a href="#">Ebay</a></li>
+                    <li> <a href="#">Билайн</a></li>
+                    <li> <a href="#">Техносила</a></li>
+                    <li> <a href="#">Снежная королева</a></li>
+                    <li> <a href="#">Lamoda</a></li>
+                    <li> <a href="#">Техносила</a></li>
+                    <li> <a href="#">Снежная королева</a></li>
+                    <li> <a href="#">Lamoda</a></li>
+                    <li> <a href="#">Lamoda</a></li>
+                    <li> <a href="#">Ozon</a></li>
+                    <li><a href="#">Ebay</a></li>
+                    <li> <a href="#">Lamoda</a></li>
+                    <li> <a href="#">Ozon</a></li>
+                    <li> <a href="#">Ebay</a></li>
+                    <li> <a href="#">Билайн</a></li>
+                    <li> <a href="#">Техносила</a></li>
+                    <li> <a href="#">Снежная королева</a></li>
+                    <li> <a href="#">Lamoda</a></li>
+                    <li> <a href="#">Техносила</a></li>
+                    <li> <a href="#">Снежная королева</a></li>
+                    <li> <a href="#">Lamoda</a></li>
+                    <li> <a href="#">Lamoda</a></li>
+                    <li> <a href="#">Ozon</a></li>
+                    <li><a href="#">Ebay</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- end grid__duble-->
+            <!-- end Popular categories & shops-->
+            
+            <!-- begin Best offers-->
+            <div class="section__title section__title_btn">Самые лучшие предложения дня<a href="#" class="btn btn__danger">Смотреть все  &raquo;</a></div>
+            <!-- begin slider__grid -->
+            <div class="slider slider__grid pb_reset">
+              <!-- Slide 1-->
+              <div class="slider__item">
+                <div class="slider__grid_img"><img src="img/most1.png" alt="#"/>
+                  <div class="slider__grid_overlay">
+                     
+                    1240р. <span>2120р.</span>
+                  </div>
+                </div>
+                <div class="slider__grid_text">
+                  <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+                </div>
+              </div>
+              <!-- Slide 2-->
+              <div class="slider__item">
+                <div class="slider__grid_img"><img src="img/most2.png" alt="#"/>
+                  <div class="slider__grid_overlay">
+                     
+                    1240р. <span>2120р.</span>
+                  </div>
+                </div>
+                <div class="slider__grid_text">
+                  <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Смартфон Самсунг со скидкой -45%!
+                </div>
+              </div>
+              <!-- Slide 3-->
+              <div class="slider__item">
+                <div class="slider__grid_img"><img src="img/most3.png" alt="#"/>
+                  <div class="slider__grid_overlay">
+                     
+                    1240р. <span>2120р.</span>
+                  </div>
+                </div>
+                <div class="slider__grid_text">
+                  <div class="slider__grid_name">Магазин: <a href="#">Снежная королева</a></div>Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+                </div>
+              </div>
+              <!-- Slide 4-->
+              <div class="slider__item">
+                <div class="slider__grid_img"><img src="img/most4.png" alt="#"/>
+                  <div class="slider__grid_overlay">
+                     
+                    1240р. <span>2120р.</span>
+                  </div>
+                </div>
+                <div class="slider__grid_text">
+                  <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Купите стиральную машину и получите подарок!
+                </div>
+              </div>
+              <!-- Slide 5-->
+              <div class="slider__item">
+                <div class="slider__grid_img"><img src="img/most1.png" alt="#"/>
+                  <div class="slider__grid_overlay">
+                     
+                    1240р. <span>2120р.</span>
+                  </div>
+                </div>
+                <div class="slider__grid_text">
+                  <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+                </div>
+              </div>
+              <!-- Slide 6-->
+              <div class="slider__item">
+                <div class="slider__grid_img"><img src="img/most2.png" alt="#"/>
+                  <div class="slider__grid_overlay">
+                     
+                    1240р. <span>2120р.</span>
+                  </div>
+                </div>
+                <div class="slider__grid_text">
+                  <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Смартфон Самсунг со скидкой -45%!
+                </div>
+              </div>
+              <!-- Slide 7-->
+              <div class="slider__item">
+                <div class="slider__grid_img"><img src="img/most3.png" alt="#"/>
+                  <div class="slider__grid_overlay">
+                     
+                    1240р. <span>2120р.</span>
+                  </div>
+                </div>
+                <div class="slider__grid_text">
+                  <div class="slider__grid_name">Магазин: <a href="#">Снежная королева</a></div>Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+                </div>
+              </div>
+              <!-- Slide 8-->
+              <div class="slider__item">
+                <div class="slider__grid_img"><img src="img/most4.png" alt="#"/>
+                  <div class="slider__grid_overlay">
+                     
+                    1240р. <span>2120р.</span>
+                  </div>
+                </div>
+                <div class="slider__grid_text">
+                  <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Купите стиральную машину и получите подарок!
+                </div>
+              </div>
+            </div>
+            <!-- end slider__grid-->
+            <!-- end Best offers-->
+            
+          </div>
+        </div>
+        <div class="container_center">
+          <!-- begin lots-->
+          <div class="lots">
+            <h2>Покупайте и участвуйте в ежемесячных розыгрышах</h2>
+            <p>Покупайте и копите баллы. Меняйте баллы на лотереи и участвуйте. <a href="#">Подробнее о розыгрышах &gt;</a></p>
+            <p>+ Никогда не пропускайте! Получайте лучшие скидки магазинов к себе на почту.</p><a href="#" class="btn btn__danger">Зарегистрироваться</a>
+            <p>У вас есть свой аккаунт?<a href="#" class="lots_a">Войдите</a></p>
+          </div>
+          <!-- end lots-->
+        </div>
+      </main>
+      <!-- end main__content-->
     </div>
-  </div>
-</div>
-<!-- end Error 404-->
-<div class="white__line">
-  <div class="container_center">
-    <!-- begin breadcrumb-->
-    <div class="breadcrumb ind">
-      <li><a href="/">Главная</a></li>
-      <li><a href="#">Ошибка 404			</a></li>
-    </div>
-    <!-- end breadcrumb-->
-    
-    <!-- begin Popular categories & shops-->
-    <!-- begin grid__duble-->
-    <div class="grid grid__duble mb_40 ind">
-      <div class="grid__wrapper">
-        <div class="section__title section__title_link">Популярные категории<a href="#">Все категории</a></div>
-        <div class="box box__gray category__box">
-          <!-- begin category__box_grid-->
-          <div class="grid grid__3 category__box_grid">
-            <div class="grid__wrapper">
-              <div class="grid__item"><img src="img/cat1.png" alt="#"/>
-                <p>Детские товары</p>
-              </div>
-            </div>
-            <div class="grid__wrapper">
-              <div class="grid__item"><img src="img/cat2.png" alt="#"/>
-                <p>Бытовая техника</p>
-              </div>
-            </div>
-            <div class="grid__wrapper">
-              <div class="grid__item"><img src="img/cat3.png" alt="#"/>
-                <p>Одежда</p>
-              </div>
-            </div>
-            <div class="grid__wrapper">
-              <div class="grid__item"><img src="img/cat4.png" alt="#"/>
-                <p>Электроника</p>
-              </div>
-            </div>
-            <div class="grid__wrapper">
-              <div class="grid__item"><img src="img/cat5.png" alt="#"/>
-                <p>Аксессуары</p>
-              </div>
-            </div>
-            <div class="grid__wrapper">
-              <div class="grid__item"><img src="img/cat6.png" alt="#"/>
-                <p>Apple</p>
-              </div>
-            </div>
-            <div class="grid__wrapper">
-              <div class="grid__item"><img src="img/cat7.png" alt="#"/>
-                <p>Подгузники и памперсы</p>
-              </div>
-            </div>
-            <div class="grid__wrapper">
-              <div class="grid__item"><img src="img/cat8.png" alt="#"/>
-                <p>Смартфоны</p>
-              </div>
-            </div>
-            <div class="grid__wrapper">
-              <div class="grid__item"><img src="img/cat9.png" alt="#"/>
-                <p>Обувь</p>
+    <!-- begin footer -->
+    <footer class="footer">
+      <div class="container_center">
+        <!-- begin footer__grid-->
+        <div class="grid grid__4 footer__grid">
+          <div class="grid__wrapper">
+            <div class="grid__item"><a href="/" class="footer__logo"><img src="img/footer-logo.png" alt=""/></a>
+              <div class="footer__social">
+                <div class="footer__social_title">Мы в соцсетях:</div><a href="#" class="icon__vk"></a><a href="#" class="icon__fb"></a><a href="#" class="icon__google"></a><a href="#" class="icon__odnoklassniki"></a><a href="#" class="icon__twitter"></a><a href="#" class="icon__instagramm"></a>
               </div>
             </div>
           </div>
-          <!-- end category__box_grid-->
-          <!-- begin category__box_list -->
-          <ul class="columns__list">
-            <li> <a href="#">Путешествия и развлечения</a></li>
-            <li> <a href="#">Детские товары и Игрушки</a></li>
-            <li> <a href="#">Аксессуары</a></li>
-            <li> <a href="#">Электроника</a></li>
-            <li> <a href="#">Одежда</a></li>
-            <li> <a href="#">Обувь</a></li>
-            <li> <a href="#">Аксессуары</a></li>
-            <li> <a href="#">Спортивные товары</a></li>
-            <li> <a href="#">Еда и продукты</a></li>
-            <li> <a href="#">Цветы и подарки</a></li>
-            <li> <a href="#">Автотовары и Инструменты</a></li>
-            <li> <a href="#">Книги, Игры, Фильмы</a></li>
-            <li> <a href="#">Дом, мебель, сад</a></li>
-          </ul>
-          <!-- end category__box_list -->
-        </div>
-      </div>
-      <div class="grid__wrapper">
-        <div class="section__title section__title_link">Популярные магазины<a href="#">Все магазины</a></div>
-        <div class="box box__gray">
-          <ul class="columns__list">
-            <li> <a href="#">Lamoda</a></li>
-            <li> <a href="#">Ozon</a></li>
-            <li> <a href="#">Ebay</a></li>
-            <li> <a href="#">Билайн</a></li>
-            <li> <a href="#">Техносила</a></li>
-            <li> <a href="#">Снежная королева</a></li>
-            <li> <a href="#">Lamoda</a></li>
-            <li> <a href="#">Техносила</a></li>
-            <li> <a href="#">Снежная королева</a></li>
-            <li> <a href="#">Lamoda</a></li>
-            <li> <a href="#">Lamoda</a></li>
-            <li> <a href="#">Ozon</a></li>
-            <li><a href="#">Ebay</a></li>
-            <li> <a href="#">Lamoda</a></li>
-            <li> <a href="#">Ozon</a></li>
-            <li> <a href="#">Ebay</a></li>
-            <li> <a href="#">Билайн</a></li>
-            <li> <a href="#">Техносила</a></li>
-            <li> <a href="#">Снежная королева</a></li>
-            <li> <a href="#">Lamoda</a></li>
-            <li> <a href="#">Техносила</a></li>
-            <li> <a href="#">Снежная королева</a></li>
-            <li> <a href="#">Lamoda</a></li>
-            <li> <a href="#">Lamoda</a></li>
-            <li> <a href="#">Ozon</a></li>
-            <li><a href="#">Ebay</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- end grid__duble-->
-    <!-- end Popular categories & shops-->
-    
-    <!-- begin Best offers-->
-    <div class="section__title section__title_btn">Самые лучшие предложения дня<a href="#" class="btn btn__danger">Смотреть все  &raquo;</a></div>
-    <!-- begin slider__grid -->
-    <div class="slider slider__grid pb_reset">
-      <!-- Slide 1-->
-      <div class="slider__item">
-        <div class="slider__grid_img"><img src="img/most1.png" alt="#"/>
-          <div class="slider__grid_overlay">
-             
-            1240р. <span>2120р.</span>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <div class="footer__title">Позвольте нам помочь</div>
+              <ul class="footer__rubric">
+                <li class="footer__rubric_item"><a href="#">Обратная связь</a></li>
+                <li class="footer__rubric_item"><a href="#">Часто задаваемые вопросы</a></li>
+                <li class="footer__rubric_item"><a href="#">О нас и наши отзывы</a></li>
+                <li class="footer__rubric_item"><a href="#">Как использовать промокод?</a></li>
+                <li class="footer__rubric_item"><a href="#">О ежемесячных розыгрышах</a></li>
+                <li class="footer__rubric_item"><a href="#">Мой аккаунт</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <div class="footer__title">Сотрудничество</div>
+              <ul class="footer__rubric">
+                <li class="footer__rubric_item"><a href="#">Реклама на сайте</a></li>
+                <li class="footer__rubric_item"><a href="#">FAQ для бизнеса</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="grid__wrapper">
+            <div class="grid__item">
+              <div class="footer__title">Специальные страницы</div>
+              <ul class="footer__rubric">
+                <li class="footer__rubric_item"><a href="#">Черная пятница</a></li>
+                <li class="footer__rubric_item"><a href="#">Киберпонедельник</a></li>
+                <li class="footer__rubric_item"><a href="#">Lamoda</a></li>
+                <li class="footer__rubric_item"><a href="#">Новогодняя распродажа</a></li>
+                <li class="footer__rubric_item"><a href="#">День Влюбленных</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="slider__grid_text">
-          <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+        <!-- end footer__grid-->
+        <!-- begin footer__bottom -->
+        <div class="footer__bottom">
+          <div class="footer__bottom_item">© 2012-2017 Найди.ру </div>
+          <div class="footer__bottom_item"><a href="#">Пользовательское соглашение</a></div>
+          <div class="footer__bottom_item"><a href="#">Правила покупок</a></div>
+          <div class="footer__bottom_item"><a href="#">Карта сайта</a></div>
         </div>
+        <!-- end footer__bottom -->
       </div>
-      <!-- Slide 2-->
-      <div class="slider__item">
-        <div class="slider__grid_img"><img src="img/most2.png" alt="#"/>
-          <div class="slider__grid_overlay">
-             
-            1240р. <span>2120р.</span>
-          </div>
-        </div>
-        <div class="slider__grid_text">
-          <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Смартфон Самсунг со скидкой -45%!
-        </div>
-      </div>
-      <!-- Slide 3-->
-      <div class="slider__item">
-        <div class="slider__grid_img"><img src="img/most3.png" alt="#"/>
-          <div class="slider__grid_overlay">
-             
-            1240р. <span>2120р.</span>
-          </div>
-        </div>
-        <div class="slider__grid_text">
-          <div class="slider__grid_name">Магазин: <a href="#">Снежная королева</a></div>Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
-        </div>
-      </div>
-      <!-- Slide 4-->
-      <div class="slider__item">
-        <div class="slider__grid_img"><img src="img/most4.png" alt="#"/>
-          <div class="slider__grid_overlay">
-             
-            1240р. <span>2120р.</span>
-          </div>
-        </div>
-        <div class="slider__grid_text">
-          <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Купите стиральную машину и получите подарок!
-        </div>
-      </div>
-      <!-- Slide 5-->
-      <div class="slider__item">
-        <div class="slider__grid_img"><img src="img/most1.png" alt="#"/>
-          <div class="slider__grid_overlay">
-             
-            1240р. <span>2120р.</span>
-          </div>
-        </div>
-        <div class="slider__grid_text">
-          <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
-        </div>
-      </div>
-      <!-- Slide 6-->
-      <div class="slider__item">
-        <div class="slider__grid_img"><img src="img/most2.png" alt="#"/>
-          <div class="slider__grid_overlay">
-             
-            1240р. <span>2120р.</span>
-          </div>
-        </div>
-        <div class="slider__grid_text">
-          <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Смартфон Самсунг со скидкой -45%!
-        </div>
-      </div>
-      <!-- Slide 7-->
-      <div class="slider__item">
-        <div class="slider__grid_img"><img src="img/most3.png" alt="#"/>
-          <div class="slider__grid_overlay">
-             
-            1240р. <span>2120р.</span>
-          </div>
-        </div>
-        <div class="slider__grid_text">
-          <div class="slider__grid_name">Магазин: <a href="#">Снежная королева</a></div>Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
-        </div>
-      </div>
-      <!-- Slide 8-->
-      <div class="slider__item">
-        <div class="slider__grid_img"><img src="img/most4.png" alt="#"/>
-          <div class="slider__grid_overlay">
-             
-            1240р. <span>2120р.</span>
-          </div>
-        </div>
-        <div class="slider__grid_text">
-          <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Купите стиральную машину и получите подарок!
-        </div>
-      </div>
-    </div>
-    <!-- end slider__grid-->
-    <!-- end Best offers-->
-    
-  </div>
-</div>
-<div class="container_center">
-  <!-- begin lots-->
-  <div class="lots">
-    <h2>Покупайте и участвуйте в ежемесячных розыгрышах</h2>
-    <p>Покупайте и копите баллы. Меняйте баллы на лотереи и участвуйте. <a href="#">Подробнее о розыгрышах &gt;</a></p>
-    <p>+ Никогда не пропускайте! Получайте лучшие скидки магазинов к себе на почту.</p><a href="#" class="btn btn__danger">Зарегистрироваться</a>
-    <p>У вас есть свой аккаунт?<a href="#" class="lots_a">Войдите</a></p>
-  </div>
-  <!-- end lots-->
-</div>
+      <!-- Если нужна плавающая кнопка добавить класс .to_top_float--><a href="#" class="to_top">Наверх</a>
+    </footer>
+    <!-- end footer -->
+    <div class="body__overlay"></div>
+  </body>
+</html>
