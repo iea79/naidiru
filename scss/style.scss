@@ -3024,6 +3024,23 @@
 	}
 }
 
+.js-more-wrapper.open {
+	.b__hashtag {
+		@media (max-width: 767px) {
+			&_item {
+				&:nth-child(n+6) {
+					display: block;
+				}
+				&.ib {
+					&:nth-child(n+4) {
+						display: inline-block;
+					}
+				}
+			}
+		}
+	}
+}
+
 // Список статей
 .b__article {
 	&_item {
@@ -3863,8 +3880,10 @@
 			}
 		}
 		.columns__list {
+			padding-left: 20px;
+			padding-right: 20px;
 			@include columns-text(100px, 2, 0px, 0px, solid, #000);
-			text-align: center;
+			// text-align: center;
 		}
 	}
 	@media (max-width: 479px) {
@@ -3873,9 +3892,9 @@
 				@include flex-basis(50%);
 			}
 		}
-		.columns__list {
-			@include columns-text(100px, 1, 0, 0px, solid, #000);
-		}
+		// .columns__list {
+		// 	@include columns-text(100px, 1, 0, 0px, solid, #000);
+		// }
 	}
 }
 // end category__box_grid
@@ -3884,6 +3903,12 @@
 
 // Страница Все магазины all-shops.html ///////////////
 // ====================================================
+.all-shops {
+	.white__line {
+	    padding: 35px 0 20px;		    
+	}
+}
+
 
 // begin shops__categories
 .shops__categories {
@@ -3900,10 +3925,8 @@
 		color: $main-color;
 		background-color: $muted-color;
 		@include border-radius(6px);
-		&:hover {
-			text-decoration: none;
-			background-color: #e8e7e7;
-		}
+		&:hover,
+		&:active,
 		&.active {
 			text-decoration: none;
 			color: #fff;
@@ -4227,9 +4250,6 @@
 
 // begin pagination
 .all-shops {
-	.white__line {
-		padding: 20px 0;
-	}
 	.pagination {
 		margin-top: 23px;
 		margin-bottom: 10px;
@@ -4521,7 +4541,7 @@
 	position: relative;
 	padding: 28px 355px 38px 58px;
 	margin-bottom: 19px;
-	border: 3px dashed #b4b3b3;
+	border: 3px dashed  #cacaca;
 	@extend %clear_all;
 	&_left {
 		width: 61px;
@@ -4535,7 +4555,7 @@
 	}
 	&_title {
 		margin-bottom: 13px;
-		font-size: 21px;
+		font-size: 23px;
 	}
 	&_terms {
 		font-size: 15px;
