@@ -6420,120 +6420,159 @@
 // end office__edit_text 
 
 
-// =======
 
-/*
- * CSS Styles that are needed by jScrollPane for it to operate correctly.
- *
- * Include this stylesheet in your site or copy and paste the styles below into your stylesheet - jScrollPane
- * may not operate correctly without them.
- */
+// Страница Личн.кабинет Настройки рассылки office-settings.html ///////////////
+// =============================================================================
 
-.jspContainer
-{
-	overflow: hidden;
-	position: relative;
+.office__settings {
+	&_section {
+		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 70px;
+		}
+		&_h2 {
+			margin-bottom: 14px;
+			font-size: 21px;
+		}
+		&_h3 {
+			margin-bottom: 14px;
+			font-size: 18px;
+		}
+		&_info {
+			background-color: #fff;
+			border: 1px solid #d1d1d1;
+			padding-bottom: 28px;
+		}
+		&_top {
+			padding: 35px 40px 0;
+			.office__edit_down {
+				margin-bottom: 12px;
+			}
+		}
+		&_bottom {
+			padding: 21px 40px 0;
+		}
+	}
+	@media (max-width: 767px) {
+		&_section {
+			margin-left: 20px;
+			margin-right: 20px;
+			&:last-child {
+				margin-bottom: 20px;
+			}
+			&_h2 {
+				font-size: 18px;
+			}
+			&_h2,
+			&_h3,
+			&_p {
+				text-align: center;
+			}
+			&_top {
+				padding: 35px 20px 0; 
+			}
+			&_bottom {
+				padding: 21px 20px 0;
+			}
+		}
+	}
 }
 
-.jspPane
-{
-	position: absolute;
-	width: 100% !important;
-}
-
-.jspVerticalBar
-{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 8px;
-	height: 100%;
-}
-
-.jspHorizontalBar
-{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 16px;
-	background: red;
-}
-
-.jspCap
-{
-	display: none;
-}
-
-.jspHorizontalBar .jspCap
-{
-	float: left;
-}
-
-.jspTrack
-{
-	position: relative;
-}
-
-.jspDrag
-{
-	background-color: #b4b3b3;
-	position: relative;
-	top: 0;
-	left: 0;
-	cursor: pointer;
-	@include border-radius(2px)
-}
-
-.jspHorizontalBar .jspTrack,
-.jspHorizontalBar .jspDrag
-{
-	float: left;
-	height: 100%;
-}
-
-.jspArrow
-{
-	background: #50506d;
-	text-indent: -20000px;
-	display: block;
-	cursor: pointer;
-	padding: 0;
-	margin: 0;
-}
-
-.jspArrow.jspDisabled
-{
-	cursor: default;
-	background: #80808d;
-}
-
-.jspVerticalBar .jspArrow
-{
-	height: 16px;
-}
-
-.jspHorizontalBar .jspArrow
-{
-	width: 16px;
-	float: left;
-	height: 100%;
-}
-
-.jspVerticalBar .jspArrow:focus
-{
-	outline: none;
-}
-
-.jspCorner
-{
-	background: #eeeef4;
-	float: left;
-	height: 100%;
-}
-
-/* Yuk! CSS Hack for IE6 3 pixel bug :( */
-* html .jspCorner
-{
-	margin: 0 -3px 0 0;
+.office__settings {
+	&_info {
+		margin-top: 26px;
+		margin-bottom: 30px;
+	}
+	&_checkbox {
+		margin-bottom: 18px;
+		@extend %clear_a;
+		input[type="checkbox"] {
+			width: 17px;
+			height: 17px;
+			float: left;
+			margin-right: 10px;
+			margin-top: -1px;
+			display: block;
+			background-color: #fff;
+			border: 1px solid #9d9d9d;
+			@include border-radius(3px);
+			&:before {
+				padding-top: 2px;
+			}
+		}
+	}
+	&_label {
+		padding-right: 15px;
+		display: block;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	&_list {
+		margin-top: 28px;
+		margin-bottom: 18px;
+		@extend %clear_a;
+		margin-left: -43px;
+		.office__settings_checkbox {
+			float: left;
+			margin-left: 43px;
+			margin-bottom: 12px;
+		}
+	}
+	&_col {
+		margin-top: 25px;
+		@extend %clear_a;
+		.office__settings_checkbox {
+			float: left;
+			width: 25%;
+			margin-bottom: 12px;
+		}
+	}
+	@media (max-width: 1279px) {
+		&_col {
+			.office__settings_checkbox {
+				width: 33.333%;
+			}
+		}
+	}
+	@media (max-width: 1199px) {
+		&_col {
+			.office__settings_checkbox {
+				width: 25%;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		&_col {
+			.office__settings_checkbox {
+				width: 33.333%;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		&_info {
+			padding-left: 20px;
+		}
+		&_list,
+		&_col {
+			padding-left: 20px;
+			margin-left: 0;
+			.office__settings_checkbox {
+				width: 50%;
+				margin-left: 0;
+			}
+		}
+	}
+	@media (max-width: 479px) {
+		&_info {
+			padding-left: 0;
+		}
+		&_list,
+		&_col {
+			padding-left: 0;
+			.office__settings_checkbox {
+				width: 100%;
+			}
+		}
+	}
 }
