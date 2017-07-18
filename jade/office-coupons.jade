@@ -4,7 +4,7 @@ block variables
 	- bodyClass = "office"
 
 block title
-	title Личный кабинет - Настройки рассылки                  
+	title Личный кабинет - Сохраненные купоны                 
 
 block content
 	.white__line.sm
@@ -18,7 +18,7 @@ block content
 				li
 					a(href="office.html") Личный кабинет
 				li
-					a(href="#") Настройки рассылки
+					a(href="#") Сохраненные купоны
 			// end breadcrumb
 
 
@@ -51,7 +51,7 @@ block content
 						.sm_social_icon
 							.ya-share2(data-services="twitter")
 					.office__top_right_links
-						a.office__top_right_link(href="office-coupons.html") Сохраненные<br>купоны
+						a.office__top_right_link(href="#") Сохраненные<br>купоны
 						a.office__top_right_link(href="office-shops.html") Любимые<br>магазины
 			// end office__top
 
@@ -71,7 +71,7 @@ block content
 					.office__item
 						a.office__link(href="office-edit.html") Изменить данные
 					.office__item
-						a.office__link.active(href="#") Настройки рассылки
+						a.office__link(href="office-settings.html") Настройки рассылки
 					.office__item
 						a.office__link(href="#") Розыгрыш призов
 					.office__item
@@ -247,160 +247,140 @@ block content
 		// begin main__content_center 
 		.main__content_center
 
-			h1 Настройки рассылки
+			h1.star Сохраненные купоны
 
-			.office__settings_section
-				.office__settings_section_info
-					.office__settings_section_top
-						.office__settings_section_h2 Помогите нам стать лучше для Вас, настройте рассылку под себя
-						
-						.office__settings_info
-							.office__settings_checkbox
-								input(type="checkbox" id="os1")
-								label.office__settings_label(for="os1") Вы будете получать, информацию о скидках и акциях от любимых магазинов и категорий
-							.office__settings_checkbox
-								input(type="checkbox" id="os2")
-								label.office__settings_label(for="os2") Вы будете узнавать, о розыгрышах, новостях и изменениях в Вашем аккаунте
-							.office__settings_checkbox
-								input(type="checkbox" id="os3")
-								label.office__settings_label(for="os3") Отписаться от всех рассылок
-							
-						.office__edit_down
-							button.btn.btn__danger.office__edit_btn Сохранить изменения
-							.office__edit_note Информация успешно обновлена!
-								button.close
-			
-			.office__settings_section
-				.office__settings_section_info
-					.office__settings_section_top
-						.office__settings_section_h2 Вы подписаны на эти магазины
+			// begin office__shops_top
+			.office__shops_top.coupon
+				.office__shops_top_text Если Вы не хотите больше видеть тот или иной промокод, Вы можете его удалить с этой страницы, просто снова нажав на звездочку.
+			// end office__shops_top
 
-						.office__settings_section_p Чтобы получать скидки, только от любимых магазинов на емайл, нужно: первое - найти любимые магазины и второе нажать на сердечки этих магазинов. И выбранные Вами магазины автоматически сохранятся тут и на этой странице: Любимые магазины.
 
-						.office__settings_list
-							.office__settings_checkbox
-								input(type="checkbox" id="os4")
-								label.office__settings_label(for="os4") Lamoda
-							.office__settings_checkbox
-								input(type="checkbox" id="os5")
-								label.office__settings_label(for="os5") Снежная королева  
-							.office__settings_checkbox
-								input(type="checkbox" id="os6")
-								label.office__settings_label(for="os6") Дочки и Сыночки
-							.office__settings_checkbox
-								input(type="checkbox" id="os7")
-								label.office__settings_label(for="os7") Lamoda
-							.office__settings_checkbox
-								input(type="checkbox" id="os8")
-								label.office__settings_label(for="os8") Media Markt
-							.office__settings_checkbox
-								input(type="checkbox" id="os9")
-								label.office__settings_label(for="os9") Ozon
-							.office__settings_checkbox
-								input(type="checkbox" id="os10")
-								label.office__settings_label(for="os10") Ebay
+			// begin office__shops_coupons
+			.office__shops_coupons.coupon
+				.sale__list.js_more_wrap
+					
+					// Row 1
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							img(src="img/sale-list4.png", alt="#")
+							.btn.btn__success Новый
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#").btn.btn__primary.code__btn Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							.sale__list_row_title Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия акции: Условия акции: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон, участвуй в розыгрыше!
+									i.icon__question
+								a(href="#") Все промокоды Bon prix
+					
+					// Row 2
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							img(src="img/sale-list6.png", alt="#                                            ")
+							.btn.btn__main Истекает
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#").btn.btn__primary.code__btn Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							.sale__list_row_title Скидка до -50% на одежду и обувь от брендов!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия акции: Условия акции: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон, участвуй в розыгрыше!
+									i.icon__question
+								a(href="#") Все промокоды Bon prix
 
-					.line
+					// Row 3
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							img(src="img/sale-list4.png", alt="#                                            ")
+							.btn.btn__success Новый
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#").btn.btn__primary.code__btn Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							.sale__list_row_title Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия акции: Условия акции: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон, участвуй в розыгрыше!
+									i.icon__question
+								a(href="#") Все промокоды Bon prix
+					
+					// Row 4
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							img(src="img/sale-list6.png", alt="#                                            ")
+							.btn.btn__main Истекает
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#").btn.btn__primary.code__btn Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							.sale__list_row_title Скидка до -50% на одежду и обувь от брендов!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия акции: Условия акции: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон, участвуй в розыгрыше!
+									i.icon__question
+								a(href="#") Все промокоды Bon prix
 
-					.office__settings_section_bottom
-						.office__settings_section_h3 Рекомендуем подписаться на эти магазины
+			// end office__shops_coupons
 
-						.office__settings_col
-							.office__settings_checkbox
-								input(type="checkbox" id="os11")
-								label.office__settings_label(for="os11") Снежная королева
-							.office__settings_checkbox
-								input(type="checkbox" id="os12")
-								label.office__settings_label(for="os12") Снежная королева  
-							.office__settings_checkbox
-								input(type="checkbox" id="os13")
-								label.office__settings_label(for="os13") Снежная королева
-							.office__settings_checkbox
-								input(type="checkbox" id="os14")
-								label.office__settings_label(for="os14") Снежная королева
-							.office__settings_checkbox
-								input(type="checkbox" id="os15")
-								label.office__settings_label(for="os15") Media Markt
-							.office__settings_checkbox
-								input(type="checkbox" id="os16")
-								label.office__settings_label(for="os16") Media Markt
-							.office__settings_checkbox
-								input(type="checkbox" id="os17")
-								label.office__settings_label(for="os17") Media Markt
-							.office__settings_checkbox
-								input(type="checkbox" id="os18")
-								label.office__settings_label(for="os18") Media Markt
-							.office__settings_checkbox
-								input(type="checkbox" id="os19")
-								label.office__settings_label(for="os19") Дочки и Сыночки
-							.office__settings_checkbox
-								input(type="checkbox" id="os20")
-								label.office__settings_label(for="os20") Дочки и Сыночки
-							.office__settings_checkbox
-								input(type="checkbox" id="os21")
-								label.office__settings_label(for="os21") Дочки и Сыночки
-							.office__settings_checkbox
-								input(type="checkbox" id="os22")
-								label.office__settings_label(for="os22") Дочки и Сыночки
-			
-			.office__settings_section
-				.office__settings_section_info
-					.office__settings_section_top
-						.office__settings_section_h2 Вы подписаны на эти категории
 
-						.office__settings_section_p Чтобы получать скидки, только на определенную группу товаров, нужно: первое - выбрать категории и второе нажать на сердечки этих категорий. И выбранные Вами категории автоматически сохранятся тут.
+			.line
 
-						.office__settings_list
-							.office__settings_checkbox
-								input(type="checkbox" id="os23")
-								label.office__settings_label(for="os23") Одежда
-							.office__settings_checkbox
-								input(type="checkbox" id="os24")
-								label.office__settings_label(for="os24") Обувь
 
-					.line
+			// begin office__raffle
+			.office__raffle.coupon
+				.office__raffle_name Как использовать промокод?
+					span + нужны здесь примеры в картинках
 
-					.office__settings_section_bottom
-						.office__settings_section_h3 Рекомендуем подписаться на эти категории
+				.office__raffle_p Другой текст: Каждый месяц на сайте проходят розыгрыши, для того, чтобы участвовать, нужно:
+				.office__raffle_p 1) Перейти в интернет-магазин через сайт Найди.ру<br>2) Совершить покупку на сумму от 5000 рублей или постепенно набрать товары, которые суммой 5000 рублей<br>3) Отправить нам чек, для подверждения покупки, чтобы мы засчитали сумму покупки и зачислили вам баллы (1 рубль - 1 баллу)<br>4) Поменять накомленные баллы на лотерею
+				.office__raffle_p Покупайте и участвуйте в ежемесячных лотереях! 
+					a(href="#") Подробнее о том, как использовать промокод
+			// end office__raffle
 
-						.office__settings_col
-							.office__settings_checkbox
-								input(type="checkbox" id="os25")
-								label.office__settings_label(for="os25") Аксессуары
-							.office__settings_checkbox
-								input(type="checkbox" id="os26")
-								label.office__settings_label(for="os26") Красота и здоровье  
-							.office__settings_checkbox
-								input(type="checkbox" id="os27")
-								label.office__settings_label(for="os27") Дом, мебель, сад
-							.office__settings_checkbox
-								input(type="checkbox" id="os28")
-								label.office__settings_label(for="os28") Автотовары и Инструменты
-							.office__settings_checkbox
-								input(type="checkbox" id="os29") 
-								label.office__settings_label(for="os29") Бытовая техника
-							.office__settings_checkbox
-								input(type="checkbox" id="os30")
-								label.office__settings_label(for="os30") Еда и продукты
-							.office__settings_checkbox
-								input(type="checkbox" id="os31")
-								label.office__settings_label(for="os31") Детские товары, Игрушки
-							.office__settings_checkbox
-								input(type="checkbox" id="os32")
-								label.office__settings_label(for="os32") Финансы, Услуги, Образование
-							.office__settings_checkbox
-								input(type="checkbox" id="os33")
-								label.office__settings_label(for="os33") Электроника
-							.office__settings_checkbox
-								input(type="checkbox" id="os34")
-								label.office__settings_label(for="os34") Зоотовары
-							.office__settings_checkbox
-								input(type="checkbox" id="os35")
-								label.office__settings_label(for="os35") Путешествия и Развелечения
-							.office__settings_checkbox
-								input(type="checkbox" id="os36")
-								label.office__settings_label(for="os36") Спортивные товары
-				
-			// end office__edit_text 
+
+
 
 		// end main__content_center

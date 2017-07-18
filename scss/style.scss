@@ -3976,7 +3976,11 @@
 				right: 8px;
 				width: 17px;
 				height: 15px;
+				cursor: pointer;
 				background: url('../img/heart-gray.png') no-repeat;
+				&:hover {
+					background: url('../img/heart-red.png') no-repeat;
+				}
 			}
 			&.active {
 				.grid__item_like {
@@ -6576,3 +6580,200 @@
 		}
 	}
 }
+
+
+
+// Страница Личн.кабинет Любимые магазины office-shops.html ///////////////
+// ========================================================================
+
+.office {
+	h1 {
+		&.like:before {
+			content: url('../img/heart-red.svg');
+			width: 20px;
+			height: 19px;
+			margin-right: 15px;
+		}
+	}
+}
+
+
+// begin office__shops_top
+.office__shops_top {
+	padding: 26px 40px 27px 30px;
+	background-color: #e8e7e7;
+	@extend %clear_b;
+	&_text {
+		overflow: hidden;
+	}
+	&_btn {
+		width: 260px;
+		height: 42px;
+		float: right;
+		margin-left: 40px;
+		margin-top: 4px;
+		display: block;
+		@include border-radius(0);
+	}
+	@media (max-width: 1280px) {
+		&_btn {
+			width: 220px;
+			margin-left: 20px;
+		}
+	}
+	@media (max-width: 1199px) {
+		&_btn {
+			width: 260px;
+			margin-left: 40px;
+		}
+	}
+	@media (max-width: 991px) {
+		&_btn {
+			width: 220px;
+			margin-left: 20px;
+			br {
+				display: none;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		padding: 26px 20px;
+		@include flexbox();
+		@include flex-flow(column wrap);
+		@include align-items(center);
+		&_text {
+			margin-bottom: 15px;
+			text-align: center;
+		}
+		&_btn {
+			width: 260px;
+			margin-left: 0;
+			float: none;
+			@include order(1);
+			br {
+				display: block;
+			}
+		}
+	}
+}
+// end office__shops_top
+
+
+// begin shops__box
+.office {
+	.shops__box {
+		margin-top: 5px;
+		margin-bottom: 30px;
+		&_grid {
+			.grid__wrapper {
+				@include flex-basis(20%);
+			}
+		}
+		@media (max-width: 991px) {
+			&_grid {
+				.grid__wrapper {		
+					@include flex-basis(25%);
+				}
+			}
+		}
+		@media (max-width: 767px) {
+			&_grid {
+				.grid__wrapper {
+					@include flex-basis(40%);
+				}
+			}
+		}
+		@media (max-width: 479px) {
+			&_grid {
+				.grid__wrapper {	
+					width: 160px;
+				}
+			}
+		}
+	}
+}
+// end shops__box
+
+
+// begin office__shops_coupons
+.office__shops_coupons {
+	padding-top: 35px;
+	&.coupon {
+		padding-top: 30px;
+		.sale__list.js_more_wrap {
+			padding: 0 0 30px;
+		}
+	}
+	&_h {
+		margin-bottom: 26px;
+		font-size: 21px;
+	}
+	@media (max-width: 767px) {
+		padding-left: 20px;
+		padding-right: 20px;
+		&_h {
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+}
+// end office__shops_coupons
+
+
+
+// Страница Личн.кабинет Сохраненные купоны office-coupons.html ///////////////
+// ============================================================================
+
+.office {
+	h1 {
+		&.star:before {
+			content: url('../img/star-red.svg');
+			width: 20px;
+			height: 21px;
+			margin-right: 16px;
+		}
+	}
+}
+
+
+// begin office__shops_top
+.office__shops_top {
+	&.coupon {
+		padding: 23px 30px;
+	}
+	@media (max-width: 767px) {
+		&.coupon {
+			padding: 23px 20px;
+			.office__shops_top_text {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+// end office__shops_top
+
+
+// begin office__shops_coupons
+.office__shops_coupons {
+	&.coupon {
+		padding-top: 30px;
+		.sale__list.js_more_wrap {
+			padding: 0 0 30px;
+		}
+	}
+}
+// end office__shops_coupons
+
+
+// begin office__raffle
+.office__raffle {
+	&.coupon {
+		margin-bottom: 20px;
+	}
+	@media (max-width: 767px) {
+		&.coupon {
+			margin-bottom: 0;
+		}
+	}
+}
+// end office__raffle
