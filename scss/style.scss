@@ -1356,8 +1356,13 @@
 			display: none;
 		}
 		&_title {
-			font-size: 22px;
 			margin-bottom: 10px;
+			display: block;
+			color: $main-color;
+			font-size: 22px;
+			&:hover {
+				text-decoration: none;
+			}
 		}
 		&+.btn {
 			margin-top: 20px;
@@ -1384,6 +1389,8 @@
 			@include border-radius(0);
 		}
 		img {
+			width: 100%;
+			height: auto;
 			margin-bottom: 22px;
 		}
 	}
@@ -1457,15 +1464,21 @@
 		bottom: 0;
 	}
 	&_bottom {
+		@extend %clear_a;
 		a {
+			padding-top: 11px;
 			color: #919191;
+			white-space: nowrap;
+	        text-overflow: ellipsis;
+	        overflow: hidden;
 		}
 	}
 	&_info {
 		background-color: $muted-color;
-		padding: 9px 15px 4px;
-		display: inline-block;
-		margin-right: 20px;
+		padding: 9px 10px 4px;
+		display: block;
+		margin-right: 10px !important;
+		float: left;
 		color: $main-color;
 		i {
 			vertical-align: middle;
@@ -1571,6 +1584,109 @@
 			}
 		}
 	}
+	@media (min-width: 1921px) {
+		padding-right: 10px;
+		padding-left: 10px;
+		padding-bottom: 47px;
+		&_row {
+			font-size: 12px;
+			margin-right: 16px;
+			&:nth-child(n+6) {
+			}
+			&_title {
+				font-size: 15px;
+				font-weight: 400;
+				margin-bottom: 0;
+			}
+			&+.btn {
+				margin-top: 0;
+				max-width: 266px;
+			}
+			&:before {
+				display: none;
+			}
+		}
+		&_left {
+			padding: 10px;
+			min-height: inherit;
+			width: 90px;
+			text-align: center;
+			.btn {
+				display: none;
+			}
+			img {
+				display: inline-block;
+				margin-bottom: 0;
+			}
+		}
+		&_right {
+			width: auto;
+			font-size: 0;
+			padding: 7px 6px;
+			.btn {
+				display: none;
+			}
+		}
+		&_save {
+			font-size: 0;
+			&:before {
+				margin-right: 0;
+			}
+			&:hover,&.active {
+				&:before {
+				}
+			}
+		}
+		&_center {
+			padding: 10px 0;
+		}
+		&_deadline {
+			display: none;
+			i {
+			}
+		}
+		&_terms {
+			display: none;
+			&.open {
+			}
+		}
+		&_more {
+			right: inherit;
+			left: 0;
+			padding-left: 0;
+		}
+		&_bottom {
+			display: none;
+		}
+		&_info {
+			padding: 6px 11px 3px;
+			i {
+				&:hover {
+				}
+			}
+		}
+		.code {
+			&__wrap {
+				display: none;
+			}
+			&__field {
+				font-size: 14px;
+				text-align: center;
+			}
+		}
+		&_mob-link {
+			position: absolute;
+			right: -16px;
+			border: 1px solid #d1d1d1;
+			border-left: none;
+			top: 50%;
+			margin-top: -22px;
+			height: 44px;
+			width: 16px;
+			display: block;
+			background: image-url('angel-right.png') no-repeat left center #fff;
+		}
+	}
 	@media (max-width: 1366px) {
 		&_row {
 			&:nth-child(n+6) {
@@ -1623,6 +1739,13 @@
 			i {
 				&:hover {
 				}
+			}
+		}
+	}
+	@media (max-width: 1279px) {
+		&_bottom {
+			a {
+				// display: none;
 			}
 		}
 	}
@@ -2777,6 +2900,9 @@
 		width: 40px;
 		height: 257px;
 		background: #dadada url('../img/arrow-next.png') no-repeat center center;
+		&:hover {
+			background-color: #d0cece;
+		}
 	}
 	&_list {
 		overflow: hidden;
@@ -2925,6 +3051,15 @@
 		overflow: hidden;
 		font-size: 21px;
 	}
+	&_icon {
+		width: 19px;
+		height: 15px;
+		display: inline-block;
+		margin-left: 10px;
+		padding-top: 3px;
+		background: url('../img/ad.svg') no-repeat;
+		background-size: 19px 15px;
+	}
 	&_text {
 		height: 32px;
 		margin-bottom: 23px;
@@ -3000,6 +3135,7 @@
 			text-align: center;
 		}
 		&_hero {
+			display: none;
 			margin-left: 20px;
 			margin-right: 20px;
 			text-align: center;
@@ -3042,7 +3178,8 @@
 	}
 	&_mobil {
 		display: none;
-		width: 208px;
+		width: 130px;
+		height: auto;
 		float: none;
 		margin-left: auto;
 		margin-right: auto;
@@ -3087,6 +3224,9 @@
 		}
 		&_info {
 			padding: 10px 20px 35px;
+			span {
+				display: none;
+			}
 		}
 		h2,
 		&_text {
@@ -3656,7 +3796,15 @@
 			width: 25px;
 			height: 25px;
 			cursor: pointer;
-			background: url('../img/heart.png') no-repeat;
+			background: #fff url('../img/heart.svg') no-repeat center center;
+			background-size: 15px 14px;
+			@include border-radius(50%);
+			&:hover,
+			&:active,
+			&.active {
+				background: #fff url('../img/heart-red.svg') no-repeat center center;
+				background-size: 15px 14px;
+			}
 		}
 	}
 	.line {
@@ -3977,9 +4125,11 @@
 				width: 17px;
 				height: 15px;
 				cursor: pointer;
-				background: url('../img/heart-gray.png') no-repeat;
+				background: url('../img/heart.svg') no-repeat;
+				background-size: 15px 14px;
 				&:hover {
-					background: url('../img/heart-red.png') no-repeat;
+					background: url('../img/heart-red.svg') no-repeat;
+					background-size: 15px 14px;
 				}
 			}
 			&.active {
@@ -4344,6 +4494,15 @@
 			border: 1px solid #d1d1d1;
 			a {
 				margin-left: 5px;
+			}
+		}
+	}
+	@media (max-width: 1279px) {
+		.sale__list {
+			&_bottom {
+				a {
+					display: none;
+				}
 			}
 		}
 	}
