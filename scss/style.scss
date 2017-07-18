@@ -6072,7 +6072,6 @@
 			width: 360px;
 			height: 100%;
 			float: left;
-			overflow: hidden;
 			display: block;
 			&:nth-child(2) {
 				margin-left: 60px;
@@ -6776,4 +6775,13 @@
 		}
 	}
 }
+
 // end office__raffle
+// end office__shops_coupons
+
+
+// begin office__raffle
+.jq-selectbox__trigger {
+		right: 8px;
+		top: 14px;
+}
