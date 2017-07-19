@@ -713,6 +713,7 @@
 		.logo {
 			display: inline-block;
 			float: none;
+			margin-right: 60px;
 		}
 		&__search {
 			background-color: #f1ad1d;
@@ -726,7 +727,7 @@
 			&_toggle {
 				display: block;
 				position: absolute;
-				right: 10px;
+				right: 18px;
 				top: 23px;
 				cursor: pointer;
 			}
@@ -742,7 +743,7 @@
 			width: 36px;
 			height: 36px;
 			position: absolute;
-			right: 44px;
+			right: 60px;
 			img {
 			}
 		}
@@ -818,6 +819,7 @@
 			.logo {
 				display: inline-block;
 				float: none;
+				margin-right: 10px;
 			}
 			&__search {
 				background-color: #f1ad1d;
@@ -1216,9 +1218,12 @@
 			}
 			&_grid {
 				@include justify-content(center);
+				margin-left: -15px;
 				.grid__wrapper {
-					@include flex-basis(250px);
+					padding-left: 15px;
+					// @include flex-basis(250px);
 					img {
+						max-height: 68px;
 					}
 				}
 			}
@@ -1302,6 +1307,7 @@
 					}
 					img {
 						width: 101px;
+						max-height: none;
 					}
 					p {
 						max-width: 230px;
@@ -1393,6 +1399,7 @@
 		width: 239px;
 		padding: 15px 24px;
 		text-align: center;
+		font-family: Tahoma;
 		.btn {
 			width: 100%;
 		}
@@ -1407,6 +1414,7 @@
 		color: $main-color;
 		font-size: 14px;
 		text-decoration: none;
+		font-family: Tahoma;
 		&:before {
 			content: image-url('star-white.svg');
 			display: inline-block;
@@ -1444,6 +1452,7 @@
 		margin-bottom: 10px;
 		padding-right: 90px;
 		line-height: 1.4;
+		font-family: Tahoma;
 		&.open {
 			white-space: normal;
 			padding-bottom: 15px;
@@ -1468,6 +1477,7 @@
 			white-space: nowrap;
 	        text-overflow: ellipsis;
 	        overflow: hidden;
+			font-family: Tahoma;
 		}
 	}
 	&_info {
@@ -1477,6 +1487,7 @@
 		margin-right: 10px !important;
 		float: left;
 		color: $main-color;
+		font-family: Tahoma;
 		i {
 			vertical-align: middle;
 			margin-left: 10px;
@@ -1982,6 +1993,16 @@
 			width: 16px;
 			display: block;
 			background: image-url('angel-right.png') no-repeat left center #fff;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 2px;
+				height: 100%;
+				left: -1px;
+				top: 0;
+				background-color: #fff;
+			}
 		}
 	}
 }
@@ -2447,9 +2468,11 @@
 .simple__grid {
 	max-width: 1180px;
 	// width: 100%;
-	// margin: auto;
+	margin: auto;
 	// overflow: auto;
+	padding-bottom: 15px;
 	white-space: nowrap;
+	// margin-left: -40px;
 	@include flex-flow(row nowrap);
 	@include justify-content(flex-start);
 	.grid__wrapper {
@@ -2463,7 +2486,12 @@
 		}
 	}
 	&_wrap {
-		height: 320px;
+		// height: 320px;
+		&+.scroll-element.scroll-x {
+			left: 10px;
+			width: initial;
+			right: 0;
+		}
 	}
 	&_text {
 		padding: 20px 16px;
@@ -2581,6 +2609,13 @@
 	background: url('../img/404-bg.jpg') no-repeat center center;
 	background-size: cover;
 	// background: linear-gradient(to right, #FEF3D1, #DBF3F3);
+	.header__search {
+		border: 1px solid #d1d1d1;
+		margin-top: 15px;
+		margin-left: 0;
+		margin-right: 0;
+		background-color: transparent !important;
+	}
 	&_area {
 		position: relative;
 		padding: 0 240px;
@@ -3817,7 +3852,7 @@
 			background-size: 15px 14px;
 			@include border-radius(50%);
 			&:hover,
-			&:active,
+			&:focus,
 			&.active {
 				background: #fff url('../img/heart-red.svg') no-repeat center center;
 				background-size: 15px 14px;
@@ -3892,7 +3927,7 @@
 	@media (max-width: 479px) {
 		.category__box_grid {
 			.grid__wrapper {		
-				@include flex-basis(50%);
+				@include flex-basis(49.8%);
 			}
 		}
 		// .columns__list {
@@ -3929,12 +3964,16 @@
 		background-color: $muted-color;
 		@include border-radius(6px);
 		&:hover,
-		&:active,
 		&.active {
 			text-decoration: none;
 			color: #fff;
 			background-color: $primary-color;
 		}
+		// &.active {
+		// 	text-decoration: none;
+		// 	color: #fff;
+		// 	background-color: $primary-color;
+		// }
 	}
 	@media (max-width: 767px) {
 		margin: 0;
@@ -3981,10 +4020,11 @@
 		padding: 5px 2px;
 		color: $main-color;
 		&:hover {
-			color: #767676;
+			// color: #767676;
 			text-decoration: none;
 		}
-		&.active {
+		&.active,
+		&:hover {
 			border-bottom: 2px solid $warning-color;
 		}                                                       
 	}
@@ -4139,16 +4179,17 @@
 				cursor: pointer;
 				background: url('../img/heart.svg') no-repeat;
 				background-size: 15px 14px;
-				&:hover {
+				&:hover,
+				&.active {
 					background: url('../img/heart-red.svg') no-repeat;
 					background-size: 15px 14px;
 				}
 			}
-			&.active {
-				.grid__item_like {
-					background: url('../img/heart-red.png') no-repeat;
-				}
-			}
+			// &.active {
+			// 	.grid__item_like {
+			// 		background: url('../img/heart-red.png') no-repeat;
+			// 	}
+			// }
 			&_rate {
 				position: absolute;
 				bottom: 12px;
@@ -4165,12 +4206,12 @@
 			&_stars {
 				width: 75px;
 				height: 15px;
-				background: url('../img/star-white.svg') repeat-x;
+				background: url('../img/rate-star-empty.svg') repeat-x;
 				background-size: 15px 15px;
 				&_full {
 					width: 0;
 					height: 100%;
-					background: url('../img/star-red.svg') repeat-x;
+					background: url('../img/rate-star-full.svg') repeat-x;
 					background-size: 15px 15px;
 				}
 			} 
@@ -4443,7 +4484,7 @@
 .all-promocodes {
 	.main__content {
 		position: relative;
-		padding-bottom: 0;
+		// padding-bottom: 0;
 		&_center {
 			padding-top: 27px;
 		}
@@ -4697,8 +4738,13 @@
 		margin-bottom: 10px;
 		@include justify-content(flex-start);
 	}
-	.grid__wrapper {
-		@include flex-basis(14.285%);
+	.category__box_grid {
+		.grid__wrapper {
+			@include flex-basis(14.285%);
+		}
+	}
+	.section__title {
+		font-size: 23px;
 	}
 	@media (max-width: 1280px) {
 		.category__box_grid {
@@ -4771,6 +4817,7 @@
 .office__top {
 	height: 91px;
 	@include flexbox();
+	// @include flex-flow(row nowrap);
 	@include justify-content(space-between);
 	// @extend %clear_all;
 	&_left {
@@ -4780,11 +4827,13 @@
 		// margin-right: 45px;
 		// float: left;
 		@include flexbox();
+		// @include flex-flow(row nowrap);
 		@include justify-content(space-between);
 		@include align-items(center);
 	}
 	&_user {
 		@include flexbox();
+		// @include flex-flow(row nowrap);
 		@include justify-content(flex-start);
 		@include align-items(center);
 		&_img {
@@ -5084,11 +5133,14 @@
 		}
 	}
 	&__winners {
-		height: 352px;
-		margin-bottom: 7px;
-		overflow: auto;
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
+		// max-height: 352px;
+		&_wrap {
+			overflow: hidden;
+			height: 352px;
+			margin-bottom: 7px;
+		}
 		&_title {
 			padding: 9px 10px;
 			border-bottom: 1px solid #d1d1d1;
@@ -6930,6 +6982,7 @@
 
 // end office__raffle
 // end office__shops_coupons
+<<<<<<< HEAD
 
 
 // begin office__raffle
@@ -6969,3 +7022,5 @@
 .checkbox__input:checked + .checkbox__label:after {
 		top: 0px;
 }
+=======
+>>>>>>> 3916605a36af39fbe10f4c7d43da137fd544ab9a
