@@ -4831,6 +4831,7 @@
 .office__top {
 	height: 91px;
 	@include flexbox();
+	// @include flex-flow(row nowrap);
 	@include justify-content(space-between);
 	// @extend %clear_all;
 	&_left {
@@ -4840,11 +4841,13 @@
 		// margin-right: 45px;
 		// float: left;
 		@include flexbox();
+		// @include flex-flow(row nowrap);
 		@include justify-content(space-between);
 		@include align-items(center);
 	}
 	&_user {
 		@include flexbox();
+		// @include flex-flow(row nowrap);
 		@include justify-content(flex-start);
 		@include align-items(center);
 		&_img {

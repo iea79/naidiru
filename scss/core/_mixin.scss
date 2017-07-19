@@ -69,7 +69,7 @@
 	line-height: 0;
 	letter-spacing: -1px;
 	&>* {
-		display: -moz-inline-stack!important;
+		// display: -moz-inline-stack!important;
 		display: inline-block;
 		vertical-align: top;
 		letter-spacing:normal;
