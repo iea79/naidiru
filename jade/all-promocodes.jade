@@ -76,30 +76,31 @@ block content
 			.sidebar__section
 				.sidebar__section_name Тип промокода:
 					form.promocode__type_form(action="#")
-						.promocode__type_row
-							input(type="checkbox" id="pt1")
-							label.promocode__type_label(for="pt1") Горящий
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt1")
+							label.checkbox__label(for="pt1") Горящий
 								span.promocode__type_number (12)
-						.promocode__type_row
-							input(type="checkbox" id="pt2")
-							label.promocode__type_label(for="pt2") Новый
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt2")
+							label.checkbox__label(for="pt2") Новый
 								span.promocode__type_number (2)
-						.promocode__type_row
-							input(type="checkbox" id="pt3")
-							label.promocode__type_label(for="pt3") Истекает
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt3")
+							label.checkbox__label(for="pt3") Истекает
 								span.promocode__type_number (3)
-						.promocode__type_row
-							input(type="checkbox" id="pt4")
-							label.promocode__type_label(for="pt4") % скидки
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt4")
+							label.checkbox__label(for="pt4") % скидки
 								span.promocode__type_number (4)
-						.promocode__type_row
-							input(type="checkbox" id="pt5")
-							label.promocode__type_label(for="pt5") Подарок
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt5")
+							label.checkbox__label(for="pt5") Подарок
 								span.promocode__type_number (2)
-						.promocode__type_row
-							input(type="checkbox" id="pt6")
-							label.promocode__type_label(for="pt6") Бесплатная <br>доставка
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt6")
+							label.checkbox__label(for="pt6") Бесплатная <br>доставка
 								span.promocode__type_number (1)
+
 			.sidebar__section
 				.sidebar__section_name Популярные магазины
 				.sidebar__section_list
@@ -268,7 +269,7 @@ block content
 
 				.sale__list_ad
 					.sale__list_ad_left
-						img(src="img/gift.png", alt="#")
+						img(src="img/gift.svg", alt="#")
 					.sale__list_ad_center
 						.sale__list_ad_title Не пропустите ни одной супер-скидки!
 						.sale__list_ad_terms

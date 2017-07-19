@@ -1428,6 +1428,7 @@
 	}
 	&_deadline {
 		margin-bottom: 6px;
+		font-family: Tahoma;
 		i {
 			display: inline-block;
 			vertical-align: middle;
@@ -1437,6 +1438,7 @@
 	&_terms {
 		position: relative;
 		overflow: hidden;
+		font-family: Tahoma;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		margin-bottom: 10px;
@@ -1458,6 +1460,7 @@
 		bottom: 0;
 	}
 	&_bottom {
+		font-family: Tahoma;
 		@extend %clear_a;
 		a {
 			padding-top: 11px;
@@ -3985,20 +3988,9 @@
 			border-bottom: 2px solid $warning-color;
 		}                                                       
 	}
-	&_checkbox {
+	.checkbox {
 		float: right;
-		input[type="checkbox"] {
-			width: 17px;
-			height: 17px;
-			margin-right: 8px;
-			background-color: #fff;
-			border: 1px solid #9d9d9d;
-			@include border-radius(3px);
-			&:before {
-				padding-top: 2px;
-			}
-		}
-		label {
+		&__label {
 			padding-right: 20px;
 		}
 	}
@@ -4012,7 +4004,7 @@
 			float: none;
 			margin-bottom: 15px;
 		}
-		&_checkbox {
+		.checkbox {
 			float: none;
 		}
 	}
@@ -4038,7 +4030,7 @@
 			margin-bottom: 15px;
 			text-align: center;
 		}
-		&_checkbox {
+		.checkbox {
 			text-align: center;
 		}
 	}
@@ -4430,22 +4422,6 @@
 		&:first-child {
 			margin-top: 16px;
 		}
-		input[type="checkbox"] {
-			width: 17px;
-			height: 17px;
-			margin-right: 12px;
-			margin-top: -1px;
-			background-color: #fff;
-			border: 1px solid #9d9d9d;
-			@include border-radius(3px);
-			&:before {
-				padding-top: 2px;
-			}
-		}
-	}
-	&_label {
-		font-size: 14px;
-		line-height: 1.25;
 	}
 	&_number {
 		margin-left: 5px;
@@ -4548,6 +4524,11 @@
 		padding-top: 7px;
 		float: left;
 		margin-right: 33px;
+		img {
+			width: 61px;
+			height: 67px;
+			display: block;
+		}
 	}
 	&_center {
 		overflow: hidden;
@@ -4627,6 +4608,7 @@
 	}
 	.section__title {
 		padding: 0;
+		font-size: 23px;
 		text-align: left;
 		.btn {
 			right: 0;
@@ -4696,6 +4678,11 @@
 					width: 160px !important;
 				}
 			}
+		}
+	}
+	@media (max-width: 767px) {
+		.section__title {
+			font-size: 18px;
 		}
 	}
 
@@ -5932,18 +5919,21 @@
 		}
 		&_mark {
 			position: absolute;
-			top: 0;	
-			right: 8px;
-			color: #fff;
-			opacity: 0.6;
-			font-size: 30px;
+			top: 13px;	
+			right: 11px;
+			width: 21px;
+			height: 15px;
+			// color: #fff;
+			// opacity: 0.6;
+			// font-size: 30px;
 			cursor: default;
-			&:hover {
-				text-decoration: none;
-			}
+			background: url('../img/news-mark.svg') no-repeat;
+			background-size: 21px 15px;
 			&:hover,
-			&:active {
-				opacity: 1;
+			&:active,
+			&.active {
+				background: url('../img/news-mark-white.svg') no-repeat;
+				background-size: 21px 15px;
 			}
 		}
 		&.marked {
@@ -6665,22 +6655,8 @@
 	&_checkbox {
 		margin-bottom: 18px;
 		@extend %clear_a;
-		input[type="checkbox"] {
-			width: 17px;
-			height: 17px;
-			float: left;
-			margin-right: 10px;
-			margin-top: -1px;
-			display: block;
-			background-color: #fff;
-			border: 1px solid #9d9d9d;
-			@include border-radius(3px);
-			&:before {
-				padding-top: 2px;
-			}
-		}
 	}
-	&_label {
+	.checkbox__label {
 		padding-right: 15px;
 		display: block;
 		overflow: hidden;
@@ -6980,4 +6956,16 @@
 // begin office__raffle
 .scroll-element {
 		display: none;
+}
+
+
+
+
+// end office__raffle
+// end office__shops_coupons
+
+
+// begin office__raffle
+.checkbox__input:checked + .checkbox__label:after {
+		top: 0px;
 }

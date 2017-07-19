@@ -235,4 +235,40 @@ select {
 }
 
 
-
+// Чекбокс
+.checkbox {
+    &__input {
+        display: none !important;
+    }
+    &__label {
+        position: relative; 
+        height: 17px;
+        padding-left: 30px;
+        display: inline-block;
+        font-size: 14px;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 15px;
+            height: 15px;
+            display: inline-block;
+            cursor: pointer;
+            background-color: #fff;
+            border: 1px solid #9d9d9d;
+            @include border-radius(3px);
+        }
+    }
+    &__input:checked + .checkbox__label:after {
+        content: url('../img/mark.svg');
+        position: absolute;
+        top: 0;
+        left: 2px;
+        z-index: 10;
+        width: 12px;
+        height: 9px;
+        display: inline-block;
+    }
+}
+// Конец чекбокса
