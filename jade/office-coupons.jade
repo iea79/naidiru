@@ -4,18 +4,21 @@ block variables
 	- bodyClass = "office"
 
 block title
-	title Личный кабинет - Главная
+	title Личный кабинет - Сохраненные купоны                 
 
 block content
-	.white__line
+	.white__line.sm
 		.container_center
+
 
 			// begin breadcrumb
 			.breadcrumb.ind
 				li
 					a(href="/") Главная
 				li
-					a(href="#") Личный кабинет
+					a(href="office.html") Личный кабинет
+				li
+					a(href="#") Сохраненные купоны
 			// end breadcrumb
 
 
@@ -48,7 +51,7 @@ block content
 						.sm_social_icon
 							.ya-share2(data-services="twitter")
 					.office__top_right_links
-						a.office__top_right_link(href="office-coupons.html") Сохраненные<br>купоны
+						a.office__top_right_link(href="#") Сохраненные<br>купоны
 						a.office__top_right_link(href="office-shops.html") Любимые<br>магазины
 			// end office__top
 
@@ -62,7 +65,7 @@ block content
 			.sidebar__section
 				.office__menu
 					.office__item
-						a.office__link.active(href="#") Ваши лотереи и покупки
+						a.office__link(href="office.html") Ваши лотереи и покупки
 					.office__item
 						a.office__link(href="office-news.html") Написать нам + новости
 					.office__item
@@ -244,178 +247,144 @@ block content
 		// begin main__content_center 
 		.main__content_center
 
-			// begin office__lotteries
-			.office__lotteries
-				.office__lotteries_name Ваши лотерейные билеты
-					a.office__lotteries_how(href="#") Как участвовать в лотерее?
-				.office__lotteries_list
-					.office__lotteries_item
-						.office__lotteries_p &lowast; &lowast; &lowast;
-						.office__lotteries_p Розыгрыш состоиться:
-						.office__lotteries_p 05
-						.office__lotteries_p марта
-						.office__lotteries_p Лотерейный билет:
-						.lottery-number # A17_05768/321
-					.office__lotteries_item
-						.office__lotteries_p &lowast; &lowast; &lowast;
-						.office__lotteries_p Розыгрыш состоиться:
-						.office__lotteries_p 05
-						.office__lotteries_p марта
-						.office__lotteries_p Лотерейный билет:
-						.lottery-number # A17_05768/321
-					.office__lotteries_item
-						.office__lotteries_p &lowast; &lowast; &lowast;
-						.office__lotteries_p Розыгрыш состоиться:
-						.office__lotteries_p 05
-						.office__lotteries_p марта
-						.office__lotteries_p Лотерейный билет:
-						.lottery-number # A17_05768/321
-					.office__lotteries_item.office__lotteries_last
-						.office__lotteries_last_p Делайте покупки и меняйте чеки на лотереи
-						.office__lotteries_last_p Получите лотерею прямо сейчас, нажав на кнопку ниже &darr;
-						button.btn.btn__danger Получить лотерею
-						a.help(href="#") ?
-			// end office__lotteries
+			h1.star Сохраненные купоны
+
+			// begin office__shops_top
+			.office__shops_top.coupon
+				.office__shops_top_text Если Вы не хотите больше видеть тот или иной промокод, Вы можете его удалить с этой страницы, просто снова нажав на звездочку.
+			// end office__shops_top
 
 
-			// begin office__ad
-			.office__ad
-				img.office__ad_right(src="img/office-ad-img.jpg", alt="#")
-				.office__ad_left
-					.office__ad_p Участвуйте в 6 ежемесячном розыгрыше (Апрель)
-					.office__ad_p Итоги будут подведены: <br>
-						span.office__ad_large 05 апреля
-					p Меняйте баллы на лотереи прямо сейчас, чтобы участвовать в этом розыгрыше. Узнайте, какой подарок можете получить Вы за участие в этом розыгрыше.
-					button.btn.btn__danger Узнать о подарках<br>этого месяца
-			// end office__ad
-			
+			// begin office__shops_coupons
+			.office__shops_coupons.coupon
+				.sale__list.js_more_wrap
+					
+					// Row 1
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							a.sale__list_img(href="#")
+								img(src="img/sale-list4.png", alt="#")
+							.btn.btn__success Новый
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#").btn.btn__primary.code__btn Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия акции: Условия акции: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон, участвуй в розыгрыше!
+									i.icon__question
+								a(href="#") Все промокоды Bon prix
+					
+					// Row 2
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							a.sale__list_img(href="#")
+								img(src="img/sale-list6.png", alt="#")
+							.btn.btn__expires Истекает
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#").btn.btn__primary.code__btn Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия акции: Условия акции: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон, участвуй в розыгрыше!
+									i.icon__question
+								a(href="#") Все промокоды Bon prix
 
-			// begin office__history
-			.office__history
-				.office__history_name История Ваших покупок
-					span.office__history_note Если вы не видите свою покупку, <br>
-						a.office__history_link(href="#") напишите нам!
-				.office__history_stat_wrap
-					.office__history_stat.scrolled__box
-						.office__history_left
-							.office__history_table
-								.office__history_tr
-									.office__history_th Интернет-магазин
-									.office__history_th Дата покупки
-									.office__history_th № заказа
-									.office__history_th Сумма         
-									.office__history_th Статус
-								.office__history_tr
-									.office__history_td Снежная королева
-									.office__history_td 23.05.2017
-									.office__history_td Rfeh152121fedf4
-									.office__history_td 20 120 р.
-									.office__history_td Не подтвержден
-								.office__history_tr
-									.office__history_td Lamoda
-									.office__history_td 05.08.2017
-									.office__history_td 52212252
-									.office__history_td 1 045 р.
-									.office__history_td Не подтвержден
-								.office__history_tr
-									.office__history_td Media Markt
-									.office__history_td 18.08.2017
-									.office__history_td KGF521GH581F
-									.office__history_td 132 648 р.
-									.office__history_td Не подтвержден
+					// Row 3
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							a.sale__list_img(href="#")
+								img(src="img/sale-list4.png", alt="#")
+							.btn.btn__success Новый
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#").btn.btn__primary.code__btn Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия акции: Условия акции: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон, участвуй в розыгрыше!
+									i.icon__question
+								a(href="#") Все промокоды Bon prix
+					
+					// Row 4
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							a.sale__list_img(href="#")
+								img(src="img/sale-list6.png", alt="#")
+							.btn.btn__expires Истекает
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#").btn.btn__primary.code__btn Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия акции: Условия акции: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон, участвуй в розыгрыше!
+									i.icon__question
+								a(href="#") Все промокоды Bon prix
 
-							.office__history_confirmed
-								.office__history_confirmed_name Подтвержденные покупки
-								.office__history_table
-									.office__history_tr
-										.office__history_td MyToys
-										.office__history_td 12.03.2017
-										.office__history_td Gj52257_4452
-										.office__history_td 132 648 р.
-										.office__history_td Подтвержден
-							a.office__history_confirmed_hide(href="#")
-						.office__history_right
-							.office__history_right_text Чтобы получить лотерею, нужно подвердить покупку чеком
-							button.confirm__btn.btn.btn__danger
-								.confirm__btn_trigon
-							button.confirm__btn.btn.btn__danger
-								.confirm__btn_trigon
-							button.confirm__btn.btn.btn__danger.active
-								.confirm__btn_trigon
-			// end office__history
-
-
-			// begin office_checks
-			.office__checks
-				.office__checks_name Ваши чеки
-				.office__checks_list
-					.office__checks_item
-						.office__checks_img
-							img(src="img/check1.jpg", alt="#")
-						.office__checks_info
-							p № заказа:
-							p.order__number KGF521GH581F
-						button.btn.office__checks_edit_btn
-						.office__checks_edit_hide
-							a.office__checks_edit_hide_btn(href="#") Удалить чек
-							a.office__checks_edit_hide_btn(href="#") Редактировать
-					.office__checks_item.confirmed
-						.office__checks_img
-							img(src="img/check2.jpg", alt="#")
-						.office__checks_info
-							p № заказа:
-							p.order__number Gj52257_4452
-					.office__checks_item.deleted
-						.office__checks_img
-							img(src="img/check3.jpg", alt="#")
-						.office__checks_info
-							p № заказа:
-							p.order__number Gj52257_4452        
-					.office__checks_item.confirmed
-						.office__checks_img
-							img(src="img/check2.jpg", alt="#")
-						.office__checks_info
-							p № заказа:
-							p.order__number Gj52257_4452
-					.office__checks_item.deleted
-						.office__checks_img
-							img(src="img/check3.jpg", alt="#")
-						.office__checks_info
-							p № заказа:
-							p.order__number Gj52257_4452
-				a.office__checks_show(href="#") + Показать все Вами добавленные чеки
-			// end office_checks
+			// end office__shops_coupons
 
 
 			.line
 
 
 			// begin office__raffle
-			.office__raffle
-				.office__raffle_name Условия ежемесячных розыгрышей “Лотерея призов” + 
-					span нужны здесь примеры в картинках
+			.office__raffle.coupon
+				.office__raffle_name Как использовать промокод?
+					span + нужны здесь примеры в картинках
 
-				.office__raffle_p Каждый месяц на сайте проходят розыгрыши, для того, чтобы участвовать, нужно:
+				.office__raffle_p Другой текст: Каждый месяц на сайте проходят розыгрыши, для того, чтобы участвовать, нужно:
 				.office__raffle_p 1) Перейти в интернет-магазин через сайт Найди.ру<br>2) Совершить покупку на сумму от 5000 рублей или постепенно набрать товары, которые суммой 5000 рублей<br>3) Отправить нам чек, для подверждения покупки, чтобы мы засчитали сумму покупки и зачислили вам баллы (1 рубль - 1 баллу)<br>4) Поменять накомленные баллы на лотерею
 				.office__raffle_p Покупайте и участвуйте в ежемесячных лотереях! 
-					a(href="#") Подробнее о лотерее
+					a(href="#") Подробнее о том, как использовать промокод
 			// end office__raffle
 
 
-			.line
 
-
-			// begin office__attention
-			.office__attention
-				.office__attention_left
-					.office__attention_left_img !
-				.office__attention_right
-					.office__attention_name ОБРАТИТЕ ВНИМАНИЕ:
-					.office__attention_p - При покупке в мобильных приложений магазинов покупка будет не засчитена.
-					.office__attention_p - AdBlock и т.д. и т.п. текст мы подготовим ...
-					.office__attention_p - Ознакомьтесь подробнее с 
-						a(href="#") правилами покупок
-						, чтобы покупки засчитывались.
-			// end office__attention
 
 		// end main__content_center

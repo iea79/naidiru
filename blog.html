@@ -12,7 +12,7 @@
     <script src="//yastatic.net/share2/share.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/jquery.mousewheel.js"></script>
-    <script src="js/jquery.jscrollpane.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/tooltipster.bundle.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
@@ -128,7 +128,7 @@
             <div class="sidebar__section">
               <div class="sidebar__section_name">Найдите купон на нужный товар</div>
               <!-- begin sidebar__coupon-->
-              <div class="sidebar__coupon"><a href="all-categories.html" class="sidebar__coupon_link"></a>
+              <div class="sidebar__coupon"><a href="all-categories.html" target="_blank" class="sidebar__coupon_link"></a>
                 <div class="sidebar__coupon_list">
                   <div class="grid grid__2 category__box_grid">
                     <div class="grid__wrapper"><a href="#" class="grid__item"><img src="img/cat1.png" alt="#"/>
@@ -200,24 +200,24 @@
           
           -->
           <!-- begin main__content_center-->
-          <div class="main__content_center">
+          <div class="main__content_center js-more-wrapper">
             <div class="b__hashtag center">
               <div class="b__hashtag_list"><a href="#" class="b__hashtag_item ib">Мода</a><a href="#" class="b__hashtag_item ib">Победители_лотереи</a><a href="#" class="b__hashtag_item ib">Подборки_с_Алиэкспресс</a><a href="#" class="b__hashtag_item ib">Шоппинг</a><a href="#" class="b__hashtag_item ib">Подборки_образов</a></div>
-              <button class="b__hashtag_more btn btn__primary">+ Показать больше</button>
+              <button data-text-open="+ Показать больше" data-text-close="- Скрыть разделы" class="b__hashtag_more btn btn__primary js-more-link">+ Показать больше</button>
             </div>
             <h1 class="ind">Самые популярные статьи</h1>
             <div class="b__article">
               <div class="b__article_item"><a class="b__article_img"><img src="img/b-article-img1.jpg" alt="#"/></a>
                 <div class="b__article_info">
-                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста</div>
+                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста<a href="#" class="b__article_icon"></a></div>
                   <div class="b__article_text">Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...</div>
                   <div class="b__article_p mb_30"><span class="date">20 марта 2017</span><a class="category">техника</a></div>
-                  <div class="b__article_comments"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>
+                  <div class="b__article_comments"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="_b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>
                 </div>
               </div>
               <div class="b__article_item"><a class="b__article_img"><img src="img/b-article-img2.jpg" alt="#"/></a>
                 <div class="b__article_info">
-                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста</div>
+                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста<a href="#" class="b__article_icon"></a></div>
                   <div class="b__article_text">Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...</div>
                   <div class="b__article_p mb_30"><span class="date">20 марта 2017</span><a class="category">техника</a></div>
                   <div class="b__article_comments"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>
@@ -225,7 +225,7 @@
               </div>
               <div class="b__article_item"><a class="b__article_img"><img src="img/b-article-img3.jpg" alt="#"/></a>
                 <div class="b__article_info">
-                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста</div>
+                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста<a href="#" class="b__article_icon"></a></div>
                   <div class="b__article_text">Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...</div>
                   <div class="b__article_p mb_30"><span class="date">20 марта 2017</span><a class="category">техника</a></div>
                   <div class="b__article_comments"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>
@@ -233,7 +233,7 @@
               </div>
               <div class="b__article_ad"><img src="img/hero.png" alt="#" class="b__article_ad_img"/><img src="img/hero3.png" alt="#" class="b__article_ad_mobil"/>
                 <div class="b__article_ad_info">
-                  <h2 class="mb_10">Экономьте по полной + подарок каждый месяц!</h2>
+                  <h2 class="mb_10">Экономьте по полной <span>+ подарок каждый месяц!</span></h2>
                   <div class="b__article_ad_text">Зарегистрируйтесь и узнавайте первым о лучших купонах.</div>
                   <div class="b__article_ad_text txt__danger">+ Участвуйте в ежемесячных розыгрышах и получите шанс выиграть подарок мечты!</div>
                   <div class="b__article_ad_in"><a href="#" class="btn btn__danger">Зарегистрироваться</a>
@@ -244,7 +244,7 @@
               <div class="b__article_hero">Это Шоппел - супергерой Найди.ру. Она помогает экономить тысячам людям по всей России. Каждый день, она находить супер-купоны и рассылает их своим подписчикам. Будьте с ней всегда на связи, зарегистрируйтесь!</div>
               <div class="b__article_item"><a class="b__article_img"><img src="img/b-article-img4.jpg" alt="#"/></a>
                 <div class="b__article_info">
-                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста</div>
+                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста<a href="#" class="b__article_icon"></a></div>
                   <div class="b__article_text">Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...</div>
                   <div class="b__article_p mb_30"><span class="date">20 марта 2017</span><a class="category">техника</a></div>
                   <div class="b__article_comments dn"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>
@@ -252,7 +252,7 @@
               </div>
               <div class="b__article_item"><a class="b__article_img"><img src="img/b-article-img3.jpg" alt="#"/></a>
                 <div class="b__article_info">
-                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста</div>
+                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста<a href="#" class="b__article_icon"></a></div>
                   <div class="b__article_text">Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...</div>
                   <div class="b__article_p mb_30"><span class="date">20 марта 2017</span><a class="category">техника</a></div>
                   <div class="b__article_comments"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>
@@ -260,7 +260,7 @@
               </div>
               <div class="b__article_item"><a class="b__article_img"><img src="img/b-article-img5.jpg" alt="#"/></a>
                 <div class="b__article_info">
-                  <div id="name" class="b__article_">Какой телевизор лучше выбрать. Мнение опытного специалиста</div>
+                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста<a href="#" class="b__article_icon"></a></div>
                   <div class="b__article_text">Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...</div>
                   <div class="b__article_p mb_30"><span class="date">20 марта 2017</span><a class="category">техника</a></div>
                   <div class="b__article_comments"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>
@@ -268,7 +268,7 @@
               </div>
               <div class="b__article_item"><a class="b__article_img"><img src="img/b-article-img1.jpg" alt="#"/></a>
                 <div class="b__article_info">
-                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста</div>
+                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста<a href="#" class="b__article_icon"></a></div>
                   <div class="b__article_text">Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...</div>
                   <div class="b__article_p mb_30"><span class="date">20 марта 2017</span><a class="category">техника</a></div>
                   <div class="b__article_comments"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>
@@ -276,7 +276,7 @@
               </div>
               <div class="b__article_item"><a class="b__article_img"><img src="img/b-article-img2.jpg" alt="#"/></a>
                 <div class="b__article_info">
-                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста</div>
+                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста<a href="#" class="b__article_icon"></a></div>
                   <div class="b__article_text">Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...</div>
                   <div class="b__article_p mb_30"><span class="date">20 марта 2017</span><a class="category">техника</a></div>
                   <div class="b__article_comments"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>
@@ -284,7 +284,7 @@
               </div>
               <div class="b__article_item"><a class="b__article_img"><img src="img/b-article-img3.jpg" alt="#"/></a>
                 <div class="b__article_info">
-                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста</div>
+                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста<a href="#" class="b__article_icon"></a></div>
                   <div class="b__article_text">Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...</div>
                   <div class="b__article_p mb_30"><span class="date">20 марта 2017</span><a class="category">техника</a></div>
                   <div class="b__article_comments"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>
@@ -292,7 +292,7 @@
               </div>
               <div class="b__article_item"><a class="b__article_img"><img src="img/b-article-img5.jpg" alt="#"/></a>
                 <div class="b__article_info">
-                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста</div>
+                  <div class="b__article_name">Какой телевизор лучше выбрать. Мнение опытного специалиста<a href="#" class="b__article_icon"></a></div>
                   <div class="b__article_text">Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...</div>
                   <div class="b__article_p mb_30"><span class="date">20 марта 2017</span><a class="category">техника</a></div>
                   <div class="b__article_comments"><img src="img/comment.png" alt="#" class="b__article_comments_img"/><a href="#" class="b__article_comments_link"><span class="comments">25 </span>комментариев</a></div><a class="b__article_more">Читать сейчас &gt;</a>

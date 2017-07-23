@@ -98,7 +98,7 @@ input[type=radio]:checked:before {
 
 input[type=checkbox]:checked:before,
 input[type=checkbox]:indeterminate:before {
-    content: "\2714";
+    content: image-url('checked.svg');
     font-size: 12px;
     -webkit-font-smoothing: antialiased;
     text-align: center;
@@ -198,10 +198,12 @@ select {
 
 .jq-selectbox {
     position: relative;
-    width: 100%;
-    padding: 9px 10px;
     display: block;
-    border: 1px solid $input_border_color;
+    &__select {
+        width: 100%;
+        border: 1px solid $input_border_color;
+        padding: 9px 10px;        
+    }
     &__trigger {
         position: absolute;
         top: 5px;
@@ -212,6 +214,7 @@ select {
     }
     &__dropdown { 
         background: #fff;
+        width: 100%;
         border: 1px solid $input_border_color;
         ul {
             left: 0;
@@ -230,3 +233,6 @@ select {
         }
     }
 }
+
+
+

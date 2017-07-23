@@ -95,7 +95,8 @@ block content
 			.sale__list_row.js_more_item
 				a(href="#").sale__list_mob-link
 				.sale__list_left
-					img(src="img/sale-list1.png", alt="")
+					a.sale__list_img(href="#")
+						img(src="img/sale-list1.png", alt="#")
 					.btn.btn__success Новый
 				.sale__list_right
 					a(href="#").sale__list_save Сохранить
@@ -104,7 +105,7 @@ block content
 						a(href="#").btn.btn__primary.code__btn Показать код
 					| Использовано: 1283 раза
 				.sale__list_center
-					.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
+					a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от известных брендов!
 					.sale__list_deadline
 						i.icon__time_end
 						| Заканчивается через 15 дней
@@ -121,7 +122,8 @@ block content
 			.sale__list_row.js_more_item
 				a(href="#").sale__list_mob-link
 				.sale__list_left
-					img(src="img/sale-list2.png", alt="")
+					a.sale__list_img(href="#")
+						img(src="img/sale-list2.png", alt="#")
 					.btn.btn__danger Горящий
 				.sale__list_right
 					a(href="#").sale__list_save.active Сохранить
@@ -130,7 +132,7 @@ block content
 					a(href="#").btn.btn__primary Открыть акцию
 					| Использовано: 1283 раза
 				.sale__list_center
-					.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
+					a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от известных брендов!
 					.sale__list_deadline
 						i.icon__time_end
 						| Заканчивается через 15 дней
@@ -147,7 +149,8 @@ block content
 			.sale__list_row.js_more_item
 				a(href="#").sale__list_mob-link
 				.sale__list_left
-					img(src="img/sale-list3.png", alt="")
+					a.sale__list_img(href="#")
+						img(src="img/sale-list3.png", alt="#")
 					.btn.btn__warning Бесплатная доставка
 				.sale__list_right
 					a(href="#").sale__list_save Сохранить
@@ -156,7 +159,7 @@ block content
 						a(href="#").btn.btn__primary.code__btn Показать код
 					| Использовано: 1283 раза
 				.sale__list_center
-					.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
+					a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от известных брендов!
 					.sale__list_deadline
 						i.icon__time_end
 						| Заканчивается через 15 дней
@@ -173,7 +176,8 @@ block content
 			.sale__list_row.js_more_item
 				a(href="#").sale__list_mob-link
 				.sale__list_left
-					img(src="img/sale-list4.png", alt="")
+					a.sale__list_img(href="#")
+						img(src="img/sale-list4.png", alt="#")
 					.btn.btn__warning Подарок
 				.sale__list_right
 					a(href="#").sale__list_save Сохранить
@@ -182,7 +186,7 @@ block content
 						a(href="#").btn.btn__primary.code__btn Показать код
 					| Использовано: 1283 раза
 				.sale__list_center
-					.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
+					a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от известных брендов!
 					.sale__list_deadline
 						i.icon__time_end
 						| Заканчивается через 15 дней
@@ -199,7 +203,8 @@ block content
 			.sale__list_row.js_more_item
 				a(href="#").sale__list_mob-link
 				.sale__list_left
-					img(src="img/sale-list5.png", alt="")
+					a.sale__list_img(href="#")
+						img(src="img/sale-list5.png", alt="#")
 					.btn.btn__warning -50% скидка
 				.sale__list_right
 					a(href="#").sale__list_save Сохранить
@@ -208,7 +213,7 @@ block content
 						a(href="#").btn.btn__primary.code__btn Показать код
 					| Использовано: 1283 раза
 				.sale__list_center
-					.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
+					a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от известных брендов!
 					.sale__list_deadline
 						i.icon__time_end
 						| Заканчивается через 15 дней
@@ -530,32 +535,33 @@ block content
 		.section__title Узнайте больше
 
 		// begin simple__grid
-		.grid.grid__5.simple__grid
-			// Item 1
-			.grid__wrapper
-				.grid__item
-					img(src="img/more1.png", alt="")
-					.simple__grid_text Как выбрать посудомоечную машину?
+		.scrollbar-inner.simple__grid_wrap
+			.grid.grid__5.simple__grid
+				// Item 1
+				.grid__wrapper
+					.grid__item
+						img(src="img/more1.png", alt="")
+						.simple__grid_text Как выбрать посудомоечную машину?
 
-			// Item 2
-			.grid__wrapper
-				.grid__item
-					img(src="img/more2.png", alt="")
-					.simple__grid_text Что подарить подруге?
-			// Item 3
-			.grid__wrapper
-				.grid__item
-					img(src="img/more3.png", alt="")
-					.simple__grid_text Топ-10 оригинальных светильников для дома
-			// Item 4
-			.grid__wrapper
-				.grid__item
-					img(src="img/more4.png", alt="")
-					.simple__grid_text Скидки до -50% на новую коллекцию одежду от s’Oliversale
-			// Item 5
-			.grid__wrapper
-				.grid__item
-					img(src="img/more5.png", alt="")
-					.simple__grid_text Распродажа в рекламном агенстве “Солнце”!
+				// Item 2
+				.grid__wrapper
+					.grid__item
+						img(src="img/more2.png", alt="")
+						.simple__grid_text Что подарить подруге?
+				// Item 3
+				.grid__wrapper
+					.grid__item
+						img(src="img/more3.png", alt="")
+						.simple__grid_text Топ-10 оригинальных светильников для дома
+				// Item 4
+				.grid__wrapper
+					.grid__item
+						img(src="img/more4.png", alt="")
+						.simple__grid_text Скидки до -50% на новую коллекцию одежду от s’Oliversale
+				// Item 5
+				.grid__wrapper
+					.grid__item
+						img(src="img/more5.png", alt="")
+						.simple__grid_text Распродажа в рекламном агенстве “Солнце”!
 		// end simple__grid
 
