@@ -1357,7 +1357,7 @@
 		}
 		&_title {
 			font-size: 22px;
-			margin-bottom: 10px;
+			margin-bottom: 7px;
 		}
 		&+.btn {
 			margin-top: 20px;
@@ -1426,7 +1426,7 @@
 		padding: 28px 26px 15px;
 	}
 	&_deadline {
-		margin-bottom: 6px;
+		margin-bottom: 4px;
 		i {
 			display: inline-block;
 			vertical-align: middle;
@@ -1463,9 +1463,9 @@
 	}
 	&_info {
 		background-color: $muted-color;
-		padding: 9px 15px 4px;
+		padding: 7px 13px 4px;
 		display: inline-block;
-		margin-right: 20px;
+		margin-right: 17px;
 		color: $main-color;
 		i {
 			vertical-align: middle;
