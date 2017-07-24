@@ -206,11 +206,14 @@ select {
     }
     &__trigger {
         position: absolute;
-        top: 5px;
-        right: -2px;
+        // top: 5px;
+        // right: -2px;
+        top: 14px;
+        right: 8px;        
         width: 8px;
         height: 7px;
-        background: url('../img/select-arrow.png') no-repeat 0 0;
+        background: url('../img/select-arrow.svg') no-repeat 0 0;
+        background-size: 8px 7px;
     }
     &__dropdown { 
         background: #fff;
@@ -226,12 +229,16 @@ select {
             &:last-child {
                 border-bottom: 0;
             }
-            &.sel.selected {
+            &.sel.selected,
+            &:hover {
                 color: #fff;
                 background-color: $primary-color;
             }
         }
     }
+}
+.scroll-element {
+        display: none;
 }
 
 

@@ -32,8 +32,26 @@
 		}
 	}
 	&__question {
+		cursor: pointer;
 		&:before {
 			content: image-url('icon-quest.svg');
+		}
+		&.big {
+			position: absolute;
+			width: 26px;
+			height: 26px;
+			display: block;
+			background: url('../img/icon-quest.svg') no-repeat;
+			background-size: 26px 26px;
+			&:before {
+				display: none;
+			}
+		}
+	}
+
+	&__sure {
+		&:before {
+			content: image-url('icon-sure.svg');
 		}
 	}
 

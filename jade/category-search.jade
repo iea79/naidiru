@@ -1,10 +1,10 @@
 extends template.jade
 
 block variables
-	- bodyClass = "all-promocodes"
+	- bodyClass = "category"
 
 block title
-	title Все промокоды
+	title Страница категории
 
 block content
 	.white__line
@@ -16,60 +16,145 @@ block content
 				li
 					a(href="/") Главная
 				li
-					a(href="#") Все скидки и промокоды
+					a(href="#") Результаты поиска по фразе “Холодильник”
 			// end breadcrumb
 
 
-			h1 Все-все самые лучшие скидки от Ваших любимых магазинов
+			// begin category__top
+			.category__top
+				.category__top_left
+					a.category__top_list1_trigger(href="#") Показать другие категории
+					.category__top_list1_wrap
+						.category__top_list1_name Другие категории
+						.category__top_list1
+							.category__top_item1
+								a.category__top_link1(href="#") Одежда
+								.category__top_list2
+									.category__top_item2
+										a.category__top_link2(href="#") Кухонные комбайны
+									.category__top_item2
+										a.category__top_link2(href="#") Смартфоны
+									.category__top_item2
+										a.category__top_link2(href="#") Пылесосы
+							.category__top_item1
+								a.category__top_link1.active(href="#") Бытовая техника
+								.category__top_list2
+									.category__top_item2
+										a.category__top_link2.active(href="#") Кухонные комбайны
+									.category__top_item2
+										a.category__top_link2(href="#") Смартфоны
+									.category__top_item2
+										a.category__top_link2(href="#") Пылесосы
+							.category__top_item1
+								a.category__top_link1(href="#") Детские товары
+								.category__top_list2
+									.category__top_item2
+										a.category__top_link2(href="#") Кухонные комбайны
+									.category__top_item2
+										a.category__top_link2(href="#") Смартфоны
+									.category__top_item2
+										a.category__top_link2(href="#") Пылесосы
+							.category__top_item1
+								a.category__top_link1(href="#") Товары для дома
+								.category__top_list2
+									.category__top_item2
+										a.category__top_link2(href="#") Кухонные комбайны
+									.category__top_item2
+										a.category__top_link2(href="#") Смартфоны
+									.category__top_item2
+										a.category__top_link2(href="#") Пылесосы
+						a.category__top_more(href="all-categories.html" target="_blank") Показать больше &gt;                  
+				.category__top_right
+					.category__slider_name Найдите скидку на нужный товар
+					// begin slider__grid
+					.slider.slider__grid.category__slider
+						// Slide 1
+						.category__slider_item
+							.category__slider_img
+								img(src="img/cat-sl1.jpg", alt="#")
+							.category__slider_info Кухонные комбайны
+							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
+							button.btn.category__slider_hellip
+							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+								a(href="#") Подробнее о лотерее &gt;
+						// Slide 2
+						.category__slider_item
+							.category__slider_img
+								img(src="img/cat-sl2.jpg", alt="#")
+							.category__slider_info 
+								span Все скидки на 
+								Телевизоры
+							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
+							button.btn.category__slider_hellip
+							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+								a(href="#") Подробнее о лотерее &gt;
+						// Slide 3
+						.category__slider_item
+							.category__slider_img
+								img(src="img/cat-sl3.jpg", alt="#")
+							.category__slider_info Samsung <br> 
+								span все скидки марки
+							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
+							button.btn.category__slider_hellip
+							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+								a(href="#") Подробнее о лотерее &gt;
+						// Slide 4
+						.category__slider_item
+							.category__slider_img
+								img(src="img/cat-sl4.jpg", alt="#")
+							.category__slider_info Кухонные комбайны
+							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
+							button.btn.category__slider_hellip
+							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+								a(href="#") Подробнее о лотерее &gt;
+						// Slide 5
+						.category__slider_item
+							.category__slider_img
+								img(src="img/cat-sl1.jpg", alt="#")
+							.category__slider_info Кухонные комбайны
+							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
+							button.btn.category__slider_hellip
+							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+								a(href="#") Подробнее о лотерее &gt;
+						// Slide 6
+						.category__slider_item
+							.category__slider_img
+								img(src="img/cat-sl2.jpg", alt="#")
+							.category__slider_info 
+								span Все скидки на 
+								Телевизоры
+							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
+							button.btn.category__slider_hellip
+							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+								a(href="#") Подробнее о лотерее &gt;
+						// Slide 7
+						.category__slider_item
+							.category__slider_img
+								img(src="img/cat-sl3.jpg", alt="#")
+							.category__slider_info Samsung <br> 
+								span все скидки марки
+							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
+							button.btn.category__slider_hellip
+							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+								a(href="#") Подробнее о лотерее &gt;
+						// Slide 8
+						.category__slider_item
+							.category__slider_img
+								img(src="img/cat-sl4.jpg", alt="#")
+							.category__slider_info Кухонные комбайны
+							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
+							button.btn.category__slider_hellip
+							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+								a(href="#") Подробнее о лотерее &gt;
+					// end slider__grid
 
-
-			// begin all-promocodes__top 
-			.all-promocodes__top
-				.all-promocodes__top_left
-					img(src="img/promo-img1.jpg", alt="#")
-					.all-promocodes__top_left_text Покупайте <br>и участвуйте <br>в ежемесячных <br>розыгрышах
-				.all-promocodes__top_center
-					// begin sidebar__coupon
-					.sidebar__coupon_list
-						.grid.grid__2.category__box_grid
-							.grid__wrapper
-								a.grid__item(href="#")
-									img(src="img/cat1.png", alt="")
-									p Смартфоны
-							.grid__wrapper
-								a.grid__item(href="#")
-									img(src="img/cat2.png", alt="")
-									p Одежда
-							.grid__wrapper
-								a.grid__item(href="#")
-									img(src="img/cat4.png", alt="")
-									p Смартфоны
-							.grid__wrapper
-								a.grid__item(href="#")
-									img(src="img/cat5.png", alt="")
-									p Смартфоны
-					// end sidebar__coupon
-				a.all-promocodes__top_right
-					img.all-promocodes__top_right_img(src="img/promo-img2.jpg", alt="#")
-					.all-promocodes__top_right_text Весенняя распродажа
-				.sm_social
-					.sm_social_icon
-						.ya-share2(data-services="vkontakte")
-					.sm_social_icon
-						.ya-share2(data-services="facebook")				
-					.sm_social_icon
-						.ya-share2(data-services="odnoklassniki")
-					.sm_social_icon
-						.ya-share2(data-services="gplus")
-					.sm_social_icon
-						.ya-share2(data-services="twitter")
-			// end all-promocodes__top
-
+			// end category__top
 
 	.container_center.main
 
 		.sale__list_reg Нужно:
 			a(href="#") войти или зарегистрироваться
+
 
 		// begin sidebar
 		.main__content_sidebar
@@ -105,10 +190,10 @@ block content
 							label.checkbox__label(for="pt6") Бесплатная <br>доставка
 								span.promocode__type_number (1)
 				.sidebar__section.js-more-wrapper
-					.sidebar__section_name Популярные магазины
+					.sidebar__section_name В каких магазинах можно купить:
 					.sidebar__section_list
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") М.видео
+							a.sidebar__section_list_link(href="#") Lamoda
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Снежная королева
 						.sidebar__section_list_item
@@ -117,44 +202,43 @@ block content
 							a.sidebar__section_list_link(href="#") Алиэкспресс
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Wildberries
-					a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины") + Показать больше
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Lamoda
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Снежная королева
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Nike
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Алиэкспресс
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Wildberries
 				.sidebar__section.js-more-wrapper
-					.sidebar__section_name Лучшие скидки
+					.sidebar__section_name Кухонные комбайны
 					.sidebar__section_p Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.
 					.sidebar__section_p Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши
 					a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть текст") + Показать больше
 				.sidebar__section.js-more-wrapper
-					.sidebar__section_name Найдите скидку на нужный товар:
+					.sidebar__section_name Популярные магазины
 					.sidebar__section_list
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Одежда
+							a.sidebar__section_list_link(href="#") Lamoda
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Обувь
+							a.sidebar__section_list_link(href="#") Снежная королева
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Аксессуары
+							a.sidebar__section_list_link(href="#") Nike
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Бытовая техника
+							a.sidebar__section_list_link(href="#") Алиэкспресс
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Электроника
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Детские товары и<br>Игрушки
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Спортивные товары
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Путешествия и<br>Развлечения
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Зоотовары
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Дом, мебель, сад
-					a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть категории") + Показать больше
+							a.sidebar__section_list_link(href="#") Wildberries
+					a.sidebar__section_more.js-more-link(href="all-shops.html" target="_blank") + Показать больше
 		// end sidebar
 
 
-		// begin main__content_center 
+		// begin main__content_center
 		.main__content_center
 
 			.sale__list_wrap
-				h3 Найдите лучшую скидку прямо сейчас
+				h3 Промокоды для кухонного комбайна
 
 				.sale__list_inform Количество промокодов:
 					span.sale__list_number 5
@@ -269,6 +353,7 @@ block content
 									|Используй купон, участвуй в розыгрыше!
 									i.icon__question
 								a(href="#") Все промокоды Bon prix
+				
 
 				.sale__list_ad
 					.sale__list_ad_left
@@ -287,6 +372,7 @@ block content
 					.sale__list_add_p.first Участвуйте в летнем 6 ежемесячном розыгрыше (Май).
 					.sale__list_add_p Совершайте покупки через нас, копите баллы и меняйте их на лотерейки. Выигрывайте подарки!
 					button.btn.btn__danger.sale__list_add_btn Участвовать
+
 				
 				.sale__list.js_more_wrap
 
@@ -606,6 +692,7 @@ block content
 			// end pagination
 			
 		// end main__content_center
+
 
 	.white__line
 		.container_center

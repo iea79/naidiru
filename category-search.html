@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>Все промокоды</title>
+    <title>Страница категории</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -18,7 +18,7 @@
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/function.js"></script>
   </head>
-  <body class="all-promocodes">
+  <body class="category">
     <div class="wrapper">
       <!-- begin header -->
       <header class="header">
@@ -91,53 +91,112 @@
             <!-- begin breadcrumb-->
             <div class="breadcrumb ind">
               <li><a href="/">Главная</a></li>
-              <li><a href="#">Все скидки и промокоды</a></li>
+              <li><a href="#">Результаты поиска по фразе “Холодильник”</a></li>
             </div>
             <!-- end breadcrumb-->
             
-            <h1>Все-все самые лучшие скидки от Ваших любимых магазинов</h1>
-            <!-- begin all-promocodes__top -->
-            <div class="all-promocodes__top">
-              <div class="all-promocodes__top_left"><img src="img/promo-img1.jpg" alt="#"/>
-                <div class="all-promocodes__top_left_text">Покупайте <br>и участвуйте <br>в ежемесячных <br>розыгрышах</div>
+            <!-- begin category__top-->
+            <div class="category__top">
+              <div class="category__top_left"><a href="#" class="category__top_list1_trigger">Показать другие категории</a>
+                <div class="category__top_list1_wrap">
+                  <div class="category__top_list1_name">Другие категории</div>
+                  <div class="category__top_list1">
+                    <div class="category__top_item1"><a href="#" class="category__top_link1">Одежда</a>
+                      <div class="category__top_list2">
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Кухонные комбайны</a></div>
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Смартфоны</a></div>
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Пылесосы</a></div>
+                      </div>
+                    </div>
+                    <div class="category__top_item1"><a href="#" class="category__top_link1 active">Бытовая техника</a>
+                      <div class="category__top_list2">
+                        <div class="category__top_item2"><a href="#" class="category__top_link2 active">Кухонные комбайны</a></div>
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Смартфоны</a></div>
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Пылесосы</a></div>
+                      </div>
+                    </div>
+                    <div class="category__top_item1"><a href="#" class="category__top_link1">Детские товары</a>
+                      <div class="category__top_list2">
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Кухонные комбайны</a></div>
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Смартфоны</a></div>
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Пылесосы</a></div>
+                      </div>
+                    </div>
+                    <div class="category__top_item1"><a href="#" class="category__top_link1">Товары для дома</a>
+                      <div class="category__top_list2">
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Кухонные комбайны</a></div>
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Смартфоны</a></div>
+                        <div class="category__top_item2"><a href="#" class="category__top_link2">Пылесосы</a></div>
+                      </div>
+                    </div>
+                  </div><a href="all-categories.html" target="_blank" class="category__top_more">Показать больше &gt;                  </a>
+                </div>
               </div>
-              <div class="all-promocodes__top_center">
-                <!-- begin sidebar__coupon-->
-                <div class="sidebar__coupon_list">
-                  <div class="grid grid__2 category__box_grid">
-                    <div class="grid__wrapper"><a href="#" class="grid__item"><img src="img/cat1.png" alt=""/>
-                        <p>Смартфоны</p></a></div>
-                    <div class="grid__wrapper"><a href="#" class="grid__item"><img src="img/cat2.png" alt=""/>
-                        <p>Одежда</p></a></div>
-                    <div class="grid__wrapper"><a href="#" class="grid__item"><img src="img/cat4.png" alt=""/>
-                        <p>Смартфоны</p></a></div>
-                    <div class="grid__wrapper"><a href="#" class="grid__item"><img src="img/cat5.png" alt=""/>
-                        <p>Смартфоны</p></a></div>
+              <div class="category__top_right">
+                <div class="category__slider_name">Найдите скидку на нужный товар</div>
+                <!-- begin slider__grid-->
+                <div class="slider slider__grid category__slider">
+                  <!-- Slide 1-->
+                  <div class="category__slider_item">
+                    <div class="category__slider_img"><img src="img/cat-sl1.jpg" alt="#"/></div>
+                    <div class="category__slider_info">Кухонные комбайны</div><a href="#" class="btn category__slider_btn">Все купоны &gt;&gt;</a>
+                    <button class="btn category__slider_hellip"></button>
+                    <div class="category__slider_help">Покупайте и участвуйте в ежемесячных лотереях. <a href="#">Подробнее о лотерее &gt;</a></div>
+                  </div>
+                  <!-- Slide 2-->
+                  <div class="category__slider_item">
+                    <div class="category__slider_img"><img src="img/cat-sl2.jpg" alt="#"/></div>
+                    <div class="category__slider_info"> <span>Все скидки на </span>Телевизоры</div><a href="#" class="btn category__slider_btn">Все купоны &gt;&gt;</a>
+                    <button class="btn category__slider_hellip"></button>
+                    <div class="category__slider_help">Покупайте и участвуйте в ежемесячных лотереях. <a href="#">Подробнее о лотерее &gt;</a></div>
+                  </div>
+                  <!-- Slide 3-->
+                  <div class="category__slider_item">
+                    <div class="category__slider_img"><img src="img/cat-sl3.jpg" alt="#"/></div>
+                    <div class="category__slider_info">Samsung <br> <span>все скидки марки</span></div><a href="#" class="btn category__slider_btn">Все купоны &gt;&gt;</a>
+                    <button class="btn category__slider_hellip"></button>
+                    <div class="category__slider_help">Покупайте и участвуйте в ежемесячных лотереях. <a href="#">Подробнее о лотерее &gt;</a></div>
+                  </div>
+                  <!-- Slide 4-->
+                  <div class="category__slider_item">
+                    <div class="category__slider_img"><img src="img/cat-sl4.jpg" alt="#"/></div>
+                    <div class="category__slider_info">Кухонные комбайны</div><a href="#" class="btn category__slider_btn">Все купоны &gt;&gt;</a>
+                    <button class="btn category__slider_hellip"></button>
+                    <div class="category__slider_help">Покупайте и участвуйте в ежемесячных лотереях. <a href="#">Подробнее о лотерее &gt;</a></div>
+                  </div>
+                  <!-- Slide 5-->
+                  <div class="category__slider_item">
+                    <div class="category__slider_img"><img src="img/cat-sl1.jpg" alt="#"/></div>
+                    <div class="category__slider_info">Кухонные комбайны</div><a href="#" class="btn category__slider_btn">Все купоны &gt;&gt;</a>
+                    <button class="btn category__slider_hellip"></button>
+                    <div class="category__slider_help">Покупайте и участвуйте в ежемесячных лотереях. <a href="#">Подробнее о лотерее &gt;</a></div>
+                  </div>
+                  <!-- Slide 6-->
+                  <div class="category__slider_item">
+                    <div class="category__slider_img"><img src="img/cat-sl2.jpg" alt="#"/></div>
+                    <div class="category__slider_info"> <span>Все скидки на </span>Телевизоры</div><a href="#" class="btn category__slider_btn">Все купоны &gt;&gt;</a>
+                    <button class="btn category__slider_hellip"></button>
+                    <div class="category__slider_help">Покупайте и участвуйте в ежемесячных лотереях. <a href="#">Подробнее о лотерее &gt;</a></div>
+                  </div>
+                  <!-- Slide 7-->
+                  <div class="category__slider_item">
+                    <div class="category__slider_img"><img src="img/cat-sl3.jpg" alt="#"/></div>
+                    <div class="category__slider_info">Samsung <br> <span>все скидки марки</span></div><a href="#" class="btn category__slider_btn">Все купоны &gt;&gt;</a>
+                    <button class="btn category__slider_hellip"></button>
+                    <div class="category__slider_help">Покупайте и участвуйте в ежемесячных лотереях. <a href="#">Подробнее о лотерее &gt;</a></div>
+                  </div>
+                  <!-- Slide 8-->
+                  <div class="category__slider_item">
+                    <div class="category__slider_img"><img src="img/cat-sl4.jpg" alt="#"/></div>
+                    <div class="category__slider_info">Кухонные комбайны</div><a href="#" class="btn category__slider_btn">Все купоны &gt;&gt;</a>
+                    <button class="btn category__slider_hellip"></button>
+                    <div class="category__slider_help">Покупайте и участвуйте в ежемесячных лотереях. <a href="#">Подробнее о лотерее &gt;</a></div>
                   </div>
                 </div>
-                <!-- end sidebar__coupon-->
-              </div><a class="all-promocodes__top_right"><img src="img/promo-img2.jpg" alt="#" class="all-promocodes__top_right_img"/>
-                <div class="all-promocodes__top_right_text">Весенняя распродажа</div></a>
-              <div class="sm_social">
-                <div class="sm_social_icon">
-                  <div data-services="vkontakte" class="ya-share2"></div>
-                </div>
-                <div class="sm_social_icon">
-                  <div data-services="facebook" class="ya-share2">				</div>
-                </div>
-                <div class="sm_social_icon">
-                  <div data-services="odnoklassniki" class="ya-share2"></div>
-                </div>
-                <div class="sm_social_icon">
-                  <div data-services="gplus" class="ya-share2"></div>
-                </div>
-                <div class="sm_social_icon">
-                  <div data-services="twitter" class="ya-share2"></div>
-                </div>
+                <!-- end slider__grid-->
               </div>
             </div>
-            <!-- end all-promocodes__top-->
-            
+            <!-- end category__top-->
           </div>
         </div>
         <div class="container_center main">
@@ -175,43 +234,43 @@
                 </form>
               </div>
               <div class="sidebar__section js-more-wrapper">
-                <div class="sidebar__section_name">Популярные магазины</div>
+                <div class="sidebar__section_name">В каких магазинах можно купить:</div>
                 <div class="sidebar__section_list">
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">М.видео</a></div>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Lamoda</a></div>
                   <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Снежная королева</a></div>
                   <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Nike</a></div>
                   <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Алиэкспресс</a></div>
                   <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Wildberries</a></div>
-                </div><a href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины" class="sidebar__section_more js-more-link">+ Показать больше</a>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Lamoda</a></div>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Снежная королева</a></div>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Nike</a></div>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Алиэкспресс</a></div>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Wildberries</a></div>
+                </div>
               </div>
               <div class="sidebar__section js-more-wrapper">
-                <div class="sidebar__section_name">Лучшие скидки</div>
+                <div class="sidebar__section_name">Кухонные комбайны</div>
                 <div class="sidebar__section_p">Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.</div>
                 <div class="sidebar__section_p">Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши</div><a href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть текст" class="sidebar__section_more js-more-link">+ Показать больше</a>
               </div>
               <div class="sidebar__section js-more-wrapper">
-                <div class="sidebar__section_name">Найдите скидку на нужный товар:</div>
+                <div class="sidebar__section_name">Популярные магазины</div>
                 <div class="sidebar__section_list">
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Одежда</a></div>
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Обувь</a></div>
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Аксессуары</a></div>
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Бытовая техника</a></div>
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Электроника</a></div>
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Детские товары и<br>Игрушки</a></div>
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Спортивные товары</a></div>
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Путешествия и<br>Развлечения</a></div>
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Зоотовары</a></div>
-                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Дом, мебель, сад</a></div>
-                </div><a href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть категории" class="sidebar__section_more js-more-link">+ Показать больше</a>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Lamoda</a></div>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Снежная королева</a></div>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Nike</a></div>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Алиэкспресс</a></div>
+                  <div class="sidebar__section_list_item"><a href="#" class="sidebar__section_list_link">Wildberries</a></div>
+                </div><a href="all-shops.html" target="_blank" class="sidebar__section_more js-more-link">+ Показать больше</a>
               </div>
             </div>
           </div>
           <!-- end sidebar-->
           
-          <!-- begin main__content_center -->
+          <!-- begin main__content_center-->
           <div class="main__content_center">
             <div class="sale__list_wrap">
-              <h3>Найдите лучшую скидку прямо сейчас</h3>
+              <h3>Промокоды для кухонного комбайна</h3>
               <div class="sale__list_inform">Количество промокодов:<span class="sale__list_number">5</span></div>
               <!-- begin sale__list -->
               <div class="sale__list js_more_wrap">
@@ -515,6 +574,7 @@
             <!-- end pagination-->
           </div>
           <!-- end main__content_center-->
+          
         </div>
         <div class="white__line">
           <div class="container_center">

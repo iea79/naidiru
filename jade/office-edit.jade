@@ -83,8 +83,8 @@ block content
 			.sidebar__section
 				.sidebar__section_name Лента победителей
 				p Розыгрыш апрель-2017:
-				.scrollbar-inner.office__winners_wrap
-					.office__winners
+				.office__winners_wrap
+					.office__winners.scrollbar-inner
 						.office__winners_title Выиграли: Смартфон 
 							span.office__winners_amount (2)
 						.office__winners_list
@@ -310,7 +310,7 @@ block content
 										.ya-share2(data-services="facebook")
 									.lg_social_icon
 										.ya-share2(data-services="gplus")
-								.help ?
+								i.icon__question.big
 					
 					.office__edit_down
 						button.btn.btn__danger.office__edit_btn Сохранить изменения
@@ -390,15 +390,15 @@ block content
 				.office__edit_section_info
 					.office__edit_list
 						.office__edit_list_col
-							.office__edit_row.pass
+							.office__edit_row.icon__sure
 								.office__edit_label(for="oe12") Новый пароль
 								input(type="password", id="oe12")
-							.office__edit_row.pass
+							.office__edit_row.icon__sure
 								.office__edit_label(for="oe13") Повторите новый пароль
 								input(type="password", id="oe13")
 						
 						.office__edit_list_col
-							.office__edit_row.pass
+							.office__edit_row.icon__sure
 								.office__edit_label(for="oe14") Старый пароль
 								input(type="password", id="oe14")
 					

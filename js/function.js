@@ -348,6 +348,12 @@ $(document).ready(function() {
         }
     });
 
+    // Страница Все промокоды all-promocodes.html - Фильтр промокодов
+    $('.sale__list_trigger').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.sidebar__section_wrap').toggleClass('open');
+	});
+
     // office.html Показать/скрыть подтвержденные покупки - не работает
     $('.office__history_confirmed_hide').click(function(e) {
         e.preventDefault();
@@ -475,6 +481,34 @@ $(document).ready(function() {
     // Стилизаци прокрутки просто к обрезаемому блоку добавить класс scrollbar-inner
     $('.scrollbar-inner').scrollbar();
 
+    // Страница категорий category.html - доработать скрипт меню
+    $('.category__top_link1').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.category__top_list2').toggleClass('open');
+	});
 
+	// Страница категорий category.html - Хелп Покупайте, участвуйте в розыгрышах
+    $('.category__top_into_wrap i').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.category__top_into_help').toggleClass('open');
+	});
+
+	// Страница категорий category.html - Доработать хелп в верхнем слайдере
+    $('.category__slider_hellip').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.category__slider_help').toggleClass('open');
+	});
+
+	// Страница категорий category.html - Поделиться в соц.сетях
+    $('.sm_social_trigger').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.category__top_right_top').toggleClass('open');
+	});
+
+	// Страница категорий category.html - Показать другие категории
+    $('.category__top_list1_trigger').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.category__top_list1_wrap').toggleClass('open');
+	});
 
 });
