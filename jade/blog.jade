@@ -19,7 +19,7 @@ block content
 					a(href="#") Блог			
 			// end breadcrumb
 
-			h1.mb_30.ind Блог (Советы, лайфхаки)
+			h1.ind Блог (Советы, лайфхаки)
 
 
 			// begin blog__top
@@ -43,11 +43,14 @@ block content
 							.blog__top_item_name Какой телевизор самый лучший выбрать. Мнение специалиста в этой области и его советы по уходу за техникой
 			// end blog__top
 
-
+	// begin banner
 	.container_center
-		.banner__box.mb_50
+		.banner__box
 			a(href="#").banner__box_link
 				img(src="img/banner2.jpg", alt="#")
+			a(href="#").banner__box_link2
+				img(src="img/banner2-sm.jpg", alt="#")
+	// end banner
 
 
 	.container_center.main.pb_60
@@ -180,7 +183,7 @@ block content
 				button.b__hashtag_more.btn.btn__primary.js-more-link(data-text-open="- Скрыть разделы" data-text-close="+ Показать больше") + Показать больше
 
 
-			h1.ind Самые популярные статьи
+			.b__article_h1.ind Самые популярные статьи
 
 			.b__article
 				.b__article_item
@@ -194,11 +197,12 @@ block content
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
-							a._b__article_comments_link(href="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
+
 				.b__article_item
 					a.b__article_img
 						img(src="img/b-article-img2.jpg", alt="#")
@@ -210,11 +214,12 @@ block content
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
+
 				.b__article_item
 					a.b__article_img
 						img(src="img/b-article-img3.jpg", alt="#")
@@ -226,10 +231,10 @@ block content
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
 				
 				
@@ -258,12 +263,13 @@ block content
 						.b__article_p.mb_30
 							span.date 20 марта 2017
 							a.category техника
-						.b__article_comments.dn
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
+
 				.b__article_item
 					a.b__article_img
 						img(src="img/b-article-img3.jpg", alt="#")
@@ -275,11 +281,12 @@ block content
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
+
 				.b__article_item
 					a.b__article_img
 						img(src="img/b-article-img5.jpg", alt="#")
@@ -291,11 +298,12 @@ block content
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
+
 				.b__article_item
 					a.b__article_img
 						img(src="img/b-article-img1.jpg", alt="#")
@@ -307,11 +315,12 @@ block content
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
+
 				.b__article_item
 					a.b__article_img
 						img(src="img/b-article-img2.jpg", alt="#")
@@ -323,11 +332,12 @@ block content
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
+
 				.b__article_item
 					a.b__article_img
 						img(src="img/b-article-img3.jpg", alt="#")
@@ -339,11 +349,12 @@ block content
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
+
 				.b__article_item
 					a.b__article_img
 						img(src="img/b-article-img5.jpg", alt="#")
@@ -355,10 +366,10 @@ block content
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
 
 

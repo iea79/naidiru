@@ -143,8 +143,8 @@ block content
 
 			.white__line.mb_50
 				// Верхний блок кнопки соц.сетей+картинка
-				.b__article_p.date.mb_20.ind 20 марта 2017 
-				h1.mb_20.ind Какой телевизор лучше выбрать. Мнение специалиста
+				.b__article_p.date.mb_20 20 марта 2017 
+				h1.ind Какой телевизор лучше выбрать. Мнение специалиста
 				p.b__article_text_top.ind Чтоб понять какой телевизор лучше выбрать, мнение специалиста станет основополагающим в решении данного вопроса. И это важно, ведь полки магазинов пестрят различными предложениями. Моделей становится всё больше, выбор расширяется и окончательно определиться с выбором все сложнее.
 
 
@@ -183,30 +183,32 @@ block content
 				p.ind Учитывая высокую стоимость таких моделей, есть смысл пытаться сэкономить, обращая внимание на распродажи и супер sale.
 
 
-				// begin b__article_discount 
-				.b__article_discount
-					.sale__list_row.js_more_item
-						.sale__list_left
-							img(src="img/sale-list4.png", alt="#")
-						.sale__list_right
-							.code__wrap
-								a(href="#").btn.btn__primary.code__btn Используй меня
-						.sale__list_center
-							.sale__list_row_title Скидка до -50% на одежду и обувь от известных брендов!
-							.sale__list_deadline
-								i.icon__time_end
-								| Заканчивается через 15 дней
-				// end b__article_discount
+				// begin promocode
+				.sale__list_wrap
+					.sale__list.js_more_wrap
+				
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list4.png", alt="#")
+							.sale__list_right
+								button.btn.btn__primary.sale__list_right_btn Используй меня
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от известных интернет-магазинов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+						a(href="#").sale__list_save
+				// end promocode
+
 
 
 				p.ind Учитывая высокую стоимость таких моделей, есть смысл пытаться сэкономить, обращая внимание на распродажи. Данные телевизоры обладают собственной операционной системой и, по сути, представляют собой компьютер, предназначенный для просмотра онлайн-контента, а в последнее время ещё и для игр. Если у вас дома есть Wi-Fi роутер, то обратите внимание на модели телевизоров, поддерживающие этот тип подключения, чтобы избавиться от лишних проводов.
 
 
-				.line
-
-
-				// begin b__article_end 
-				.b__article_end.ind
+				// begin b__article_end
+				.b__article_end
 					.b__article_end_left
 						p Поделитесь с друзьями:
 						.b__article_social
@@ -220,11 +222,7 @@ block content
 						p.b__hashtag
 							a.b__hashtag_item(href="#") техника
 							a.b__hashtag_item(href="#") мода
-							
 				// end b__article_end
-
-
-				.line
 
 				
 				// begin b__article_com 
@@ -232,9 +230,7 @@ block content
 					.b__article_com_h#comments Комментарии (25)
 					.b__article_com_list
 
-						.b__article_com_trigger 
-							span &#9658;
-							Написать отзыв о статье
+						.b__article_com_trigger Написать отзыв о статье
 
 						.b__article_com_item.b__article_com_first
 							.b__article_com_left
@@ -317,14 +313,14 @@ block content
 						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
 							a.b__article_icon(href="#")
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
-						.b__article_p.mb_30
+						.b__article_p
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
 				.b__article_item
 					a.b__article_img
@@ -333,14 +329,14 @@ block content
 						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
 							a.b__article_icon(href="#")
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
-						.b__article_p.mb_30
+						.b__article_p
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
 				.b__article_item
 					a.b__article_img
@@ -349,14 +345,14 @@ block content
 						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
 							a.b__article_icon(href="#")
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
-						.b__article_p.mb_30
+						.b__article_p
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
 				.b__article_item
 					a.b__article_img
@@ -365,14 +361,14 @@ block content
 						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
 							a.b__article_icon(href="#")
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
-						.b__article_p.mb_30
+						.b__article_p
 							span.date 20 марта 2017
 							a.category техника
 						.b__article_comments
-							img.b__article_comments_img(src="img/comment.png", alt="#")
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
 							a.b__article_comments_link(href="#")
 								span.comments 25 
-								комментариев
+								span.text комментариев
 						a.b__article_more Читать сейчас &gt;
 
 

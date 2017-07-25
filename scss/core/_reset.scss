@@ -54,9 +54,8 @@ h1 {
 	@media (max-width: 767px) {
 		margin-top: 40px;
 		font-size: 18px;
-		text-align: center;
-		padding-left: 20px;
-		padding-right: 20px;
+		// padding-left: 20px;
+		// padding-right: 20px;
 	}
 }
 
@@ -84,19 +83,14 @@ h3 {
 p {
 	&.note {
 		padding: 22px 32px;
-		margin: 28px 0 30px 20px;
+		margin: 28px 20px 30px 20px;
 		background-color: $muted-color;
 		border-left: 8px solid $success-color;
 		@media (max-width: 767px) {
 			padding: 20px;
-			margin: 28px 0 30px;
-			text-align: center;
+			margin: 20px 20px 30px;
 			border-left: 0;
-		}
-	}
-	&.ind {
-		@media (max-width: 767px) {
-			text-align: center;
+			border-top: 5px solid $success-color;
 		}
 	}
 }
@@ -256,6 +250,9 @@ p {
 	height: 1px;
 	margin-top: 47px;
 	background-color: #dadada;
+	@media (max-width: 767px) {
+		
+	}
 }
 
 .date {
