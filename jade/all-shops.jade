@@ -21,7 +21,7 @@ block content
 			// end breadcrumb
 
 
-			h1 Самые лучшие магазины
+			h1.ind Самые лучшие магазины
 
 			.shops__categories_trigger Фильтр магазинов
 				span &gt;
@@ -74,8 +74,8 @@ block content
 						.shops__sort_list
 							.shops__sort_item
 								a.shops__sort_link(href="#") По популярности
-							.shops__sort_item
-								a.shops__sort_link.active(href="#") По алфавиту
+							.shops__sort_item.active
+								a.shops__sort_link.shops__sort_trigger_abc(href="#") По алфавиту
 							.shops__sort_item
 								a.shops__sort_link(href="#") По рейтингу (отзывам)
 							.shops__sort_item
@@ -87,9 +87,9 @@ block content
 				.shops__sort_abc
 					.shops__sort_abc_list
 						.shops__sort_abc_item
-							a.shops__sort_abc_link.active(href="#") Все
+							a.shops__sort_abc_link(href="#") Все
 						.shops__sort_abc_item
-							a.shops__sort_abc_link(href="#") A
+							a.shops__sort_abc_link(href="#").active A
 						.shops__sort_abc_item
 							a.shops__sort_abc_link(href="#") B
 						.shops__sort_abc_item

@@ -348,6 +348,12 @@ $(document).ready(function() {
         }
     });
 
+    // Страница Все магазины all-shops.html - Сортировка по алфавиту
+    $('.shops__sort_trigger_abc').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.shops__sort_abc').toggleClass('open');
+	});
+
     // Страница Все промокоды all-promocodes.html - Фильтр промокодов
     $('.sale__list_trigger').on('click touchend', function(event) {
     	event.preventDefault();
@@ -510,5 +516,13 @@ $(document).ready(function() {
     	event.preventDefault();
 		$('.category__top_list1_wrap').toggleClass('open');
 	});
+
+	// Страница FAQ faq.html - Показать ответ
+    $('.faq_question').on('click touchend', function(event) {
+    	event.preventDefault();
+    	$('.faq_question').toggleClass('active');
+		$('.faq_answer').toggleClass('open');
+	});
+
 
 });
