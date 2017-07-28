@@ -274,6 +274,49 @@ p {
 	}
 }
 
+.round_social {
+	width: 255px;
+	height: 35px;
+	@extend %clear_a;
+	&_icon {
+		float: left;
+		margin-left: 9px;
+		width: 35px;
+		height: 35px;
+		background-size: 35px 35px;
+		@include border-radius(50%);
+		&:nth-child(1) {
+			margin-left: 0;
+			background: #fff url('../img/icon-vk.svg') no-repeat;
+		}
+		&:nth-child(2) {
+			background: #fff url('../img/icon-fb.svg') no-repeat;
+		}
+		&:nth-child(3) {
+			background: #fff url('../img/icon-google.svg') no-repeat;
+		}
+		&:nth-child(4) {
+			background: #fff url('../img/icon-odn.svg') no-repeat;
+		}
+		&:nth-child(5) {
+			background: #fff url('../img/icon-twitt.svg') no-repeat;
+		}
+		&:nth-child(6) {
+			cursor: pointer;
+			background: #fff url('../img/icon-insta.svg') no-repeat;
+		}
+		.ya-share2__badge {
+			background-color: transparent !important;
+		}
+		.ya-share2__icon {
+			opacity: 0;
+			width: 35px !important;
+			height: 35px !important;
+			background-size: 35px 35px;
+		}
+	}
+}
+
 .help {
 	position: absolute;
 	top: 10px;
@@ -301,4 +344,8 @@ p {
     &:hover {
         background-color: transparent;
     }
+}
+
+.gray__line {
+	background-color: $muted-color;
 }

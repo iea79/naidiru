@@ -517,12 +517,18 @@ $(document).ready(function() {
 		$('.category__top_list1_wrap').toggleClass('open');
 	});
 
-	// Страница FAQ faq.html - Показать ответ
+	// Страница FAQ faq.html - Показать ответ - нужно доработать
     $('.faq_question').on('click touchend', function(event) {
     	event.preventDefault();
     	$('.faq_question').toggleClass('active');
 		$('.faq_answer').toggleClass('open');
 	});
 
+    // Страница О нас и наши отзывы reviews.html - Показать/Скрыть часть сайдбара
+    $('.reviews__sidebar_trigger').on('click touchend', function(event) {
+    	event.preventDefault();
+    	$('.reviews__sidebar_trigger').toggleClass('active');
+		$('.reviews__sidebar').toggleClass('open');
+	});
 
 });

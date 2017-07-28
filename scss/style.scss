@@ -2795,6 +2795,12 @@
 	&_a {
 		margin-left: 8px;
 	}
+	@media (max-width: 767px) {
+		padding: 36px 20px 15px;
+		.btn {
+			margin: 18px auto 16px;
+		}
+	}
 }
 // end lots
 
@@ -3794,7 +3800,8 @@
 	&_text {
 		padding-top: 6px;
 	}
-	&_info {
+	&_info,
+	&_info-answer {
 		padding-top: 5px;
 		margin-bottom: 10px;
 		@extend %clear_a;
@@ -3811,8 +3818,23 @@
 	}
 	&_btn {
 		width: 320px;
+		height: 45px;
 		margin: 30px auto 0;
 		display: block !important;
+	}
+	&_answer {
+		margin-top: 12px;
+		border-top: 1px solid #dadada;
+		.b__article_com_info-answer {
+			padding-top: 9px;
+			padding-left: 27px;
+			margin-bottom: 7px;
+			background: url('../img/answer.svg') no-repeat 0 12px;
+			background-size: 17px 14px;
+		}
+	}
+	&_sign {
+		margin-top: 17px;
 	}
 	@media (max-width: 767px) {
 		padding-top: 18px;
@@ -3823,6 +3845,11 @@
 		&_trigger {
 			display: block;
 		}
+		&_item {
+			&:first-child {
+				border-top: 1px solid #dadada;
+			}
+		}
 		&_first {
 			display: none;
 		}
@@ -3830,8 +3857,13 @@
 			display: none;
 		}
 		&_left {
+			width: 45px;
 			float: none;
 			margin-bottom: 10px;
+		}
+		&_user {
+			width: 100%;
+			height: auto;
 		}
 		&_right {
 			padding-left: 0;
@@ -3851,8 +3883,8 @@
 		}
 		&_info {
 			position: absolute;
-			top: -60px;
-			left: 80px;
+			top: -53px;
+			left: 64px;
 			display: block;
 		}
 		&_user-name {
@@ -7974,4 +8006,225 @@
 		}
 	}
 }
-// end faq_right 
+// end faq_right
+
+
+
+// Страница О нас и наши отзывы reviews.html ///////////////
+// ==========================================================
+.reviews {
+	.white__line {
+		padding-bottom: 70px;
+		.container_center {
+			padding: 0 50px;
+		}
+	}
+	@media (max-width: 1199px) {
+		.white__line {
+			.container_center {
+				padding: 0;
+			}
+		}
+		.breadcrumb {
+			padding: 0 20px;
+		}
+	}
+	@media (max-width: 767px) {
+		.white__line {
+			padding-top: 0;
+			padding-bottom: 35px;
+		}
+	}
+}
+
+// begin reviews_sidebar
+.reviews__sidebar {
+	width: 340px;
+	padding-top: 5px;
+	&_section {
+		&:nth-child(1) {
+			position: relative;
+			padding: 43px 23px 105px;
+			margin-bottom: 68px;
+			text-align: center;
+		}
+		&:nth-child(2) {
+			padding: 67px 23px 36px;
+			font-size: 15px;
+			text-align: center;
+			.reviews__sidebar_p {
+				margin-bottom: 0;
+			}
+		}
+		&:nth-child(3) {
+			padding: 36px 0 40px;
+		}
+		&:nth-child(4) {
+			padding: 27px 40px 37px;
+			text-align: center;
+			.reviews__sidebar_p {
+				margin-bottom: 0;
+				line-height: 1.28;
+			}
+		}
+		&:nth-child(5) {
+			padding: 27px 37px;
+			text-align: center;
+		}
+		&_in {
+			width: 255px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&_name {
+			margin-bottom: 15px;
+			font-size: 18px;
+		}
+	}
+	&_logo {
+		width: 178px;
+		height: 48px;
+		margin: 0 auto 37px;
+		display: block;
+	}
+	&_p {
+		margin-bottom: 2px;
+		.bold {
+			font-weight: 700;
+		}
+	}
+	&_hero {
+		position: absolute;
+		bottom: -118px;
+		left: 66px;
+	}
+	&_trigger {
+		display: none;
+		padding: 16px 0 60px;
+		margin: 0 20px;
+		cursor: pointer;
+		text-align: center;
+		background: url("../img/open-arrow-down.png") no-repeat center 46px;
+		border-bottom: 1px solid #dadada;
+		&:before {
+			content: 'Показать больше';
+			color: #000;
+			font-size: 17px;
+		}
+		&.active {
+			background: url("../img/open-arrow-top.png") no-repeat center 46px;
+			&:before {
+				content: 'Скрыть';
+			}
+		}
+	}
+	&.open {
+		height: auto;
+		&_section {
+			&:nth-child(1) {
+				background-position: center 200px;
+			}
+		}
+	}
+	@media (max-width: 1199px) {
+		width: 100%;
+		margin-left: 0;
+		float: none;
+		&_section {
+			&:nth-child(1) {
+				padding: 43px 23px 225px;
+				margin-bottom: 0;
+				background: $muted-color url('../img/hero3.png') no-repeat center 215px;
+			}
+			&:nth-child(2) {
+				padding: 20px 23px 36px;
+				font-size: 15px;
+				text-align: center;
+				.reviews__sidebar_p {
+					margin-bottom: 0;
+				}
+			}
+		}
+		&_hero {
+			display: none;
+		}
+	}
+	@media (max-width: 991px) {
+		&_section  {
+			&:nth-child(1) {
+				padding: 43px 23px 250px;
+			}
+		}
+		&_p {
+			display: inline;
+		}
+	}
+	@media (max-width: 767px) {
+		height: 338px;
+		overflow: hidden;
+		padding-top: 0;
+		&_section {
+			&:nth-child(1) {
+				padding: 39px 23px 216px;
+				background-position: center 220px;
+				background-size: 181px 181px;
+			}
+		}
+		&_logo {
+			width: 157px;
+			height: 42px;
+			margin: 0 auto 30px;
+		}
+		&_trigger {
+			display: block;
+		}
+	}
+	@media (max-width: 479px) {
+		height: 338px;
+		&_section {
+			&:nth-child(1) {
+				background-position: center 280px;
+			}
+		}
+	}
+}
+// end reviews_sidebar
+
+
+// begin reviews_center
+.reviews {
+	&__center {
+		overflow: hidden;
+		h1 {
+			margin-bottom: 22px;
+		}
+	}
+	.b__article_com {
+		padding-top: 26px;
+		&_btn {
+			width: 252px;
+		}
+	}
+	@media (max-width: 1199px) {
+		&__center {
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+	}
+	@media (max-width: 767px) {
+		&__center {
+			h1 {
+				margin-top: 26px;
+				margin-bottom: 0;
+				text-align: center;
+			}
+			&_p {
+				display: none;
+			}
+		}
+		.b__article_com {
+			padding-top: 17px;
+		}
+	}
+}
+// end reviews_center
