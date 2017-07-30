@@ -210,6 +210,10 @@ p {
 	display: none;
 }
 
+.db {
+	display: block;
+}
+
 
 .main__content {
 	@extend %clear_a;
@@ -278,6 +282,10 @@ p {
 	width: 255px;
 	height: 35px;
 	@extend %clear_a;
+	&_name {
+		margin-bottom: 15px;
+		font-size: 18px;
+	}
 	&_icon {
 		float: left;
 		margin-left: 9px;
