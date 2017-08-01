@@ -1,3 +1,4 @@
+Encoding.default_external = "UTF-8"
 http_path = ".."
 css_dir = "css" # by Compass.app 
 sass_dir = "scss" # by Compass.app 

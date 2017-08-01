@@ -1,6 +1,20 @@
 // Global variables ==================================
 // ====================================================
 
+
+// Fonts ==============================================
+// ====================================================
+@font-face {
+  font-family: 'Myriad Pro';
+  src: local('Myriad Pro Semibold'), local('MyriadPro-Semibold'),
+  url('../fonts/MyriadPro-Semibold.woff2') format('woff2'),
+  url('../fonts/MyriadPro-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+$myriad: 'Myriad Pro';
+
+
 // Breakpoints ========================================
 // ====================================================
 $breakpoint-small:                               480px !default;

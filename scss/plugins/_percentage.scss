@@ -1,0 +1,25 @@
+
+.svg{
+  transform: rotate(-55deg);
+  margin: 0 20px;
+}
+
+section.progress-container{
+  display: block;
+  height: 90px;
+  width: 90px;
+  position: relative;
+}
+
+circle#empty{
+  stroke: #fff;
+  stroke-width: 6px;
+  color: #0eb2d1;
+}
+
+circle#percent-loaded{
+  transition: stroke-dashoffset 1.6 ease-out;
+  transition-delay: 1s;
+  stroke: #0eb2d1;
+  stroke-width: 6px;
+}

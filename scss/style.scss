@@ -19,6 +19,7 @@
 @import "plugins/jquery.formstyler";
 @import "plugins/tooltipster.bundle";
 @import "plugins/jquery.scrollbar";
+@import 'plugins/percentage';
 @import 'core/modal';
 @import 'core/tabs';
 
@@ -33,6 +34,20 @@
 @import "core/breadcrumb";
 @import "core/pagination";
 @import "core/template";
+
+// Sections
+@import "core/ad-global";
+@import "core/ad-header";
+@import "core/ad-about";
+@import "core/ad-statistic";
+@import "core/ad-contact";
+@import "core/ad-faq";
+@import "core/ad-version";
+
+// Global Styles
+.main__content-white {
+  background-color: #ffffff;
+}
 
 // Header ========
 .header {
@@ -73,7 +88,7 @@
 			}
 			i {
 				margin-right: 10px;
-			}			
+			}
 		}
 		a {
 			color: #ffffff;
@@ -223,7 +238,7 @@
 		height: 0;
 		@include trs(.3);
 		li {
-			&:not(:last-of-type) {			
+			&:not(:last-of-type) {
 				// margin-bottom: 15px;
 			}
 			a {
@@ -312,7 +327,7 @@
 					}
 				}
 				i {
-				}			
+				}
 			}
 			a {
 			}
@@ -421,7 +436,7 @@
 					}
 				}
 				i {
-				}			
+				}
 			}
 			a {
 			}
@@ -435,7 +450,7 @@
 			}
 		}
 		&__bottom {
-			padding: 9px 14px 17px 61px; 
+			padding: 9px 14px 17px 61px;
 			position: static;
 			&_center {
 				input {
@@ -604,7 +619,7 @@
 					}
 				}
 				i {
-				}			
+				}
 			}
 			a {
 			}
@@ -618,7 +633,7 @@
 			}
 		}
 		&__bottom {
-			padding: 10px 22px 17px 51px; 
+			padding: 10px 22px 17px 51px;
 			&_center {
 			}
 		}
@@ -664,7 +679,7 @@
 			}
 		}
 		&_action {
-			
+
 		}
 	}
 }
@@ -685,7 +700,7 @@
 					}
 				}
 				i {
-				}			
+				}
 			}
 			a {
 			}
@@ -775,10 +790,10 @@
 			}
 		}
 		&_action {
-			
+
 		}
 	}
-	
+
 	// Home mobile header ======================
 	.home {
 		.header {
@@ -795,7 +810,7 @@
 						}
 					}
 					i {
-					}			
+					}
 				}
 				a {
 				}
@@ -863,7 +878,7 @@
 		img {
 			width: 100%;
 		}
-		&_lg {			
+		&_lg {
 		}
 		&_sm {
 			display: none !important;
@@ -1016,7 +1031,7 @@
 		}
 	}
 	@media (max-width: 1199px) {
-		
+
 	}
 	@media (max-width: 991px) {
 		.slick {
@@ -1075,7 +1090,7 @@
 				// width: 100%;
 			}
 			&_lg {
-				display: none !important;		
+				display: none !important;
 			}
 			&_sm {
 				display: block !important;
@@ -1516,7 +1531,7 @@
 				// text-align: center;
 				.code__field {
 					text-align: center;
-				}	
+				}
 				.code__btn {
 					// z-index: 0;
 					width: 0;
@@ -1579,7 +1594,7 @@
 				// width: 52%;
 				// z-index: 2;
 				// @include trs(.4);
-				
+
 				z-index: 0;
 				right: -9px;
 				top: -8px;
@@ -2021,10 +2036,10 @@
 	}
 	@media (max-width: 991px) {
 		margin-bottom: 0px;
-		
+
 	}
 	@media (max-width: 767px) {
-		
+
 	}
 }
 
@@ -2197,10 +2212,10 @@
 		}
 	}
 	@media (max-width: 1199px) {
-		
+
 	}
 	@media (max-width: 991px) {
-		
+
 	}
 	@media (max-width: 767px) {
 		margin: 0;
@@ -2508,7 +2523,7 @@
 		}
 	}
 	@media (max-width: 991px) {
-		
+
 	}
 	@media (max-width: 767px) {
 		// margin-left: 0;
@@ -2590,7 +2605,7 @@
 		top: -60px;
 	}
 	@media (max-width: 1199px) {
-		
+
 	}
 	@media (max-width: 991px) {
 		right: 5px;
@@ -2598,7 +2613,7 @@
 	@media (max-width: 767px) {
 	}
 }
-	
+
 
 
 // Страница 404 ошибка 404.html ///////////////
@@ -2870,7 +2885,7 @@
 			overflow: hidden;
 			color: $main-color;
 			font-size: 18px;
-		}                               
+		}
 	}
 	a {
 		text-decoration: none;
@@ -2908,7 +2923,7 @@
 				max-height: auto;
 				// overflow: visible;
 				font-size: 14px;
-			}                               
+			}
 		}
 	}
 }
@@ -3204,7 +3219,7 @@
 			height: auto;
 			margin-top: 21px;
 			background-color: transparent;
-			border: 0;	
+			border: 0;
 		}
 		&_img {
 			width: 339px;
@@ -3303,7 +3318,7 @@
 		overflow: hidden;
 	}
 	&_in {
-		margin-top: 27px;                               
+		margin-top: 27px;
 		@extend %clear_a;
 		.btn {
 			width: 217px;
@@ -3379,11 +3394,10 @@
 // end main__content_center
 
 
-
 // Блог Статья blog-article.html ///////////////
 // =============================================
 
-// begin b__article_text_top 
+// begin b__article_text_top
 .b__article_top {
 	margin-bottom: 34px;
 	@include flexbox();
@@ -3964,7 +3978,7 @@
 	}
 	.line {
 		margin-top: 25px;
-		margin-bottom: 36px; 
+		margin-bottom: 36px;
 	}
 	.columns__list {
 		width: 85%;
@@ -3975,7 +3989,7 @@
 	}
 	@media (max-width: 1280px) {
 		.category__box_grid {
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(16.666%);
 				&:nth-child(n+7) {
 					display: block;
@@ -3985,7 +3999,7 @@
 	}
 	@media (max-width: 1199px) {
 		.category__box_grid {
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(20%);
 			}
 		}
@@ -3996,7 +4010,7 @@
 	}
 	@media (max-width: 991px) {
 		.category__box_grid {
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(25%);
 			}
 		}
@@ -4006,7 +4020,7 @@
 	}
 	@media (max-width: 767px) {
 		.white__line {
-		    padding: 17px 0 20px;		    
+		    padding: 17px 0 20px;
 		}
 		h1 {
 			margin-top: 0;
@@ -4015,7 +4029,7 @@
 		.category__box_grid {
 			padding-left: 20px;
 			@include justify-content(flex-start);
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(33%);
 			}
 		}
@@ -4028,7 +4042,7 @@
 	}
 	@media (max-width: 479px) {
 		.category__box_grid {
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(49.8%);
 			}
 		}
@@ -4042,11 +4056,11 @@
 // ====================================================
 .all-shops {
 	.white__line {
-	    padding: 35px 0 20px;		    
+	    padding: 35px 0 20px;
 	}
 	@media (max-width: 767px) {
 		.white__line {
-		    padding: 17px 0 20px;		    
+		    padding: 17px 0 20px;
 		}
 		h1 {
 			margin-top: 0;
@@ -4129,7 +4143,7 @@
 		color: $main-color;
 		&:hover {
 			text-decoration: none;
-		}                                                      
+		}
 	}
 	.checkbox {
 		float: right;
@@ -4321,7 +4335,7 @@
 					background: url('../img/rate-star-full.svg') repeat-x;
 					background-size: 15px 15px;
 				}
-			} 
+			}
 			// &_star {
 			// 	width: 15px;
 			// 	height: 15px;
@@ -4342,14 +4356,14 @@
 	}
 	@media (max-width: 1199px) {
 		&_grid {
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(20%);
 			}
 		}
 	}
 	@media (max-width: 991px) {
 		&_grid {
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(25%);
 			}
 		}
@@ -4376,7 +4390,7 @@
 			.grid__wrapper {
 				padding-left: 0;
 				padding-bottom: 0 !important;
-				margin-top: 20px;	
+				margin-top: 20px;
 				width: 160px;
 				display: block;
 				margin-left: auto;
@@ -4968,7 +4982,7 @@
 			.slider__item {
 				width: 160px;
 			}
-			&_overlay {				
+			&_overlay {
 			    padding: 6px 12px;
 				font-size: 14px;
 				span {
@@ -5038,7 +5052,7 @@
 	}
 	@media (max-width: 1280px) {
 		.category__box_grid {
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(16.666%);
 				&:nth-child(n+7) {
 					display: block;
@@ -5049,14 +5063,14 @@
 	@media (max-width: 1199px) {
 		.category__box_grid {
 			padding-right: 0;
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(20%);
 			}
 		}
 	}
 	@media (max-width: 991px) {
 		.category__box_grid {
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(25%);
 			}
 		}
@@ -5069,14 +5083,14 @@
 		.category__box_grid {
 			padding-left: 20px;
 			@include justify-content(flex-start);
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(33%);
 			}
 		}
 	}
 	@media (max-width: 479px) {
 		.category__box_grid {
-			.grid__wrapper {		
+			.grid__wrapper {
 				@include flex-basis(50%);
 			}
 		}
@@ -5186,7 +5200,7 @@
 		}
 	}
 	&_right {
-		height: 100%;                      
+		height: 100%;
 		@include flexbox();
 		@include justify-content(space-between);
 		@include align-items(center);
@@ -5765,7 +5779,7 @@
 // end office__ad
 
 
-// begin office__history 
+// begin office__history
 .office__history {
 	margin-bottom: 28px;
 	&_name {
@@ -5807,7 +5821,7 @@
 	}
 	&_th {
 		height: 42px;
-		color: #fff; 
+		color: #fff;
 		background-color: #454545;
 		&:nth-child(3):after {
 			content: '?';
@@ -6208,7 +6222,7 @@
 	}
 }
 // end office__attention
- 
+
 
 
 // Страница Личн.кабинет Новости и уведомления office-news.html ///////////////
@@ -6267,7 +6281,7 @@
 		}
 		&_mark {
 			position: absolute;
-			top: 13px;	
+			top: 13px;
 			right: 11px;
 			width: 21px;
 			height: 15px;
@@ -6920,7 +6934,7 @@
 }
 
 
-// begin office__edit_text 
+// begin office__edit_text
 .office__edit_text {
 	padding: 28px 0;
 	margin-bottom: 41px;
@@ -6930,7 +6944,7 @@
 		text-align: center;
 	}
 }
-// end office__edit_text 
+// end office__edit_text
 
 
 
@@ -6982,7 +6996,7 @@
 				text-align: center;
 			}
 			&_top {
-				padding: 35px 20px 0; 
+				padding: 35px 20px 0;
 			}
 			&_bottom {
 				padding: 21px 20px 0;
@@ -7166,7 +7180,7 @@
 		}
 		@media (max-width: 991px) {
 			&_grid {
-				.grid__wrapper {		
+				.grid__wrapper {
 					@include flex-basis(25%);
 				}
 			}
@@ -7180,7 +7194,7 @@
 		}
 		@media (max-width: 479px) {
 			&_grid {
-				.grid__wrapper {	
+				.grid__wrapper {
 					width: 160px;
 				}
 			}
@@ -7295,7 +7309,7 @@
 }
 
 
-// begin category__top 
+// begin category__top
 .category__top {
 	width: 100%;
 	padding-top: 2px;
@@ -7554,7 +7568,7 @@
 		}
 		&_right {
 			h1 {
-				margin-top: 19px;	
+				margin-top: 19px;
 				margin-bottom: 15px;
 			}
 			&_top {
@@ -7801,6 +7815,9 @@
 	position: relative;
 	padding: 45px 50px 48px;
 	background-color: $muted-color;
+	&--white {
+		background-color: #ffffff;
+	}
 	&_name {
 		margin-bottom: 12px;
 		font-size: 21px;
@@ -7813,7 +7830,7 @@
 		@extend %clear_a;
 	}
 	&_form {
-		width: 47%;	
+		width: 47%;
 		float: left;
 		&:first-child {
 			margin-right: 6%;
@@ -7828,7 +7845,7 @@
 		@include border-radius(0);
 	}
 	textarea {
-		width: 100%;	
+		width: 100%;
 		height: 126px;
 		padding: 8px 10px;
 		margin-bottom: 26px;
@@ -8263,8 +8280,8 @@
 .prize__section {
 	padding: 47px 0 70px;
 	&_name {
-		margin-bottom: 26px;  
-		font-size: 21px; 
+		margin-bottom: 26px;
+		font-size: 21px;
 	}
 	@media (max-width: 1199px) {
 		&_name {
@@ -8349,7 +8366,7 @@
 			font-size: 48px;
 			text-align: center;
 		}
-		&_item { 
+		&_item {
 			position: absolute;
 			z-index: 3;
 			color: #000;
@@ -8360,7 +8377,7 @@
 				width: 347px;
 				height: 105px;
 				padding-left: 202px;
-				padding-top: 40px;				
+				padding-top: 40px;
 				background: url('../img/how1.svg') no-repeat;
 				background-size: 136px 105px;
 			}
@@ -8540,7 +8557,7 @@
 	}
 	&_left {
 		width: 199px;
-		height: 100%; 
+		height: 100%;
 		padding: 15px;
 		float: left;
 		border-right: 1px solid #d1d1d1;
@@ -8564,7 +8581,7 @@
 	}
 	&_p {
 		margin-bottom: 22px;
-		font-size: 18px;      
+		font-size: 18px;
 	}
 	@media (max-width: 1199px) {
 		padding: 0 20px;
@@ -8594,7 +8611,7 @@
 		}
 		&_p {
 			margin-bottom: 10px;
-			font-size: 15px;      
+			font-size: 15px;
 		}
 	}
 	@media (max-width: 767px) {
@@ -8669,7 +8686,7 @@
 // end prize__conditions
 
 
-// begin prize__counter 
+// begin prize__counter
 .prize__counter {
 	position: relative;
 	height: 460px;
@@ -8764,7 +8781,7 @@
 .prize__winners {
 	&_wrap {
 		padding-top: 79px;
-		margin-bottom: 90px;	
+		margin-bottom: 90px;
 		.prize__section_name {
 			margin-bottom: 35px;
 		}
@@ -8790,7 +8807,7 @@
 		&:nth-child(1) {
 			width: 180px;
 		}
-		&:nth-child(2) {              
+		&:nth-child(2) {
 			width: 249px;
 		}
 		&:nth-child(3) {
@@ -8845,7 +8862,7 @@
 		// 	}
 		// }
 		// &_td {
-		// 	.prize__winners_td_in {	
+		// 	.prize__winners_td_in {
 		// 		padding-left: 30px;
 		// 	}
 		// }
@@ -8863,7 +8880,7 @@
 // end prize__winners
 
 
-// begin prize__faq 
+// begin prize__faq
 .prize__faq {
 	padding-bottom: 67px;
 	@include flexbox();
@@ -8900,7 +8917,7 @@
 	&_rules {
 		&_left {
 			width: 65px;
-			padding-top: 3px;	
+			padding-top: 3px;
 			float: left;
 			margin-right: 19px;
 		}
@@ -8912,7 +8929,7 @@
 		}
 	}
 	@media (max-width: 1199px) {
-		padding-left: 20px;	
+		padding-left: 20px;
 		padding-right: 20px;
 		@include justify-content(space-between);
 		&_column {
