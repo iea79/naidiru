@@ -162,6 +162,17 @@ $(document).ready(function() {
 		}
 	});
 
+	function shoppelSaveResize() {
+		var shoppelHey = $('.shoppel__save_left').height()
+		$('.shoppel__save_right').height(shoppelHey-27);
+	}
+
+	shoppelSaveResize();
+
+	$(window).resize(function(event) {
+		shoppelSaveResize();
+	});
+
 	// Login box
 	if (winWidth<=991) {	
 		$('.login__box_avatar').on('click', function(event) {
@@ -538,7 +549,8 @@ $(document).ready(function() {
     // Страница бренда brand.html - Хелпы на промокодах - Нужно доработать
     $('.sale__list_top_help').on('click touchend', function(event) {
     	event.preventDefault();
-		$('.sale__list_top_text').toggleClass('open');
+    	$(this).toggleClass('active');
+		$(this).siblings('.faq_answer').toggleClass('open');
 	});
 
 	// Страница бренда brand.html - Хелп
