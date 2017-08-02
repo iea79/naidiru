@@ -10143,3 +10143,36 @@
 		margin-bottom: 15px;
 	}
 }
+
+.sales__page_ban {
+	position: relative;
+	a {
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	img {
+		display: block;
+		min-width: 100%;
+		max-width: none;
+		min-height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&_text {
+		padding-top: 97px;
+		padding-bottom: 107px;
+		margin: auto;
+		max-width: 900px;
+		color: #fff;
+		position: relative;
+		font-size: 30px;
+		text-align: right;
+		b {
+			font-size: 60px;
+			display: block;
+			margin-top: 10px;
+		}
+	}
+}
