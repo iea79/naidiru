@@ -1,0 +1,62 @@
+extends template.jade
+
+block variables
+	- bodyClass = "form"
+
+block title
+	title Страница регистрации, авторизации
+
+block content
+	.white__line
+		.container_center
+			.white__line_form
+				.breadcrumb
+					li
+						a(href="/") Главная
+					li
+						a(href="/") Авторизация или Регистрация
+				h2 Войдите в аккаунт или Зарегистрируйтесь
+				.sign-in
+					.title__content__3 Войти в аккаунт
+					.office__edit_section_info
+						.office__edit_list
+							.office__edit_list_col
+								.office__edit_row
+									.office__edit_label(for="oe11") E-mail
+									input.office__edit_input(type="email", placeholder="Введите Ваш e-mail", id="oe1")
+								.office__edit_row
+									.office__edit_label(for="oe12") Пароль
+									input(type="password", placeholder="Введите пароль", id="oe2")
+					a.btn.btn__danger(href="#") Войти в аккаунт
+					.sign-in__link Забыли пароль? 
+						a(href="#") Восстановить пароль
+				.sign-up.sign-in
+					.title__content__3 Регистрация на сайте
+					.office__edit_section_info
+						.office__edit_list
+							.office__edit_list_col
+								.office__edit_row
+									.office__edit_label(for="oe11") E-mail
+									input(type="email", placeholder="Введите Ваш e-mail", id="oe1")
+					.sign-in__link Чтобы зарегистрироваться на сайте, просто введите Ваш email. Для Вашей безопасности, мы сами сгенерируем Вам пароль и отправим его на указанную почту. 
+					a.btn.btn__danger(href="#") Зарегистрироваться
+					.sign-in__link Регистрируясь, я соглашаюсь с 
+						a(href="#") Условиями использования сайта.
+				.social
+					.social__arrow
+						.social__text__p Или войдите в аккаунт / зарегистрируйтесь через социальные сети
+						.social__triangle
+					.lg_social
+						.lg_social_icon
+							.ya-share2(data-services="vkontakte")
+						.lg_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.lg_social_icon
+							button.lg_social_icon_add.btn
+						.lg_social_icon
+							button.lg_social_icon_add.btn
+						.lg_social_icon
+							.ya-share2(data-services="facebook")
+						.lg_social_icon
+							.ya-share2(data-services="gplus")
+						i.icon__question.big

@@ -1,5 +1,43 @@
 // Mixin =======================================================================
 
+@mixin border-radius($radius) {
+	border-radius: $radius;
+}
+@mixin trs($time) {
+	transition: $time;
+}
+@mixin rotate($deg) {
+	-webkit-transform: rotate($deg);
+	-moz-transform: rotate($deg);
+	-ms-transform: rotate($deg);
+	-o-transform: rotate($deg);
+	transform: rotate($deg);
+}
+@mixin justify-content($position) {
+	justify-content:$position;
+}
+@mixin flex-basis($percentage) {
+	flex-basis:$percentage;
+}
+@mixin box-sizing($border-box) {
+	-webkit-box-sizing: $border-box;
+	-moz-box-sizing: $border-box;
+	box-sizing: $border-box;
+}
+
+@mixin columns-text($columns, $columns-count, $gap, $rule, $style, $color) {
+	-moz-columns: $columns $columns-count;
+	-webkit-columns: $columns $columns-count;
+	columns: $columns $columns-count;
+	-moz-column-gap: $gap;
+	-webkit-column-gap: $gap;
+	column-gap: $gap;
+	-moz-column-rule: $rule $style $color;
+	-webkit-column-rule: $rule $style $color;
+	column-rule: $rule $style $color
+}
+
+
 // Style for columns text 
 // Используется для многоколоночного адаптивного текста, а также для списков
 // $width - минимальная ширина колонок
@@ -17,11 +55,6 @@
 // .column {
 // 	@include columns-text(300px, 3, 40px, 1px, solid, #000);
 // }
-@mixin columns-text($width, $count, $padding, $divider_widh, $divider_line, $divider_color) {
-	@include columns($width $count); // Count and width or columns
-	@include column-gap($padding); // Padding for columns
-	@include column-rule($divider_widh $divider_line $divider_color); // Divider for columns
-}
 
 
 // Float el clear
@@ -48,7 +81,15 @@
 
 // Transition speed for element
 @mixin trs($trs_speed) {
-	@include transition(all $trs_speed+s);
+	transition: all $trs_speed+s;
+}
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
 }
 
 
@@ -90,7 +131,18 @@
 		}
 	}
 }
-
+@mixin box-shadow($shadow...) {
+	$shadow: set-arglist-default($shadow, default-box-shadow());
+}
+@mixin transform3d($trans) {
+	@include transform($trans, true);
+}
+@mixin rotateY($rotate: $default-rotate, $perspective: false) {
+	$trans: rotateY($rotate);
+	@if $perspective {
+		$trans: perspective($perspective) $trans;
+	}
+}
 
 @mixin flex($values) {
 	-webkit-box-flex: $values;
