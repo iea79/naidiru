@@ -162,6 +162,17 @@ $(document).ready(function() {
 		}
 	});
 
+	function shoppelSaveResize() {
+		var shoppelHey = $('.shoppel__save_left').height()
+		$('.shoppel__save_right').height(shoppelHey-27);
+	}
+
+	shoppelSaveResize();
+
+	$(window).resize(function(event) {
+		shoppelSaveResize();
+	});
+
 	// Login box
 	if (winWidth<=991) {	
 		$('.login__box_avatar').on('click', function(event) {

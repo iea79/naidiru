@@ -3042,7 +3042,14 @@
 			}
 			&_label {
 				font-size: 17px;
+				margin-left: 10px;
 			}
+		}
+	}
+	@media (max-width: 767px) {
+		&_list-nothash {
+			margin-top: -30px;
+			margin-bottom: -7px;
 		}
 	}
 }
@@ -11146,12 +11153,24 @@
 			float: none;
 			margin-bottom: 15px;
 			width: 100%;
+			padding-top: 0;
 			.b__article_top {
+				padding-bottom: 0;
+				margin-bottom: 0;
 				float: none;
+				&_left {
+					width: auto;
+				}
 			}
 		}
 		&_content {
 			overflow: initial;
+		}
+		.ind {
+			margin-top: 20px;
+			margin-bottom: 5px;
+			padding: 0;
+			text-align: center;
 		}
 	}
 }
@@ -11326,6 +11345,7 @@
 
 .sales__page_ban {
 	position: relative;
+	overflow: hidden;
 	a {
 		&:hover {
 			text-decoration: none;
@@ -11335,14 +11355,14 @@
 		display: block;
 		min-width: 100%;
 		max-width: none;
-		min-height: 100%;
+		height: 100%;
 		position: absolute;
 		top: 0;
 		left: 0;
 	}
 	&_text {
-		padding-top: 97px;
-		padding-bottom: 107px;
+		padding: 97px 10px 107px;
+		// padding-bottom: 107px;
 		margin: auto;
 		max-width: 900px;
 		color: #fff;
@@ -11353,6 +11373,15 @@
 			font-size: 60px;
 			display: block;
 			margin-top: 10px;
+		}
+	}
+	@media (max-width: 767px) {
+		&_text {
+			padding: 40px 10px 50px;
+			font-size: 20px;
+			b {
+				font-size: 40px;
+			}
 		}
 	}
 }
