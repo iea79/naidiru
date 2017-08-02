@@ -9815,3 +9815,29 @@
 		margin-bottom: 8px;
 	}
 }
+
+/* Tipograf text ======================== */
+.tipo-text {
+	h1:not([class]),h2:not([class]),h3:not([class]),h4:not([class]) {
+		margin: 19px 0;
+		// font-weight: 400;
+	}
+	h1:not([class]) {
+		font-size: 20px;
+	}
+	h2:not([class]) {
+		font-size: 18px;
+	}
+	h3:not([class]) {
+		font-size: 16px;
+	}
+	h4:not([class]) {
+		font-size: 15px;
+	}
+	p:not([class]) {
+		margin: 19px 0;
+		&+h1:not([class]),&+h2:not([class]),&+h3:not([class]),&+h4:not([class]) {
+			margin-top: 37px;
+		}
+	}
+}
