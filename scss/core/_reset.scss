@@ -214,6 +214,10 @@ p {
 	display: block;
 }
 
+.bold {
+	font-weight: 700;
+}
+
 
 .main__content {
 	@extend %clear_a;
