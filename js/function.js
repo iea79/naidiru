@@ -333,7 +333,7 @@ $(document).ready(function() {
         }
     });
 
-    // Blog article - b__article_com767
+    // Blog article - b__article_com.html767 Написать комментарий
 	var touch3 = $('.b__article_com_trigger');
     var menu3 = $('.b__article_com_first');
  
@@ -347,6 +347,12 @@ $(document).ready(function() {
             menu3.removeAttr('style');
         }
     });
+
+    // Blog article - b__article_com.html767 - Написать комментарий
+    $('.b__article_com_trigger').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.b__article_com_trigger').toggleClass('active');
+	});
 
     // Страница Все магазины all-shops.html - Сортировка по алфавиту
     $('.shops__sort_trigger_abc').on('click touchend', function(event) {
@@ -517,18 +523,29 @@ $(document).ready(function() {
 		$('.category__top_list1_wrap').toggleClass('open');
 	});
 
+	// Страница категорий category.html - Подписаться на категорию
+    $('.category__top_list1_trigger').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.category__top_list1_wrap').toggleClass('open');
+	});
+
 	// Страница FAQ faq.html - Показать ответ - нужно доработать
-    $('.faq_question').on('click touchend', function(event) {
+    $('.category__top_right_subscribe').on('click touchend', function(event) {
+    	event.preventDefault();
+    	$('.category__top_right_subscribe').toggleClass('active');
+	});
+
+    // Страница бренда brand.html - Хелпы на промокодах - Нужно доработать
+    $('.sale__list_top_help').on('click touchend', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).siblings('.faq_answer').toggleClass('open');
 	});
 
-    // Страница О нас и наши отзывы reviews.html - Показать/Скрыть часть сайдбара
-    $('.reviews__sidebar_trigger').on('click touchend', function(event) {
+	// Страница бренда brand.html - Хелп
+    $('.brand__info_advantage_help').on('click touchend', function(event) {
     	event.preventDefault();
-    	$('.reviews__sidebar_trigger').toggleClass('active');
-		$('.reviews__sidebar').toggleClass('open');
+		$('.brand__info_advantage_answer').toggleClass('open');
 	});
 
 	$('.accordeon__text').hide();
