@@ -520,8 +520,8 @@ $(document).ready(function() {
 	// Страница FAQ faq.html - Показать ответ - нужно доработать
     $('.faq_question').on('click touchend', function(event) {
     	event.preventDefault();
-    	$('.faq_question').toggleClass('active');
-		$('.faq_answer').toggleClass('open');
+    	$(this).toggleClass('active');
+		$(this).siblings('.faq_answer').toggleClass('open');
 	});
 
     // Страница О нас и наши отзывы reviews.html - Показать/Скрыть часть сайдбара
