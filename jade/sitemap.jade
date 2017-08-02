@@ -1,0 +1,103 @@
+//- Подключаем общий шаблон
+extends template.jade
+//- Меняем Home на название страницы
+block title
+	title Карта сайта
+
+block content
+	//- Тут с отступа начинаем писать код
+	.white__line
+		.container_center
+			
+			// begin breadcrumb
+			.breadcrumb.ind
+				li
+					a(href="/") Главная
+				li
+					a(href="#") Карта сайта			
+			// end breadcrumb
+
+			h1.ind Карта сайта
+
+			.column.column__sitemap
+				a(href="#").column__sitemap_link Все категории
+				a(href="#").column__sitemap_link Все магазины
+				a(href="#").column__sitemap_link Все промокоды
+				a(href="#").column__sitemap_link Личный кабинет
+				a(href="#").column__sitemap_link Правила покупок
+				a(href="#").column__sitemap_link Обратная связь и Часто задаваемые вопросы
+				a(href="#").column__sitemap_link Как использовать промокод?
+				a(href="#").column__sitemap_link О ежемесячных розыгрышах
+				a(href="#").column__sitemap_link Реклама на сайте и FAQ для бизнеса
+
+			.column.column__sitemap
+				.column__sitemap_item
+					.column__sitemap_title Магазины
+					a.column__sitemap_link(href="") Aliexpress
+					a.column__sitemap_link(href="") Allo
+					a.column__sitemap_link(href="") Answear UA
+					a.column__sitemap_link(href="") bonprix ru
+					a.column__sitemap_link(href="") Booking.com
+					a.column__sitemap_link(href="") City
+					a.column__sitemap_link(href="") Eldorado UA
+					a.column__sitemap_link(href="") GearBest
+					a.column__sitemap_link(href="") KupiVIP
+					a.column__sitemap_link(href="") La Redoute
+					a.column__sitemap_link(href="") Lamoda
+					a.column__sitemap_link(href="") Media Markt
+					a.column__sitemap_link(href="") Moyo UA
+					a.column__sitemap_link(href="") Ozon
+					a.column__sitemap_link(href="") Rozetka
+					a.column__sitemap_link(href="") YVES ROCHER UA
+					a.column__sitemap_link(href="") М.видео
+					a.column__sitemap_link(href="") Связной
+					a.column__sitemap_link(href="") Фокстрот UA
+					a.column__sitemap_link(href="") Юлмарт
+					a.column__sitemap_link(href="") 003
+					a.column__sitemap_link(href="") 100 Фабрик
+					//- a.column__sitemap_link(href="") 101 чай
+					//- a.column__sitemap_link(href="") 123.ru
+					//- a.column__sitemap_link(href="") 123.ru
+				.column__sitemap_item
+					.column__sitemap_title Категории
+					a.column__sitemap_link(href="") Одежда
+					a.column__sitemap_link(href="") Обувь
+					a.column__sitemap_link(href="") Аксессуары
+					a.column__sitemap_link(href="") Бытовая техника
+					a.column__sitemap_link(href="") Электроника
+					a.column__sitemap_link(href="") Красота и Здоровье
+					a.column__sitemap_link(href="") Детские товары и Игрушки
+					a.column__sitemap_link(href="") Дом, мебль, сад
+					a.column__sitemap_link(href="") Спортивные товары
+					a.column__sitemap_link(href="") Путешествия и развлечения
+					a.column__sitemap_link(href="") Еда и продукты
+					a.column__sitemap_link(href="") Зоотовары
+					a.column__sitemap_link(href="") Цветы и подарки
+					a.column__sitemap_link(href="") Автотовары и инструменты
+					a.column__sitemap_link(href="") Книги, игры и фильмы
+					a.column__sitemap_link(href="") Финансы, услуги, образование
+				.column__sitemap_item
+					.column__sitemap_title Подкатегории
+					a.column__sitemap_link(href="") Смартфоны
+					a.column__sitemap_link(href="") Косметика
+					a.column__sitemap_link(href="") Платье
+				.column__sitemap_item
+					.column__sitemap_title Страницы распродаж
+					a.column__sitemap_link(href="") Черная пятница
+					a.column__sitemap_link(href="") Киберпонедельник
+					a.column__sitemap_link(href="") 8 марта
+					a.column__sitemap_link(href="") 23 февраля
+					a.column__sitemap_link(href="") Новогодняя распродажа
+				.column__sitemap_item
+					.column__sitemap_title Разделы блога
+					a.column__sitemap_link(href="") Блог
+					a.column__sitemap_link(href="") #мода
+					a.column__sitemap_link(href="") #шоппинг
+					a.column__sitemap_link(href="") #лотерея
+				.column__sitemap_item
+					.column__sitemap_title Статьи
+					a.column__sitemap_link(href="") Что такое промокоды и как ими пользоваться?
+					a.column__sitemap_link(href="") Как экономить в Ламода?
+					a.column__sitemap_link(href="") Какой купить смартфон?
+					a.column__sitemap_link(href="") Подарки на 8 марта, что подарить любимой?
+					a.column__sitemap_link(href="") Победители лотереи №5 

@@ -531,4 +531,38 @@ $(document).ready(function() {
 		$('.reviews__sidebar').toggleClass('open');
 	});
 
+	$('.accordeon__text').hide();
+
+	$('.accordeon__header').click(function() {
+		var findArticle = $(this).next();
+		var findWrapper = $(this).closest('.accordeon__text');
+		$(this).removeClass('rect');
+		if (findArticle.is(':visible')) {
+			findArticle.slideUp('fast');   
+		}
+		else {
+			findWrapper.find('.accordeon__text').slideUp('fast');
+			findArticle.slideDown('fast');
+			$(this).addClass('rect');
+		}
+	});
+
+	//E-mail Ajax Send
+	// $("form").submit(function() { //Change
+	// 	var th = $(this);
+	// 	$.ajax({
+	// 		type: "POST",
+	// 		url: "mail.php", //Change
+	// 		data: th.serialize()
+	// 	}).done(function() {
+	// 		alert("Спасибо за заявку! Наш менеджер свяжется с Вами");
+	// 		setTimeout(function() {
+	// 			// Done Functions
+	// 			th.trigger("reset");
+	// 			$.magnificPopup.close();
+	// 		}, 1000);
+	// 	});
+	// 	return false;
+	// });
+
 });
