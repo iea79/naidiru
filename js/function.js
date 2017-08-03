@@ -559,7 +559,7 @@ $(document).ready(function() {
 		$('.brand__info_advantage_answer').toggleClass('open');
 	});
 
-	// Страница бренда brand.html - Скрытые информационные блоки в мобильной части - Доработать
+	// Страница бренда brand.html - Скрытые информационные блоки в мобильной части - Доработатьg
     $('.brand__trigger').on('click touchend', function(event) {
     	event.preventDefault();
     	$('.brand__trigger').toggleClass('active');
