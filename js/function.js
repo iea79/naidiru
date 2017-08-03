@@ -559,6 +559,13 @@ $(document).ready(function() {
 		$('.brand__info_advantage_answer').toggleClass('open');
 	});
 
+	// Страница бренда brand.html - Скрытые информационные блоки в мобильной части - Доработать
+    $('.brand__trigger').on('click touchend', function(event) {
+    	event.preventDefault();
+    	$('.brand__trigger').toggleClass('active');
+		$('.brand__info_mobil').toggleClass('open');
+	});
+
 	$('.accordeon__text').hide();
 
 	$('.accordeon__header').click(function() {
