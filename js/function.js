@@ -525,7 +525,7 @@ $(document).ready(function() {
 	// Страница категорий category.html - Поделиться в соц.сетях
     $('.sm_social_trigger').on('click touchend', function(event) {
     	event.preventDefault();
-		$('.category__top_right_top').toggleClass('open');
+		$('.category__top_right_top, .all-promocodes__top_right_top').toggleClass('open');
 	});
 
 	// Страница категорий category.html - Показать другие категории
