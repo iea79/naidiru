@@ -8709,6 +8709,7 @@
 			}
 			&_p {
 				padding-top: 0;
+				padding-left: 15px;
 			}
 		}
 		&_bg {
@@ -8946,6 +8947,9 @@
 	}
 	&_right {
 		overflow: hidden;
+		&_new {
+			padding-top: 15px;
+		}
 	}
 	&_title {
 		font-weight: bold;
@@ -8979,6 +8983,12 @@
 		}
 		&_right_new {
 			clear: both;
+			padding-top: 20px;
+		}
+		&_left {
+			&_last{
+				width: 145px;
+			}
 		}
 	}
 }
