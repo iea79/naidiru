@@ -78,7 +78,7 @@ block content
 							a(href="#") Подробнее о розыгрыше &gt;
 				.category__top_right
 					h1.ind Скидки на кухонные комбайны
-					.category__top_right_top
+					.category__top_right_top.social__down
 						a.sm_social_trigger(href="#") Поделиться
 						.sm_social
 							.sm_social_icon
@@ -91,7 +91,11 @@ block content
 								.ya-share2(data-services="gplus")
 							.sm_social_icon
 								.ya-share2(data-services="twitter")
-						.category__top_right_subscribe
+						.category__top_right_subscribe 
+							.category__top_right_subscribe_in Подписаться 
+								span на категорию
+							.category__top_right_subscribe_out Отписаться 
+								span от категории
 						.category__top_right_reg Чтобы подписаться на категорию, нужно: 
 							a(href="#") зарегистрироваться или войти &gt;
 					.category__top_img
@@ -185,9 +189,6 @@ block content
 
 	.container_center.main
 
-		.sale__list_reg Нужно:
-			a(href="#") войти или зарегистрироваться
-
 
 		// begin sidebar
 		.main__content_sidebar
@@ -275,9 +276,12 @@ block content
 
 				.sale__list_inform Количество промокодов:
 					span.sale__list_number 5
+
+				.sale__list_reg Нужно:
+					a(href="autorization.html") войти или зарегистрироваться
 					
 				// begin sale__list 
-				.sale__list.js_more_wrap
+				.sale__list.js_more_wrap.sale__list_first
 					
 					// Row 1
 					.sale__list_row.js_more_item
