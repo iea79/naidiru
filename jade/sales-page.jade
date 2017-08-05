@@ -26,12 +26,23 @@ block content
 			// end breadcrumb
 			
 			div
-				.b__hashtag_list.b__hashtag_list-nothash
+				.b__hashtag_list.b__hashtag_list-nothash.b__hashtag_list-last
 					.b__hashtag_label Показать:
-					a.b__hashtag_item.ib(href="#") Одежда и обувь
-					a.b__hashtag_item.ib(href="#") Лучшие предложения
-					a.b__hashtag_item.ib(href="#") Техника и Электроника
-					a.b__hashtag_item.ib(href="#") Детские товары и Игрушки
+					a.b__hashtag_link(href="#") 
+						span Поделиться 
+					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Одежда и обувь
+					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Лучшие предложения
+					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Техника и Электроника
+					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Детские товары и Игрушки
+					select
+						option 
+							a(href="#") Одежда и обувь
+						option 
+							a(href="#") Лучшие предложения
+						option 
+							a(href="#") Техника и Электроника
+						option 
+							a(href="#") Детские товары и Игрушки
 	.container_center.sales__page
 
 		h1.ind Лучшие предложения сегодня
@@ -53,7 +64,7 @@ block content
 			// begin slider__grid 
 			.sales__page_grid
 				// Slide 1
-				.slider__item
+				.slider__item.slider__item_last
 					.slider__grid_img
 						img(src="img/most1.png", alt="")
 					.slider__grid_text
@@ -63,7 +74,7 @@ block content
 						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
 				// Slide 2
-				.slider__item
+				.slider__item.slider__item_last
 					.slider__grid_img
 						img(src="img/most2.png", alt="")
 						.slider__grid_overlay 
@@ -76,7 +87,7 @@ block content
 							a(href="#") Lamoda
 						|Смартфон Самсунг со скидкой -45%!
 				// Slide 3
-				.slider__item
+				.slider__item.slider__item_last
 					.slider__grid_img
 						img(src="img/most3.png", alt="")
 						.slider__grid_overlay 
@@ -90,7 +101,7 @@ block content
 						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
 				// Slide 4
-				.slider__item
+				.slider__item.slider__item_last
 					.slider__grid_img
 						img(src="img/most4.png", alt="")
 						.slider__grid_overlay 
@@ -102,9 +113,9 @@ block content
 							|Магазин: 
 							a(href="#") Lamoda
 						|Смартфон Самсунг со скидкой -45%!
-
+				
 				// Slide 1
-				.slider__item
+				.slider__item.slider__item_last.slider__item_last_new
 					.slider__grid_img
 						img(src="img/most1.png", alt="")
 					.slider__grid_text
@@ -114,7 +125,7 @@ block content
 						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
 				// Slide 2
-				.slider__item
+				.slider__item.slider__item_last.slider__item_last_new
 					.slider__grid_img
 						img(src="img/most2.png", alt="")
 						.slider__grid_overlay 
@@ -127,7 +138,7 @@ block content
 							a(href="#") Lamoda
 						|Смартфон Самсунг со скидкой -45%!
 				// Slide 3
-				.slider__item
+				.slider__item.slider__item_last.slider__item_last_new
 					.slider__grid_img
 						img(src="img/most3.png", alt="")
 						.slider__grid_overlay 
@@ -141,7 +152,7 @@ block content
 						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
 				// Slide 4
-				.slider__item
+				.slider__item.slider__item_last.slider__item_last_new
 					.slider__grid_img
 						img(src="img/most4.png", alt="")
 						.slider__grid_overlay 
@@ -159,14 +170,17 @@ block content
 						img(src="img/hero3lg.png", alt="")
 					.shoppel__save_content
 						.shoppel__save_top
-							.shoppel__save_right
-								a(href="#").btn.btn__danger Зарегистрироваться
-								.shoppel__save_auth У вас есть свой аккаунт? 
-									a(href="#") Войти
+							
 							.shoppel__save_left
-								.shoppel__save_title Экономьте по полной
-								.shoppel__save_text Зарегистрируйтесь и узнавайте первым о лучших купонах. 
-									span.txt__danger + Участвуйте в ежемесячных розыгрышах и получите шанс выиграть подарок мечты!
+								.shoppel__save_text-block
+									.shoppel__save_title Экономьте по полной
+									.shoppel__save_text Зарегистрируйтесь и узнавайте первым о лучших купонах. 
+										span.txt__danger + Участвуйте в ежемесячных розыгрышах и получите шанс выиграть подарок мечты!
+								.shoppel__save_right
+									a(href="#").btn.btn__danger Зарегистрироваться
+									.shoppel__save_auth У вас есть свой аккаунт? 
+										a(href="#") Войти 
+											span в аккаунт &gt;
 
 						.shoppel__save_bottom.
 							Это Шоппел - супергерой Найди.ру. Она помогает экономить тысячам людям по всей России. Каждый день, она находить супер-купоны и рассылает их своим подписчикам. Будьте с ней всегда на связи, зарегистрируйтесь!
@@ -183,7 +197,7 @@ block content
 						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
 				// Slide 2
-				.slider__item
+				.slider__item.slider__item_last_new
 					.slider__grid_img
 						img(src="img/most2.png", alt="")
 						.slider__grid_overlay 
@@ -196,7 +210,7 @@ block content
 							a(href="#") Lamoda
 						|Смартфон Самсунг со скидкой -45%!
 				// Slide 3
-				.slider__item
+				.slider__item.slider__item_last_new
 					.slider__grid_img
 						img(src="img/most3.png", alt="")
 						.slider__grid_overlay 
@@ -210,7 +224,7 @@ block content
 						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
 				// Slide 4
-				.slider__item
+				.slider__item.slider__item_last_new
 					.slider__grid_img
 						img(src="img/most4.png", alt="")
 						.slider__grid_overlay 
@@ -222,115 +236,116 @@ block content
 							a(href="#") Lamoda
 						|Смартфон Самсунг со скидкой -45%!
 
-			h2.ind Скидки на одежду и обувь
+			.new__sales_page_wrapper
+				h2.ind Скидки на одежду и обувь
 
-			// begin slider__grid 
-			.sales__page_grid
-				// Slide 1
-				.slider__item
-					.slider__grid_img
-						img(src="img/most1.png", alt="")
-					.slider__grid_text
-						.slider__grid_name
-							|Магазин: 
-							a(href="#") Lamoda
-						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+				// begin slider__grid 
+				.sales__page_grid
+					// Slide 1
+					.slider__item
+						.slider__grid_img
+							img(src="img/most1.png", alt="")
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
-				// Slide 2
-				.slider__item
-					.slider__grid_img
-						img(src="img/most2.png", alt="")
-						.slider__grid_overlay 
-							|1240р. 
-							span 2120р.
-						.slider__item_promo -30%
-					.slider__grid_text
-						.slider__grid_name
-							|Магазин: 
-							a(href="#") Lamoda
-						|Смартфон Самсунг со скидкой -45%!
-				// Slide 3
-				.slider__item
-					.slider__grid_img
-						img(src="img/most3.png", alt="")
-						.slider__grid_overlay 
-							|1240р. 
-							span 2120р.
-						.slider__item_promo -40%
-					.slider__grid_text
-						.slider__grid_name
-							|Магазин: 
-							a(href="#") Lamoda
-						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+					// Slide 2
+					.slider__item
+						.slider__grid_img
+							img(src="img/most2.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo -30%
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Смартфон Самсунг со скидкой -45%!
+					// Slide 3
+					.slider__item
+						.slider__grid_img
+							img(src="img/most3.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo -40%
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
-				// Slide 4
-				.slider__item
-					.slider__grid_img
-						img(src="img/most4.png", alt="")
-						.slider__grid_overlay 
-							|1240р. 
-							span 2120р.
-						.slider__item_promo.slider__item_promo-hot
-					.slider__grid_text
-						.slider__grid_name
-							|Магазин: 
-							a(href="#") Lamoda
-						|Смартфон Самсунг со скидкой -45%!
+					// Slide 4
+					.slider__item
+						.slider__grid_img
+							img(src="img/most4.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo.slider__item_promo-hot
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Смартфон Самсунг со скидкой -45%!
 
-			h2.ind Скидки на технику и электронику
+				h2.ind Скидки на технику и электронику
 
-			// begin slider__grid 
-			.sales__page_grid
-				// Slide 1
-				.slider__item
-					.slider__grid_img
-						img(src="img/most1.png", alt="")
-					.slider__grid_text
-						.slider__grid_name
-							|Магазин: 
-							a(href="#") Lamoda
-						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+				// begin slider__grid 
+				.sales__page_grid
+					// Slide 1
+					.slider__item
+						.slider__grid_img
+							img(src="img/most1.png", alt="")
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
-				// Slide 2
-				.slider__item
-					.slider__grid_img
-						img(src="img/most2.png", alt="")
-						.slider__grid_overlay 
-							|1240р. 
-							span 2120р.
-						.slider__item_promo -30%
-					.slider__grid_text
-						.slider__grid_name
-							|Магазин: 
-							a(href="#") Lamoda
-						|Смартфон Самсунг со скидкой -45%!
-				// Slide 3
-				.slider__item
-					.slider__grid_img
-						img(src="img/most3.png", alt="")
-						.slider__grid_overlay 
-							|1240р. 
-							span 2120р.
-						.slider__item_promo -40%
-					.slider__grid_text
-						.slider__grid_name
-							|Магазин: 
-							a(href="#") Lamoda
-						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+					// Slide 2
+					.slider__item
+						.slider__grid_img
+							img(src="img/most2.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo -30%
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Смартфон Самсунг со скидкой -45%!
+					// Slide 3
+					.slider__item
+						.slider__grid_img
+							img(src="img/most3.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo -40%
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
-				// Slide 4
-				.slider__item
-					.slider__grid_img
-						img(src="img/most4.png", alt="")
-						.slider__grid_overlay 
-							|1240р. 
-							span 2120р.
-						.slider__item_promo.slider__item_promo-hot
-					.slider__grid_text
-						.slider__grid_name
-							|Магазин: 
-							a(href="#") Lamoda
-						|Смартфон Самсунг со скидкой -45%!
+					// Slide 4
+					.slider__item
+						.slider__grid_img
+							img(src="img/most4.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo.slider__item_promo-hot
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Смартфон Самсунг со скидкой -45%!
 
 	.white__line
 		.container_center
