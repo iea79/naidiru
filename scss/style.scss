@@ -5106,10 +5106,13 @@
 				display: none !important;
 			}
 		}
-		&__grid {
+		&__grid_small {
 			margin-top: -5px;
+			// margin-left: -20px;
 			.slider__item {
-				width: 160px;
+				// width: 160px;
+				padding: 0 10px;
+				outline: 0;
 			}
 			&_overlay {
 			    padding: 6px 12px;
@@ -5139,15 +5142,16 @@
 				&-arrow {
 					background-color: #fff;
 					// top: 44px;
-					top: 14%;
+					top: 50%;
+					margin-top: -52px;
 					width: 38px;
 					height: 105px;
 				}
 			}
-			&__grid {
+			&__grid_small {
 				// margin-top: -5px;
 				.slider__item {
-					width: 160px !important;
+					// width: 160px !important;
 				}
 			}
 		}

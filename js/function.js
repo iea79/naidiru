@@ -84,7 +84,7 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		dots: true,
 		// centerMode: true,
-		// variableWidth: true,
+		variableWidth: true,
 		responsive: [
 			{
 				breakpoint: 1199,
@@ -121,30 +121,71 @@ $(document).ready(function() {
 		]
 	});
 
-	function hideSliderArrow() {
-		var slider = $('.slider__grid');
-		var sliderItem = slider.find('.slider__item');
+	$('.slider__grid_small').slick({
+		infinite: false,
+		// lazyLoad: 'progressive',
+		slidesToShow: 7,
+		slidesToScroll: 1,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 6,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
+	function hideSliderArrow(el) {
+		var slider = el;
+		var sliderItem = slider.find('.slick-slide');
+		var firstSlide = sliderItem.first();
+		var lastSlide = sliderItem.last();
 		var itemCount = $.each(sliderItem, function(index, val) {
 			 count =+ index;
 		});
 
 		last = count;
-
+		var currentSlide = slider.slick('slickCurrentSlide');
+		console.log(currentSlide)
 
 		slider.on('afterChange', function(){
 
-			var currentSlide = slider.slick('slickCurrentSlide');
-			var lastSlide = sliderItem.last();
+			var thisSlide = slider.slick('slickCurrentSlide');
+			console.log(thisSlide)
 
-			if(currentSlide==0) {
+			if(firstSlide.hasClass('slick-active')) {
 				$('.slick-prev').hide();
 				$('.slick-next').show();
-			} else if(currentSlide==last) {
+			} else if(thisSlide==last) {
 				$('.slick-next').hide();
 				$('.slick-prev').show();
 			}
 
-			if(currentSlide>0 && currentSlide<last)
+			if(thisSlide>0 && thisSlide<last)
 			{
 			   $('.slick-prev').show();
 			   $('.slick-next').show();
@@ -156,17 +197,21 @@ $(document).ready(function() {
 
 		});
 
-		var currentSlide = slider.slick('slickCurrentSlide');
 		if(currentSlide==0) {
 		   $('.slick-prev').hide();
 		} else if(currentSlide==last) {
 			$('.slick-next').hide();
 		}
 
-
 	}
 
-	hideSliderArrow();
+	if ($('div').is('.js-slider-arrow')) {
+		hideSliderArrow($('.js-slider-arrow'));
+	}
+
+	if ($('div').is('.category__slider')) {
+		hideSliderArrow($('.category__slider'));
+	}
 
 	$('.slider__sidebar').slick({
 		infinite: true,
@@ -574,7 +619,7 @@ $(document).ready(function() {
 	// Страница категорий category.html - Доработать хелп в верхнем слайдере
     $('.category__slider_hellip').on('click touchend', function(event) {
     	event.preventDefault();
-		$('.category__slider_help').toggleClass('open');
+    	$(this).closest('.category__slider_item').find('.category__slider_help').toggleClass('open');
 	});
 
 	// Страница категорий category.html - Поделиться в соц.сетях
