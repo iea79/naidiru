@@ -1,0 +1,137 @@
+/* Sales page ============================ */
+.sales__page {
+	.ind {
+		margin-top: 50px;
+		margin-bottom: 25px;
+	}
+	&_aside {
+		float: right;
+		width: 14%;
+		min-width: 70px;
+		padding-top: 20px;
+		.b__article_top {
+			float: right;
+		}
+	}
+	&_content {
+		overflow: hidden;
+		padding-top: 20px;
+	}
+	&_grid {
+		@include flexbox();
+		@include flex-flow(row wrap);
+		@extend %clear_all;
+		margin-left: -80px;
+		&>* {
+			padding-left: 80px;
+			padding-bottom: 55px;
+		}
+		.slider {
+			&__item {
+				@include flex-basis(24.9%);
+				&_promo {
+					width: 68px;
+					height: 68px;
+					background-color: $success-color;
+					color: #fff;
+					font-size: 18px;
+					line-height: 68px;
+					display: block;
+					position: absolute;
+					text-align: center;
+					@include border-radius(50%);
+					position: absolute;
+					top: -20px;
+					left: -30px;
+					&-hot {
+						background: image-url('promo-hot.png') no-repeat center center $danger-color;
+					}
+					&-gift {
+						background: image-url('promo-gift.png') no-repeat center center $warning-color;
+					}
+				}
+			}
+			&__grid {
+				&_img {
+					overflow: initial;
+					img {
+						display: block;
+						width: 100%;
+					}
+				}
+				&_overlay {
+					font-size: 18px;
+					padding: 10px 13px;
+					span {
+						font-size: 14px;
+					}
+				}
+				&_text {
+					font-size: 15px;
+					padding: 10px 0 0;
+				}
+				&_name {
+					font-size: 13px;
+				}
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		&_grid {
+			margin-left: -20px;
+			&>* {
+				padding-left: 20px;
+				padding-bottom: 30px;
+			}
+			.slider {
+				&__item {
+					@include flex-basis(49.9%);
+					&_promo {
+						left: 10px;
+						top: 10px;
+						width: 50px;
+						height: 50px;
+						line-height: 50px;
+						font-size: 16px;
+					}
+				}
+			}
+		}
+		&_aside {
+
+		}
+	}
+	@media (max-width: 767px) {
+		padding-left: 10px;
+		padding-right: 10px;
+		&_grid {
+			margin-left: -10px;
+			&>* {
+				padding-left: 10px;
+			}
+		}
+		&_aside {
+			float: none;
+			margin-bottom: 15px;
+			width: 100%;
+			padding-top: 0;
+			.b__article_top {
+				padding-bottom: 0;
+				margin-bottom: 0;
+				float: none;
+				&_left {
+					width: auto;
+				}
+			}
+		}
+		&_content {
+			overflow: initial;
+		}
+		.ind {
+			margin-top: 20px;
+			margin-bottom: 5px;
+			padding: 0;
+			text-align: center;
+		}
+	}
+}

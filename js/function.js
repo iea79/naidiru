@@ -74,6 +74,7 @@ $(document).ready(function() {
 		infinite: false,
 		slidesToShow: 4,
 		slidesToScroll: 1,
+		// variableWidth: true,
 		responsive: [
 			{
 				breakpoint: 1199,
@@ -199,6 +200,44 @@ $(document).ready(function() {
 		]
 	});
 
+	$('.slider__grid_medium').slick({
+		infinite: false,
+		// lazyLoad: 'progressive',
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
 	function hideSliderArrow(el) {
 		var slider = el;
 		var sliderItem = slider.find('.slick-slide');
@@ -249,6 +288,10 @@ $(document).ready(function() {
 
 	if ($('div').is('.slider__grid_small')) {
 		hideSliderArrow($('.slider__grid_small'));
+	}
+
+	if ($('div').is('.slider__grid_medium')) {
+		hideSliderArrow($('.slider__grid_medium'));
 	}
 
 	if ($('div').is('.category__slider')) {
@@ -678,15 +721,15 @@ $(document).ready(function() {
 	// Страница категорий category.html - Показать другие категории
     $('.category__top_list1_trigger').on('click touchend', function(event) {
     	event.preventDefault();
-    	$('.category__top_list1_trigger').toggleClass('active');
+    	$(this).toggleClass('active');
 		$('.category__top_list1_wrap').toggleClass('open');
 	});
 
 	// Страница категорий category.html - Подписаться на категорию
-    $('.category__top_list1_trigger').on('click touchend', function(event) {
-    	event.preventDefault();
-		$('.category__top_list1_wrap').toggleClass('open');
-	});
+ //    $('.category__top_list1_trigger').on('click touchend', function(event) {
+ //    	event.preventDefault();
+	// 	$('.category__top_list1_wrap').toggleClass('open');
+	// });
 
 	// Страница FAQ faq.html - Показать ответ - нужно доработать
     $('.category__top_right_subscribe').on('click touchend', function(event) {
@@ -695,7 +738,14 @@ $(document).ready(function() {
 	});
 
     // Страница бренда brand.html - Хелпы на промокодах - Нужно доработать
-    $('.sale__list_top_help').on('click touchend', function(event) {
+    $('.sale__list_top_help').on('click', function() {
+    	$(this).find('.sale__list_top_text').addClass('open');
+    });
+    $('.sale__list_top_text').mouseleave(function() {
+    	$(this).removeClass('open');
+    });
+
+    $('.faq_question').on('click touchend', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).siblings('.faq_answer').toggleClass('open');

@@ -1,6 +1,8 @@
-//- Подключаем общий шаблон
 extends template.jade
-//- Меняем Home на название страницы
+
+block variables
+	- bodyClass = "sitemap"
+
 block title
 	title Карта сайта
 
