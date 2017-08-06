@@ -548,6 +548,7 @@ $(document).ready(function() {
 	// Страница категорий category.html - Показать другие категории
     $('.category__top_list1_trigger').on('click touchend', function(event) {
     	event.preventDefault();
+    	$('.category__top_list1_trigger').toggleClass('active');
 		$('.category__top_list1_wrap').toggleClass('open');
 	});
 
