@@ -964,6 +964,7 @@
 			overflow: hidden;
 			img {
 				display: block;
+				width: 100%;
 			}
 		}
 		&_overlay {
@@ -4669,7 +4670,7 @@
 		font-size: 14px;
 	}
 	&.open {
-		&_item {
+		.sidebar__section_list_item {
 			&:nth-child(n+6) {
 				display: block;
 			}
