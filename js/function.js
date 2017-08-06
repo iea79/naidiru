@@ -84,7 +84,7 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		dots: true,
 		// centerMode: true,
-		variableWidth: true,
+		// variableWidth: true,
 		responsive: [
 			{
 				breakpoint: 1199,
@@ -120,6 +120,53 @@ $(document).ready(function() {
 			}
 		]
 	});
+
+	function hideSliderArrow() {
+		var slider = $('.slider__grid');
+		var sliderItem = slider.find('.slider__item');
+		var itemCount = $.each(sliderItem, function(index, val) {
+			 count =+ index;
+		});
+
+		last = count;
+
+
+		slider.on('afterChange', function(){
+
+			var currentSlide = slider.slick('slickCurrentSlide');
+			var lastSlide = sliderItem.last();
+
+			if(currentSlide==0) {
+				$('.slick-prev').hide();
+				$('.slick-next').show();
+			} else if(currentSlide==last) {
+				$('.slick-next').hide();
+				$('.slick-prev').show();
+			}
+
+			if(currentSlide>0 && currentSlide<last)
+			{
+			   $('.slick-prev').show();
+			   $('.slick-next').show();
+			}
+
+			if (lastSlide.hasClass('slick-active')) {
+				$('.slick-next').hide();
+			}
+
+		});
+
+		var currentSlide = slider.slick('slickCurrentSlide');
+		if(currentSlide==0) {
+		   $('.slick-prev').hide();
+		} else if(currentSlide==last) {
+			$('.slick-next').hide();
+		}
+
+
+	}
+
+	hideSliderArrow();
 
 	$('.slider__sidebar').slick({
 		infinite: true,
@@ -371,27 +418,10 @@ $(document).ready(function() {
 		$('.shops__sort_abc').toggleClass('open');
 	});
 
-	// Страница Все промокоды all-promocodes.html - Фильтр промокодов
+    // Страница Все промокоды all-promocodes.html - Фильтр промокодов
     $('.sale__list_trigger').on('click touchend', function(event) {
     	event.preventDefault();
 		$('.sidebar__section_wrap').toggleClass('open');
-	});
-
-     // Страница Все промокоды all-promocodes.html - Сайдбар.Показать больше - доработать
-    $('.js-more-link').on('click touchend', function(event) {
-    	event.preventDefault();
-		$('.sidebar__section_list').toggleClass('open');
-	});
-
-	// Страница Все промокоды all-promocodes.html - Всплывашка нужно войти и зарегистрироваться при нажатии на звездочку (не авторизированный пользователь)
-    $('.sale__list_save').on('click touchend', function(event) {
-    	event.preventDefault();
-		$('.sale__list_first').toggleClass('enter');
-		$('.sale__list_reg').addClass('open');
-	});
-	 $('.sale__list_reg a').on('click touchend', function(event) {
-    	event.preventDefault();
-		$('.sale__list_reg').removeClass('open');
 	});
 
     // office.html Показать/скрыть подтвержденные покупки - не работает
@@ -491,6 +521,8 @@ $(document).ready(function() {
     	theme: 'tooltipster-noir',
     });
 
+    $('.js-more-text').hide();
+
     $('.js-more-link').on('click', function(event) {
     	event.preventDefault();
     	var wrap = $(this).closest('.js-more-wrapper');
@@ -502,10 +534,16 @@ $(document).ready(function() {
     		if (textOpen != null) {
     			$(this).html(textOpen)
     		}
+    		if (wrap.find('.js-more-text')) {
+			    $('.js-more-text').show();
+    		}
     	} else {
     		wrap.removeClass('open');
     		if (textClose != null) {
     			$(this).html(textClose)
+    		}
+    		if (wrap.find('.js-more-text')) {
+			    $('.js-more-text').hide();
     		}
     	}
     });
@@ -542,7 +580,7 @@ $(document).ready(function() {
 	// Страница категорий category.html - Поделиться в соц.сетях
     $('.sm_social_trigger').on('click touchend', function(event) {
     	event.preventDefault();
-		$('.social__down').toggleClass('open');
+		$('.category__top_right_top').toggleClass('open');
 	});
 
 	// Страница категорий category.html - Показать другие категории
@@ -552,13 +590,13 @@ $(document).ready(function() {
 		$('.category__top_list1_wrap').toggleClass('open');
 	});
 
-	// Страница категорий category.html - Список подкатегорий в сайдбаре
+	// Страница категорий category.html - Подписаться на категорию
     $('.category__top_list1_trigger').on('click touchend', function(event) {
     	event.preventDefault();
 		$('.category__top_list1_wrap').toggleClass('open');
 	});
 
-	// Страница категорий category.html - Подписаться на категорию
+	// Страница FAQ faq.html - Показать ответ - нужно доработать
     $('.category__top_right_subscribe').on('click touchend', function(event) {
     	event.preventDefault();
     	$('.category__top_right_subscribe').toggleClass('active');
@@ -582,12 +620,6 @@ $(document).ready(function() {
     	event.preventDefault();
     	$('.brand__trigger').toggleClass('active');
 		$('.brand__info_mobil').toggleClass('open');
-	});
-
-	 // Страница бренда brand.html - Магазин в/из список Любимых
-    $('.brand__top_right_subscribe').on('click touchend', function(event) {
-    	event.preventDefault();
-    	$('.brand__top_right_subscribe').toggleClass('active');
 	});
 
 	$('.accordeon__text').hide();
