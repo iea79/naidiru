@@ -10284,7 +10284,7 @@
 	&_item {
 		padding: 30px 0;
 		border-bottom: 1px solid #dadada;
-		@extend %clear_a;
+		@extend %clear_all;
 		&:last-child {
 			border: 0;
 		}
@@ -10529,29 +10529,42 @@
 //  brand__info Блок 3
 .brand__info {
 	&_conditions {
+		float: left;
+		padding-right: 5%;
+		border-bottom: none;
 		line-height: 1.2;
+		max-width: 310px;
+		width: 25%;
+		&+.brand__info_item:not(.brand__info_conditions) {
+			border-top: 1px solid #dadada;
+			clear: both;
+		}
 		@extend %clear_a;
 		&_item {
 			float: left;
-			&:nth-child(2) {
-				width: 235px;
-			}
-			&:nth-child(4) {
-				width: 230px;
-				margin-left: 67px;
-			}
-			&:nth-child(6) {
-				width: 165px;
-				margin-left: 71px;
-			}
-			&:nth-child(8) {
-				width: 195px;
-				margin-left: 75px;
-			}
+			// &:nth-child(2) {
+			// 	width: 235px;
+			// }
+			// &:nth-child(4) {
+			// 	width: 230px;
+			// 	margin-left: 67px;
+			// }
+			// &:nth-child(6) {
+			// 	width: 165px;
+			// 	margin-left: 71px;
+			// }
+			// &:nth-child(8) {
+			// 	width: 195px;
+			// 	margin-left: 75px;
+			// }
 		}
 		&_name { 
 			margin-bottom: 13px;
 			font-size: 18px;
+		}
+		.brand__contact_item {
+			height: auto !important;
+			min-height: 29px;
 		}
 	}
 	@media (max-width: 1199px) {
@@ -10560,7 +10573,7 @@
 				&:nth-child(4),
 				&:nth-child(6),
 				&:nth-child(8) {
-					margin-left: 35px;
+					// margin-left: 35px;
 				}
 			}
 		}
@@ -10568,18 +10581,25 @@
 	@media (max-width: 991px) {
 		&_conditions {
 			margin-left: 0;
+			width: 50%;
+			max-width: none;
+			min-height: 260px;
+			float: none;
+			&+.brand__info_item:not(.brand__info_conditions) {
+				border-top: none;
+			}
 			&_item {
-				width: 35% !important;
-				height: 170px;
-				margin-bottom: 50px;
-				margin-left: 5% !important;
+				// width: 35% !important;
+				// height: 170px;
+				// margin-bottom: 50px;
+				// margin-left: 5% !important;
 				&:nth-child(6),
 				&:nth-child(8) {
 					margin-bottom: 0;
 				}
 				&:nth-child(4),
 				&:nth-child(8) {
-					margin-left: 15% !important;
+					// margin-left: 15% !important;
 				}
 			}
 		}
@@ -10587,6 +10607,7 @@
 	@media (max-width: 767px) {
 		&_conditions {
 			width: 100%;
+			min-height: initial;
 			&_item {
 				width: 235px !important;
 				float: none;

@@ -210,12 +210,10 @@ $(document).ready(function() {
 
 		last = count;
 		var currentSlide = slider.slick('slickCurrentSlide');
-		console.log(currentSlide)
 
 		slider.on('afterChange', function(){
 
 			var thisSlide = slider.slick('slickCurrentSlide');
-			console.log(thisSlide)
 
 			if(firstSlide.hasClass('slick-active')) {
 				$('.slick-prev').hide();
@@ -661,9 +659,14 @@ $(document).ready(function() {
 	});
 
 	// Страница категорий category.html - Доработать хелп в верхнем слайдере
-    $('.category__slider_hellip').on('click touchend', function(event) {
+    $('.category__slider_hellip').on('mouseenter', function(event) {
     	event.preventDefault();
-    	$(this).closest('.category__slider_item').find('.category__slider_help').toggleClass('open');
+    	$(this).closest('.category__slider_item').find('.category__slider_help').addClass('open');
+	});
+
+    $('.category__slider_help').on('mouseleave', function(event) {
+    	event.preventDefault();
+    	$(this).removeClass('open');
 	});
 
 	// Страница категорий category.html - Поделиться в соц.сетях
@@ -707,8 +710,8 @@ $(document).ready(function() {
 	// Страница бренда brand.html - Скрытые информационные блоки в мобильной части - Доработатьg
     $('.brand__trigger').on('click touchend', function(event) {
     	event.preventDefault();
-    	$('.brand__trigger').toggleClass('active');
-		$('.brand__info_mobil').toggleClass('open');
+    	$(this).toggleClass('active');
+		$(this).parent().find('.brand__info_mobil').toggleClass('open');
 	});
 
 	$('.accordeon__text').hide();
