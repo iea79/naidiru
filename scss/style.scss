@@ -579,7 +579,7 @@
 			position: absolute;
 			// top: 31px;
 			// left: 19px;
-			top: 8px;
+			top: 21px;
 			left: -32px;
 			background: image-url('mobile-menu.svg') no-repeat center center;
 			&:hover,&.active {
@@ -745,7 +745,7 @@
 				display: block;
 				position: absolute;
 				right: 18px;
-				top: 8px;
+				top: 21px;
 				cursor: pointer;
 			}
 		}
@@ -7950,13 +7950,12 @@
 			margin-left: 0;
 		}
 		&_item {
-			width: 280px !important;
 			margin-left: auto;
 			margin-right: auto;
 			@include opacity(1);
 		}
 		.slick-track {
-			width: 100% !important;
+			// width: 100% !important;
 		}
 	}
 }
@@ -10857,11 +10856,6 @@
 }
 // end brand__info
 
-
-
-.container_center {
-	position: relative;
-}
 
 
 .promo__header {
