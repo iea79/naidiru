@@ -571,13 +571,19 @@ $(document).ready(function() {
     $('.sale__list_trigger').on('click touchend', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
-		$('.sidebar__section_wrap').toggleClass('open');
+		$(this).parent().find('.sidebar__section_wrap').toggleClass('open');
 	});
 
     $('.sale__list_save').on('click', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
     });
+
+	 // Страница Все промокоды all-promocodes.html - всплывашка при нажатии на звезду
+    $('sale__list_save').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.sale__list_reg').toggleClass('open');
+	});
 
     // office.html Показать/скрыть подтвержденные покупки - не работает
     $('.office__history_confirmed_hide').click(function(e) {
