@@ -51,7 +51,7 @@ block content
 							span.large Вы накопили: 
 								span.bold.points 2120 
 							span.bold баллов
-						p До лотереи Вам осталось набрать: <br>
+						p До        Вам осталось набрать: <br>
 							span.large.bold.points__left 2880 
 							span.bold баллов
 					.sm_social
@@ -77,7 +77,7 @@ block content
 			.sidebar__section
 				.office__menu
 					.office__item
-						a.office__link.active(href="#") Ваши лотереи и покупки
+						a.office__link.active(href="#") Ваши ШопКарты и покупки &gt;
 					.office__item
 						a.office__link(href="office-news.html") Написать нам + новости
 					.office__item
@@ -85,19 +85,19 @@ block content
 					.office__item
 						a.office__link(href="office-settings.html") Настройки рассылки
 					.office__item
-						a.office__link(href="#") Розыгрыш призов
+						a.office__link(href="#") Как получить подарок?
 					.office__item
 						a.office__link(href="#") Выйти из аккаунта
 			.sidebar__section
-				.sidebar__section_name Поменяйте чек на лотерею
-				p Чтобы получить лотерею, нужно подвердить покупку чеком
+				.sidebar__section_name Поменяйте чек на ШопКарту
+				p Чтобы получить ШопКарту, нужно подвердить покупку чеком
 				button.btn.btn__danger Отправить чек
 			.sidebar__section
-				.sidebar__section_name Лента победителей
+				.sidebar__section_name Лента обладателей подарка
 				p Розыгрыш апрель-2017:
 				.office__winners_wrap
 					.office__winners.scrollbar-inner
-						.office__winners_title Выиграли: Смартфон 
+						.office__winners_title Подарок: Смартфон 
 							span.office__winners_amount (2)
 						.office__winners_list
 							.office__winners_item
@@ -110,7 +110,7 @@ block content
 								.office__winners_info
 									.user-name Светлана
 									.lottery-number # A17_414724
-						.office__winners_title Выиграли: Косметику 
+						.office__winners_title Подарок: Косметика 
 							span.office__winners_amount (25)
 						.office__winners_list
 							.office__winners_item
@@ -253,7 +253,7 @@ block content
 								.office__winners_info
 									.user-name Светлана
 									.lottery-number # A17_414724
-				button.btn.btn__danger Увидеть всех <br>победителей
+				button.btn.btn__danger Посмотреть всех
 		// end sidebar
 
 
@@ -262,34 +262,31 @@ block content
 
 			// begin office__lotteries
 			.office__lotteries
-				.office__lotteries_name Ваши лотерейные билеты
-					a.office__lotteries_how(href="#") Как участвовать в лотерее?
+				.office__lotteries_name ШопКарты покупателя в интернете
+					a.office__lotteries_how(href="#") Что такое ШопКарта?
 				.office__lotteries_list
 					.office__lotteries_item
 						.office__lotteries_p &lowast; &lowast; &lowast;
-						.office__lotteries_p Розыгрыш состоиться:
-						.office__lotteries_p 05
-						.office__lotteries_p марта
-						.office__lotteries_p Лотерейный билет:
-						.lottery-number # A17_05768/321
+						.office__lotteries_p ШопКарта
+						.office__lotteries_p Покупателя в интернете
+						img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
+						.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
 					.office__lotteries_item
 						.office__lotteries_p &lowast; &lowast; &lowast;
-						.office__lotteries_p Розыгрыш состоиться:
-						.office__lotteries_p 05
-						.office__lotteries_p марта
-						.office__lotteries_p Лотерейный билет:
-						.lottery-number # A17_05768/321
+						.office__lotteries_p ШопКарта
+						.office__lotteries_p Покупателя в интернете
+						img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
+						.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
 					.office__lotteries_item
 						.office__lotteries_p &lowast; &lowast; &lowast;
-						.office__lotteries_p Розыгрыш состоиться:
-						.office__lotteries_p 05
-						.office__lotteries_p марта
-						.office__lotteries_p Лотерейный билет:
-						.lottery-number # A17_05768/321
+						.office__lotteries_p ШопКарта
+						.office__lotteries_p Покупателя в интернете
+						img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
+						.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
 					.office__lotteries_item.office__lotteries_last
-						.office__lotteries_last_p Делайте покупки и меняйте чеки на лотереи
-						.office__lotteries_last_p Получите лотерею прямо сейчас, нажав на кнопку ниже &darr;
-						button.btn.btn__danger Получить лотерею
+						.office__lotteries_last_p Делайте покупки и меняйте чеки на ШопКарты
+						.office__lotteries_last_p Получите ШопКарту прямо сейчас, нажав на кнопку ниже &darr;
+						button.btn.btn__danger Получить ШопКарту
 						i.icon__question.big
 			// end office__lotteries
 
@@ -298,10 +295,10 @@ block content
 			.office__ad
 				img.office__ad_right(src="img/office-ad-img.jpg", alt="#")
 				.office__ad_left
-					.office__ad_p Участвуйте в 6 ежемесячном розыгрыше (Апрель)
+					.office__ad_p Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце
 					.office__ad_p Итоги будут подведены: <br>
 						span.office__ad_large 05 апреля
-					p Меняйте баллы на лотереи прямо сейчас, чтобы участвовать в этом розыгрыше. Узнайте, какой подарок можете получить Вы за участие в этом розыгрыше.
+					p Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.
 					button.btn.btn__danger Узнать о подарках<br>этого месяца
 			// end office__ad
 			
@@ -309,7 +306,7 @@ block content
 			// begin office__history
 			.office__history
 				.office__history_name История Ваших покупок
-					span.office__history_note Если вы не видите свою покупку, <br>
+					span.office__history_note Если Вы не видите свою покупку, <br>
 						a.office__history_link(href="#") напишите нам!
 				.office__history_stat_wrap
 					.office__history_stat.scrolled__box
@@ -340,6 +337,10 @@ block content
 									.office__history_td 132 648 р.
 									.office__history_td Не подтвержден
 
+								.office__history_help.dn
+									.office__history_help_p Как узнать номер моего заказа?
+									.office__history_help_p Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".
+
 							.office__history_confirmed
 								.office__history_confirmed_name Подтвержденные покупки
 								.office__history_table
@@ -351,7 +352,7 @@ block content
 										.office__history_td Подтвержден
 							a.office__history_confirmed_hide(href="#")
 						.office__history_right
-							.office__history_right_text Чтобы получить лотерею, нужно подвердить покупку чеком
+							.office__history_right_text Чтобы получить ШопКарту, нужно подвердить покупку чеком
 							button.confirm__btn.btn.btn__danger
 								.confirm__btn_trigon
 							button.confirm__btn.btn.btn__danger
@@ -408,14 +409,47 @@ block content
 
 			// begin office__raffle
 			.office__raffle
-				.office__raffle_name Условия ежемесячных розыгрышей “Лотерея призов” + 
-					span нужны здесь примеры в картинках
+				.office__raffle_name Условия ежемесячных акций
 
-				.office__raffle_p Каждый месяц на сайте проходят розыгрыши, для того, чтобы участвовать, нужно:
-				.office__raffle_p 1) Перейти в интернет-магазин через сайт Найди.ру<br>2) Совершить покупку на сумму от 5000 рублей или постепенно набрать товары, которые суммой 5000 рублей<br>3) Отправить нам чек, для подверждения покупки, чтобы мы засчитали сумму покупки и зачислили вам баллы (1 рубль - 1 баллу)<br>4) Поменять накомленные баллы на лотерею
-				.office__raffle_p Покупайте и участвуйте в ежемесячных лотереях! 
-					a(href="#") Подробнее о лотерее
+				.office__raffle_p - Участвовать в акции, могут только 
+					a(href="#") зарегистрированные 
+					span пользователи. Перед тем, как совершать покупки в интернете через нас, удостоверьтесь, что Вы 
+					a(href="#") вошли в свой аккаут. 
+					span Это нужно для того, чтобы покупка засчиталась в Вашем Личном Кабинете.
+
+				.office__raffle_p 
+					span.bold - Что нужно, чтобы участовать в акции:<br>
+					span 1) Совершайте покупки в интернет-магазинах по промокодам через нас (Если Вы не нашли промокода, тогда просто перейдите по ссылке, на странице нужного магазина) и сохраняйте чеки от покупок в данном интернет-магазине.
+
+				.office__raffle_p 2) Зайдите в свой Личный кабинет, чтобы убедиться, что покупка засчиталась в Вашем аккаунте, ее можно проверить по №заказа. Далее, сфотографируйте полученный чек от покупки в интернет-магазине так, чтобы там было видно, следующую информацию: Стоимость заказа, Дата покупки, № заказа (если на чеке эта информация есть), Название интернет-магазина, где была совершена покупка. Если Вы, по каким-то причинам не можете прислать фото чека в одном экземпляре или, если Ваша покупка не засчиталась, то, пожалуйста, свяжитесь с нами, для решения этой проблемы.
+
+				.office__raffle_p 3) Пришлите этот чек нам, просто найдите Вашу покупку по №заказа в блоке “История Ваших покупок” и нажмите на кнопку “Подтвердить чеком”, которая находиться на одной линией с этой покупкой.
+
+				.office__raffle_p 4) Мы проверим Ваш чек, если информация на чеке совпадает с информацией нашей системы, то мы подтвреждаем Вам чек и автоматически, на Ваш Личный кабинет, засчитываются баллы, который будут равные к сумме покупки. Т.е. если Вы купили в интернет-магазине на 3000 руб., то Вам зачислиться 3000 баллов после подтверждения чеком.
+
+				.office__raffle_p 5) Накопите 5000 баллов = 5000 руб. (общая сумма покупки в интернет-магазине), поменяйте их на одну ШопКарту и участвуйте в акции. Если Вы купили, например: на 15000 руб., то Вы можете поменять их сразу на три ШопКарты, после подтверждения покупки чеком. *Баллы не сгорают, даже после завершения акции этого месяца. Они, только дают возможность накопить, для того чтобы поменять их на ШопКарты. *Баллы можно менять, только на ШопКарты и их нельзя получить в виде подарка в денежном эквиваленте.
+
+				.office__raffle_p - За участие в акции этого месяца, каждый пользователь, получит, гарантированный подарок, а именно 500 баллов на счет в Личном кабинете.
 			// end office__raffle
+
+
+			// begin office__shopcard 
+			.office__shopcard
+				.office__shopcard_left
+					img.office__shopcard_img(src="shopcard.jpg", alt="#")
+
+				.office__shopcard_right
+					.office__shopcard_p 
+						span.bold Что такое ШопКарта?<br>
+						span - Это карточка покупателя в интернете, которая говорит, только об одном, Вы участвуйте в акции этого месяца. <br>*И чем больше ШопКарт Вы получите в этом месяце, тем выше вероятность, что подарок в этом месяце, получите именно Вы. После подведения итогов акции, Шопкарты снимаются с Личного кабинета всех пользователей, для того, чтобы пользователь начал собирать новые ШопКарты для участия в акции следующего месяца.
+
+					.office__shopcard_p - Если пользователь получил в этом месяце подарок, то он должен, написать об этом отзыв в соц.сетях или на 
+						a(href="reviews.html") странице отзывов на сайте Найди.ру.
+
+					.office__shopcard_p - В акции могут участвовать, все дееспособные пользователи, достигшие 18 лет.
+					
+					.office__shopcard_p	- Доставка подарка за пределы территории РФ, оплачивает сам пользователь.			
+			// end office__shopcard 
 
 
 			.line
