@@ -11421,6 +11421,18 @@
 	text-align: center;
 	float: left;
 	margin: 22px 0 40px; 
+	position: relative;
+	.recovery {
+		width: 100%;
+		position: absolute;
+		height: auto;
+		z-index: 1;
+		left: 0;
+		top: 94%;
+		background: #e8e7e7;
+		border-top: 1px solid #d1d1d1;
+		display: none;
+	}
 	.title__content__3 {
 		font-size: 21px;
 		text-align: left;
@@ -11452,7 +11464,6 @@
 		font-size: 14px;
 		padding: 6px 0 19px;
 		a {
-			text-decoration: none;
 			display: inline;
 		}
 	}
@@ -11510,10 +11521,42 @@
 			right: 0;
 			top: 19%;
 		}
+		&_icon_add {
+			&_vk-new {
+				background: url(../img/ic-vk_img.png) no-repeat center center;
+			}
+			&_ok-new {
+				background: url(../img/ic-ok_img.png) no-repeat center center;
+			}
+			&_fb-new {
+				background: url(../img/ic-fb-img.png) no-repeat center center;
+			}
+			&_google-plus {
+				background: url(../img/ic-google_plus.png) no-repeat center center;
+			}
+		}
 	}
 	@media (max-width: 991px) {
 		.lg_social {
 			margin-left: 0;
+			width: 272px;
+			margin-top: 20px;
+			display: block;
+			margin: 20px auto 0;
+		}
+	}
+	@media (max-width: 767px) {
+		.lg_social {
+			width: 350px;
+		}
+	}
+	@media (max-width: 479px) {
+		.lg_social {
+			max-width: 260px;
+		}
+		.social__arrow {
+			width: 270px;
+			margin: 0 auto;
 		}
 	}
 }
@@ -11534,8 +11577,13 @@
 	.sign-in {
 		margin-right: 10px;
 		width: 48%;
-		padding: 50px 15px 27px;
+		padding: 50px 20px 27px;
 		text-align: center;
+		min-height: 437px;
+		.recovery {
+			min-height: 0;
+			top: 92%;
+		}
 	}
 }
 @media (max-width: 767px) {

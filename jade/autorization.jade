@@ -12,7 +12,7 @@ block content
 			.white__line_form
 				.breadcrumb
 					li
-						a(href="/") Главная
+						a(href="/") Главная 
 					li
 						a(href="/") Авторизация или Регистрация
 				h2 Войдите в аккаунт или Зарегистрируйтесь
@@ -29,7 +29,19 @@ block content
 									input(type="password", placeholder="Введите пароль", id="oe2")
 					a.btn.btn__danger(href="#") Войти в аккаунт
 					.sign-in__link Забыли пароль? 
-						a(href="#") Восстановить пароль
+						a#link-content(href="#") Восстановить пароль
+						
+
+					#main-content.recovery.sign-in
+						.title__content__3 Забыли пароль
+						.office__edit_section_info
+							.office__edit_list
+								.office__edit_list_col
+									.office__edit_row
+										.office__edit_label(for="oe11") E-mail
+										input(type="email", placeholder="Введите Ваш e-mail", id="oe1")
+						a.btn.btn__danger(href="#") Восстановить пароль
+
 				.sign-up.sign-in
 					.title__content__3 Регистрация на сайте
 					.office__edit_section_info
@@ -42,21 +54,22 @@ block content
 					a.btn.btn__danger(href="#") Зарегистрироваться
 					.sign-in__link Регистрируясь, я соглашаюсь с 
 						a(href="#") Условиями использования сайта.
+
 				.social
 					.social__arrow
 						.social__text__p Или войдите в аккаунт / зарегистрируйтесь через социальные сети
 						.social__triangle
 					.lg_social
 						.lg_social_icon
-							.ya-share2(data-services="vkontakte")
+							button.lg_social_icon_add.lg_social_icon_add_vk-new.btn
 						.lg_social_icon
-							.ya-share2(data-services="odnoklassniki")
-						.lg_social_icon
-							button.lg_social_icon_add.btn
+							button.lg_social_icon_add.lg_social_icon_add_ok-new.btn
 						.lg_social_icon
 							button.lg_social_icon_add.btn
 						.lg_social_icon
-							.ya-share2(data-services="facebook")
+							button.lg_social_icon_add.btn
 						.lg_social_icon
-							.ya-share2(data-services="gplus")
+							button.lg_social_icon_add.lg_social_icon_add_fb-new.btn
+						.lg_social_icon
+							button.lg_social_icon_add.lg_social_icon_add_google-plus.btn
 						i.icon__question.big

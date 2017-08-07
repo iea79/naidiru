@@ -129,6 +129,20 @@ $(document).ready(function() {
 		dots: false
 	});
 
+	var menuBtn = $('#link-content');
+	var menu = $('#main-content');
+
+	$(menuBtn).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+	// $(window).resize(function() {
+	// 	var wind = $(window).width();
+	// 	if(wind > 760 && menu.is(':hidden')) {
+	// 		menu.removeAttr('style');
+	// 	}
+	// });
+
 	$('.js_more_btn ').on('click', function(event) {
 		event.preventDefault();
 		$(this).closest('.js_more_wrap').find('.js_more_item').show();
