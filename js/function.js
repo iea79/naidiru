@@ -607,9 +607,9 @@ $(document).ready(function() {
       		item.addClass('open');
         }
     });
-    $('.office__checks_edit_hide').on('mouseleave', function() {
-    	$(this).removeClass('open');
-    });
+    // $('.office__checks_edit_hide').on('mouseleave', function() {
+    // 	$(this).removeClass('open');
+    // });
 
     // office.html - office__menu767
 	var touch4 = $('.office__menu_trigger');
@@ -706,6 +706,33 @@ $(document).ready(function() {
     		if (wrap.find('.js-more-text')) {
 			    $('.js-more-text').hide();
     		}
+    	}
+    });
+
+    $('.office__settings_shops').on('change', '.checkbox__input', function() {
+
+    	var checked = $(this).is(':checked');
+    	var checkbox = $(this).closest('.office__settings_checkbox');
+
+    	if (checked) {
+	    	checkbox.appendTo('.office__settings_checked_shop');
+    	} else {		
+	    	checkbox.appendTo('.office__settings_unchecked_shop');
+    	}
+    });
+
+    $('.office__settings_info_subscribe').on('change', '.checkbox__input', function() {
+    	var unsubscribe = $('.office__settings_info_unsubscribe').is(':checked');
+    	var otherCheck = $('.office__settings_info_subscribe .checkbox__input:not(.office__settings_info_unsubscribe)');
+
+    	// if (otherCheck.is(':checked')) {
+    	// 	// unsubscribe.removeAttr('checked');
+	    // 	console.log('other checked');
+    	// }
+    	if (unsubscribe) {
+    		// unsubscribe.attr('checked', 'checked');
+	    	otherCheck.removeAttr('checked');
+	    	// console.log('checked');
     	}
     });
 

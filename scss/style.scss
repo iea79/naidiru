@@ -5017,16 +5017,17 @@
 		color: #fff;
 		font-weight: 700;
 		&:nth-child(1) {
-			margin-bottom: 4px;
-			font-size: 16px;
+			margin-bottom: 8px;
+			font-size: 10px;
+			margin-top: 3px;;
 		}
 		&:nth-child(2) {
-			margin-bottom: -3px;
+			margin-bottom: 4px;
 			font-size: 15px;
 		}
 		&:nth-child(3) {
-			margin-bottom: -12px;
-			font-size: 82px;
+			margin-bottom: 10px;
+			font-size: 34px;
 		}
 		&:nth-child(4) {
 			margin-bottom: 17px;
@@ -5034,7 +5035,7 @@
 		}
 		&:nth-child(5) {
 			margin-bottom: 8px;
-			font-size: 17px;
+			font-size: 13px;
 		}
 	}
 	&_last {
@@ -5053,6 +5054,10 @@
 			margin-top: 20px;
 			@include border-radius(0);
 		}
+	}
+	&_img {
+		width: 50px;
+		margin-bottom: 15px;
 	}
 	.icon__question {
 		top: 7px;
@@ -5399,6 +5404,11 @@
 // begin office_checks
 .office__checks {
 	padding-bottom: 18px;
+	&.open {
+		.office__checks_item {
+			display: block;
+		}
+	}
 	&_name {
 		margin-bottom: 5px;
 		font-size: 21px;
@@ -5415,20 +5425,22 @@
 		z-index: 1;
 		margin-left: 20px;
 		margin-top: 22px;
+		&:nth-child(n+6) {
+			display: none;
+		}
 	}
 	&_img {
 		position: relative;
 		z-index: 2;
 		height: 161px;
 		@include flex-basis(160px);
-		&:before {
-			content: 'Не проверен';
+		&_status {
 			position: absolute;
 			bottom: 0;
 			left: 0;
 			width: 108px;
-			height: 22px;
-			padding-top: 5px;
+			font-size: 14px;
+			padding: 3px 5px;
 			display: block;
 			color: #fff;
 			text-align: center;
@@ -5455,26 +5467,20 @@
 	}
 	&_item.confirmed {
 		.office__checks_img {
-			&:before {
-				content: 'Подтвержден';
-			}
 			&:after {
-				content: '✓';
+				content: image-url('check.svg');
 				position: absolute;
 				height: 33px;
 				padding-top: 1px;
 				color: $muted-color;
-				background-color: $success-color;
+				background-color: $muted-color;
 			}
 		}
 	}
 	&_item.deleted {
 		.office__checks_img {
-			&:before {
-				content: 'Отменен';
-			}
 			&:after {
-				content: '×';
+				content: image-url('office_del.svg');
 				height: 34px;
 				padding-top: 0;
 				font-size: 30px;

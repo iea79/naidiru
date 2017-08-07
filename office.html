@@ -480,11 +480,13 @@
             <!-- end office__history-->
             
             <!-- begin office_checks-->
-            <div class="office__checks">
+            <div class="office__checks js-more-wrapper">
               <div class="office__checks_name">Ваши чеки</div>
               <div class="office__checks_list">
                 <div class="office__checks_item">
-                  <div class="office__checks_img"><img src="img/check1.jpg" alt="#"/></div>
+                  <div class="office__checks_img"><img src="img/check1.jpg" alt="#"/>
+                    <div class="office__checks_img_status">Не проверено</div>
+                  </div>
                   <div class="office__checks_info">
                     <p>№ заказа:</p>
                     <p class="order__number">KGF521GH581F</p>
@@ -493,34 +495,69 @@
                   <div class="office__checks_edit_hide"><a href="#" class="office__checks_edit_hide_btn">Удалить чек</a><a href="#" class="office__checks_edit_hide_btn">Редактировать</a></div>
                 </div>
                 <div class="office__checks_item confirmed">
-                  <div class="office__checks_img"><img src="img/check2.jpg" alt="#"/></div>
+                  <div class="office__checks_img"><img src="img/check2.jpg" alt="#"/>
+                    <div class="office__checks_img_status">Подтвержден</div>
+                  </div>
                   <div class="office__checks_info">
                     <p>№ заказа:</p>
                     <p class="order__number">Gj52257_4452</p>
                   </div>
                 </div>
                 <div class="office__checks_item deleted">
-                  <div class="office__checks_img"><img src="img/check3.jpg" alt="#"/></div>
+                  <div class="office__checks_img"><img src="img/check3.jpg" alt="#"/>
+                    <div class="office__checks_img_status">Отменен</div>
+                  </div>
                   <div class="office__checks_info">
                     <p>№ заказа:</p>
                     <p class="order__number">Gj52257_4452        </p>
                   </div>
                 </div>
                 <div class="office__checks_item confirmed">
-                  <div class="office__checks_img"><img src="img/check2.jpg" alt="#"/></div>
+                  <div class="office__checks_img"><img src="img/check2.jpg" alt="#"/>
+                    <div class="office__checks_img_status">Подтвержден</div>
+                  </div>
                   <div class="office__checks_info">
                     <p>№ заказа:</p>
                     <p class="order__number">Gj52257_4452</p>
                   </div>
                 </div>
                 <div class="office__checks_item deleted">
-                  <div class="office__checks_img"><img src="img/check3.jpg" alt="#"/></div>
+                  <div class="office__checks_img"><img src="img/check3.jpg" alt="#"/>
+                    <div class="office__checks_img_status">Отменен</div>
+                  </div>
                   <div class="office__checks_info">
                     <p>№ заказа:</p>
                     <p class="order__number">Gj52257_4452</p>
                   </div>
                 </div>
-              </div><a href="#" class="office__checks_show">+ Показать все Вами добавленные чеки</a>
+                <div class="office__checks_item deleted">
+                  <div class="office__checks_img"><img src="img/check3.jpg" alt="#"/>
+                    <div class="office__checks_img_status">Отменен</div>
+                  </div>
+                  <div class="office__checks_info">
+                    <p>№ заказа:</p>
+                    <p class="order__number">Gj52257_4452        </p>
+                  </div>
+                </div>
+                <div class="office__checks_item confirmed">
+                  <div class="office__checks_img"><img src="img/check2.jpg" alt="#"/>
+                    <div class="office__checks_img_status">Подтвержден</div>
+                  </div>
+                  <div class="office__checks_info">
+                    <p>№ заказа:</p>
+                    <p class="order__number">Gj52257_4452</p>
+                  </div>
+                </div>
+                <div class="office__checks_item deleted">
+                  <div class="office__checks_img"><img src="img/check3.jpg" alt="#"/>
+                    <div class="office__checks_img_status">Отменен</div>
+                  </div>
+                  <div class="office__checks_info">
+                    <p>№ заказа:</p>
+                    <p class="order__number">Gj52257_4452</p>
+                  </div>
+                </div>
+              </div><a href="#" data-text-open="- Скрыть все Вами добавленные чеки" data-text-close="+ Показать все Вами добавленные чеки" class="office__checks_show js-more-link">+ Показать все Вами добавленные чеки</a>
             </div>
             <!-- end office_checks-->
             

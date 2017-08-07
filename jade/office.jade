@@ -363,12 +363,13 @@ block content
 
 
 			// begin office_checks
-			.office__checks
+			.office__checks.js-more-wrapper
 				.office__checks_name Ваши чеки
 				.office__checks_list
 					.office__checks_item
 						.office__checks_img
 							img(src="img/check1.jpg", alt="#")
+							.office__checks_img_status Не проверено
 						.office__checks_info
 							p № заказа:
 							p.order__number KGF521GH581F
@@ -379,28 +380,53 @@ block content
 					.office__checks_item.confirmed
 						.office__checks_img
 							img(src="img/check2.jpg", alt="#")
+							.office__checks_img_status Подтвержден
 						.office__checks_info
 							p № заказа:
 							p.order__number Gj52257_4452
 					.office__checks_item.deleted
 						.office__checks_img
 							img(src="img/check3.jpg", alt="#")
+							.office__checks_img_status Отменен
 						.office__checks_info
 							p № заказа:
 							p.order__number Gj52257_4452        
 					.office__checks_item.confirmed
 						.office__checks_img
 							img(src="img/check2.jpg", alt="#")
+							.office__checks_img_status Подтвержден
 						.office__checks_info
 							p № заказа:
 							p.order__number Gj52257_4452
 					.office__checks_item.deleted
 						.office__checks_img
 							img(src="img/check3.jpg", alt="#")
+							.office__checks_img_status Отменен
 						.office__checks_info
 							p № заказа:
 							p.order__number Gj52257_4452
-				a.office__checks_show(href="#") + Показать все Вами добавленные чеки
+					.office__checks_item.deleted
+						.office__checks_img
+							img(src="img/check3.jpg", alt="#")
+							.office__checks_img_status Отменен
+						.office__checks_info
+							p № заказа:
+							p.order__number Gj52257_4452        
+					.office__checks_item.confirmed
+						.office__checks_img
+							img(src="img/check2.jpg", alt="#")
+							.office__checks_img_status Подтвержден
+						.office__checks_info
+							p № заказа:
+							p.order__number Gj52257_4452
+					.office__checks_item.deleted
+						.office__checks_img
+							img(src="img/check3.jpg", alt="#")
+							.office__checks_img_status Отменен
+						.office__checks_info
+							p № заказа:
+							p.order__number Gj52257_4452
+				a.office__checks_show.js-more-link(href="#" data-text-open="- Скрыть все Вами добавленные чеки" data-text-close="+ Показать все Вами добавленные чеки") + Показать все Вами добавленные чеки
 			// end office_checks
 
 

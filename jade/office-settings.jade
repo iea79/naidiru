@@ -270,15 +270,15 @@ block content
 					.office__settings_section_top
 						.office__settings_section_h2 Помогите нам стать лучше для Вас, настройте рассылку под себя
 						
-						.office__settings_info
+						.office__settings_info.office__settings_info_subscribe
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os1")
+								input.checkbox__input(type="checkbox" checked id="os1")
 								label.checkbox__label(for="os1") Вы будете получать, информацию о скидках и акциях от любимых магазинов и категорий
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os2")
-								label.checkbox__label(for="os2") Вы будете узнавать, о розыгрышах, новостях и изменениях в Вашем аккаунте
+								input.checkbox__input(type="checkbox" checked id="os2")
+								label.checkbox__label(for="os2") Вы будете узнавать, об акциях, новостях и изменениях в Вашем аккаунте
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os3")
+								input.checkbox__input.office__settings_info_unsubscribe(type="checkbox" id="os3")
 								label.checkbox__label(for="os3") Отписаться от всех рассылок
 							
 						.office__edit_down
@@ -287,7 +287,7 @@ block content
 								button.close
 			
 			.office__settings_section
-				.office__settings_section_info
+				.office__settings_section_info.office__settings_shops
 					.office__settings_section_top
 						.office__settings_section_h2 Вы подписаны на эти магазины
 
@@ -296,27 +296,27 @@ block content
 							и второе нажать на сердечки этих магазинов. И выбранные Вами магазины автоматически сохранятся тут и на этой странице: 
 							a(href="office-shops.html" target="_blank") Любимые магазины.
 
-						.office__settings_list
+						.office__settings_col.office__settings_checked_shop
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os4")
+								input.checkbox__input(type="checkbox" checked id="os4")
 								label.checkbox__label(for="os4") Lamoda
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os5")
+								input.checkbox__input(type="checkbox" checked id="os5")
 								label.checkbox__label(for="os5") Снежная королева
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os6")
+								input.checkbox__input(type="checkbox" checked id="os6")
 								label.checkbox__label(for="os6") Дочки и Сыночки
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os7")
+								input.checkbox__input(type="checkbox" checked id="os7")
 								label.checkbox__label(for="os7") Lamoda
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os8")
+								input.checkbox__input(type="checkbox" checked id="os8")
 								label.checkbox__label(for="os8") Media Markt
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os9")
+								input.checkbox__input(type="checkbox" checked id="os9")
 								label.checkbox__label(for="os9") Ozon
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os10")
+								input.checkbox__input(type="checkbox" checked id="os10")
 								label.checkbox__label(for="os10") Ebay
 
 					.line
@@ -324,7 +324,7 @@ block content
 					.office__settings_section_bottom
 						.office__settings_section_h3 Рекомендуем подписаться на эти магазины
 
-						.office__settings_col
+						.office__settings_col.office__settings_unchecked_shop
 							.office__settings_checkbox.checkbox
 								input.checkbox__input(type="checkbox" id="os11")
 								label.checkbox__label(for="os11") Снежная королева
