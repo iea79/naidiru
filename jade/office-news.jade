@@ -79,7 +79,7 @@ block content
 			.sidebar__section
 				.office__menu
 					.office__item
-						a.office__link.active(href="#") Ваши ШопКарты и покупки &gt;
+						a.office__link.active(href="#") Ваши ШопКарты и покупки
 					.office__item
 						a.office__link(href="office-news.html") Написать нам + новости
 					.office__item
@@ -302,8 +302,8 @@ block content
 									.news__del_p Пока не поздно, ее можно вернуть!
 									button.news__del_restore.btn Восстановить запись
 						.office__news_item.success
-							.office__news_item_name Поздравляем! Вы выиграли!
-							p Вы выиграли в розыгрыше №5, в ближайшее время с Вами свяжется наш менеджер для уточнения информации о получении подарка.
+							.office__news_item_name Поздравляем! Вы получили подарок!
+							p Вы получили подарок в этом месяце, в ближайшее время с Вами свяжется наш менеджер для уточнения информации о получении подарка.
 							.office__news_item_ago
 								span.hours__ago 1 
 								час назад
@@ -364,8 +364,9 @@ block content
 									.news__del_p Пока не поздно, ее можно вернуть!
 									button.news__del_restore.btn Восстановить запись
 						.office__news_item.danger
-							.office__news_item_name Получите лотерею
-							p Вы получили 5000 баллов, Вы можете обменять их на лотерею прямо сейчас! Узнайте подробнее о том, как обменять баллы на лотерейный билет.
+							.office__news_item_name Получите ШопКарту
+							p Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! Узнайте подробнее о том, 
+								a(href="#") как обменять баллы на ШопКарту.
 							.office__news_item_ago
 								span.hours__ago 1 
 								час назад
@@ -395,7 +396,12 @@ block content
 							.office__news_support_p Среднее время ожидания ответа - 15 мин.
 						a.office__news_support_link.tooltip(href="#" title="Шоппел - это супергерой Найди.ру. Она знает все о выгодных покупках и с большим удовольствием научит вас экономить. Задайте ей вопрос и она ответит на него в ближайшее время.") Кто такая Шоппел?
 					.office__news_subscription
-						img.office__news_subscription_img(src="img/subscription.jpg", alt="#")
+						//- img.office__news_subscription_img(src="img/subscription.jpg", alt="#")
+						script(type="text/javascript" src="//vk.com/js/api/openapi.js?146")
+						#vk_groups
+						script(type="text/javascript").
+							VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, width: "340", height: "455"}, 45154409);
+
 				// end office__news_right
 
 			// end office__news

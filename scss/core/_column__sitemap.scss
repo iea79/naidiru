@@ -6,6 +6,9 @@
 			padding-left: 15px;
 			padding-right: 15px;
 		}
+		@media (max-width: 684px) {
+			text-align: center;
+		}
 	}
 }
 .column__sitemap {
@@ -36,5 +39,8 @@
 		&+ .column__sitemap {
 			// padding-top: 15px;
 		}
+	}
+	@media (max-width: 684px) {
+		text-align: center;		
 	}
 }

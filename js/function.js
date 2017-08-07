@@ -725,20 +725,25 @@ $(document).ready(function() {
     	var unsubscribe = $('.office__settings_info_unsubscribe').is(':checked');
     	var otherCheck = $('.office__settings_info_subscribe .checkbox__input:not(.office__settings_info_unsubscribe)');
 
-    	// if (otherCheck.is(':checked')) {
-    	// 	// unsubscribe.removeAttr('checked');
-	    // 	console.log('other checked');
-    	// }
     	if (unsubscribe) {
-    		// unsubscribe.attr('checked', 'checked');
 	    	otherCheck.removeAttr('checked');
 	    	// console.log('checked');
     	}
     });
 
+    $('.office__shops_coupons_preferd').on('click', '.sale__list_save', function(event) {
+    	event.preventDefault();
+    	$(this).closest('.sale__list_row').remove();
+    });
+
     $('.grid__item_like').on('click touchend', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
+    });
+
+    $('.reviews__sidebar_trigger').on('click', function() {
+    	$(this).toggleClass('active');
+    	$('.reviews__sidebar').toggleClass('open');
     });
 
     // Плагин Form Styler

@@ -5745,10 +5745,11 @@
 			color: #292929;
 			font-weight: 400;
 			text-align: center;
-			background-color: rgba(40, 147, 229, 0.12);
+			background-color: #fff;
+			// background-color: rgba(40, 147, 229, 0.12);
 			&:hover {
 				background-color: rgba(40, 147, 229, 0.12) !important;
-				opacity: 0.5;
+				// opacity: 0.5;
 			}
 		}
 		&.success,
@@ -5758,6 +5759,13 @@
 			color: #fff;
 			.office__news_item_ago {
 				color: #fff;
+			}
+			a {
+				color: #fff;
+				// text-decoration: underline;
+				&:hover {
+					// text-decoration: none;
+				}
 			}
 		}
 		&.success {
@@ -5996,6 +6004,7 @@
 			font-size: 18px;
 		}
 		&_info {
+			position: relative;
 			padding: 37px 40px 40px;
 			background-color: #fff;
 			border: 1px solid #d1d1d1;
@@ -6037,6 +6046,11 @@
 		&:last-child {
 			position: relative;
 		}
+		&_id {
+			position: absolute;
+			right: 31px;
+			top: 31px;
+		}
 		&_left {
 			width: 90px;
 			float: left;
@@ -6052,6 +6066,11 @@
 			    	padding-top: 9px;
 					color: #fff;
 					background-color: #4d4d4d;
+				}
+				&:hover {
+					.download__file {
+						background-color: lighten(#4d4d4d, 10%);
+					}
 				}
 			}
 		}
@@ -6172,6 +6191,9 @@
 			}
 			&.last {
 				text-align: center;
+			}
+			&_id {
+				position: static;
 			}
 		}
 		&_btn {

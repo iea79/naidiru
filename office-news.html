@@ -155,7 +155,7 @@
           <div class="main__content_sidebar">
             <div class="sidebar__section">
               <div class="office__menu">
-                <div class="office__item"><a href="#" class="office__link active">Ваши ШопКарты и покупки &gt;</a></div>
+                <div class="office__item"><a href="#" class="office__link active">Ваши ШопКарты и покупки</a></div>
                 <div class="office__item"><a href="office-news.html" class="office__link">Написать нам + новости</a></div>
                 <div class="office__item"><a href="office-edit.html" class="office__link">Изменить данные</a></div>
                 <div class="office__item"><a href="office-settings.html" class="office__link">Настройки рассылки</a></div>
@@ -405,8 +405,8 @@
                     </div>
                   </div>
                   <div class="office__news_item success">
-                    <div class="office__news_item_name">Поздравляем! Вы выиграли!</div>
-                    <p>Вы выиграли в розыгрыше №5, в ближайшее время с Вами свяжется наш менеджер для уточнения информации о получении подарка.</p>
+                    <div class="office__news_item_name">Поздравляем! Вы получили подарок!</div>
+                    <p>Вы получили подарок в этом месяце, в ближайшее время с Вами свяжется наш менеджер для уточнения информации о получении подарка.</p>
                     <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div>
                     <div class="office__news_item_impotant">важно</div><a href="#" class="office__news_item_mark"></a>
                     <div class="office__news_item_hide">
@@ -469,8 +469,8 @@
                     </div>
                   </div>
                   <div class="office__news_item danger">
-                    <div class="office__news_item_name">Получите лотерею</div>
-                    <p>Вы получили 5000 баллов, Вы можете обменять их на лотерею прямо сейчас! Узнайте подробнее о том, как обменять баллы на лотерейный билет.</p>
+                    <div class="office__news_item_name">Получите ШопКарту</div>
+                    <p>Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! Узнайте подробнее о том, <a href="#">как обменять баллы на ШопКарту.</a></p>
                     <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div>
                     <div class="office__news_item_impotant">важно</div><a href="#" class="office__news_item_mark"></a>
                     <div class="office__news_item_hide">
@@ -502,7 +502,14 @@
                     <div class="office__news_support_p">Среднее время ожидания ответа - 15 мин.</div>
                   </div><a href="#" title="Шоппел - это супергерой Найди.ру. Она знает все о выгодных покупках и с большим удовольствием научит вас экономить. Задайте ей вопрос и она ответит на него в ближайшее время." class="office__news_support_link tooltip">Кто такая Шоппел?</a>
                 </div>
-                <div class="office__news_subscription"><img src="img/subscription.jpg" alt="#" class="office__news_subscription_img"/></div>
+                <div class="office__news_subscription">
+                  <script type="text/javascript" src="//vk.com/js/api/openapi.js?146"></script>
+                  <div id="vk_groups"></div>
+                  <script type="text/javascript">
+                    VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, width: "340", height: "455"}, 45154409);
+                    
+                  </script>
+                </div>
               </div>
               <!-- end office__news_right-->
             </div>
