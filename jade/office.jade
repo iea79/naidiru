@@ -23,18 +23,13 @@ block content
 			.office__top
 				.office__top_left
 					.office__top_user
-						img.office__top_user_img(src="img/rev2.png", alt="#")
-						.office__top_user_name Александра<br>Иванова
+						.office__top_user_img
+							img(src="img/rev2.png", alt="#")
+						.office__top_user_name
+							.office__top_user_fname Александра 
+							.office__top_user_lname Иванова
 					a.office__top_alarm.open(href="#")
 						.office__top_alarm_number 1
-				.office__top_center
-					p 
-						span.large Вы накопили: 
-							span.bold.points 2120 
-						span.bold баллов
-					p До        Вам осталось набрать: <br>
-						span.large.bold.points__left 2880 
-						span.bold баллов
 				.office__top_right
 					.sm_social
 						.sm_social_icon
@@ -48,8 +43,28 @@ block content
 						.sm_social_icon
 							.ya-share2(data-services="twitter")
 					.office__top_right_links
-						a.office__top_right_link(href="office-coupons.html") Сохраненные<br>купоны
-						a.office__top_right_link(href="office-shops.html") Любимые<br>магазины
+						a.office__top_right_link.office__top_right_link_star(href="office-coupons.html") Сохраненные<br>купоны
+						a.office__top_right_link.office__top_right_link_hart(href="office-shops.html") Любимые<br>магазины
+				.office__top_center
+					.office__top_center_message
+						p 
+							span.large Вы накопили: 
+								span.bold.points 2120 
+							span.bold баллов
+						p До        Вам осталось набрать: <br>
+							span.large.bold.points__left 2880 
+							span.bold баллов
+					.sm_social
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
 			// end office__top
 
 
