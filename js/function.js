@@ -74,6 +74,7 @@ $(document).ready(function() {
 		infinite: false,
 		slidesToShow: 4,
 		slidesToScroll: 1,
+		// variableWidth: true,
 		responsive: [
 			{
 				breakpoint: 1199,
@@ -199,6 +200,44 @@ $(document).ready(function() {
 		]
 	});
 
+	$('.slider__grid_medium').slick({
+		infinite: false,
+		// lazyLoad: 'progressive',
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
 	function hideSliderArrow(el) {
 		var slider = el;
 		var sliderItem = slider.find('.slick-slide');
@@ -210,12 +249,10 @@ $(document).ready(function() {
 
 		last = count;
 		var currentSlide = slider.slick('slickCurrentSlide');
-		console.log(currentSlide)
 
 		slider.on('afterChange', function(){
 
 			var thisSlide = slider.slick('slickCurrentSlide');
-			console.log(thisSlide)
 
 			if(firstSlide.hasClass('slick-active')) {
 				$('.slick-prev').hide();
@@ -253,6 +290,10 @@ $(document).ready(function() {
 		hideSliderArrow($('.slider__grid_small'));
 	}
 
+	if ($('div').is('.slider__grid_medium')) {
+		hideSliderArrow($('.slider__grid_medium'));
+	}
+
 	if ($('div').is('.category__slider')) {
 		hideSliderArrow($('.category__slider'));
 	}
@@ -264,6 +305,20 @@ $(document).ready(function() {
 		arrows: true,
 		dots: false
 	});
+
+	var menuBtn = $('#link-content');
+	var menu = $('#main-content');
+
+	$(menuBtn).on('click', function(e) {
+		e.preventDefault();
+		menu.slideToggle();
+	});
+	// $(window).resize(function() {
+	// 	var wind = $(window).width();
+	// 	if(wind > 760 && menu.is(':hidden')) {
+	// 		menu.removeAttr('style');
+	// 	}
+	// });
 
 	$('.js_more_btn ').on('click', function(event) {
 		event.preventDefault();
@@ -661,9 +716,14 @@ $(document).ready(function() {
 	});
 
 	// Страница категорий category.html - Доработать хелп в верхнем слайдере
-    $('.category__slider_hellip').on('click touchend', function(event) {
+    $('.category__slider_hellip').on('mouseenter', function(event) {
     	event.preventDefault();
-    	$(this).closest('.category__slider_item').find('.category__slider_help').toggleClass('open');
+    	$(this).closest('.category__slider_item').find('.category__slider_help').addClass('open');
+	});
+
+    $('.category__slider_help').on('mouseleave', function(event) {
+    	event.preventDefault();
+    	$(this).removeClass('open');
 	});
 
 	// Страница категорий category.html - Поделиться в соц.сетях
@@ -675,15 +735,15 @@ $(document).ready(function() {
 	// Страница категорий category.html - Показать другие категории
     $('.category__top_list1_trigger').on('click touchend', function(event) {
     	event.preventDefault();
-    	$('.category__top_list1_trigger').toggleClass('active');
+    	$(this).toggleClass('active');
 		$('.category__top_list1_wrap').toggleClass('open');
 	});
 
 	// Страница категорий category.html - Подписаться на категорию
-    $('.category__top_list1_trigger').on('click touchend', function(event) {
-    	event.preventDefault();
-		$('.category__top_list1_wrap').toggleClass('open');
-	});
+ //    $('.category__top_list1_trigger').on('click touchend', function(event) {
+ //    	event.preventDefault();
+	// 	$('.category__top_list1_wrap').toggleClass('open');
+	// });
 
 	// Страница FAQ faq.html - Показать ответ - нужно доработать
     $('.category__top_right_subscribe').on('click touchend', function(event) {
@@ -692,7 +752,14 @@ $(document).ready(function() {
 	});
 
     // Страница бренда brand.html - Хелпы на промокодах - Нужно доработать
-    $('.sale__list_top_help').on('click touchend', function(event) {
+    $('.sale__list_top_help').on('click', function() {
+    	$(this).find('.sale__list_top_text').addClass('open');
+    });
+    $('.sale__list_top_text').mouseleave(function() {
+    	$(this).removeClass('open');
+    });
+
+    $('.faq_question').on('click touchend', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).siblings('.faq_answer').toggleClass('open');
@@ -707,8 +774,8 @@ $(document).ready(function() {
 	// Страница бренда brand.html - Скрытые информационные блоки в мобильной части - Доработатьg
     $('.brand__trigger').on('click touchend', function(event) {
     	event.preventDefault();
-    	$('.brand__trigger').toggleClass('active');
-		$('.brand__info_mobil').toggleClass('open');
+    	$(this).toggleClass('active');
+		$(this).parent().find('.brand__info_mobil').toggleClass('open');
 	});
 
 	$('.accordeon__text').hide();

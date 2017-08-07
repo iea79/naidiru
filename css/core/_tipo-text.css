@@ -1,0 +1,2 @@
+.tipo-text h1:not([class]),.tipo-text h2:not([class]),.tipo-text h3:not([class]),.tipo-text h4:not([class]){margin:19px 0}.tipo-text h1:not([class]){font-size:20px}.tipo-text h2:not([class]){font-size:18px}.tipo-text h3:not([class]){font-size:16px}.tipo-text h4:not([class]){font-size:15px}.tipo-text p:not([class]){margin:19px 0}.tipo-text p:not([class])+h1:not([class]),.tipo-text p:not([class])+h2:not([class]),.tipo-text p:not([class])+h3:not([class]),.tipo-text p:not([class])+h4:not([class]){margin-top:37px}
+/*# sourceMappingURL=_tipo-text.css.map */
