@@ -57,26 +57,32 @@ block content
 									span Перейдите в магазин, чтобы получить баллы и участвовать в розыгрышах
 								.brand__top_down_arrow
 								.brand__top_down_question
-				.category__top_right_top
+				.brand__top_right_top.social__down
 					a.sm_social_trigger(href="#") Поделиться
 					.sm_social
-						.sm_social_in
-							.sm_social_icon
-								.ya-share2(data-services="vkontakte")
-							.sm_social_icon
-								.ya-share2(data-services="facebook")				
-							.sm_social_icon
-								.ya-share2(data-services="odnoklassniki")
-							.sm_social_icon
-								.ya-share2(data-services="gplus")
-							.sm_social_icon
-								.ya-share2(data-services="twitter")
-					.category__top_right_subscribe
-					.category__top_right_reg Чтобы подписаться на магазин, нужно: 
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
+					.brand__top_right_subscribe 
+						.brand__top_right_subscribe_in Любимый магазин 
+							span.del в список Любимых
+						.brand__top_right_subscribe_out Убрать 
+							span.del магазин 
+							span из 
+							span.del списка 
+							span Любимых
+					.brand__top_right_reg Чтобы подписаться на магазин, нужно: 
 						a(href="#") зарегистрироваться или войти &gt;
 				.brand__top_right
 					// begin slider__grid
-					.slider.slider__grid.grid__5
+					.slider.slider__grid_medium.grid__5
 						// Slide 1
 						.slider__item
 							.slider__grid_img
@@ -219,9 +225,9 @@ block content
 							label.checkbox__label(for="pt6") Бесплатная <br>доставка
 								span.promocode__type_number (1)
 				
-				.sidebar__section.js-more-wrapper
+				.sidebar__section
 					.sidebar__section_name Похожие магазины
-					.sidebar__section_list
+					.sidebar__section_list.js-more-wrapper
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Lamoda
 						.sidebar__section_list_item
@@ -232,13 +238,23 @@ block content
 							a.sidebar__section_list_link(href="#") Алиэкспресс
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Wildberries
-					a.sidebar__section_more.js-more-link(href="all-shops.html" target="_blank") + Показать больше
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Lamoda
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Снежная королева
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Nike
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Алиэкспресс
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Wildberries
+						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины") + Показать больше
 				
-				.sidebar__section.js-more-wrapper
+				.sidebar__section
 					.sidebar__section_name Популярные магазины
-					.sidebar__section_list
+					.sidebar__section_list.js-more-wrapper
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Lamoda
+							a.sidebar__section_list_link(href="#") М.видео
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Снежная королева
 						.sidebar__section_list_item
@@ -247,7 +263,17 @@ block content
 							a.sidebar__section_list_link(href="#") Алиэкспресс
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Wildberries
-					a.sidebar__section_more.js-more-link(href="all-shops.html" target="_blank") + Показать больше
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") М.видео
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Снежная королева
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Nike
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Алиэкспресс
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Wildberries
+						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины") + Показать больше
 		// end sidebar
 
 
@@ -899,52 +925,57 @@ block content
 			
 
 			//  brand__info Блок 3
-			.brand__info_item
-				.brand__info_conditions
+			.brand__info_item.brand__info_conditions
 
-					.brand__trigger.mt_20 Контакты магазина
-					.brand__info_conditions_item
-						.brand__info_conditions_name Контакты магазина:
-						.brand__contact.brand__info_mobil
-							.brand__contact_item
-								a(href="http://www.lamoda.ru") http://www.lamoda.ru
-							.brand__contact_item 8(495)783-2010.
-							.brand__contact_item Дмитровское шоссе, 100, строение 2, Москва, 127591.
-							.brand__contact_item
-								a(href="mailto:info@bonprix.ru") info@bonprix.ru.
+				.brand__trigger.mt_20 Контакты магазина
+				.brand__info_conditions_item
+					.brand__info_conditions_name Контакты магазина:
+					.brand__contact.brand__info_mobil
+						.brand__contact_item
+							a(href="http://www.lamoda.ru") http://www.lamoda.ru
+						.brand__contact_item 8(495)783-2010.
+						.brand__contact_item Дмитровское шоссе, 100, строение 2, Москва, 127591.
+						.brand__contact_item
+							a(href="mailto:info@bonprix.ru") info@bonprix.ru.
 					
-					.brand__trigger.mt_20 Способы оплаты
-					.brand__info_conditions_item
-						.brand__info_conditions_name Способы оплаты:
-						.brand__payment.brand__info_mobil
-							.brand__payment_item 
-								span.bold При получении:<br>
-								span - Наличными<br>
-								span - Банковской картой
-							.brand__payment_item 
-								span.bold Онлайн:<br>
-								span - Картой (VISA, MasterCard);<br>
-								span - Платежной системой (PayPal, Яндекс деньги).
+			.brand__info_item.brand__info_conditions
+
+				.brand__trigger.mt_20 Способы оплаты
+				.brand__info_conditions_item
+					.brand__info_conditions_name Способы оплаты:
+					.brand__payment.brand__info_mobil
+						.brand__payment_item 
+							span.bold При получении:<br>
+							span - Наличными<br>
+							span - Банковской картой
+						.brand__payment_item 
+							span.bold Онлайн:<br>
+							span - Картой (VISA, MasterCard);<br>
+							span - Платежной системой (PayPal, Яндекс деньги).
 					
-					.brand__trigger.mt_20 Доставка магазина
-					.brand__info_conditions_item
-						.brand__info_conditions_name Доставка
-						.brand__delivery.brand__info_mobil
-							.brand__delivery_item Средний срок доставки:<br>
-								span.bold 20 дней
-							.brand__delivery_item
-								span - Почта россии<br>
-								span - Курьерская служба (СДЭК, Boxberry)<br>
-								span - Пункт выдачи<br>
-								span - Постамат (PickPoint)
+			.brand__info_item.brand__info_conditions
+
+				.brand__trigger.mt_20 Доставка магазина
+				.brand__info_conditions_item
+					.brand__info_conditions_name Доставка
+					.brand__delivery.brand__info_mobil
+						.brand__delivery_item Средний срок доставки:<br>
+							span.bold 20 дней
+						.brand__delivery_item
+							span - Почта россии<br>
+							span - Курьерская служба (СДЭК, Boxberry)<br>
+							span - Пункт выдачи<br>
+							span - Постамат (PickPoint)
 					
-					.brand__trigger.mt_20 Условия возрата
-					.brand__info_conditions_item
-						.brand__info_conditions_name Условия возврата
-						.brand__return.brand__info_mobil
-							.brand__return_item Товар можно вернуть в течение:
-								span.bold 30 дней
-							.brand__return_item Для этого нужно заполнить специальный бланк и отправить его вместе с товаром на адрес предствителя.
+			.brand__info_item.brand__info_conditions
+
+				.brand__trigger.mt_20 Условия возрата
+				.brand__info_conditions_item
+					.brand__info_conditions_name Условия возврата
+					.brand__return.brand__info_mobil
+						.brand__return_item Товар можно вернуть в течение:
+							span.bold 30 дней
+						.brand__return_item Для этого нужно заполнить специальный бланк и отправить его вместе с товаром на адрес предствителя.
 
 			
 			//  brand__info Блок 4

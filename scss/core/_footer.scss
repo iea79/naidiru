@@ -14,7 +14,7 @@
 	}
 	@extend %clear_all;
 	.container_center {
-		padding-top: 35px;
+		padding-top: 35px !important;
 		// padding-bottom: 10px;
 	}
 	&__grid {
@@ -103,7 +103,7 @@
 	@media (max-width: 767px) {
 		// text-align: center;
 		.container_center {
-			padding: 15px 10px 0px;
+			padding: 15px 10px 0px !important;
 		}
 		&__logo {
 			margin-right: 20px;

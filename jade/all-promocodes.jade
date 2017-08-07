@@ -20,11 +20,27 @@ block content
 			// end breadcrumb
 
 
-			h1.ind Все-все самые лучшие скидки от Ваших любимых магазинов
+			h1.ind 
+				span.desktop Все-все самые лучшие скидки от Ваших любимых магазинов
+				span.laptop Все супер-скидки
 
 
 			// begin all-promocodes__top
 			.all-promocodes__top
+				.all-promocodes__top_right_top.social__down
+					.all-promocodes__top_right_subscribe Все супер-скидки
+					a.sm_social_trigger(href="#") Поделиться
+					.sm_social
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
 				.all-promocodes__top_left
 					img(src="img/promo-img1.jpg", alt="#")
 					.all-promocodes__top_left_text Покупайте <br>и участвуйте <br>в ежемесячных <br>розыгрышах
@@ -35,34 +51,23 @@ block content
 							.grid__wrapper
 								a.grid__item(href="#")
 									img(src="img/cat1.png", alt="")
-									p Смартфоны
+									p Детские товары
 							.grid__wrapper
 								a.grid__item(href="#")
 									img(src="img/cat2.png", alt="")
+									p Бытовая техника
+							.grid__wrapper
+								a.grid__item(href="#")
+									img(src="img/cat3.png", alt="")
 									p Одежда
 							.grid__wrapper
 								a.grid__item(href="#")
-									img(src="img/cat4.png", alt="")
-									p Смартфоны
-							.grid__wrapper
-								a.grid__item(href="#")
 									img(src="img/cat5.png", alt="")
-									p Смартфоны
+									p Аксессуары
 					// end sidebar__coupon
 				a.all-promocodes__top_right
 					img.all-promocodes__top_right_img(src="img/promo-img2.jpg", alt="#")
 					.all-promocodes__top_right_text Весенняя распродажа
-				.sm_social.down
-					.sm_social_icon
-						.ya-share2(data-services="vkontakte")
-					.sm_social_icon
-						.ya-share2(data-services="facebook")				
-					.sm_social_icon
-						.ya-share2(data-services="odnoklassniki")
-					.sm_social_icon
-						.ya-share2(data-services="gplus")
-					.sm_social_icon
-						.ya-share2(data-services="twitter")
 			// end all-promocodes__top
 
 
@@ -101,9 +106,9 @@ block content
 							input.checkbox__input(type="checkbox" id="pt6")
 							label.checkbox__label(for="pt6") Бесплатная <br>доставка
 								span.promocode__type_number (1)
-				.sidebar__section.js-more-wrapper
+				.sidebar__section
 					.sidebar__section_name Популярные магазины
-					.sidebar__section_list
+					.sidebar__section_list.js-more-wrapper
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") М.видео
 						.sidebar__section_list_item
@@ -114,15 +119,28 @@ block content
 							a.sidebar__section_list_link(href="#") Алиэкспресс
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Wildberries
-					a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины") + Показать больше
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") М.видео
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Снежная королева
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Nike
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Алиэкспресс
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Wildberries
+						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины") + Показать больше
 				.sidebar__section.js-more-wrapper
 					.sidebar__section_name Лучшие скидки
 					.sidebar__section_p Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.
 					.sidebar__section_p Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши
+					.js-more-text
+						.sidebar__section_p Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.
+						.sidebar__section_p Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши
 					a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть текст") + Показать больше
-				.sidebar__section.js-more-wrapper
+				.sidebar__section
 					.sidebar__section_name Найдите скидку на нужный товар:
-					.sidebar__section_list
+					.sidebar__section_list.js-more-wrapper
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Одежда
 						.sidebar__section_list_item
@@ -143,7 +161,7 @@ block content
 							a.sidebar__section_list_link(href="#") Зоотовары
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Дом, мебель, сад
-					a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть категории") + Показать больше
+						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть категории") + Показать больше
 		// end sidebar
 
 
@@ -157,10 +175,10 @@ block content
 					span.sale__list_number 5
 
 				.sale__list_reg Нужно:
-					a(href="#") войти или зарегистрироваться
+					a(href="autorization.html") войти или зарегистрироваться
 					
 				// begin sale__list 
-				.sale__list.js_more_wrap
+				.sale__list.js_more_wrap.sale__list_first
 					
 					// Row 1
 					.sale__list_row.js_more_item

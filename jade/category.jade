@@ -25,7 +25,9 @@ block content
 			// begin category__top
 			.category__top
 				.category__top_left
-					a.category__top_list1_trigger(href="#") Показать другие категории
+					a.category__top_list1_trigger(href="#") 
+						span.show Показать другие категории
+						span.close Закрыть категории
 					.category__top_list1_wrap
 						.category__top_list1_name Другие категории
 						.category__top_list1
@@ -78,7 +80,7 @@ block content
 							a(href="#") Подробнее о розыгрыше &gt;
 				.category__top_right
 					h1.ind Скидки на кухонные комбайны
-					.category__top_right_top
+					.category__top_right_top.social__down
 						a.sm_social_trigger(href="#") Поделиться
 						.sm_social
 							.sm_social_icon
@@ -91,102 +93,119 @@ block content
 								.ya-share2(data-services="gplus")
 							.sm_social_icon
 								.ya-share2(data-services="twitter")
-						.category__top_right_subscribe
+						.category__top_right_subscribe 
+							.category__top_right_subscribe_in Подписаться 
+								span на категорию
+							.category__top_right_subscribe_out Отписаться 
+								span от категории
 						.category__top_right_reg Чтобы подписаться на категорию, нужно: 
 							a(href="#") зарегистрироваться или войти &gt;
 					.category__top_img
 						img(src="img/category-bg2.jpg", alt="#")
 					.category__slider_name Найдите скидку на нужный товар
 
-
+					
 					// begin slider__grid
-					.slider.slider__grid.category__slider
+					.slider.category__slider
 						// Slide 1
-						.category__slider_item
-							.category__slider_img
-								img(src="img/cat-sl1.jpg", alt="#")
-							.category__slider_info Кухонные комбайны
-							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
-							button.btn.category__slider_hellip
-							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
-								a(href="#") Подробнее о лотерее &gt;
+						.category__slider_wrap
+							.category__slider_item
+								.category__slider_img
+									img(src="img/cat-sl1.jpg", alt="#")
+								.category__slider_info Кухонные комбайны
+								a.btn.category__slider_btn(href="#") Все купоны 
+									span &gt;&gt;
+								button.btn.category__slider_hellip
+								.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+									a(href="#") Подробнее о лотерее &gt;
 						// Slide 2
-						.category__slider_item
-							.category__slider_img
-								img(src="img/cat-sl2.jpg", alt="#")
-							.category__slider_info 
-								span Все скидки на 
-								Телевизоры
-							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
-							button.btn.category__slider_hellip
-							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
-								a(href="#") Подробнее о лотерее &gt;
+						.category__slider_wrap
+							.category__slider_item
+								.category__slider_img
+									img(src="img/cat-sl2.jpg", alt="#")
+								.category__slider_info 
+									span Все скидки на 
+									Телевизоры
+								a.btn.category__slider_btn(href="#") Все купоны 
+									span &gt;&gt;
+								button.btn.category__slider_hellip
+								.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+									a(href="#") Подробнее о лотерее &gt;
 						// Slide 3
-						.category__slider_item
-							.category__slider_img
-								img(src="img/cat-sl3.jpg", alt="#")
-							.category__slider_info Samsung <br> 
-								span все скидки марки
-							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
-							button.btn.category__slider_hellip
-							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
-								a(href="#") Подробнее о лотерее &gt;
+						.category__slider_wrap
+							.category__slider_item
+								.category__slider_img
+									img(src="img/cat-sl3.jpg", alt="#")
+								.category__slider_info Samsung <br> 
+									span все скидки марки
+								a.btn.category__slider_btn(href="#") Все купоны 
+									span &gt;&gt;
+								button.btn.category__slider_hellip
+								.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+									a(href="#") Подробнее о лотерее &gt;
 						// Slide 4
-						.category__slider_item
-							.category__slider_img
-								img(src="img/cat-sl4.jpg", alt="#")
-							.category__slider_info Кухонные комбайны
-							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
-							button.btn.category__slider_hellip
-							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
-								a(href="#") Подробнее о лотерее &gt;
+						.category__slider_wrap
+							.category__slider_item
+								.category__slider_img
+									img(src="img/cat-sl4.jpg", alt="#")
+								.category__slider_info Кухонные комбайны
+								a.btn.category__slider_btn(href="#") Все купоны 
+									span &gt;&gt;
+								button.btn.category__slider_hellip
+								.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+									a(href="#") Подробнее о лотерее &gt;
 						// Slide 5
-						.category__slider_item
-							.category__slider_img
-								img(src="img/cat-sl1.jpg", alt="#")
-							.category__slider_info Кухонные комбайны
-							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
-							button.btn.category__slider_hellip
-							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
-								a(href="#") Подробнее о лотерее &gt;
+						.category__slider_wrap
+							.category__slider_item
+								.category__slider_img
+									img(src="img/cat-sl1.jpg", alt="#")
+								.category__slider_info Кухонные комбайны
+								a.btn.category__slider_btn(href="#") Все купоны 
+									span &gt;&gt;
+								button.btn.category__slider_hellip
+								.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+									a(href="#") Подробнее о лотерее &gt;
 						// Slide 6
-						.category__slider_item
-							.category__slider_img
-								img(src="img/cat-sl2.jpg", alt="#")
-							.category__slider_info 
-								span Все скидки на 
-								Телевизоры
-							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
-							button.btn.category__slider_hellip
-							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
-								a(href="#") Подробнее о лотерее &gt;
+						.category__slider_wrap
+							.category__slider_item
+								.category__slider_img
+									img(src="img/cat-sl2.jpg", alt="#")
+								.category__slider_info 
+									span Все скидки на 
+									Телевизоры
+								a.btn.category__slider_btn(href="#") Все купоны 
+									span &gt;&gt;
+								button.btn.category__slider_hellip
+								.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+									a(href="#") Подробнее о лотерее &gt;
 						// Slide 7
-						.category__slider_item
-							.category__slider_img
-								img(src="img/cat-sl3.jpg", alt="#")
-							.category__slider_info Samsung <br> 
-								span все скидки марки
-							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
-							button.btn.category__slider_hellip
-							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
-								a(href="#") Подробнее о лотерее &gt;
+						.category__slider_wrap
+							.category__slider_item
+								.category__slider_img
+									img(src="img/cat-sl3.jpg", alt="#")
+								.category__slider_info Samsung <br> 
+									span все скидки марки
+								a.btn.category__slider_btn(href="#") Все купоны 
+									span &gt;&gt;
+								button.btn.category__slider_hellip
+								.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+									a(href="#") Подробнее о лотерее &gt;
 						// Slide 8
-						.category__slider_item
-							.category__slider_img
-								img(src="img/cat-sl4.jpg", alt="#")
-							.category__slider_info Кухонные комбайны
-							a.btn.category__slider_btn(href="#") Все купоны &gt;&gt;
-							button.btn.category__slider_hellip
-							.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
-								a(href="#") Подробнее о лотерее &gt;
+						.category__slider_wrap
+							.category__slider_item
+								.category__slider_img
+									img(src="img/cat-sl4.jpg", alt="#")
+								.category__slider_info Кухонные комбайны
+								a.btn.category__slider_btn(href="#") Все купоны 
+									span &gt;&gt;
+								button.btn.category__slider_hellip
+								.category__slider_help Покупайте и участвуйте в ежемесячных лотереях. 
+									a(href="#") Подробнее о лотерее &gt;
 					// end slider__grid
 
 			// end category__top
 
 	.container_center.main
-
-		.sale__list_reg Нужно:
-			a(href="#") войти или зарегистрироваться
 
 
 		// begin sidebar
@@ -222,9 +241,9 @@ block content
 							input.checkbox__input(type="checkbox" id="pt6")
 							label.checkbox__label(for="pt6") Бесплатная <br>доставка
 								span.promocode__type_number (1)
-				.sidebar__section.js-more-wrapper
-					.sidebar__section_name В каких магазинах можно купить:
-					.sidebar__section_list
+				.sidebar__section
+					.sidebar__section_name Популярные магазины
+					.sidebar__section_list.js-more-wrapper
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") М.видео
 						.sidebar__section_list_item
@@ -245,26 +264,41 @@ block content
 							a.sidebar__section_list_link(href="#") Алиэкспресс
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Wildberries
+						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины") + Показать больше
 				.sidebar__section.js-more-wrapper
-					.sidebar__section_name Кухонные комбайны
+					.sidebar__section_name Лучшие скидки
 					.sidebar__section_p Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.
 					.sidebar__section_p Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши
+					.js-more-text
+						.sidebar__section_p Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.
+						.sidebar__section_p Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши
 					a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть текст") + Показать больше
-				.sidebar__section.js-more-wrapper
-					.sidebar__section_name Популярные магазины
-					.sidebar__section_list
+				.sidebar__section
+					.sidebar__section_name Найдите скидку на нужный товар:
+					.sidebar__section_list.js-more-wrapper
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Lamoda
+							a.sidebar__section_list_link(href="#") Одежда
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Снежная королева
+							a.sidebar__section_list_link(href="#") Обувь
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Nike
+							a.sidebar__section_list_link(href="#") Аксессуары
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Алиэкспресс
+							a.sidebar__section_list_link(href="#") Бытовая техника
 						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Wildberries
-					a.sidebar__section_more.js-more-link(href="all-shops.html" target="_blank") + Показать больше
+							a.sidebar__section_list_link(href="#") Электроника
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Детские товары и<br>Игрушки
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Спортивные товары
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Путешествия и<br>Развлечения
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Зоотовары
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Дом, мебель, сад
+						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть категории") + Показать больше
 		// end sidebar
+
 
 
 		// begin main__content_center
@@ -275,9 +309,12 @@ block content
 
 				.sale__list_inform Количество промокодов:
 					span.sale__list_number 5
+
+				.sale__list_reg Нужно:
+					a(href="autorization.html") войти или зарегистрироваться
 					
 				// begin sale__list 
-				.sale__list.js_more_wrap
+				.sale__list.js_more_wrap.sale__list_first
 					
 					// Row 1
 					.sale__list_row.js_more_item
@@ -740,7 +777,7 @@ block content
 				a(href="#").btn.btn__danger Смотреть все  &gt;&gt;
 
 			// begin slider__grid
-			.slider.slider__grid
+			.slider.slider__grid_small.js-slider-arrow
 				// Slide 1
 				.slider__item
 					.slider__grid_img
@@ -764,6 +801,80 @@ block content
 						.slider__grid_name
 							a(href="#") Lamoda
 						|Скидка -50% на одежду!                                     
+
+				// Slide 3
+				.slider__item
+					.slider__grid_img
+						img(src="img/most3.png", alt="#")
+						.slider__grid_overlay.dn 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							a(href="#") Снежная королева
+						|Скидка -50% на одежду!
+
+
+				// Slide 4
+				.slider__item
+					.slider__grid_img
+						img(src="img/most5.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name 
+							a(href="#") Lamoda
+						|Скидка -50% на одежду!
+
+				// Slide 5
+				.slider__item
+					.slider__grid_img
+						img(src="img/most2.png", alt="#")
+						.slider__grid_overlay.dn
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							a(href="#") Lamoda
+						|Скидка -50% на одежду!              
+
+				// Slide 6
+				.slider__item
+					.slider__grid_img
+						img(src="img/most1.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							a(href="#") Lamoda
+						|Скидка -50% на одежду для дома!
+
+				// Slide 7
+				.slider__item
+					.slider__grid_img
+						img(src="img/most3.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name 
+							a(href="#") Снежная королева
+						|Скидка -50% на одежду!
+
+
+				// Slide 8
+				.slider__item
+					.slider__grid_img
+						img(src="img/most4.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name 
+							a(href="#") Lamoda
+						|Скидка -50% на одежду!
 
 				// Slide 3
 				.slider__item

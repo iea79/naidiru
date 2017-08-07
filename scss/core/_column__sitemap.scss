@@ -1,0 +1,40 @@
+/* Sitemap ========================= */
+.sitemap {
+	.ind {
+		@media (max-width: 767px) {
+			margin-top: 0;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+.column__sitemap {
+	margin: 30px 0 30px;
+	&+ .column__sitemap {
+		padding-top: 29px;
+		border-top: 1px solid #dadada;
+	}
+	&_title {
+		color: $main-color;
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	&_item {
+		display: block;
+		// width: 96%;
+		vertical-align: top;
+		margin-bottom: 30px;
+	}
+	&_link {
+		display: block;
+		margin-bottom: 8px;
+	}
+	@media (max-width: 767px) {
+		padding-left: 15px;
+		padding-right: 15px;
+		margin: 15px 0;
+		&+ .column__sitemap {
+			// padding-top: 15px;
+		}
+	}
+}

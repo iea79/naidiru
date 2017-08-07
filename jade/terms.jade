@@ -1,6 +1,8 @@
-//- Подключаем общий шаблон
 extends template.jade
-//- Меняем Home на название страницы
+
+block variables
+	- bodyClass = "terms"
+
 block title
 	title Пользовательское соглашение и правила покупок
 

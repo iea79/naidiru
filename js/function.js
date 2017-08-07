@@ -70,6 +70,47 @@ $(document).ready(function() {
     //     });
     // });
 
+    $('.category__slider').slick({
+		infinite: false,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		// variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 1199,
+				settings: {
+					// variableWidth: false,
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					variableWidth: false,
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					variableWidth: false,
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					variableWidth: false,
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+    })
+
 	$('.slider__fullwide').slick({
 		// infinite: true,
 		slidesToShow: 1,
@@ -84,7 +125,7 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		dots: true,
 		// centerMode: true,
-		variableWidth: true,
+		// variableWidth: true,
 		responsive: [
 			{
 				breakpoint: 1199,
@@ -120,6 +161,142 @@ $(document).ready(function() {
 			}
 		]
 	});
+
+	$('.slider__grid_small').slick({
+		infinite: false,
+		// lazyLoad: 'progressive',
+		slidesToShow: 7,
+		slidesToScroll: 1,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 6,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 4,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
+	$('.slider__grid_medium').slick({
+		infinite: false,
+		// lazyLoad: 'progressive',
+		slidesToShow: 6,
+		slidesToScroll: 1,
+		dots: true,
+		responsive: [
+			{
+				breakpoint: 1199,
+				settings: {
+					slidesToShow: 5,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 991,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1
+				}
+			}
+		]
+	});
+
+	function hideSliderArrow(el) {
+		var slider = el;
+		var sliderItem = slider.find('.slick-slide');
+		var firstSlide = sliderItem.first();
+		var lastSlide = sliderItem.last();
+		var itemCount = $.each(sliderItem, function(index, val) {
+			 count =+ index;
+		});
+
+		last = count;
+		var currentSlide = slider.slick('slickCurrentSlide');
+
+		slider.on('afterChange', function(){
+
+			var thisSlide = slider.slick('slickCurrentSlide');
+
+			if(firstSlide.hasClass('slick-active')) {
+				$('.slick-prev').hide();
+				$('.slick-next').show();
+			} else if(thisSlide==last) {
+				$('.slick-next').hide();
+				$('.slick-prev').show();
+			}
+
+			if(thisSlide>0 && thisSlide<last)
+			{
+			   $('.slick-prev').show();
+			   $('.slick-next').show();
+			}
+
+			if (lastSlide.hasClass('slick-active')) {
+				$('.slick-next').hide();
+			}
+
+		});
+
+		if(currentSlide==0) {
+		   $('.slick-prev').hide();
+		} else if(currentSlide==last) {
+			$('.slick-next').hide();
+		}
+
+	}
+
+	if ($('div').is('.js-slider-arrow')) {
+		hideSliderArrow($('.js-slider-arrow'));
+	}
+
+	if ($('div').is('.slider__grid_small')) {
+		hideSliderArrow($('.slider__grid_small'));
+	}
+
+	if ($('div').is('.slider__grid_medium')) {
+		hideSliderArrow($('.slider__grid_medium'));
+	}
+
+	if ($('div').is('.category__slider')) {
+		hideSliderArrow($('.category__slider'));
+	}
 
 	$('.slider__sidebar').slick({
 		infinite: true,
@@ -488,6 +665,8 @@ $(document).ready(function() {
     	theme: 'tooltipster-noir',
     });
 
+    $('.js-more-text').hide();
+
     $('.js-more-link').on('click', function(event) {
     	event.preventDefault();
     	var wrap = $(this).closest('.js-more-wrapper');
@@ -499,10 +678,16 @@ $(document).ready(function() {
     		if (textOpen != null) {
     			$(this).html(textOpen)
     		}
+    		if (wrap.find('.js-more-text')) {
+			    $('.js-more-text').show();
+    		}
     	} else {
     		wrap.removeClass('open');
     		if (textClose != null) {
     			$(this).html(textClose)
+    		}
+    		if (wrap.find('.js-more-text')) {
+			    $('.js-more-text').hide();
     		}
     	}
     });
@@ -531,9 +716,14 @@ $(document).ready(function() {
 	});
 
 	// Страница категорий category.html - Доработать хелп в верхнем слайдере
-    $('.category__slider_hellip').on('click touchend', function(event) {
+    $('.category__slider_hellip').on('mouseenter', function(event) {
     	event.preventDefault();
-		$('.category__slider_help').toggleClass('open');
+    	$(this).closest('.category__slider_item').find('.category__slider_help').addClass('open');
+	});
+
+    $('.category__slider_help').on('mouseleave', function(event) {
+    	event.preventDefault();
+    	$(this).removeClass('open');
 	});
 
 	// Страница категорий category.html - Поделиться в соц.сетях
@@ -545,14 +735,15 @@ $(document).ready(function() {
 	// Страница категорий category.html - Показать другие категории
     $('.category__top_list1_trigger').on('click touchend', function(event) {
     	event.preventDefault();
+    	$(this).toggleClass('active');
 		$('.category__top_list1_wrap').toggleClass('open');
 	});
 
 	// Страница категорий category.html - Подписаться на категорию
-    $('.category__top_list1_trigger').on('click touchend', function(event) {
-    	event.preventDefault();
-		$('.category__top_list1_wrap').toggleClass('open');
-	});
+ //    $('.category__top_list1_trigger').on('click touchend', function(event) {
+ //    	event.preventDefault();
+	// 	$('.category__top_list1_wrap').toggleClass('open');
+	// });
 
 	// Страница FAQ faq.html - Показать ответ - нужно доработать
     $('.category__top_right_subscribe').on('click touchend', function(event) {
@@ -561,7 +752,14 @@ $(document).ready(function() {
 	});
 
     // Страница бренда brand.html - Хелпы на промокодах - Нужно доработать
-    $('.sale__list_top_help').on('click touchend', function(event) {
+    $('.sale__list_top_help').on('click', function() {
+    	$(this).find('.sale__list_top_text').addClass('open');
+    });
+    $('.sale__list_top_text').mouseleave(function() {
+    	$(this).removeClass('open');
+    });
+
+    $('.faq_question').on('click touchend', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).siblings('.faq_answer').toggleClass('open');
@@ -576,8 +774,8 @@ $(document).ready(function() {
 	// Страница бренда brand.html - Скрытые информационные блоки в мобильной части - Доработатьg
     $('.brand__trigger').on('click touchend', function(event) {
     	event.preventDefault();
-    	$('.brand__trigger').toggleClass('active');
-		$('.brand__info_mobil').toggleClass('open');
+    	$(this).toggleClass('active');
+		$(this).parent().find('.brand__info_mobil').toggleClass('open');
 	});
 
 	$('.accordeon__text').hide();
