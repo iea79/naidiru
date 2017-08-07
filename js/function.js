@@ -565,7 +565,14 @@ $(document).ready(function() {
     // Страница Все промокоды all-promocodes.html - Фильтр промокодов
     $('.sale__list_trigger').on('click touchend', function(event) {
     	event.preventDefault();
+    	$('.sale__list_trigger').toggleClass('active');
 		$('.sidebar__section_wrap').toggleClass('open');
+	});
+
+	 // Страница Все промокоды all-promocodes.html - всплывашка при нажатии на звезду
+    $('sale__list_save').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.sale__list_reg').toggleClass('open');
 	});
 
     // office.html Показать/скрыть подтвержденные покупки - не работает

@@ -3904,8 +3904,13 @@
 				margin-right: 17px;
 			}
 			&:after {
-				content: '>';
+				content: url('../img/arrow-right.png');
 				margin-left: 17px;
+			}
+			&.active {
+				&:after {
+					content: url('../img/arrow-down.png');
+				}
 			}
 		}
 		&_wrap {
@@ -4258,7 +4263,7 @@
 		}
 	}
 	.section__title {
-		padding: 0;
+		padding: 30px 0 0;
 		font-size: 23px;
 		text-align: left;
 		.btn {
@@ -7180,26 +7185,34 @@
 		display: block;
 		@extend %clear_a;
 	}
+	&_top {
+		display: none;
+	}
 	&_left {
-		// width: 760px;
 		width: 63%;
 		float: left;
+		border-bottom: 2px solid $input_border_color;
 	}
 	&_right {
 		overflow: hidden;
-		// padding-left: 70px;
 		padding-left: 5%;
+		.faq_list {
+			border: 0;
+		}
 	}
 	@media (max-width: 991px) {
 		.white__line {
 			padding-bottom: 40px;
+		}
+		&_top {
+			display: block;
 		}
 		&_left {
 			width: 100%;
 			float: none;
 		}
 		&_right {
-			padding-left: 0;
+			display: none;
 		}
 	}
 	@media (max-width: 767px) {
@@ -7305,8 +7318,8 @@
 .faq {
 	&_list {
 		padding: 55px 60px 44px;
-		border-top: 1px solid $input_border_color;
-		border-right: 1px solid $input_border_color;
+		border: 1px solid $input_border_color;
+		border-bottom: 0;
 		&_name {
 			font-size: 23px;
 		}
@@ -7346,11 +7359,11 @@
 			display: block;
 		}
 	}
-	@media (max-width: 991px) {
-		&_list {
-			border-left: 1px solid $input_border_color;
-		}
-	}
+	// @media (max-width: 991px) {
+	// 	&_list {
+	// 		border-left: 1px solid $input_border_color;
+	// 	}
+	// }
 	@media (max-width: 767px) {
 		&_list {
 			padding: 30px 20px;
@@ -10921,7 +10934,6 @@
 }
 
 
-<<<<<<< HEAD
 /* Sales page ============================ */
 .b__hashtag_list-last {
 	.jq-selectbox {
@@ -11129,9 +11141,6 @@
 		}
 	}
 }
-=======
-
->>>>>>> 89db12b668fdf36886372295b57e13b0acb5ba43
 
 .shoppel__save {
 	margin-bottom: 22px;
