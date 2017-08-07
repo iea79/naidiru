@@ -3,6 +3,7 @@
 	@extend %clear_a;
 	.container_center {
 		max-width: 1450px;
+		position: static;
 	}
 	&__top {
 		@extend %clear_a;

@@ -354,8 +354,13 @@ $(document).ready(function() {
 	});
 
 	function shoppelSaveResize() {
-		var shoppelHey = $('.shoppel__save_left').height()
-		$('.shoppel__save_right').height(shoppelHey-27);
+		var shoppelHey = $('.shoppel__save_left').height();
+		var	rez;
+
+		if (rez<shoppelHey) {
+			$('.shoppel__save_right').height(shoppelHey-27);
+		}
+		rez = shoppelHey;
 	}
 
 	shoppelSaveResize();
@@ -565,8 +570,14 @@ $(document).ready(function() {
     // Страница Все промокоды all-promocodes.html - Фильтр промокодов
     $('.sale__list_trigger').on('click touchend', function(event) {
     	event.preventDefault();
+    	$(this).toggleClass('active');
 		$('.sidebar__section_wrap').toggleClass('open');
 	});
+
+    $('.sale__list_save').on('click', function(event) {
+    	event.preventDefault();
+    	$(this).toggleClass('active');
+    });
 
     // office.html Показать/скрыть подтвержденные покупки - не работает
     $('.office__history_confirmed_hide').click(function(e) {
@@ -706,7 +717,7 @@ $(document).ready(function() {
     // Страница категорий category.html - доработать скрипт меню
     $('.category__top_link1').on('click touchend', function(event) {
     	event.preventDefault();
-		$('.category__top_list2').toggleClass('open');
+		$(this).parent().find('.category__top_list2').toggleClass('open');
 	});
 
 	// Страница категорий category.html - Хелп Покупайте, участвуйте в розыгрышах

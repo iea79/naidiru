@@ -22,7 +22,8 @@ textarea {
 	}
 	&:focus {
 		@include placeholder {
-			text-indent: -600px;
+			text-indent: 0;
+            color: transparent;
 		}
 	}
 	&.input_error {

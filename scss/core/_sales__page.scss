@@ -135,3 +135,167 @@
 		}
 	}
 }
+
+
+.sales__more {
+	&_grid {
+		padding-top: 27px;
+		padding-bottom: 27px;
+		margin-left: -80px;
+		@extend %clear_a;
+		// @include flex-flow(row nowrap);
+		.grid__wrapper {
+			padding-left: 80px;
+			float: left;
+			width: 33.3%;
+		}
+		.grid__item {}
+	}
+	&_img {
+		margin-bottom: 27px;
+		img {
+			display: block;
+			width: 100%;
+		}
+	}
+	&_title {
+		font-size: 18px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		// margin-bottom: 15px;
+	}
+	&_text {
+		font-size: 14px;
+		p {
+			margin: 15px 0;
+		}
+	}
+	@media (max-width: 991px) {
+		&_grid {
+			margin-left: -20px;
+			.grid__wrapper {
+				padding-left: 20px;
+			}
+			.grid__item {}
+		}
+	}
+	@media (max-width: 767px) {
+		&_grid {
+			margin: 0;
+			padding-left: 5px;
+			padding-right: 5px;
+			border-bottom: 1px solid #dadada;
+			margin-bottom: 20px;
+			.grid__wrapper {
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+		}
+	}
+	@media (max-width: 600px) {
+		&_grid {
+			.grid__wrapper {
+				width: 100%;
+				&:nth-child(n+2) {
+					display: none;
+				}
+			}
+		}
+	}
+	&_description {
+		border-top: 1px solid #dadada;
+		border-bottom: 1px solid #dadada;
+		padding: 40px 0;
+		margin-bottom: 40px;
+		&_dott {
+			display: inline;
+		}
+		&_moretext {
+			display: none;
+			padding: 0 0 19px;
+		}
+		// &_more {
+		// 	display: inline-block;
+		// }
+		&.open {
+			.sales__page_description {
+				&_dott {
+					display: none;
+				}
+				&_moretext {
+					display: block;
+				}
+				// &_more {
+				// 	display: block;
+				// 	width: 100px;
+				// 	margin-top: 19px;
+				// }
+			}
+		}
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+
+	&_column {
+		@include columns-text(240px, 5, 40px, 0px, solid, #000);
+		padding: 22px 0;
+		&_link {
+			display: block;
+			margin-bottom: 15px;
+		}
+		@media (max-width: 767px) {
+			padding-left: 15px;
+			overflow: hidden;
+			&_link {
+				width: 50%;
+				float: left;
+			}
+		}
+	}
+
+	&_ban {
+		position: relative;
+		overflow: hidden;
+		a {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		img {
+			display: block;
+			min-width: 100%;
+			max-width: none;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		&_text {
+			padding: 97px 10px 107px;
+			// padding-bottom: 107px;
+			margin: auto;
+			max-width: 900px;
+			color: #fff;
+			position: relative;
+			font-size: 30px;
+			text-align: right;
+			b {
+				font-size: 60px;
+				display: block;
+				margin-top: 10px;
+			}
+		}
+		@media (max-width: 767px) {
+			&_text {
+				padding: 40px 10px 50px;
+				font-size: 20px;
+				b {
+					font-size: 40px;
+				}
+			}
+		}
+	}
+}
+
