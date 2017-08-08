@@ -305,10 +305,61 @@ block content
 
 			// begin office__history
 			.office__history
-				.office__history_name История Ваших покупок
+				.office__history_name 
+					span.office__history_title История Ваших покупок
+
+					// begin Mobile history
+					.office__history_mobile 
+						// item 1
+						.office__history_mobile_item
+							.office__history_mobile_link Заказ № 
+								span Rfeh152121fedf4
+							.office__history_mobile_drop
+								.office__history_mobile_name Информация о покупке
+								.office__history_mobile_row
+									b Магазин: 
+									|Снежная королев
+								.office__history_mobile_row
+									b Дата покупки:  
+									|23.05.2017
+								.office__history_mobile_row
+									b № заказа:  
+									|Rfeh152121fedf4
+								.office__history_mobile_row
+									b Сумма покупки:  
+									|20 120 р.
+								.office__history_mobile_row
+									b Статус:  
+									|Не подтвержден
+								a(href="#").confirm__btn.btn.btn__danger Подтвердить чеком
+								.office__history_mobile_descr Чтобы получить лотерею, нужно подвердить покупку чеком
+						// item 2
+						.office__history_mobile_item
+							.office__history_mobile_link Заказ № 
+								span Rfeh152121fedf4
+							.office__history_mobile_drop
+								.office__history_mobile_name Информация о покупке
+								.office__history_mobile_row
+									b Магазин: 
+									|Снежная королев
+								.office__history_mobile_row
+									b Дата покупки:  
+									|23.05.2017
+								.office__history_mobile_row
+									b № заказа:  
+									|Rfeh152121fedf4
+								.office__history_mobile_row
+									b Сумма покупки:  
+									|20 120 р.
+								.office__history_mobile_row
+									b Статус:  
+									|Не подтвержден
+								a(href="#").confirm__btn.btn.btn__danger.active Подтвердить чеком
+								.office__history_mobile_descr Чтобы получить лотерею, нужно подвердить покупку чеком
+					// end Mobile history
 					span.office__history_note Если Вы не видите свою покупку, <br>
 						a.office__history_link(href="#") напишите нам!
-				.office__history_stat_wrap
+				.office__history_stat_wrap.js-more-wrapper
 					.office__history_stat.scrolled__box
 						.office__history_left
 							.office__history_table
@@ -350,7 +401,31 @@ block content
 										.office__history_td Gj52257_4452
 										.office__history_td 132 648 р.
 										.office__history_td Подтвержден
-							a.office__history_confirmed_hide(href="#")
+								// begin Mobile history
+								.office__history_mobile 
+									// item 1
+									.office__history_mobile_item
+										.office__history_mobile_link Заказ № 
+											span Rfeh152121fedf4
+										.office__history_mobile_drop
+											.office__history_mobile_name Информация о покупке
+											.office__history_mobile_row
+												b Магазин: 
+												|Снежная королев
+											.office__history_mobile_row
+												b Дата покупки:  
+												|23.05.2017
+											.office__history_mobile_row
+												b № заказа:  
+												|Rfeh152121fedf4
+											.office__history_mobile_row
+												b Сумма покупки:  
+												|20 120 р.
+											.office__history_mobile_row
+												b Статус:  
+												|Не подтвержден
+								// end Mobile history
+							a.office__history_confirmed_hide.js-more-link(href="#" data-text-open="+ Показать подтвержденные покупки" data-text-close="- Скрыть подтвержденные покупки") - Скрыть подтвержденные покупки
 						.office__history_right
 							.office__history_right_text Чтобы получить ШопКарту, нужно подвердить покупку чеком
 							button.confirm__btn.btn.btn__danger

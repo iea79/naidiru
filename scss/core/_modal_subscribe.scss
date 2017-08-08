@@ -1,0 +1,101 @@
+.modal__subscribe {
+	&.in {
+		.modal-dialog {
+			@include transform(translate(0, 5%));
+		}
+	}
+	&_bg {
+		@include border-radius(50%);
+		position: absolute;
+		top: 17px;
+		right: 17px;
+		bottom: 17px;
+		left: 17px;
+		background-color: #fff;
+	}
+	&_wrap {
+		position: absolute;
+		top: 111px;
+		left: -1px;
+		right: -1px;
+		bottom: -1px;
+		background-color: #fff;
+	}
+	&_form {
+		max-width: 280px;
+		margin: 48px auto 36px;
+		input {
+			margin-bottom: 11px;
+			width: 100%;
+			border-radius: 0;
+			padding: 10px;
+		}
+	}
+	&_auth {
+
+	}
+	&_close {
+		&:before {
+			content: image-url('modal_s_close.svg');
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+	}
+	.modal-dialog {
+		max-width: 580px;
+		height: 580px;
+		padding: 17px;
+		margin: auto;
+		@include box-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+		background-color: #e8e7e7;
+		@include border-radius(50%);
+	}
+	.modal-content {
+		background-color: #fff;
+		position: absolute;
+		text-align: center;
+		@include border-radius(50%);
+		position: relative;
+		overflow: hidden;
+		width: 516px;
+		height: 516px;
+		top: 15px;
+		right: 15px;
+		bottom: 15px;
+		left: 15px;
+		padding: 0;
+		border: 1px solid #fff;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			background-color: #ffbf3c;
+			top: -2px;
+			left: -2px;
+			right: -2px;
+			bottom: -2px;
+			border: 5px solid #fff;
+			@include border-radius(50%);
+		}
+	}
+	.modal-header {
+		font-size: 21px;
+		background-color: #ffffff;
+		color: $main-color;
+		margin: 19px 0 5px;
+	}
+	.modal-body {
+		font-size: 15px;
+		background-color: #ffffff;
+	}
+	.btn {
+		margin-bottom: 22px;
+		width: 100%;
+	}
+	.modal-footer {
+		background-color: #ffffff;
+		text-align: center;
+		border: none;
+	}
+}

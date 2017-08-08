@@ -48,6 +48,7 @@
 @import "core/tipo-text";
 @import "core/terms";
 @import "core/shoppel__save";
+@import "core/modal_subscribe";
 
 // Global Styles
 .main__content-white {
@@ -4638,6 +4639,13 @@
 	}
 	@media (max-width: 1199px) {
 		position: relative;
+		margin-top: -15px;
+		&_user {
+			margin-top: 0;
+		}
+		&_alarm {
+			top: 18px;
+		}
 		&_center {
 			width: 100%;
 			padding: 0;
@@ -4659,6 +4667,7 @@
 			@include align-items(center);
 			&_links {
 				padding-top: 0;
+				margin-top: 14px;
 			}
 			.sm_social {
 				display: none;
@@ -5213,10 +5222,10 @@
 		color: $primary-color;
 	}
 	&_stat {
-		width: 949px;
+		max-width: 949px;
 		@extend %clear_a;
 		&_wrap {
-			overflow: auto;
+			// overflow: auto;
 		}
 	}
 	&_left {
@@ -5275,10 +5284,10 @@
 			width: 25%;
 		}
 		&:nth-child(4) {
-			width: 15%;
+			width: 14.5%;
 		}
 		&:nth-child(5) {
-			width: 20%;
+			width: 20.5%;
 		}
 	}
 	&_confirmed {
@@ -5308,12 +5317,12 @@
 			cursor: pointer;
 			text-align: right;
 			text-decoration: none;
-			&:before {
-				content: '- Скрыть подтвержденные покупки';
-			}
-			&.active:before {
-				content: '+ Показать подтвержденные покупки';
-			}
+			// &:before {
+			// 	content: '- Скрыть подтвержденные покупки';
+			// }
+			// &.active:before {
+			// 	content: '+ Показать подтвержденные покупки';
+			// }
 		}
 	}
 	&_right {
@@ -5322,6 +5331,7 @@
 		&_text {
 			padding-top: 3px;
 			height: 42px;
+			width: 217px;
 		}
 		.confirm__btn {
 			position: relative;
@@ -5381,22 +5391,169 @@
 			}
 		}
 	}
-	@media (max-width: 767px) {
-		padding-left: 20px;
-		padding-right: 20px;
-		&_name {
-			text-align: center;
+	&_mobile {
+		display: none;
+		margin: 19px auto 7px;
+		&_item {
+			position: relative;
+			margin-bottom: 14px;
+			&.active {
+				.office__history_mobile_drop {
+					display: block;
+				}
+				.office__history_mobile_link {
+					&:after {
+						@include rotate(90deg);
+					}
+				}
+			}
 		}
-		&_note {
-			margin-left: 0;
-			display: block;
+		&_link {
+			font-size: 16px;
+			font-family: Tahoma;
+			background-color: #e8e7e7;
+			padding: 11px 65px 10px 26px;
+			position: relative;
+			cursor: pointer;
+			span {
+				font-family: $main_font_family;
+				font-size: 15px;
+			}
+			&:after {
+				content: '>';
+				font-family: $main_font_family;
+				position: absolute;
+				display: block;
+				top: 0;
+				right: 0;
+				overflow: hidden;
+				height: 40px;
+				width: 40px;
+				background-color: #454545;
+				color: $muted-color;
+				font-size: 16px;
+				line-height: 40px;
+				text-align: center;
+			}
+		}
+		&_drop {
+			display: none;
+			padding: 20px 25px;
+			font-size: 15px;
+			border-top: 1px solid #d1d1d1;
+			background-color: #e8e7e7;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			z-index: 100;
+		}
+		&_name {
+			font-weight: 700;
 			text-align: center;
+			margin-bottom: 23px;
+		}
+		&_row {
+			margin-bottom: 12px;
+			b {
+				font-weight: 700;
+			}
+		}
+		&_descr {
+
+		}
+		.btn {
+			position: relative;
+			@include border-radius(0);
+			font-size: 15px;
+			font-weight: 400;
+			margin-bottom: 18px;
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				border: 10px solid transparent;
+				border-bottom-color: #cf3135;
+				top: -20px;
+				left: 50%;
+				margin-left: -10px;
+			}
+			&:hover {
+				&:before {
+					border-bottom-color: #bb2c2f;
+				}
+			}
+			&.active {
+				background-color: #b4b3b3;
+				&:before {
+					content: '';
+					border-bottom-color: #b4b3b3;
+				}
+				&:hover {
+					background-color: #A3A2A2;
+					&:before {
+						content: '';
+						border-bottom-color: #A3A2A2;
+					}
+				}
+			}
 		}
 	}
+	@media (max-width: 1365px) {
+		&_right {
+			&_text {
+				width: auto;
+				font-size: 12px;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0 20px;
+		&_table,&_right {
+			display: none;
+		}
+		&_left {
+			width: 100%;
+		}
+		&_note {
+			display: block;
+			margin-left: 0;
+		}
+		&_mobile {
+			display: block;
+		}
+		// display: none;
+	}
+	// @media (max-width: 767px) {
+	// 	padding-left: 20px;
+	// 	padding-right: 20px;
+	// 	&_name {
+	// 		text-align: center;
+	// 	}
+	// 	&_note {
+	// 		margin-left: 0;
+	// 		display: block;
+	// 		text-align: center;
+	// 	}
+	// }
 	@media (max-width: 479px) {
+		text-align: center;
 		&_note {
 			br {
 				display: block;
+			}
+		}
+		&_mobile {
+			&_link {
+				text-align: left;
+			}
+		}
+		&_confirmed_name {
+			font-size: 16px;
+			&:after {
+				display: none;
 			}
 		}
 	}

@@ -79,3 +79,25 @@ footer.footer
 // end footer 
 
 .body__overlay
+
+// Button trigger modal modal__subscribe 
+button(class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal__subscribe") Click to open modal
+// begin Modal modal__subscribe 
+.modal.fade.modal__subscribe#modal__subscribe
+	.modal-dialog
+		.modal__subscribe_bg
+			// img(src="", alt="")
+		.modal-content
+			.modal__subscribe_wrap
+				.modal-header Не пропускайте ни одной супер-скидки
+				.modal-body 
+					p Узнавайте первым о самых больших скидках + участвуйте в ежемесячных розыгрышах и получайте подарки!
+					.modal__subscribe_form
+						input(type="text" placeholder="Введите ваш e-mail")
+						button.btn.btn__danger Подписаться
+
+						.modal__subscribe_auth У вас есть свой аккаунт? 
+							a(href="#") Войти
+				.modal-footer
+					a(href="#" class="modal__subscribe_close" data-dismiss="modal") Нет, спасибо
+// end modal modal__subscribe 

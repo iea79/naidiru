@@ -411,8 +411,39 @@
             <!-- end office__ad-->
             <!-- begin office__history-->
             <div class="office__history">
-              <div class="office__history_name">История Ваших покупок<span class="office__history_note">Если Вы не видите свою покупку, <br><a href="#" class="office__history_link">напишите нам!</a></span></div>
-              <div class="office__history_stat_wrap">
+              <div class="office__history_name"> <span class="office__history_title">История Ваших покупок</span>
+                <!-- begin Mobile history-->
+                <div class="office__history_mobile"> 
+                  <!-- item 1-->
+                  <div class="office__history_mobile_item">
+                    <div class="office__history_mobile_link">Заказ № <span>Rfeh152121fedf4</span></div>
+                    <div class="office__history_mobile_drop">
+                      <div class="office__history_mobile_name">Информация о покупке</div>
+                      <div class="office__history_mobile_row"><b>Магазин: </b>Снежная королев</div>
+                      <div class="office__history_mobile_row"><b>Дата покупки:  </b>23.05.2017</div>
+                      <div class="office__history_mobile_row"><b>№ заказа:  </b>Rfeh152121fedf4</div>
+                      <div class="office__history_mobile_row"><b>Сумма покупки:  </b>20 120 р.</div>
+                      <div class="office__history_mobile_row"><b>Статус:  </b>Не подтвержден</div><a href="#" class="confirm__btn btn btn__danger">Подтвердить чеком</a>
+                      <div class="office__history_mobile_descr">Чтобы получить лотерею, нужно подвердить покупку чеком</div>
+                    </div>
+                  </div>
+                  <!-- item 2-->
+                  <div class="office__history_mobile_item">
+                    <div class="office__history_mobile_link">Заказ № <span>Rfeh152121fedf4</span></div>
+                    <div class="office__history_mobile_drop">
+                      <div class="office__history_mobile_name">Информация о покупке</div>
+                      <div class="office__history_mobile_row"><b>Магазин: </b>Снежная королев</div>
+                      <div class="office__history_mobile_row"><b>Дата покупки:  </b>23.05.2017</div>
+                      <div class="office__history_mobile_row"><b>№ заказа:  </b>Rfeh152121fedf4</div>
+                      <div class="office__history_mobile_row"><b>Сумма покупки:  </b>20 120 р.</div>
+                      <div class="office__history_mobile_row"><b>Статус:  </b>Не подтвержден</div><a href="#" class="confirm__btn btn btn__danger active">Подтвердить чеком</a>
+                      <div class="office__history_mobile_descr">Чтобы получить лотерею, нужно подвердить покупку чеком</div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end Mobile history--><span class="office__history_note">Если Вы не видите свою покупку, <br><a href="#" class="office__history_link">напишите нам!</a></span>
+              </div>
+              <div class="office__history_stat_wrap js-more-wrapper">
                 <div class="office__history_stat scrolled__box">
                   <div class="office__history_left">
                     <div class="office__history_table">
@@ -460,7 +491,23 @@
                           <div class="office__history_td">Подтвержден</div>
                         </div>
                       </div>
-                    </div><a href="#" class="office__history_confirmed_hide"></a>
+                      <!-- begin Mobile history-->
+                      <div class="office__history_mobile"> 
+                        <!-- item 1-->
+                        <div class="office__history_mobile_item">
+                          <div class="office__history_mobile_link">Заказ № <span>Rfeh152121fedf4</span></div>
+                          <div class="office__history_mobile_drop">
+                            <div class="office__history_mobile_name">Информация о покупке</div>
+                            <div class="office__history_mobile_row"><b>Магазин: </b>Снежная королев</div>
+                            <div class="office__history_mobile_row"><b>Дата покупки:  </b>23.05.2017</div>
+                            <div class="office__history_mobile_row"><b>№ заказа:  </b>Rfeh152121fedf4</div>
+                            <div class="office__history_mobile_row"><b>Сумма покупки:  </b>20 120 р.</div>
+                            <div class="office__history_mobile_row"><b>Статус:  </b>Не подтвержден</div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- end Mobile history-->
+                    </div><a href="#" data-text-open="+ Показать подтвержденные покупки" data-text-close="- Скрыть подтвержденные покупки" class="office__history_confirmed_hide js-more-link">- Скрыть подтвержденные покупки</a>
                   </div>
                   <div class="office__history_right">
                     <div class="office__history_right_text">Чтобы получить ШопКарту, нужно подвердить покупку чеком</div>
@@ -668,5 +715,30 @@
     </footer>
     <!-- end footer -->
     <div class="body__overlay"></div>
+    <!-- Button trigger modal modal__subscribe -->
+    <button data-toggle="modal" data-target="#modal__subscribe" class="btn btn-primary btn-lg">Click to open modal</button>
+    <!-- begin Modal modal__subscribe -->
+    <div id="modal__subscribe" class="modal fade modal__subscribe">
+      <div class="modal-dialog">
+        <div class="modal__subscribe_bg">
+          <!-- img(src="", alt="")-->
+        </div>
+        <div class="modal-content">
+          <div class="modal__subscribe_wrap">
+            <div class="modal-header">Не пропускайте ни одной супер-скидки</div>
+            <div class="modal-body"> 
+              <p>Узнавайте первым о самых больших скидках + участвуйте в ежемесячных розыгрышах и получайте подарки!</p>
+              <div class="modal__subscribe_form">
+                <input type="text" placeholder="Введите ваш e-mail"/>
+                <button class="btn btn__danger">Подписаться</button>
+                <div class="modal__subscribe_auth">У вас есть свой аккаунт? <a href="#">Войти</a></div>
+              </div>
+            </div>
+            <div class="modal-footer"><a href="#" data-dismiss="modal" class="modal__subscribe_close">Нет, спасибо</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__subscribe -->
   </body>
 </html>

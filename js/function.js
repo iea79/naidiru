@@ -746,6 +746,15 @@ $(document).ready(function() {
     	$('.reviews__sidebar').toggleClass('open');
     });
 
+    $('.office__history_mobile_link').on('click', function(event) {
+    	event.preventDefault();
+    	var wrap = $(this).closest('.office__history_mobile_item');
+    	var other = wrap.siblings('.office__history_mobile_item');
+
+    	other.removeClass('active');
+    	wrap.toggleClass('active');
+    });
+
     // Плагин Form Styler
     $('select').styler();
 
