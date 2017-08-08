@@ -611,21 +611,27 @@ $(document).ready(function() {
     // 	$(this).removeClass('open');
     // });
 
-    // office.html - office__menu767
-	var touch4 = $('.office__menu_trigger');
-    var menu4 = $('.main__content_sidebar');
+ //    // office.html - office__menu767
+	// var touch4 = $('.office__menu_trigger');
+ //    var menu4 = $('.office__menu');
  
-    $(touch4).on('click', function(e) {
-        e.preventDefault();
-        menu4.slideToggle();
-    });
-    $(window).resize(function(){
-        var wid = $(window).width();
-        if(wid > 760 && menu4.is(':hidden')) {
-            menu4.removeAttr('style');
-        }
-    });
+ //    $(touch4).on('click', function(e) {
+ //        e.preventDefault();
+ //        menu4.slideToggle();
+ //    });
+ //    $(window).resize(function(){
+ //        var wid = $(window).width();
+ //        if(wid > 760 && menu4.is(':hidden')) {
+ //            menu4.removeAttr('style');
+ //        }
+ //    });
 
+    // Личный кабинет меню на мобильных разрешениях
+    $('.office__menu_trigger').on('click', function() {
+    	$('.office__menu_trigger').toggleClass('active');
+    	$('.office__menu').toggleClass('open');
+
+    });
 
     // office-news.html Галочка на новостях - Удаление/восстановление
     // Вызов блока .office__news_item_hide с кнопкой Удаления
