@@ -4860,7 +4860,7 @@
 			color: #919191;
 			text-decoration: none;
 		}
-		&.active:after {;
+		&.active:after {
 				content: '>';
 				margin-left: 6px;
 		}
@@ -5094,6 +5094,9 @@
 	}
 	@media (max-width: 991px) {
 		padding-left: 20px;
+		&_last {
+			padding: 42px 20px 0 !important;
+		}
 	}
 	@media (max-width: 767px) {
 		padding-right: 20px;
@@ -5495,12 +5498,6 @@
 			cursor: pointer;
 			text-align: right;
 			text-decoration: none;
-			// &:before {
-			// 	content: '- Скрыть подтвержденные покупки';
-			// }
-			// &.active:before {
-			// 	content: '+ Показать подтвержденные покупки';
-			// }
 		}
 	}
 	&_right {
@@ -5516,19 +5513,13 @@
 			width: 175px;
 			height: 42px;
 			margin-top: 3px;
+			font-weight: 400;
 			@include border-radius(0);
-			&:before {
-				content: 'Подтвердить чеком';
-				font-weight: 400;
-			}
 			&:after {
 				content: '';
 			}
 			&.active {
 				background-color: #b4b3b3;
-				&:before {
-					content: 'Чек отправлен';
-				}
 			}
 			&_trigon {
 				position: absolute;
@@ -5554,9 +5545,6 @@
 			}
 			&.active {
 				background-color: #b4b3b3;
-				&:before {
-					content: 'Чек отправлен';
-				}
 				.confirm__btn_trigon:after {
 					border-right: 10px solid #b4b3b3;
 				}
