@@ -72,8 +72,8 @@ block content
 
 
 		// begin sidebar
+		.office__menu_trigger Другие разделы
 		.main__content_sidebar
-			.office__menu_trigger Другие разделы
 			.sidebar__section
 				.office__menu
 					.office__item
@@ -91,7 +91,7 @@ block content
 			.sidebar__section
 				.sidebar__section_name Поменяйте чек на ШопКарту
 				p Чтобы получить ШопКарту, нужно подвердить покупку чеком
-				button.btn.btn__danger Отправить чек
+				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
 			.sidebar__section
 				.sidebar__section_name Лента обладателей подарка
 				p Розыгрыш апрель-2017:
@@ -253,54 +253,157 @@ block content
 								.office__winners_info
 									.user-name Светлана
 									.lottery-number # A17_414724
-				button.btn.btn__danger Посмотреть всех
+				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__presentation") Посмотреть всех
 		// end sidebar
 
 
 		// begin main__content_center 
 		.main__content_center
 
-			// begin office__lotteries
-			.office__lotteries
-				.office__lotteries_name ШопКарты покупателя в интернете
-					a.office__lotteries_how(href="#") Что такое ШопКарта?
-				.office__lotteries_list
-					.office__lotteries_item
-						.office__lotteries_p &lowast; &lowast; &lowast;
-						.office__lotteries_p ШопКарта
-						.office__lotteries_p Покупателя в интернете
-						img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
-						.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
-					.office__lotteries_item
-						.office__lotteries_p &lowast; &lowast; &lowast;
-						.office__lotteries_p ШопКарта
-						.office__lotteries_p Покупателя в интернете
-						img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
-						.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
-					.office__lotteries_item
-						.office__lotteries_p &lowast; &lowast; &lowast;
-						.office__lotteries_p ШопКарта
-						.office__lotteries_p Покупателя в интернете
-						img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
-						.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
-					.office__lotteries_item.office__lotteries_last
-						.office__lotteries_last_p Делайте покупки и меняйте чеки на ШопКарты
-						.office__lotteries_last_p Получите ШопКарту прямо сейчас, нажав на кнопку ниже &darr;
-						button.btn.btn__danger Получить ШопКарту
-						i.icon__question.big
-			// end office__lotteries
+			// begin office__main_yes
+			.office__main_yes
+				
+				// begin office__lotteries
+				.office__lotteries
+					.office__lotteries_name ШопКарты покупателя в интернете
+						a.office__lotteries_how(href="#") Что такое ШопКарта?
+					.office__lotteries_list
+						.office__lotteries_item
+							.office__lotteries_p &lowast; &lowast; &lowast;
+							.office__lotteries_p ШопКарта
+							.office__lotteries_p Покупателя в интернете
+							img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
+							.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
+						.office__lotteries_item
+							.office__lotteries_p &lowast; &lowast; &lowast;
+							.office__lotteries_p ШопКарта
+							.office__lotteries_p Покупателя в интернете
+							img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
+							.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
+						.office__lotteries_item
+							.office__lotteries_p &lowast; &lowast; &lowast;
+							.office__lotteries_p ШопКарта
+							.office__lotteries_p Покупателя в интернете
+							img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
+							.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
+						.office__lotteries_item.office__lotteries_last
+							.office__lotteries_last_p Делайте покупки и меняйте чеки на ШопКарты
+							.office__lotteries_last_p Получите ШопКарту прямо сейчас, нажав на кнопку ниже &darr;
+							button(class="btn btn__danger", data-toggle="modal", data-target="#modal__shopcard") Получить ШопКарту
+							i.icon__question.big
+				// end office__lotteries
 
 
-			// begin office__ad
-			.office__ad
-				img.office__ad_right(src="img/office-ad-img.jpg", alt="#")
-				.office__ad_left
-					.office__ad_p Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце
-					.office__ad_p Итоги будут подведены: <br>
-						span.office__ad_large 05 апреля
-					p Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.
-					button.btn.btn__danger Узнать о подарках<br>этого месяца
-			// end office__ad
+				// begin office__ad
+				.office__ad
+					img.office__ad_right(src="img/office-ad-img.jpg", alt="#")
+					.office__ad_left
+						.office__ad_p Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце
+						.office__ad_p Итоги будут подведены: <br>
+							span.office__ad_large 05 апреля
+						p Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.
+						button.btn.btn__danger Узнать о подарках<br>этого месяца
+				// end office__ad
+
+			// end office__main_yes
+
+
+			// begin office__main_win
+			.office__main_win				
+
+				// begin office__lotteries
+				.office__lotteries
+					.office__lotteries_name ШопКарты покупателя в интернете
+						a.office__lotteries_how(href="#") Что такое ШопКарта?
+					.office__lotteries_list
+						.office__lotteries_item
+							.office__lotteries_p &lowast; &lowast; &lowast;
+							.office__lotteries_p Ура! Вы получили подарок!
+							.office__lotteries_p Ваш подарок: смартфон
+						.office__lotteries_item.office__lotteries_last
+							.office__lotteries_last_p Делайте покупки и меняйте чеки на ШопКарты
+							.office__lotteries_last_p Чтобы получить ШопКарту нужно накопить
+								span 5000 баллов
+							button(class="btn", data-toggle="modal", data-target="#modal__shopcard") Получить ШопКарту
+							.office__lotteries_last_p.last т.е. накопить чеки = 5000 рублей
+							i.icon__question.big
+				// end office__lotteries
+
+
+				// begin office__gift 
+				.office__gift
+					.office__gift_name 
+						span.bold Поздравляем! 
+						span Именно Вы получили в этом месяце подарок!
+
+					.office__gift_img
+						img(src="img/cat-img6.jpg", alt="#")
+						.office__gift_img_text Ваш приз
+
+					.office__gift_p В этом месяце было много желающих попытать удачу, но к счастью именно Вам улыбнулась она и именно Вы она вытянули свой счастливый лотерейный билет. <br>Вы заняли 12 место и выиграли: Смартфон. <br>Итог розыгрыша был подведен: 05 марта. <br>Письмо от нашего менджера придет к Вам на почту: примерно 6-7 марта.
+
+					.office__gift_p 
+						span.bold Что нужно нам сейчас от Вас: 
+						span Пожалуйста, прямо сейчас проверьте актуальность своих контактных данных и корректность личных данных. Если у Вас не заполнены личные данные, заполните их как можно быстрее. Наш менеджер   свяжется с Вами по емайлу в ближайшее время для уточнения деталей получения приза.
+
+					.office__gift_p 
+						span.bold Обращаем Ваше внимание, 
+						span у Вас есть максимум 14 дней, чтобы ответить на письмо, в случае игнорирования всех 2-ух писем от нашего менеджера, Ваш приз будет аннулирован. Если по какой-то причине, Вам не пришло письмо на почту, пожалуйста, свяжитесь с нами, или проверьте его в спам-папке.
+
+					.office__gift_p Желаем Вам всего самого наилучшего! С Уважением, команда сайта Найди.ру	
+				// end office__gift 
+
+
+				// begin office__ad
+				.office__ad
+					.office__ad_left
+						.office__ad_p Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце
+						.office__ad_p Итоги будут подведены: <br>
+							span.office__ad_large 05 апреля
+						p Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.
+						button.btn.btn__danger Узнать о подарках<br>этого месяца
+				// end office__ad
+				
+			// end office__main_win
+
+
+			// begin office__main_no 
+			.office__main_no
+
+				// begin office__userinfo
+				.office__userinfo
+					.office__userinfo_name Заполните свои данные
+					.office__userinfo_p Чтобы получить подарок, нужно заполнить свои данные и контакты. Это нужно для того, чтобы в случае получения подарка мы смогли сразу с вами связаться. <br>Пожалуйста, указывайте только достоверную информацию.
+					button.btn.btn__danger Заполнить свои данные
+				// end office__userinfo
+
+				
+				/// begin office__lotteries
+				.office__lotteries
+					.office__lotteries_name ШопКарты покупателя в интернете
+						a.office__lotteries_how(href="#") Что такое ШопКарта?
+					.office__lotteries_list
+						.office__lotteries_item.office__lotteries_last
+							.office__lotteries_last_p Делайте покупки и меняйте чеки на ШопКарты
+							.office__lotteries_last_p Чтобы получить ШопКарту нужно накопить 
+								span 5000 баллов
+							button(class="btn", data-toggle="modal", data-target="#modal__shopcard") Получить ШопКарту
+							.office__lotteries_last_p.last т.е. накопить чеки = 5000 рублей
+							i.icon__question.big
+				// end office__lotteries
+
+
+				// begin office__ad
+				.office__ad
+					.office__ad_left
+						.office__ad_p Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце
+						.office__ad_p Итоги будут подведены: <br>
+							span.office__ad_large 05 апреля
+						p Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.
+						button.btn.btn__danger Узнать о подарках<br>этого месяца
+				// end office__ad
+
+			// end office__main_no
 			
 
 			// begin office__history
@@ -331,7 +434,7 @@ block content
 								.office__history_mobile_row
 									b Статус:  
 									|Не подтвержден
-								a(href="#").confirm__btn.btn.btn__danger Подтвердить чеком
+								a(href="#", class="confirm__btn btn btn__danger",data-toggle="modal", data-target="#modal__confirm").confirm__btn.btn.btn__danger Подтвердить чеком
 								.office__history_mobile_descr Чтобы получить лотерею, нужно подвердить покупку чеком
 						// item 2
 						.office__history_mobile_item
@@ -428,9 +531,9 @@ block content
 							a.office__history_confirmed_hide.js-more-link(href="#" data-text-open="+ Показать подтвержденные покупки" data-text-close="- Скрыть подтвержденные покупки") - Скрыть подтвержденные покупки
 						.office__history_right
 							.office__history_right_text Чтобы получить ШопКарту, нужно подвердить покупку чеком
-							button.confirm__btn.btn.btn__danger
+							button(class="confirm__btn btn btn__danger", data-toggle="modal", data-target="#modal__confirm")
 								.confirm__btn_trigon
-							button.confirm__btn.btn.btn__danger
+							button(class="confirm__btn btn btn__danger", data-toggle="modal", data-target="#modal__confirm")
 								.confirm__btn_trigon
 							button.confirm__btn.btn.btn__danger.active
 								.confirm__btn_trigon
@@ -450,7 +553,7 @@ block content
 							p.order__number KGF521GH581F
 						button.btn.office__checks_edit_btn
 						.office__checks_edit_hide
-							a.office__checks_edit_hide_btn(href="#") Удалить чек
+							a(href="#", class="office__checks_edit_hide_btn", data-toggle="modal", data-target="#modal__del-check") Удалить чек
 							a.office__checks_edit_hide_btn(href="#") Редактировать
 					.office__checks_item.confirmed
 						.office__checks_img
@@ -559,7 +662,7 @@ block content
 			// begin office__attention
 			.office__attention
 				.office__attention_left
-					.office__attention_left_img !
+					img.office__attention_left_img(src="img/icon-sure2.png", alt="#")
 				.office__attention_right
 					.office__attention_name ОБРАТИТЕ ВНИМАНИЕ:
 					.office__attention_p - При покупке в мобильных приложений магазинов покупка будет не засчитена.
