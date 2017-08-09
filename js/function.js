@@ -633,6 +633,18 @@ $(document).ready(function() {
 
     });
 
+    // office.html Скрыть ошибку в модальном окне отправления чека
+    $('.modal-footer_error_close').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.modal-footer_error').toggleClass('hide');
+	});
+
+	// office.html Скрыть нижнюю всплывающую панель
+    $('.modal__down_close').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.modal__down').toggleClass('hide');
+	});
+
     // office-news.html Галочка на новостях - Удаление/восстановление
     // Вызов блока .office__news_item_hide с кнопкой Удаления
     $('.office__news_item_mark').click(function(e) {
