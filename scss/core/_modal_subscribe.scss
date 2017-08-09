@@ -107,13 +107,49 @@
 			@include transform(translate(0, 5%));
 		}
 	}
-	&_bg {
-		position: absolute;
-		top: 17px;
-		right: 17px;
-		bottom: 17px;
-		left: 17px;
-		background-color: #fff;
+	.presentation__slider {	
+		&_conten {
+			display: table;
+			width: 100%;
+			&>* {
+				display: table-cell;
+			}
+		}
+		&_left {
+			vertical-align: top;
+			padding-right: 50px;
+			img {
+				max-width: none;
+			}
+		}
+		&_right {
+			vertical-align: middle;
+			p {
+				margin-bottom: 20px;
+			}
+		}
+		&_title {
+			font-size: 22px;
+			display: block;
+			width: 100%;
+			margin-bottom: 40px;
+			text-align: center;
+		}
+	}
+	.btn {
+		color: $main-color;
+		font-size: 15px;
+		font-weight: 400;
+		padding: 12px 31px;
+		margin-left: 25px;
+		margin-right: 25px;
+		&__danger {
+			color: #ffffff;
+		}
+	}
+	.presentation__sliderfoot {
+		text-align: center;
+		margin-top: 48px;
 	}
 	.close {
 		position: absolute;
@@ -125,15 +161,15 @@
 	}
 	.modal-dialog {
 		max-width: 820px;
-		height: 500px;
+		// height: 500px;
 		padding: 0;
 		margin: auto;
 		background-color: #fff;
 	}
 	.modal-content {
 		position: relative;
-		height: 100%;
-		padding: 81px 51px 32px 99px;
+		// height: 100%;
+		padding: 50px 51px 32px;
 		border: 0;
 		@include border-radius(0);
 		box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -180,6 +216,67 @@
 			&:hover {
 
 			}
+		}
+	}
+
+	@media (max-width: 767px) {
+		.presentation__slider {	
+			&_conten {
+				display: block;
+				&>* {
+					display: block;
+				}
+			}
+			&_left {
+				text-align: center;
+				padding-right: 0;
+				img {
+					max-width: 300px;
+					display: inline-block;
+					margin-bottom: 15px;
+					max-width: 100%;
+				}
+			}
+			&_right {
+				p {
+					margin-bottom: 10px;
+				}
+				img {
+					display: none;
+				}
+			}
+			&_title {
+				margin-bottom: 25px;
+				font-size: 20px;
+			}
+		}
+		.btn {
+			padding-left: 10px;
+			padding-right: 10px;
+			margin: 0 5px;
+			font-size: 13px;
+			&:first-of-type {
+				margin-left: 0;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+		.presentation__sliderfoot {		
+			margin-top: 30px;
+			&_first {
+				.btn {
+					padding-left: 15px;
+					padding-right: 15px;
+					display: block;
+					margin: 0 auto 10px;
+					width: 100%;
+					max-width: 300px;
+				}
+			}
+		}
+		.modal-content {
+			padding: 40px 20px 30px;
 		}
 	}
 }

@@ -4869,6 +4869,9 @@
 		background-color: #fff;
 		max-height: 352px;
 		overflow: auto;
+		&_top_title {
+			margin-bottom: 13px;
+		}
 		&_wrap {
 			overflow: hidden;
 			height: 352px;
