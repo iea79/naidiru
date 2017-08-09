@@ -19,37 +19,31 @@ block content
 				.sign-in
 					.title__content__3 Войти в аккаунт
 					.office__edit_section_info
-						.office__edit_list
-							.office__edit_list_col
-								.office__edit_row
-									.office__edit_label(for="oe11") E-mail
-									input.office__edit_input(type="email", placeholder="Введите Ваш e-mail", id="oe1")
-								.office__edit_row
-									.office__edit_label(for="oe12") Пароль
-									input(type="password", placeholder="Введите пароль", id="oe2")
+						.office__edit_row
+							.office__edit_label(for="oe11") E-mail
+							input.office__edit_input(type="email", placeholder="Введите Ваш e-mail", id="oe1")
+						.office__edit_row
+							.office__edit_label(for="oe12") Пароль
+							input(type="password", placeholder="Введите пароль", id="oe2")
 					a.btn.btn__danger(href="#") Войти в аккаунт
 					.sign-in__link Забыли пароль? 
-						a#link-content(href="#") Восстановить пароль
+						a(href="#") Восстановить пароль
 						
 
-					#main-content.recovery.sign-in
+					.recovery.sign-in
 						.title__content__3 Забыли пароль
 						.office__edit_section_info
-							.office__edit_list
-								.office__edit_list_col
-									.office__edit_row
-										.office__edit_label(for="oe11") E-mail
-										input(type="email", placeholder="Введите Ваш e-mail", id="oe1")
+							.office__edit_row
+								.office__edit_label(for="oe11") E-mail
+								input(type="email", placeholder="Введите Ваш e-mail", id="oe1")
 						a.btn.btn__danger(href="#") Восстановить пароль
 
 				.sign-up.sign-in
 					.title__content__3 Регистрация на сайте
 					.office__edit_section_info
-						.office__edit_list
-							.office__edit_list_col
-								.office__edit_row
-									.office__edit_label(for="oe11") E-mail
-									input(type="email", placeholder="Введите Ваш e-mail", id="oe1")
+						.office__edit_row
+							.office__edit_label(for="oe11") E-mail
+							input(type="email", placeholder="Введите Ваш e-mail", id="oe1")
 					.sign-in__link Чтобы зарегистрироваться на сайте, просто введите Ваш email. Для Вашей безопасности, мы сами сгенерируем Вам пароль и отправим его на указанную почту. 
 					a.btn.btn__danger(href="#") Зарегистрироваться
 					.sign-in__link Регистрируясь, я соглашаюсь с 

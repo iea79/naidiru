@@ -57,19 +57,6 @@ $(document).ready(function() {
 		return false;
 	});
 
-	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-    // $(document).ready(function(){
-    //     var HeaderTop = $('#header').offset().top;
-        
-    //     $(window).scroll(function(){
-    //             if( $(window).scrollTop() > HeaderTop ) {
-    //                     $('#header').addClass('stiky');
-    //             } else {
-    //                     $('#header').removeClass('stiky');
-    //             }
-    //     });
-    // });
-
     $('.category__slider').slick({
 		infinite: false,
 		slidesToShow: 4,
@@ -306,19 +293,10 @@ $(document).ready(function() {
 		dots: false
 	});
 
-	var menuBtn = $('#link-content');
-	var menu = $('#main-content');
-
-	$(menuBtn).on('click', function(e) {
+	$('.sign-in__link  a').on('click', function(e) {
 		e.preventDefault();
-		menu.slideToggle();
+		$('.recovery.sign-in').slideToggle();
 	});
-	// $(window).resize(function() {
-	// 	var wind = $(window).width();
-	// 	if(wind > 760 && menu.is(':hidden')) {
-	// 		menu.removeAttr('style');
-	// 	}
-	// });
 
 	$('.js_more_btn ').on('click', function(event) {
 		event.preventDefault();

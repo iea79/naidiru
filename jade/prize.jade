@@ -43,23 +43,33 @@ block content
 
 
 			// begin prize__steps
-			.prize__steps_wrap#pm1
-				.prize__section_name Как участвовать в розыгрыше?
-				.prize__steps
-					.prize__steps_p Распродажа -пример текст пример текст пример текст.........
-					.prize__steps_center
-						.prize__steps_center_item Зарегистрируйся и <br>купи через нас на <br> сумму от 5000 рублей
-						.prize__steps_center_item Получи баллы за чеки <br> 5000 руб.= 5000 баллов
-						.prize__steps_center_item Обменяй 5000 баллов <br>на лотерейку и <br>участвуй в розыгрыше.
-						.prize__steps_center_name Пример
-					.prize__steps_reg
+		.prize__steps_wrap#pm1
+			.prize__steps.prize__steps-last
+				.container_center
+					.prize__steps_h3 Как участвовать в акции?
+					.prize__steps_center.prize__steps_center_flex
+						.prize__steps_center_item-last
+							.prize__steps_number 1
+							img(src="img/condition-prize-1.png")
+							.prize__steps_p Зарегистрируйтесь и <br>покупайте в интернет-магазинах <br>через нас
+								.prize__steps_p_treangle
+						.prize__steps_center_item-last.prize__steps_center_item-last_center
+							.prize__steps_number.prize__steps_number_second 2
+							img(src="img/condition-prize-1.png")
+							.prize__steps_p Подтверждайте покупки чеком и <br>получайте баллы. <br>5000 баллов = 5000 р. (общая сумма покупки / чек)
+								.prize__steps_p_treangle
+						.prize__steps_center_item-last
+							.prize__steps_number 3
+							img(src="img/condition-prize-1.png")
+							.prize__steps_p Накопите 5000 баллов, <br>обменяйте их на ШопКарту <br>и участвуйте в акции.
+								.prize__steps_p_treangle
+					.prize__steps_reg.prize__steps_reg-last
 						button.btn.btn__danger.prize__steps_reg_btn Зарегистрироваться
 						.prize__steps_reg_p Уже зарегистрированы?
 							a(href="#") Войти в аккаунт &gt;
-					.prize__steps_bg
 			// end prize__steps
 
-
+		.container_center 
 			// begin prize__list 
 			.prize__list_wrap#pm2
 				.prize__section_name Подарки этого месяца - Розыгрыш №6 (Апрель 2017 год)
@@ -113,60 +123,9 @@ block content
 
 			.line
 
-
-			// begin prize__conditions
-			.prize__conditions_wrap#pm5
-				.prize__section_name Условия ежемесячных розыгрышей
-				.prize__conditions
-					img.prize__conditions_left(src="img/icon-sure2.png", alt="#")
-					.prize__conditions_right
-						.prize__conditions_p Чтобы участвовать в розыгрыше нужно быть старше 18 лет.
-						.prize__conditions_p Нужно зарегистрироваться и покупать через нас. 
-						.prize__conditions_p Покупать от 5000 рублей и менять на лотерею... И т.д. Текст пришлем.Чтобы участвовать в розыгрыше нужно быть старше 18 лет. Нужно зарегистрироваться и покупать через нас.
-						.prize__conditions_p Покупать от 5000 рублей и менять на лотерею... И т.д. Текст пришлем.
-						.prize__conditions_p Чтобы участвовать в розыгрыше нужно быть старше 18 лет.
-						.prize__conditions_p Нужно зарегистрироваться и покупать через нас. 
-						.prize__conditions_p Покупать от 5000 рублей и менять на лотерею... И т.д. Текст пришлем.Чтобы участвовать в розыгрыше нужно быть старше 18 лет. Нужно зарегистрироваться и покупать через нас.
-						.prize__conditions_p Покупать от 5000 рублей и менять на лотерею... И т.д. Текст пришлем.
-			// end prize__conditions
-
-
-			// begin prize__counter
-			.prize__counter#pm4
-				.counter__box
-					.counter__box_top
-						.counter__box_left
-							.counter__box_label Начните прямо сейчас:
-							.counter__box_count
-								.counter__box_count_wrap
-									.counter__box_count_item 2
-									.counter__box_count_item 1
-									.counter__box_count_item 8
-									.counter__box_count_item 0
-									.counter__box_count_item 2
-									.counter__box_count_item 2
-								|человек
-							.counter__box_auth
-								a(href="#").btn.btn__danger.btn__lg Зарегистрироваться
-								p Уже зарегистрированы? 
-									a(href="#") 
-										b Войти &gt;
-
-					.counter__box_bottom
-						.counter__box_rev
-							.counter__box_rev_photo
-								img(src="img/rev.png", alt="")
-							.counter__box_rev_quote
-								|Познакомилась с этим сервисом совсем недавно. Решила с его помощью заказать в интернет-магазине...  
-								a(href="#") Читать полностью &gt;&gt;
-
-				.prize__counter_example Пример
-			// end prize__counter
-
-
 			// begin prize__winners
 			.prize__winners_wrap#pm3
-				.prize__section_name Победители №5 розыгрыша (Март 2017 год)     
+				.prize__section_name Обладатели подарка (Март 2017 год)     
 				.prize__winners
 					.prize__winners_table_wrap
 						.prize__winners_table
@@ -215,11 +174,77 @@ block content
 										span.user__name Мария
 								.prize__winners_td # A17_487465 
 								.prize__winners_td Смарт-часы Samsung LD24j		
+					.prize__winners_link
+						a(href="#") + Показать больше обладателей подарка
 			// end prize__winners
 
 
+			// begin prize__counter
+			.prize__counter.prize__counter_second#pm4
+				.counter__box.counter__box_second
+					.counter__box_top.counter__box_top_second
+						.counter__box_left
+							.counter__box_label Начните прямо сейчас:
+							.counter__box_count
+								.counter__box_count_wrap
+									.counter__box_count_item 2
+									.counter__box_count_item 1
+									.counter__box_count_item 8
+									.counter__box_count_item 0
+									.counter__box_count_item 2
+									.counter__box_count_item 2
+								|человек
+							.counter__box_auth
+								a(href="#").btn.btn__danger.btn__lg Зарегистрироваться
+								p Уже зарегистрированы? 
+									a(href="#") 
+										b Войти &gt;
+
+					.counter__box_bottom.counter__box_bottom_second
+						.counter__box_rev
+							.counter__box_rev_photo
+								img(src="img/rev.png", alt="")
+							.counter__box_rev_quote
+								|Познакомилась с этим сервисом совсем недавно. Решила с его помощью заказать в интернет-магазине...  
+								a(href="#") Читать полностью &gt;&gt;
+			// end prize__counter
+
+
+			// begin prize__conditions
+			.prize__conditions_wrap.prize__conditions_wrap_new#pm5
+				.prize__section_name Условия ежемесячных розыгрышей 
+					a(href="#") Скачать Полные правила акции.pdf
+				.prize__conditions
+					img.prize__conditions_left(src="img/icon-sure2.png", alt="#")
+					.prize__conditions_right
+						.prize__conditions_p - Участвовать в акции, могут только 
+							a.prize__conditions_link(href="#") зарегистрированные 
+							.prize__conditions_span пользователи. Перед тем, как совершать покупки в интернете через нас, удостоверьтесь, что Вы 
+							a.prize__conditions_link(href="#") вошли в свой аккаут. 
+							.prize__conditions_span Это нужно для того, чтобы покупка засчиталась в Вашем Личном Кабинете.
+						.prize__conditions_title - Что нужно, чтобы участовать в акции: 
+						.prize__conditions_p 1) Совершайте покупки в интернет-магазинах по промокодам через нас (Если Вы не нашли промокода, тогда просто перейдите по ссылке, на странице нужного магазина) и сохраняйте чеки от покупок в данном интернет-магазине.
+						.prize__conditions_p 2) Зайдите в свой Личный кабинет, чтобы убедиться, что покупка засчиталась в Вашем аккаунте, ее можно проверить по №заказа. Далее, сфотографируйте полученный чекот покупки в интернет-магазине так, чтобы там было видно, следующую информацию: Стоимость заказа, Дата покупки, № заказа (если на чеке эта информация есть), Названиеинтернет-магазина, где была совершена покупка. Если Вы, по каким-то причинам не можете прислать фото чека в одном экземпляре или, если Ваша покупка не засчиталась, то, пожалуйста, 
+							a.prize__conditions_link(href="#") свяжитесь с нами, 
+							.prize__conditions_span для решения этой проблемы.
+						.prize__conditions_p 3) Пришлите этот чек нам, просто найдите Вашу покупку по №заказа в блоке “История Ваших покупок” и нажмите на кнопку “Подтвердить чеком”, которая находиться на одной линией с этой покупкой.
+						.prize__conditions_p 4) Мы проверим Ваш чек, если информация на чеке совпадает с информацией нашей системы, то мы подтвреждаем Вам чек и автоматически, на Ваш Личный кабинет, засчитываются баллы, который будут равные к сумме покупки. Т.е. если Вы купили в интернет-магазине на 3000 руб., то Вам зачислиться 3000 баллов после подтверждения чеком.
+						.prize__conditions_p 5) Накопите 5000 баллов = 5000 руб. (общая сумма покупки в интернет-магазине), поменяйте их на одну ШопКарту и участвуйте в акции. Если Вы купили, например: на 15000 руб.,то Вы можете поменять их сразу на три ШопКарты, после подтверждения покупки чеком. *Баллы не сгорают, даже после завершения акции этого месяца. Они, только дают возможность накопить, для того чтобы поменять их на ШопКарты. <br>*Баллы можно менять, только на ШопКарты и их нельзя получить в виде подарка в денежном эквиваленте.
+						.prize__conditions_p - За участие в акции этого месяца, каждый пользователь, получит, гарантированный подарок, а именно 500 баллов на счет в Личном кабинете.
+						img.prize__conditions_left.prize__conditions_left_last(src="img/shop-card.jpg", alt="#")
+						.prize__conditions_right.prize__conditions_right_new
+							.prize__conditions_title Что такое ШопКарта?
+							.prize__conditions_p - Это карточка покупателя в интернете, которая говорит, только об одном, Вы участвуйте в акции этого месяца. <br>*И чем больше ШопКарт Вы получите в этом месяце, тем выше вероятность, что подарок в этом месяце, получите именно Вы. После подведения итогов акции, Шопкарты снимаются с Личного кабинета всех пользователей, для того, чтобы пользователь начал собирать новые ШопКарты для участия в акции следующего месяца. 
+							.prize__conditions_p - Если пользователь получил в этом месяце подарок, то он должен, написать об этом отзыв в соц.сетях или на странице отзывов на сайте Найди.ру.
+							.prize__conditions_p - В акции могут участвовать, все дееспособные пользователи, достигшие 18 лет.
+							.prize__conditions_p - Доставка подарка за пределы территории РФ, оплачивает сам пользователь.
+			// end prize__conditions
+
+
+			.line
+
 			// begin prize__faq 
-			.prize__faq#pm6
+			.prize__faq.prize__faq_new#pm6
 				.prize__faq_column
 					.faq_right
 						.faq_list_name Топ популярных вопросов:

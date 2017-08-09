@@ -11209,15 +11209,14 @@
 	margin: 22px 0 40px; 
 	position: relative;
 	.recovery {
-		width: 100%;
-		position: absolute;
 		height: auto;
-		z-index: 1;
-		left: 0;
-		top: 94%;
 		background: #e8e7e7;
 		border-top: 1px solid #d1d1d1;
 		display: none;
+		@include box-sizing(content-box);
+		margin-left: -51px;
+		margin-right: -51px;
+		margin-bottom: -27px;
 	}
 	.title__content__3 {
 		font-size: 21px;
@@ -11367,8 +11366,11 @@
 		text-align: center;
 		min-height: 437px;
 		.recovery {
+			margin-left: -27px;
+			margin-right: -27px;
 			min-height: 0;
-			top: 92%;
+			width: 100%;
+			// top: 92%;
 		}
 	}
 }
@@ -11378,6 +11380,11 @@
 		width: 500px;
 		float: none;
 		margin: 30px auto;
+		min-height: initial;
+		.recovery {
+			margin-left: -20px;
+			margin-right: -20px;
+		}
 	}
 }
 
