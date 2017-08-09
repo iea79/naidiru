@@ -830,3 +830,63 @@
 		}
 	}
 }
+
+// begin modal__down
+.modal__down {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #454545;
+	z-index: 1000;
+	@extend %clear_a;
+	.container_center {
+		position: relative;
+		padding: 17px 183px 15px 60px ;
+	}
+	&_left {
+		width: 40px;
+		float: left;
+		margin-right: 30px;
+	}
+	&_right {
+		padding-top: 4px;
+		overflow: hidden;
+		color: #fff;
+		.attention {
+			font-size: 15px;
+			font-weight: 700;
+		}
+	}
+	&_close {
+		position: absolute;
+		top: 28px;
+		right: 83px;
+		width: 17px;
+		height: 17px;
+		display: block;
+		cursor: pointer;
+		background: url('../img/close3.svg') no-repeat;
+		background-size: 17px 17px;
+		border: 0;
+		outline: 0;
+	}
+	&.hide {
+		display: none;
+	}
+	@media (max-width: 767px) {
+		.container_center {
+			position: relative;
+			padding: 17px 40px 15px 20px ;
+		}
+		&_left {
+			margin-right: 15px;
+			width: 30px;
+		}
+		&_close {
+			right: 20px;
+			top: 20px;
+		}
+	}
+}
+// end modal__down 
