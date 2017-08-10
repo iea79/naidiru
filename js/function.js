@@ -57,6 +57,19 @@ $(document).ready(function() {
 		return false;
 	});
 
+	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
+    // $(document).ready(function(){
+    //     var HeaderTop = $('#header').offset().top;
+        
+    //     $(window).scroll(function(){
+    //             if( $(window).scrollTop() > HeaderTop ) {
+    //                     $('#header').addClass('stiky');
+    //             } else {
+    //                     $('#header').removeClass('stiky');
+    //             }
+    //     });
+    // });
+
     $('.category__slider').slick({
 		infinite: false,
 		slidesToShow: 4,
@@ -293,10 +306,19 @@ $(document).ready(function() {
 		dots: false
 	});
 
-	$('.sign-in__link  a').on('click', function(e) {
+	var menuBtn = $('#link-content');
+	var menu = $('#main-content');
+
+	$(menuBtn).on('click', function(e) {
 		e.preventDefault();
-		$('.recovery.sign-in').slideToggle();
+		menu.slideToggle();
 	});
+	// $(window).resize(function() {
+	// 	var wind = $(window).width();
+	// 	if(wind > 760 && menu.is(':hidden')) {
+	// 		menu.removeAttr('style');
+	// 	}
+	// });
 
 	$('.js_more_btn ').on('click', function(event) {
 		event.preventDefault();
@@ -589,39 +611,34 @@ $(document).ready(function() {
     // 	$(this).removeClass('open');
     // });
 
- //    // office.html - office__menu767
-	// var touch4 = $('.office__menu_trigger');
- //    var menu4 = $('.office__menu');
+    // office.html - office__menu767
+	var touch4 = $('.office__menu_trigger');
+    var menu4 = $('.main__content_sidebar');
  
- //    $(touch4).on('click', function(e) {
- //        e.preventDefault();
- //        menu4.slideToggle();
- //    });
- //    $(window).resize(function(){
- //        var wid = $(window).width();
- //        if(wid > 760 && menu4.is(':hidden')) {
- //            menu4.removeAttr('style');
- //        }
- //    });
-
-    // Личный кабинет меню на мобильных разрешениях
-    $('.office__menu_trigger').on('click', function() {
-    	$('.office__menu_trigger').toggleClass('active');
-    	$('.office__menu').toggleClass('open');
-
+    $(touch4).on('click', function(e) {
+        e.preventDefault();
+        menu4.slideToggle();
+    });
+    $(window).resize(function(){
+        var wid = $(window).width();
+        if(wid > 760 && menu4.is(':hidden')) {
+            menu4.removeAttr('style');
+        }
     });
 
-    // office.html Скрыть ошибку в модальном окне отправления чека
+    // Закрытие нижнего всплывающего окна
+    $('.modal__down_close').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.modal__down').toggleClass('hide');
+	});
+
+	// Модальное окно Подтверждение покупки (чеком) - закрытие ошибки
     $('.modal-footer_error_close').on('click touchend', function(event) {
     	event.preventDefault();
 		$('.modal-footer_error').toggleClass('hide');
 	});
 
-	// office.html Скрыть нижнюю всплывающую панель
-    $('.modal__down_close').on('click touchend', function(event) {
-    	event.preventDefault();
-		$('.modal__down').toggleClass('hide');
-	});
+
 
     // office-news.html Галочка на новостях - Удаление/восстановление
     // Вызов блока .office__news_item_hide с кнопкой Удаления
@@ -742,15 +759,6 @@ $(document).ready(function() {
     	$('.reviews__sidebar').toggleClass('open');
     });
 
-    $('.office__history_mobile_link').on('click', function(event) {
-    	event.preventDefault();
-    	var wrap = $(this).closest('.office__history_mobile_item');
-    	var other = wrap.siblings('.office__history_mobile_item');
-
-    	other.removeClass('active');
-    	wrap.toggleClass('active');
-    });
-
     // Плагин Form Styler
     $('select').styler();
 
@@ -865,11 +873,5 @@ $(document).ready(function() {
 	// 	});
 	// 	return false;
 	// });
-
-	$('.presentation__slider').slick({
-		infinite: false,
-		slidesToShow: 1,
-		slidesToScroll: 1
-    })
 
 });

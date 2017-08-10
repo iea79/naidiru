@@ -4452,6 +4452,14 @@
 		.main__content_center {
 			padding-top: 20px;
 		}
+		h1 {
+			margin-top: 0;
+			margin-bottom: 20px;
+		}
+		.line {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
 	}
 }
 
@@ -4860,7 +4868,7 @@
 			color: #919191;
 			text-decoration: none;
 		}
-		&.active:after {;
+		&.active:after {
 				content: '>';
 				margin-left: 6px;
 		}
@@ -4869,6 +4877,9 @@
 		background-color: #fff;
 		max-height: 352px;
 		overflow: auto;
+		&_top_title {
+			margin-bottom: 13px;
+		}
 		&_wrap {
 			overflow: hidden;
 			height: 352px;
@@ -5423,23 +5434,19 @@
 		@extend %clear_a;
 	}
 	&_th {
+		position: relative;
 		height: 42px;
 		color: #fff;
 		background-color: #454545;
-		&:nth-child(3):after {
-			content: '?';
-			position: relative;
-			width: 14px;
-			height: 14px;
-			margin-left: 5px;
-			padding-top: 1px;
-			display: inline-block;
+		&_help {
+			position: absolute;
+			top: 10px;
+			right: 20px;
+			width: 15px;
+			height: 15px;
+			display: block;
 			cursor: pointer;
-			color: $main-color;
-			font-size: 11px;
-			text-align: center;
-			background-color: #fff;
-			@include border-radius(50%);
+			background: url('../img/question.svg') no-repeat;
 		}
 	}
 	&_td {
@@ -7010,9 +7017,17 @@
 		font-size: 21px;
 	}
 	@media (max-width: 767px) {
+		padding-left: 20px;
+		padding-right: 20px;
 		&_h {
 			font-size: 18px;
 			text-align: center;
+		}
+	}
+	@media (max-width: 600px) {
+		padding: 0 0 0 20px;
+		.sale__list.js_more_wrap {
+			padding-bottom: 10px !important;
 		}
 	}
 }
@@ -7024,6 +7039,8 @@
 // ============================================================================
 .office {
 	h1 {
+		margin-left: 20px;
+		margin-right: 20px;
 		&.star:before {
 			content: url('../img/star-red.svg');
 			width: 20px;
@@ -7063,19 +7080,129 @@
 // end office__shops_coupons
 
 
-// begin office__raffle
-.office__raffle {
-	&.coupon {
-		margin-bottom: 20px;
+// begin office__manual
+.office__manual {
+	padding: 43px 92px 60px;
+	color: #fff;
+	background: url('../img/pattern-promo.jpg') no-repeat;
+	background-size: cover;
+	&_wrap {
+		padding-top: 32px;
+	}
+	&_name {
+		margin-bottom: 30px;
+		font-size: 21px;
+	}
+	&_item {
+		margin-top: 11px;
+		@extend %clear_all;
+		&:nth-child(1) {
+			padding-left: 73px;
+			.office__manual_img {
+				float: right;
+				text-align: left;
+			}
+			.office__manual_header {
+				background: url('../img/step1.png') no-repeat 0 0;
+			}
+			.office__manual_info {
+				width: 355px;
+				float: left;
+				padding-top: 40px;
+			}
+		}
+		&:nth-child(2) {
+			.office__manual_img {
+				float: left;
+				margin-left: 3px;
+				margin-right: 40px;
+			}
+			.office__manual_header {
+				background: url('../img/step2.png') no-repeat 0 0;
+			}
+			.office__manual_info {
+				padding-top: 40px;
+				overflow: hidden;
+			}
+		}
+	}
+	&_header {
+		height: 35px;
+		padding-left: 52px;
+		padding-top: 7px;
+		font-size: 18px;
+	}
+	&_p {
+		margin-top: 18px;
+		padding-left: 5px;
+	}
+	@media (max-width: 991px) {
+		padding: 40px;
+		&_item {
+			&:nth-child(1) {
+				padding-left: 0;
+			}
+		}
 	}
 	@media (max-width: 767px) {
-		&.coupon {
-			margin-bottom: 0;
+		padding: 30px 20px 50px;
+		&_name {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+		&_item {
+			&:nth-child(1) {
+				margin-bottom: 50px;
+				.office__manual_img {
+					float: none;
+					width: 307px;
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 20px;
+				}
+				.office__manual_info {
+					float: none;
+					padding-top: 0;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+			&:nth-child(2) {
+				.office__manual_img {
+					float: none;
+					width: 250px;
+					margin-left: auto;
+					margin-right: auto;
+					margin-bottom: 20px;
+				}
+				.office__manual_info {
+					width: 355px;
+					padding-top: 0;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+		}
+	}
+	@media (max-width: 479px) {
+		&_item {
+			&:nth-child(1),
+			&:nth-child(2) {
+				.office__manual_img {
+					width: 100%;
+					img {
+						width: 100%;
+						height: auto;
+					}
+				}
+				.office__manual_info {
+					width: auto;
+				}
+			}
 		}
 	}
 }
-// end office__raffle
-
+// end office__manual
 
 
 // Страница категории category.html ///////////////

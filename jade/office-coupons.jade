@@ -80,7 +80,7 @@ block content
 			.sidebar__section
 				.office__menu
 					.office__item
-						a.office__link.active(href="#") Ваши ШопКарты и покупки
+						a.office__link(href="#") Ваши ШопКарты и покупки
 					.office__item
 						a.office__link(href="office-news.html") Написать нам + новости
 					.office__item
@@ -94,7 +94,7 @@ block content
 			.sidebar__section
 				.sidebar__section_name Поменяйте чек на ШопКарту
 				p Чтобы получить ШопКарту, нужно подвердить покупку чеком
-				button.btn.btn__danger Отправить чек
+				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
 			.sidebar__section
 				.sidebar__section_name Лента обладателей подарка
 				p Розыгрыш апрель-2017:
@@ -389,16 +389,31 @@ block content
 			.line
 
 
-			// begin office__raffle
-			.office__raffle.coupon
-				.office__raffle_name Как использовать промокод?
-					span + нужны здесь примеры в картинках
+			// begin office__manual
+			.office__manual_wrap
+				.office__manual_name.ind Как использовать промокод? 2 шага, чтобы получить скидку
 
-				.office__raffle_p Другой текст: Каждый месяц на сайте проходят розыгрыши, для того, чтобы участвовать, нужно:
-				.office__raffle_p 1) Перейти в интернет-магазин через сайт Найди.ру<br>2) Совершить покупку на сумму от 5000 рублей или постепенно набрать товары, которые суммой 5000 рублей<br>3) Отправить нам чек, для подверждения покупки, чтобы мы засчитали сумму покупки и зачислили вам баллы (1 рубль - 1 баллу)<br>4) Поменять накомленные баллы на лотерею
-				.office__raffle_p Покупайте и участвуйте в ежемесячных лотереях! 
-					a(href="#") Подробнее о том, как использовать промокод
-			// end office__raffle
+				.office__manual
+					.office__manual_item
+						.office__manual_img
+							img(src="img/used2.png", alt="#")
+						.office__manual_info
+							.office__manual_header Найдите магазин и выберите купон
+							
+							.office__manual_p Найти магазин, можно двумя способами:
+							
+							.office__manual_p 1) Через поиск, который находиться в меню <br>2) На странице “Все магазины”, с помощью фильтра
+
+							.office__manual_p Далее, Вам нужно будет выбрать купон и нажать на кнопку “Показать код”.
+					
+					.office__manual_item
+						.office__manual_img
+							img(src="img/used3.png", alt="#")
+						.office__manual_info
+							.office__manual_header Скопируйте код и вставьте его в специльное поле
+
+							.office__manual_p После нажатия на кнопку, перед Вами откроется блок, где Вы найдете, тот самый код скидки, который нужно будет скопировать. <br>Далее, нужно будет открыть интернет-магазин, добавить нужный товар в корзину и перейти к оформлению этой покупки. Здесь, Вам нужно будет заполнить все поля, в том числе и вставить в специальное поле для промокода скопированный ранее код и нажать на кнопку “Применить” или “Активировать промокод”.
+			// end office__manual
 
 
 

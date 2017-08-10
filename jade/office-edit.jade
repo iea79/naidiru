@@ -80,11 +80,11 @@ block content
 			.sidebar__section
 				.office__menu
 					.office__item
-						a.office__link.active(href="#") Ваши ШопКарты и покупки
+						a.office__link(href="#") Ваши ШопКарты и покупки
 					.office__item
 						a.office__link(href="office-news.html") Написать нам + новости
 					.office__item
-						a.office__link(href="office-edit.html") Изменить данные
+						a.office__link.active(href="office-edit.html") Изменить данные
 					.office__item
 						a.office__link(href="office-settings.html") Настройки рассылки
 					.office__item
@@ -94,10 +94,10 @@ block content
 			.sidebar__section
 				.sidebar__section_name Поменяйте чек на ШопКарту
 				p Чтобы получить ШопКарту, нужно подвердить покупку чеком
-				button.btn.btn__danger Отправить чек
+				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
 			.sidebar__section
 				.sidebar__section_name Лента обладателей подарка
-				p Розыгрыш апрель-2017:
+				.office__winners_top_title Розыгрыш апрель-2017:
 				.office__winners_wrap
 					.office__winners.scrollbar-inner
 						.office__winners_title Подарок: Смартфон 

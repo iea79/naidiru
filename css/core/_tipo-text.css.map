@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEC,2GAAgE,CAC/D,MAAM,CAAE,MAAM,CAGf,0BAAgB,CACf,SAAS,CAAE,IAAI,CAEhB,0BAAgB,CACf,SAAS,CAAE,IAAI,CAEhB,0BAAgB,CACf,SAAS,CAAE,IAAI,CAEhB,0BAAgB,CACf,SAAS,CAAE,IAAI,CAEhB,yBAAe,CACd,MAAM,CAAE,MAAM,CACd,uKAAwE,CACvE,UAAU,CAAE,IAAI",
-"sources": ["../../scss/core/_tipo-text.scss"],
-"names": [],
-"file": "_tipo-text.css"
-}

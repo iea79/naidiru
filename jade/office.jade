@@ -94,7 +94,7 @@ block content
 				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
 			.sidebar__section
 				.sidebar__section_name Лента обладателей подарка
-				p Розыгрыш апрель-2017:
+				.office__winners_top_title Розыгрыш апрель-2017:
 				.office__winners_wrap
 					.office__winners.scrollbar-inner
 						.office__winners_title Подарок: Смартфон 
@@ -253,7 +253,7 @@ block content
 								.office__winners_info
 									.user-name Светлана
 									.lottery-number # A17_414724
-				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__presentation") Посмотреть всех
+				button.btn.btn__danger Посмотреть всех
 		// end sidebar
 
 
@@ -469,7 +469,8 @@ block content
 								.office__history_tr
 									.office__history_th Интернет-магазин
 									.office__history_th Дата покупки
-									.office__history_th № заказа
+									.office__history_th № заказа 
+										a.office__history_th_help.tooltip(href="#", title="Как узнать номер моего заказа? Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".")
 									.office__history_th Сумма         
 									.office__history_th Статус
 								.office__history_tr
@@ -672,4 +673,8 @@ block content
 						, чтобы покупки засчитывались.
 			// end office__attention
 
+			// Button trigger modal modal__presentation
+			button(class="btn btn__danger" data-toggle="modal" data-target="#modal__presentation") Презентация: как работать с сайтом
+
 		// end main__content_center
+
