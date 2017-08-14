@@ -367,3 +367,56 @@ p {
 .gray__line {
 	background-color: $muted-color;
 }
+
+//  Подсказки
+.tooltip {
+	&__help {
+		position: relative;
+		z-index: 120;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		display: block;
+		background: transparent url('../img/icon-quest.svg') no-repeat;
+		background-size: 20px 20px;
+		&.big {
+			width: 24px;
+			height: 24px;
+			background-size: 24px 24px;
+		}
+	}
+	&__text {
+		display: none;
+		position: absolute;
+		z-index: 100;
+		padding: 14px 15px 12px;
+		font-size: 14px;
+		background-color: #fff;
+		border: 1px solid #d1d1d1;
+		@include opacity(1);
+		&.open {
+			display: block;
+		}
+		&:before {
+			content: url('../img/icon-quest.svg');
+			position: absolute;
+			z-index: 120;
+			width: 20px;
+			height: 20px;
+			display: block;
+		}
+		&.tooltip__big:before {
+			display: none;
+		}
+		&_big {
+			position: absolute;
+			z-index: 110;
+			width: 24px;
+			height: 24px;
+			cursor: pointer;
+			display: block;
+			background: transparent url('../img/icon-quest.svg') no-repeat;
+			background-size: 24px 24px;
+		}
+	}
+}

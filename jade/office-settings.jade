@@ -80,13 +80,13 @@ block content
 			.sidebar__section
 				.office__menu
 					.office__item
-						a.office__link(href="#") Ваши ШопКарты и покупки
+						a.office__link(href="office.html") Ваши ШопКарты и покупки
 					.office__item
 						a.office__link(href="office-news.html") Написать нам + новости
 					.office__item
 						a.office__link(href="office-edit.html") Изменить данные
 					.office__item
-						a.office__link.active(href="office-settings.html") Настройки рассылки
+						a.office__link.active(href="#") Настройки рассылки
 					.office__item
 						a.office__link(href="#") Как получить подарок?
 					.office__item
@@ -282,7 +282,7 @@ block content
 								label.checkbox__label(for="os3") Отписаться от всех рассылок
 							
 						.office__edit_down
-							button.btn.btn__danger.office__edit_btn Сохранить изменения
+							button(class="btn btn__danger office__edit_btn" data-toggle="modal" data-target="#modal__no-subscription") Сохранить изменения
 							.office__edit_note Информация успешно обновлена!
 								button.close
 			

@@ -118,6 +118,55 @@ $(document).ready(function() {
 		dots: true
 	});
 
+	$('.presentation__slider').slick({
+		infinite: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: false,
+		adaptiveHeight: true,
+		// arrows: false,
+		nextArrow: $('.modal-footer_next'),
+		prevArrow: $('.modal-footer_prev')
+	});
+
+	$('#modal__presentation').on('shown.bs.modal', function (e) {	
+		$('.presentation__slider').resize();
+		presntationSliderBtn('.presentation__slider');
+	});
+
+	function presntationSliderBtn(el) {
+		var slider = $(el);
+		var sliderItem = slider.find('.slick-slide');
+		var firstSlide = sliderItem.first();
+		var lastSlide = sliderItem.last();
+		var itemCount = $.each(sliderItem, function(index, val) {
+			 count =+ index;
+		});
+		var currentSlide = slider.slick('slickCurrentSlide');
+
+		if (currentSlide==0) {
+			$('.presentation__sliderfoot_first').show();
+			$('.presentation__sliderfoot_next').hide();
+		} else {
+			$('.presentation__sliderfoot_first').hide();
+			$('.presentation__sliderfoot_next').show();
+		}
+
+		slider.on('afterChange', function(){
+			var current = slider.slick('slickCurrentSlide');
+			if (current==0) {
+				$('.presentation__sliderfoot_first').show();
+				$('.presentation__sliderfoot_next').hide();
+			} else {
+				$('.presentation__sliderfoot_next_count').find('.current').text(current);
+				$('.presentation__sliderfoot_next_count').find('.total').text(itemCount.length-1);
+
+				$('.presentation__sliderfoot_first').hide();
+				$('.presentation__sliderfoot_next').show();
+			}
+		});
+	}
+
 	$('.slider__grid').slick({
 		infinite: false,
 		// lazyLoad: 'progressive',
@@ -813,11 +862,11 @@ $(document).ready(function() {
     	$('.category__top_right_subscribe').toggleClass('active');
 	});
 
-    // Страница бренда brand.html - Хелпы на промокодах - Нужно доработать
-    $('.sale__list_top_help').on('click', function() {
-    	$(this).find('.sale__list_top_text').addClass('open');
+    // Страница бренда brand.html - Хелпы на промокодах
+    $('.tooltip__help').on('click', function() {
+    	$(this).find('.tooltip__text').addClass('open');
     });
-    $('.sale__list_top_text').mouseleave(function() {
+    $('.tooltip__text').mouseleave(function() {
     	$(this).removeClass('open');
     });
 
@@ -825,12 +874,6 @@ $(document).ready(function() {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).siblings('.faq_answer').toggleClass('open');
-	});
-
-	// Страница бренда brand.html - Хелп
-    $('.brand__info_advantage_help').on('click touchend', function(event) {
-    	event.preventDefault();
-		$('.brand__info_advantage_answer').toggleClass('open');
 	});
 
 	// Страница бренда brand.html - Скрытые информационные блоки в мобильной части - Доработатьg

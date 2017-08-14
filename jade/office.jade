@@ -30,6 +30,25 @@ block content
 							.office__top_user_lname Иванова
 					a.office__top_alarm.open(href="#")
 						.office__top_alarm_number 1
+
+					//- .office__top_notification
+					//- 	.office__top_notification_in
+					//- 		.office__top_notification_name Оповещения
+					//- 			a.office__top_notification_link(href="#") Показать все
+					//- 		a.office__top_notification_item(href="#")
+					//- 			.office__top_notification_left
+					//- 				img(src="img/most1.png", alt="#")
+					//- 			.office__top_notification_right Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!
+					//- 		a.office__top_notification_item(href="#")
+					//- 			.office__top_notification_left
+					//- 				img(src="img/icon-sure4.png", alt="#")
+					//- 			.office__top_notification_right Извините, но Ваш чек был не подвержден. <br>Причина: Чек не соотвествует с выбранным № заказом.
+					//- 		a.office__top_notification_item(href="#")
+					//- 			.office__top_notification_left
+					//- 				img(src="img/icon-sure2.png", alt="#")
+					//- 			.office__top_notification_right Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.
+					//- 	img.login__box_reg_trigon(src="img/trigon2.png", alt="#")
+
 				.office__top_right
 					.sm_social
 						.sm_social_icon
@@ -54,6 +73,7 @@ block content
 						p До        Вам осталось набрать: <br>
 							span.large.bold.points__left 2880 
 							span.bold баллов
+						//- .office__top_center_help
 					.sm_social
 						.sm_social_icon
 							.ya-share2(data-services="vkontakte")
@@ -269,28 +289,31 @@ block content
 						a.office__lotteries_how(href="#") Что такое ШопКарта?
 					.office__lotteries_list
 						.office__lotteries_item
-							.office__lotteries_p &lowast; &lowast; &lowast;
-							.office__lotteries_p ШопКарта
-							.office__lotteries_p Покупателя в интернете
+							.office__lotteries_ellipsis &lowast; &lowast; &lowast;
+							.office__lotteries_title ШопКарта
+							.office__lotteries_customer Покупателя в интернете
 							img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
-							.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
+							.office__lotteries_down *эта карточка дает возможность получить подарок в этом месяце
 						.office__lotteries_item
-							.office__lotteries_p &lowast; &lowast; &lowast;
-							.office__lotteries_p ШопКарта
-							.office__lotteries_p Покупателя в интернете
+							.office__lotteries_ellipsis &lowast; &lowast; &lowast;
+							.office__lotteries_title ШопКарта
+							.office__lotteries_customer Покупателя в интернете
 							img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
-							.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
+							.office__lotteries_down *эта карточка дает возможность получить подарок в этом месяце
 						.office__lotteries_item
-							.office__lotteries_p &lowast; &lowast; &lowast;
-							.office__lotteries_p ШопКарта
-							.office__lotteries_p Покупателя в интернете
+							.office__lotteries_ellipsis &lowast; &lowast; &lowast;
+							.office__lotteries_title ШопКарта
+							.office__lotteries_customer Покупателя в интернете
 							img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
-							.office__lotteries_p *эта карточка дает возможность получить подарок в этом месяце
+							.office__lotteries_down *эта карточка дает возможность получить подарок в этом месяце
 						.office__lotteries_item.office__lotteries_last
-							.office__lotteries_last_p Делайте покупки и меняйте чеки на ШопКарты
+							.office__lotteries_last_name Делайте покупки и меняйте чеки на ШопКарты
 							.office__lotteries_last_p Получите ШопКарту прямо сейчас, нажав на кнопку ниже &darr;
 							button(class="btn btn__danger", data-toggle="modal", data-target="#modal__shopcard") Получить ШопКарту
-							i.icon__question.big
+							.tooltip__help.big
+								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
+									a(href="#") Подробнее об акции &gt;
+									.tooltip__text_big
 				// end office__lotteries
 
 
@@ -317,16 +340,19 @@ block content
 						a.office__lotteries_how(href="#") Что такое ШопКарта?
 					.office__lotteries_list
 						.office__lotteries_item
-							.office__lotteries_p &lowast; &lowast; &lowast;
-							.office__lotteries_p Ура! Вы получили подарок!
-							.office__lotteries_p Ваш подарок: смартфон
+							.office__lotteries_ellipsis &lowast; &lowast; &lowast;
+							.office__lotteries_title Ура! Вы получили подарок!
+							.office__lotteries_customer Ваш подарок: смартфон
 						.office__lotteries_item.office__lotteries_last
-							.office__lotteries_last_p Делайте покупки и меняйте чеки на ШопКарты
+							.office__lotteries_last_name Делайте покупки и меняйте чеки на ШопКарты
 							.office__lotteries_last_p Чтобы получить ШопКарту нужно накопить 
 								span 5000 баллов
 							button(class="btn", data-toggle="modal", data-target="#modal__shopcard") Получить ШопКарту
-							.office__lotteries_last_p.last т.е. накопить чеки = 5000 рублей
-							i.icon__question.big
+							.office__lotteries_last_down т.е. накопить чеки = 5000 рублей
+							.tooltip__help.big
+								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
+									a(href="#") Подробнее об акции &gt;
+									.tooltip__text_big
 				// end office__lotteries
 
 
@@ -384,12 +410,15 @@ block content
 						a.office__lotteries_how(href="#") Что такое ШопКарта?
 					.office__lotteries_list
 						.office__lotteries_item.office__lotteries_last
-							.office__lotteries_last_p Делайте покупки и меняйте чеки на ШопКарты
+							.office__lotteries_last_name Делайте покупки и меняйте чеки на ШопКарты
 							.office__lotteries_last_p Чтобы получить ШопКарту нужно накопить 
 								span 5000 баллов
 							button(class="btn", data-toggle="modal", data-target="#modal__shopcard") Получить ШопКарту
-							.office__lotteries_last_p.last т.е. накопить чеки = 5000 рублей
-							i.icon__question.big
+							.office__lotteries_last_down т.е. накопить чеки = 5000 рублей
+							.tooltip__help.big
+								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
+									a(href="#") Подробнее об акции &gt;
+									.tooltip__text_big
 				// end office__lotteries
 
 
@@ -421,7 +450,7 @@ block content
 								.office__history_mobile_name Информация о покупке
 								.office__history_mobile_row
 									b Магазин: 
-									|Снежная королев
+									|Снежная королева
 								.office__history_mobile_row
 									b Дата покупки:  
 									|23.05.2017
@@ -470,8 +499,8 @@ block content
 									.office__history_th Интернет-магазин
 									.office__history_th Дата покупки
 									.office__history_th № заказа 
-										a.office__history_th_help.tooltip(href="#", title="Как узнать номер моего заказа? Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".")
-									.office__history_th Сумма         
+										//- a.office__history_th_help.tooltip(href="#", title="Как узнать номер моего заказа? Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".")
+									.office__history_th Сумма   
 									.office__history_th Статус
 								.office__history_tr
 									.office__history_td Снежная королева
@@ -678,3 +707,14 @@ block content
 
 		// end main__content_center
 
+
+		// begin modal__down  
+		.modal__down 
+			.container_center
+				.modal__down_left
+					img(src="img/icon-sure3.png", alt="#")
+				.modal__down_right 
+					span.attention ВНИМАНИЕ! 
+					span Подтвердите свой емайл, для того, чтобы продолжить использовать аккаунт. Письмо с подтврждением, уже пришло на Вашу почту. <br>Не подтвержденный емайлом аккаунт, автоматически удалиться через 5 дней!
+					button.modal__down_close
+		// end modal__down

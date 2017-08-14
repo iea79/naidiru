@@ -192,6 +192,7 @@
 
 // begin modal__down
 .modal__down {
+	display: none;
 	position: fixed;
 	bottom: 0;
 	left: 0;
@@ -201,7 +202,7 @@
 	@extend %clear_a;
 	.container_center {
 		position: relative;
-		padding: 17px 183px 15px 60px ;
+		padding: 17px 183px 15px 60px !important;
 	}
 	&_left {
 		width: 40px;
@@ -234,4 +235,4 @@
 		display: none;
 	}
 }
-// end modal__down 
+// end modal__down

@@ -309,12 +309,12 @@ block content
 
 				.sale__list_inform Количество промокодов:
 					span.sale__list_number 5
-
-				.sale__list_reg Нужно:
-					a(href="autorization.html") войти или зарегистрироваться
 					
 				// begin sale__list 
 				.sale__list.js_more_wrap.sale__list_first
+
+					.sale__list_reg Нужно:
+						a(href="autorization.html") войти или зарегистрироваться
 					
 					// Row 1
 					.sale__list_row.js_more_item
@@ -327,7 +327,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
@@ -340,7 +340,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 					
 					// Row 2
@@ -354,7 +356,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
@@ -367,7 +369,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 
 					// Row 3
@@ -381,7 +385,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
@@ -394,7 +398,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 					
 					// Row 4
@@ -408,7 +414,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
@@ -421,7 +427,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 				
 
@@ -442,6 +450,24 @@ block content
 						.sale__list_ad_enter_in Вы уже подписаны и у вас даже есть личный кабинет. <br>Пожалуйста, 
 							a(href="#") войдите в аккаунт &gt;
 
+
+				// Тот же блок, только класс second
+				.sale__list_ad.second
+					.sale__list_ad_left
+					.sale__list_ad_center.subscribe
+						.sale__list_ad_title Не пропустите ни одной супер-скидки!
+						.sale__list_ad_terms
+							|Узнавайте первым о самых больших скидках + участвуйте в ежемесячных акциях и получайте подарки!
+					.sale__list_ad_center.mail
+						.sale__list_ad_title Пожалуйста, подтвердите свой емайл
+						.sale__list_ad_terms
+							|Поздравляем! Вы уже в шаге от лучших скидок этого магазина. <br>Для Вашей безопасности, мы отправили вам письмо с подвержением Вашего емайла на указанную почту.
+					form.sale__list_ad_right(action="#")
+						input(type="email" placeholder="Введите ваш e-mail")
+						button.btn.btn__danger Подписаться
+					.sale__list_ad_enter
+						.sale__list_ad_enter_in Вы уже подписаны и у вас даже есть личный кабинет. <br>Пожалуйста, 
+							a(href="#") войдите в аккаунт &gt;
 
 
 				.sale__list_add
@@ -464,7 +490,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
@@ -477,7 +503,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 					
 					// Row 6
@@ -491,7 +519,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
@@ -504,7 +532,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 
 					// Row 7
@@ -518,7 +548,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
@@ -531,7 +561,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 					
 					// Row 8
@@ -545,7 +577,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
@@ -558,7 +590,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 
 					// Row 9
@@ -572,7 +606,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
@@ -585,7 +619,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 					
 					// Row 10
@@ -599,7 +635,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
@@ -612,7 +648,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 
 					// Row 11
@@ -626,7 +664,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
@@ -639,7 +677,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 					
 					// Row 12
@@ -653,7 +693,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
@@ -666,7 +706,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 
 					// Row 13
@@ -680,7 +722,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
@@ -693,7 +735,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 					
 					// Row 14
@@ -707,7 +751,7 @@ block content
 							a(href="#").sale__list_save Сохранить
 							.code__wrap
 								.code__field D146SAFR
-								a(href="#").btn.btn__primary.code__btn Показать код
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
 							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
@@ -720,7 +764,9 @@ block content
 							.sale__list_bottom
 								.sale__list_info
 									|Используй купон и получай подарки!
-									i.icon__question
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
 				// end sale__list
 

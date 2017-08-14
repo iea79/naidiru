@@ -49,6 +49,14 @@ header.header
 					li
 						a(href="#") Выйти
 
+				.login__box_reg
+					.login__box_reg_in
+						.login__box_reg_top
+							.login__box_reg_p Здравствуйте, зарегистрируйтесь, чтобы участвовать в розыгрышах.
+							button(class="btn btn__danger login__box_reg_btn", data-toggle="modal", data-target="#modal__sign-up") Зарегистрироваться
+						.login__box_reg_bottom У вас есть свой аккаунт? 
+							a(href="#", data-toggle="modal", data-target="#modal__log-in") Войти
+					img.login__box_reg_trigon(src="img/trigon.png", alt="#")
 			// end login__box 
 			
 			// begin header__bottom_center 
@@ -70,6 +78,39 @@ header.header
 				.header__search
 					input(placeholder="Найти: смартфон, Nike, Aliexpress ...")
 					button.header__search_btn
+					.header__search_down
+						.header__search_down_list
+							.header__search_down_name Магазины
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="img/shop1.jpg", alt="#")
+								span.header__search_down_right Adidas
+							a.header__search_down_item(href="#")
+								span.header__search_down_left
+									img(src="img/shop6.jpg", alt="#")
+								span.header__search_down_right Аснежная королева
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="img/shop3.jpg", alt="#")
+								span.header__search_down_right Алетуаль
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="img/shop1.jpg", alt="#")
+								span.header__search_down_right Аквелли
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="img/shop2.jpg", alt="#")
+								span.header__search_down_right Аквелли
+						.header__search_down_list
+							.header__search_down_name Категории
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="", alt="")
+								span.header__search_down_right Аксессуары
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="", alt="")
+								span.header__search_down_right Аксессуары для телефонов
 				// end header__search 
 
 			.icon__search.header__search_toggle

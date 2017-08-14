@@ -80,11 +80,11 @@ block content
 			.sidebar__section
 				.office__menu
 					.office__item
-						a.office__link(href="#") Ваши ШопКарты и покупки
+						a.office__link(href="office.html") Ваши ШопКарты и покупки
 					.office__item
 						a.office__link(href="office-news.html") Написать нам + новости
 					.office__item
-						a.office__link.active(href="office-edit.html") Изменить данные
+						a.office__link.active(href="#") Изменить данные
 					.office__item
 						a.office__link(href="office-settings.html") Настройки рассылки
 					.office__item
@@ -327,7 +327,9 @@ block content
 										.ya-share2(data-services="facebook")
 									.lg_social_icon
 										.ya-share2(data-services="gplus")
-								i.icon__question.big
+									.tooltip__help.big
+										.tooltip__text.tooltip__big Свяжите аккаунт с соц.сетью, просто выбрав одну из соц.сетей. Это дает возможность быстро (одним кликом) зайти в аккаунт. <br>Ваша безопасность нам превыше всего. Никто, в том числе и мы не сможем получить доступ к Вашим личным данным. 
+											.tooltip__text_big
 					
 					.office__edit_down
 						button.btn.btn__danger.office__edit_btn Сохранить изменения
@@ -429,8 +431,8 @@ block content
 			// begin office__edit_text 
 			.office__edit_text
 				p Вы можете 
-					a(href="#") удалить свой аккаунт
-					, но знайте, если вы сделайте это, то потеряете все, что вы накопили: баллы, все действующие ШопКарты и главное возможность участвовать в ежемесячных акциях и выиграть подарок мечты.
+					a(href="#", data-toggle="modal", data-target="#modal__del-account") удалить свой аккаунт, 
+					span но знайте, если вы сделайте это, то потеряете все, что вы накопили: баллы, все действующие ШопКарты и главное возможность участвовать в ежемесячных акциях и выиграть подарок мечты.
 				p Но это еще не все, если вы удалите свой аккаунт, вы больше не узнаете первым о супер-скадках и не сэкономите на следующей покупке в вашем любимом интернет-магазине. Не делайте этого! Мы будем скучать!
 				
 			// end office__edit_text 

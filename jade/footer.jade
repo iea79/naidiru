@@ -143,6 +143,39 @@ footer.footer
 
 							p Если Вы не получили письмо в течение 15 мин., пожалуйста, напишите нам.
 
+
+
+			.presentation__slider
+				// Slide main 
+				.presentation__slider_item
+					
+					.presentation__slider_title Добро пожаловать на сайт Найди.ру
+
+					.presentation__slider_conten
+						.presentation__slider_left
+							img(src="img/present_slide.jpg", alt="#" width="265")
+						.presentation__slider_right
+							
+							p Ура! Поздравляем! Вы стали частью, нашего большого дружного сообщества! <br>И Вы не поверите, но мы Вас тут все ждали...
+
+							p Теперь, Вам не будут страшны повышение цен, потому что, Вы знаете, где брать промокоды. <br>И нет ничего сложного в том, чтобы выиграть подарок мечты, потому что у Вас есть шанс на победу.
+
+							p Но сначала, Вам нужно понять, как работает сайт, поэтому предлагаем посмотреть увлекательную инструкцию.
+				// Slide 1 
+				.presentation__slider_item
+					
+					.presentation__slider_title Заполните данные и подтвердите емайл
+
+					.presentation__slider_conten
+						.presentation__slider_left
+							img(src="img/present_slide1.jpg", alt="#" width="353")
+						.presentation__slider_right
+							
+							p Мы отправили Вам письмо на указаную при регистрации почту, пожалуйста, подтвердите емайл, если вы не сделали это ранее. Важно! Не подтвержденный емайлом аккаунт удалиться через 5 дней.
+
+							p Если Вы не получили письмо в течение 15 мин., пожалуйста, напишите нам.
+
+
 							p Также желательно заполнить свои данные, чтобы в случае выигрыша мы смогли сразу с Вами связаться, если Вы не хотите делать это, не делайте, это не обязательное условие для участия в розыгрыше.
 				// Slide 2 
 				.presentation__slider_item
@@ -171,12 +204,20 @@ footer.footer
 							img(src="img/present_slide3.jpg", alt="#" width="385")
 						.presentation__slider_right
 							
+
 							p Участвовать в акции просто, совершайте покупки по промокодам через нас и сохраняйте чеки.
+
+							p Участвовать в розыгрыше просто, совершайте покупки по промокодам через нас и сохраняйте чеки.
+
 
 							p Если Вы не нашли подходящий промокод у магазина, но хотите получить баллы за покупку, зайдите на страницу магазина и перейдите на сайт магазина по ссылке, которая находиться в верхней части сайта.
 
 							p Подробнее о том, 
+
 								a(href="#") как использовать промокод &gt;
+
+								a(href="#") как использовать промокод &gt;
+
 					
 				// Slide 4 
 				.presentation__slider_item
@@ -203,12 +244,20 @@ footer.footer
 							img(src="img/present_slide5.jpg", alt="#" width="393")
 						.presentation__slider_right
 							
+
 							p Накопите 5000 баллов и поменяйте их на ШопКарту. 5000 баллов = 5000 руб.- (общая сумма покупки).
+
+							p Накопите 5000 баллов и поменяйте их на лотерейный билет. 5000 баллов = 5000 руб.- (общая сумма покупки).
+
 
 							p Если Вы совершите покупку на сумму 5000 руб., то Вы сможете получить лотерею сразу, после подтверждения покупки чеком.
 
 							p 
+
 								a(href="#") Узнайте более подробнее о розыгрышах, призах и победителях &gt;
+
+								a(href="#") Узнайте более подробнее о розыгрышах, призах и победителях &gt;
+
 					
 				// Slide 6 
 				.presentation__slider_item
@@ -344,8 +393,10 @@ footer.footer
 					.modal-body_p *Вы должны знать, если Вы получите ШопКарту, то у Вас автоматически спишутся накопленные здесь 5000 баллов!
 				
 				.modal-footer
+
 					button.btn.btn__danger.modal-footer_left Да, я хочу <br>ШопКарту сейчас
 					button.btn.modal-footer_right(data-dismiss="modal") Нет, получу ШопКарту <br>в следующий раз
+
 
 			btn(class="close", data-dismiss="modal")
 // end modal modal__shopcard
@@ -394,6 +445,7 @@ footer.footer
 					
 			btn(class="close", data-dismiss="modal")
 
+
 // begin modal__down  
 .modal__down 
 	.container_center
@@ -403,4 +455,292 @@ footer.footer
 			span.attention ВНИМАНИЕ! 
 			span Подтвердите свой емайл, для того, чтобы продолжить использовать аккаунт. Письмо с подтврждением, уже пришло на Вашу почту. <br>Не подтвержденный емайлом аккаунт, автоматически удалиться через 5 дней!
 			button.modal__down_close
-// end modal__down  
+// end modal__down
+
+
+// http://joxi.ru/EA4Np7Kuw6V0Xm
+// Button trigger modal modal__no-subscription
+// button(class="btn btn__danger office__edit_btn" data-toggle="modal" data-target="#modal__no-subscription") Click to open modal
+// begin Modal modal__no-subscription 
+.modal.fade.modal__no-subscription#modal__no-subscription
+	.modal-dialog
+		.modal-content
+			.modal__no-subscription_wrap
+				.modal-header Вы уверены, что хотите полностью отписаться от рассылки?
+				
+				.modal-body
+					.modal-body_p Если Вы сделаете это, то Вы никогда не получите уведомление о том, что именно Вы, 
+						span.bold выиграили в нашей ежемесячной акции. 
+						span Вы никогда не узнаете первым, о лучших скидках в Ваших любимых магазинах.
+
+					.modal-body_p Вы даже не узнаете, об изменениях в Вашем аккаунте (в том числе и о смене пароля или емайла). Поверьте, это может привести к тому, что Ваш аккаунт могут взломать.
+					
+					.modal-body_p Не делаете этого, подумайте 100 раз, прежде, чем принять решение!
+				
+				.modal-footer
+					button.btn.btn__danger.modal-footer_left(data-dismiss="modal") Нет, я пошутил
+					button.btn.modal-footer_right Да, но так надо
+
+			btn(class="close", data-dismiss="modal")
+// end modal modal__no-subscription
+
+
+// http://joxi.ru/Dr8Kn03u467jbA
+// Button trigger modal modal__del-account
+// a(href="#", data-toggle="modal", data-target="#modal__del-account") Click to open modal
+// begin Modal modal__del-account
+.modal.fade.modal__del-account#modal__del-account
+	.modal-dialog
+		.modal-content
+			.modal__del-account_wrap
+				.modal-header Удалить мой аккаунт
+				
+				.modal-body
+					.modal-body_top
+						.modal-body_top_p Нам грусто видеть, что вы все-таки хотите уйти от нас. <br>Но прежде, чем уйти, скажите, что послужило тому виной ...
+
+						.modal-body_form
+							.modal-body_row
+								input(type="radio", id="da01", name="del-account")
+								label(for="da01") Мне не нравиться ваша рассылка, больше не хочу ее получать
+							.modal-body_row
+								input(type="radio", id="da02", name="del-account")
+								label(for="da02") Спасибо за экономию, но я трачу много денег на шоппинг
+							.modal-body_row
+								input(type="radio", id="da03", name="del-account")
+								label(for="da03") Я ни разу не выиграл, больше не хочу участвовать в ваших розыгрышах
+							.modal-body_row
+								input(type="radio", id="da04", name="del-account")
+								label(for="da04") Я не понимаю, для чего мне ваш сайт и как им пользоваться
+							.modal-body_row
+								input(type="radio", id="da05", name="del-account")
+								label(for="da05") Я не понимаю, для чего мне ваш сайт и как им пользоваться
+							.modal-body_row
+								textarea.modal-body_textarea(name="del-account-area", placeholder="Ваше сообщение ...")
+					.modal-body_down
+						.modal-body_down_p Мы рады, что вы были с нами столько времени и нам очень жаль, что вы уходите.
+
+						.modal-body_down_p Может стоит подумать? Вспомните, сколько вы сэкономили вместе с нами.
+
+						.modal-body_down_p Поверьте, выход есть всегда, мы предлагаем вам 
+							a(href="#") отписаться от нашей рассылки.
+
+						.modal-body_down_p И мы не будем больше напоминать вам о скидках. А это значит, что ваши расходы уменьшатся.
+				
+				.modal-footer
+					.modal-footer_top
+						button.btn.btn__danger.modal-footer_left(data-dismiss="modal") Нет, я не хочу уходить
+						button.btn.modal-footer_right Все кончено, я ухожу
+					.modal-footer_down Если вы удалите свой аккаунт, то вы больше не сможете его восстановить!
+
+			btn(class="close", data-dismiss="modal")
+// end modal modal__del-account
+
+
+// http://joxi.ru/brRD8VeSJoXa62
+// Button trigger modal modal__open-action
+// a(href="#", class="btn btn__primary code__wrap_btn", data-toggle="modal", data-target="#modal__open-action") Click to open modal
+// begin Modal modal__open-action
+.modal.fade.modal__open-action#modal__open-action
+	.modal-dialog
+		.modal-content
+			.modal__open-action_wrap
+				.modal-header Скидка до -50% на одежду и обувь!
+				
+				.modal-body
+					.modal-body_top
+						.modal-body_top_img
+							img(src="img/shop6.jpg", alt="#")
+						.modal-body_top_p Код не требуется
+						a.btn.modal-body_top_btn(href="#") Перейти в магазин
+					.modal-body_center 
+						.modal-body_center_p Условия акции: 
+						.modal-body_center_conditions Промокод действителен после ввода промокод после ввода промокод
+						a.modal-body_center_link(href="#") Подробнее
+					.modal-body_down
+						.modal-body_down_left
+							img(src="img/gift2.svg", alt="#")
+						.modal-body_down_right
+							.modal-body_down_name Розыгрыш каждый месяц (получайте ценные призы)
+							.modal-body_down_p Покупайте, меняйте баллы на лотереи и участвуйте в розыгрышах. 
+							a(href="#") Подробнее о розыгрыше &gt;				
+				.modal-footer
+					.modal-footer_input_wrap
+						input.modal-footer_input(type="email", placeholder="Введите ваш e-mail")
+						btn.btn.btn__danger.modal-footer_input_btn Подписаться
+					.modal-footer_p Не пропускайте лучших скидок
+
+			button(class="close", data-dismiss="modal")
+// end modal modal__open-action
+
+
+// http://joxi.ru/DrlaO5zfv8NM1m
+// Button trigger modal modal__show-code
+// a(href="#", data-toggle="modal", data-target="#modal__show-code") Click to open modal
+// begin Modal modal__show-code
+.modal.fade.modal__show-code#modal__show-code
+	.modal-dialog
+		.modal-content
+			.modal__show-code_wrap
+				.modal-header Скидка до -50% на одежду и обувь!
+				
+				.modal-body
+					.modal-body_top
+						.modal-body_top_img
+							img(src="img/shop6.jpg", alt="#")
+						.modal-body_top_code_wrap
+							.modal-body_top_code 5M1LOVE2
+							button.btn.btn__primary.modal-body_top_btn Скопировать
+						.modal-body_top_p 1. Скопируйте этот код промокода;
+						.modal-body_top_p 2. Вставьте его в специальное поле при оформлении заказа.
+						
+					.modal-body_center
+						a.btn.modal-body_center_btn(href="#") Перейти в магазин
+						.modal-body_center_in
+							.modal-body_center_p Условия акции: 
+							.modal-body_center_conditions Промокод действителен после ввода промокод после ввода промокод
+							a.modal-body_center_link(href="#") Подробнее
+					.modal-body_down
+						.modal-body_down_left
+							img(src="img/gift2.svg", alt="#")
+						.modal-body_down_right
+							.modal-body_down_name Розыгрыш каждый месяц (получайте ценные призы)
+							.modal-body_down_p Покупайте, меняйте баллы на лотереи и участвуйте в розыгрышах. 
+							a(href="#") Подробнее о розыгрыше &gt;				
+				.modal-footer
+					.modal-footer_input_wrap
+						input.modal-footer_input(type="email", placeholder="Введите ваш e-mail")
+						btn.btn.btn__danger.modal-footer_input_btn Подписаться
+					.modal-footer_p Не пропускайте лучших скидок
+					
+			button(class="close", data-dismiss="modal")
+// end modal modal__show-code
+
+ 
+// Button trigger modal modal__log-in
+// a(href="#", data-toggle="modal", data-target="#modal__log-in") Click to open modal
+// begin Modal modal__log-in
+.modal.fade.modal__log-in#modal__log-in
+	.modal-dialog
+		.modal-content
+			.modal__log-in_wrap
+				.modal-header 
+					.modal-header_name Войти в аккаунт
+					.modal-header_out Не зарегистрированы? <br>Присоединяйтесь... 
+						a(href="#", data-toggle="modal", data-target="#modal__sign-up") Регистрация &gt;
+				.modal-body
+					.modal-body_row
+						label(class="modal-body_label", for="li1") E-mail
+						input(class="modal-body_input", type="email", id="li1", placeholder="Введите Ваш e-mail")
+					.modal-body_row
+						label(class="modal-body_label", for="li2") Пароль
+						input(class="modal-body_input", type="password", id="li2", placeholder="Введите пароль")
+					button.btn.btn__danger.modal-body_btn Войти в аккаунт
+					.modal-body_down Забыли пароль? 
+						a(href="#", data-toggle="modal", data-target="#modal__forgot-password") Восстановить пароль
+				.modal-footer
+					.modal-footer_in
+						.modal-footer_p Или войдите через соц.сети:
+						.lg_social
+							.lg_social_icon
+								.ya-share2(data-services="vkontakte")
+							.lg_social_icon
+								.ya-share2(data-services="odnoklassniki")
+							.lg_social_icon
+								button.lg_social_icon_add.btn
+							.lg_social_icon
+								button.lg_social_icon_add.btn
+							.lg_social_icon
+								.ya-share2(data-services="facebook")
+							.lg_social_icon
+								.ya-share2(data-services="gplus")
+							.tooltip__help.big
+								.tooltip__text.tooltip__big Зарегистрируйтесь или войдите в аккаунт через соц.сети, просто выберите одну из этих соц.сетей. <br>Что Вам это дает? Вы можете быстро (одним кликом) зайти в аккаунт. <br>Ваша безопасность нам превыше всего. Никто, в том числе и мы не сможем получить доступ к Вашим личным данным.
+									.tooltip__text_big
+										
+			button(class="close", data-dismiss="modal")
+// end modal modal__log-in
+
+
+// Button trigger modal modal__sign-up
+// a(href="#", data-toggle="modal", data-target="#modal__sign-up") Click to open modal
+// begin Modal modal__sign-up
+.modal.fade.modal__sign-up#modal__sign-up
+	.modal-dialog
+		.modal-content
+			.modal__sign-up_wrap
+				.modal-header 
+					.modal-header_name Регистрация на сайте
+					.modal-header_out Уже зарегистрированы? <br>
+						a(href="#", data-toggle="modal", data-target="#modal__sign-up") Войти в аккаунт &gt;
+				.modal-body
+					.modal-body_row
+						label(class="modal-body_label", for="li1") E-mail
+						input(class="modal-body_input", type="email", id="li1", placeholder="Введите Ваш e-mail")
+					.modal-body_p Чтобы зарегистрироваться на сайте, просто введите Ваш email. <br>Для Вашей безопасности, мы сами сгенерируем Вам пароль и отправим его на указанную почту.
+					button.btn.btn__danger.modal-body_btn Зарегистрироваться
+				.modal-footer
+					.modal-footer_in
+						.modal-footer_p Или войдите через соц.сети:
+						.lg_social
+							.lg_social_icon
+								.ya-share2(data-services="vkontakte")
+							.lg_social_icon
+								.ya-share2(data-services="odnoklassniki")
+							.lg_social_icon
+								button.lg_social_icon_add.btn
+							.lg_social_icon
+								button.lg_social_icon_add.btn
+							.lg_social_icon
+								.ya-share2(data-services="facebook")
+							.lg_social_icon
+								.ya-share2(data-services="gplus")
+							.tooltip__help.big
+								.tooltip__text.tooltip__big Зарегистрируйтесь или войдите в аккаунт через соц.сети, просто выберите одну из этих соц.сетей. <br>Что Вам это дает? Вы можете быстро (одним кликом) зайти в аккаунт. <br>Ваша безопасность нам превыше всего. Никто, в том числе и мы не сможем получить доступ к Вашим личным данным.
+									.tooltip__text_big
+					.modal-footer_down Регистрируясь, я соглашаюсь с 
+						a(href="#") Условиями использования сайта.
+										
+			button(class="close", data-dismiss="modal")
+// end modal modal__sign-up
+
+ 
+// Button trigger modal modal__forgot-password
+// a(href="#", data-toggle="modal", data-target="#modal__forgot-password") Click to open modal
+// begin Modal modal__forgot-password
+.modal.fade.modal__forgot-password#modal__forgot-password
+	.modal-dialog
+		.modal-content
+			.modal__forgot-password_wrap
+				.modal-header 
+					.modal-header_name Забыли пароль
+					.modal-header_out Не зарегистрированы? <br>Присоединяйтесь... 
+						a(href="#", data-toggle="modal", data-target="#modal__sign-up") Регистрация &gt;
+				.modal-body
+					.modal-body_row
+						label(class="modal-body_label", for="li1") E-mail
+						input(class="modal-body_input", type="email", id="li1", placeholder="Введите Ваш e-mail")
+					button.btn.btn__danger.modal-body_btn Восстановить пароль
+					.modal-body_down Вспомнили пароль? 
+						a(href="#", data-toggle="modal", data-target="#modal__log-in") Войти в аккаунт &gt;
+				.modal-footer
+					.modal-footer_in
+						.modal-footer_p Или войдите через соц.сети:
+						.lg_social
+							.lg_social_icon
+								.ya-share2(data-services="vkontakte")
+							.lg_social_icon
+								.ya-share2(data-services="odnoklassniki")
+							.lg_social_icon
+								button.lg_social_icon_add.btn
+							.lg_social_icon
+								button.lg_social_icon_add.btn
+							.lg_social_icon
+								.ya-share2(data-services="facebook")
+							.lg_social_icon
+								.ya-share2(data-services="gplus")
+							.tooltip__help.big
+								.tooltip__text.tooltip__big Зарегистрируйтесь или войдите в аккаунт через соц.сети, просто выберите одну из этих соц.сетей. <br>Что Вам это дает? Вы можете быстро (одним кликом) зайти в аккаунт. <br>Ваша безопасность нам превыше всего. Никто, в том числе и мы не сможем получить доступ к Вашим личным данным.
+									.tooltip__text_big
+			button(class="close", data-dismiss="modal")
+// end modal modal__forgot-password
