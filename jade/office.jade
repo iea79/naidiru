@@ -28,26 +28,26 @@ block content
 						.office__top_user_name
 							.office__top_user_fname Александра 
 							.office__top_user_lname Иванова
-					a.office__top_alarm.open(href="#")
+					.office__top_alarm.open
 						.office__top_alarm_number 1
 
-					//- .office__top_notification
-					//- 	.office__top_notification_in
-					//- 		.office__top_notification_name Оповещения
-					//- 			a.office__top_notification_link(href="#") Показать все
-					//- 		a.office__top_notification_item(href="#")
-					//- 			.office__top_notification_left
-					//- 				img(src="img/most1.png", alt="#")
-					//- 			.office__top_notification_right Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!
-					//- 		a.office__top_notification_item(href="#")
-					//- 			.office__top_notification_left
-					//- 				img(src="img/icon-sure4.png", alt="#")
-					//- 			.office__top_notification_right Извините, но Ваш чек был не подвержден. <br>Причина: Чек не соотвествует с выбранным № заказом.
-					//- 		a.office__top_notification_item(href="#")
-					//- 			.office__top_notification_left
-					//- 				img(src="img/icon-sure2.png", alt="#")
-					//- 			.office__top_notification_right Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.
-					//- 	img.login__box_reg_trigon(src="img/trigon2.png", alt="#")
+						.office__top_notification
+							.office__top_notification_in
+								.office__top_notification_name Оповещения
+									a.office__top_notification_link(href="#") Показать все
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/most1.png", alt="#")
+									.office__top_notification_right Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/icon-sure4.png", alt="#")
+									.office__top_notification_right Извините, но Ваш чек был не подвержден. <br>Причина: Чек не соотвествует с выбранным № заказом.
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/icon-sure2.png", alt="#")
+									.office__top_notification_right Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.
+							img.office__top_notification_trigon(src="img/tri-area2.png", alt="#")
 
 				.office__top_right
 					.sm_social
@@ -498,8 +498,12 @@ block content
 								.office__history_tr
 									.office__history_th Интернет-магазин
 									.office__history_th Дата покупки
-									.office__history_th № заказа 
-										//- a.office__history_th_help.tooltip(href="#", title="Как узнать номер моего заказа? Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".")
+									.office__history_th № заказа
+										a(href="#", class="office__history_help tooltip",data-tooltip-content="#tooltip_content")
+										.tooltip_templates
+											#tooltip_content 
+												span.bold Как узнать номер моего заказа? <br>
+												span Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".
 									.office__history_th Сумма   
 									.office__history_th Статус
 								.office__history_tr
@@ -520,10 +524,6 @@ block content
 									.office__history_td KGF521GH581F
 									.office__history_td 132 648 р.
 									.office__history_td Не подтвержден
-
-								.office__history_help.dn
-									.office__history_help_p Как узнать номер моего заказа?
-									.office__history_help_p Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".
 
 							.office__history_confirmed
 								.office__history_confirmed_name Подтвержденные покупки

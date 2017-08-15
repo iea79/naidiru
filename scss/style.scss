@@ -545,6 +545,7 @@
 }
 
 .sale__list {
+	position: relative;
 	padding: 0 0 50px;
 	text-align: center;
 	&_row {
@@ -933,6 +934,9 @@
 				}
 			}
 		}
+		&_reg {
+			width: 180px !important;
+		}
 	}
 	@media (max-width: 991px) {
 		&_row {
@@ -1004,6 +1008,12 @@
 				&:hover {
 				}
 			}
+		}
+	}
+	@media (max-width: 767px) {
+		&_reg {
+			top: -20px;
+			right: 22px;
 		}
 	}
 	@media (max-width: 600px) {
@@ -4649,6 +4659,7 @@
 			right: -7px;
 			width: 23px;
 			height: 23px;
+			cursor: pointer;
 			color: #ffffff;
 			font-size: 12px;
 			font-weight: 700;
@@ -4660,12 +4671,16 @@
 		}
 	}
 	&_notification {
+		display: none;
 		position: absolute;
-		top: 45px;
-		right: 12px;
+		top: 49px;
+		right: -13px;
 		z-index: 999;
-		width: 280px;
-		padding-top: 18px;
+		width: 283px;
+		padding-top: 11px;
+		&.open {
+			display: block;
+		}
 		&_in {
 			background-color: #fff;
 			border: 1px solid #dadada;
@@ -4674,26 +4689,26 @@
 		&_trigon {
 			position: absolute;
 			top: 0;
-			right: 18px;
+			right: 17px;
 			z-index: 1000;
-			width: 19px;
-			height: 11px;
+			width: 20px;
+			height: 12px;
 			display: block;
 		}
 		&_name {
-			position: relative;
-			padding: 20px;
+			padding: 18px 16px 19px 22px;
 			font-size: 18px;
 		}
 		&_link {
-			position: absolute;
-			top: 20px;
-			right: 17px;
+			padding-top: 3px;
+			float: right;
+			font-size: 14px;
 		}
 		&_item {
-			padding: 18px 15px 14px 19px;
+			padding: 18px 15px 18px 19px;
 			border-top: 1px solid #dadada;
 			display: block;
+			color: #292929;
 			@extend %clear_a;
 			&:hover {
 				text-decoration: none;
@@ -4724,7 +4739,7 @@
 			display: none;
 		}
 		&_message {
-			// position: relative;
+			position: relative;
 			max-width: 400px;
 			text-align: left;
 			padding: 8px 18px 3px;
@@ -4744,15 +4759,22 @@
 				border-image: url('../img/frame-red.png') 13 14 repeat;
 			}
 		}
-		// &_help {
+		// .tooltip__help {
 		// 	position: absolute;
-		// 	top: 20px;
-		// 	right: 23px;
-		// 	width: 24px;
-		// 	height: 24px;
-		// 	display: block;
-		// 	background: url('../img/icon-quest.svg') no-repeat;
-		// 	background-size: 24px 24px;
+		// 	top: 19px;
+		// 	right: 22px;
+		// }
+		// .tooltip__text {
+		// 	top: 4px;
+		// 	right: 5px;
+		// 	left: auto;
+		// 	width: 459px;
+		// 	padding: 18px 24px 15px;
+		// 	&_big {
+		// 		top: -5px;
+		// 		right: -6px;
+		// 		left: auto;
+		// 	}
 		// }
 		.bold {
 			font-weight: 700;
@@ -4865,6 +4887,14 @@
 			}
 		}
 	}
+	@media (max-width: 991px) {
+		&_notification {
+			right: -33px;
+			&_trigon {
+				right: 37px;
+			}
+		}
+	}
 	@media (max-width: 767px) {
 		height: auto;
 		margin: 0 20px;
@@ -4933,6 +4963,12 @@
 				// &:nth-child(1) {
 				// 	margin-left: 0;
 				// }
+			}
+		}
+		&_notification {
+			right: -13px;
+			&_trigon {
+				right: 17px;
 			}
 		}
 	}
@@ -5852,6 +5888,20 @@
 				}
 			}
 		}
+	}
+	&_help {
+		position: absolute;
+		top: 12px;
+		right: 30px;
+		width: 15px;
+		height: 15px;
+		display: block;
+		cursor: pointer;
+		background: url('../img/question.svg') no-repeat;
+		background-size: 15px 15px;
+	}
+	.tooltip_templates {
+		display: none;
 	}
 	@media (max-width: 1365px) {
 		&_right {

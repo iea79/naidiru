@@ -31,8 +31,27 @@ block content
 						.office__top_user_name
 							.office__top_user_fname Александра 
 							.office__top_user_lname Иванова
-					a.office__top_alarm.open(href="#")
+					.office__top_alarm.open
 						.office__top_alarm_number 1
+
+						.office__top_notification
+							.office__top_notification_in
+								.office__top_notification_name Оповещения
+									a.office__top_notification_link(href="#") Показать все
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/most1.png", alt="#")
+									.office__top_notification_right Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/icon-sure4.png", alt="#")
+									.office__top_notification_right Извините, но Ваш чек был не подвержден. <br>Причина: Чек не соотвествует с выбранным № заказом.
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/icon-sure2.png", alt="#")
+									.office__top_notification_right Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.
+							img.office__top_notification_trigon(src="img/tri-area2.png", alt="#")
+
 				.office__top_right
 					.sm_social
 						.sm_social_icon
@@ -54,9 +73,10 @@ block content
 							span.large Вы накопили: 
 								span.bold.points 2120 
 							span.bold баллов
-						p До ШопКарты Вам осталось набрать: <br>
+						p До        Вам осталось набрать: <br>
 							span.large.bold.points__left 2880 
 							span.bold баллов
+						//- .office__top_center_help
 					.sm_social
 						.sm_social_icon
 							.ya-share2(data-services="vkontakte")

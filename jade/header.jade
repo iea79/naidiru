@@ -12,10 +12,9 @@ header.header
 				a(href='#').header__top_item
 					i.icon__star
 					| Блог
-				a(href="#").header__top_promo SALE! Новогодняя распродажа
-
-	
+				a(href="#").header__top_promo SALE! Новогодняя распродажа	
 	// end header__top 
+
 
 	// begin header__bottom 
 	.header__bottom
@@ -28,7 +27,7 @@ header.header
 				img(src="img/logo.svg")
 			
 			// begin login__box 
-			.login__box
+			.login__box.dn
 				
 				.login__box_avatar
 					img(src="img/icon-user.svg")
@@ -49,14 +48,12 @@ header.header
 					li
 						a(href="#") Выйти
 
-				.login__box_reg
-					.login__box_reg_in
-						.login__box_reg_top
-							.login__box_reg_p Здравствуйте, зарегистрируйтесь, чтобы участвовать в розыгрышах.
-							button(class="btn btn__danger login__box_reg_btn", data-toggle="modal", data-target="#modal__sign-up") Зарегистрироваться
-						.login__box_reg_bottom У вас есть свой аккаунт? 
-							a(href="#", data-toggle="modal", data-target="#modal__log-in") Войти
-					img.login__box_reg_trigon(src="img/trigon.png", alt="#")
+
+			.login__box.non-reg
+				
+				.login__box_avatar
+					img(src="img/icon-user2.svg")
+				.login__box_text Войти, <br>Регистрация
 			// end login__box 
 			
 			// begin header__bottom_center 
@@ -137,6 +134,17 @@ header.header
 			a(href="#") Написать нам и FAQ
 		li
 			a(href="#").mobile__menu_action Sale! Новогодняя распродажа
-	// en mobile__menu 
+	// en mobile__menu
+
+	.login__box_reg
+		.login__box_reg_in
+			.login__box_reg_top
+				.login__box_reg_p Здравствуйте, зарегистрируйтесь, чтобы участвовать в акциях.
+				button(class="btn btn__danger login__box_reg_btn", data-toggle="modal", data-target="#modal__sign-up") Зарегистрироваться
+			.login__box_reg_bottom 
+				span.login__box_reg_bottom_p У вас есть свой аккаунт? 
+				a(href="#", data-toggle="modal", data-target="#modal__log-in") Войти 
+					span.login__box_reg_bottom_link в аккаунт
+		img.login__box_reg_trigon(src="img/trigon.png", alt="#")
 
 // end header 

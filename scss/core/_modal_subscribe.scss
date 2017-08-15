@@ -1877,6 +1877,15 @@
 			}
 		}
 	}
+	@media (max-width: 479px) {
+		.modal-footer {
+			.lg_social {
+				.tooltip__text {
+					width: 280px;
+				}
+			}
+		}
+	}
 	@media (max-width: 340px) {
 		.modal-body {
 			&_row {

@@ -26,15 +26,16 @@
         <div class="header__top">
           <div class="container_center">
             <div class="header__top_left">Бесплатные купоны и промокоды</div>
-            <div class="header__top_right"><a href="#" class="header__top_item"><i class="icon__gift"></i>Дарим подарки каждый месяц</a><a href="#" class="header__top_item"><i class="icon__star"></i>Блог</a><a href="#" class="header__top_promo">SALE! Новогодняя распродажа</a></div>
+            <div class="header__top_right"><a href="#" class="header__top_item"><i class="icon__gift"></i>Дарим подарки каждый месяц</a><a href="#" class="header__top_item"><i class="icon__star"></i>Блог</a><a href="#" class="header__top_promo">SALE! Новогодняя распродажа	</a></div>
           </div>
         </div>
         <!-- end header__top -->
+        
         <!-- begin header__bottom -->
         <div class="header__bottom">
           <div class="container_center"><a href="#" class="mobile__menu_toggle"></a><a href="/" class="logo"><img src="img/logo.svg"/></a>
             <!-- begin login__box -->
-            <div class="login__box">
+            <div class="login__box dn">
               <div class="login__box_avatar"><img src="img/icon-user.svg"/></div>
               <div class="login__box_text">Привет,
                 <div class="login__box_email">emailpriilpri@mail.ru</div>
@@ -47,15 +48,10 @@
                 <li><a href="#">Настройки рассылки</a></li>
                 <li><a href="#">Выйти</a></li>
               </ul>
-              <div class="login__box_reg">
-                <div class="login__box_reg_in">
-                  <div class="login__box_reg_top">
-                    <div class="login__box_reg_p">Здравствуйте, зарегистрируйтесь, чтобы участвовать в розыгрышах.</div>
-                    <button data-toggle="modal" data-target="#modal__sign-up" class="btn btn__danger login__box_reg_btn">Зарегистрироваться</button>
-                  </div>
-                  <div class="login__box_reg_bottom">У вас есть свой аккаунт? <a href="#" data-toggle="modal" data-target="#modal__log-in">Войти</a></div>
-                </div><img src="img/trigon.png" alt="#" class="login__box_reg_trigon"/>
-              </div>
+            </div>
+            <div class="login__box non-reg">
+              <div class="login__box_avatar"><img src="img/icon-user2.svg"/></div>
+              <div class="login__box_text">Войти, <br>Регистрация</div>
             </div>
             <!-- end login__box -->
             <!-- begin header__bottom_center -->
@@ -104,7 +100,16 @@
           <li><a href="#">Написать нам и FAQ</a></li>
           <li><a href="#" class="mobile__menu_action">Sale! Новогодняя распродажа</a></li>
         </ul>
-        <!-- en mobile__menu -->
+        <!-- en mobile__menu-->
+        <div class="login__box_reg">
+          <div class="login__box_reg_in">
+            <div class="login__box_reg_top">
+              <div class="login__box_reg_p">Здравствуйте, зарегистрируйтесь, чтобы участвовать в акциях.</div>
+              <button data-toggle="modal" data-target="#modal__sign-up" class="btn btn__danger login__box_reg_btn">Зарегистрироваться</button>
+            </div>
+            <div class="login__box_reg_bottom"> <span class="login__box_reg_bottom_p">У вас есть свой аккаунт? </span><a href="#" data-toggle="modal" data-target="#modal__log-in">Войти <span class="login__box_reg_bottom_link">в аккаунт</span></a></div>
+          </div><img src="img/trigon.png" alt="#" class="login__box_reg_trigon"/>
+        </div>
       </header>
       <!-- end header -->
       <!-- begin main__content-->
@@ -121,8 +126,21 @@
                     <div class="office__top_user_fname">Александра </div>
                     <div class="office__top_user_lname">Иванова</div>
                   </div>
-                </div><a href="#" class="office__top_alarm open">
-                  <div class="office__top_alarm_number">1</div></a>
+                </div>
+                <div class="office__top_alarm open">
+                  <div class="office__top_alarm_number">1</div>
+                  <div class="office__top_notification">
+                    <div class="office__top_notification_in">
+                      <div class="office__top_notification_name">Оповещения<a href="#" class="office__top_notification_link">Показать все</a></div><a href="#" class="office__top_notification_item">
+                        <div class="office__top_notification_left"><img src="img/most1.png" alt="#"/></div>
+                        <div class="office__top_notification_right">Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!</div></a><a href="#" class="office__top_notification_item">
+                        <div class="office__top_notification_left"><img src="img/icon-sure4.png" alt="#"/></div>
+                        <div class="office__top_notification_right">Извините, но Ваш чек был не подвержден. <br>Причина: Чек не соотвествует с выбранным № заказом.</div></a><a href="#" class="office__top_notification_item">
+                        <div class="office__top_notification_left"><img src="img/icon-sure2.png" alt="#"/></div>
+                        <div class="office__top_notification_right">Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.</div></a>
+                    </div><img src="img/tri-area2.png" alt="#" class="office__top_notification_trigon"/>
+                  </div>
+                </div>
               </div>
               <div class="office__top_right">
                 <div class="sm_social">
@@ -147,7 +165,7 @@
               <div class="office__top_center">
                 <div class="office__top_center_message">
                   <p> <span class="large">Вы накопили: <span class="bold points">2120 </span></span><span class="bold">баллов</span></p>
-                  <p>До ШопКарты Вам осталось набрать: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
+                  <p>До        Вам осталось набрать: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
                 </div>
                 <div class="sm_social">
                   <div class="sm_social_icon">

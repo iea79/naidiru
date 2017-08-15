@@ -476,6 +476,12 @@ $(document).ready(function() {
 		}
 	});
 
+	// Header login__box.non-reg Неавторизированный пользователь
+    $('.non-reg').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.login__box_reg').toggleClass('open');
+	});
+
 	$('.body__overlay').on('click', function() {
 		$('.header__bottom_center,.login__box,.mobile__menu').removeClass('open');
 		$(this).hide();
@@ -634,7 +640,7 @@ $(document).ready(function() {
 		$('.sale__list_reg').toggleClass('open');
 	});
 
-    // office.html Показать/скрыть подтвержденные покупки - не работает
+    // office.html Показать/скрыть подтвержденные покупки
     $('.office__history_confirmed_hide').click(function(e) {
         e.preventDefault();
         if ($(this).hasClass('active')) {
@@ -675,6 +681,12 @@ $(document).ready(function() {
         }
     });
 
+     // Открытие уведомлений
+    $('.office__top_alarm_number').on('click touchend', function(event) {
+    	event.preventDefault();
+		$('.office__top_notification').toggleClass('open');
+	});
+
     // Закрытие нижнего всплывающего окна
     $('.modal__down_close').on('click touchend', function(event) {
     	event.preventDefault();
@@ -687,7 +699,13 @@ $(document).ready(function() {
 		$('.modal-footer_error').toggleClass('hide');
 	});
 
-
+	// Подсказки
+    $('.tooltip__help').on('click', function() {
+    	$(this).find('.tooltip__text').addClass('open');
+    });
+    $('.tooltip__text').mouseleave(function() {
+    	$(this).removeClass('open');
+    });
 
     // office-news.html Галочка на новостях - Удаление/восстановление
     // Вызов блока .office__news_item_hide с кнопкой Удаления
@@ -861,14 +879,6 @@ $(document).ready(function() {
     	event.preventDefault();
     	$('.category__top_right_subscribe').toggleClass('active');
 	});
-
-    // Страница бренда brand.html - Хелпы на промокодах
-    $('.tooltip__help').on('click', function() {
-    	$(this).find('.tooltip__text').addClass('open');
-    });
-    $('.tooltip__text').mouseleave(function() {
-    	$(this).removeClass('open');
-    });
 
     $('.faq_question').on('click touchend', function(event) {
     	event.preventDefault();

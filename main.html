@@ -26,15 +26,16 @@
         <div class="header__top">
           <div class="container_center">
             <div class="header__top_left">Бесплатные купоны и промокоды</div>
-            <div class="header__top_right"><a href="#" class="header__top_item"><i class="icon__gift"></i>Дарим подарки каждый месяц</a><a href="#" class="header__top_item"><i class="icon__star"></i>Блог</a><a href="#" class="header__top_promo">SALE! Новогодняя распродажа</a></div>
+            <div class="header__top_right"><a href="#" class="header__top_item"><i class="icon__gift"></i>Дарим подарки каждый месяц</a><a href="#" class="header__top_item"><i class="icon__star"></i>Блог</a><a href="#" class="header__top_promo">SALE! Новогодняя распродажа	</a></div>
           </div>
         </div>
         <!-- end header__top -->
+        
         <!-- begin header__bottom -->
         <div class="header__bottom">
           <div class="container_center"><a href="#" class="mobile__menu_toggle"></a><a href="/" class="logo"><img src="img/logo.svg"/></a>
             <!-- begin login__box -->
-            <div class="login__box">
+            <div class="login__box dn">
               <div class="login__box_avatar"><img src="img/icon-user.svg"/></div>
               <div class="login__box_text">Привет,
                 <div class="login__box_email">emailpriilpri@mail.ru</div>
@@ -47,15 +48,10 @@
                 <li><a href="#">Настройки рассылки</a></li>
                 <li><a href="#">Выйти</a></li>
               </ul>
-              <div class="login__box_reg">
-                <div class="login__box_reg_in">
-                  <div class="login__box_reg_top">
-                    <div class="login__box_reg_p">Здравствуйте, зарегистрируйтесь, чтобы участвовать в розыгрышах.</div>
-                    <button data-toggle="modal" data-target="#modal__sign-up" class="btn btn__danger login__box_reg_btn">Зарегистрироваться</button>
-                  </div>
-                  <div class="login__box_reg_bottom">У вас есть свой аккаунт? <a href="#" data-toggle="modal" data-target="#modal__log-in">Войти</a></div>
-                </div><img src="img/trigon.png" alt="#" class="login__box_reg_trigon"/>
-              </div>
+            </div>
+            <div class="login__box non-reg">
+              <div class="login__box_avatar"><img src="img/icon-user2.svg"/></div>
+              <div class="login__box_text">Войти, <br>Регистрация</div>
             </div>
             <!-- end login__box -->
             <!-- begin header__bottom_center -->
@@ -104,7 +100,16 @@
           <li><a href="#">Написать нам и FAQ</a></li>
           <li><a href="#" class="mobile__menu_action">Sale! Новогодняя распродажа</a></li>
         </ul>
-        <!-- en mobile__menu -->
+        <!-- en mobile__menu-->
+        <div class="login__box_reg">
+          <div class="login__box_reg_in">
+            <div class="login__box_reg_top">
+              <div class="login__box_reg_p">Здравствуйте, зарегистрируйтесь, чтобы участвовать в акциях.</div>
+              <button data-toggle="modal" data-target="#modal__sign-up" class="btn btn__danger login__box_reg_btn">Зарегистрироваться</button>
+            </div>
+            <div class="login__box_reg_bottom"> <span class="login__box_reg_bottom_p">У вас есть свой аккаунт? </span><a href="#" data-toggle="modal" data-target="#modal__log-in">Войти <span class="login__box_reg_bottom_link">в аккаунт</span></a></div>
+          </div><img src="img/trigon.png" alt="#" class="login__box_reg_trigon"/>
+        </div>
       </header>
       <!-- end header -->
       <!-- begin main__content-->
@@ -159,9 +164,9 @@
         </div>
         <div class="container_center">
           <div class="section__title">Лучшие предложения для вас</div>
-          <div class="sale__list_reg">Нужно:<a href="#">войти или зарегистрироваться</a></div>
           <!-- begin sale__list -->
           <div class="sale__list js_more_wrap">
+            <div class="sale__list_reg">Нужно:<a href="#">войти или зарегистрироваться</a></div>
             <!-- Row 1-->
             <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
               <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list1.png" alt="#"/></a>

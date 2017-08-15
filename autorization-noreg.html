@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8"/>
-    <title>Личный кабинет - Главная</title>
+    <title>Страница регистрации, авторизации</title>
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -18,7 +18,7 @@
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/function.js"></script>
   </head>
-  <body class="office">
+  <body class="form2">
     <div class="wrapper">
       <!-- begin header -->
       <header class="header">
@@ -26,16 +26,15 @@
         <div class="header__top">
           <div class="container_center">
             <div class="header__top_left">Бесплатные купоны и промокоды</div>
-            <div class="header__top_right"><a href="#" class="header__top_item"><i class="icon__gift"></i>Дарим подарки каждый месяц</a><a href="#" class="header__top_item"><i class="icon__star"></i>Блог</a><a href="#" class="header__top_promo">SALE! Новогодняя распродажа	</a></div>
+            <div class="header__top_right"><a href="#" class="header__top_item"><i class="icon__gift"></i>Дарим подарки каждый месяц</a><a href="#" class="header__top_item"><i class="icon__star"></i>Блог</a><a href="#" class="header__top_promo">SALE! Новогодняя распродажа</a></div>
           </div>
         </div>
         <!-- end header__top -->
-        
         <!-- begin header__bottom -->
         <div class="header__bottom">
           <div class="container_center"><a href="#" class="mobile__menu_toggle"></a><a href="/" class="logo"><img src="img/logo.svg"/></a>
             <!-- begin login__box -->
-            <div class="login__box dn">
+            <div class="login__box">
               <div class="login__box_avatar"><img src="img/icon-user.svg"/></div>
               <div class="login__box_text">Привет,
                 <div class="login__box_email">emailpriilpri@mail.ru</div>
@@ -48,10 +47,15 @@
                 <li><a href="#">Настройки рассылки</a></li>
                 <li><a href="#">Выйти</a></li>
               </ul>
-            </div>
-            <div class="login__box non-reg">
-              <div class="login__box_avatar"><img src="img/icon-user2.svg"/></div>
-              <div class="login__box_text">Войти, <br>Регистрация</div>
+              <div class="login__box_reg dn">
+                <div class="login__box_reg_in">
+                  <div class="login__box_reg_top">
+                    <div class="login__box_reg_p">Здравствуйте, зарегистрируйтесь, чтобы участвовать в акциях.</div>
+                    <button data-toggle="modal" data-target="#modal__sign-up" class="btn btn__danger login__box_reg_btn">Зарегистрироваться</button>
+                  </div>
+                  <div class="login__box_reg_bottom">У вас есть свой аккаунт? <a href="#" data-toggle="modal" data-target="#modal__log-in">Войти</a></div>
+                </div><img src="img/trigon.png" alt="#" class="login__box_reg_trigon"/>
+              </div>
             </div>
             <!-- end login__box -->
             <!-- begin header__bottom_center -->
@@ -100,710 +104,86 @@
           <li><a href="#">Написать нам и FAQ</a></li>
           <li><a href="#" class="mobile__menu_action">Sale! Новогодняя распродажа</a></li>
         </ul>
-        <!-- en mobile__menu-->
-        <div class="login__box_reg">
-          <div class="login__box_reg_in">
-            <div class="login__box_reg_top">
-              <div class="login__box_reg_p">Здравствуйте, зарегистрируйтесь, чтобы участвовать в акциях.</div>
-              <button data-toggle="modal" data-target="#modal__sign-up" class="btn btn__danger login__box_reg_btn">Зарегистрироваться</button>
-            </div>
-            <div class="login__box_reg_bottom"> <span class="login__box_reg_bottom_p">У вас есть свой аккаунт? </span><a href="#" data-toggle="modal" data-target="#modal__log-in">Войти <span class="login__box_reg_bottom_link">в аккаунт</span></a></div>
-          </div><img src="img/trigon.png" alt="#" class="login__box_reg_trigon"/>
-        </div>
+        <!-- en mobile__menu -->
       </header>
       <!-- end header -->
       <!-- begin main__content-->
       <main class="main__content">
         <div class="white__line">
           <div class="container_center">
-            
-            <!-- begin office__top-->
-            <div class="office__top">
-              <div class="office__top_left">
-                <div class="office__top_user">
-                  <div class="office__top_user_img"><img src="img/rev2.png" alt="#"/></div>
-                  <div class="office__top_user_name">
-                    <div class="office__top_user_fname">Александра </div>
-                    <div class="office__top_user_lname">Иванова</div>
+            <div class="white__line_form">
+              <div class="breadcrumb">
+                <li><a href="/">Главная </a></li>
+                <li><a href="/">Авторизация или Регистрация</a></li>
+              </div>
+              <h2>Войдите в аккаунт или Зарегистрируйтесь</h2>
+              <div class="sign-in">
+                <div class="title__content__3">Войти в аккаунт</div>
+                <div class="office__edit_section_info">
+                  <div class="office__edit_row">
+                    <div for="oe11" class="office__edit_label">E-mail</div>
+                    <input type="email" placeholder="Введите Ваш e-mail" id="oe1" class="office__edit_input"/>
                   </div>
-                </div>
-                <div class="office__top_alarm open">
-                  <div class="office__top_alarm_number">1</div>
-                  <div class="office__top_notification">
-                    <div class="office__top_notification_in">
-                      <div class="office__top_notification_name">Оповещения<a href="#" class="office__top_notification_link">Показать все</a></div><a href="#" class="office__top_notification_item">
-                        <div class="office__top_notification_left"><img src="img/most1.png" alt="#"/></div>
-                        <div class="office__top_notification_right">Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!</div></a><a href="#" class="office__top_notification_item">
-                        <div class="office__top_notification_left"><img src="img/icon-sure4.png" alt="#"/></div>
-                        <div class="office__top_notification_right">Извините, но Ваш чек был не подвержден. <br>Причина: Чек не соотвествует с выбранным № заказом.</div></a><a href="#" class="office__top_notification_item">
-                        <div class="office__top_notification_left"><img src="img/icon-sure2.png" alt="#"/></div>
-                        <div class="office__top_notification_right">Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.</div></a>
-                    </div><img src="img/tri-area2.png" alt="#" class="office__top_notification_trigon"/>
+                  <div class="office__edit_row">
+                    <div for="oe12" class="office__edit_label">Пароль</div>
+                    <input type="password" placeholder="Введите пароль" id="oe2"/>
                   </div>
+                </div><a href="#" class="btn btn__danger">Войти в аккаунт</a>
+                <div class="sign-in__link">Забыли пароль? <a href="#">Восстановить пароль</a></div>
+                <div class="recovery sign-in">
+                  <div class="title__content__3">Забыли пароль</div>
+                  <div class="office__edit_section_info">
+                    <div class="office__edit_row">
+                      <div for="oe11" class="office__edit_label">E-mail</div>
+                      <input type="email" placeholder="Введите Ваш e-mail" id="oe1"/>
+                    </div>
+                  </div><a href="#" class="btn btn__danger">Восстановить пароль</a>
                 </div>
               </div>
-              <div class="office__top_right">
-                <div class="sm_social">
-                  <div class="sm_social_icon">
-                    <div data-services="vkontakte" class="ya-share2"></div>
-                  </div>
-                  <div class="sm_social_icon">
-                    <div data-services="facebook" class="ya-share2">				</div>
-                  </div>
-                  <div class="sm_social_icon">
-                    <div data-services="odnoklassniki" class="ya-share2"></div>
-                  </div>
-                  <div class="sm_social_icon">
-                    <div data-services="gplus" class="ya-share2"></div>
-                  </div>
-                  <div class="sm_social_icon">
-                    <div data-services="twitter" class="ya-share2"></div>
+              <div class="sign-up sign-in">
+                <div class="title__content__3">Регистрация на сайте</div>
+                <div class="office__edit_section_info">
+                  <div class="office__edit_row">
+                    <div for="oe11" class="office__edit_label">E-mail</div>
+                    <input type="email" placeholder="Введите Ваш e-mail" id="oe1"/>
                   </div>
                 </div>
-                <div class="office__top_right_links"><a href="office-coupons.html" class="office__top_right_link office__top_right_link_star">Сохраненные<br>купоны</a><a href="office-shops.html" class="office__top_right_link office__top_right_link_hart">Любимые<br>магазины</a></div>
+                <div class="sign-in__link">Чтобы зарегистрироваться на сайте, просто введите Ваш email. Для Вашей безопасности, мы сами сгенерируем Вам пароль и отправим его на указанную почту. </div><a href="#" class="btn btn__danger">Зарегистрироваться</a>
+                <div class="sign-in__link">Регистрируясь, я соглашаюсь с <a href="#">Условиями использования сайта.</a></div>
               </div>
-              <div class="office__top_center">
-                <div class="office__top_center_message">
-                  <p> <span class="large">Вы накопили: <span class="bold points">2120 </span></span><span class="bold">баллов</span></p>
-                  <p>До        Вам осталось набрать: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
+              <div class="social">
+                <div class="social__arrow">
+                  <div class="social__text__p">Или войдите в аккаунт / зарегистрируйтесь через социальные сети</div>
+                  <div class="social__triangle"></div>
                 </div>
-                <div class="sm_social">
-                  <div class="sm_social_icon">
-                    <div data-services="vkontakte" class="ya-share2"></div>
+                <div class="lg_social">
+                  <div class="lg_social_icon">
+                    <button class="lg_social_icon_add lg_social_icon_add_vk-new btn"></button>
                   </div>
-                  <div class="sm_social_icon">
-                    <div data-services="facebook" class="ya-share2">				</div>
+                  <div class="lg_social_icon">
+                    <button class="lg_social_icon_add lg_social_icon_add_ok-new btn"></button>
                   </div>
-                  <div class="sm_social_icon">
-                    <div data-services="odnoklassniki" class="ya-share2"></div>
+                  <div class="lg_social_icon">
+                    <button class="lg_social_icon_add btn"></button>
                   </div>
-                  <div class="sm_social_icon">
-                    <div data-services="gplus" class="ya-share2"></div>
+                  <div class="lg_social_icon">
+                    <button class="lg_social_icon_add btn"></button>
                   </div>
-                  <div class="sm_social_icon">
-                    <div data-services="twitter" class="ya-share2"></div>
+                  <div class="lg_social_icon">
+                    <button class="lg_social_icon_add lg_social_icon_add_fb-new btn"></button>
                   </div>
-                </div>
-              </div>
-            </div>
-            <!-- end office__top-->
-            
-          </div>
-        </div>
-        <div class="container_center main">
-          <!-- begin sidebar-->
-          <div class="office__menu_trigger">Другие разделы</div>
-          <div class="main__content_sidebar">
-            <div class="sidebar__section">
-              <div class="office__menu">
-                <div class="office__item"><a href="#" class="office__link active">Ваши ШопКарты и покупки</a></div>
-                <div class="office__item"><a href="office-news.html" class="office__link">Написать нам + новости</a></div>
-                <div class="office__item"><a href="office-edit.html" class="office__link">Изменить данные</a></div>
-                <div class="office__item"><a href="office-settings.html" class="office__link">Настройки рассылки</a></div>
-                <div class="office__item"><a href="#" class="office__link">Как получить подарок?</a></div>
-                <div class="office__item"><a href="#" class="office__link">Выйти из аккаунта</a></div>
-              </div>
-            </div>
-            <div class="sidebar__section">
-              <div class="sidebar__section_name">Поменяйте чек на ШопКарту</div>
-              <p>Чтобы получить ШопКарту, нужно подвердить покупку чеком</p>
-              <button data-toggle="modal" data-target="#modal__no-purchase" class="btn btn__danger">Отправить чек</button>
-            </div>
-            <div class="sidebar__section">
-              <div class="sidebar__section_name">Лента обладателей подарка</div>
-              <div class="office__winners_top_title">Розыгрыш апрель-2017:</div>
-              <div class="office__winners_wrap">
-                <div class="office__winners scrollbar-inner">
-                  <div class="office__winners_title">Подарок: Смартфон <span class="office__winners_amount">(2)</span></div>
-                  <div class="office__winners_list">
-                    <div class="office__winners_item"><img src="img/user-sm1.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Анна</div>
-                        <div class="lottery-number"># A17_487524</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Светлана</div>
-                        <div class="lottery-number"># A17_414724</div>
-                      </div>
-                    </div>
+                  <div class="lg_social_icon">
+                    <button class="lg_social_icon_add lg_social_icon_add_google-plus btn"></button>
                   </div>
-                  <div class="office__winners_title">Подарок: Косметика <span class="office__winners_amount">(25)</span></div>
-                  <div class="office__winners_list">
-                    <div class="office__winners_item"><img src="img/user-sm3.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алексей</div>
-                        <div class="lottery-number"># A17_487525</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алина</div>
-                        <div class="lottery-number"># A17_414726</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm1.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Анна</div>
-                        <div class="lottery-number"># A17_487524</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Светлана</div>
-                        <div class="lottery-number"># A17_414724</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm3.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алексей</div>
-                        <div class="lottery-number"># A17_487525</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алина</div>
-                        <div class="lottery-number"># A17_414726</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm1.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Анна</div>
-                        <div class="lottery-number"># A17_487524</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Светлана</div>
-                        <div class="lottery-number"># A17_414724</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm3.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алексей</div>
-                        <div class="lottery-number"># A17_487525</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алина</div>
-                        <div class="lottery-number"># A17_414726</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm1.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Анна</div>
-                        <div class="lottery-number"># A17_487524</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Светлана</div>
-                        <div class="lottery-number"># A17_414724</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm3.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алексей</div>
-                        <div class="lottery-number"># A17_487525</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алина</div>
-                        <div class="lottery-number"># A17_414726</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm1.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Анна</div>
-                        <div class="lottery-number"># A17_487524</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Светлана</div>
-                        <div class="lottery-number"># A17_414724</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm3.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алексей</div>
-                        <div class="lottery-number"># A17_487525</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алина</div>
-                        <div class="lottery-number"># A17_414726</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm1.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Анна</div>
-                        <div class="lottery-number"># A17_487524</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Светлана</div>
-                        <div class="lottery-number"># A17_414724</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm3.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алексей</div>
-                        <div class="lottery-number"># A17_487525</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алина</div>
-                        <div class="lottery-number"># A17_414726</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm1.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Анна</div>
-                        <div class="lottery-number"># A17_487524</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Светлана</div>
-                        <div class="lottery-number"># A17_414724</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm3.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алексей</div>
-                        <div class="lottery-number"># A17_487525</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Алина</div>
-                        <div class="lottery-number"># A17_414726</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm1.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Анна</div>
-                        <div class="lottery-number"># A17_487524</div>
-                      </div>
-                    </div>
-                    <div class="office__winners_item"><img src="img/user-sm2.png" alt="#" class="office__winners_img"/>
-                      <div class="office__winners_info">
-                        <div class="user-name">Светлана</div>
-                        <div class="lottery-number"># A17_414724</div>
-                      </div>
+                  <div class="tooltip__help big">
+                    <div class="tooltip__text tooltip__big">Зарегистрируйтесь или войдите в аккаунт через соц.сети, просто выберите одну из этих соц.сетей. <br>Что Вам это дает? Вы можете быстро (одним кликом) зайти в аккаунт. <br>Ваша безопасность нам превыше всего. Никто, в том числе и мы не сможем получить доступ к Вашим личным данным.
+                      <div class="tooltip__text_big"></div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <button class="btn btn__danger">Посмотреть всех</button>
-            </div>
-          </div>
-          <!-- end sidebar-->
-          
-          <!-- begin main__content_center -->
-          <div class="main__content_center">
-            <!-- begin office__main_yes-->
-            <div class="office__main_yes">
-              <!-- begin office__lotteries-->
-              <div class="office__lotteries">
-                <div class="office__lotteries_name">ШопКарты покупателя в интернете<a href="#" class="office__lotteries_how">Что такое ШопКарта?</a></div>
-                <div class="office__lotteries_list">
-                  <div class="office__lotteries_item">
-                    <div class="office__lotteries_ellipsis">&lowast; &lowast; &lowast;</div>
-                    <div class="office__lotteries_title">ШопКарта</div>
-                    <div class="office__lotteries_customer">Покупателя в интернете</div><img src="img/icon-gift.svg" alt="#" class="office__lotteries_img"/>
-                    <div class="office__lotteries_down">*эта карточка дает возможность получить подарок в этом месяце</div>
-                  </div>
-                  <div class="office__lotteries_item">
-                    <div class="office__lotteries_ellipsis">&lowast; &lowast; &lowast;</div>
-                    <div class="office__lotteries_title">ШопКарта</div>
-                    <div class="office__lotteries_customer">Покупателя в интернете</div><img src="img/icon-gift.svg" alt="#" class="office__lotteries_img"/>
-                    <div class="office__lotteries_down">*эта карточка дает возможность получить подарок в этом месяце</div>
-                  </div>
-                  <div class="office__lotteries_item">
-                    <div class="office__lotteries_ellipsis">&lowast; &lowast; &lowast;</div>
-                    <div class="office__lotteries_title">ШопКарта</div>
-                    <div class="office__lotteries_customer">Покупателя в интернете</div><img src="img/icon-gift.svg" alt="#" class="office__lotteries_img"/>
-                    <div class="office__lotteries_down">*эта карточка дает возможность получить подарок в этом месяце</div>
-                  </div>
-                  <div class="office__lotteries_item office__lotteries_last">
-                    <div class="office__lotteries_last_name">Делайте покупки и меняйте чеки на ШопКарты</div>
-                    <div class="office__lotteries_last_p">Получите ШопКарту прямо сейчас, нажав на кнопку ниже &darr;</div>
-                    <button data-toggle="modal" data-target="#modal__shopcard" class="btn btn__danger">Получить ШопКарту</button>
-                    <div class="tooltip__help big">
-                      <div class="tooltip__text tooltip__big">Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br><a href="#">Подробнее об акции &gt;</a>
-                        <div class="tooltip__text_big"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end office__lotteries-->
-              
-              <!-- begin office__ad-->
-              <div class="office__ad"><img src="img/office-ad-img.jpg" alt="#" class="office__ad_right"/>
-                <div class="office__ad_left">
-                  <div class="office__ad_p">Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце</div>
-                  <div class="office__ad_p">Итоги будут подведены: <br><span class="office__ad_large">05 апреля</span></div>
-                  <p>Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.</p>
-                  <button class="btn btn__danger">Узнать о подарках<br>этого месяца</button>
-                </div>
-              </div>
-              <!-- end office__ad-->
-            </div>
-            <!-- end office__main_yes-->
-            
-            <!-- begin office__main_win-->
-            <div class="office__main_win">				
-              <!-- begin office__lotteries-->
-              <div class="office__lotteries">
-                <div class="office__lotteries_name">ШопКарты покупателя в интернете<a href="#" class="office__lotteries_how">Что такое ШопКарта?</a></div>
-                <div class="office__lotteries_list">
-                  <div class="office__lotteries_item">
-                    <div class="office__lotteries_ellipsis">&lowast; &lowast; &lowast;</div>
-                    <div class="office__lotteries_title">Ура! Вы получили подарок!</div>
-                    <div class="office__lotteries_customer">Ваш подарок: смартфон</div>
-                  </div>
-                  <div class="office__lotteries_item office__lotteries_last">
-                    <div class="office__lotteries_last_name">Делайте покупки и меняйте чеки на ШопКарты</div>
-                    <div class="office__lotteries_last_p">Чтобы получить ШопКарту нужно накопить <span>5000 баллов</span></div>
-                    <button data-toggle="modal" data-target="#modal__shopcard" class="btn">Получить ШопКарту</button>
-                    <div class="office__lotteries_last_down">т.е. накопить чеки = 5000 рублей</div>
-                    <div class="tooltip__help big">
-                      <div class="tooltip__text tooltip__big">Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br><a href="#">Подробнее об акции &gt;</a>
-                        <div class="tooltip__text_big"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end office__lotteries-->
-              
-              <!-- begin office__gift -->
-              <div class="office__gift">
-                <div class="office__gift_name"> <span class="bold">Поздравляем! </span><span>Именно Вы получили в этом месяце подарок!</span></div>
-                <div class="office__gift_img"><img src="img/cat-img6.jpg" alt="#"/>
-                  <div class="office__gift_img_text">Ваш приз</div>
-                </div>
-                <div class="office__gift_p">В этом месяце было много желающих попытать удачу, но к счастью именно Вам улыбнулась она и именно Вы она вытянули свой счастливый лотерейный билет. <br>Вы заняли 12 место и выиграли: Смартфон. <br>Итог розыгрыша был подведен: 05 марта. <br>Письмо от нашего менджера придет к Вам на почту: примерно 6-7 марта.</div>
-                <div class="office__gift_p"> <span class="bold">Что нужно нам сейчас от Вас: </span><span>Пожалуйста, прямо сейчас проверьте актуальность своих контактных данных и корректность личных данных. Если у Вас не заполнены личные данные, заполните их как можно быстрее. Наш менеджер   свяжется с Вами по емайлу в ближайшее время для уточнения деталей получения приза.</span></div>
-                <div class="office__gift_p"> <span class="bold">Обращаем Ваше внимание, </span><span>у Вас есть максимум 14 дней, чтобы ответить на письмо, в случае игнорирования всех 2-ух писем от нашего менеджера, Ваш приз будет аннулирован. Если по какой-то причине, Вам не пришло письмо на почту, пожалуйста, свяжитесь с нами, или проверьте его в спам-папке.</span></div>
-                <div class="office__gift_p">Желаем Вам всего самого наилучшего! С Уважением, команда сайта Найди.ру	</div>
-              </div>
-              <!-- end office__gift -->
-              
-              <!-- begin office__ad-->
-              <div class="office__ad">
-                <div class="office__ad_left">
-                  <div class="office__ad_p">Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце</div>
-                  <div class="office__ad_p">Итоги будут подведены: <br><span class="office__ad_large">05 апреля</span></div>
-                  <p>Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.</p>
-                  <button class="btn btn__danger">Узнать о подарках<br>этого месяца</button>
-                </div>
-              </div>
-              <!-- end office__ad-->
-            </div>
-            <!-- end office__main_win-->
-            
-            <!-- begin office__main_no -->
-            <div class="office__main_no">
-              <!-- begin office__userinfo-->
-              <div class="office__userinfo">
-                <div class="office__userinfo_name">Заполните свои данные</div>
-                <div class="office__userinfo_p">Чтобы получить подарок, нужно заполнить свои данные и контакты. Это нужно для того, чтобы в случае получения подарка мы смогли сразу с вами связаться. <br>Пожалуйста, указывайте только достоверную информацию.</div>
-                <button class="btn btn__danger">Заполнить свои данные</button>
-              </div>
-              <!-- end office__userinfo-->
-              <!--/ begin office__lotteries-->
-              <div class="office__lotteries">
-                <div class="office__lotteries_name">ШопКарты покупателя в интернете<a href="#" class="office__lotteries_how">Что такое ШопКарта?</a></div>
-                <div class="office__lotteries_list">
-                  <div class="office__lotteries_item office__lotteries_last">
-                    <div class="office__lotteries_last_name">Делайте покупки и меняйте чеки на ШопКарты</div>
-                    <div class="office__lotteries_last_p">Чтобы получить ШопКарту нужно накопить <span>5000 баллов</span></div>
-                    <button data-toggle="modal" data-target="#modal__shopcard" class="btn">Получить ШопКарту</button>
-                    <div class="office__lotteries_last_down">т.е. накопить чеки = 5000 рублей</div>
-                    <div class="tooltip__help big">
-                      <div class="tooltip__text tooltip__big">Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br><a href="#">Подробнее об акции &gt;</a>
-                        <div class="tooltip__text_big"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- end office__lotteries-->
-              
-              <!-- begin office__ad-->
-              <div class="office__ad">
-                <div class="office__ad_left">
-                  <div class="office__ad_p">Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце</div>
-                  <div class="office__ad_p">Итоги будут подведены: <br><span class="office__ad_large">05 апреля</span></div>
-                  <p>Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.</p>
-                  <button class="btn btn__danger">Узнать о подарках<br>этого месяца</button>
-                </div>
-              </div>
-              <!-- end office__ad-->
-            </div>
-            <!-- end office__main_no-->
-            <!-- begin office__history-->
-            <div class="office__history">
-              <div class="office__history_name"> <span class="office__history_title">История Ваших покупок</span>
-                <!-- begin Mobile history-->
-                <div class="office__history_mobile"> 
-                  <!-- item 1-->
-                  <div class="office__history_mobile_item">
-                    <div class="office__history_mobile_link">Заказ № <span>Rfeh152121fedf4</span></div>
-                    <div class="office__history_mobile_drop">
-                      <div class="office__history_mobile_name">Информация о покупке</div>
-                      <div class="office__history_mobile_row"><b>Магазин: </b>Снежная королева</div>
-                      <div class="office__history_mobile_row"><b>Дата покупки:  </b>23.05.2017</div>
-                      <div class="office__history_mobile_row"><b>№ заказа:  </b>Rfeh152121fedf4</div>
-                      <div class="office__history_mobile_row"><b>Сумма покупки:  </b>20 120 р.</div>
-                      <div class="office__history_mobile_row"><b>Статус:  </b>Не подтвержден</div><a href="#" data-toggle="modal" data-target="#modal__confirm" class="confirm__btn btn btn__danger confirm__btn btn btn__danger">Подтвердить чеком</a>
-                      <div class="office__history_mobile_descr">Чтобы получить лотерею, нужно подвердить покупку чеком</div>
-                    </div>
-                  </div>
-                  <!-- item 2-->
-                  <div class="office__history_mobile_item">
-                    <div class="office__history_mobile_link">Заказ № <span>Rfeh152121fedf4</span></div>
-                    <div class="office__history_mobile_drop">
-                      <div class="office__history_mobile_name">Информация о покупке</div>
-                      <div class="office__history_mobile_row"><b>Магазин: </b>Снежная королев</div>
-                      <div class="office__history_mobile_row"><b>Дата покупки:  </b>23.05.2017</div>
-                      <div class="office__history_mobile_row"><b>№ заказа:  </b>Rfeh152121fedf4</div>
-                      <div class="office__history_mobile_row"><b>Сумма покупки:  </b>20 120 р.</div>
-                      <div class="office__history_mobile_row"><b>Статус:  </b>Не подтвержден</div><a href="#" class="confirm__btn btn btn__danger active">Подтвердить чеком</a>
-                      <div class="office__history_mobile_descr">Чтобы получить лотерею, нужно подвердить покупку чеком</div>
-                    </div>
-                  </div>
-                </div>
-                <!-- end Mobile history--><span class="office__history_note">Если Вы не видите свою покупку, <br><a href="#" class="office__history_link">напишите нам!</a></span>
-              </div>
-              <div class="office__history_stat_wrap js-more-wrapper">
-                <div class="office__history_stat scrolled__box">
-                  <div class="office__history_left">
-                    <div class="office__history_table">
-                      <div class="office__history_tr">
-                        <div class="office__history_th">Интернет-магазин</div>
-                        <div class="office__history_th">Дата покупки</div>
-                        <div class="office__history_th">№ заказа<a href="#" data-tooltip-content="#tooltip_content" class="office__history_help tooltip"></a>
-                          <div class="tooltip_templates">
-                            <div id="tooltip_content"> <span class="bold">Как узнать номер моего заказа? <br></span><span>Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".</span></div>
-                          </div>
-                        </div>
-                        <div class="office__history_th">Сумма   </div>
-                        <div class="office__history_th">Статус</div>
-                      </div>
-                      <div class="office__history_tr">
-                        <div class="office__history_td">Снежная королева</div>
-                        <div class="office__history_td">23.05.2017</div>
-                        <div class="office__history_td">Rfeh152121fedf4</div>
-                        <div class="office__history_td">20 120 р.</div>
-                        <div class="office__history_td">Не подтвержден</div>
-                      </div>
-                      <div class="office__history_tr">
-                        <div class="office__history_td">Lamoda</div>
-                        <div class="office__history_td">05.08.2017</div>
-                        <div class="office__history_td">52212252</div>
-                        <div class="office__history_td">1 045 р.</div>
-                        <div class="office__history_td">Не подтвержден</div>
-                      </div>
-                      <div class="office__history_tr">
-                        <div class="office__history_td">Media Markt</div>
-                        <div class="office__history_td">18.08.2017</div>
-                        <div class="office__history_td">KGF521GH581F</div>
-                        <div class="office__history_td">132 648 р.</div>
-                        <div class="office__history_td">Не подтвержден</div>
-                      </div>
-                    </div>
-                    <div class="office__history_confirmed">
-                      <div class="office__history_confirmed_name">Подтвержденные покупки</div>
-                      <div class="office__history_table">
-                        <div class="office__history_tr">
-                          <div class="office__history_td">MyToys</div>
-                          <div class="office__history_td">12.03.2017</div>
-                          <div class="office__history_td">Gj52257_4452</div>
-                          <div class="office__history_td">132 648 р.</div>
-                          <div class="office__history_td">Подтвержден</div>
-                        </div>
-                      </div>
-                      <!-- begin Mobile history-->
-                      <div class="office__history_mobile"> 
-                        <!-- item 1-->
-                        <div class="office__history_mobile_item">
-                          <div class="office__history_mobile_link">Заказ № <span>Rfeh152121fedf4</span></div>
-                          <div class="office__history_mobile_drop">
-                            <div class="office__history_mobile_name">Информация о покупке</div>
-                            <div class="office__history_mobile_row"><b>Магазин: </b>Снежная королев</div>
-                            <div class="office__history_mobile_row"><b>Дата покупки:  </b>23.05.2017</div>
-                            <div class="office__history_mobile_row"><b>№ заказа:  </b>Rfeh152121fedf4</div>
-                            <div class="office__history_mobile_row"><b>Сумма покупки:  </b>20 120 р.</div>
-                            <div class="office__history_mobile_row"><b>Статус:  </b>Не подтвержден</div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- end Mobile history-->
-                    </div><a href="#" data-text-open="+ Показать подтвержденные покупки" data-text-close="- Скрыть подтвержденные покупки" class="office__history_confirmed_hide js-more-link">- Скрыть подтвержденные покупки</a>
-                  </div>
-                  <div class="office__history_right">
-                    <div class="office__history_right_text">Чтобы получить ШопКарту, нужно подвердить покупку чеком</div>
-                    <button data-toggle="modal" data-target="#modal__confirm" class="confirm__btn btn btn__danger">Подтвердить чеком
-                      <div class="confirm__btn_trigon"></div>
-                    </button>
-                    <button data-toggle="modal" data-target="#modal__confirm" class="confirm__btn btn btn__danger">Подтвердить чеком
-                      <div class="confirm__btn_trigon"></div>
-                    </button>
-                    <button class="confirm__btn btn btn__danger active">Чек отправлен
-                      <div class="confirm__btn_trigon"></div>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- end office__history-->
-            
-            <!-- begin office_checks-->
-            <div class="office__checks js-more-wrapper">
-              <div class="office__checks_name">Ваши чеки</div>
-              <div class="office__checks_list">
-                <div class="office__checks_item">
-                  <div class="office__checks_img"><img src="img/check1.jpg" alt="#"/>
-                    <div class="office__checks_img_status">Не проверено</div>
-                  </div>
-                  <div class="office__checks_info">
-                    <p>№ заказа:</p>
-                    <p class="order__number">KGF521GH581F</p>
-                  </div>
-                  <button class="btn office__checks_edit_btn"></button>
-                  <div class="office__checks_edit_hide"><a href="#" data-toggle="modal" data-target="#modal__del-check" class="office__checks_edit_hide_btn">Удалить чек</a><a href="#" class="office__checks_edit_hide_btn">Редактировать</a></div>
-                </div>
-                <div class="office__checks_item confirmed">
-                  <div class="office__checks_img"><img src="img/check2.jpg" alt="#"/>
-                    <div class="office__checks_img_status">Подтвержден</div>
-                  </div>
-                  <div class="office__checks_info">
-                    <p>№ заказа:</p>
-                    <p class="order__number">Gj52257_4452</p>
-                  </div>
-                </div>
-                <div class="office__checks_item deleted">
-                  <div class="office__checks_img"><img src="img/check3.jpg" alt="#"/>
-                    <div class="office__checks_img_status">Отменен</div>
-                  </div>
-                  <div class="office__checks_info">
-                    <p>№ заказа:</p>
-                    <p class="order__number">Gj52257_4452        </p>
-                  </div>
-                </div>
-                <div class="office__checks_item confirmed">
-                  <div class="office__checks_img"><img src="img/check2.jpg" alt="#"/>
-                    <div class="office__checks_img_status">Подтвержден</div>
-                  </div>
-                  <div class="office__checks_info">
-                    <p>№ заказа:</p>
-                    <p class="order__number">Gj52257_4452</p>
-                  </div>
-                </div>
-                <div class="office__checks_item deleted">
-                  <div class="office__checks_img"><img src="img/check3.jpg" alt="#"/>
-                    <div class="office__checks_img_status">Отменен</div>
-                  </div>
-                  <div class="office__checks_info">
-                    <p>№ заказа:</p>
-                    <p class="order__number">Gj52257_4452</p>
-                  </div>
-                </div>
-                <div class="office__checks_item deleted">
-                  <div class="office__checks_img"><img src="img/check3.jpg" alt="#"/>
-                    <div class="office__checks_img_status">Отменен</div>
-                  </div>
-                  <div class="office__checks_info">
-                    <p>№ заказа:</p>
-                    <p class="order__number">Gj52257_4452        </p>
-                  </div>
-                </div>
-                <div class="office__checks_item confirmed">
-                  <div class="office__checks_img"><img src="img/check2.jpg" alt="#"/>
-                    <div class="office__checks_img_status">Подтвержден</div>
-                  </div>
-                  <div class="office__checks_info">
-                    <p>№ заказа:</p>
-                    <p class="order__number">Gj52257_4452</p>
-                  </div>
-                </div>
-                <div class="office__checks_item deleted">
-                  <div class="office__checks_img"><img src="img/check3.jpg" alt="#"/>
-                    <div class="office__checks_img_status">Отменен</div>
-                  </div>
-                  <div class="office__checks_info">
-                    <p>№ заказа:</p>
-                    <p class="order__number">Gj52257_4452</p>
-                  </div>
-                </div>
-              </div><a href="#" data-text-open="- Скрыть все Вами добавленные чеки" data-text-close="+ Показать все Вами добавленные чеки" class="office__checks_show js-more-link">+ Показать все Вами добавленные чеки</a>
-            </div>
-            <!-- end office_checks-->
-            
-            <div class="line"></div>
-            <!-- begin office__raffle-->
-            <div class="office__raffle">
-              <div class="office__raffle_name">Условия ежемесячных акций</div>
-              <div class="office__raffle_p">- Участвовать в акции, могут только <a href="#">зарегистрированные </a><span>пользователи. Перед тем, как совершать покупки в интернете через нас, удостоверьтесь, что Вы </span><a href="#">вошли в свой аккаут. </a><span>Это нужно для того, чтобы покупка засчиталась в Вашем Личном Кабинете.</span></div>
-              <div class="office__raffle_p"> <span class="bold">- Что нужно, чтобы участовать в акции:<br></span><span>1) Совершайте покупки в интернет-магазинах по промокодам через нас (Если Вы не нашли промокода, тогда просто перейдите по ссылке, на странице нужного магазина) и сохраняйте чеки от покупок в данном интернет-магазине.</span></div>
-              <div class="office__raffle_p">2) Зайдите в свой Личный кабинет, чтобы убедиться, что покупка засчиталась в Вашем аккаунте, ее можно проверить по №заказа. Далее, сфотографируйте полученный чек от покупки в интернет-магазине так, чтобы там было видно, следующую информацию: Стоимость заказа, Дата покупки, № заказа (если на чеке эта информация есть), Название интернет-магазина, где была совершена покупка. Если Вы, по каким-то причинам не можете прислать фото чека в одном экземпляре или, если Ваша покупка не засчиталась, то, пожалуйста, свяжитесь с нами, для решения этой проблемы.</div>
-              <div class="office__raffle_p">3) Пришлите этот чек нам, просто найдите Вашу покупку по №заказа в блоке “История Ваших покупок” и нажмите на кнопку “Подтвердить чеком”, которая находиться на одной линией с этой покупкой.</div>
-              <div class="office__raffle_p">4) Мы проверим Ваш чек, если информация на чеке совпадает с информацией нашей системы, то мы подтвреждаем Вам чек и автоматически, на Ваш Личный кабинет, засчитываются баллы, который будут равные к сумме покупки. Т.е. если Вы купили в интернет-магазине на 3000 руб., то Вам зачислиться 3000 баллов после подтверждения чеком.</div>
-              <div class="office__raffle_p">5) Накопите 5000 баллов = 5000 руб. (общая сумма покупки в интернет-магазине), поменяйте их на одну ШопКарту и участвуйте в акции. Если Вы купили, например: на 15000 руб., то Вы можете поменять их сразу на три ШопКарты, после подтверждения покупки чеком. *Баллы не сгорают, даже после завершения акции этого месяца. Они, только дают возможность накопить, для того чтобы поменять их на ШопКарты. *Баллы можно менять, только на ШопКарты и их нельзя получить в виде подарка в денежном эквиваленте.</div>
-              <div class="office__raffle_p">- За участие в акции этого месяца, каждый пользователь, получит, гарантированный подарок, а именно 500 баллов на счет в Личном кабинете.</div>
-            </div>
-            <!-- end office__raffle-->
-            
-            <!-- begin office__shopcard-->
-            <div class="office__shopcard">
-              <div class="office__shopcard_left"><img src="img/shop-card.jpg" alt="#" class="office__shopcard_img"/></div>
-              <div class="office__shopcard_right">
-                <div class="office__shopcard_p"> <span class="bold">Что такое ШопКарта?<br></span><span>- Это карточка покупателя в интернете, которая говорит, только об одном, Вы участвуйте в акции этого месяца. <br>*И чем больше ШопКарт Вы получите в этом месяце, тем выше вероятность, что подарок в этом месяце, получите именно Вы. После подведения итогов акции, Шопкарты снимаются с Личного кабинета всех пользователей, для того, чтобы пользователь начал собирать новые ШопКарты для участия в акции следующего месяца.</span></div>
-                <div class="office__shopcard_p">- Если пользователь получил в этом месяце подарок, то он должен, написать об этом отзыв в соц.сетях или на <a href="reviews.html">странице отзывов на сайте Найди.ру.</a></div>
-                <div class="office__shopcard_p">- В акции могут участвовать, все дееспособные пользователи, достигшие 18 лет.</div>
-                <div class="office__shopcard_p">	- Доставка подарка за пределы территории РФ, оплачивает сам пользователь.			</div>
-              </div>
-            </div>
-            <!-- end office__shopcard -->
-            
-            <div class="line"></div>
-            <!-- begin office__attention-->
-            <div class="office__attention">
-              <div class="office__attention_left"><img src="img/icon-sure2.png" alt="#" class="office__attention_left_img"/></div>
-              <div class="office__attention_right">
-                <div class="office__attention_name">ОБРАТИТЕ ВНИМАНИЕ:</div>
-                <div class="office__attention_p">- При покупке в мобильных приложений магазинов покупка будет не засчитена.</div>
-                <div class="office__attention_p">- AdBlock и т.д. и т.п. текст мы подготовим ...</div>
-                <div class="office__attention_p">- Ознакомьтесь подробнее с <a href="#">правилами покупок</a>, чтобы покупки засчитывались.</div>
-              </div>
-            </div>
-            <!-- end office__attention-->
-            <!-- Button trigger modal modal__presentation-->
-            <button data-toggle="modal" data-target="#modal__presentation" class="btn btn__danger">Презентация: как работать с сайтом</button>
-          </div>
-          <!-- end main__content_center-->
-          
-          <!-- begin modal__down  -->
-          <div class="modal__down"> 
-            <div class="container_center">
-              <div class="modal__down_left"><img src="img/icon-sure3.png" alt="#"/></div>
-              <div class="modal__down_right"> <span class="attention">ВНИМАНИЕ! </span><span>Подтвердите свой емайл, для того, чтобы продолжить использовать аккаунт. Письмо с подтврждением, уже пришло на Вашу почту. <br>Не подтвержденный емайлом аккаунт, автоматически удалиться через 5 дней!</span>
-                <button class="modal__down_close"></button>
               </div>
             </div>
           </div>
-          <!-- end modal__down-->
         </div>
       </main>
       <!-- end main__content-->
