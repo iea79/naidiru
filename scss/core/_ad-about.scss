@@ -5,9 +5,10 @@
 }
 .ad-about {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  // flex-direction: row;
   padding: 50px 0 82px 70px;
+  @include flexbox();
+  @include justify-content(space-between);
   &__image {
     img {
       max-width: 618px;
@@ -17,10 +18,11 @@
   &__description {
     max-width: 613px;
     width: 100%;
-    h3 {
+    h2 {
+      margin-bottom: 11px;
       font-size: 21px;
       @extend %ad-about__text;
-      padding: 13px 0;
+      padding: 13px 0 0;
     }
     p {
       font-size: 14px;
@@ -32,8 +34,8 @@
     }
   }
   @media (max-width: 1350px) {
-    flex-direction: column;
     padding: 50px;
+    @include flex-flow(column nowrap);
     &__image {
       max-width: 100%;
       text-align: center;
@@ -42,7 +44,12 @@
       max-width: 100%;
     }
   }
-  @media (max-width: 650px) {
-    padding: 50px 20px;
+  @media (max-width: 767px) {
+    padding: 50px 20px 30px;
+    &__description {
+      h2 {
+        text-align: center;
+      }
+    }
   }
 }

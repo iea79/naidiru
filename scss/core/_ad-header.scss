@@ -1,11 +1,11 @@
 .ad-header {
+  position: relative;
+  height: 450px;
+  margin-bottom: 48px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  // background-size: cover;
   // background-attachment: fixed;
-  min-height: 450px;
-  position: relative;
-  margin-bottom: 48px;
   &:before {
     content: '';
     position: absolute;
@@ -16,45 +16,58 @@
     background: rgba(#000, .25);
   }
   &__description {
-    max-width: 1250px;
-    padding: 98px 50px;
-    margin: 0 auto;
     position: relative;
     z-index: 1;
+    max-width: 1250px;
+    padding: 95px 50px;
   }
   &__title {
+    margin-bottom: 15px;
     font-size: 35px;
     color: #ffffff;
     letter-spacing:0.01em;
     font-family: $myriad;
   }
   &__subtitle {
-    font-family: $myriad;
-    font-size: 18px;
-    color: #ffffff;
     padding: 8px 0;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: $myriad;
     letter-spacing: 0.01em;
   }
   &__btn {
     display: inline-block;
-    font-size: 18px;
     color: #ffffff;
+    font-size: 18px;
     border: 3px solid white;
     padding: 14px 32px;
     margin: 43px 0 0 187px;
     font-family: $main_font_family;
     &:hover {
       text-decoration: none;
+      @include opacity(.8);
     }
   }
-  @media (max-width: 650px) {
-    text-align: center;
-    background-attachment: inherit;
+  @media (max-width: 1199px) {
     &__description {
-      padding: 80px 20px;
+      max-width: 610px;
     }
     &__btn {
-      margin: 43px 0 0;
+      width: 190px;
+      margin: 43px auto 0;
+      display: block;
+    }
+  }
+  @media (max-width: 991px) {
+    height: auto;
+    text-align: center;
+    background-attachment: inherit;
+    &:before {
+      background: rgba(#000, .5);
+    }
+    &__description {
+      padding: 50px 20px;
+      margin: 0 auto;
     }
     &__title {
       font-size: 28px;
@@ -65,6 +78,12 @@
     }
     &__subtitle {
       font-size: 16px;
+    }
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 0;
+    &__title {
+      margin-top: 0;
     }
   }
 }

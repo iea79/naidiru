@@ -1,6 +1,8 @@
 .ad-version {
-    max-width: 1300px;
+    // max-width: 1300px;
     margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
   &__row {
     border-top:1px solid #dadada;
     padding-top: 44px;
@@ -14,10 +16,9 @@
     letter-spacing: 0.01em;
   }
   &__section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 60px;
+    padding-left: 40px;
+    @include flexbox();
+    @include align-items(center);
     &_number {
       font-size: 18px;
       font-family: $main_font_family;
@@ -47,19 +48,18 @@
     }
   }
   &__placement {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     padding-left: 60px;
     padding-right: 60px;
+    @include flexbox();
+    @include justify-content(space-between);
   }
   &__placing {
-    display: flex;
-    flex-direction: row;
     align-items: center;
     margin-top: 55px;
     margin-bottom: 80px;
+    @include flexbox();
     &_image {
+      width: 100%;
       min-width: 260px;
       max-width: 260px;
       margin-right: 42px;
@@ -71,6 +71,7 @@
     }
     &_description {
       max-width: 280px;
+      padding-right: 20px;
       b {
         font-size: 15px;
         font-weight: bold;
@@ -107,9 +108,9 @@
         }
       }
       .ad-version__placing_description {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
+        @include flexbox();
+        @include justify-content(center);
+        @include flex-flow(column nowrap);
         max-width: 100%;
         height: 100%;
         padding-left: 60px;
@@ -158,12 +159,11 @@
       }
     }
   }
-  .ad-version__more-info {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  &__more-info {
     margin-bottom: 40px;
     margin-top: 25px;
+    @include flexbox();
+    @include align-items(center);
     p {
       margin-right: 30px;
       margin-left: 200px;
@@ -176,9 +176,8 @@
     }
   }
   &__unik {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flexbox();
+    @include align-items(center);
     &--1 {
       position: relative;
       top: 45px;
@@ -248,11 +247,11 @@
   }
   @media (max-width: 1280px) {
     &__placement {
-      flex-direction: column;
+      @include flex-flow(column nowrap);
     }
     &__placing {
       &--full {
-        flex-direction: column;
+        @include flex-flow(column nowrap);
         .ad-version__placing_description {
           padding: 20px;
 
@@ -260,6 +259,7 @@
       }
       &_description {
         max-width: 100%;
+        padding-right: 0;
       }
     }
     &__more-info {
@@ -273,12 +273,13 @@
     &__unik {
       position: inherit!important;
       padding: 0 60px;
-      margin: 20px 0;
-      align-items: flex-start;
+      margin: 40px 0;
+      @include align-items(flex-start);
       &_image {
         text-align: center;
         width: 100%;
         margin: 0;
+        padding-right: 20px;
         position: inherit!important;
       }
       &_description {
@@ -288,32 +289,56 @@
       &--2,
       &--4 {
         .ad-version__unik_image {
-          order: 1;
+          @include order(1);
         }
         .ad-version__unik_description {
-          order: 2;
+          @include order(2);
         }
       }
     }
   }
-  @media (max-width: 750px) {
+  @media (max-width: 767px) {
+    &__row {
+      padding-top: 30px;
+    }
+    &__title {
+      font-size: 18px;
+    }
+    &__more-info {
+      margin-top: 0;
+    }
+    &__placement {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__placing {
+      margin: 20px 0;
+    }
     &__unik {
       padding: 0 20px !important;
-      flex-direction: column;
+      @include flex-flow(column nowrap);
+      &_image {
+        margin-bottom: 20px;
+        padding-right: 0;
+      }
+      &_description {
+        width: 100%;
+        margin-right: 0 !important;
+        br {
+          display: none;
+        }
+      }
     }
   }
   @media (max-width: 660px) {
-    &__placement {
-      padding: 0 20px;
-    }
     &__row {
       padding-top: 20px;
     }
     &__section {
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
       padding: 0 20px;
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-flow(column nowrap);
       &_number {
         margin: 0 0 10px;
       }
@@ -324,7 +349,6 @@
       }
     }
     &__placing {
-      margin: 20px 0;
       flex-direction: column;
       &_description--full  {
         margin-top: 0;
@@ -332,12 +356,11 @@
       }
       &_image {
         margin-right: 0;
-        max-width: 100%;
         margin-bottom: 10px;
       }
     }
     &__more-info {
-      flex-direction: column!important;
+      @include flex-flow(column nowrap);
       &--unik {
         padding: 0 20px;
         margin-bottom: 20px !important;

@@ -1798,44 +1798,18 @@
 			font-size: 15px;
 			text-align: left;
 		}
-		.lg_social {
-			position: relative;
-			width: 100%;
-			margin: 0;
-			@extend %clear_a;
-			// Подсказкa
-			.tooltip__help {
-				position: absolute;
-				right: 0;
-				top: 11%;
-			}
-			.tooltip__text {
-				top: 4px;
-				right: 5px;
-				width: 363px;
-				padding: 18px 24px 15px;
-				text-align: left;
-				&_big {
-					top: -5px;
-					right: -6px;	
-				}
-			}
-		}
 		&_down {
 			margin-top: 25px;
 			text-align: center;
 		}
 	}
-	@media (max-width: 991px) {
+	@media (max-width: 1279px) {
 		.lg_social {
+			width: 345px;
 			&_icon {
 				margin-left: 11px;
 				&_add {
 					width: 41px;
-				}
-				.ya-share2__icon {
-					width: 41px !important;
-					background-size: 41px 41px !important;
 				}
 			}
 		}
@@ -1860,29 +1834,20 @@
 			}
 		}
 		.lg_social {
+			width: 267px;
 			&_icon {
 				margin-left: 5px;
 				&_add {
 					width: 33px;
 				}
-				.ya-share2__icon {
-					width: 33px !important;
-					background-size: 33px 33px !important;
-				}
+			}
+			.tooltip__text {
+				width: 280px;
 			}
 		}
 		.modal-footer {
 			&_in {
 				width: 280px;
-			}
-		}
-	}
-	@media (max-width: 479px) {
-		.modal-footer {
-			.lg_social {
-				.tooltip__text {
-					width: 280px;
-				}
 			}
 		}
 	}

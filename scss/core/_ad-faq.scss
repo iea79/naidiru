@@ -1,9 +1,9 @@
 .ad-faq {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  // flex-direction: row;
   margin-bottom: 65px;
   padding-right: 50px;
+  @include flexbox();
+  @include justify-content(space-between);
   &__list {
     max-width: 750px;
     .faq_list{
@@ -30,11 +30,22 @@
       }
     }
   }
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+    &__list {
+      .faq_list{
+        padding-top: 30px;
+      }
+    }
+    &__image {
+      padding-top: 30px;
+    }
+  }
   @media (max-width: 600px) {
     padding: 0 20px;
     &__list .faq_list{
       padding-left: 0;
-      padding-top: 20px;
+      padding-right: 0;
     }
   }
 }

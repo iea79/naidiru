@@ -33,14 +33,14 @@
     letter-spacing: 0.01em;
     text-align: center;
     padding: 74px 0 80px;
+    margin-bottom: 0;
   }
 
   &__triggers {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     max-width: 940px;
     margin: 0 auto;
+    @include flexbox();
+    @include justify-content(space-between);
     li {
       text-align: center;
     }
@@ -61,10 +61,9 @@
   }
   &__more {
     border-top:2px dashed white;
-    display: flex;
-    flex-direction: row;
     margin-top: 48px;
-    justify-content: center;
+    @include flexbox();
+    @include justify-content(center);
     p {
       font-size: 42px;
       @extend %ad-statistic__text;
@@ -76,10 +75,9 @@
   }
 
   &__age {
-    display: flex;
-    flex-direction: row;
     margin-right: 167px;
     padding-top: 68px;
+    @include flexbox();
   }
   &__age-info {
       font-size: 18px!important;
@@ -89,19 +87,23 @@
       font-family: $main_font_family;
   }
   &__percentage {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding-top: 40px;
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
     p {
       font-size: 28px;
     }
   }
 
   @media (max-width: 1000px) {
-
+    min-height: auto;
+    padding-bottom: 50px;
+    &__title {
+      padding: 50px 0;
+    }
     &__triggers {
-      flex-direction: row;
+      @include flex-flow(row nowrap);
       li {
         width: 50%;
       }
@@ -109,22 +111,23 @@
   }
   @media (max-width: 850px) {
     &__more {
-      justify-content: space-between;
       padding: 0 40px;
+      @include justify-content(space-between);
     }
     &__age {
       margin-right: 0;
     }
   }
-  @media (max-width: 750px) {
+  @media (max-width: 767px) {
+    padding-bottom: 0;
     &__title {
-      padding: 30px 20px;
-      font-size: 28px;
+      padding: 30px 0;
+      font-size: 21px;
     }
     &__triggers {
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-flow(column nowrap);
       h4 {
         font-size: 24px;
       }
@@ -135,25 +138,28 @@
         margin: 10px 0;
       }
     }
-    &__more {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    &__more {;
       padding: 40px;
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-flow(column nowrap);
     }
     &__age {
       padding-top: 0;
       margin-right: 0;
     }
   }
+  @media (max-width: 600px) {
+
+  }
   @media (max-width: 420px) {
     &__percentage,
     &__age {
-      align-items: center;
-      justify-content: center;
       text-align: center;
-      display: flex;
-      flex-direction: column;
+      @include flexbox();
+      @include justify-content(center);
+      @include align-items(center);
+      @include flex-flow(column nowrap);
     }
     &__age-info {
       padding-right: 0;
