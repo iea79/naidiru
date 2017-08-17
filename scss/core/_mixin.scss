@@ -83,8 +83,7 @@
 
 // Transition speed for element
 @mixin trs($trs_speed) {
-	transition: all $trs_speed+s;
-}
+	transition: all $trs_speed+s;}
 
 @mixin transform($transforms) {
 	-moz-transform: $transforms;
