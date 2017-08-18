@@ -174,7 +174,7 @@ $(document).ready(function() {
 		slidesToScroll: 1,
 		dots: true,
 		// centerMode: true,
-		// variableWidth: true,
+		variableWidth: true,
 		responsive: [
 			{
 				breakpoint: 1199,
@@ -242,6 +242,7 @@ $(document).ready(function() {
 			{
 				breakpoint: 480,
 				settings: {
+					variableWidth: false,
 					slidesToShow: 1,
 					slidesToScroll: 1
 				}
@@ -255,6 +256,7 @@ $(document).ready(function() {
 		slidesToShow: 6,
 		slidesToScroll: 1,
 		dots: true,
+		variableWidth: true,
 		responsive: [
 			{
 				breakpoint: 1199,
@@ -273,13 +275,14 @@ $(document).ready(function() {
 			{
 				breakpoint: 767,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 4,
 					slidesToScroll: 1
 				}
 			},
 			{
 				breakpoint: 480,
 				settings: {
+					variableWidth: false,
 					slidesToShow: 1,
 					slidesToScroll: 1
 				}
@@ -333,10 +336,6 @@ $(document).ready(function() {
 
 	if ($('div').is('.js-slider-arrow')) {
 		hideSliderArrow($('.js-slider-arrow'));
-	}
-
-	if ($('div').is('.slider__grid_small')) {
-		hideSliderArrow($('.slider__grid_small'));
 	}
 
 	if ($('div').is('.slider__grid_medium')) {

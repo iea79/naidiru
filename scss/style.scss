@@ -57,6 +57,10 @@
 
 .slider {
 	position: relative;
+	display: none;
+		&.slick-slider {
+			display: block;
+		}
 	&__fullwide {
 		img {
 			width: 100%;
@@ -8056,7 +8060,7 @@
 		width: 100%;
 		margin-left: 0;
 		&_wrap {
-			// margin-left: 0;
+			margin-left: 0;
 			&:first-child {
 				margin-left: 0;
 			}
@@ -9799,8 +9803,9 @@
 			}
 		}
 		&__item {
-			padding-left: 5px;
-			padding-right: 5px;
+			margin-left: 5px;
+			margin-right: 5px;
+			width: 160px;
 			&:last-child {
 				.slider__grid {
 					&_img {
