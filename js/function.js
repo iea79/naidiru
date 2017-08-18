@@ -894,6 +894,13 @@ $(document).ready(function() {
 		$(this).parent().find('.brand__info_mobil').toggleClass('open');
 	});
 
+
+	// Страница авторизации autorization.html Появление блока Восстановить пароль
+    $('.sign__restore-password').on('click touchend', function(event) {
+    	event.preventDefault();
+    	$('.recovery').toggleClass('open');
+	});
+
 	$('.accordeon__text').hide();
 
 	$('.accordeon__header').click(function() {
