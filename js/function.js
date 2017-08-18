@@ -187,7 +187,7 @@ $(document).ready(function() {
 			{
 				breakpoint: 991,
 				settings: {
-					variableWidth: false,
+					// variableWidth: false,
 					slidesToShow: 3,
 					slidesToScroll: 1
 				}
@@ -195,7 +195,7 @@ $(document).ready(function() {
 			{
 				breakpoint: 767,
 				settings: {
-					variableWidth: false,
+					// variableWidth: false,
 					slidesToShow: 2,
 					slidesToScroll: 1
 				}
@@ -203,7 +203,7 @@ $(document).ready(function() {
 			{
 				breakpoint: 480,
 				settings: {
-					variableWidth: false,
+					// variableWidth: false,
 					slidesToShow: 1,
 					slidesToScroll: 1
 				}
@@ -217,11 +217,12 @@ $(document).ready(function() {
 		slidesToShow: 7,
 		slidesToScroll: 1,
 		dots: true,
+		variableWidth: true,
 		responsive: [
 			{
 				breakpoint: 1199,
 				settings: {
-					slidesToShow: 6,
+					slidesToShow: 5,
 					slidesToScroll: 1
 				}
 			},
@@ -235,14 +236,14 @@ $(document).ready(function() {
 			{
 				breakpoint: 767,
 				settings: {
-					slidesToShow: 2,
+					slidesToShow: 3,
 					slidesToScroll: 1
 				}
 			},
 			{
 				breakpoint: 480,
 				settings: {
-					variableWidth: false,
+					// variableWidth: false,
 					slidesToShow: 1,
 					slidesToScroll: 1
 				}
@@ -275,14 +276,14 @@ $(document).ready(function() {
 			{
 				breakpoint: 767,
 				settings: {
-					slidesToShow: 4,
+					slidesToShow: 3,
 					slidesToScroll: 1
 				}
 			},
 			{
 				breakpoint: 480,
 				settings: {
-					variableWidth: false,
+					// variableWidth: false,
 					slidesToShow: 1,
 					slidesToScroll: 1
 				}
@@ -338,13 +339,13 @@ $(document).ready(function() {
 		hideSliderArrow($('.js-slider-arrow'));
 	}
 
-	if ($('div').is('.slider__grid_medium')) {
-		hideSliderArrow($('.slider__grid_medium'));
-	}
+	// if ($('div').is('.slider__grid_medium')) {
+	// 	hideSliderArrow($('.slider__grid_medium'));
+	// }
 
-	if ($('div').is('.category__slider')) {
-		hideSliderArrow($('.category__slider'));
-	}
+	// if ($('div').is('.category__slider')) {
+	// 	hideSliderArrow($('.category__slider'));
+	// }
 
 	$('.slider__sidebar').slick({
 		infinite: true,
@@ -595,24 +596,25 @@ $(document).ready(function() {
     });
 
     // Blog article - b__article_com.html767 Написать комментарий
-	var touch3 = $('.b__article_com_trigger');
-    var menu3 = $('.b__article_com_first');
+	// var touch3 = $('.b__article_com_trigger');
+ //    var menu3 = $('.b__article_com_first');
  
-    $(touch3).on('click', function(e) {
-        e.preventDefault();
-        menu3.slideToggle();
-    });
-    $(window).resize(function(){
-        var wid = $(window).width();
-        if(wid > 760 && menu3.is(':hidden')) {
-            menu3.removeAttr('style');
-        }
-    });
+ //    $(touch3).on('click', function(e) {
+ //        e.preventDefault();
+ //        menu3.slideToggle();
+ //    });
+ //    $(window).resize(function(){
+ //        var wid = $(window).width();
+ //        if(wid > 760 && menu3.is(':hidden')) {
+ //            menu3.removeAttr('style');
+ //        }
+ //    });
 
     // Blog article - b__article_com.html767 - Написать комментарий
-    $('.b__article_com_trigger').on('click touchend', function(event) {
+    $('.b__article_com_trigger').on('click', function(event) {
     	event.preventDefault();
 		$('.b__article_com_trigger').toggleClass('active');
+		$('.b__article_com_first').toggleClass('open');
 	});
 
     // Страница Все магазины all-shops.html - Сортировка по алфавиту
@@ -622,7 +624,7 @@ $(document).ready(function() {
 	});
 
     // Страница Все промокоды all-promocodes.html - Фильтр промокодов
-    $('.sale__list_trigger').on('click touchend', function(event) {
+    $('.sale__list_trigger').on('click', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).parent().find('.sidebar__section_wrap').toggleClass('open');
@@ -766,7 +768,7 @@ $(document).ready(function() {
     $('.js-more-link').on('click', function(event) {
     	event.preventDefault();
     	var wrap = $(this).closest('.js-more-wrapper');
-    	var moreText = $(this).closest('.js-more-text');
+    	var moreText = wrap.find('.js-more-text');
     	var textOpen = $(this).data('textOpen');
     	var textClose = $(this).data('textClose');
     	// var item = wrap.find('.js-more-item');
@@ -845,15 +847,25 @@ $(document).ready(function() {
 	});
 
 	// Страница категорий category.html - Доработать хелп в верхнем слайдере
-    $('.category__slider_hellip').on('mouseenter', function(event) {
-    	event.preventDefault();
-    	$(this).closest('.category__slider_item').find('.category__slider_help').addClass('open');
-	});
-
-    $('.category__slider_help').on('mouseleave', function(event) {
-    	event.preventDefault();
-    	$(this).removeClass('open');
-	});
+	if (winWidth > 767) {	
+	    $('.category__slider_hellip').on('mouseenter', function(event) {
+	    	event.preventDefault();
+	    	$(this).closest('.category__slider_item').find('.category__slider_help').addClass('open');
+		});
+	    $('.category__slider_item,.category__slider_help').on('mouseleave', function(event) {
+	    	event.preventDefault();
+	    	if ($(this).hasClass('category__slider_help')) {    		
+		    	$(this).removeClass('open');
+	    	} else {
+	    		$(this).find('.category__slider_help').removeClass('open');
+	    	}
+		});
+	} else {
+	    $('.category__slider_hellip').on('click', function(event) {
+	    	event.preventDefault();
+	    	$(this).closest('.category__slider_item').find('.category__slider_help').toggleClass('open');
+		});
+	}
 
 	// Страница категорий category.html - Поделиться в соц.сетях
     $('.sm_social_trigger').on('click touchend', function(event) {
@@ -887,7 +899,7 @@ $(document).ready(function() {
 	});
 
 	// Страница бренда brand.html - Скрытые информационные блоки в мобильной части - Доработатьg
-    $('.brand__trigger').on('click touchend', function(event) {
+    $('.brand__trigger').on('click', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).parent().find('.brand__info_mobil').toggleClass('open');
