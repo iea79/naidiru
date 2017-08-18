@@ -1,7 +1,7 @@
 extends template.jade
 
 block variables
-	- bodyClass = "category"
+	- bodyClass = "category category-search"
 
 block title
 	title Страница категории
@@ -29,13 +29,6 @@ block content
 						.category__top_list1
 							.category__top_item1
 								a.category__top_link1(href="#") Одежда
-								.category__top_list2
-									.category__top_item2
-										a.category__top_link2(href="#") Кухонные комбайны
-									.category__top_item2
-										a.category__top_link2(href="#") Смартфоны
-									.category__top_item2
-										a.category__top_link2(href="#") Пылесосы
 							.category__top_item1
 								a.category__top_link1.active(href="#") Бытовая техника
 								.category__top_list2
@@ -47,22 +40,8 @@ block content
 										a.category__top_link2(href="#") Пылесосы
 							.category__top_item1
 								a.category__top_link1(href="#") Детские товары
-								.category__top_list2
-									.category__top_item2
-										a.category__top_link2(href="#") Кухонные комбайны
-									.category__top_item2
-										a.category__top_link2(href="#") Смартфоны
-									.category__top_item2
-										a.category__top_link2(href="#") Пылесосы
 							.category__top_item1
 								a.category__top_link1(href="#") Товары для дома
-								.category__top_list2
-									.category__top_item2
-										a.category__top_link2(href="#") Кухонные комбайны
-									.category__top_item2
-										a.category__top_link2(href="#") Смартфоны
-									.category__top_item2
-										a.category__top_link2(href="#") Пылесосы
 						a.category__top_more(href="all-categories.html" target="_blank") Показать больше &gt;                  
 				.category__top_right
 					.category__slider_name Найдите скидку на нужный товар
@@ -226,39 +205,17 @@ block content
 							a.sidebar__section_list_link(href="#") Алиэкспресс
 						.sidebar__section_list_item
 							a.sidebar__section_list_link(href="#") Wildberries
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") М.видео
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Снежная королева
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Nike
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Алиэкспресс
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Wildberries
 						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины") + Показать больше
-				.sidebar__section.js-more-wrapper
-					.sidebar__section_name Лучшие скидки
-					.sidebar__section_p Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.
-					.sidebar__section_p Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши
-					.js-more-text
-						.sidebar__section_p Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.
-						.sidebar__section_p Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши
-					a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть текст") + Показать больше
-				.sidebar__section
-					.sidebar__section_name Найдите скидку на нужный товар:
-					.sidebar__section_list.js-more-wrapper
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Одежда
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Обувь
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Аксессуары
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Бытовая техника
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Электроника
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Детские товары и<br>Игрушки
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Спортивные товары
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Путешествия и<br>Развлечения
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Зоотовары
-						.sidebar__section_list_item
-							a.sidebar__section_list_link(href="#") Дом, мебель, сад
-						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть категории") + Показать больше
 		// end sidebar
 
 
@@ -991,7 +948,7 @@ block content
 							img(src="img/shop6.jpg", alt="#")
 							p Quelle
 					.grid__wrapper
-						a.grid__item(href="#")a.grid__item(href="#")
+						a.grid__item(href="#")
 							img(src="img/shop6.jpg", alt="#")
 							p Quelle
 				// end category__box_grid

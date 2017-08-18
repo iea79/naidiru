@@ -4037,6 +4037,21 @@
 		}
 	}
 }
+
+.all-promocodes {
+	.sidebar__section:nth-child(4) {
+		.sidebar__section_list {
+			&_item {
+				&:nth-child(n+6) {
+					display: block;
+				}
+				&:nth-child(n+11) {
+					display: none;
+				}
+			}
+		}
+	}
+}
 // end sidebar
 
 
@@ -4127,7 +4142,7 @@
 			z-index: 99;
 			width: 297px;
 			padding: 12px 22px;
-			font-size: 14px !important;
+			font-size: 14px;
 			background-color: #fff;
 			border: 1px solid #d1d1d1;
 			&.open {
@@ -4279,7 +4294,7 @@
 	}
 	&_title {
 		margin-bottom: 10px;
-		font-size: 23px;
+		font-size: 21px;
 	}
 	&_terms {
 		font-size: 15px;
@@ -7589,9 +7604,16 @@
 	&_link1 {
 		color: #292929;
 		font-size: 14px;
+		&.active {
+			font-weight: 700;
+			&:hover {
+				text-decoration: none;
+				cursor: default;
+			}
+		}
 	}
 	&_list2 {
-		display: none;
+		// display: none;
 		padding-bottom: 2px;
 		&.open {
 			display: block;
@@ -7613,6 +7635,7 @@
 			font-weight: 700;
 			&:hover {
 				color: #292929;
+				cursor: default;
 			}
 		}
 		&:hover {
@@ -7623,6 +7646,7 @@
 	&_more {
 		margin-top: 17px;
 		display: block;
+		font-size: 14px;
 	}
 	&_into {
 		margin-top: 20px;
@@ -7633,10 +7657,19 @@
 			position: relative;
 			padding-right: 3px;
 			padding-bottom: 15px;
-			.icon__question {
+			.tooltip__help {
+				position: absolute;
 				top: -5px;
 				right: -2px;
-				z-index: 5;
+			}
+			.tooltip__text {
+				top: 4px;
+				right: 5px;
+				width: 202px;
+				&_big {
+					top: -5px;
+					right: -6px;	
+				}
 			}
 		}
 		&_name {
@@ -7662,20 +7695,8 @@
 			background: url('../img/break-down.svg') no-repeat;
 			background-size: 197px 15px;
 		}
-		&_help {
-			display: none;
-			position: absolute;
-			top: -1px;
-			right: 2px;
-			z-index: 3;
-			width: 202px;
-			padding: 19px 12px;
+		&_link {
 			font-size: 14px;
-			background-color: #fff;
-			border: 1px solid #d1d1d1;
-			&.open {
-				display: block;
-			}
 		}
 	}
 	&_right {
@@ -8073,6 +8094,24 @@
 	}
 }
 // end category__top
+
+
+// begin sidebar
+.category-search {
+	.sidebar__section:nth-child(2) {
+		.sidebar__section_list {
+			&_item {
+				&:nth-child(n+6) {
+					display: block;
+				}
+				&:nth-child(n+11) {
+					display: none;
+				}
+			}
+		}
+	}
+}
+// end sidebar
 
 
 // begin main__content_center
