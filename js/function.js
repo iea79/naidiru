@@ -832,11 +832,11 @@ $(document).ready(function() {
     // Стилизаци прокрутки просто к обрезаемому блоку добавить класс scrollbar-inner
     $('.scrollbar-inner').scrollbar();
 
-    // Страница категорий category.html - доработать скрипт меню
-    $('.category__top_link1').on('click touchend', function(event) {
-    	event.preventDefault();
-		$(this).parent().find('.category__top_list2').toggleClass('open');
-	});
+    // Страница категорий category.html - меню
+ //    $('.category__top_link1').on('click touchend', function(event) {
+ //    	event.preventDefault();
+	// 	$(this).parent().find('.category__top_list2').toggleClass('open');
+	// });
 
 	// Страница категорий category.html - Хелп Покупайте, участвуйте в розыгрышах
     $('.category__top_into_wrap i').on('click touchend', function(event) {
