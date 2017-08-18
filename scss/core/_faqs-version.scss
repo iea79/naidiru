@@ -1,4 +1,4 @@
-.ad-version {
+.faqs-version {
     // max-width: 1300px;
     margin: 0 auto;
     padding-left: 20px;
@@ -98,16 +98,19 @@
       margin-top: 34px;
       margin-bottom: 69px;
       padding-right: 0;
-      .ad-version__placing_image {
+      .faqs-version__placing_image {
         min-width: 450px;
         max-width: 450px;
         margin-right: 0;
+        overflow: hidden;
         img {
-          width: 100%;
+          min-width: 100%;
+          width: auto;
           height: 100%;
+          display: block;
         }
       }
-      .ad-version__placing_description {
+      .faqs-version__placing_description {
         @include flexbox();
         @include justify-content(center);
         @include flex-flow(column nowrap);
@@ -117,7 +120,7 @@
         background-color: #f1f1f1;
         b {
           padding-top: 29px;
-          &.ad-version__placing_description--title {
+          &.faqs-version__placing_description--title {
             padding-top: 0;
           }
         }
@@ -186,10 +189,10 @@
     &--2 {
       position: relative;
       left: 262px;
-      .ad-version__unik_description {
+      .faqs-version__unik_description {
         margin-right: 68px;
       }
-      .ad-version__unik_image {
+      .faqs-version__unik_image {
         position: relative;
         top: -31px;
       }
@@ -198,10 +201,10 @@
       position: relative;
       top: -23px;
       left: 60px;
-      .ad-version__unik_image {
+      .faqs-version__unik_image {
         margin-right: 78px;
       }
-      .ad-version__unik_description {
+      .faqs-version__unik_description {
         position: relative;
         top: 17px;
       }
@@ -210,10 +213,10 @@
       position: relative;
       left:188px;
       top: -15px;
-      .ad-version__unik_description {
+      .faqs-version__unik_description {
         margin-right: 60px;
       }
-      .ad-version__unik_image {
+      .faqs-version__unik_image {
         position: relative;
         top: -5px;
       }
@@ -251,10 +254,22 @@
     }
     &__placing {
       &--full {
-        @include flex-flow(column nowrap);
-        .ad-version__placing_description {
+        @include flex-flow(row wrap);
+        .faqs-version__placing_description {
           padding: 20px;
-
+          width: 100%;
+        }
+        .faqs-version__placing_image {
+          width: 100%;
+          max-width: none;
+          min-width: initial;
+          text-align: center;
+          img {
+            display: inline-block;
+            width: auto;
+            height: auto;
+            min-width: initial;
+          }
         }
       }
       &_description {
@@ -288,10 +303,10 @@
       }
       &--2,
       &--4 {
-        .ad-version__unik_image {
+        .faqs-version__unik_image {
           @include order(1);
         }
-        .ad-version__unik_description {
+        .faqs-version__unik_description {
           @include order(2);
         }
       }
@@ -306,6 +321,11 @@
     }
     &__more-info {
       margin-top: 0;
+      a {
+        &.btn {
+          display: inline-block;
+        }
+      }
     }
     &__placement {
       padding-left: 0;
@@ -313,9 +333,13 @@
     }
     &__placing {
       margin: 20px 0;
+      &_description--full  {
+        margin-top: 0;
+        padding: 0;
+      }
     }
     &__unik {
-      padding: 0 20px !important;
+      padding: 0 !important;
       @include flex-flow(column nowrap);
       &_image {
         margin-bottom: 20px;
@@ -338,22 +362,20 @@
       padding: 0 20px;
       @include justify-content(center);
       @include align-items(center);
-      @include flex-flow(column nowrap);
+      @include flex-flow(row wrap);
       &_number {
-        margin: 0 0 10px;
+        display: block;
+        margin: 0 auto 10px;
       }
       &_title {
+        width: 100%;
         margin: 0;
         padding: 0;
         text-align: center;
       }
     }
     &__placing {
-      flex-direction: column;
-      &_description--full  {
-        margin-top: 0;
-        padding: 0 20px;
-      }
+      @include flex-flow(column nowrap);
       &_image {
         margin-right: 0;
         margin-bottom: 10px;
@@ -361,14 +383,15 @@
     }
     &__more-info {
       @include flex-flow(column nowrap);
+      text-align: center;
       &--unik {
-        padding: 0 20px;
+        padding: 0;
         margin-bottom: 20px !important;
       }
       p {
+        width: 100%;
         padding: 20px 0;
         margin-right: 0!important;
-        text-align: center;
       }
     }
   }

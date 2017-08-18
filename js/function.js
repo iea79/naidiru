@@ -767,6 +767,7 @@ $(document).ready(function() {
     $('.js-more-link').on('click', function(event) {
     	event.preventDefault();
     	var wrap = $(this).closest('.js-more-wrapper');
+    	var moreText = $(this).closest('.js-more-text');
     	var textOpen = $(this).data('textOpen');
     	var textClose = $(this).data('textClose');
     	// var item = wrap.find('.js-more-item');
@@ -775,16 +776,16 @@ $(document).ready(function() {
     		if (textOpen != null) {
     			$(this).html(textOpen)
     		}
-    		if (wrap.find('.js-more-text')) {
-			    $('.js-more-text').show();
+    		if (moreText) {
+			    moreText.show();
     		}
     	} else {
     		wrap.removeClass('open');
     		if (textClose != null) {
     			$(this).html(textClose)
     		}
-    		if (wrap.find('.js-more-text')) {
-			    $('.js-more-text').hide();
+    		if (moreText) {
+			    moreText.hide();
     		}
     	}
     });
@@ -833,7 +834,7 @@ $(document).ready(function() {
     $('.scrollbar-inner').scrollbar();
 
     // Страница категорий category.html - доработать скрипт меню
-    $('.category__top_link1').on('click touchend', function(event) {
+    $('.category__top_link1').on('click', function(event) {
     	event.preventDefault();
 		$(this).parent().find('.category__top_list2').toggleClass('open');
 	});
@@ -862,7 +863,7 @@ $(document).ready(function() {
 	});
 
 	// Страница категорий category.html - Показать другие категории
-    $('.category__top_list1_trigger').on('click touchend', function(event) {
+    $('.category__top_list1_trigger').on('click', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$('.category__top_list1_wrap').toggleClass('open');
@@ -875,12 +876,12 @@ $(document).ready(function() {
 	// });
 
 	// Страница FAQ faq.html - Показать ответ - нужно доработать
-    $('.category__top_right_subscribe').on('click touchend', function(event) {
+    $('.category__top_right_subscribe').on('click', function(event) {
     	event.preventDefault();
-    	$('.category__top_right_subscribe').toggleClass('active');
+    	$(this).toggleClass('active');
 	});
 
-    $('.faq_question').on('click touchend', function(event) {
+    $('.faq_question').on('click', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).siblings('.faq_answer').toggleClass('open');
@@ -926,5 +927,25 @@ $(document).ready(function() {
 	// 	});
 	// 	return false;
 	// });
+
+	if ('order' in document.documentElement.style) {
+	    // Flexbox-совместимый браузер.
+	    // Используем `order` или `flex-direction: column-reverse`.
+	    // $('.footer').append('Используем `order`')
+	} else {
+	    // Браузер без поддержки Flexbox, в том числе IE 9/10.
+	    if ($(window).width() <= 767) {
+
+		    $('.faqs-version__unik').each(function(index, val) {
+		    	var img = $(this).find('.faqs-version__unik_image');
+		    	var text = $(this).find('.faqs-version__unik_description')
+		    	 img.insertBefore(text);
+		    });
+
+		    $('.category__top_left').insertAfter('.category__top_right');
+
+		    $('.category__top_right .sm_social_trigger').insertAfter('.category__top_right .category__top_right_subscribe')
+	    }
+	}
 
 });

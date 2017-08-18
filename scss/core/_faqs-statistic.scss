@@ -3,7 +3,7 @@
   color: #ffffff;
   font-family: $main_font_family;
 }
-.ad-statistic {
+.faqs-statistic {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -152,13 +152,24 @@
 
   }
   @media (max-width: 420px) {
-    &__percentage,
     &__age {
       text-align: center;
       @include flexbox();
       @include justify-content(center);
       @include align-items(center);
       @include flex-flow(column nowrap);
+    }
+    &__percentage {
+      @include flex-flow(row wrap);
+      text-align: center;
+      p {
+        width: 100%;
+        display: block;
+      }
+      svg {
+        display: inline-block;
+      }
+
     }
     &__age-info {
       padding-right: 0;
