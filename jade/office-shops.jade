@@ -23,7 +23,7 @@ block content
 
 
 			// begin office__top
-			.office__top
+			.office__top.shops
 				.office__top_left
 					.office__top_user
 						.office__top_user_img
@@ -73,7 +73,7 @@ block content
 							span.large Вы накопили: 
 								span.bold.points 2120 
 							span.bold баллов
-						p До        Вам осталось набрать: <br>
+						p До ШопКарты Вам осталось накопить: <br>
 							span.large.bold.points__left 2880 
 							span.bold баллов
 						//- .office__top_center_help
@@ -95,7 +95,7 @@ block content
 
 
 		// begin sidebar
-		.office__menu_trigger
+		.office__menu_trigger Другие разделы
 		.main__content_sidebar
 			.sidebar__section
 				.office__menu
@@ -108,6 +108,10 @@ block content
 					.office__item
 						a.office__link(href="office-settings.html") Настройки рассылки
 					.office__item
+						a.office__link.active(href="office-shops.html") Любимые магазины
+					.office__item
+						a.office__link(href="office-coupons.html") Сохраненные купоны
+					.office__item
 						a.office__link(href="#") Как получить подарок?
 					.office__item
 						a.office__link(href="#") Выйти из аккаунта
@@ -117,7 +121,6 @@ block content
 				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
 			.sidebar__section
 				.sidebar__section_name Лента обладателей подарка
-				.office__winners_top_title Розыгрыш апрель-2017:
 				.office__winners_wrap
 					.office__winners.scrollbar-inner
 						.office__winners_title Подарок: Смартфон 
@@ -280,70 +283,89 @@ block content
 		// end sidebar
 
 
+		.line.laptop
+
+
 		// begin main__content_center 
 		.main__content_center
 
 			h1.like Любимые магазины
 
 			// begin office__shops_top
-			.office__shops_top
-				a.office__shops_top_btn.btn.btn__danger(href="all-shops.html" target="blank") Найти любимый магазин
-				.office__shops_top_text Получайте скидки на емайл, только от любимых магазинов. <br>Если Вам больше не нравиться магазин, Вы можете удалить его с этой страницы, просто снова нажав на сердечко определенного магазина.
+			.office__shops_top_yes
+				.office__shops_top
+					a.office__shops_top_btn.btn.btn__danger(href="all-shops.html" target="blank") Найти любимый магазин
+					.office__shops_top_text Получайте скидки на емайл, только от любимых магазинов. <br>Если Вам больше не нравиться магазин, Вы можете удалить его с этой страницы, просто снова нажав на сердечко определенного магазина.
+
+
+				// begin shops__box
+				.shops__box.ind
+					// begin shops__box_grid 
+					.grid.grid__5.shops__box_grid
+						.grid__wrapper
+							.grid__item
+								a.shops__box_link(href="#") MyToys
+								a(href="#")
+									img(src="img/shop-img1.png", alt="#")
+								.grid__item_like.active
+								a.grid__item_rate(href="#")
+									.grid__item_stars
+										.grid__item_stars_full(style="width: 90%")
+									.grid__item_rate_number (182)
+						.grid__wrapper
+							.grid__item.active
+								a.shops__box_link(href="#") Aliexpress
+								a(href="#")
+									img(src="img/shop-img2.png", alt="#")
+								.grid__item_like.active
+								a.grid__item_rate(href="#")
+									.grid__item_stars
+										.grid__item_stars_full(style="width: 90%")
+									.grid__item_rate_number (182)
+						.grid__wrapper
+							.grid__item
+								a.shops__box_link(href="#") bonprix
+								a(href="#")
+									img(src="img/shop-img3.png", alt="#")
+								.grid__item_like.active
+								a.grid__item_rate(href="#")
+									.grid__item_stars
+										.grid__item_stars_full(style="width: 90%")
+									.grid__item_rate_number (182)
+						.grid__wrapper
+							.grid__item
+								a.shops__box_link(href="#") Lamoda                     
+								a(href="#")
+									img(src="img/shop-img4.png", alt="#")
+								.grid__item_like.active
+								a.grid__item_rate(href="#")
+									.grid__item_stars
+										.grid__item_stars_full(style="width: 90%")
+									.grid__item_rate_number (182)
+						.grid__wrapper
+							.grid__item
+								a.shops__box_link(href="#") Летуаль
+								a(href="#")
+									img(src="img/shop-img5.png", alt="#")
+								.grid__item_like.active
+								a.grid__item_rate(href="#")
+									.grid__item_stars
+										.grid__item_stars_full(style="width: 90%")
+									.grid__item_rate_number (182)
+					// end shops__box_grid 
+				// end shops__box
+
+
+				.line
+
 			// end office__shops_top
 
-			// begin shops__box
-			.shops__box.ind
-				// begin shops__box_grid 
-				.grid.grid__5.shops__box_grid
-					.grid__wrapper
-						.grid__item
-							p MyToys
-							img(src="img/shop-img1.png", alt="#")
-							.grid__item_like.active
-							.grid__item_rate
-								.grid__item_stars
-									.grid__item_stars_full(style="width: 90%")
-								.grid__item_rate_number (182)
-					.grid__wrapper
-						.grid__item.active
-							p Aliexpress
-							img(src="img/shop-img2.png", alt="#")
-							.grid__item_like.active
-							.grid__item_rate
-								.grid__item_stars
-									.grid__item_stars_full(style="width: 90%")
-								.grid__item_rate_number (182)
-					.grid__wrapper
-						.grid__item
-							p bonprix
-							img(src="img/shop-img3.png", alt="#")
-							.grid__item_like.active
-							.grid__item_rate
-								.grid__item_stars
-									.grid__item_stars_full(style="width: 90%")
-								.grid__item_rate_number (182)
-					.grid__wrapper
-						.grid__item
-							p Lamoda                     
-							img(src="img/shop-img4.png", alt="#")
-							.grid__item_like.active
-							.grid__item_rate
-								.grid__item_stars
-									.grid__item_stars_full(style="width: 90%")
-								.grid__item_rate_number (182)
-					.grid__wrapper
-						.grid__item
-							p Летуаль
-							img(src="img/shop-img5.png", alt="#")
-							.grid__item_like.active
-							.grid__item_rate
-								.grid__item_stars
-									.grid__item_stars_full(style="width: 90%")
-								.grid__item_rate_number (182)
-			// end shops__box
-
-
-			.line
+			// begin office__shops_top
+			.office__shops_top_no
+				.office__shops_top
+					a.office__shops_top_btn.btn.btn__danger(href="all-shops.html" target="blank") Найти любимый магазин
+					.office__shops_top_text У вас нет любимых магазинов. <br>Чтобы получать скидки только от любимых магазинов на емайл, нажимайте на сердечки любимых магазинов и выбранные Вами магазины автоматически сохранятся тут.
+			// end office__shops_top
 
 
 			// begin office__shops_coupons

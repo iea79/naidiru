@@ -90,9 +90,9 @@ block content
 						// Slide 1
 						.category__slider_wrap
 							.category__slider_item
-								.category__slider_img
+								a.category__slider_img(href="#")
 									img(src="img/cat-sl1.jpg", alt="#")
-								.category__slider_info Кухонные комбайны
+								a.category__slider_info(href="#") Кухонные комбайны
 								a.btn.category__slider_btn(href="#") Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
@@ -101,11 +101,11 @@ block content
 						// Slide 2
 						.category__slider_wrap
 							.category__slider_item
-								.category__slider_img
+								a.category__slider_img(href="#")
 									img(src="img/cat-sl2.jpg", alt="#")
-								.category__slider_info 
+								a.category__slider_info(href="#") 
 									span Все скидки на 
-									Телевизоры
+									|Телевизоры
 								a.btn.category__slider_btn(href="#") Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
@@ -114,9 +114,9 @@ block content
 						// Slide 3
 						.category__slider_wrap
 							.category__slider_item
-								.category__slider_img
+								a.category__slider_img(href="#")
 									img(src="img/cat-sl3.jpg", alt="#")
-								.category__slider_info Samsung <br> 
+								a.category__slider_info(href="#") Samsung <br> 
 									span все скидки марки
 								a.btn.category__slider_btn(href="#") Все купоны 
 									span &gt;&gt;
@@ -126,9 +126,9 @@ block content
 						// Slide 4
 						.category__slider_wrap
 							.category__slider_item
-								.category__slider_img
+								a.category__slider_img(href="#")
 									img(src="img/cat-sl4.jpg", alt="#")
-								.category__slider_info Кухонные комбайны
+								a.category__slider_info(href="#") Кухонные комбайны
 								a.btn.category__slider_btn(href="#") Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
@@ -137,9 +137,9 @@ block content
 						// Slide 5
 						.category__slider_wrap
 							.category__slider_item
-								.category__slider_img
+								a.category__slider_img(href="#")
 									img(src="img/cat-sl1.jpg", alt="#")
-								.category__slider_info Кухонные комбайны
+								a.category__slider_info(href="#") Кухонные комбайны
 								a.btn.category__slider_btn(href="#") Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
@@ -148,11 +148,11 @@ block content
 						// Slide 6
 						.category__slider_wrap
 							.category__slider_item
-								.category__slider_img
+								a.category__slider_img(href="#")
 									img(src="img/cat-sl2.jpg", alt="#")
-								.category__slider_info 
+								a.category__slider_info(href="#")
 									span Все скидки на 
-									Телевизоры
+									|Телевизоры
 								a.btn.category__slider_btn(href="#") Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
@@ -161,9 +161,9 @@ block content
 						// Slide 7
 						.category__slider_wrap
 							.category__slider_item
-								.category__slider_img
+								a.category__slider_img(href="#")
 									img(src="img/cat-sl3.jpg", alt="#")
-								.category__slider_info Samsung <br> 
+								a.category__slider_info(href="#") Samsung <br> 
 									span все скидки марки
 								a.btn.category__slider_btn(href="#") Все купоны 
 									span &gt;&gt;
@@ -173,9 +173,9 @@ block content
 						// Slide 8
 						.category__slider_wrap
 							.category__slider_item
-								.category__slider_img
+								a.category__slider_img(href="#")
 									img(src="img/cat-sl4.jpg", alt="#")
-								.category__slider_info Кухонные комбайны
+								a.category__slider_info(href="#") Кухонные комбайны
 								a.btn.category__slider_btn(href="#") Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
@@ -287,7 +287,7 @@ block content
 		.main__content_center
 
 			.sale__list_wrap
-				h3 Промокоды для кухонного комбайна
+				h2 Промокоды для кухонного комбайна
 
 				.sale__list_inform Количество промокодов:
 					span.sale__list_number 5
@@ -799,10 +799,11 @@ block content
 		// end main__content_center
 
 
-	.white__line
+	.white__line.second
 		.container_center
 
-			.section__title.section__title_btn.pt_30 Лучшие предложения на покупку техники
+			h2.section__title.section__title_btn Лучшие предложения 
+				span на покупку техники
 				a(href="#").btn.btn__danger Смотреть все  &gt;&gt;
 
 			// begin slider__grid
@@ -996,7 +997,10 @@ block content
 			// end slider__grid
 
 
-			.section__title Люди также смотрят
+			.line
+
+
+			h3.section__title Люди также смотрят
 
 			.category__box
 				// begin category__box_grid
@@ -1068,7 +1072,7 @@ block content
 	.container_center
 		// begin lots
 		.lots
-			h2 Покупайте в магазинах и получайте подарки
+			h3 Покупайте в магазинах и получайте подарки
 			p Покупайте в интернет-магазинах и копите баллы. Меняйте баллы на ШопКарты и получайте подарки. 
 				a(href="#") Подробнее о акции &gt;
 			p + Никогда не пропускайте! Получайте лучшие скидки магазинов к себе на почту.

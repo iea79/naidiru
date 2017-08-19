@@ -73,7 +73,7 @@ block content
 							span.large Вы накопили: 
 								span.bold.points 2120 
 							span.bold баллов
-						p До        Вам осталось набрать: <br>
+						p До ШопКарты Вам осталось накопить: <br>
 							span.large.bold.points__left 2880 
 							span.bold баллов
 						//- .office__top_center_help
@@ -95,7 +95,7 @@ block content
 
 
 		// begin sidebar
-		.office__menu_trigger
+		.office__menu_trigger Другие разделы
 		.main__content_sidebar
 			.sidebar__section
 				.office__menu
@@ -104,9 +104,13 @@ block content
 					.office__item
 						a.office__link(href="office-news.html") Написать нам + новости
 					.office__item
-						a.office__link.active(href="#") Изменить данные
+						a.office__link.active(href="office-edit.html") Изменить данные
 					.office__item
 						a.office__link(href="office-settings.html") Настройки рассылки
+					.office__item
+						a.office__link(href="office-shops.html") Любимые магазины
+					.office__item
+						a.office__link(href="office-coupons.html") Сохраненные купоны
 					.office__item
 						a.office__link(href="#") Как получить подарок?
 					.office__item
@@ -117,7 +121,6 @@ block content
 				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
 			.sidebar__section
 				.sidebar__section_name Лента обладателей подарка
-				.office__winners_top_title Розыгрыш апрель-2017:
 				.office__winners_wrap
 					.office__winners.scrollbar-inner
 						.office__winners_title Подарок: Смартфон 
@@ -278,6 +281,9 @@ block content
 									.lottery-number # A17_414724
 				button.btn.btn__danger Посмотреть всех
 		// end sidebar
+
+
+		.line.laptop
 
 
 		// begin main__content_center 

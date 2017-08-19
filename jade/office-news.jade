@@ -72,7 +72,7 @@ block content
 							span.large Вы накопили: 
 								span.bold.points 2120 
 							span.bold баллов
-						p До        Вам осталось набрать: <br>
+						p До ШопКарты Вам осталось накопить: <br>
 							span.large.bold.points__left 2880 
 							span.bold баллов
 						//- .office__top_center_help
@@ -94,18 +94,22 @@ block content
 
 
 		// begin sidebar
-		.office__menu_trigger
+		.office__menu_trigger Другие разделы
 		.main__content_sidebar
 			.sidebar__section
 				.office__menu
 					.office__item
 						a.office__link(href="office.html") Ваши ШопКарты и покупки
 					.office__item
-						a.office__link.active(href="#") Написать нам + новости
+						a.office__link.active(href="office-news.html") Написать нам + новости
 					.office__item
 						a.office__link(href="office-edit.html") Изменить данные
 					.office__item
 						a.office__link(href="office-settings.html") Настройки рассылки
+					.office__item
+						a.office__link(href="office-shops.html") Любимые магазины
+					.office__item
+						a.office__link(href="office-coupons.html") Сохраненные купоны
 					.office__item
 						a.office__link(href="#") Как получить подарок?
 					.office__item
@@ -116,7 +120,6 @@ block content
 				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
 			.sidebar__section
 				.sidebar__section_name Лента обладателей подарка
-				.office__winners_top_title Розыгрыш апрель-2017:
 				.office__winners_wrap
 					.office__winners.scrollbar-inner
 						.office__winners_title Подарок: Смартфон 
@@ -279,10 +282,13 @@ block content
 		// end sidebar
 
 
+		.line.laptop
+
+
 		// begin main__content_center 
 		.main__content_center
 
-			h1.mb_30 Ваши новости и уведомления
+			h1 Ваши новости и уведомления
 
 			
 			// begin office__news
@@ -339,7 +345,7 @@ block content
 									button.news__del_restore.btn Восстановить запись
 						.office__news_item
 							img.office__news_item_img(src="img/news-img3.jpg", alt="#")
-							.office__news_item_info Розыгрыш Март-2017. Посмотрите, кто выиграл в этом месяце!
+							.office__news_item_info Акция Март-2017. Посмотрите, кто получает подарок в этом месяце!
 							.office__news_item_ago
 								span.hours__ago 1 
 								час назад
