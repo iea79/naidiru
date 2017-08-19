@@ -149,7 +149,9 @@
 			}
 		}
 		@media (max-width: 479px) {
-			width: 310px;
+			width: 100%;
+			padding-left: 3px;
+			padding-right: 3px;
 			li.prev {
 			margin-right: 10px;
 			}

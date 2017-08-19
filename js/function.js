@@ -339,9 +339,9 @@ $(document).ready(function() {
 		hideSliderArrow($('.js-slider-arrow'));
 	}
 
-	// if ($('div').is('.slider__grid_medium')) {
-	// 	hideSliderArrow($('.slider__grid_medium'));
-	// }
+	if ($('div').is('.slider__grid_medium')) {
+		hideSliderArrow($('.slider__grid_medium'));
+	}
 
 	// if ($('div').is('.category__slider')) {
 	// 	hideSliderArrow($('.category__slider'));
@@ -389,7 +389,7 @@ $(document).ready(function() {
 	});
 
 	// Click for open more text
-	$('.js_more').on('click', function(event) {
+	$('.js_more').on('tap', function(event) {
 		event.preventDefault();
 		var wrap = $(this).closest('.js_more_wrap');
 		var text = $(this).data('text');
@@ -420,7 +420,7 @@ $(document).ready(function() {
 
 	// Login box
 	if (winWidth<=991) {	
-		$('.login__box_avatar').on('click', function(event) {
+		$('.login__box_avatar').on('tap', function(event) {
 			event.preventDefault();
 			
 			$('.login__box').toggleClass('open');
@@ -892,7 +892,7 @@ $(document).ready(function() {
     	$(this).toggleClass('active');
 	});
 
-    $('.faq_question').on('click', function(event) {
+    $('.faq_question').on('click tap', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).siblings('.faq_answer').toggleClass('open');

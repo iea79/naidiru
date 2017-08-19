@@ -3788,8 +3788,12 @@
 			padding-top: 30px !important;
 		}
 		.main__content_sidebar {
-			padding-left: 20px;
-			padding-right: 20px;
+			// padding-left: 20px;
+			// padding-right: 20px;
+			width: 100%;
+		}
+		.main__content_center {
+			overflow: initial;
 		}
 		h1 {
 			display: none;
@@ -4263,10 +4267,6 @@
 			&_inform {
 				display: none;
 			}
-			&.js_more_wrap {
-				padding-left: 20px;
-				padding-right: 20px;
-			}
 			&_reg {
 				top: -20px;
 				right: 22px;
@@ -4280,16 +4280,10 @@
 					padding-top: 39px;
 				}
 			}
-			&.js_more_wrap {
-				padding-right: 0;
-			}
 		}
 	}
 	@media (max-width: 479px) {
 		.sale__list {
-			&.js_more_wrap {
-				padding-right: 0;
-			}
 		}
 	}
 }
@@ -7945,10 +7939,11 @@
 	@media (max-width: 767px) {
 		padding-top: 0;
 		&_left {
-			padding-left: 20px;
-			padding-right: 20px;
+			// padding-left: 20px;
+			// padding-right: 20px;
 		}
 		&_right {
+			overflow: initial;
 			h1 {
 				margin-top: 19px;
 				margin-bottom: 15px;
@@ -8007,13 +8002,14 @@
 			}
 		}
 		&_img {
-			margin-top: 19px;
-			margin-bottom: 0;
+			margin: 19px -20px 0;
+			@include box-sizing(content-box);
+			width: auto;
 		}
 		.slider {
-			width: 100%;
-			padding-left: 20px;
-			padding-right: 20px;
+			// width: 100%;
+			// padding-left: 20px;
+			// padding-right: 20px;
 		}
 	}
 	@media (max-width: 479px) {
@@ -8053,19 +8049,27 @@
 			}
 		}
 		.slider {
-			margin-left: 0;
-			margin-right: 0;
+			margin-left: -20px;
+			margin-right: -20px;
+			padding: 0 20px;
+			overflow: initial;
+			@include box-sizing(content-box);
 			.slick {
 				&-arrow {
-					margin-top: -40px;
-					height: 80px;
-					// width: 30px;
+					margin-top: 0;
+					top: 0 !important;
+					height: 114px;
+					width: 22px;
+					@include border-radius(0);
+					background-color: #fff !important;
 				}
 				&-prev {
-					left: 20px;
+					left: 0px;
 				}
 				&-next {
-					right: 20px;
+					right: 0px;
+					// background-size: contain;
+					background-position: center;
 				}
 			}
 		}
@@ -8187,7 +8191,7 @@
 	}
 	@media (max-width: 767px){
 		&_name {
-			padding: 30px 20px 15px;
+			padding: 30px 0 15px;
 			margin-bottom: 0;
 			text-align: center;
 			border: 0;
@@ -8731,16 +8735,16 @@
 	@media (max-width: 1199px) {
 		.white__line {
 			.container_center {
-				padding: 0;
+				// padding: 0;
 			}
 		}
 		.line {
-			margin: 0 20px;
+			// margin: 0 20px;
 		}
 		.breadcrumb,
 		h1 {
-			padding-left: 20px;
-			padding-right: 20px;
+			// padding-left: 20px;
+			// padding-right: 20px;
 		}
 	}
 	@media (max-width: 767px) {
@@ -8759,8 +8763,8 @@
 	}
 	@media (max-width: 1199px) {
 		&_name {
-			padding-left: 20px;
-			padding-right: 20px;
+			// padding-left: 20px;
+			// padding-right: 20px;
 		}
 	}
 	@media (max-width: 767px) {
@@ -9308,8 +9312,8 @@
 		display: inline;
 	}
 	@media (max-width: 1199px) {
-		padding-left: 20px;
-		padding-right: 20px;
+		// padding-left: 20px;
+		// padding-right: 20px;
 	}
 	@media (max-width: 767px) {
 		&_wrap {
@@ -9521,9 +9525,20 @@
 	}
 	@media (max-width: 1199px) {
 		&_table {
+			width: 100%;
 			&_wrap {
-				padding-left: 20px;
-				padding-right: 20px;
+				// padding-left: 20px;
+				// padding-right: 20px;
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		&_table {
+			width: 900px;
+		}
+		&_td {
+			.prize__winners_td_in {
+				padding-left: 15px;
 			}
 		}
 	}
@@ -9592,8 +9607,8 @@
 		}
 	}
 	@media (max-width: 1199px) {
-		padding-left: 20px;
-		padding-right: 20px;
+		// padding-left: 20px;
+		// padding-right: 20px;
 		@include justify-content(space-between);
 		&_column {
 			&:nth-child(1) {
@@ -9648,8 +9663,8 @@
 	}
 	@media (max-width: 1199px) {
 		&_name {
-			padding-left: 20px;
-			padding-right: 20px;
+			// padding-left: 20px;
+			// padding-right: 20px;
 		}
 		.category__box {
 			padding-left: 20px;
@@ -11985,7 +12000,7 @@
 		.white__line {
 			padding: 30px 0 20px;
 			&_form {
-				padding: 0 20px 43px;
+				padding: 0 0 43px;
 			}
 		}
 	}
