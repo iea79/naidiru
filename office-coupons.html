@@ -119,7 +119,7 @@
           <div class="container_center">
             
             <!-- begin office__top-->
-            <div class="office__top">
+            <div class="office__top shops">
               <div class="office__top_left">
                 <div class="office__top_user">
                   <div class="office__top_user_img"><img src="img/rev2.png" alt="#"/></div>
@@ -166,7 +166,7 @@
               <div class="office__top_center">
                 <div class="office__top_center_message">
                   <p> <span class="large">Вы накопили: <span class="bold points">2120 </span></span><span class="bold">баллов</span></p>
-                  <p>До        Вам осталось набрать: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
+                  <p>До ШопКарты Вам осталось накопить: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
                 </div>
                 <div class="sm_social">
                   <div class="sm_social_icon">
@@ -193,7 +193,7 @@
         </div>
         <div class="container_center main">
           <!-- begin sidebar-->
-          <div class="office__menu_trigger"></div>
+          <div class="office__menu_trigger">Другие разделы</div>
           <div class="main__content_sidebar">
             <div class="sidebar__section">
               <div class="office__menu">
@@ -201,6 +201,8 @@
                 <div class="office__item"><a href="office-news.html" class="office__link">Написать нам + новости</a></div>
                 <div class="office__item"><a href="office-edit.html" class="office__link">Изменить данные</a></div>
                 <div class="office__item"><a href="office-settings.html" class="office__link">Настройки рассылки</a></div>
+                <div class="office__item"><a href="office-shops.html" class="office__link">Любимые магазины</a></div>
+                <div class="office__item"><a href="office-coupons.html" class="office__link active">Сохраненные купоны</a></div>
                 <div class="office__item"><a href="#" class="office__link">Как получить подарок?</a></div>
                 <div class="office__item"><a href="#" class="office__link">Выйти из аккаунта</a></div>
               </div>
@@ -212,7 +214,6 @@
             </div>
             <div class="sidebar__section">
               <div class="sidebar__section_name">Лента обладателей подарка</div>
-              <div class="office__winners_top_title">Розыгрыш апрель-2017:</div>
               <div class="office__winners_wrap">
                 <div class="office__winners scrollbar-inner">
                   <div class="office__winners_title">Подарок: Смартфон <span class="office__winners_amount">(2)</span></div>
@@ -408,109 +409,124 @@
           </div>
           <!-- end sidebar-->
           
+          <div class="line laptop"></div>
           <!-- begin main__content_center -->
           <div class="main__content_center">
             <h1 class="star">Сохраненные купоны</h1>
-            <!-- begin office__shops_top-->
-            <div class="office__shops_top coupon">
-              <div class="office__shops_top_text">Если Вы не хотите больше видеть тот или иной промокод, Вы можете его удалить с этой страницы, просто снова нажав на звездочку.</div>
-            </div>
-            <!-- end office__shops_top-->
-            
-            <!-- begin office__shops_coupons-->
-            <div class="office__shops_coupons coupon office__shops_coupons_preferd">
-              <div class="sale__list js_more_wrap">
-                <!-- Row 1-->
-                <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
-                  <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list4.png" alt="#"/></a>
-                    <div class="btn btn__success">Новый</div>
-                  </div>
-                  <div class="sale__list_right"><a href="#" class="sale__list_save active">Сохранить</a>
-                    <div class="code__wrap">
-                      <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
-                    </div>Использовано: 1283 раза
-                  </div>
-                  <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!</a>
-                    <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
-                    <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол<a href="#" class="sale__list_more">Подробнее</a></div>
-                    <div class="sale__list_bottom">
-                      <div class="sale__list_info">Используй купон и получай подарки!
-                        <div class="tooltip__help">
-                          <div class="tooltip__text">Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <a href="#">Подробнее об акции &gt;</a></div>
-                        </div>
-                      </div><a href="#">Все промокоды Bon prix</a>
+            <!-- begin office__coupons_yes -->
+            <div class="office__coupons_yes">
+              <!-- begin office__shops_top-->
+              <div class="office__shops_top">
+                <div class="office__shops_top_text coupon">Если Вы не хотите больше видеть тот или иной промокод, Вы можете его удалить с этой страницы, просто снова нажав на звездочку.</div>
+              </div>
+              <!-- end office__shops_top-->
+              
+              <!-- begin office__shops_coupons-->
+              <div class="office__shops_coupons office__shops_coupons_preferd">
+                <div class="sale__list js_more_wrap">
+                  <!-- Row 1-->
+                  <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
+                    <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list4.png" alt="#"/></a>
+                      <div class="btn btn__success">Новый</div>
+                    </div>
+                    <div class="sale__list_right"><a href="#" class="sale__list_save active">Сохранить</a>
+                      <div class="code__wrap">
+                        <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
+                      </div>Использовано: 1283 раза
+                    </div>
+                    <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!</a>
+                      <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
+                      <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол<a href="#" class="sale__list_more">Подробнее</a></div>
+                      <div class="sale__list_bottom">
+                        <div class="sale__list_info">Используй купон и получай подарки!
+                          <div class="tooltip__help">
+                            <div class="tooltip__text">Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <a href="#">Подробнее об акции &gt;</a></div>
+                          </div>
+                        </div><a href="#">Все промокоды Bon prix</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <!-- Row 2-->
-                <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
-                  <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list6.png" alt="#"/></a>
-                    <div class="btn btn__expires">Истекает</div>
-                  </div>
-                  <div class="sale__list_right"><a href="#" class="sale__list_save active">Сохранить</a>
-                    <div class="code__wrap">
-                      <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
-                    </div>Использовано: 1283 раза
-                  </div>
-                  <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от брендов!</a>
-                    <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
-                    <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол<a href="#" class="sale__list_more">Подробнее</a></div>
-                    <div class="sale__list_bottom">
-                      <div class="sale__list_info">Используй купон и получай подарки!
-                        <div class="tooltip__help">
-                          <div class="tooltip__text">Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <a href="#">Подробнее об акции &gt;</a></div>
-                        </div>
-                      </div><a href="#">Все промокоды Bon prix</a>
+                  <!-- Row 2-->
+                  <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
+                    <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list6.png" alt="#"/></a>
+                      <div class="btn btn__expires">Истекает</div>
+                    </div>
+                    <div class="sale__list_right"><a href="#" class="sale__list_save active">Сохранить</a>
+                      <div class="code__wrap">
+                        <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
+                      </div>Использовано: 1283 раза
+                    </div>
+                    <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от брендов!</a>
+                      <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
+                      <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол<a href="#" class="sale__list_more">Подробнее</a></div>
+                      <div class="sale__list_bottom">
+                        <div class="sale__list_info">Используй купон и получай подарки!
+                          <div class="tooltip__help">
+                            <div class="tooltip__text">Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <a href="#">Подробнее об акции &gt;</a></div>
+                          </div>
+                        </div><a href="#">Все промокоды Bon prix</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <!-- Row 3-->
-                <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
-                  <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list4.png" alt="#"/></a>
-                    <div class="btn btn__success">Новый</div>
-                  </div>
-                  <div class="sale__list_right"><a href="#" class="sale__list_save active">Сохранить</a>
-                    <div class="code__wrap">
-                      <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
-                    </div>Использовано: 1283 раза
-                  </div>
-                  <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!</a>
-                    <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
-                    <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол<a href="#" class="sale__list_more">Подробнее</a></div>
-                    <div class="sale__list_bottom">
-                      <div class="sale__list_info">Используй купон и получай подарки!
-                        <div class="tooltip__help">
-                          <div class="tooltip__text">Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <a href="#">Подробнее об акции &gt;</a></div>
-                        </div>
-                      </div><a href="#">Все промокоды Bon prix</a>
+                  <!-- Row 3-->
+                  <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
+                    <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list4.png" alt="#"/></a>
+                      <div class="btn btn__success">Новый</div>
+                    </div>
+                    <div class="sale__list_right"><a href="#" class="sale__list_save active">Сохранить</a>
+                      <div class="code__wrap">
+                        <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
+                      </div>Использовано: 1283 раза
+                    </div>
+                    <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!</a>
+                      <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
+                      <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол<a href="#" class="sale__list_more">Подробнее</a></div>
+                      <div class="sale__list_bottom">
+                        <div class="sale__list_info">Используй купон и получай подарки!
+                          <div class="tooltip__help">
+                            <div class="tooltip__text">Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <a href="#">Подробнее об акции &gt;</a></div>
+                          </div>
+                        </div><a href="#">Все промокоды Bon prix</a>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <!-- Row 4-->
-                <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
-                  <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list6.png" alt="#"/></a>
-                    <div class="btn btn__expires">Истекает</div>
-                  </div>
-                  <div class="sale__list_right"><a href="#" class="sale__list_save active">Сохранить</a>
-                    <div class="code__wrap">
-                      <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
-                    </div>Использовано: 1283 раза
-                  </div>
-                  <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от брендов!</a>
-                    <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
-                    <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол<a href="#" class="sale__list_more">Подробнее</a></div>
-                    <div class="sale__list_bottom">
-                      <div class="sale__list_info">Используй купон и получай подарки!
-                        <div class="tooltip__help">
-                          <div class="tooltip__text">Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <a href="#">Подробнее об акции &gt;</a></div>
-                        </div>
-                      </div><a href="#">Все промокоды Bon prix</a>
+                  <!-- Row 4-->
+                  <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
+                    <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list6.png" alt="#"/></a>
+                      <div class="btn btn__expires">Истекает</div>
+                    </div>
+                    <div class="sale__list_right"><a href="#" class="sale__list_save active">Сохранить</a>
+                      <div class="code__wrap">
+                        <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
+                      </div>Использовано: 1283 раза
+                    </div>
+                    <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от брендов!</a>
+                      <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
+                      <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол<a href="#" class="sale__list_more">Подробнее</a></div>
+                      <div class="sale__list_bottom">
+                        <div class="sale__list_info">Используй купон и получай подарки!
+                          <div class="tooltip__help">
+                            <div class="tooltip__text">Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <a href="#">Подробнее об акции &gt;</a></div>
+                          </div>
+                        </div><a href="#">Все промокоды Bon prix</a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- end office__shops_coupons-->
             </div>
-            <!-- end office__shops_coupons-->
+            <!-- end office__coupons_yes-->
+            
+            <!-- begin office__coupons_no -->
+            <div class="office__coupons_no">
+              <!-- begin office__shops_top-->
+              <div class="office__shops_top">
+                <div class="office__shops_top_text coupon">У вас нет сохраненных купонов. Чтобы не забывать о самых лучших предложениях, кликайте по звездочке на купоне и выбранный купон автоматически сохраниться тут.</div>
+              </div>
+              <!-- end office__shops_top-->
+            </div>
+            <!-- end office__coupons_no-->
             
             <div class="line"></div>
             <!-- begin office__manual-->
@@ -844,7 +860,7 @@
             <div class="modal-body">
               <div class="modal-body_p"> <span class="bold">Акция состоиться: </span><span>05 марта 2017 года</span></div>
               <div class="modal-body_p bold">Призы этого месяца:</div>
-              <div class="modal-body_p">- Смартфон Apple iPhone S5fhb, <br>- Смарт-часы Samsung LD245 или Asus G21 gjdnbgj <br>- Кожаный чехол для телефона <br>- Органический шампунь от Yves Rocher</div><a href="#" class="modal-body_p">Подробнее об акции этого месяца &gt;</a>
+              <div class="modal-body_p">- Смартфон Apple iPhone S5fhb, <br>- Смарт-часы Samsung LD245 или Asus G21 gjdnbgj <br>- Кожаный чехол для телефона <br>- Органический шампунь от Yves Rocher</div><a href="prize.html" target="_blank" class="modal-body_p">Подробнее об акции этого месяца &gt;</a>
               <div class="modal-body_p">*Вы должны знать, если Вы получите ШопКарту, то у Вас автоматически спишутся накопленные здесь 5000 баллов!</div>
             </div>
             <div class="modal-footer">
@@ -930,7 +946,7 @@
           <div class="modal__no-subscription_wrap">
             <div class="modal-header">Вы уверены, что хотите полностью отписаться от рассылки?</div>
             <div class="modal-body">
-              <div class="modal-body_p">Если Вы сделаете это, то Вы никогда не получите уведомление о том, что именно Вы, <span class="bold">выиграили в нашей ежемесячной акции. </span><span>Вы никогда не узнаете первым, о лучших скидках в Ваших любимых магазинах.</span></div>
+              <div class="modal-body_p">Если Вы сделаете это, то Вы никогда не получите уведомление о том, что именно Вы, <span class="bold">получили подарок в акции этого месяца. </span><span>Вы никогда не узнаете первым, о лучших скидках в Ваших любимых магазинах.</span></div>
               <div class="modal-body_p">Вы даже не узнаете, об изменениях в Вашем аккаунте (в том числе и о смене пароля или емайла). Поверьте, это может привести к тому, что Ваш аккаунт могут взломать.</div>
               <div class="modal-body_p">Не делаете этого, подумайте 100 раз, прежде, чем принять решение!</div>
             </div>

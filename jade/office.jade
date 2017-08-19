@@ -70,7 +70,7 @@ block content
 							span.large Вы накопили: 
 								span.bold.points 2120 
 							span.bold баллов
-						p До        Вам осталось набрать: <br>
+						p До ШопКарты Вам осталось накопить: <br>
 							span.large.bold.points__left 2880 
 							span.bold баллов
 						//- .office__top_center_help
@@ -97,13 +97,17 @@ block content
 			.sidebar__section
 				.office__menu
 					.office__item
-						a.office__link.active(href="#") Ваши ШопКарты и покупки
+						a.office__link.active(href="office.html") Ваши ШопКарты и покупки
 					.office__item
 						a.office__link(href="office-news.html") Написать нам + новости
 					.office__item
 						a.office__link(href="office-edit.html") Изменить данные
 					.office__item
 						a.office__link(href="office-settings.html") Настройки рассылки
+					.office__item
+						a.office__link(href="office-shops.html") Любимые магазины
+					.office__item
+						a.office__link(href="office-coupons.html") Сохраненные купоны
 					.office__item
 						a.office__link(href="#") Как получить подарок?
 					.office__item
@@ -114,7 +118,6 @@ block content
 				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
 			.sidebar__section
 				.sidebar__section_name Лента обладателей подарка
-				.office__winners_top_title Розыгрыш апрель-2017:
 				.office__winners_wrap
 					.office__winners.scrollbar-inner
 						.office__winners_title Подарок: Смартфон 
@@ -277,6 +280,9 @@ block content
 		// end sidebar
 
 
+		.line.laptop
+
+
 		// begin main__content_center 
 		.main__content_center
 
@@ -316,18 +322,6 @@ block content
 									.tooltip__text_big
 				// end office__lotteries
 
-
-				// begin office__ad
-				.office__ad
-					img.office__ad_right(src="img/office-ad-img.jpg", alt="#")
-					.office__ad_left
-						.office__ad_p Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце
-						.office__ad_p Итоги будут подведены: <br>
-							span.office__ad_large 05 апреля
-						p Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.
-						button.btn.btn__danger Узнать о подарках<br>этого месяца
-				// end office__ad
-
 			// end office__main_yes
 
 
@@ -345,9 +339,10 @@ block content
 							.office__lotteries_customer Ваш подарок: смартфон
 						.office__lotteries_item.office__lotteries_last
 							.office__lotteries_last_name Делайте покупки и меняйте чеки на ШопКарты
-							.office__lotteries_last_p Чтобы получить ШопКарту нужно накопить 
-								span 5000 баллов
-							button(class="btn", data-toggle="modal", data-target="#modal__shopcard") Получить ШопКарту
+							.office__lotteries_last_p Чтобы получить ШопКарту нужно накопить: 
+								span.office__lotteries_last_number-points 5000 
+								span.office__lotteries_last_points баллов
+							button(class="btn") Получить ШопКарту
 							.office__lotteries_last_down т.е. накопить чеки = 5000 рублей
 							.tooltip__help.big
 								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
@@ -364,31 +359,22 @@ block content
 
 					.office__gift_img
 						img(src="img/cat-img6.jpg", alt="#")
-						.office__gift_img_text Ваш приз
+						.office__gift_img_text Ваш подарок
 
-					.office__gift_p В этом месяце было много желающих попытать удачу, но к счастью именно Вам улыбнулась она и именно Вы она вытянули свой счастливый лотерейный билет. <br>Вы заняли 12 место и выиграли: Смартфон. <br>Итог розыгрыша был подведен: 05 марта. <br>Письмо от нашего менджера придет к Вам на почту: примерно 6-7 марта.
+					.office__gift_p В этом месяце было много желающих получить подарок, но к счастью именно Вы получили его. <br>Вы выиграли: Смартфон. <br>Итог был подведен: 05 марта. <br>Письмо от нашего менеджера придет к Вам на почту: примерно 6-7 марта.
 
 					.office__gift_p 
 						span.bold Что нужно нам сейчас от Вас: 
-						span Пожалуйста, прямо сейчас проверьте актуальность своих контактных данных и корректность личных данных. Если у Вас не заполнены личные данные, заполните их как можно быстрее. Наш менеджер   свяжется с Вами по емайлу в ближайшее время для уточнения деталей получения приза.
+						span Пожалуйста, прямо сейчас проверьте актуальность своих контактных данных и корректность личных данных. Если у Вас не заполнены личные данные, заполните их как можно быстрее. Наш менеджер   свяжется с Вами по емайлу в ближайшее время для уточнения деталей получения подарка.
 
 					.office__gift_p 
 						span.bold Обращаем Ваше внимание, 
-						span у Вас есть максимум 14 дней, чтобы ответить на письмо, в случае игнорирования всех 2-ух писем от нашего менеджера, Ваш приз будет аннулирован. Если по какой-то причине, Вам не пришло письмо на почту, пожалуйста, свяжитесь с нами, или проверьте его в спам-папке.
+						span у Вас есть максимум 14 дней, чтобы ответить на письмо, в случае игнорирования всех 2-х писем от нашего менеджера, Ваш подарок будет аннулирован. Если по какой-то причине, Вам не пришло письмо на почту, пожалуйста, 
+						a(href="#") свяжитесь с нами, 
+						|или проверьте его в спам-папке.
 
 					.office__gift_p Желаем Вам всего самого наилучшего! С Уважением, команда сайта Найди.ру	
-				// end office__gift 
-
-
-				// begin office__ad
-				.office__ad
-					.office__ad_left
-						.office__ad_p Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце
-						.office__ad_p Итоги будут подведены: <br>
-							span.office__ad_large 05 апреля
-						p Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.
-						button.btn.btn__danger Узнать о подарках<br>этого месяца
-				// end office__ad
+				// end office__gift
 				
 			// end office__main_win
 
@@ -411,9 +397,10 @@ block content
 					.office__lotteries_list
 						.office__lotteries_item.office__lotteries_last
 							.office__lotteries_last_name Делайте покупки и меняйте чеки на ШопКарты
-							.office__lotteries_last_p Чтобы получить ШопКарту нужно накопить 
-								span 5000 баллов
-							button(class="btn", data-toggle="modal", data-target="#modal__shopcard") Получить ШопКарту
+							.office__lotteries_last_p Чтобы получить ШопКарту нужно накопить: 
+								span.office__lotteries_last_number-points 5000 
+								span.office__lotteries_last_points баллов
+							button(class="btn") Получить ШопКарту
 							.office__lotteries_last_down т.е. накопить чеки = 5000 рублей
 							.tooltip__help.big
 								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
@@ -421,18 +408,19 @@ block content
 									.tooltip__text_big
 				// end office__lotteries
 
-
-				// begin office__ad
-				.office__ad
-					.office__ad_left
-						.office__ad_p Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце
-						.office__ad_p Итоги будут подведены: <br>
-							span.office__ad_large 05 апреля
-						p Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.
-						button.btn.btn__danger Узнать о подарках<br>этого месяца
-				// end office__ad
-
 			// end office__main_no
+
+
+			// begin office__ad
+			.office__ad
+				img.office__ad_right(src="img/office-ad-img.jpg", alt="#")
+				.office__ad_left
+					.office__ad_p Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце
+					.office__ad_p Итоги будут подведены: <br>
+						span.office__ad_large 05 апреля
+					p Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.
+					button.btn.btn__danger Узнать о подарках<br>этого месяца
+			// end office__ad
 			
 
 			// begin office__history
@@ -584,7 +572,7 @@ block content
 						button.btn.office__checks_edit_btn
 						.office__checks_edit_hide
 							a(href="#", class="office__checks_edit_hide_btn", data-toggle="modal", data-target="#modal__del-check") Удалить чек
-							a.office__checks_edit_hide_btn(href="#") Редактировать
+							a(href="#", class="office__checks_edit_hide_btn", data-toggle="modal", data-target="#modal__confirm") Редактировать
 					.office__checks_item.confirmed
 						.office__checks_img
 							img(src="img/check2.jpg", alt="#")
@@ -683,7 +671,10 @@ block content
 					.office__shopcard_p - В акции могут участвовать, все дееспособные пользователи, достигшие 18 лет.
 					
 					.office__shopcard_p	- Доставка подарка за пределы территории РФ, оплачивает сам пользователь.			
-			// end office__shopcard 
+			// end office__shopcard
+
+
+			a.btn.btn__danger.office__raffle_btn(href="prize.html", target="_blank") Узнайте о подарках этого месяца
 
 
 			.line
