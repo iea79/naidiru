@@ -4656,12 +4656,7 @@
 // end slider__grid
 
 
-// begin category__box_grid7
-// .all-promocodes,
-// .category,
-// .prize,
-// .brand,
-// .promo {
+// begin category__row
 .category__row {
 	&_grid {
 		width: 100%;
@@ -4720,58 +4715,8 @@
 		}
 	}
 
-	// .section__title {
-	// 	font-size: 23px;
-	// }
-	// @media (max-width: 1280px) {
-	// 	.category__box_grid {
-	// 		.grid__wrapper {
-	// 			@include flex-basis(16.666%);
-	// 			&:nth-child(n+7) {
-	// 				display: block;
-	// 			}
-	// 		}
-	// 	}
-	// }
-	// @media (max-width: 1199px) {
-	// 	.category__box_grid {
-	// 		padding-right: 0;
-	// 		.grid__wrapper {
-	// 			@include flex-basis(20%);
-	// 		}
-	// 	}
-	// }
-	// @media (max-width: 991px) {
-	// 	.category__box_grid {
-	// 		.grid__wrapper {
-	// 			@include flex-basis(25%);
-	// 		}
-	// 	}
-	// }
-	// @media (max-width: 767px) {
-	// 	.section__title {
-	// 		padding-left: 20px;
-	// 		padding-right: 20px;
-	// 	}
-	// 	.category__box_grid {
-	// 		padding-left: 20px;
-	// 		@include justify-content(flex-start);
-	// 		.grid__wrapper {
-	// 			@include flex-basis(33%);
-	// 		}
-	// 	}
-	// }
-	// @media (max-width: 479px) {
-	// 	.category__box_grid {
-	// 		.grid__wrapper {
-	// 			@include flex-basis(50%);
-	// 		}
-	// 	}
-	// }
 }
-// }
-// end category__box_grid
-
+// end category__row
 
 
 // Страница Личный кабинет Главная office.html ///////////////
