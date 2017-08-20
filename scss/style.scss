@@ -2233,7 +2233,7 @@
 		display: block;
 	}
 	.columns__list {
-	@include columns-text(110px, 2, 50px, 0px, solid, #000);
+		@include columns-text(110px, 2, 50px, 0px, solid, #000);
 		a {
 			color: $main-color;
 		}
@@ -2424,10 +2424,8 @@
 		padding: 30px 40px 24px;
 	}
 	&_name {
-		height: 50px; 
-		margin-bottom: 10px;
+		height: 50px;
 		overflow: hidden;
-		display: block;
 		color:$main-color;
 		font-size: 21px;
 		&:hover {
@@ -2446,6 +2444,7 @@
 	}
 	&_text {
 		height: 32px;
+		margin-top: 10px;
 		margin-bottom: 23px;
 		overflow: hidden;
 		text-align: justify;
@@ -4115,13 +4114,13 @@
 		.sidebar__section_list {
 			&_item {
 				display: block;
-				&:nth-child(n+11) {
+				&:nth-child(n+10) {
 					display: none;
 				}
 			}
 			&.open {
 				.sidebar__section_list_item {
-					&:nth-child(n+11) {
+					&:nth-child(n+10) {
 						display: block;
 					}
 				}
