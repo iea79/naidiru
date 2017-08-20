@@ -291,66 +291,56 @@ $(document).ready(function() {
 		]
 	});
 
-	function hideSliderArrow(el) {
-		var slider = el;
-		var sliderItem = slider.find('.slick-slide');
+
+	$('.js-slider-arrow').each(function(index, el) {
+
+		var sliderItem = $(this).find('.slick-slide');
 		var firstSlide = sliderItem.first();
 		var lastSlide = sliderItem.last();
-		var itemCount = $.each(sliderItem, function(index, val) {
-			 count =+ index;
-		});
+		var itemCount = sliderItem.length;
+		var next = $(this).find('.slick-next');
+		var prev = $(this).find('.slick-prev');
 
-		last = count;
-		var currentSlide = slider.slick('slickCurrentSlide');
-		
-		
-		slider.on('afterChange', function(){
+		// var itemCount = $.each(sliderItem, function(index, val) {
+		// 	 count =+ index;
+		// });
 
-			var thisSlide = slider.slick('slickCurrentSlide');
+		last = itemCount;
+		var currentSlide = $(this).slick('slickCurrentSlide');
+
+
+		$(this).on('afterChange', function(){
+
+			var thisSlide = $(this).slick('slickCurrentSlide');
 
 			if(firstSlide.hasClass('slick-active')) {
-				$('.slick-prev').hide();
-				$('.slick-next').show();
+				prev.hide();
+				next.show();
 			} else if(thisSlide==last) {
-				$('.slick-next').hide();
-				$('.slick-prev').show();
+				next.hide();
+				prev.show();
 			}
 
 			if(thisSlide>0 && thisSlide<last)
 			{
-			   $('.slick-prev').show();
-			   $('.slick-next').show();
+			   prev.show();
+			   next.show();
 			}
 
 			if (lastSlide.hasClass('slick-active')) {
-				$('.slick-next').hide();
+				next.hide();
 			}
 
 		});
 
 		if(currentSlide==0) {
-		   $('.slick-prev').hide();
+		   prev.hide();
 		} else if(currentSlide==last) {
-			$('.slick-next').hide();
+			next.hide();
 		}
 
-	}
+	});
 
-	if ($('div').is('.js-slider-arrow')) {
-		hideSliderArrow($('.js-slider-arrow'));
-	}
-
-	// if ($('div').is('.slider__grid_medium')) {
-	// 	hideSliderArrow($('.slider__grid_medium'));
-	// }
-
-	if ($('div').is('.slider__grid_small')) {
-		hideSliderArrow($('.slider__grid_small'));
-	}
-
-	if ($('div').is('.category__slider')) {
-		hideSliderArrow($('.category__slider'));
-	}
 
 	$('.slider__sidebar').slick({
 		infinite: true,
