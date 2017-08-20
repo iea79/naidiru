@@ -1,0 +1,54 @@
+%ad-about__text {
+  color: #292929;
+  font-family: Tahoma;
+  letter-spacing: 0.01em;
+}
+.faqs-about {
+  display: flex;
+  padding: 50px 0 82px 70px;
+  @include flexbox();
+  @include justify-content(space-between);
+  &__image {
+    img {
+      max-width: 618px;
+      width: 100%;
+    }
+  }
+  &__description {
+    max-width: 613px;
+    width: 100%;
+    h2 {
+      margin-bottom: 11px;
+      font-size: 21px;
+      @extend %ad-about__text;
+      padding: 13px 0 0;
+    }
+    p {
+      font-size: 14px;
+      @extend %ad-about__text;
+      padding: 12px 0 13px;
+    }
+    b {
+      padding: 12px 0 13px;
+    }
+  }
+  @media (max-width: 1350px) {
+    padding: 50px;
+    @include flex-flow(column nowrap);
+    &__image {
+      max-width: 100%;
+      text-align: center;
+    }
+    &__description {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 767px) {
+    padding: 50px 20px 30px;
+    &__description {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}

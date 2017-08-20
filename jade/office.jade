@@ -1,0 +1,711 @@
+extends template.jade
+
+block variables
+	- bodyClass = "office"
+
+block title
+	title Личный кабинет - Главная
+
+block content
+	.white__line
+		.container_center
+
+			//- // begin breadcrumb
+			//- .breadcrumb.ind.dn
+			//- 	li
+			//- 		a(href="/") Главная
+			//- 	li
+			//- 		a(href="#") Личный кабинет
+			//- // end breadcrumb
+
+
+			// begin office__top
+			.office__top
+				.office__top_left
+					.office__top_user
+						.office__top_user_img
+							img(src="img/rev2.png", alt="#")
+						.office__top_user_name
+							.office__top_user_fname Александра 
+							.office__top_user_lname Иванова
+					.office__top_alarm.open
+						.office__top_alarm_number 1
+
+						.office__top_notification
+							.office__top_notification_in
+								.office__top_notification_name Оповещения
+									a.office__top_notification_link(href="#") Показать все
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/most1.png", alt="#")
+									.office__top_notification_right Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/icon-sure4.png", alt="#")
+									.office__top_notification_right Извините, но Ваш чек был не подвержден. <br>Причина: Чек не соотвествует с выбранным № заказом.
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/icon-sure2.png", alt="#")
+									.office__top_notification_right Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.
+							img.office__top_notification_trigon(src="img/tri-area2.png", alt="#")
+
+				.office__top_right
+					.sm_social
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
+					.office__top_right_links
+						a.office__top_right_link.office__top_right_link_star(href="office-coupons.html") Сохраненные<br>купоны
+						a.office__top_right_link.office__top_right_link_hart(href="office-shops.html") Любимые<br>магазины
+				.office__top_center
+					.office__top_center_message
+						p 
+							span.large Вы накопили: 
+								span.bold.points 2120 
+							span.bold баллов
+						p До ШопКарты Вам осталось накопить: <br>
+							span.large.bold.points__left 2880 
+							span.bold баллов
+						//- .office__top_center_help
+					.sm_social
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
+			// end office__top
+
+
+	.container_center.main
+
+
+		// begin sidebar
+		.office__menu_trigger Другие разделы
+		.main__content_sidebar
+			.sidebar__section
+				.office__menu
+					.office__item
+						a.office__link.active(href="office.html") Ваши ШопКарты и покупки
+					.office__item
+						a.office__link(href="office-news.html") Написать нам + новости
+					.office__item
+						a.office__link(href="office-edit.html") Изменить данные
+					.office__item
+						a.office__link(href="office-settings.html") Настройки рассылки
+					.office__item
+						a.office__link(href="office-shops.html") Любимые магазины
+					.office__item
+						a.office__link(href="office-coupons.html") Сохраненные купоны
+					.office__item
+						a.office__link(href="#") Как получить подарок?
+					.office__item
+						a.office__link(href="#") Выйти из аккаунта
+			.sidebar__section
+				.sidebar__section_name Поменяйте чек на ШопКарту
+				p Чтобы получить ШопКарту, нужно подвердить покупку чеком
+				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
+			.sidebar__section
+				.sidebar__section_name Лента обладателей подарка
+				.office__winners_wrap
+					.office__winners.scrollbar-inner
+						.office__winners_title Подарок: Смартфон 
+							span.office__winners_amount (2)
+						.office__winners_list
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+						.office__winners_title Подарок: Косметика 
+							span.office__winners_amount (25)
+						.office__winners_list
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+				button.btn.btn__danger Посмотреть всех
+		// end sidebar
+
+
+		.line.laptop
+
+
+		// begin main__content_center 
+		.main__content_center
+
+			// begin office__main_yes
+			.office__main_yes
+				
+				// begin office__lotteries
+				.office__lotteries
+					.office__lotteries_name ШопКарты покупателя в интернете
+						a.office__lotteries_how(href="#") Что такое ШопКарта?
+					.office__lotteries_list
+						.office__lotteries_item
+							.office__lotteries_ellipsis &lowast; &lowast; &lowast;
+							.office__lotteries_title ШопКарта
+							.office__lotteries_customer Покупателя в интернете
+							img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
+							.office__lotteries_down *эта карточка дает возможность получить подарок в этом месяце
+						.office__lotteries_item
+							.office__lotteries_ellipsis &lowast; &lowast; &lowast;
+							.office__lotteries_title ШопКарта
+							.office__lotteries_customer Покупателя в интернете
+							img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
+							.office__lotteries_down *эта карточка дает возможность получить подарок в этом месяце
+						.office__lotteries_item
+							.office__lotteries_ellipsis &lowast; &lowast; &lowast;
+							.office__lotteries_title ШопКарта
+							.office__lotteries_customer Покупателя в интернете
+							img.office__lotteries_img(src="img/icon-gift.svg", alt="#")
+							.office__lotteries_down *эта карточка дает возможность получить подарок в этом месяце
+						.office__lotteries_item.office__lotteries_last
+							.office__lotteries_last_name Делайте покупки и меняйте чеки на ШопКарты
+							.office__lotteries_last_p Получите ШопКарту прямо сейчас, нажав на кнопку ниже &darr;
+							button(class="btn btn__danger", data-toggle="modal", data-target="#modal__shopcard") Получить ШопКарту
+							.tooltip__help.big
+								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
+									a(href="#") Подробнее об акции &gt;
+									.tooltip__text_big
+				// end office__lotteries
+
+			// end office__main_yes
+
+
+			// begin office__main_win
+			.office__main_win				
+
+				// begin office__lotteries
+				.office__lotteries
+					.office__lotteries_name ШопКарты покупателя в интернете
+						a.office__lotteries_how(href="#") Что такое ШопКарта?
+					.office__lotteries_list
+						.office__lotteries_item
+							.office__lotteries_ellipsis &lowast; &lowast; &lowast;
+							.office__lotteries_title Ура! Вы получили подарок!
+							.office__lotteries_customer Ваш подарок: смартфон
+						.office__lotteries_item.office__lotteries_last
+							.office__lotteries_last_name Делайте покупки и меняйте чеки на ШопКарты
+							.office__lotteries_last_p Чтобы получить ШопКарту нужно накопить: 
+								span.office__lotteries_last_number-points 5000 
+								span.office__lotteries_last_points баллов
+							button(class="btn") Получить ШопКарту
+							.office__lotteries_last_down т.е. накопить чеки = 5000 рублей
+							.tooltip__help.big
+								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
+									a(href="#") Подробнее об акции &gt;
+									.tooltip__text_big
+				// end office__lotteries
+
+
+				// begin office__gift 
+				.office__gift
+					.office__gift_name 
+						span.bold Поздравляем! 
+						span Именно Вы получили в этом месяце подарок!
+
+					.office__gift_img
+						img(src="img/cat-img6.jpg", alt="#")
+						.office__gift_img_text Ваш подарок
+
+					.office__gift_p В этом месяце было много желающих получить подарок, но к счастью именно Вы получили его. <br>Вы выиграли: Смартфон. <br>Итог был подведен: 05 марта. <br>Письмо от нашего менеджера придет к Вам на почту: примерно 6-7 марта.
+
+					.office__gift_p 
+						span.bold Что нужно нам сейчас от Вас: 
+						span Пожалуйста, прямо сейчас проверьте актуальность своих контактных данных и корректность личных данных. Если у Вас не заполнены личные данные, заполните их как можно быстрее. Наш менеджер   свяжется с Вами по емайлу в ближайшее время для уточнения деталей получения подарка.
+
+					.office__gift_p 
+						span.bold Обращаем Ваше внимание, 
+						span у Вас есть максимум 14 дней, чтобы ответить на письмо, в случае игнорирования всех 2-х писем от нашего менеджера, Ваш подарок будет аннулирован. Если по какой-то причине, Вам не пришло письмо на почту, пожалуйста, 
+						a(href="#") свяжитесь с нами, 
+						|или проверьте его в спам-папке.
+
+					.office__gift_p Желаем Вам всего самого наилучшего! С Уважением, команда сайта Найди.ру	
+				// end office__gift
+				
+			// end office__main_win
+
+
+			// begin office__main_no 
+			.office__main_no
+
+				// begin office__userinfo
+				.office__userinfo
+					.office__userinfo_name Заполните свои данные
+					.office__userinfo_p Чтобы получить подарок, нужно заполнить свои данные и контакты. Это нужно для того, чтобы в случае получения подарка мы смогли сразу с вами связаться. <br>Пожалуйста, указывайте только достоверную информацию.
+					button.btn.btn__danger Заполнить свои данные
+				// end office__userinfo
+
+				
+				/// begin office__lotteries
+				.office__lotteries
+					.office__lotteries_name ШопКарты покупателя в интернете
+						a.office__lotteries_how(href="#") Что такое ШопКарта?
+					.office__lotteries_list
+						.office__lotteries_item.office__lotteries_last
+							.office__lotteries_last_name Делайте покупки и меняйте чеки на ШопКарты
+							.office__lotteries_last_p Чтобы получить ШопКарту нужно накопить: 
+								span.office__lotteries_last_number-points 5000 
+								span.office__lotteries_last_points баллов
+							button(class="btn") Получить ШопКарту
+							.office__lotteries_last_down т.е. накопить чеки = 5000 рублей
+							.tooltip__help.big
+								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
+									a(href="#") Подробнее об акции &gt;
+									.tooltip__text_big
+				// end office__lotteries
+
+			// end office__main_no
+
+
+			// begin office__ad
+			.office__ad
+				img.office__ad_right(src="img/office-ad-img.jpg", alt="#")
+				.office__ad_left
+					.office__ad_p Меняйте баллы на ШопКарты сейчас и получите подарок в этом месяце
+					.office__ad_p Итоги будут подведены: <br>
+						span.office__ad_large 05 апреля
+					p Покупайте в интернете, получайте баллы за чеки и меняйте их на ШопКарты. Чем больше ШопКарт, тем больше возможность получить подарок.
+					button.btn.btn__danger Узнать о подарках<br>этого месяца
+			// end office__ad
+			
+
+			// begin office__history
+			.office__history
+				.office__history_name 
+					span.office__history_title История Ваших покупок
+
+					// begin Mobile history
+					.office__history_mobile 
+						// item 1
+						.office__history_mobile_item
+							.office__history_mobile_link Заказ № 
+								span Rfeh152121fedf4
+							.office__history_mobile_drop
+								.office__history_mobile_name Информация о покупке
+								.office__history_mobile_row
+									b Магазин: 
+									|Снежная королева
+								.office__history_mobile_row
+									b Дата покупки:  
+									|23.05.2017
+								.office__history_mobile_row
+									b № заказа:  
+									|Rfeh152121fedf4
+								.office__history_mobile_row
+									b Сумма покупки:  
+									|20 120 р.
+								.office__history_mobile_row
+									b Статус:  
+									|Не подтвержден
+								a(href="#", class="confirm__btn btn btn__danger",data-toggle="modal", data-target="#modal__confirm").confirm__btn.btn.btn__danger Подтвердить чеком
+								.office__history_mobile_descr Чтобы получить лотерею, нужно подвердить покупку чеком
+						// item 2
+						.office__history_mobile_item
+							.office__history_mobile_link Заказ № 
+								span Rfeh152121fedf4
+							.office__history_mobile_drop
+								.office__history_mobile_name Информация о покупке
+								.office__history_mobile_row
+									b Магазин: 
+									|Снежная королев
+								.office__history_mobile_row
+									b Дата покупки:  
+									|23.05.2017
+								.office__history_mobile_row
+									b № заказа:  
+									|Rfeh152121fedf4
+								.office__history_mobile_row
+									b Сумма покупки:  
+									|20 120 р.
+								.office__history_mobile_row
+									b Статус:  
+									|Не подтвержден
+								a(href="#").confirm__btn.btn.btn__danger.active Подтвердить чеком
+								.office__history_mobile_descr Чтобы получить лотерею, нужно подвердить покупку чеком
+					// end Mobile history
+					span.office__history_note Если Вы не видите свою покупку, <br>
+						a.office__history_link(href="#") напишите нам!
+				.office__history_stat_wrap.js-more-wrapper
+					.office__history_stat.scrolled__box
+						.office__history_left
+							.office__history_table
+								.office__history_tr
+									.office__history_th Интернет-магазин
+									.office__history_th Дата покупки
+									.office__history_th № заказа
+										a(href="#", class="office__history_help tooltip",data-tooltip-content="#tooltip_content")
+										.tooltip_templates
+											#tooltip_content 
+												span.bold Как узнать номер моего заказа? <br>
+												span Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".
+									.office__history_th Сумма   
+									.office__history_th Статус
+								.office__history_tr
+									.office__history_td Снежная королева
+									.office__history_td 23.05.2017
+									.office__history_td Rfeh152121fedf4
+									.office__history_td 20 120 р.
+									.office__history_td Не подтвержден
+								.office__history_tr
+									.office__history_td Lamoda
+									.office__history_td 05.08.2017
+									.office__history_td 52212252
+									.office__history_td 1 045 р.
+									.office__history_td Не подтвержден
+								.office__history_tr
+									.office__history_td Media Markt
+									.office__history_td 18.08.2017
+									.office__history_td KGF521GH581F
+									.office__history_td 132 648 р.
+									.office__history_td Не подтвержден
+
+							.office__history_confirmed
+								.office__history_confirmed_name Подтвержденные покупки
+								.office__history_table
+									.office__history_tr
+										.office__history_td MyToys
+										.office__history_td 12.03.2017
+										.office__history_td Gj52257_4452
+										.office__history_td 132 648 р.
+										.office__history_td Подтвержден
+								// begin Mobile history
+								.office__history_mobile 
+									// item 1
+									.office__history_mobile_item
+										.office__history_mobile_link Заказ № 
+											span Rfeh152121fedf4
+										.office__history_mobile_drop
+											.office__history_mobile_name Информация о покупке
+											.office__history_mobile_row
+												b Магазин: 
+												|Снежная королев
+											.office__history_mobile_row
+												b Дата покупки:  
+												|23.05.2017
+											.office__history_mobile_row
+												b № заказа:  
+												|Rfeh152121fedf4
+											.office__history_mobile_row
+												b Сумма покупки:  
+												|20 120 р.
+											.office__history_mobile_row
+												b Статус:  
+												|Не подтвержден
+								// end Mobile history
+							a.office__history_confirmed_hide.js-more-link(href="#" data-text-open="+ Показать подтвержденные покупки" data-text-close="- Скрыть подтвержденные покупки") - Скрыть подтвержденные покупки
+						.office__history_right
+							.office__history_right_text Чтобы получить ШопКарту, нужно подвердить покупку чеком
+							button(class="confirm__btn btn btn__danger", data-toggle="modal", data-target="#modal__confirm") Подтвердить чеком
+								.confirm__btn_trigon
+							button(class="confirm__btn btn btn__danger", data-toggle="modal", data-target="#modal__confirm") Подтвердить чеком
+								.confirm__btn_trigon
+							button.confirm__btn.btn.btn__danger.active Чек отправлен
+								.confirm__btn_trigon
+			// end office__history
+
+
+			// begin office_checks
+			.office__checks.js-more-wrapper
+				.office__checks_name Ваши чеки
+				.office__checks_list
+					.office__checks_item
+						.office__checks_img
+							img(src="img/check1.jpg", alt="#")
+							.office__checks_img_status Не проверено
+						.office__checks_info
+							p № заказа:
+							p.order__number KGF521GH581F
+						button.btn.office__checks_edit_btn
+						.office__checks_edit_hide
+							a(href="#", class="office__checks_edit_hide_btn", data-toggle="modal", data-target="#modal__del-check") Удалить чек
+							a(href="#", class="office__checks_edit_hide_btn", data-toggle="modal", data-target="#modal__confirm") Редактировать
+					.office__checks_item.confirmed
+						.office__checks_img
+							img(src="img/check2.jpg", alt="#")
+							.office__checks_img_status Подтвержден
+						.office__checks_info
+							p № заказа:
+							p.order__number Gj52257_4452
+					.office__checks_item.deleted
+						.office__checks_img
+							img(src="img/check3.jpg", alt="#")
+							.office__checks_img_status Отменен
+						.office__checks_info
+							p № заказа:
+							p.order__number Gj52257_4452        
+					.office__checks_item.confirmed
+						.office__checks_img
+							img(src="img/check2.jpg", alt="#")
+							.office__checks_img_status Подтвержден
+						.office__checks_info
+							p № заказа:
+							p.order__number Gj52257_4452
+					.office__checks_item.deleted
+						.office__checks_img
+							img(src="img/check3.jpg", alt="#")
+							.office__checks_img_status Отменен
+						.office__checks_info
+							p № заказа:
+							p.order__number Gj52257_4452
+					.office__checks_item.deleted
+						.office__checks_img
+							img(src="img/check3.jpg", alt="#")
+							.office__checks_img_status Отменен
+						.office__checks_info
+							p № заказа:
+							p.order__number Gj52257_4452        
+					.office__checks_item.confirmed
+						.office__checks_img
+							img(src="img/check2.jpg", alt="#")
+							.office__checks_img_status Подтвержден
+						.office__checks_info
+							p № заказа:
+							p.order__number Gj52257_4452
+					.office__checks_item.deleted
+						.office__checks_img
+							img(src="img/check3.jpg", alt="#")
+							.office__checks_img_status Отменен
+						.office__checks_info
+							p № заказа:
+							p.order__number Gj52257_4452
+				a.office__checks_show.js-more-link(href="#" data-text-open="- Скрыть все Вами добавленные чеки" data-text-close="+ Показать все Вами добавленные чеки") + Показать все Вами добавленные чеки
+			// end office_checks
+
+
+			.line
+
+
+			// begin office__raffle
+			.office__raffle
+				.office__raffle_name Условия ежемесячных акций
+
+				.office__raffle_p - Участвовать в акции, могут только 
+					a(href="#") зарегистрированные 
+					span пользователи. Перед тем, как совершать покупки в интернете через нас, удостоверьтесь, что Вы 
+					a(href="#") вошли в свой аккаут. 
+					span Это нужно для того, чтобы покупка засчиталась в Вашем Личном Кабинете.
+
+				.office__raffle_p 
+					span.bold - Что нужно, чтобы участовать в акции:<br>
+					span 1) Совершайте покупки в интернет-магазинах по промокодам через нас (Если Вы не нашли промокода, тогда просто перейдите по ссылке, на странице нужного магазина) и сохраняйте чеки от покупок в данном интернет-магазине.
+
+				.office__raffle_p 2) Зайдите в свой Личный кабинет, чтобы убедиться, что покупка засчиталась в Вашем аккаунте, ее можно проверить по №заказа. Далее, сфотографируйте полученный чек от покупки в интернет-магазине так, чтобы там было видно, следующую информацию: Стоимость заказа, Дата покупки, № заказа (если на чеке эта информация есть), Название интернет-магазина, где была совершена покупка. Если Вы, по каким-то причинам не можете прислать фото чека в одном экземпляре или, если Ваша покупка не засчиталась, то, пожалуйста, свяжитесь с нами, для решения этой проблемы.
+
+				.office__raffle_p 3) Пришлите этот чек нам, просто найдите Вашу покупку по №заказа в блоке “История Ваших покупок” и нажмите на кнопку “Подтвердить чеком”, которая находиться на одной линией с этой покупкой.
+
+				.office__raffle_p 4) Мы проверим Ваш чек, если информация на чеке совпадает с информацией нашей системы, то мы подтвреждаем Вам чек и автоматически, на Ваш Личный кабинет, засчитываются баллы, который будут равные к сумме покупки. Т.е. если Вы купили в интернет-магазине на 3000 руб., то Вам зачислиться 3000 баллов после подтверждения чеком.
+
+				.office__raffle_p 5) Накопите 5000 баллов = 5000 руб. (общая сумма покупки в интернет-магазине), поменяйте их на одну ШопКарту и участвуйте в акции. Если Вы купили, например: на 15000 руб., то Вы можете поменять их сразу на три ШопКарты, после подтверждения покупки чеком. *Баллы не сгорают, даже после завершения акции этого месяца. Они, только дают возможность накопить, для того чтобы поменять их на ШопКарты. *Баллы можно менять, только на ШопКарты и их нельзя получить в виде подарка в денежном эквиваленте.
+
+				.office__raffle_p - За участие в акции этого месяца, каждый пользователь, получит, гарантированный подарок, а именно 500 баллов на счет в Личном кабинете.
+			// end office__raffle
+
+
+			// begin office__shopcard
+			.office__shopcard
+				.office__shopcard_left
+					img.office__shopcard_img(src="img/shop-card.jpg", alt="#")
+
+				.office__shopcard_right
+					.office__shopcard_p 
+						span.bold Что такое ШопКарта?<br>
+						span - Это карточка покупателя в интернете, которая говорит, только об одном, Вы участвуйте в акции этого месяца. <br>*И чем больше ШопКарт Вы получите в этом месяце, тем выше вероятность, что подарок в этом месяце, получите именно Вы. После подведения итогов акции, Шопкарты снимаются с Личного кабинета всех пользователей, для того, чтобы пользователь начал собирать новые ШопКарты для участия в акции следующего месяца.
+
+					.office__shopcard_p - Если пользователь получил в этом месяце подарок, то он должен, написать об этом отзыв в соц.сетях или на 
+						a(href="reviews.html") странице отзывов на сайте Найди.ру.
+
+					.office__shopcard_p - В акции могут участвовать, все дееспособные пользователи, достигшие 18 лет.
+					
+					.office__shopcard_p	- Доставка подарка за пределы территории РФ, оплачивает сам пользователь.			
+			// end office__shopcard
+
+
+			a.btn.btn__danger.office__raffle_btn(href="prize.html", target="_blank") Узнайте о подарках этого месяца
+
+
+			.line
+
+
+			// begin office__attention
+			.office__attention
+				.office__attention_left
+					img.office__attention_left_img(src="img/icon-sure2.png", alt="#")
+				.office__attention_right
+					.office__attention_name ОБРАТИТЕ ВНИМАНИЕ:
+					.office__attention_p - При покупке в мобильных приложений магазинов покупка будет не засчитена.
+					.office__attention_p - AdBlock и т.д. и т.п. текст мы подготовим ...
+					.office__attention_p - Ознакомьтесь подробнее с 
+						a(href="#") правилами покупок
+						, чтобы покупки засчитывались.
+			// end office__attention
+
+			// Button trigger modal modal__presentation
+			button(class="btn btn__danger" data-toggle="modal" data-target="#modal__presentation") Презентация: как работать с сайтом
+
+		// end main__content_center
+
+
+		// begin modal__down  
+		.modal__down 
+			.container_center
+				.modal__down_left
+					img(src="img/icon-sure3.png", alt="#")
+				.modal__down_right 
+					span.attention ВНИМАНИЕ! 
+					span Подтвердите свой емайл, для того, чтобы продолжить использовать аккаунт. Письмо с подтврждением, уже пришло на Вашу почту. <br>Не подтвержденный емайлом аккаунт, автоматически удалиться через 5 дней!
+					button.modal__down_close
+		// end modal__down

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+- var bodyClass;
+block variables
+html(lang="en")
+	
+	include head.jade
+
+	body(class=bodyClass)
+		.wrapper
+			
+			include header.jade
+
+			// begin main__content
+			main.main__content
+				block content
+			// end main__content
+
+		include footer.jade

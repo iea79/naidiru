@@ -1,0 +1,29 @@
+// Breadcrumb ==================================================================
+.breadcrumb {
+	margin: -8px 0 22px;
+	li {
+		display: inline-block;
+		vertical-align: baseline;
+		&:not(:first-child) {
+			&:before {
+				content: '>';
+				display: inline-block;
+				margin-right: 3px;
+			}
+		}
+		&:last-child {
+			a {
+				cursor: default;
+				text-decoration: none;
+			}
+		}
+		
+		a {
+			color: #292929;
+			font-size: 13px;
+		}
+	}
+	@media (max-width: 767px) {
+		display: none;
+	}
+}

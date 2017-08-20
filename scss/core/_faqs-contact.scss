@@ -1,0 +1,76 @@
+%ad-contact__text {
+  letter-spacing: 0.01em;
+  color: #292929;
+  font-family: $main_font_family;
+  text-align: center;
+}
+.faqs-contact {
+  background-color: #f1f1f1;
+  @include box-shadow(1px 2px 4px 1px rgba(0,0,0,.03));
+  &__wrapper {
+    padding: 58px 0 70px;
+    max-width: 1260px;
+    margin: 0 auto;
+    @include flexbox();
+    @include justify-content(space-between);
+  }
+  &__partners {
+    padding-top: 23px;
+    ul {
+      height: 100%;
+      @include flexbox();
+      @include justify-content(space-between);
+      @include align-items(center);
+      @include flex-flow(column nowrap);
+    }
+  }
+  &__form {
+    max-width: 820px;
+    width: 100%;
+  }
+  &__title {
+    font-family:Tahoma;
+    font-size: 23px;
+    @extend %ad-contact__text;
+  }
+  &__subtitle {
+    padding: 20px 0 27px 0;
+  }
+  &__world {
+    padding-top: 30px;
+  }
+  &__subtitle,
+  &__world{
+    font-size: 14px;
+    @extend %ad-contact__text;
+  }
+  @media (max-width: 1100px) {
+    &__wrapper {
+      @include flex-flow(column nowrap);
+    }
+    &__form {
+      max-width: 100%;
+      padding: 0 20px;
+    }
+    &__partners {
+      order: 2;
+      padding: 30px 20px 0;
+      ul {
+        @include flex-flow(row nowrap);
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    &__wrapper {
+      padding: 30px 0 70px;
+    }
+    &__title {
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 550px) {
+    &__partners {
+      display: none;
+    }
+  }
+}

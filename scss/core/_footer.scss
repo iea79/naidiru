@@ -1,0 +1,241 @@
+/* Footer
+ ----------------------------------------------------------------------------- */
+.footer {
+	position: relative;
+	height: $footer_height;
+	// background: $footer_bg_color;
+	background-color: $footer_bg_color;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: 400;
+	border-top: 20px solid #f1ad1d;
+	h4 {
+		font-weight: 400;
+	}
+	a {
+		color: #ffffff;
+	}
+	@extend %clear_all;
+	.container_center {
+		padding-top: 35px !important;
+		// padding-bottom: 10px;
+	}
+	&__grid {
+		@include flex-flow(row nowrap);
+		.grid__wrapper {
+			// width: 25%;
+		}
+		.grid__item {}
+	}
+	&__logo {
+		display: block;
+		margin-bottom: 40px;
+	}
+	&__social {
+		max-width: 140px;
+		&_title {
+			font-size: 18px;
+			margin-bottom: 24px;
+		}
+		a {
+			display: inline-block;
+			margin-right: 9px;
+			margin-bottom: 13px;
+			@include trs(.3);
+			&:hover {
+				@include rotateY(180deg);
+			}
+		}
+	}
+	&__title {
+		font-size: 18px;
+		margin-bottom: 35px;
+	}
+	&__rubric {
+		&_item {
+			margin-bottom: 18px;
+		}
+	}
+	&__bottom {
+		border-top: 1px solid #b2b2b2;
+		margin-top: 20px;
+		padding: 20px 40px 15px;
+		position: relative;
+		&_item {
+			display: inline-block;
+			margin-right: 30px;
+		}
+	}
+	@media (max-width: 1280px) {
+		height: 440px;
+	}
+	@media (max-width: 991px) {
+		height: auto;
+		&__grid {
+			margin-left: -60px;
+			@include flex-flow(row wrap);
+			.grid__wrapper {
+				padding-left: 60px;		
+				@include flex-basis(33%);
+				&:first-child {
+					@include flex-basis(100%);
+				}
+			}
+		}
+		&__logo {
+			display: inline-block;
+			float: left;
+			margin-bottom: 30px;
+		}
+		&__social {
+			overflow: hidden;
+			text-align: center;
+			white-space: nowrap;
+			max-width: none;
+			padding-top: 14px;
+			&_title {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 17px;
+			}
+			a {
+				display: inline-block;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		// text-align: center;
+		.container_center {
+			padding: 15px 10px 0px !important;
+		}
+		&__logo {
+			margin-right: 20px;
+		}
+		&__grid {
+			.grid__wrapper {
+				// @include flex-basis(100%);
+			}
+		}
+		&__social {
+			text-align: left;
+			max-width: none;
+			white-space: normal;
+			padding-top: 5px;
+			text-align: right;
+			&_title {
+				display: block;
+				margin-bottom: 10px;
+			}
+		}
+		&__bottom {
+			padding-left: 0;
+			padding-right: 0;
+			&_item {
+				margin-right: 0;
+				display: block;
+				margin-bottom: 8px;
+			}
+		}
+	}
+	@media (max-width: 600px) {
+		// text-align: center;
+		&__title {
+			margin-bottom: 10px;
+		}
+		&__logo {
+			width: 120px;
+			margin-bottom: 20px;
+		}
+		&__grid {
+			.grid__wrapper {
+				@include flex-basis(100%);
+				&:nth-child(2),&:nth-child(3) {
+					border-bottom: 1px solid #fff;
+					padding-bottom: 10px;
+					margin-bottom: 10px;
+				}
+			}
+		}
+		&__social {
+			// max-width: 135px;
+			// float: right;
+			text-align: left;
+			width: 100%;
+			&_title {
+				font-size: 16px;
+				margin-right: 0;
+			}
+			a {
+				// margin-right: 0;
+				// margin-left: 5px;
+				margin-bottom: 5px;
+			}
+		}
+		&__bottom {
+			padding-left: 0;
+			padding-right: 0;
+			&_item {
+				margin-right: 0;
+				display: block;
+				margin-bottom: 8px;
+			}
+		}
+		&__rubric {
+			&_item {
+				margin-bottom: 10px;
+			}
+		}
+		&__bottom {
+			margin-top: 0;
+			border-top: 0;
+			text-align: center;
+		}
+	}
+}
+
+// begin modal__down
+.modal__down {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	background-color: #454545;
+	@extend %clear_a;
+	.container_center {
+		position: relative;
+		padding: 17px 183px 15px 60px !important;
+	}
+	&_left {
+		width: 40px;
+		float: left;
+		margin-right: 30px;
+	}
+	&_right {
+		padding-top: 4px;
+		overflow: hidden;
+		color: #fff;
+		.attention {
+			font-size: 15px;
+			font-weight: 700;
+		}
+	}
+	&_close {
+		position: absolute;
+		top: 28px;
+		right: 83px;
+		width: 17px;
+		height: 17px;
+		display: block;
+		cursor: pointer;
+		background: url('../img/close3.svg') no-repeat;
+		background-size: 17px 17px;
+		border: 0;
+		outline: 0;
+	}
+	&.hide {
+		display: none;
+	}
+}
+// end modal__down

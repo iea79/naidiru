@@ -1,0 +1,120 @@
+// Grid
+// ------------------------
+// Example - for html
+// <div class="grid grid__1_3 ">
+//  	<div class="grid__wrapper">
+// 			...
+//  	</div>
+//  	<div class="grid__wrapper">
+// 			...
+//  	</div>
+//  	<div class="grid__wrapper">
+// 			...
+//  	</div>
+// </div>
+// ------------------------
+.grid {
+	margin-left: -$grid_padding;
+	@include flexbox();
+	@include flex-flow(row wrap);
+	@extend %clear_all;
+	&__duble {
+		margin-left: -80px;
+		&>.grid__wrapper {
+			padding-left: 80px;
+			&:first-child {
+				@include flex-basis(56.5%);
+			}
+			&:last-child {
+				@include flex-basis(43%);
+			}
+		}
+		@media (max-width: 1366px) {
+			margin-left: -40px;
+			&>.grid__wrapper {
+				padding-left: 40px;
+			}
+		}
+		@media (max-width: 991px) {
+			&>.grid__wrapper {
+				// padding-left: 80px;
+				&:first-child {
+					@include flex-basis(100%);
+				}
+				&:last-child {
+					@include flex-basis(100%);
+				}
+			}
+		}
+	}
+	&__wrapper {
+		padding-left: $grid_padding;
+		padding-bottom: $grid_padding;
+		@include flex-grow(0);
+		@include flex-shrink(1);
+		@include flex-basis(auto);
+		&.width {
+			&_1_1 {
+				@include flex-basis(100%);
+			}
+			&_1_2 {
+				@include flex-basis(50%);
+			}
+			&_1_3 {
+				@include flex-basis(33.3%);
+			}
+			&_1_4 {
+				@include flex-basis(25%);
+			}
+			&_1_5 {
+				@include flex-basis(20%);
+			}
+			&_2_3 {
+				@include flex-basis(66.6%);
+			}
+			&_3_4 {
+				@include flex-basis(75%);
+			}
+		}
+	}
+	&__item {
+		&.active {
+			// border: 3px solid #ddd;
+		}
+	}
+	&__1 {
+		.grid__wrapper {		
+			@include flex-basis(100%);
+		}
+	}
+	&__2 {
+		.grid__wrapper {		
+			@include flex-basis(50%);
+		}
+	}
+	&__3 {
+		.grid__wrapper {
+			@include flex-basis(33.3%);
+		}
+	}
+	&__4 {
+		.grid__wrapper {		
+			@include flex-basis(25%);
+		}
+	}
+	&__5 {
+		.grid__wrapper {		
+			@include flex-basis(20%);
+		}
+	}
+	&__6 {
+		.grid__wrapper {		
+			@include flex-basis(16.666%);
+		}
+	}
+	&__7 {
+		.grid__wrapper {		
+			@include flex-basis(14.285%);
+		}
+	}
+}

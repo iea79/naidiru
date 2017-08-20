@@ -1,0 +1,95 @@
+// Global variables ==================================
+// ====================================================
+
+
+// Fonts ==============================================
+// ====================================================
+@font-face {
+  font-family: 'Myriad Pro';
+  src: local('Myriad Pro Semibold'), local('MyriadPro-Semibold'),
+  url('../fonts/MyriadPro-Semibold.woff2') format('woff2'),
+  url('../fonts/MyriadPro-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+$myriad: 'Myriad Pro';
+
+
+// Breakpoints ========================================
+// ====================================================
+$breakpoint-small:                               480px !default;
+$breakpoint-medium:                              760px !default;
+$breakpoint-large:                               960px !default;
+$breakpoint-xlarge:                              1200px !default;
+
+$breakpoint-mini-max:                            ($breakpoint-small - 1) !default;
+$breakpoint-small-max:                           ($breakpoint-medium - 1) !default;
+$breakpoint-medium-max:                          ($breakpoint-large - 1) !default;
+$breakpoint-large-max:                           ($breakpoint-xlarge - 1) !default;
+
+
+$btn_default_bg_color:							#ddd;
+$btn_default_bg_color_hover:					#eee;
+$btn_default_text_color:                        #fff;
+$btn_contrast_text_color:                       #fff;
+
+// Field ==============================================
+// ====================================================
+$input_bg_color:								#fff;
+$input_border_color:							#d1d1d1;
+$input_placeholder_color:						#919191;
+$input_bg_hover_color:							#fbfbfb;
+
+$input_bg_errore_color:							#f00;
+$input_placeholder_errore_color:				#f00;
+
+
+// Header =============================================
+// ====================================================
+$header_bg_color:								#528ed3;
+
+// Midle ==============================================
+// ====================================================
+$main_font_family:								Arial;
+$grid_padding:									20px;
+$body_bg_color:									#f5f5f5;
+
+// Footer =============================================
+// ====================================================
+$footer_height: 								420px;
+$footer_bg_color:								#454545;
+
+// Colors =============================================
+// ====================================================
+$main-color:									#292929;
+$primary-color:									#0095e1;
+$success-color:									#6eb216;
+$danger-color:									#cf3135;
+$warning-color:									#f1ad1d;
+$muted-color:									#f1f1f1;
+$link-color:									#2fa8e6;
+
+// Elevents color =============================================
+// ====================================================
+// .element_class {
+// 		@each $status, $color in $el_bg_colors {
+// 			&__#{$status} {
+// 				background: $color; // or color: $color;
+// 			}
+// 		}
+// }
+$el-bg-colors: (
+	primary: $primary-color, // color for .element_primary
+	success: $success-color, // color for .element_success
+	danger: $danger-color, // color for .element_danger
+	warning: $warning-color, // color for .element_warning
+	muted: $muted-color, // color for .element_muted
+	// link: $link-color, // color for .element_info
+);
+
+
+$btn__expires: #939292;
+
+.btn__expires {
+	background-color: #939292 !important;
+}

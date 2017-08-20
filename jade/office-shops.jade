@@ -1,0 +1,494 @@
+extends template.jade
+
+block variables
+	- bodyClass = "office"
+
+block title
+	title Личный кабинет - Любимые магазины                 
+
+block content
+	.white__line.sm
+		.container_center
+
+
+			//- // begin breadcrumb
+			//- .breadcrumb.ind
+			//- 	li
+			//- 		a(href="/") Главная
+			//- 	li
+			//- 		a(href="office.html") Личный кабинет
+			//- 	li
+			//- 		a(href="#") Любимые магазины
+			//- // end breadcrumb
+
+
+			// begin office__top
+			.office__top.shops
+				.office__top_left
+					.office__top_user
+						.office__top_user_img
+							img(src="img/rev2.png", alt="#")
+						.office__top_user_name
+							.office__top_user_fname Александра 
+							.office__top_user_lname Иванова
+					.office__top_alarm.open
+						.office__top_alarm_number 1
+
+						.office__top_notification
+							.office__top_notification_in
+								.office__top_notification_name Оповещения
+									a.office__top_notification_link(href="#") Показать все
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/most1.png", alt="#")
+									.office__top_notification_right Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/icon-sure4.png", alt="#")
+									.office__top_notification_right Извините, но Ваш чек был не подвержден. <br>Причина: Чек не соотвествует с выбранным № заказом.
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/icon-sure2.png", alt="#")
+									.office__top_notification_right Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.
+							img.office__top_notification_trigon(src="img/tri-area2.png", alt="#")
+
+				.office__top_right
+					.sm_social
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
+					.office__top_right_links
+						a.office__top_right_link.office__top_right_link_star(href="office-coupons.html") Сохраненные<br>купоны
+						a.office__top_right_link.office__top_right_link_hart(href="office-shops.html") Любимые<br>магазины
+				.office__top_center
+					.office__top_center_message
+						p 
+							span.large Вы накопили: 
+								span.bold.points 2120 
+							span.bold баллов
+						p До ШопКарты Вам осталось накопить: <br>
+							span.large.bold.points__left 2880 
+							span.bold баллов
+						//- .office__top_center_help
+					.sm_social
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
+			// end office__top
+
+
+	.container_center.main
+
+
+		// begin sidebar
+		.office__menu_trigger Другие разделы
+		.main__content_sidebar
+			.sidebar__section
+				.office__menu
+					.office__item
+						a.office__link(href="office.html") Ваши ШопКарты и покупки
+					.office__item
+						a.office__link(href="office-news.html") Написать нам + новости
+					.office__item
+						a.office__link(href="office-edit.html") Изменить данные
+					.office__item
+						a.office__link(href="office-settings.html") Настройки рассылки
+					.office__item
+						a.office__link.active(href="office-shops.html") Любимые магазины
+					.office__item
+						a.office__link(href="office-coupons.html") Сохраненные купоны
+					.office__item
+						a.office__link(href="#") Как получить подарок?
+					.office__item
+						a.office__link(href="#") Выйти из аккаунта
+			.sidebar__section
+				.sidebar__section_name Поменяйте чек на ШопКарту
+				p Чтобы получить ШопКарту, нужно подвердить покупку чеком
+				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
+			.sidebar__section
+				.sidebar__section_name Лента обладателей подарка
+				.office__winners_wrap
+					.office__winners.scrollbar-inner
+						.office__winners_title Подарок: Смартфон 
+							span.office__winners_amount (2)
+						.office__winners_list
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+						.office__winners_title Подарок: Косметика 
+							span.office__winners_amount (25)
+						.office__winners_list
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+				button.btn.btn__danger Посмотреть всех
+		// end sidebar
+
+
+		.line.laptop
+
+
+		// begin main__content_center 
+		.main__content_center
+
+			h1.like Любимые магазины
+
+			// begin office__shops_top
+			.office__shops_top_yes
+				.office__shops_top
+					a.office__shops_top_btn.btn.btn__danger(href="all-shops.html" target="blank") Найти любимый магазин
+					.office__shops_top_text Получайте скидки на емайл, только от любимых магазинов. <br>Если Вам больше не нравиться магазин, Вы можете удалить его с этой страницы, просто снова нажав на сердечко определенного магазина.
+
+
+				// begin shops__box
+				.shops__box.ind
+					// begin shops__box_grid 
+					.grid.grid__5.shops__box_grid
+						.grid__wrapper
+							.grid__item
+								a.shops__box_link(href="#") MyToys
+								a(href="#")
+									img(src="img/shop-img1.png", alt="#")
+								.grid__item_like.active
+								a.grid__item_rate(href="#")
+									.grid__item_stars
+										.grid__item_stars_full(style="width: 90%")
+									.grid__item_rate_number (182)
+						.grid__wrapper
+							.grid__item.active
+								a.shops__box_link(href="#") Aliexpress
+								a(href="#")
+									img(src="img/shop-img2.png", alt="#")
+								.grid__item_like.active
+								a.grid__item_rate(href="#")
+									.grid__item_stars
+										.grid__item_stars_full(style="width: 90%")
+									.grid__item_rate_number (182)
+						.grid__wrapper
+							.grid__item
+								a.shops__box_link(href="#") bonprix
+								a(href="#")
+									img(src="img/shop-img3.png", alt="#")
+								.grid__item_like.active
+								a.grid__item_rate(href="#")
+									.grid__item_stars
+										.grid__item_stars_full(style="width: 90%")
+									.grid__item_rate_number (182)
+						.grid__wrapper
+							.grid__item
+								a.shops__box_link(href="#") Lamoda                     
+								a(href="#")
+									img(src="img/shop-img4.png", alt="#")
+								.grid__item_like.active
+								a.grid__item_rate(href="#")
+									.grid__item_stars
+										.grid__item_stars_full(style="width: 90%")
+									.grid__item_rate_number (182)
+						.grid__wrapper
+							.grid__item
+								a.shops__box_link(href="#") Летуаль
+								a(href="#")
+									img(src="img/shop-img5.png", alt="#")
+								.grid__item_like.active
+								a.grid__item_rate(href="#")
+									.grid__item_stars
+										.grid__item_stars_full(style="width: 90%")
+									.grid__item_rate_number (182)
+					// end shops__box_grid 
+				// end shops__box
+
+
+				.line
+
+			// end office__shops_top
+
+			// begin office__shops_top
+			.office__shops_top_no
+				.office__shops_top
+					a.office__shops_top_btn.btn.btn__danger(href="all-shops.html" target="blank") Найти любимый магазин
+					.office__shops_top_text У вас нет любимых магазинов. <br>Чтобы получать скидки только от любимых магазинов на емайл, нажимайте на сердечки любимых магазинов и выбранные Вами магазины автоматически сохранятся тут.
+			// end office__shops_top
+
+
+			// begin office__shops_coupons
+			.office__shops_coupons
+				.office__shops_coupons_h Рекомендуем купоны от ваших любимых магазинов
+				.sale__list.js_more_wrap
+					
+					// Row 1
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							a.sale__list_img(href="#")
+								img(src="img/sale-list4.png", alt="#")
+							.btn.btn__success Новый
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон и получай подарки!
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
+								a(href="#") Все промокоды Bon prix
+					
+					// Row 2
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							a.sale__list_img(href="#")
+								img(src="img/sale-list6.png", alt="#")
+							.btn.btn__expires Истекает
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон и получай подарки!
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
+								a(href="#") Все промокоды Bon prix
+
+					// Row 3
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							a.sale__list_img(href="#")
+								img(src="img/sale-list4.png", alt="#")
+							.btn.btn__success Новый
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон и получай подарки!
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
+								a(href="#") Все промокоды Bon prix
+					
+					// Row 4
+					.sale__list_row.js_more_item
+						a(href="#").sale__list_mob-link
+						.sale__list_left
+							a.sale__list_img(href="#")
+								img(src="img/sale-list6.png", alt="#")
+							.btn.btn__expires Истекает
+						.sale__list_right
+							a(href="#").sale__list_save Сохранить
+							.code__wrap
+								.code__field D146SAFR
+								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+							| Использовано: 1283 раза
+						.sale__list_center
+							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							.sale__list_deadline
+								i.icon__time_end
+								| Заканчивается через 15 дней
+							.sale__list_terms
+								|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+								a(href="#").sale__list_more Подробнее
+							.sale__list_bottom
+								.sale__list_info
+									|Используй купон и получай подарки!
+									.tooltip__help
+										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+											a(href="#") Подробнее об акции &gt;
+								a(href="#") Все промокоды Bon prix
+
+			// end office__shops_coupons
+
+		// end main__content_center

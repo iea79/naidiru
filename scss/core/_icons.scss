@@ -1,0 +1,99 @@
+// Icon ==========
+
+[class*="icon_"],[class^="icon_"] {
+	display: inline-block;
+	vertical-align: baseline;
+	font-style: normal;
+}
+.icon {
+	&__gift {
+		&:before {
+			content: image-url('icon-gift.svg');
+		}
+	}
+	&__time_end {
+		&:before {
+			content: image-url('icon-time-end.svg');
+		}
+	}
+	&__star {
+		&:before {
+			content: image-url('icon-star.svg');
+		}
+		&_white {
+			&:before {
+				content: image-url('star-white.svg');
+			}
+		}
+		&_red {
+			&:before {
+				content: image-url('star-red.svg');
+			}
+		}
+	}
+	&__question {
+		position: relative;
+		cursor: pointer;
+		&:before {
+			content: image-url('icon-quest.svg');
+		}
+		&.big {
+			position: absolute;
+			width: 26px;
+			height: 26px;
+			display: block;
+			background: image-url('icon-quest.svg') no-repeat;
+			background-size: 26px 26px;
+			&:before {
+				display: none;
+			}
+		}
+		&:hover {
+			opacity: .9;
+		}
+	}
+
+	&__sure {
+		&:before {
+			content: image-url('icon-sure.svg');
+		}
+	}
+
+	&__search {
+		&:before {
+			content: image-url('icon-zoom2.svg');
+		}
+	}
+
+	// Icon social ========================
+	&__vk {
+		&:before {
+			content: image-url('icon-vk.svg');
+		}
+	}
+	&__fb {
+		&:before {
+			content: image-url('icon-fb.svg');
+		}
+	}
+	&__google {
+		&:before {
+			content: image-url('icon-google.svg');
+		}
+	}
+	&__odnoklassniki {
+		&:before {
+			content: image-url('icon-odn.svg');
+		}
+	}
+	&__twitter {
+		&:before {
+			content: image-url('icon-twitt.svg');
+		}
+	}
+	&__instagramm {
+		&:before {
+			content: image-url('icon-insta.svg');
+		}
+	}
+}

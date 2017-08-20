@@ -1,0 +1,71 @@
+extends template.jade
+
+block variables
+	- bodyClass = "form"
+
+block title
+	title Страница регистрации, авторизации
+
+block content
+	.white__line
+		.container_center
+			.white__line_form
+				.breadcrumb
+					li
+						a(href="/") Главная 
+					li
+						a(href="/") Авторизация или Регистрация
+				h1 Войдите в аккаунт или зарегистрируйтесь
+				.sign
+					.sign-in
+						.sign-in__name Войти в аккаунт
+						.office__edit_section_info
+							.office__edit_row
+								.office__edit_label(for="au1") E-mail
+								input.office__edit_input(type="email", placeholder="Введите Ваш e-mail", id="au1")
+							.office__edit_row
+								.office__edit_label(for="au2") Пароль
+								input(type="password", placeholder="Введите пароль", id="au2")
+						a.btn.btn__danger.sign-in__btn(href="#") Войти в аккаунт
+						.sign-in__link Забыли пароль? <br>
+							a.sign__restore-password(href="#") Восстановить пароль		
+
+						.recovery
+							.recovery__name Забыли пароль
+							.office__edit_section_info
+								.office__edit_row
+									.office__edit_label(for="au4") E-mail
+									input(type="email", placeholder="Введите Ваш e-mail", id="au4")
+							a.btn.btn__danger.recovery__btn(href="#") Восстановить пароль
+
+					.sign-in.sign-up
+						.sign-in__name Регистрация на сайте
+						.office__edit_section_info
+							.office__edit_row
+								.office__edit_label(for="au3") E-mail
+								input(type="email", placeholder="Введите Ваш e-mail", id="au3")
+						.sign-in__p Чтобы зарегистрироваться на сайте, просто введите Ваш email. Для Вашей безопасности, мы сами сгенерируем Вам пароль и отправим его на указанную почту. 
+						a.btn.btn__danger.sign-in__btn(href="#") Зарегистрироваться
+						.sign-in__link Регистрируясь, я соглашаюсь с <br> 
+							a(href="#") Условиями использования сайта.
+
+				.social
+					.social__arrow
+						.social__arrow_in Или войдите в аккаунт / зарегистрируйтесь через социальные сети
+							.social__trigon
+					.lg_social
+						.lg_social_icon
+							button.lg_social_icon_add.btn
+						.lg_social_icon
+							button.lg_social_icon_add.btn
+						.lg_social_icon
+							button.lg_social_icon_add.btn
+						.lg_social_icon
+							button.lg_social_icon_add.btn
+						.lg_social_icon
+							button.lg_social_icon_add.btn
+						.lg_social_icon
+							button.lg_social_icon_add.btn
+						.tooltip__help.big
+							.tooltip__text.tooltip__big Зарегистрируйтесь или войдите в аккаунт через соц.сети, просто выберите одну из этих соц.сетей. <br>Что Вам это дает? Вы можете быстро (одним кликом) зайти в аккаунт. <br>Ваша безопасность нам превыше всего. Никто, в том числе и мы не сможем получить доступ к Вашим личным данным.
+								.tooltip__text_big

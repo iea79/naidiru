@@ -1,0 +1,163 @@
+// Pagination ==================================================================
+.pagination {
+	li {
+		margin-left: 1px;
+		display: inline-block;
+		a {
+			padding: 3px 6px;
+			display: block;
+			color: $primary-color;
+			font-size: 15px;
+			text-align: center;
+			&:hover {
+				color: #292929;
+				text-decoration: none;
+			}
+			&.active {
+				color: #292929;
+				background-color: $muted-color;
+			}
+			&.passive {
+				color: #bfbebe;
+				cursor: default;
+			}
+			&.hellip {
+				padding: 3px 10px;
+				color: #bfbebe;
+				cursor: default;
+			}
+		}
+		&.prev, &.next {
+			a {
+				&:before {					
+				}
+			}
+		}
+		&.prev {
+			margin-right: 30px;
+			a {
+				&:before {
+					content: 'Предыдущая страница';
+					
+				}
+			}
+		}
+		&.next {
+			margin-left: 30px;
+			a {
+				&:before {
+					content: 'Следующая страница';
+					
+				}
+			}
+		}
+	}
+	@media (max-width: 991px) {
+		li {
+			&.lg {
+				display: none;
+			}
+			&.prev {
+				margin-right: 16px;
+			}
+			&.next {
+				margin-left: 16px;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		width: 280px;
+		margin-left: auto;
+		margin-right: auto;
+		li {
+			&.sm {
+				display: none;
+			}
+			&.prev, &.next {
+				a {
+					font-weight: bold;
+					&:before {					
+					}
+				}
+			}
+			&.prev {
+				a {
+					&:before {
+						content: '<';
+						
+					}
+				}
+			}
+			&.next {
+				a {
+					&:before {
+						content: '>';
+						
+					}
+				}
+			}
+		}
+	}
+	&.short {
+		width: 822px;
+		padding: 18px 30px;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #fff;                                         
+		.lg {
+			display: none;
+		}
+		li.prev {
+			padding: 0;
+			margin-right: 21px;
+		}
+		li.next {
+			padding: 0;
+			margin-left: 21px;
+		}
+		@media (max-width: 991px) {
+			width: 330px;
+			padding: 9px 17px;
+			.sm {
+				display: none;
+			}
+			li {
+				&.prev, 
+				&.next {
+					a {
+						font-weight: bold;
+						&:before {					
+						}
+					}
+				}
+				&.prev {
+					a {
+						&:before {
+							content: '<';
+							
+						}
+					}
+				}
+				&.next {
+					a {
+						&:before {
+							content: '>';
+							
+						}
+					}
+				}
+			}
+		}
+		@media (max-width: 479px) {
+			width: 100%;
+			padding-left: 3px;
+			padding-right: 3px;
+			li.prev {
+			margin-right: 10px;
+			}
+			li.next {
+				margin-left: 10px;
+			}
+		}
+	}
+}

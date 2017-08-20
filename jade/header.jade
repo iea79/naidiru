@@ -1,0 +1,150 @@
+// begin header 
+header.header
+	
+	// begin header__top 
+	.header__top
+		.container_center
+			.header__top_left Бесплатные купоны и промокоды
+			.header__top_right
+				a(href='#').header__top_item
+					i.icon__gift
+					| Дарим подарки каждый месяц
+				a(href='#').header__top_item
+					i.icon__star
+					| Блог
+				a(href="#").header__top_promo SALE! Новогодняя распродажа	
+	// end header__top 
+
+
+	// begin header__bottom 
+	.header__bottom
+		
+		.container_center
+
+			a(href="#").mobile__menu_toggle
+
+			a(href='/').logo
+				img(src="img/logo.svg")
+			
+			// begin login__box 
+			.login__box
+				
+				.login__box_avatar
+					img(src="img/icon-user.svg")
+				.login__box_text Привет,
+					.login__box_email emailpriilpri@mail.ru
+
+				ul.login__box_drop
+					li
+						a(href="#") Ваши ШопКарты и покупки
+					li
+						a(href="#") Сохраненные купоны
+					li
+						a(href="#") Любимые магазины
+					li
+						a(href="#") Изменить данные
+					li
+						a(href="#") Настройки рассылки
+					li
+						a(href="#") Выйти
+
+
+			.login__box.non-reg.dn
+				
+				.login__box_avatar
+					img(src="img/icon-user2.svg")
+				.login__box_text Войти, <br>Регистрация
+			// end login__box 
+			
+			// begin header__bottom_center 
+			.header__bottom_center
+				
+				// begin navbar 
+				ul.navbar
+
+					li.navbar__item
+						a(href='#').navbar__link Магазины
+					li.navbar__item
+						a(href='#').navbar__link Категории
+					li.navbar__item
+						a(href='#').navbar__link Все скидки
+
+				// end navbar 
+
+				// begin header__search 
+				.header__search
+					input(placeholder="Найти: смартфон, Nike, Aliexpress ...")
+					button.header__search_btn
+					.header__search_down
+						.header__search_down_list
+							.header__search_down_name Магазины
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="img/shop1.jpg", alt="#")
+								span.header__search_down_right Adidas
+							a.header__search_down_item(href="#")
+								span.header__search_down_left
+									img(src="img/shop6.jpg", alt="#")
+								span.header__search_down_right Аснежная королева
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="img/shop3.jpg", alt="#")
+								span.header__search_down_right Алетуаль
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="img/shop1.jpg", alt="#")
+								span.header__search_down_right Аквелли
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="img/shop2.jpg", alt="#")
+								span.header__search_down_right Аквелли
+						.header__search_down_list
+							.header__search_down_name Категории
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="", alt="")
+								span.header__search_down_right Аксессуары
+							a.header__search_down_item(href="#")
+								.header__search_down_left
+									img(src="", alt="")
+								span.header__search_down_right Аксессуары для телефонов
+				// end header__search 
+
+			.icon__search.header__search_toggle
+
+			// end header__bottom_center 
+
+	// end header__bottom 
+
+	// begin mobile__menu 
+	ul.mobile__menu
+		li
+			a(href="#") Магазины
+		li
+			a(href="#") Категории
+		li
+			a(href="#") Все скидки
+		li
+			a(href="#") Дарим подарки каждый месяц
+		li
+			a(href="#") Как использовать промокод?
+		li
+			a(href="#") Блог
+		li
+			a(href="#") Написать нам и FAQ
+		li
+			a(href="#").mobile__menu_action Sale! Новогодняя распродажа
+	// en mobile__menu
+
+	.login__box_reg
+		.login__box_reg_in
+			.login__box_reg_top
+				.login__box_reg_p Здравствуйте, зарегистрируйтесь, чтобы участвовать в акциях.
+				button(class="btn btn__danger login__box_reg_btn", data-toggle="modal", data-target="#modal__sign-up") Зарегистрироваться
+			.login__box_reg_bottom 
+				span.login__box_reg_bottom_p У вас есть свой аккаунт? 
+				a(href="#", data-toggle="modal", data-target="#modal__log-in") Войти 
+					span.login__box_reg_bottom_link в аккаунт
+		img.login__box_reg_trigon(src="img/trigon.png", alt="#")
+
+// end header 

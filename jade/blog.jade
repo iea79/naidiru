@@ -1,0 +1,381 @@
+extends template.jade
+
+block variables
+	- bodyClass = "blog"
+
+block title
+	title Blog Главная
+
+block content
+	.white__line.pb_50
+		.container_center
+
+
+			// begin breadcrumb
+			.breadcrumb.ind
+				li
+					a(href="/") Главная
+				li
+					a(href="#") Блог
+			// end breadcrumb
+
+			h1.ind Блог (Советы, лайфхаки)
+
+
+			// begin blog__top
+			.blog__top
+				.blog__top_left
+					a.blog__top_big(href="#")
+						img(src="img/blog-img1.jpg", alt="#")
+						.blog__top_big_name Какой телевизор лучше выбрать. Мнение специалиста в этой области. Супер распродажа!
+				.blog__top_right.ind
+					a.blog__top_item(href="#")
+						img(src="img/blog-img2.jpg", alt="#")
+						.blog__top_item_text
+							.blog__top_item_name Какой телевизор самый лучший выбрать. Мнение специалиста
+					a.blog__top_item(href="#")
+						img(src="img/blog-img3.jpg", alt="#")
+						.blog__top_item_text
+							.blog__top_item_name Какой телевизор самый лучший выбрать.
+					a.blog__top_item(href="#")
+						img(src="img/blog-img4.jpg", alt="#")
+						.blog__top_item_text
+							.blog__top_item_name Какой телевизор самый лучший выбрать. Мнение специалиста в этой области и его советы по уходу за техникой
+			// end blog__top
+
+	// begin banner
+	.container_center
+		.banner__box
+			a(href="#").banner__box_link
+				img(src="img/banner2.jpg", alt="#")
+			a(href="#").banner__box_link2
+				img(src="img/banner2-sm.jpg", alt="#")
+	// end banner
+
+
+	.container_center.main.pb_60
+
+		// begin sidebar
+		.main__content_sidebar.fl_right
+			.banner__box.mt_reset.mb_20
+				a(href="#").banner__box_link
+					img(src="img/banner3.jpg", alt="#")
+			.sidebar__section
+				.sidebar__section_name Узнайте интересное в блоге:
+				.b__hashtag
+					a.b__hashtag_item(href="#") Мода
+					a.b__hashtag_item(href="#") Победители_лотереи
+					a.b__hashtag_item(href="#") Подборки_с_Алиэкспресс
+					a.b__hashtag_item(href="#") Подборки_образов
+					a.b__hashtag_item(href="#") Шоппинг
+			.sidebar__section
+				.sidebar__section_name Найдите купон на нужный товар
+
+				// begin sidebar__coupon
+				.sidebar__coupon
+					a.sidebar__coupon_link(href="all-categories.html", target="_blank")
+					.sidebar__coupon_list
+						.grid.grid__2.category__box_grid
+							.grid__wrapper
+								a.grid__item(href="#")
+									img(src="img/cat1.png", alt="#")
+									p Детские товары
+							.grid__wrapper
+								a.grid__item(href="#")
+									img(src="img/cat9.png", alt="#")
+									p Обувь
+							.grid__wrapper
+								a.grid__item(href="#")
+									img(src="img/cat4.png", alt="#")
+									p Электроника
+							.grid__wrapper
+								a.grid__item(href="#")
+									img(src="img/cat2.png", alt="#")
+									p Бытовая техника
+				// end sidebar__coupon
+
+			.sidebar__section
+				.sidebar__section_name Лучшие предложения для Вас:
+
+				// begin slider__grid 
+				.slider
+					// Slide 1
+					.slider__item.mb_30
+						.slider__grid_img
+							img(src="img/most1.png", alt="")
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+					// Slide 2
+					.slider__item.mb_20
+						.slider__grid_img
+							img(src="img/most2.png", alt="")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							|Смартфон Самсунг со скидкой -45%!
+					<a href="#" class="btn btn__danger">Больше скидок  &gt;&gt;</a>
+
+			.sidebar__section
+				.sidebar__section_name Найдите купон для магазина
+				ul.columns__list
+					li 
+						a(href="#") Lamoda
+					li 
+						a(href="#") Nike
+					li 
+						a(href="#") Алиэкспресс
+					li 
+						a(href="#") Wildberries
+					li 
+						a(href="#") Lamoda
+					li 
+						a(href="#") Nike
+					li 
+						a(href="#") Nike
+					li 
+						a(href="#") Алиэкспресс
+					li 
+						a(href="#") Nike
+					li 
+						a(href="#") Алиэкспресс
+					li 
+						a(href="#") Lamoda
+					li 
+						a(href="#") Sapato
+					li
+						a(href="#") Nike
+					li 
+						a(href="#") Алиэкспресс
+					li 
+						a(href="#") Wildberries
+					li 
+						a(href="#") Lamoda
+					li 
+						a(href="#") Ebay
+					li 
+						a(href="#") Nike
+					li 
+						a(href="#") Nike
+					li 
+						a(href="#") Алиэкспресс
+
+		// end sidebar
+			
+
+		// begin main__content_center
+		.main__content_center.js-more-wrapper
+			
+			.b__hashtag.center
+				.b__hashtag_list
+					.b__hashtag_label Искать по хештегу:
+					a.b__hashtag_item.ib(href="#") Мода
+					a.b__hashtag_item.ib(href="#") Победители_лотереи
+					a.b__hashtag_item.ib(href="#") Подборки_с_Алиэкспресс
+					a.b__hashtag_item.ib(href="#") Шоппинг
+					a.b__hashtag_item.ib(href="#") Подборки_образов
+				button.b__hashtag_more.btn.btn__primary.js-more-link(data-text-open="- Скрыть разделы" data-text-close="+ Показать больше") + Показать больше
+
+
+			.b__article_h1.ind Самые популярные статьи
+
+			.b__article
+				.b__article_item
+					a.b__article_img
+						img(src="img/b-article-img1.jpg", alt="#")
+					.b__article_info
+						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							a.b__article_icon(href="#")
+						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_p.mb_30
+							span.date 20 марта 2017
+							a.category техника
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
+								span.comments 25 
+								span.text комментариев
+						a.b__article_more Читать сейчас &gt;
+
+				.b__article_item
+					a.b__article_img
+						img(src="img/b-article-img2.jpg", alt="#")
+					.b__article_info
+						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							a.b__article_icon(href="#")
+						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_p.mb_30
+							span.date 20 марта 2017
+							a.category техника
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
+								span.comments 25 
+								span.text комментариев
+						a.b__article_more Читать сейчас &gt;
+
+				.b__article_item
+					a.b__article_img
+						img(src="img/b-article-img3.jpg", alt="#")
+					.b__article_info
+						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							a.b__article_icon(href="#")
+						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_p.mb_30
+							span.date 20 марта 2017
+							a.category техника
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
+								span.comments 25 
+								span.text комментариев
+						a.b__article_more Читать сейчас &gt;
+				
+				
+				.b__article_ad
+					img.b__article_ad_img(src="img/hero.png", alt="#")
+					img.b__article_ad_mobil(src="img/hero3.png", alt="#")
+					.b__article_ad_info
+						h2.mb_10 Экономьте по полной 
+							span + подарки каждый месяц!
+						.b__article_ad_text Зарегистрируйтесь и узнавайте первым о лучших купонах.
+						.b__article_ad_text.txt__danger + Участвуйте в ежемесячных акциях и получите подарок мечты!
+						.b__article_ad_in
+							a(href="#", class="btn btn__danger") Зарегистрироваться
+							p У вас есть свой аккаунт?
+								a(href="#") Войти
+				.b__article_hero Это Шоппел - супергерой Найди.ру. Она помогает экономить тысячам людям по всей России. Каждый день она находит супер-купоны и рассылает их своим подписчикам. Будьте с ней всегда на связи, зарегистрируйтесь!
+
+
+				.b__article_item
+					a.b__article_img
+						img(src="img/b-article-img4.jpg", alt="#")
+					.b__article_info
+						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							a.b__article_icon(href="#")
+						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_p.mb_30
+							span.date 20 марта 2017
+							a.category техника
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
+								span.comments 25 
+								span.text комментариев
+						a.b__article_more Читать сейчас &gt;
+
+				.b__article_item
+					a.b__article_img
+						img(src="img/b-article-img3.jpg", alt="#")
+					.b__article_info
+						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							a.b__article_icon(href="#")
+						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_p.mb_30
+							span.date 20 марта 2017
+							a.category техника
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
+								span.comments 25 
+								span.text комментариев
+						a.b__article_more Читать сейчас &gt;
+
+				.b__article_item
+					a.b__article_img
+						img(src="img/b-article-img5.jpg", alt="#")
+					.b__article_info
+						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							a.b__article_icon(href="#")
+						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_p.mb_30
+							span.date 20 марта 2017
+							a.category техника
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
+								span.comments 25 
+								span.text комментариев
+						a.b__article_more Читать сейчас &gt;
+
+				.b__article_item
+					a.b__article_img
+						img(src="img/b-article-img1.jpg", alt="#")
+					.b__article_info
+						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							a.b__article_icon(href="#")
+						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_p.mb_30
+							span.date 20 марта 2017
+							a.category техника
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
+								span.comments 25 
+								span.text комментариев
+						a.b__article_more Читать сейчас &gt;
+
+				.b__article_item
+					a.b__article_img
+						img(src="img/b-article-img2.jpg", alt="#")
+					.b__article_info
+						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							a.b__article_icon(href="#")
+						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_p.mb_30
+							span.date 20 марта 2017
+							a.category техника
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
+								span.comments 25 
+								span.text комментариев
+						a.b__article_more Читать сейчас &gt;
+
+				.b__article_item
+					a.b__article_img
+						img(src="img/b-article-img3.jpg", alt="#")
+					.b__article_info
+						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							a.b__article_icon(href="#")
+						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_p.mb_30
+							span.date 20 марта 2017
+							a.category техника
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
+								span.comments 25 
+								span.text комментариев
+						a.b__article_more Читать сейчас &gt;
+
+				.b__article_item
+					a.b__article_img
+						img(src="img/b-article-img5.jpg", alt="#")
+					.b__article_info
+						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+							a.b__article_icon(href="#")
+						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_p.mb_30
+							span.date 20 марта 2017
+							a.category техника
+						.b__article_comments
+							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
+							a.b__article_comments_link(href="#")
+								span.comments 25 
+								span.text комментариев
+						a.b__article_more Читать сейчас &gt;
+
+
+				.b__continue
+					img.b__continue_img(src="img/continue.gif", alt="#")
+					.b__continue_text Продолжение следует ...
+
+		// end main__content_center

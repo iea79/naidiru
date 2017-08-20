@@ -1,0 +1,408 @@
+extends template.jade
+
+block variables
+	- bodyClass = "prize"
+
+block title
+	title Дарим подарки каждый месяц
+
+block content
+	.white__line
+		.container_center
+
+
+			// begin breadcrumb
+			.breadcrumb
+				li
+					a(href="/") Главная
+				li
+					a(href="#") Дарим подарки каждый месяц
+			// end breadcrumb
+
+
+			h1 Дарим подарки каждый месяц
+
+			// begin prize__menu 
+			.prize__menu
+				.prize__menu_item
+					a.prize__menu_link(href="#pm1") Как участвовать?
+				.prize__menu_item
+					a.prize__menu_link(href="#pm2") Подарки
+				.prize__menu_item
+					a.prize__menu_link(href="#pm3") Победители
+				.prize__menu_item
+					a.prize__menu_link(href="#pm4") Зарегистрироваться 
+				.prize__menu_item
+					a.prize__menu_link(href="#pm5") Условия акции
+				.prize__menu_item
+					a.prize__menu_link(href="#pm6") Часто задаваемые вопросы
+			// end prize__menu
+
+
+			.line
+
+
+			// begin prize__steps
+		.prize__steps_wrap#pm1
+			.prize__steps.prize__steps-last
+				.container_center
+					.prize__steps_h3 Как участвовать в акции?
+					.prize__steps_center.prize__steps_center_flex
+						.prize__steps_center_item-last
+							.prize__steps_number 1
+							img(src="img/condition-prize-1.png")
+							.prize__steps_p Зарегистрируйтесь и <br>покупайте в интернет-магазинах <br>через нас
+								.prize__steps_p_treangle
+						.prize__steps_center_item-last.prize__steps_center_item-last_center
+							.prize__steps_number.prize__steps_number_second 2
+							img(src="img/condition-prize-1.png")
+							.prize__steps_p Подтверждайте покупки чеком и <br>получайте баллы. <br>5000 баллов = 5000 р. (общая сумма покупки / чек)
+								.prize__steps_p_treangle
+						.prize__steps_center_item-last
+							.prize__steps_number 3
+							img(src="img/condition-prize-1.png")
+							.prize__steps_p Накопите 5000 баллов, <br>обменяйте их на ШопКарту <br>и участвуйте в акции.
+								.prize__steps_p_treangle
+					.prize__steps_reg.prize__steps_reg-last
+						button.btn.btn__danger.prize__steps_reg_btn Зарегистрироваться
+						.prize__steps_reg_p Уже зарегистрированы?
+							a(href="#") Войти в аккаунт &gt;
+			// end prize__steps
+
+		.container_center 
+			// begin prize__list 
+			.prize__list_wrap#pm2
+				.prize__section_name Подарки этого месяца - Акция №6 (Апрель 2017 год)
+				.prize__list.grid.grid__2
+					.grid__wrapper
+						.prize__list_item
+							.prize__list_left
+								img(src="img/prize-img1.png", alt="#")
+							.prize__list_right
+								.prize__list_h 1 место              
+								.prize__list_p Подарок: 
+									span.product Смартфон Apple iPhone S5fhb
+								.prize__list_p Стоимость: 
+									span.price 5 000 
+									span рублей
+					.grid__wrapper
+						.prize__list_item
+							.prize__list_left
+								img(src="img/prize-img2.png", alt="#")
+							.prize__list_right
+								.prize__list_h 2-5 место              
+								.prize__list_p Подарок: 
+									span.product Смарт-часы Samsung LD245 или Asus G21 gjdnbgj
+								.prize__list_p Стоимость: 
+									span.price 2 000 
+									span рублей
+					.grid__wrapper
+						.prize__list_item
+							.prize__list_left
+								img(src="img/prize-img3.png", alt="#")
+							.prize__list_right
+								.prize__list_h 6-15 место             
+								.prize__list_p Подарок: 
+									span.product Кожаный чехол для телефона
+								.prize__list_p Стоимость: 
+									span.price 1 000 
+									span рублей
+					.grid__wrapper
+						.prize__list_item
+							.prize__list_left
+								img(src="img/prize-img4.png", alt="#")
+							.prize__list_right
+								.prize__list_h 16-25 место              
+								.prize__list_p Подарок: 
+									span.product Органический супер шампунь от Yves Rocher
+								.prize__list_p Стоимость: 
+									span.price 200
+									span рублей  
+			// end prize__list
+
+
+			.line
+
+			// begin prize__winners
+			.prize__winners_wrap#pm3
+				.prize__section_name Обладатели подарка (Март 2017 год)     
+				.prize__winners
+					.prize__winners_table_wrap
+						.prize__winners_table
+							.prize__winners_tr
+								.prize__winners_th Место
+								.prize__winners_th Победитель
+								.prize__winners_th ШопКарта
+								.prize__winners_th Подарок победителя
+							.prize__winners_tr
+								.prize__winners_td 1 место
+								.prize__winners_td
+									.prize__winners_td_in
+										img.prize__winners_img(src="img/user-sm1.png", alt="#")
+										span.user__name Анна
+								.prize__winners_td # A17_487524
+								.prize__winners_td Смартфон Apple iPhone S5fhb
+							.prize__winners_tr
+								.prize__winners_td 2 место
+								.prize__winners_td
+									.prize__winners_td_in
+										img.prize__winners_img(src="img/user-sm2.png", alt="#")
+										span.user__name Светлана
+								.prize__winners_td # A17_8521417
+								.prize__winners_td Смарт-часы Samsung LD245
+							.prize__winners_tr
+								.prize__winners_td 3 место
+								.prize__winners_td
+									.prize__winners_td_in
+										img.prize__winners_img(src="img/user-sm3.png", alt="#")
+										span.user__name Алексей
+								.prize__winners_td # A17_487524
+								.prize__winners_td Смартфон Apple iPhone S5fhb
+							.prize__winners_tr
+								.prize__winners_td 4 место
+								.prize__winners_td
+									.prize__winners_td_in
+										img.prize__winners_img(src="img/user-sm4.png", alt="#")
+										span.user__name Александра
+								.prize__winners_td # A17_487841
+								.prize__winners_td Смартфон Asus G21 gjdnbgj
+							.prize__winners_tr
+								.prize__winners_td 5 место
+								.prize__winners_td
+									.prize__winners_td_in
+										img.prize__winners_img(src="img/user-sm1.png", alt="#")
+										span.user__name Мария
+								.prize__winners_td # A17_487465 
+								.prize__winners_td Смарт-часы Samsung LD24j		
+					.prize__winners_link
+						a(href="#") + Показать больше обладателей подарка
+			// end prize__winners
+
+
+		// begin prize__counter
+		.prize__counter.prize__counter_second#pm4
+			.container_center
+				.counter__box.counter__box_second
+					.counter__box_top.counter__box_top_second
+						.counter__box_left
+							.counter__box_label Начните прямо сейчас:
+							.counter__box_count
+								.counter__box_count_wrap
+									.counter__box_count_item 2
+									.counter__box_count_item 1
+									.counter__box_count_item 8
+									.counter__box_count_item 0
+									.counter__box_count_item 2
+									.counter__box_count_item 2
+								|человек
+							.counter__box_auth
+								a(href="#").btn.btn__danger.btn__lg Зарегистрироваться
+								p Уже зарегистрированы? 
+									a(href="#") 
+										b Войти &gt;
+
+					.counter__box_bottom.counter__box_bottom_second
+						.counter__box_rev
+							.counter__box_rev_photo
+								img(src="img/rev.png", alt="")
+							.counter__box_rev_quote
+								|Познакомилась с этим сервисом совсем недавно. Решила с его помощью заказать в интернет-магазине...  
+								a(href="#") Читать полностью &gt;&gt;
+		// end prize__counter
+
+		.container_center
+			
+			// begin prize__conditions
+			.prize__conditions_wrap.prize__conditions_wrap_new#pm5
+				.prize__section_name Условия ежемесячных акций 
+					a(href="#") Скачать Полные правила акции.pdf
+				.prize__conditions
+					img.prize__conditions_left(src="img/icon-sure2.png", alt="#")
+					.prize__conditions_right
+						.prize__conditions_p - Участвовать в акции, могут только 
+							a.prize__conditions_link(href="#") зарегистрированные 
+							.prize__conditions_span пользователи. Перед тем, как совершать покупки в интернете через нас, удостоверьтесь, что Вы 
+							a.prize__conditions_link(href="#") вошли в свой аккаут. 
+							.prize__conditions_span Это нужно для того, чтобы покупка засчиталась в Вашем Личном Кабинете.
+						.prize__conditions_title - Что нужно, чтобы участовать в акции: 
+						.prize__conditions_p 1) Совершайте покупки в интернет-магазинах по промокодам через нас (Если Вы не нашли промокода, тогда просто перейдите по ссылке, на странице нужного магазина) и сохраняйте чеки от покупок в данном интернет-магазине.
+						.prize__conditions_p 2) Зайдите в свой Личный кабинет, чтобы убедиться, что покупка засчиталась в Вашем аккаунте, ее можно проверить по №заказа. Далее, сфотографируйте полученный чекот покупки в интернет-магазине так, чтобы там было видно, следующую информацию: Стоимость заказа, Дата покупки, № заказа (если на чеке эта информация есть), Названиеинтернет-магазина, где была совершена покупка. Если Вы, по каким-то причинам не можете прислать фото чека в одном экземпляре или, если Ваша покупка не засчиталась, то, пожалуйста, 
+							a.prize__conditions_link(href="#") свяжитесь с нами, 
+							.prize__conditions_span для решения этой проблемы.
+						.prize__conditions_p 3) Пришлите этот чек нам, просто найдите Вашу покупку по №заказа в блоке “История Ваших покупок” и нажмите на кнопку “Подтвердить чеком”, которая находиться на одной линией с этой покупкой.
+						.prize__conditions_p 4) Мы проверим Ваш чек, если информация на чеке совпадает с информацией нашей системы, то мы подтвреждаем Вам чек и автоматически, на Ваш Личный кабинет, засчитываются баллы, который будут равные к сумме покупки. Т.е. если Вы купили в интернет-магазине на 3000 руб., то Вам зачислиться 3000 баллов после подтверждения чеком.
+						.prize__conditions_p 5) Накопите 5000 баллов = 5000 руб. (общая сумма покупки в интернет-магазине), поменяйте их на одну ШопКарту и участвуйте в акции. Если Вы купили, например: на 15000 руб.,то Вы можете поменять их сразу на три ШопКарты, после подтверждения покупки чеком. *Баллы не сгорают, даже после завершения акции этого месяца. Они, только дают возможность накопить, для того чтобы поменять их на ШопКарты. <br>*Баллы можно менять, только на ШопКарты и их нельзя получить в виде подарка в денежном эквиваленте.
+						.prize__conditions_p - За участие в акции этого месяца, каждый пользователь, получит, гарантированный подарок, а именно 500 баллов на счет в Личном кабинете.
+						img.prize__conditions_left.prize__conditions_left_last(src="img/shop-card.jpg", alt="#")
+						.prize__conditions_right.prize__conditions_right_new
+							.prize__conditions_title Что такое ШопКарта?
+							.prize__conditions_p - Это карточка покупателя в интернете, которая говорит, только об одном, Вы участвуйте в акции этого месяца. <br>*И чем больше ШопКарт Вы получите в этом месяце, тем выше вероятность, что подарок в этом месяце, получите именно Вы. После подведения итогов акции, Шопкарты снимаются с Личного кабинета всех пользователей, для того, чтобы пользователь начал собирать новые ШопКарты для участия в акции следующего месяца. 
+							.prize__conditions_p - Если пользователь получил в этом месяце подарок, то он должен, написать об этом отзыв в соц.сетях или на странице отзывов на сайте Найди.ру.
+							.prize__conditions_p - В акции могут участвовать, все дееспособные пользователи, достигшие 18 лет.
+							.prize__conditions_p - Доставка подарка за пределы территории РФ, оплачивает сам пользователь.
+			// end prize__conditions
+
+
+			.line
+
+			// begin prize__faq 
+			.prize__faq.prize__faq_new#pm6
+				.prize__faq_column
+					.faq_right
+						.faq_list_name Топ популярных вопросов:
+						.faq_item
+							.faq_question Что такое промокоды?
+							.faq_answer Промокоды - это специальная буквенно-цифровая последовательность. Выберите в каталоге магазин и купите там со скидкой. Каждый промокод несет в себе определенную сумму средств. 
+								a(href="#") Подробнее о том как использовать промокод &gt;
+						.faq_item
+							.faq_question Почему у меня не засчиталась покупка?
+							.faq_answer Промокоды - это специальная буквенно-цифровая последовательность. Выберите в каталоге магазин и купите там со скидкой. Каждый промокод несет в себе определенную сумму средств. 
+								a(href="#") Подробнее о том как использовать промокод &gt;
+						.faq_item
+							.faq_question Как участвовать в акции?
+							.faq_answer Промокоды - это специальная буквенно-цифровая последовательность. Выберите в каталоге магазин и купите там со скидкой. Каждый промокод несет в себе определенную сумму средств. 
+								a(href="#") Подробнее о том как использовать промокод &gt;
+						.faq_item
+							.faq_question Что такое промокоды?
+							.faq_answer Промокоды - это специальная буквенно-цифровая последовательность. Выберите в каталоге магазин и купите там со скидкой. Каждый промокод несет в себе определенную сумму средств. 
+								a(href="#") Подробнее о том как использовать промокод &gt;
+						.faq_item
+							.faq_question Почему у меня не засчиталась покупка?
+							.faq_answer Промокоды - это специальная буквенно-цифровая последовательность. Выберите в каталоге магазин и купите там со скидкой. Каждый промокод несет в себе определенную сумму средств. 
+								a(href="#") Подробнее о том как использовать промокод &gt;
+						.faq_item
+							.faq_question Как участвовать в акции?
+							.faq_answer Промокоды - это специальная буквенно-цифровая последовательность. Выберите в каталоге магазин и купите там со скидкой. Каждый промокод несет в себе определенную сумму средств. 
+								a(href="#") Подробнее о том как использовать промокод &gt;
+						.faq_item
+							.faq_question Что такое промокоды?
+							.faq_answer Промокоды - это специальная буквенно-цифровая последовательность. Выберите в каталоге магазин и купите там со скидкой. Каждый промокод несет в себе определенную сумму средств. 
+								a(href="#") Подробнее о том как использовать промокод &gt;
+						.faq_item
+							.faq_question Почему у меня не засчиталась покупка?
+							.faq_answer Промокоды - это специальная буквенно-цифровая последовательность. Выберите в каталоге магазин и купите там со скидкой. Каждый промокод несет в себе определенную сумму средств. 
+								a(href="#") Подробнее о том как использовать промокод &gt;
+						.faq_item
+							.faq_question Как участвовать в акции?
+							.faq_answer Промокоды - это специальная буквенно-цифровая последовательность. Выберите в каталоге магазин и купите там со скидкой. Каждый промокод несет в себе определенную сумму средств. 
+								a(href="#") Подробнее о том как использовать промокод &gt;
+					a.prize__faq_link(href="faq.html") Увидеть больше вопросов &gt;
+
+				.prize__faq_column
+					.round_social_wrap
+						.round_social_name Мы в социальных сетях:
+						.round_social
+							.round_social_icon
+								.ya-share2(data-services="vkontakte")
+							.round_social_icon
+								.ya-share2(data-services="facebook")
+							.round_social_icon
+								.ya-share2(data-services="gplus")
+							.round_social_icon
+								.ya-share2(data-services="odnoklassniki")
+							.round_social_icon
+								.ya-share2(data-services="twitter")
+							a.round_social_icon(href="#")
+					.prize__faq_question
+						.prize__faq_question_name Есть вопросы?
+						.prize__faq__p Свяжитесь с нами: 
+								a(href="mailto:info@naidy-skidka.ru") info@naidy-skidka.ru. 
+								span Или напишите свой вопрос на странице 
+								a(href="#") обратной связи.
+					.prize__faq_rules
+						img.prize__faq_rules_left(src="img/icon-sure2.png", alt="#")
+						.prize__faq_rules_right
+							.prize__faq_rules_p	Перед тем, как использовать сайт, необходимо прочитать: 
+								a(href="#") правила покупок &gt; 
+							.prize__faq_rules_p И ознакомится с:
+								a.db(href="#") Пользовательским соглашением &gt;
+			// end prize__faq
+
+
+			.line
+
+			
+			// begin prize__people 
+			.prize__people
+				.prize__people_name Начните прямо сейчас:
+				// begin category__box_grid
+				.category__row_grid.scrollbar-inner
+					.grid
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop1.jpg", alt="#")
+								p Промокоды Quelle
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop2.jpg", alt="#")
+								p Коды скидок и акций MyToys
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop3.jpg", alt="#")
+								p Quelle
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop4.jpg", alt="#")
+								p Quelle
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop5.jpg", alt="#")
+								p Quelle
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop6.jpg", alt="#")
+								p Quelle
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop6.jpg", alt="#")
+								p Quelle
+				// end category__row
+
+				// begin category__row
+				.category__row_grid.scrollbar-inner
+					.grid
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img8.jpg", alt="#")
+								p Скидки на страницу распродаж
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img3.jpg", alt="#")
+								p Обувь
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img5.jpg", alt="#")
+								p Детские товары
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img4.jpg", alt="#")
+								p Техника
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img2.jpg", alt="#")
+								p Смартфоны
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img1.jpg", alt="#")
+								p Часы
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img1.jpg", alt="#")
+								p Часы
+				// end category__box_grid
+			// end prize__people
+
+
+	.container_center
+		// begin lots
+		.lots
+			h3 Покупайте в магазинах и получайте подарки
+			p Покупайте в интернет-магазинах и копите баллы. Меняйте баллы на ШопКарты и получайте подарки. 
+				a(href="#") Подробнее о акции &gt;
+			p + Никогда не пропускайте! Получайте лучшие скидки магазинов к себе на почту.
+
+			a(href="#", class="btn btn__danger") Зарегистрироваться
+
+			p У вас есть свой аккаунт?
+				a(href="#" class="lots_a") Войдите
+		// end lots

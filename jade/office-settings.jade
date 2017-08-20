@@ -1,0 +1,453 @@
+extends template.jade
+
+block variables
+	- bodyClass = "office"
+
+block title
+	title Личный кабинет - Настройки рассылки                  
+
+block content
+	.white__line.sm
+		.container_center
+
+
+			//- // begin breadcrumb
+			//- .breadcrumb.ind
+			//- 	li
+			//- 		a(href="/") Главная
+			//- 	li
+			//- 		a(href="office.html") Личный кабинет
+			//- 	li
+			//- 		a(href="#") Настройки рассылки
+			//- // end breadcrumb
+
+
+			// begin office__top
+			.office__top
+				.office__top_left
+					.office__top_user
+						.office__top_user_img
+							img(src="img/rev2.png", alt="#")
+						.office__top_user_name
+							.office__top_user_fname Александра 
+							.office__top_user_lname Иванова
+					.office__top_alarm.open
+						.office__top_alarm_number 1
+
+						.office__top_notification
+							.office__top_notification_in
+								.office__top_notification_name Оповещения
+									a.office__top_notification_link(href="#") Показать все
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/most1.png", alt="#")
+									.office__top_notification_right Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/icon-sure4.png", alt="#")
+									.office__top_notification_right Извините, но Ваш чек был не подвержден. <br>Причина: Чек не соотвествует с выбранным № заказом.
+								a.office__top_notification_item(href="#")
+									.office__top_notification_left
+										img(src="img/icon-sure2.png", alt="#")
+									.office__top_notification_right Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.
+							img.office__top_notification_trigon(src="img/tri-area2.png", alt="#")
+
+				.office__top_right
+					.sm_social
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
+					.office__top_right_links
+						a.office__top_right_link.office__top_right_link_star(href="office-coupons.html") Сохраненные<br>купоны
+						a.office__top_right_link.office__top_right_link_hart(href="office-shops.html") Любимые<br>магазины
+				.office__top_center
+					.office__top_center_message
+						p 
+							span.large Вы накопили: 
+								span.bold.points 2120 
+							span.bold баллов
+						p До ШопКарты Вам осталось накопить: <br>
+							span.large.bold.points__left 2880 
+							span.bold баллов
+						//- .office__top_center_help
+					.sm_social
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
+			// end office__top
+
+
+	.container_center.main
+
+
+		// begin sidebar
+		.office__menu_trigger Другие разделы
+		.main__content_sidebar
+			.sidebar__section
+				.office__menu
+					.office__item
+						a.office__link(href="office.html") Ваши ШопКарты и покупки
+					.office__item
+						a.office__link(href="office-news.html") Написать нам + новости
+					.office__item
+						a.office__link(href="office-edit.html") Изменить данные
+					.office__item
+						a.office__link.active(href="office-settings.html") Настройки рассылки
+					.office__item
+						a.office__link(href="office-shops.html") Любимые магазины
+					.office__item
+						a.office__link(href="office-coupons.html") Сохраненные купоны
+					.office__item
+						a.office__link(href="#") Как получить подарок?
+					.office__item
+						a.office__link(href="#") Выйти из аккаунта
+			.sidebar__section
+				.sidebar__section_name Поменяйте чек на ШопКарту
+				p Чтобы получить ШопКарту, нужно подвердить покупку чеком
+				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
+			.sidebar__section
+				.sidebar__section_name Лента обладателей подарка
+				.office__winners_wrap
+					.office__winners.scrollbar-inner
+						.office__winners_title Подарок: Смартфон 
+							span.office__winners_amount (2)
+						.office__winners_list
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+						.office__winners_title Подарок: Косметика 
+							span.office__winners_amount (25)
+						.office__winners_list
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm3.png", alt="#")
+								.office__winners_info
+									.user-name Алексей
+									.lottery-number # A17_487525
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Алина
+									.lottery-number # A17_414726
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm1.png", alt="#")
+								.office__winners_info
+									.user-name Анна
+									.lottery-number # A17_487524
+							.office__winners_item
+								img.office__winners_img(src="img/user-sm2.png", alt="#")
+								.office__winners_info
+									.user-name Светлана
+									.lottery-number # A17_414724
+				button.btn.btn__danger Посмотреть всех
+		// end sidebar
+
+
+		.line.laptop
+
+
+		// begin main__content_center 
+		.main__content_center
+
+			h1 Настройки рассылки
+
+			.office__settings_section
+				.office__settings_section_info
+					.office__settings_section_top
+						.office__settings_section_h2 Помогите нам стать лучше для Вас, настройте рассылку под себя
+						
+						.office__settings_info.office__settings_info_subscribe
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked id="os1")
+								label.checkbox__label(for="os1") Вы будете получать, информацию о скидках и акциях от любимых магазинов и категорий
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked id="os2")
+								label.checkbox__label(for="os2") Вы будете узнавать, об акциях, новостях и изменениях в Вашем аккаунте
+							.office__settings_checkbox.checkbox
+								input.checkbox__input.office__settings_info_unsubscribe(type="checkbox" id="os3")
+								label.checkbox__label(for="os3") Отписаться от всех рассылок
+							
+						.office__edit_down
+							button(class="btn btn__danger office__edit_btn" data-toggle="modal" data-target="#modal__no-subscription") Сохранить изменения
+							.office__edit_note Информация успешно обновлена!
+								button.close
+			
+			.office__settings_section
+				.office__settings_section_info.office__settings_shops
+					.office__settings_section_top
+						.office__settings_section_h2 Вы подписаны на эти магазины
+
+						.office__settings_section_p Чтобы получать скидки, только от любимых магазинов на емайл, нужно: первое - 
+							a(href="all-shops.html" target="_blank") найти любимые магазины 
+							|и второе нажать на сердечки этих магазинов. И выбранные Вами магазины автоматически сохранятся тут и на этой странице: 
+							a(href="office-shops.html" target="_blank") Любимые магазины.
+
+						.office__settings_col.office__settings_checked_shop
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked id="os4")
+								label.checkbox__label(for="os4") Lamoda
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked id="os5")
+								label.checkbox__label(for="os5") Снежная королева
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked id="os6")
+								label.checkbox__label(for="os6") Дочки и Сыночки
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked id="os7")
+								label.checkbox__label(for="os7") Lamoda
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked id="os8")
+								label.checkbox__label(for="os8") Media Markt
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked id="os9")
+								label.checkbox__label(for="os9") Ozon
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" checked id="os10")
+								label.checkbox__label(for="os10") Ebay
+
+					.line
+
+					.office__settings_section_bottom
+						.office__settings_section_h3 Рекомендуем подписаться на эти магазины
+
+						.office__settings_col.office__settings_unchecked_shop
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os11")
+								label.checkbox__label(for="os11") Снежная королева
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os12")
+								label.checkbox__label(for="os12") Снежная королева
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os13")
+								label.checkbox__label(for="os13") Снежная королева
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os14")
+								label.checkbox__label(for="os14") Снежная королева
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os15")
+								label.checkbox__label(for="os15") Media Markt
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os16")
+								label.checkbox__label(for="os16") Media Markt
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os17")
+								label.checkbox__label(for="os17") Media Markt
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os18")
+								label.checkbox__label(for="os18") Media Markt
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os19")
+								label.checkbox__label(for="os19") Дочки и Сыночки
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os20")
+								label.checkbox__label(for="os20") Дочки и Сыночки
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os21")
+								label.checkbox__label(for="os21") Дочки и Сыночки
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os22")
+								label.checkbox__label(for="os22") Дочки и Сыночки
+			
+			.office__settings_section
+				.office__settings_section_info
+					.office__settings_section_top
+						.office__settings_section_h2 Вы подписаны на эти категории
+
+						.office__settings_section_p Чтобы получать скидки, только на определенную группу товаров, нужно: первое - 
+							a(href="all-categories.html" target="_blank") выбрать категории 
+							|и второе нажать на сердечки этих категорий. И выбранные Вами категории автоматически сохранятся тут.
+
+						.office__settings_col
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os23")
+								label.checkbox__label(for="os23") Одежда
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os24")
+								label.checkbox__label(for="os24") Обувь
+
+					.line
+
+					.office__settings_section_bottom
+						.office__settings_section_h3 Рекомендуем подписаться на эти категории
+
+						.office__settings_col
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os25")
+								label.checkbox__label(for="os25") Аксессуары
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os26")
+								label.checkbox__label(for="os26") Красота и здоровье
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os27")
+								label.checkbox__label(for="os27") Дом, мебель, сад
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os28")
+								label.checkbox__label(for="os28") Автотовары и Инструменты
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os29")
+								label.checkbox__label(for="os29") Бытовая техника
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os30")
+								label.checkbox__label(for="os30") Еда и продукты
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os31")
+								label.checkbox__label(for="os31") Детские товары, Игрушки
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os32")
+								label.checkbox__label(for="os32") Финансы, Услуги, Образование
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os33")
+								label.checkbox__label(for="os33") Электроника
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os34")
+								label.checkbox__label(for="os34") Зоотовары
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os35")
+								label.checkbox__label(for="os35") Путешествия и Развелечения
+							.office__settings_checkbox.checkbox
+								input.checkbox__input(type="checkbox" id="os36")
+								label.checkbox__label(for="os36") Спортивные товары
+				
+			// end office__edit_text 
+
+		// end main__content_center

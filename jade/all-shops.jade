@@ -1,0 +1,617 @@
+extends template.jade
+
+block variables
+	- bodyClass = "all-shops"
+
+block title
+	title Все магазины
+
+block content
+	.white__line
+		.container_center
+
+			// begin breadcrumb
+			.breadcrumb.ind
+				li
+					a(href="/") Главная
+				li
+					a(href="#") Все магазины
+				li
+					a(href="#") Обувь и Аксессуары	
+			// end breadcrumb
+
+
+			h1.ind Самые лучшие магазины
+
+			.shops__categories_trigger Фильтр магазинов
+				span &gt;
+
+			// begin shops__categories
+			.shops__categories
+				.shops__categories_item
+					a.shops__categories_link(href="#") Все магазины
+				.shops__categories_item
+					a.shops__categories_link(href="#") Одежда
+				.shops__categories_item
+					a.shops__categories_link.active(href="#") Обувь и Аксессуары
+				.shops__categories_item
+					a.shops__categories_link(href="#") Техника и Электроника
+				.shops__categories_item
+					a.shops__categories_link(href="#") Красота и Здоровье
+				.shops__categories_item
+					a.shops__categories_link(href="#") Детские товары и Игрушки
+				.shops__categories_item
+					a.shops__categories_link(href="#") Спорт и Хобби
+				.shops__categories_item
+					a.shops__categories_link(href="#") Зоотовары   
+				.shops__categories_item
+					a.shops__categories_link(href="#") Дом, Мебель, Сад
+				.shops__categories_item
+					a.shops__categories_link(href="#") Путешествия и Развлечения 
+				.shops__categories_item
+					a.shops__categories_link(href="#") Продукты и Доставка еды   
+				.shops__categories_item
+					a.shops__categories_link(href="#") Продукты и Доставка еды
+				.shops__categories_item
+					a.shops__categories_link(href="#") Цветы и Подарки 
+				.shops__categories_item
+					a.shops__categories_link(href="#") Автотовары и Инструменты
+				.shops__categories_item
+					a.shops__categories_link(href="#") Финансы, Образование, Услуги
+				.shops__categories_item
+					a.shops__categories_link(href="#") Китайские магазины
+			// end shops__categories
+
+
+			.shops__sort_trigger Сортировать магазины
+				span &gt;
+
+			// begin shops__sort
+			.shops__sort.ind
+				.shops__sort_top
+					.shops__sort_left
+						.shops__sort_sort Сортировать:
+						.shops__sort_list
+							.shops__sort_item
+								a.shops__sort_link(href="#") По популярности
+							.shops__sort_item.active
+								a.shops__sort_link.shops__sort_trigger_abc(href="#") По алфавиту
+							.shops__sort_item
+								a.shops__sort_link(href="#") По рейтингу (отзывам)
+							.shops__sort_item
+								a.shops__sort_link(href="#") Кто участвует в акции
+					.checkbox
+						input.checkbox__input(type="checkbox" id="ss1")
+						label.checkbox__label(for="ss1") Магазины с бесплатной доставкой
+						
+				.shops__sort_abc
+					.shops__sort_abc_list
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Все
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#").active A
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") B
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") C
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") D
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") E
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") F
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") G
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") H
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") I
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") J
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") K
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") L
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") M
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") N
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") O
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") P
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Q
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") R
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") S
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") T
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") U
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") V
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") W
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") X
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Y
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Z	
+					.shops__sort_abc_list
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") 0-9
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") А
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Б
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") В
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Г
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Д
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Е
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Ж
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") З
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") И
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") К
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Л
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") М
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Н
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") О
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") П
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Р
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") С
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Т
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") У
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Ф
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Ц
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Ч
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Ш
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Э
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Ю
+						.shops__sort_abc_item
+							a.shops__sort_abc_link(href="#") Я
+			// end shops__sort
+
+
+			.shops__box.ind
+				// begin shops__box_grid 
+				.grid.grid__7.shops__box_grid
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") MyToys
+							a(href="#")
+								img(src="img/shop-img1.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item.active
+							a.shops__box_link(href="#") Aliexpress
+							a(href="#")
+								img(src="img/shop-img2.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") bonprix
+							a(href="#")
+								img(src="img/shop-img3.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Lamoda                     
+							a(href="#")
+								img(src="img/shop-img4.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Летуаль
+							a(href="#")
+								img(src="img/shop-img5.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Юлмарт
+							a(href="#")
+								img(src="img/shop-img6.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Media Markt
+							a(href="#")
+								img(src="img/shop-img7.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") MyToys
+							a(href="#")
+								img(src="img/shop-img1.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item.active
+							a.shops__box_link(href="#") Aliexpress
+							a(href="#")
+								img(src="img/shop-img2.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") bonprix
+							a(href="#")
+								img(src="img/shop-img3.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Lamoda                     
+							a(href="#")
+								img(src="img/shop-img4.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Летуаль
+							a(href="#")
+								img(src="img/shop-img5.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Юлмарт
+							a(href="#")
+								img(src="img/shop-img6.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Media Markt
+							a(href="#")
+								img(src="img/shop-img7.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") MyToys
+							a(href="#")
+								img(src="img/shop-img1.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item.active
+							a.shops__box_link(href="#") Aliexpress
+							a(href="#")
+								img(src="img/shop-img2.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") bonprix
+							a(href="#")
+								img(src="img/shop-img3.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Lamoda                     
+							a(href="#")
+								img(src="img/shop-img4.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Летуаль
+							a(href="#")
+								img(src="img/shop-img5.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Юлмарт
+							a(href="#")
+								img(src="img/shop-img6.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Media Markt
+							a(href="#")
+								img(src="img/shop-img7.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") MyToys
+							a(href="#")
+								img(src="img/shop-img1.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item.active
+							a.shops__box_link(href="#") Aliexpress
+							a(href="#")
+								img(src="img/shop-img2.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") bonprix
+							a(href="#")
+								img(src="img/shop-img3.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Lamoda                     
+							a(href="#")
+								img(src="img/shop-img4.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Летуаль
+							a(href="#")
+								img(src="img/shop-img5.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Юлмарт
+							a(href="#")
+								img(src="img/shop-img6.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Media Markt
+							a(href="#")
+								img(src="img/shop-img7.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") MyToys
+							a(href="#")
+								img(src="img/shop-img1.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item.active
+							a.shops__box_link(href="#") Aliexpress
+							a(href="#")
+								img(src="img/shop-img2.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") bonprix
+							a(href="#")
+								img(src="img/shop-img3.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Lamoda                     
+							a(href="#")
+								img(src="img/shop-img4.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Летуаль
+							a(href="#")
+								img(src="img/shop-img5.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Юлмарт
+							a(href="#")
+								img(src="img/shop-img6.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+					.grid__wrapper
+						.grid__item
+							a.shops__box_link(href="#") Media Markt
+							a(href="#")
+								img(src="img/shop-img7.png", alt="#")
+							.grid__item_like
+							a.grid__item_rate(href="#")
+								.grid__item_stars
+									.grid__item_stars_full(style="width: 90%")
+								.grid__item_rate_number (182)
+				// end shops__box_grid
+
+
+			.line
+
+
+			// begin pagination
+			ul.pagination
+				li.prev
+					a.passive(href="#")
+				li
+					a.active(href="#") 1
+				li
+					a(href="#") 2
+				li
+					a(href="#") 3
+				li
+					a(href="#") 4
+				li
+					a(href="#") 5
+				li.sm
+					a(href="#") 6
+				li.sm
+					a(href="#") 7
+				li.sm
+					a(href="#") 8
+				li.sm
+					a(href="#") 9
+				li.sm
+					a(href="#") 10
+				li.lg
+					a(href="#") 11
+				li.lg
+					a(href="#") 12
+				li.lg
+					a(href="#") 13
+				li.lg
+					a(href="#") 14
+				li.lg
+					a(href="#") 15
+				li
+					a.hellip(href="#") &hellip;
+				li.sm
+					a(href="#") 81
+				li
+					a(href="#") 82                   
+				li.next
+					a(href="#")
+			// end pagination
+
+
+	.container_center
+		// begin lots
+		.lots
+			h3 Покупайте в магазинах и получайте подарки
+			p Покупайте в интернет-магазинах и копите баллы. Меняйте баллы на ШопКарты и получайте подарки. 
+				a(href="#") Подробнее о акции &gt;
+			p + Никогда не пропускайте! Получайте лучшие скидки магазинов к себе на почту.
+
+			a(href="#", class="btn btn__danger") Зарегистрироваться
+
+			p У вас есть свой аккаунт?
+				a(href="#" class="lots_a") Войдите
+		// end lots

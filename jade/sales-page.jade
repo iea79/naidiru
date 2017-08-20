@@ -1,0 +1,439 @@
+//- Подключаем общий шаблон
+extends template.jade
+//- Меняем Home на название страницы
+block title
+	title Страница распродаж
+
+block content
+	//- Тут с отступа начинаем писать код
+	
+	.sales__page_ban
+		a(href="#")
+			img(src="img/sale-ban.jpg", alt="")
+			.sales__page_ban_text Весення распродажа
+				b SALE -80%
+
+	.white__line
+		.container_center
+
+
+			// begin breadcrumb
+			.breadcrumb.ind
+				li
+					a(href="/") Главная
+				li
+					a(href="#") Страница распродаж			
+			// end breadcrumb
+			
+			div
+				.b__hashtag_list.b__hashtag_list-nothash.b__hashtag_list-last
+					.b__hashtag_label Показать:
+					a.b__hashtag_link(href="#") 
+						span Поделиться 
+					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Одежда и обувь
+					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Лучшие предложения
+					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Техника и Электроника
+					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Детские товары и Игрушки
+					select
+						option 
+							a(href="#") Одежда и обувь
+						option 
+							a(href="#") Лучшие предложения
+						option 
+							a(href="#") Техника и Электроника
+						option 
+							a(href="#") Детские товары и Игрушки
+	.container_center.sales__page
+
+		h1.ind Лучшие предложения сегодня
+
+		.sales__page_aside
+			// begin b__article_top 
+			.b__article_top
+				.b__article_top_left.b__article_social
+					.b__article_social_icon.ya-share2(data-services="vkontakte")
+					.b__article_social_icon.ya-share2(data-services="facebook")
+					.b__article_social_icon.ya-share2(data-services="twitter")
+					.b__article_social_icon.ya-share2(data-services="odnoklassniki")
+					.b__article_social_icon.ya-share2(data-services="gplus")
+					.b__article_social_icon.ya-share2(data-services="moimir")
+			// end b__article_top
+
+		.sales__page_content
+
+			// begin slider__grid 
+			.sales__page_grid
+				// Slide 1
+				.slider__item.slider__item_last
+					a.slider__grid_img(href="#")
+						img(src="img/most1.png", alt="#")
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+				// Slide 2
+				.slider__item.slider__item_last
+					a.slider__grid_img(href="#")
+						img(src="img/most2.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+						.slider__item_promo -30%
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -45%!
+
+				// Slide 3
+				.slider__item.slider__item_last
+					a.slider__grid_img(href="#")
+						img(src="img/most3.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+						.slider__item_promo -40%
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+				// Slide 4
+				.slider__item.slider__item_last
+					a.slider__grid_img(href="#")
+						img(src="img/most4.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+						.slider__item_promo.slider__item_promo-hot
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -45%!
+				
+				// Slide 1
+				.slider__item.slider__item_last.slider__item_last_new
+					a.slider__grid_img(href="#")
+						img(src="img/most1.png", alt="#")
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+				// Slide 2
+				.slider__item.slider__item_last.slider__item_last_new
+					a.slider__grid_img(href="#")
+						img(src="img/most2.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+						.slider__item_promo.slider__item_promo-gift
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#")Смартфон Самсунг со скидкой -45%!
+
+				// Slide 3
+				.slider__item.slider__item_last.slider__item_last_new
+					a.slider__grid_img(href="#")
+						img(src="img/most3.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+						.slider__item_promo -40%
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+				// Slide 4
+				.slider__item.slider__item_last.slider__item_last_new
+					a.slider__grid_img(href="#")
+						img(src="img/most4.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -45%!
+
+				// begin shoppel__save 
+				.shoppel__save
+					.shoppel__save_img
+						img(src="img/hero3lg.png", alt="")
+					.shoppel__save_content
+						.shoppel__save_top
+							
+							.shoppel__save_left
+								.shoppel__save_right
+									a(href="#").btn.btn__danger Зарегистрироваться
+									.shoppel__save_auth У вас есть свой аккаунт? 
+										a(href="#") Войти 
+											span в аккаунт &gt;
+
+								.shoppel__save_text-block
+									.shoppel__save_title Экономьте по полной
+									.shoppel__save_text Зарегистрируйтесь и узнавайте первым о лучших купонах.
+										span.txt__danger + Участвуйте в ежемесячных акциях и получите подарок мечты!
+						.shoppel__save_bottom.
+							Это Шоппел - супергерой Найди.ру. Она помогает экономить тысячам людям по всей России. Каждый день она находит супер-купоны и рассылает их своим подписчикам. Будьте с ней всегда на связи, зарегистрируйтесь!
+				// end shoppel__save 
+
+				// Slide 1
+				.slider__item
+					a.slider__grid_img(href="#")
+						img(src="img/most1.png", alt="#")
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+				// Slide 2
+				.slider__item.slider__item_last_new
+					a.slider__grid_img(href="#")
+						img(src="img/most2.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+						.slider__item_promo.slider__item_promo-gift
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -45%!
+
+				// Slide 3
+				.slider__item.slider__item_last_new
+					a.slider__grid_img(href="#")
+						img(src="img/most3.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+						.slider__item_promo -40%
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+				// Slide 4
+				.slider__item.slider__item_last_new
+					a.slider__grid_img(href="#")
+						img(src="img/most4.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -4#5%!
+
+			.new__sales_page_wrapper
+				h2.ind Скидки на одежду и обувь
+
+				// begin slider__grid 
+				.sales__page_grid
+					// Slide 1
+					.slider__item
+						a.slider__grid_img(href="#")
+							img(src="img/most1.png", alt="#")
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							a.slider__grid_text_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+					// Slide 2
+					.slider__item
+						a.slider__grid_img(href="#")
+							img(src="img/most2.png", alt="#")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo -30%
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -45%!
+
+					// Slide 3
+					.slider__item
+						a.slider__grid_img(href="#")
+							img(src="img/most3.png", alt="#")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo -40%
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							a.slider__grid_text_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+					// Slide 4
+					.slider__item
+						a.slider__grid_img(href="#")
+							img(src="img/most4.png", alt="#")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo.slider__item_promo-hot
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -45%!
+
+				h2.ind Скидки на технику и электронику
+
+				// begin slider__grid 
+				.sales__page_grid
+					// Slide 1
+					.slider__item
+						a.slider__grid_img(href="#")
+							img(src="img/most1.png", alt="#")
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							a.slider__grid_text_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+					// Slide 2
+					.slider__item
+						a.slider__grid_img(href="#")
+							img(src="img/most2.png", alt="#")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo -30%
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -45%!
+					// Slide 3
+					.slider__item
+						a.slider__grid_img(href="#")
+							img(src="img/most3.png", alt="#")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo -40%
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							a.slider__grid_text_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+
+					// Slide 4
+					.slider__item
+						a.slider__grid_img(href="#")
+							img(src="img/most4.png", alt="#")
+							.slider__grid_overlay 
+								|1240р. 
+								span 2120р.
+							.slider__item_promo.slider__item_promo-hot
+						.slider__grid_text
+							.slider__grid_name
+								|Магазин: 
+								a(href="#") Lamoda
+							a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -45%!
+
+	.white__line
+		.container_center
+
+			h2.ind Узнайте больше
+
+			// begin sales__more_grid
+			.sales__more_grid
+				.grid__wrapper
+					.grid__item
+						.sales__more_img
+							img(src="img/smore1.jpg", alt="#")
+						.sales__more_title Получить подарок проще простого ...
+						.sales__more_text 
+							p Покупайте в интернет-магазинах на любую сумму, копите баллы до 5000 и меняйте их на счастливые лотереи. <br>Каждое 5 число нового месяца мы будем выбирать победителей и дарить им супер-подарки.
+							p 1 балл = 1 рублю купленному в интернет-магазине;
+							a(href="#") Подробнее о ежемесячном розыгрыше&nbsp;&gt;
+				.grid__wrapper
+					.grid__item
+						.sales__more_img
+							img(src="img/smore2.jpg", alt="#")
+						.sales__more_title Мытье окон реклама
+						.sales__more_text 
+							p Мытье окон от 2000 рублей
+							a(href="#") Подробнее о Мастер окон&nbsp;&gt;
+				.grid__wrapper
+					.grid__item
+						.sales__more_img
+							img(src="img/smore3.jpg", alt="#")
+						.sales__more_title Товары дома реклама
+						.sales__more_text 
+							p Светильники и стоилы со скидкой до -45%. <br>Уют в доме, Супер мега распродажа!
+							a(href="#") Подробнее о ежемесячном розыгрыше&nbsp;&gt;
+			// end sales__more_grid
+			
+			.tipo-text.sales__page_description.js-more-wrapper
+
+				h2.ind Черная пятница - распродажа года
+
+				p Теперь и у Вас есть приятная возможность поучаствовать в ежегодной распродаже - Black Friday (Черная пятница), которая проводится в конце ноября. В дни Черной пятницы покупатели могут воспользоваться большими скидками представленными от известных интернет магазинов.
+
+				p Черная пятница 2016 в России список магазинов
+
+				p С 24 по 27 ноября 2016 года Вы можете принять участие в тотальной распродаже многочисленных видов товаров от электро бытовой техники до косметики и парфюмерии, одежды и обуви от популярных интернет магазинов. На странице скидок Вы найдете полный список магазинов участвующих в Черной пятнице 2016 в России, такие как: Ламода, М.Видео, Wildberries, Media Markt, Ebay, myToys, Летуаль, Adidas, Reebok, ECCO, Связной, 003, Nike, Quelle, Бонприкс.Как действовать по максимому в день распродаж Черной пятницы? Вот несколько правил для выгодного шоппинга: Обязательно подпишитесь на рассылку Найди.ру, с помощью которых вы будете в курсе всех выгодных предложений. (Рассылка приходит 1 раз в неделю, и отписаться сможете в любой момент). Подготовка списка товаров, которые вы планировали, делайте 
+					span.sales__page_description_dott ...
+				p.sales__page_description_moretext Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+				a(href="#" data-text-close="Показать полностью" data-text-open="Скрыть").js-more-link.sales__page_description_more Показать полностью
+			
+			h2.ind Популярные интернет-магазины
+
+			.column.sales__page_column
+				a(href="#").sales__page_column_link Lamoda
+				a(href="#").sales__page_column_link Снежная королева
+				a(href="#").sales__page_column_link Nike
+				a(href="#").sales__page_column_link Алиэкспресс
+				a(href="#").sales__page_column_link М.видео
+				a(href="#").sales__page_column_link Техносила
+				a(href="#").sales__page_column_link Quiksiver
+				a(href="#").sales__page_column_link Юлмарт
+				a(href="#").sales__page_column_link Lamoda
+				a(href="#").sales__page_column_link Снежная королева
+				a(href="#").sales__page_column_link Nike
+				a(href="#").sales__page_column_link Алиэкспресс
+				a(href="#").sales__page_column_link М.видео
+				a(href="#").sales__page_column_link Техносила
+				a(href="#").sales__page_column_link Quiksiver
+				a(href="#").sales__page_column_link Юлмарт
+				a(href="#").sales__page_column_link Lamoda
+				a(href="#").sales__page_column_link Снежная королева
+				a(href="#").sales__page_column_link Nike
+				a(href="#").sales__page_column_link Алиэкспресс
+
+	.container_center
+		// begin lots
+		.lots
+			h3 Покупайте в магазинах и получайте подарки
+			p Покупайте в интернет-магазинах и копите баллы. Меняйте баллы на ШопКарты и получайте подарки. 
+				a(href="#") Подробнее о акции &gt;
+			p + Никогда не пропускайте! Получайте лучшие скидки магазинов к себе на почту.
+
+			a(href="#", class="btn btn__danger") Зарегистрироваться
+
+			p У вас есть свой аккаунт?
+				a(href="#" class="lots_a") Войдите
+		// end lots

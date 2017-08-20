@@ -1,0 +1,1316 @@
+extends template.jade
+
+block variables
+	- bodyClass = "brand"
+
+block title
+	title Страница бренда
+
+block content
+	.white__line
+		.container_center
+
+
+			// begin breadcrumb
+			.breadcrumb.ind
+				li
+					a(href="/") Главная
+				li
+					a(href="office-shops.html") Все магазины
+				li
+					a(href="#") Обувь и Аксессуары
+			// end breadcrumb
+
+
+			h1 Купоны на скидку и промокоды Ламода (Lamoda) 
+
+			
+			// begin brand__top
+			.brand__top
+				
+				// сообщение
+				// .brand__top_right_reg Чтобы добавить магазин в список "Любимых", нужно: <br>
+					a(href="#") войти или зарегистрироваться &gt;
+
+				.brand__top_left
+					.brand__top_logo
+						img(src="img/sale-list1.png", alt="#")
+					.brand__top_rate_wrap
+						.brand__top_coupons Купоны Ламода
+						.brand__top_rate
+							.brand__top_stars
+								.brand__top_stars_full(style="width: 90%")
+							.brand__top_reviews
+								span.reviews_number 1282 
+								span.brand__top_reviews_text отзывов
+								span.reviews_number.brackets (1282)
+					.brand__top_prize
+						// Пользователь не авторизирован
+						.brand__top_prize_outside
+							.brand__top_prize_note Дарим подарки <br>
+								span каждый месяц
+							a.brand__top_link(href="prize.html", target="_blank") Узнать о розыгрыше &gt;
+							.brand__top_down
+								.brand__top_down_in Войти / Регистрация<br>
+									span чтобы участвовать в акциях
+								.brand__top_down_arrow
+						// Пользователь авторизирован
+						.brand__top_prize_inside
+							a.btn.btn__danger.brand__top_prize_btn(href="#", target="_blank") Перейдите в магазин &gt;
+							.brand__top_down
+								.brand__top_down_in
+									span Перейдите в магазин, чтобы получить баллы и участвовать в акциях
+								.brand__top_down_arrow
+								.brand__top_down_question
+				.brand__top_right_top.social__down
+					a.sm_social_trigger(href="#") Поделиться
+					.sm_social
+						.sm_social_icon
+							.ya-share2(data-services="vkontakte")
+						.sm_social_icon
+							.ya-share2(data-services="facebook")				
+						.sm_social_icon
+							.ya-share2(data-services="odnoklassniki")
+						.sm_social_icon
+							.ya-share2(data-services="gplus")
+						.sm_social_icon
+							.ya-share2(data-services="twitter")
+					.brand__top_right_subscribe 
+						.brand__top_right_subscribe_in Любимый магазин 
+							span.del в список Любимых
+						.brand__top_right_subscribe_out Убрать 
+							span.del магазин 
+							span из 
+							span.del списка 
+							span Любимых
+				.brand__top_right
+					// begin slider__grid
+					.slider.slider__grid_medium.js-slider-arrow
+						// Slide 1
+						.slider__item
+							.slider__grid_img
+								a(href="#")
+									img(src="img/most1.png", alt="#")
+								.slider__grid_overlay 
+									|1240р. 
+									span 2120р.
+							.slider__grid_text
+								.slider__grid_name
+									a(href="#") Lamoda
+								a.slider__grid_text_link(href="#") Скидка -50% на одежду для дома!
+
+						// Slide 2
+						.slider__item
+							.slider__grid_img
+								a(href="#")
+									img(src="img/most4.png", alt="#")
+								.slider__grid_overlay.dn
+									|1240р. 
+									span 2120р.
+							.slider__grid_text
+								.slider__grid_name
+									a(href="#") Lamoda
+								a.slider__grid_text_link(href="#") Скидка -50% на одежду!                                     
+
+						// Slide 3
+						.slider__item
+							.slider__grid_img
+								a(href="#")
+									img(src="img/most3.png", alt="#")
+								.slider__grid_overlay.dn 
+									|1240р. 
+									span 2120р.
+							.slider__grid_text
+								.slider__grid_name
+									a(href="#") Снежная королева
+								a.slider__grid_text_link(href="#") Скидка -50% на одежду!
+
+
+						// Slide 4
+						.slider__item
+							.slider__grid_img
+								a(href="#")
+									img(src="img/most5.png", alt="#")
+								.slider__grid_overlay 
+									|1240р. 
+									span 2120р.
+							.slider__grid_text
+								.slider__grid_name 
+									a(href="#") Lamoda
+								a.slider__grid_text_link(href="#") Скидка -50% на одежду!
+
+						// Slide 5
+						.slider__item
+							.slider__grid_img
+								a(href="#")
+									img(src="img/most2.png", alt="#")
+								.slider__grid_overlay.dn
+									|1240р. 
+									span 2120р.
+							.slider__grid_text
+								.slider__grid_name
+									a(href="#") Lamoda
+								a.slider__grid_text_link(href="#") Скидка -50% на одежду!              
+
+						// Slide 6
+						.slider__item
+							.slider__grid_img
+								a(href="#")
+									img(src="img/most1.png", alt="#")
+								.slider__grid_overlay 
+									|1240р. 
+									span 2120р.
+							.slider__grid_text
+								.slider__grid_name
+									a(href="#") Lamoda
+								a.slider__grid_text_link(href="#") Скидка -50% на одежду для дома!
+
+						// Slide 7
+						.slider__item
+							.slider__grid_img
+								a(href="#")
+									img(src="img/most3.png", alt="#")
+								.slider__grid_overlay 
+									|1240р. 
+									span 2120р.
+							.slider__grid_text
+								.slider__grid_name 
+									a(href="#") Снежная королева
+								a.slider__grid_text_link(href="#") Скидка -50% на одежду!
+
+
+						// Slide 8
+						.slider__item
+							.slider__grid_img
+								a(href="#")
+									img(src="img/most4.png", alt="#")
+								.slider__grid_overlay 
+									|1240р. 
+									span 2120р.
+							.slider__grid_text
+								.slider__grid_name 
+									a(href="#") Lamoda
+								a.slider__grid_text_link(href="#") Скидка -50% на одежду!
+						// Slide 9
+						.slider__item
+							.slider__grid_img
+								img(src="img/most1.png", alt="#")
+								.slider__grid_info
+									.slider__grid_p Посмотреть все самые лучшие скидки 
+										span на одной странице
+									a.btn.btn__danger.slider__grid_btn(href="sales-page.html") Все скидки
+			// end brand__top
+
+
+	.container_center.main
+
+
+		// begin sidebar
+		.main__content_sidebar
+
+			a.sale__list_trigger(href="#") Фильтр промокодов
+			
+			.sidebar__section_wrap
+				.sidebar__section.js-more-wrapper
+					.sidebar__section_name Как получить скидку?
+					.sidebar__section_video
+						<iframe src="https://www.youtube.com/embed/yAnMys0lYyo" frameborder="0" allowfullscreen></iframe>
+				.sidebar__section
+					.sidebar__section_name Тип промокода:
+					form.promocode__type_form(action="#")
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt1")
+							label.checkbox__label(for="pt1") Горящий
+								span.promocode__type_number (12)
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt2")
+							label.checkbox__label(for="pt2") Новый
+								span.promocode__type_number (2)
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt3")
+							label.checkbox__label(for="pt3") Истекает
+								span.promocode__type_number (3)
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt4")
+							label.checkbox__label(for="pt4") % скидки
+								span.promocode__type_number (4)
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt5")
+							label.checkbox__label(for="pt5") Подарок
+								span.promocode__type_number (2)
+						.promocode__type_row.checkbox
+							input.checkbox__input(type="checkbox" id="pt6")
+							label.checkbox__label(for="pt6") Бесплатная <br>доставка
+								span.promocode__type_number (1)
+				
+				.sidebar__section
+					.sidebar__section_name Похожие магазины
+					.sidebar__section_list.js-more-wrapper
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Lamoda
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Снежная королева
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Nike
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Алиэкспресс
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Wildberries
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Lamoda
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Снежная королева
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Nike
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Алиэкспресс
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Wildberries
+						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины") + Показать больше
+				
+				.sidebar__section
+					.sidebar__section_name Популярные магазины
+					.sidebar__section_list.js-more-wrapper
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") М.видео
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Снежная королева
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Nike
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Алиэкспресс
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Wildberries
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") М.видео
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Снежная королева
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Nike
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Алиэкспресс
+						.sidebar__section_list_item
+							a.sidebar__section_list_link(href="#") Wildberries
+						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины") + Показать больше
+		// end sidebar
+
+
+		// begin main__content_center
+		.main__content_center
+
+			// Промокоды ЕСТЬ
+			.main__content_center_first
+
+				.sale__list_wrap.brand__sale
+					h2 Промокоды Ламода на февраль 2017
+
+					.sale__list_inform Количество промокодов:
+						span.sale__list_number 5					
+
+					// begin sale__list
+					.sale__list.js_more_wrap
+
+						.sale__list_reg Нужно:
+							a(href="#") войти или зарегистрироваться
+						
+						// Row 1
+						.sale__list_row.js_more_item.new
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list4.png", alt="#")
+								.btn.btn__success Новый
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+							.sale__list_top 
+								span Используй купон и получай подарки!
+								.tooltip__help
+									.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+										a(href="#") Подробнее об акции &gt;
+						
+						// Row 2
+						.sale__list_row.js_more_item.hot
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list6.png", alt="#")
+								.btn.btn__expires Истекает
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от супер - известных магазинов России! Успейте купить!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+							.sale__list_top 
+								span Используй купон и получай подарки!
+								.tooltip__help
+									.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+										a(href="#") Подробнее об акции &gt;
+
+						// Row 3
+						.sale__list_row.js_more_item.free__shipping.show
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list4.png", alt="#")
+								.btn.btn__success Новый
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+									a(href="#", class="btn btn__primary code__wrap_btn", data-toggle="modal", data-target="#modal__open-action") Открыть акцию
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+							.sale__list_top 
+								span Используй купон и получай подарки!
+								.tooltip__help
+									.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+										a(href="#") Подробнее об акции &gt;
+						
+						// Row 4
+						.sale__list_row.js_more_item.gift.open
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list6.png", alt="#")
+								.btn.btn__expires Истекает
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+							.sale__list_top 
+								span Используй купон и получай подарки!
+								.tooltip__help
+									.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+										a(href="#") Подробнее об акции &gt;
+					// end sale__list
+					
+
+				.sale__list_ad
+					.sale__list_ad_left
+					.sale__list_ad_center.subscribe
+						.sale__list_ad_title Не пропустите ни одной супер-скидки!
+						.sale__list_ad_terms
+							|Узнавайте первым о самых больших скидках + участвуйте в ежемесячных акциях и получайте подарки!
+					.sale__list_ad_center.mail
+						.sale__list_ad_title Пожалуйста, подтвердите свой емайл
+						.sale__list_ad_terms
+							|Поздравляем! Вы уже в шаге от лучших скидок этого магазина. <br>Для Вашей безопасности, мы отправили вам письмо с подвержением Вашего емайла на указанную почту.
+					form.sale__list_ad_right(action="#")
+						input(type="email" placeholder="Введите ваш e-mail")
+						button.btn.btn__danger Подписаться
+					.sale__list_ad_enter
+						.sale__list_ad_enter_in Вы уже подписаны и у вас даже есть личный кабинет. <br>Пожалуйста, 
+							a(href="#") войдите в аккаунт &gt;
+
+				// Тот же блок, только класс second
+				.sale__list_ad.second
+					.sale__list_ad_left
+					.sale__list_ad_center.subscribe
+						.sale__list_ad_title Не пропустите ни одной супер-скидки!
+						.sale__list_ad_terms
+							|Узнавайте первым о самых больших скидках + участвуйте в ежемесячных акциях и получайте подарки!
+					.sale__list_ad_center.mail
+						.sale__list_ad_title Пожалуйста, подтвердите свой емайл
+						.sale__list_ad_terms
+							|Поздравляем! Вы уже в шаге от лучших скидок этого магазина. <br>Для Вашей безопасности, мы отправили вам письмо с подвержением Вашего емайла на указанную почту.
+					form.sale__list_ad_right(action="#")
+						input(type="email" placeholder="Введите ваш e-mail")
+						button.btn.btn__danger Подписаться
+					.sale__list_ad_enter
+						.sale__list_ad_enter_in Вы уже подписаны и у вас даже есть личный кабинет. <br>Пожалуйста, 
+							a(href="#") войдите в аккаунт &gt;
+
+
+
+				.sale__list_add
+					.sale__list_add_name Пример пример пример
+					.sale__list_add_p.first Участвуйте в летнем 6 ежемесячном розыгрыше (Май).
+					.sale__list_add_p Совершайте покупки через нас, копите баллы и меняйте их на лотерейки. Выигрывайте подарки!
+					button.btn.btn__danger.sale__list_add_btn Участвовать
+				
+
+				.sale__list_wrap.brand__sale
+				
+					// begin sale__list 
+					.sale__list.js_more_wrap
+
+						// Row 5
+						.sale__list_row.js_more_item.discount
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list4.png", alt="#")
+								.btn.btn__success Новый
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+							.sale__list_top 
+								span Используй купон и получай подарки!
+								.tooltip__help
+									.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+										a(href="#") Подробнее об акции &gt;
+						// Row 6
+						.sale__list_row.js_more_item.expire
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list6.png", alt="#")
+								.btn.btn__expires Истекает
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+							.sale__list_top 
+								span Используй купон и получай подарки!
+								.tooltip__help
+									.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+										a(href="#") Подробнее об акции &gt;
+					// end sale__list
+					
+			
+				.sale__list_wrap
+					h3 Похожие промокоды
+						
+					// begin sale__list 
+					.sale__list.js_more_wrap
+
+						// Row 7
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list4.png", alt="#")
+								.btn.btn__success Новый
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+						
+						// Row 8
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list6.png", alt="#")
+								.btn.btn__expires Истекает
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+					// end sale__list
+
+
+			// Промокодов нет
+			.main__content_center_second
+
+				.no__coupons
+					.no__coupons_img
+					.no__coupons_h Извините, но у этого магазина нет действущих купонов!
+					.no__coupons_p P.S К сожалению, Шоппел нигде не смогла найти купоны этого магазина. <br>Ей очень жаль, что Вы не смогли сэкономить, но она пообещала, где бы они не были, она достанет их, специально для Вас!
+
+
+				sale__list_wrap
+					h3 Промокоды похожих магазинов
+						
+					// begin sale__list 
+					.sale__list.js_more_wrap
+
+						.sale__list_reg Нужно:
+							a(href="#") войти или зарегистрироваться
+
+						// Row 1
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list4.png", alt="#")
+								.btn.btn__success Новый
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+
+						// Row 2
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list6.png", alt="#")
+								.btn.btn__expires Истекает
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+
+						// Row 3
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list4.png", alt="#")
+								.btn.btn__success Новый
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+
+						// Row 4
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list6.png", alt="#")
+								.btn.btn__expires Истекает
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+
+					// end sale__list
+
+
+			// Нет купонов
+			.main__content_center_third
+
+				.no__coupons_banner Баннер
+
+
+				sale__list_wrap
+					h3 Промокоды похожих магазинов
+						
+					// begin sale__list 
+					.sale__list.js_more_wrap
+
+						.sale__list_reg Нужно:
+							a(href="#") войти или зарегистрироваться
+
+						// Row 1
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list4.png", alt="#")
+								.btn.btn__success Новый
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+
+						// Row 2
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list6.png", alt="#")
+								.btn.btn__expires Истекает
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+
+						// Row 3
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list4.png", alt="#")
+								.btn.btn__success Новый
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+
+						// Row 4
+						.sale__list_row.js_more_item
+							a(href="#").sale__list_mob-link
+							.sale__list_left
+								a.sale__list_img(href="#")
+									img(src="img/sale-list6.png", alt="#")
+								.btn.btn__expires Истекает
+							.sale__list_right
+								a(href="#").sale__list_save Сохранить
+								.code__wrap
+									.code__field D146SAFR
+									a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
+								| Использовано: 1283 раза
+							.sale__list_center
+								a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+								.sale__list_deadline
+									i.icon__time_end
+									| Заканчивается через 15 дней
+								.sale__list_terms
+									|Условия: Промокод действителен после ввода промокода в специальн Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол
+									a(href="#").sale__list_more Подробнее
+								.sale__list_bottom
+									.sale__list_info
+										|Используй купон и получай подарки!
+										.tooltip__help
+											.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШорКарты и участвуйте в ежемесячных акциях. 
+												a(href="#") Подробнее об акции &gt;
+									a(href="#") Все промокоды Bon prix
+			
+			a(href="#").to_top Наверх
+		// end main__content_center
+
+
+	.white__line
+		.container_center
+
+			// begin brand__com
+			.brand__com
+				.brand__com_name Отзывы покупателей 
+					span.shop__name магазина Ламода 
+					span.number__reviews (1282)
+				.brand__com_rate
+					.brand__com_rate_stars
+						.brand__com_rate_stars_full(style="width: 90%;")
+					.brand__com_rate_value 4,3
+
+
+				// begin b__article_com 
+				.b__article_com
+					.b__article_com_list
+
+						.b__article_com_trigger Написать отзыв о магазине
+
+						.b__article_com_item.b__article_com_first.no-reg
+							.b__article_com_left
+								img.b__article_com_user(src="img/question.svg", alt="#")
+							
+							.b__article_com_right.area
+								textarea(placeholder="Ваше сообщение ...")
+								.b__article_com_rate
+									.b__article_com_rate_text Оцените магазин:
+									.b__article_com_rate_stars
+										.b__article_com_rate_stars_full(style="width: 80%;")
+								.b__article_com_up
+									button.btn__danger.btn Комментировать
+									.b__article_com_text Чтобы написать свой отзыв, необходимо <br>
+										a(href="#") войти / зарегистрироваться
+							
+						.b__article_com_item.b__article_com_first.reg
+							.b__article_com_left
+								img.b__article_com_user(src="img/question.svg", alt="#")
+
+							.b__article_com_right.area
+								textarea(placeholder="Ваше сообщение ...")
+								.b__article_com_rate
+									.b__article_com_rate_text Оцените магазин:
+									.b__article_com_rate_stars
+										.b__article_com_rate_stars_full(style="width: 80%;")
+									.b__article_com_help_wrap
+										.b__article_com_help Вы забыли оценить магазин! Пожалуйста, оцените магазин, просто поставив нужное кол-во звездочек.
+										.b__article_com_help_trigon
+								.b__article_com_up
+									button.btn__danger.btn Комментировать
+									.b__article_com_text Что Вы думаете о магазине? <br>Поделитесь с нами своим мнением!
+						
+						.b__article_com_item
+							.b__article_com_left
+								img.b__article_com_user(src="img/user1.png", alt="#")
+							.b__article_com_right
+								.b__article_com_info
+									.b__article_com_user-name Дарья
+									.date 25.02.2016
+								.b__article_com_value
+									.b__article_com_value_stars
+										.b__article_com_value_stars_full(style="width: 80%;")
+									.b__article_com_value_right
+										.b__article_com_value_text
+										button.btn.btn__success.b__article_com_value_btn Да 
+											span.number__yes (5)
+										button.btn.btn__danger.b__article_com_value_btn Нет 
+											span.number__no (1)
+								p Делала заказ на этом сайте впервые, заказывала пальто. Нашла и по той цене, по которой планировала. Забирала самовывозом (так мне былоудобнее) в ТЦ КронПарк на Водном стадионе, там все очень удобно, несколько больших примерочных, вежливые консультанты. Доставка туда была бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей. Бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей.
+								.b__article_com_answer
+									.b__article_com_info-answer
+										.b__article_com_user-name Найди.ру
+										.date 25.02.2016
+									p Здравствуйте, Дарья <br>
+									span Мы написали Вам в личное сообщение. Пожалуйста, ответьте там нам на вопрос: Когда Вы купили товар?
+									p.b__article_com_sign С уважением, служба поддержки Найди.ру
+						.b__article_com_item
+							.b__article_com_left
+								img.b__article_com_user(src="img/user2.png", alt="#")
+							.b__article_com_right
+								.b__article_com_info
+									.b__article_com_user-name Александра
+									.date 25.02.2016
+								.b__article_com_value
+									.b__article_com_value_stars
+										.b__article_com_value_stars_full(style="width: 80%;")
+									.b__article_com_value_right
+										.b__article_com_value_text
+										button.btn.btn__success.b__article_com_value_btn Да 
+											span.number__yes (5)
+										button.btn.btn__danger.b__article_com_value_btn Нет 
+											span.number__no (1)
+								p Делала заказ на этом сайте впервые, заказывала пальто. Нашла и по той цене, по которой планировала. Забирала самовывозом (так мне былоудобнее) в ТЦ КронПарк на Водном стадионе, там все очень удобно, несколько больших примерочных, вежливые консультанты. Доставка туда была бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей. Бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей.
+						.b__article_com_item
+							.b__article_com_left
+								img.b__article_com_user(src="img/user3.png", alt="#")
+							.b__article_com_right
+								.b__article_com_info
+									.b__article_com_user-name Артем
+									.date 25.02.2016
+								.b__article_com_value
+									.b__article_com_value_stars
+										.b__article_com_value_stars_full(style="width: 80%;")
+									.b__article_com_value_right
+										.b__article_com_value_text
+										button.btn.btn__success.b__article_com_value_btn Да 
+											span.number__yes (5)
+										button.btn.btn__danger.b__article_com_value_btn Нет 
+											span.number__no (1)
+								p Делала заказ на этом сайте впервые, заказывала пальто. Нашла и по той цене, по которой планировала. Забирала самовывозом (так мне былоудобнее) в ТЦ КронПарк на Водном стадионе, там все очень удобно, несколько больших примерочных, вежливые консультанты. Доставка туда была бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей. Бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей.
+						.b__article_com_item
+							.b__article_com_left
+								img.b__article_com_user(src="img/user_no.png", alt="#")
+							.b__article_com_right
+								.b__article_com_info
+									.b__article_com_user-name Мария
+									.date 25.02.2016
+								.b__article_com_value
+									.b__article_com_value_stars
+										.b__article_com_value_stars_full(style="width: 80%;")
+									.b__article_com_value_right
+										.b__article_com_value_text
+										button.btn.btn__success.b__article_com_value_btn Да 
+											span.number__yes (5)
+										button.btn.btn__danger.b__article_com_value_btn Нет 
+											span.number__no (1)
+								p Делала заказ на этом сайте впервые, заказывала пальто. Нашла и по той цене, по которой планировала. Забирала самовывозом (так мне былоудобнее) в ТЦ КронПарк на Водном стадионе, там все очень удобно, несколько больших примерочных, вежливые консультанты. Доставка туда была бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей. Бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей.
+						.b__article_com_item
+							.b__article_com_left
+								img.b__article_com_user(src="img/user1.png", alt="#")
+							.b__article_com_right
+								.b__article_com_info
+									.b__article_com_user-name Дарья
+									.date 25.02.2016
+								.b__article_com_value
+									.b__article_com_value_stars
+										.b__article_com_value_stars_full(style="width: 80%;")
+									.b__article_com_value_right
+										.b__article_com_value_text
+										button.btn.btn__success.b__article_com_value_btn Да 
+											span.number__yes (5)
+										button.btn.btn__danger.b__article_com_value_btn Нет 
+											span.number__no (1)
+								p Делала заказ на этом сайте впервые, заказывала пальто. Нашла и по той цене, по которой планировала. Забирала самовывозом (так мне былоудобнее) в ТЦ КронПарк на Водном стадионе, там все очень удобно, несколько больших примерочных, вежливые консультанты. Доставка туда была бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей. Бесплатная, т.к. заказ был больше 1500 рублей. Размер подошел, вещь села хорошо. Теперь планирую заказать еще несколько вещей.
+						button.btn__danger.btn.b__article_com_btn Показать больше отзывов
+					
+				// end b__article_com
+				
+			// end brand__com
+
+
+	.container_center.down
+
+		// begin brand__info
+		.brand__info
+
+			//  brand__info Блок 1
+			.brand__info_item
+				.brand__info_about
+					.brand__info_name Об интернет-магазине Ламода
+					.brand__info_p Интернет-магазин одежды и обуви Ларедут Laredoute – это интернет-магазин изысканной французской моды, который специализируется на товарах для женщин и мужчин, а также их детей.
+					.brand__info_p Магазин гарантирует 100% французское качество и подлинность всех марок. Достоинства онлайн-магазина: хорошее качество Магазин гарантирует 100% французское качество и подлинность всех марок. Достоинства онлайн-магазина: хорошее качество...
+					a.brand__info_link(href="#") Показать полностью
+				.brand__info_advantage
+					.brand__info_name Преимущества магазина &gt;
+					.brand__info_advantage_item
+						.brand__info_advantage_left
+							img(src="img/faqs1.png", alt="#")
+						.brand__info_advantage_right
+							.brand__info_advantage_name Бесплатная доставка
+							.brand__info_advantage_p при покупке от 5000 рублей
+					.brand__info_advantage_item
+						.brand__info_advantage_left
+							img(src="img/faqs2.png", alt="#")
+						.brand__info_advantage_right
+							.brand__info_advantage_name Лучший рейтинг
+							.brand__info_advantage_p На основе отзывов!
+					.brand__info_advantage_item
+						.brand__info_advantage_left
+							img(src="img/faqs3.png", alt="#")
+							.tooltip__help.big
+								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+									a(href="#") Подробнее об акции &gt;
+									.tooltip__text_big
+						.brand__info_advantage_right
+							.brand__info_advantage_name Участвует в акции
+							.brand__info_advantage_p За покупку в этом магазине Вы можете получить балл.
+							a.brand__info_advantage_link(href="#") Войти в свой аккаунт
+					.brand__info_advantage_item
+						.brand__info_advantage_left
+							img(src="img/faqs4.png", alt="#")
+						.brand__info_advantage_right
+							.brand__info_advantage_name Примерка перед покупкой
+							.brand__info_advantage_p То, что нужно!
+				
+				.brand__trigger Об интернет-магазине
+				.brand__info_about_down.brand__info_mobil
+					.brand__info_name Об интернет-магазине Ламода
+					.brand__info_p Интернет-магазин одежды и обуви Ларедут Laredoute – это интернет-магазин изысканной французской моды, который специализируется на товарах для женщин и мужчин, а также их детей.
+					.brand__info_p Магазин гарантирует 100% французское качество и подлинность всех марок. Достоинства онлайн-магазина: хорошее качество Магазин гарантирует 100% французское качество и подлинность всех марок. Достоинства онлайн-магазина: хорошее качество...
+					a.brand__info_link(href="#") Показать полностью
+			
+
+			//  brand__info Блок 2
+			.brand__info_item
+				.brand__trigger.mt_20 Как использовать промокод?
+				.brand__info_name Как использовать промокод Ламода? (3 шага)
+				.brand__info_use.brand__info_mobil
+					.brand__info_use_item
+						img.brand__info_use_img(src="img/step-img1.jpg", alt="#")
+						.brand__info_use_info
+							img.brand__info_use_left(src="img/step1.png", alt="#")
+							.brand__info_use_right Выберите нужный промокод и скопируйте его код
+					.brand__info_use_item
+						img.brand__info_use_img(src="img/step-img2.jpg", alt="#")
+						.brand__info_use_info
+							img.brand__info_use_left(src="img/step2.png", alt="#")
+							.brand__info_use_right Добавьте в корзину товар и перейдите к оформлению заказа
+					.brand__info_use_item
+						img.brand__info_use_img(src="img/step-img3.jpg", alt="#")
+						.brand__info_use_info
+							img.brand__info_use_left(src="img/step3.png", alt="#")
+							.brand__info_use_right Вставьте скопированный код в специальное поле для  промокода 
+			
+
+			//  brand__info Блок 3
+			.brand__info_item.brand__info_conditions
+
+				.brand__trigger.mt_20 Контакты магазина
+				.brand__info_conditions_item
+					.brand__info_conditions_name Контакты магазина:
+					.brand__contact.brand__info_mobil
+						.brand__contact_item
+							a(href="http://www.lamoda.ru") http://www.lamoda.ru
+						.brand__contact_item 8(495)783-2010.
+						.brand__contact_item Дмитровское шоссе, 100, строение 2, Москва, 127591.
+						.brand__contact_item
+							a(href="mailto:info@bonprix.ru") info@bonprix.ru.
+					
+			.brand__info_item.brand__info_conditions
+
+				.brand__trigger.mt_20 Способы оплаты
+				.brand__info_conditions_item
+					.brand__info_conditions_name Способы оплаты:
+					.brand__payment.brand__info_mobil
+						.brand__payment_item 
+							span.bold При получении:<br>
+							span - Наличными<br>
+							span - Банковской картой
+						.brand__payment_item 
+							span.bold Онлайн:<br>
+							span - Картой (VISA, MasterCard);<br>
+							span - Платежной системой (PayPal, Яндекс деньги).
+					
+			.brand__info_item.brand__info_conditions
+
+				.brand__trigger.mt_20 Доставка магазина
+				.brand__info_conditions_item
+					.brand__info_conditions_name Доставка
+					.brand__delivery.brand__info_mobil
+						.brand__delivery_item Средний срок доставки:<br>
+							span.bold 20 дней
+						.brand__delivery_item
+							span - Почта россии<br>
+							span - Курьерская служба (СДЭК, Boxberry)<br>
+							span - Пункт выдачи<br>
+							span - Постамат (PickPoint)
+					
+			.brand__info_item.brand__info_conditions
+
+				.brand__trigger.mt_20 Условия возрата
+				.brand__info_conditions_item
+					.brand__info_conditions_name Условия возврата
+					.brand__return.brand__info_mobil
+						.brand__return_item Товар можно вернуть в течение:
+							span.bold 30 дней
+						.brand__return_item Для этого нужно заполнить специальный бланк и отправить его вместе с товаром на адрес предствителя.
+
+			
+			//  brand__info Блок 4
+			.brand__info_item
+				.brand__info_rules
+					img.brand__info_rules_img(src="img/icon-sure2.png", alt="#")
+					.brand__info_rules_info
+						.brand__info_rules_name ОБРАТИТЕ ВНИМАНИЕ:
+						.brand__info_rules_p - При покупке в мобильном приложении магазина, покупка будет не засчитана.
+						.brand__info_rules_p - Ознакомьтесь с 
+							a(href="#") правилами покупок.
+
+
+			//  brand__info Блок 5
+			.brand__info_item
+				.brand__info_completed
+					.brand__info_name Завершенные купоны
+					.brand__info_completed_item
+						.brand__info_completed_left Завершен
+						.brand__info_completed_right
+							.brand__info_completed_action Скидка до -50% на одежду и обувь от брендов!
+							.brand__info_completed_rules Условия: 
+								span.rules Промокод действителен после ввода промокода в специальное пол Промокод действителен после ввода промокода в специальное пол
+						a.brand__info_completed_more(href="#") Подробнее
+					.brand__info_completed_item
+						.brand__info_completed_left Завершен
+						.brand__info_completed_right
+							.brand__info_completed_action Скидка до -50% на одежду и обувь от брендов!
+							.brand__info_completed_rules Условия: 
+								span.rules Промокод действителен после ввода промокода в специальное пол Промокод действителен после ввода промокода в специальное пол
+						a.brand__info_completed_more(href="#") Подробнее
+					.brand__info_completed_item
+						.brand__info_completed_left Завершен
+						.brand__info_completed_right
+							.brand__info_completed_action Скидка до -50% на одежду и обувь от брендов!
+							.brand__info_completed_rules Условия: 
+								span.rules Промокод действителен после ввода промокода в специальное пол Промокод действителен после ввода промокода в специальное пол
+						a.brand__info_completed_more(href="#") Подробнее
+					a.brand__info_completed_link(href="#") + Показать больше 
+						span истекших купонов
+		// end brand__info
+
+
+	.white__line
+		.container_center
+
+			.section__title Люди также смотрят
+
+			.category__box
+				// begin category__row
+				.category__row_grid.scrollbar-inner
+					.grid
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop1.jpg", alt="#")
+								p Промокоды Quelle
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop2.jpg", alt="#")
+								p Коды скидок и акций MyToys
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop3.jpg", alt="#")
+								p Quelle
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop4.jpg", alt="#")
+								p Quelle
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop5.jpg", alt="#")
+								p Quelle
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop6.jpg", alt="#")
+								p Quelle
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/shop6.jpg", alt="#")
+								p Quelle
+				// end category__row
+
+				// begin category__row
+				.category__row_grid.scrollbar-inner
+					.grid
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img8.jpg", alt="#")
+								p Скидки на страницу распродаж
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img3.jpg", alt="#")
+								p Обувь
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img5.jpg", alt="#")
+								p Детские товары
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img4.jpg", alt="#")
+								p Техника
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img2.jpg", alt="#")
+								p Смартфоны
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img1.jpg", alt="#")
+								p Часы
+						.grid__wrapper
+							a.grid__item(href="#")
+								img(src="img/cat-img1.jpg", alt="#")
+								p Часы
+				// end category__box_grid
+
+
+	.container_center
+		// begin lots
+		.lots
+			h3 Покупайте в магазинах и получайте подарки
+			p Покупайте в интернет-магазинах и копите баллы. Меняйте баллы на ШопКарты и получайте подарки. 
+				a(href="#") Подробнее о акции &gt;
+			p + Никогда не пропускайте! Получайте лучшие скидки магазинов к себе на почту.
+
+			a(href="#", class="btn btn__danger") Зарегистрироваться
+
+			p У вас есть свой аккаунт?
+				a(href="#" class="lots_a") Войдите
+		// end lots
