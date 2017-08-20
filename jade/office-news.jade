@@ -1,7 +1,7 @@
 extends template.jade
 
 block variables
-	- bodyClass = "office"
+	- bodyClass = "office office-news"
 
 block title
 	title Личный кабинет - Написать нам + оповещение
@@ -288,6 +288,22 @@ block content
 		// begin main__content_center 
 		.main__content_center
 
+			// begin office__support 
+			.office__support
+				a.btn.btn__danger.office__support_shopcard(href="#") Поменяйте чек на ШопКарту
+				button.btn.btn__primary.office__support_trigger
+					.bold Написать нам <br>
+					|Служба поддержки Найди.ру
+				.office__news_support
+					.office__news_support_head
+						.office__news_support_name Шоппел
+						p Служба поддержки Найди.ру
+					.office__news_support_body
+						.office__news_support_h Ваше сообщение
+						textarea(placeholder="Есть вопрос? Напишите его сюда! Шоппел ответит на Ваш вопрос электронной почтой, в ближайшее время.")
+						button.btn.btn__danger Отправить нам	
+			// end office__support 
+
 			h1 Ваши новости и уведомления
 
 			
@@ -298,8 +314,9 @@ block content
 				.office__news_left.column
 					.office__news_list
 						.office__news_item
-							img.office__news_item_img(src="img/news-img1.jpg", alt="#")
-							.office__news_item_info Акция в Снежной Королеве! Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. Успейте купить!
+							a(href="#")
+								img.office__news_item_img(src="img/news-img1.jpg", alt="#")
+							a.office__news_item_info(href="#") Акция в Снежной Королеве! Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. Успейте купить!
 							.office__news_item_ago
 								span.hours__ago 1 
 								час назад
@@ -313,8 +330,9 @@ block content
 									.news__del_p Пока не поздно, ее можно вернуть!
 									button.news__del_restore.btn Восстановить запись
 						.office__news_item
-							img.office__news_item_img(src="img/news-img2.jpg", alt="#")
-							.office__news_item_info Акция в Ив Роше. Только сегодня подарок каждому за покупку!
+							a(href="#")
+								img.office__news_item_img(src="img/news-img2.jpg", alt="#")
+							a.office__news_item_info(href="#") Акция в Ив Роше. Только сегодня подарок каждому за покупку!
 							.office__news_item_ago
 								span.hours__ago 1 
 								час назад
@@ -344,8 +362,9 @@ block content
 									.news__del_p Пока не поздно, ее можно вернуть!
 									button.news__del_restore.btn Восстановить запись
 						.office__news_item
-							img.office__news_item_img(src="img/news-img3.jpg", alt="#")
-							.office__news_item_info Акция Март-2017. Посмотрите, кто получает подарок в этом месяце!
+							a(href="#")
+								img.office__news_item_img(src="img/news-img3.jpg", alt="#")
+							a.office__news_item_info(href="#") Акция Март-2017. Посмотрите, кто получает подарок в этом месяце!
 							.office__news_item_ago
 								span.hours__ago 1 
 								час назад
@@ -375,8 +394,9 @@ block content
 									.news__del_p Пока не поздно, ее можно вернуть!
 									button.news__del_restore.btn Восстановить запись
 						.office__news_item
-							img.office__news_item_img(src="img/news-img4.jpg", alt="#")
-							.office__news_item_info Большая распродажа в Aliexspress! Шанс выиграть подарок мечты!
+							a(href="#")
+								img.office__news_item_img(src="img/news-img4.jpg", alt="#")
+							a.office__news_item_info(href="#") Большая распродажа в Aliexspress! Шанс выиграть подарок мечты!
 							.office__news_item_ago
 								span.hours__ago 1 
 								час назад
@@ -411,7 +431,7 @@ block content
 				
 				// begin office__news_right 
 				.office__news_right
-					.office__news_support
+					.office__news_support.down
 						.office__news_support_head
 							.office__news_support_name Шоппел
 							p Служба поддержки Найди.ру

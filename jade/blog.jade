@@ -96,32 +96,29 @@ block content
 
 			.sidebar__section
 				.sidebar__section_name Лучшие предложения для Вас:
+				// Slide 1
+				.slider__item.mb_30
+					a.slider__grid_img(href="#")
+						img(src="img/most1.png", alt="#")
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
-				// begin slider__grid 
-				.slider
-					// Slide 1
-					.slider__item.mb_30
-						.slider__grid_img
-							img(src="img/most1.png", alt="")
-						.slider__grid_text
-							.slider__grid_name
-								|Магазин: 
-								a(href="#") Lamoda
-							|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
-
-					// Slide 2
-					.slider__item.mb_20
-						.slider__grid_img
-							img(src="img/most2.png", alt="")
-							.slider__grid_overlay 
-								|1240р. 
-								span 2120р.
-						.slider__grid_text
-							.slider__grid_name
-								|Магазин: 
-								a(href="#") Lamoda
-							|Смартфон Самсунг со скидкой -45%!
-					<a href="#" class="btn btn__danger">Больше скидок  &gt;&gt;</a>
+				// Slide 2
+				.slider__item.mb_20
+					a.slider__grid_img(href="#")
+						img(src="img/most2.png", alt="#")
+						.slider__grid_overlay 
+							|1240р. 
+							span 2120р.
+					.slider__grid_text
+						.slider__grid_name
+							|Магазин: 
+							a(href="#") Lamoda
+						|Смартфон Самсунг со скидкой -45%!
+				<a href="#" class="btn btn__danger">Больше скидок  &gt;&gt;</a>
 
 			.sidebar__section
 				.sidebar__section_name Найдите купон для магазина
@@ -184,15 +181,14 @@ block content
 				button.b__hashtag_more.btn.btn__primary.js-more-link(data-text-open="- Скрыть разделы" data-text-close="+ Показать больше") + Показать больше
 
 
-			.b__article_h1.ind Самые популярные статьи
+			h2.b__article_h1.ind Самые популярные статьи
 
 			.b__article
 				.b__article_item
 					a.b__article_img
 						img(src="img/b-article-img1.jpg", alt="#")
 					.b__article_info
-						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
-							a.b__article_icon(href="#")
+						a.b__article_name(href="#") Какой телевизор лучше выбрать. Мнение опытного специалиста
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
 						.b__article_p.mb_30
 							span.date 20 марта 2017
@@ -208,8 +204,7 @@ block content
 					a.b__article_img
 						img(src="img/b-article-img2.jpg", alt="#")
 					.b__article_info
-						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
-							a.b__article_icon(href="#")
+						a.b__article_name(href="#") Какой телевизор лучше выбрать. Мнение опытного специалиста
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
 						.b__article_p.mb_30
 							span.date 20 марта 2017
@@ -225,8 +220,7 @@ block content
 					a.b__article_img
 						img(src="img/b-article-img3.jpg", alt="#")
 					.b__article_info
-						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
-							a.b__article_icon(href="#")
+						a.b__article_name(href="#") Какой телевизор лучше выбрать. Мнение опытного специалиста
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
 						.b__article_p.mb_30
 							span.date 20 марта 2017
@@ -258,25 +252,19 @@ block content
 					a.b__article_img
 						img(src="img/b-article-img4.jpg", alt="#")
 					.b__article_info
-						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
+						a.b__article_name(href="#") Вентиляторы и кондиционеры по лучшим супер ценам в М.Видео
 							a.b__article_icon(href="#")
-						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
+						.b__article_text Вентиляторы и кондиционеры выгоднее купить в М.Видео. Потому что, они качественные, хорошие и не дорогие, купите вентилятор прямо сейчас
 						.b__article_p.mb_30
 							span.date 20 марта 2017
-							a.category техника
-						.b__article_comments
-							img.b__article_comments_img(src="img/comment-gray.png", alt="#")
-							a.b__article_comments_link(href="#")
-								span.comments 25 
-								span.text комментариев
+							a.category реклама
 						a.b__article_more Читать сейчас &gt;
 
 				.b__article_item
 					a.b__article_img
 						img(src="img/b-article-img3.jpg", alt="#")
 					.b__article_info
-						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
-							a.b__article_icon(href="#")
+						a.b__article_name(href="#") Какой телевизор лучше выбрать. Мнение опытного специалиста
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
 						.b__article_p.mb_30
 							span.date 20 марта 2017
@@ -292,8 +280,7 @@ block content
 					a.b__article_img
 						img(src="img/b-article-img5.jpg", alt="#")
 					.b__article_info
-						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
-							a.b__article_icon(href="#")
+						a.b__article_name(href="#") Какой телевизор лучше выбрать. Мнение опытного специалиста
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
 						.b__article_p.mb_30
 							span.date 20 марта 2017
@@ -309,8 +296,7 @@ block content
 					a.b__article_img
 						img(src="img/b-article-img1.jpg", alt="#")
 					.b__article_info
-						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
-							a.b__article_icon(href="#")
+						a.b__article_name(href="#") Какой телевизор лучше выбрать. Мнение опытного специалиста
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
 						.b__article_p.mb_30
 							span.date 20 марта 2017
@@ -326,8 +312,7 @@ block content
 					a.b__article_img
 						img(src="img/b-article-img2.jpg", alt="#")
 					.b__article_info
-						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
-							a.b__article_icon(href="#")
+						a.b__article_name(href="#") Какой телевизор лучше выбрать. Мнение опытного специалиста
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
 						.b__article_p.mb_30
 							span.date 20 марта 2017
@@ -343,8 +328,7 @@ block content
 					a.b__article_img
 						img(src="img/b-article-img3.jpg", alt="#")
 					.b__article_info
-						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
-							a.b__article_icon(href="#")
+						a.b__article_name(href="#") Какой телевизор лучше выбрать. Мнение опытного специалиста
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
 						.b__article_p.mb_30
 							span.date 20 марта 2017
@@ -360,8 +344,7 @@ block content
 					a.b__article_img
 						img(src="img/b-article-img5.jpg", alt="#")
 					.b__article_info
-						.b__article_name Какой телевизор лучше выбрать. Мнение опытного специалиста
-							a.b__article_icon(href="#")
+						a.b__article_name(href="#") Какой телевизор лучше выбрать. Мнение опытного специалиста
 						.b__article_text Телевиденье сегодня плотно вошло в нашу жизнь, и если ещё пол века назад телевизор был роскошью, то сейчас он есть практически в каждом доме, да...
 						.b__article_p.mb_30
 							span.date 20 марта 2017

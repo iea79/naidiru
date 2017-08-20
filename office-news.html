@@ -19,7 +19,7 @@
     <script src="js/jquery.formstyler.min.js"></script>
     <script src="js/function.js"></script>
   </head>
-  <body class="office">
+  <body class="office office-news">
     <div class="wrapper">
       <!-- begin header -->
       <header class="header">
@@ -412,14 +412,31 @@
           <div class="line laptop"></div>
           <!-- begin main__content_center -->
           <div class="main__content_center">
+            <!-- begin office__support -->
+            <div class="office__support"><a href="#" class="btn btn__danger office__support_shopcard">Поменяйте чек на ШопКарту</a>
+              <button class="btn btn__primary office__support_trigger">
+                <div class="bold">Написать нам <br></div>Служба поддержки Найди.ру
+              </button>
+              <div class="office__news_support">
+                <div class="office__news_support_head">
+                  <div class="office__news_support_name">Шоппел</div>
+                  <p>Служба поддержки Найди.ру</p>
+                </div>
+                <div class="office__news_support_body">
+                  <div class="office__news_support_h">Ваше сообщение</div>
+                  <textarea placeholder="Есть вопрос? Напишите его сюда! Шоппел ответит на Ваш вопрос электронной почтой, в ближайшее время."></textarea>
+                  <button class="btn btn__danger">Отправить нам	</button>
+                </div>
+              </div>
+            </div>
+            <!-- end office__support -->
             <h1>Ваши новости и уведомления</h1>
             <!-- begin office__news-->
             <div class="office__news">
               <!-- begin office__news_left -->
               <div class="office__news_left column">
                 <div class="office__news_list">
-                  <div class="office__news_item"><img src="img/news-img1.jpg" alt="#" class="office__news_item_img"/>
-                    <div class="office__news_item_info">Акция в Снежной Королеве! Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. Успейте купить!</div>
+                  <div class="office__news_item"><a href="#"><img src="img/news-img1.jpg" alt="#" class="office__news_item_img"/></a><a href="#" class="office__news_item_info">Акция в Снежной Королеве! Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. Успейте купить!</a>
                     <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div><a href="#" class="office__news_item_mark"></a>
                     <div class="office__news_item_hide">
                       <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
@@ -433,8 +450,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="office__news_item"><img src="img/news-img2.jpg" alt="#" class="office__news_item_img"/>
-                    <div class="office__news_item_info">Акция в Ив Роше. Только сегодня подарок каждому за покупку!</div>
+                  <div class="office__news_item"><a href="#"><img src="img/news-img2.jpg" alt="#" class="office__news_item_img"/></a><a href="#" class="office__news_item_info">Акция в Ив Роше. Только сегодня подарок каждому за покупку!</a>
                     <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div><a href="#" class="office__news_item_mark"></a>
                     <div class="office__news_item_hide">
                       <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
@@ -465,8 +481,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="office__news_item"><img src="img/news-img3.jpg" alt="#" class="office__news_item_img"/>
-                    <div class="office__news_item_info">Акция Март-2017. Посмотрите, кто получает подарок в этом месяце!</div>
+                  <div class="office__news_item"><a href="#"><img src="img/news-img3.jpg" alt="#" class="office__news_item_img"/></a><a href="#" class="office__news_item_info">Акция Март-2017. Посмотрите, кто получает подарок в этом месяце!</a>
                     <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div><a href="#" class="office__news_item_mark"></a>
                     <div class="office__news_item_hide">
                       <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
@@ -497,8 +512,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="office__news_item"><img src="img/news-img4.jpg" alt="#" class="office__news_item_img"/>
-                    <div class="office__news_item_info">Большая распродажа в Aliexspress! Шанс выиграть подарок мечты!</div>
+                  <div class="office__news_item"><a href="#"><img src="img/news-img4.jpg" alt="#" class="office__news_item_img"/></a><a href="#" class="office__news_item_info">Большая распродажа в Aliexspress! Шанс выиграть подарок мечты!</a>
                     <div class="office__news_item_ago"><span class="hours__ago">1 </span>час назад</div><a href="#" class="office__news_item_mark"></a>
                     <div class="office__news_item_hide">
                       <button class="office__news_item_btn btn">Удалить, как прочитанное</button>
@@ -534,7 +548,7 @@
               <!-- end office__news_left -->
               <!-- begin office__news_right -->
               <div class="office__news_right">
-                <div class="office__news_support">
+                <div class="office__news_support down">
                   <div class="office__news_support_head">
                     <div class="office__news_support_name">Шоппел</div>
                     <p>Служба поддержки Найди.ру</p>
@@ -907,7 +921,7 @@
                 <div class="modal-body_down_left">
                   <div class="modal-body_label">Сумма заказа</div>
                   <div class="modal-body_input">
-                    <input type="number" placeholder="5800"/>
+                    <input type="text" placeholder="5800" class="modal-body_down_left_price"/>
                     <input type="text" placeholder="руб"/>
                   </div>
                 </div>

@@ -681,6 +681,10 @@
 				width: 118px;
 				float: left;
 				margin-right: 50px;
+				@extend %clear_a;
+				// &_price {
+				// 	width: 60%;
+				// }
 			}
 			&_right {
 				overflow: hidden;
@@ -707,19 +711,19 @@
 			width: 100%;
 			border: 1px solid #d1d1d1;
 			@extend %clear_a;
-			input[type="number"],
 			input[type="text"] {
-				border: 0;
-			}
-			input[type="number"] {
-				width: 65%;
-				float: left;
-			}
-			input[type="text"] {
-				width: 35%;
-				overflow: hidden;
 				padding: 10px 7px;
-				border-left: 1px solid #d1d1d1;
+				float: left;
+				display: block;
+				text-align: center;
+				border: 0;
+				&:nth-child(1) {
+					width: 65%;
+				}
+				&:nth-child(2) {
+					width: 35%;
+					border-left: 1px solid #d1d1d1;
+				}
 			}
 		}
 		.jq-selectbox {

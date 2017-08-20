@@ -2298,6 +2298,15 @@
 			}
 		}
 	}
+	@media (max-width: 479px) {
+		&_item {
+			@include flex-flow(column nowrap);
+			@include align-items(center);
+			img {
+				margin-bottom: 15px;
+			}
+		}
+	}
 }
 // end blog__top
 
@@ -2352,7 +2361,7 @@
 		display: block;
 	}
 	.columns__list {
-	@include columns-text(110px, 2, 50px, 0px, solid, #000);
+		@include columns-text(110px, 2, 50px, 0px, solid, #000);
 		a {
 			color: $main-color;
 		}
@@ -2468,7 +2477,7 @@
 	@media (max-width: 767px) {
 		&.center {
 			padding: 24px 0 0;
-			margin: 0 20px;
+			margin-bottom: 0;
 		}
 		&_list {
 			display: block;
@@ -2485,7 +2494,7 @@
 				display: none;
 			}
 			&.ib {
-				&:nth-child(n+4) {
+				&:nth-child(n+5) {
 					display: none;
 				}
 			}
@@ -2519,6 +2528,7 @@
 // Список статей
 .b__article {
 	&_h1 {
+		margin-bottom: 0;
 		font-size: 23px;
 	}
 	&_item {
@@ -2527,10 +2537,14 @@
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
 		@extend %clear_a;
+		&:first-child {
+			margin-top: 30px;
+		}
 	}
 	&_img {
 		float: left;
 		display: block;
+		cursor: pointer;
 	}
 	&_info {
 		position: relative;
@@ -2539,9 +2553,13 @@
 	}
 	&_name {
 		height: 50px;
-		margin-bottom: 10px;
 		overflow: hidden;
+		color:$main-color;
 		font-size: 21px;
+		&:hover {
+			text-decoration: none;
+			opacity: .8;
+		}
 	}
 	&_icon {
 		width: 19px;
@@ -2549,11 +2567,12 @@
 		display: inline-block;
 		margin-left: 10px;
 		padding-top: 3px;
-		background: url('../img/ad.svg') no-repeat;
+		background: url('../img/faqs.svg') no-repeat;
 		background-size: 19px 15px;
 	}
 	&_text {
 		height: 32px;
+		margin-top: 10px;
 		margin-bottom: 23px;
 		overflow: hidden;
 		text-align: justify;
@@ -2619,8 +2638,6 @@
 		}
 		&_info {
 		    padding: 20px 20px 17px;
-		    margin-left: 20px;
-			margin-right: 20px;
 		    overflow: visible;
 			background-color: #fff;
 			border: 1px solid #d1d1d1;
@@ -2655,8 +2672,6 @@
 		}
 	}
 	@media (max-width: 479px) {
-		padding-left: 20px;
-		padding-right: 20px;
 		&_item {
 			background-color: #fff;
 			border: 1px solid #d1d1d1;
@@ -2727,8 +2742,6 @@
 	}
 	@media (max-width: 767px) {
 		margin-top: 20px;
-		border-left: 0;
-		border-right: 0;
 		&_img {
 			display: none;
 		}
@@ -2761,8 +2774,6 @@
 	@media (max-width: 479px) {
 		margin-left: 0;
 		margin-right: 0;
-		border-left: 0;
-		border-right: 0;
 	}
 }
 
@@ -2787,9 +2798,7 @@
 
 
 // Блог Статья blog-article.html ///////////////
-// =============================================
-
-// begin b__article_text_top
+// =============================================// begin b__article_text_top
 .b__article_top {
 	margin-bottom: 34px;
 	@include flexbox();
@@ -4233,13 +4242,13 @@
 		.sidebar__section_list {
 			&_item {
 				display: block;
-				&:nth-child(n+11) {
+				&:nth-child(n+10) {
 					display: none;
 				}
 			}
 			&.open {
 				.sidebar__section_list_item {
-					&:nth-child(n+11) {
+					&:nth-child(n+10) {
 						display: block;
 					}
 				}
@@ -4881,8 +4890,6 @@
 			margin-bottom: 20px;
 		}
 		.line {
-			margin-left: 20px;
-			margin-right: 20px;
 			&.laptop {
 				margin-top: 20px;
 			}
@@ -5355,8 +5362,7 @@
 		@extend %clear_a;
 		&_trigger {
 			display: none;
-			width: 100%;
-			margin: 14px 20px;
+			margin: 14px 0;
 			padding: 10px 0;
 			cursor: pointer;
 			font-family: Tahoma;
@@ -5489,8 +5495,8 @@
 	@media (max-width: 991px) {
 		.main__content_sidebar {
 			padding-top: 30px;
-			padding-left: 20px;
-			padding-right: 20px;
+			// padding-left: 20px;
+			// padding-right: 20px;
 			@include flexbox();
 			@include justify-content(flex-start);
 		}
@@ -5498,7 +5504,7 @@
 	@media (max-width: 767px) {
 		.main__content_sidebar {
 			width: 100%;
-			padding: 0 20px;
+			padding: 0;
 			margin: 0;
 			@include justify-content(center);
 			@include align-items(center);
@@ -5523,6 +5529,11 @@
 			}
 		}
 		&__link.active {
+			display: none;
+		}
+	}
+	@media (max-width: 479px) {
+		.sidebar__section:nth-child(2) {
 			display: none;
 		}
 	}
@@ -6562,6 +6573,16 @@
 
 // Страница Личн.кабинет Новости и уведомления office-news.html ///////////////
 // ============================================================================
+.office.office-news {
+	@media (max-width: 479px) {
+		.main__content_center {
+			padding-top: 0;
+		}
+		.line.laptop {
+			display: none;
+		}
+	}
+}
 
 // begin office__news_left
 .office__news {
@@ -6578,6 +6599,7 @@
 		position: relative;
 		margin-bottom: 30px;
 		width: 100%;
+		font-size: 14px;
 		text-align: center;
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
@@ -6588,6 +6610,9 @@
 		}
 		&_info {
 			padding: 20px 20px 55px;
+			display: inline-block;
+			color: #292929;
+			font-size: 14px;
 		}
 		&_ago {
 			position: absolute;
@@ -6639,16 +6664,12 @@
 			}
 		}
 		&_hide {
-			display: none !important;
+			display: none;
 			position: absolute;
-			// top: -39px;
-			// right: -121px;
-			top: 40px;
-			right: 11px;
-			width: 227px;
-			height: 47px;
+			top: 30%;
+			left: 5%;
+			width: 90%;
 			padding: 5px 0 6px;
-			display: block;
 			background-color: #fff;
 			z-index: 6;
 			&.open {
@@ -6658,6 +6679,7 @@
 		&_btn {
 			width: 100%;
 			height: 100%;
+			padding: 10px;
 			display: block;
 			cursor: default !important;
 			color: #292929;
@@ -6728,8 +6750,6 @@
 	}
 	@media (max-width: 767px) {
 		margin-bottom: 0;
-		padding-left: 20px;
-		padding-right: 20px;
 		@include justify-content(center);
 		@include flex-flow(column nowrap);
 		&_left {
@@ -6743,6 +6763,9 @@
 	@media (max-width: 479px) {
 		padding-left: 0;
 		padding-right: 0;
+		&_left {
+			margin-bottom: 0;
+		}
 		&_item {
 			border-left: 0;
 			border-right: 0;
@@ -6814,7 +6837,7 @@
 			padding: 23px 22px 17px;
 			textarea {
 				width: 100%;
-				height: 182px;
+				min-height: 182px;
 				padding: 10px 12px;
 				background-color: #fff;
 				border: 1px solid #d1d1d1;
@@ -6899,9 +6922,71 @@
 	@media (max-width: 479px) {
 		margin-left: 20px;
 		margin-right: 20px;
+		&_support {
+			display: none;
+			margin-bottom: 30px;
+			&.down {
+				display: none;
+			}
+			&_head {
+				height: 74px;
+				padding: 17px 10px 0 76px;
+				background-position: 12px center;
+				background-size: 48px 48px;
+			}
+			&_body {
+				padding: 15px 22px 17px;
+				textarea {
+					min-height: 150px;
+				}
+				button {
+					width: 220px;
+					height: 42px;
+					margin: 13px auto 8px;
+				}
+			}
+			&_h {
+				margin-bottom: 7px;
+			}
+			&.open {
+				display: block;
+			}
+		}
 	}
 }
 // end office__news_right
+
+
+// begin office__support 
+.office__support {
+	display: none;
+	&_shopcard {
+		width: 100%;
+		padding: 16px;
+		margin-bottom: 16px;
+		font-size: 17px;
+		font-weight: 400;
+		@include border-radius(0);
+	}
+	&_trigger {
+		// display: none;
+		width: 100%;
+		padding: 20px;
+		margin-bottom: 30px;
+		font-size: 14px;
+		font-weight: 400;
+		.bold {
+			font-size: 18px;
+		}
+		&.hide {
+			display: none;
+		}
+	}
+	@media (max-width: 479px) {
+		display: block;
+	}
+}
+// end office__support
 
 
 
@@ -7003,14 +7088,64 @@
 		}
 	}
 	&_label {
-		&.mb {
-			margin-bottom: 11px;
 		margin-bottom: 5px;
 		display: block;
 		font-size: 15px;
 		white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+		&.mb {
+			margin-bottom: 11px;
+		}
+	}
+	&_select {
+		position: relative;
+	}
+	&_trigger {
+		position: relative;
+		width: 100%;
+		padding: 9px 10px;
+		color: #292929;
+		font-size: 14px;
+		text-align: left;
+		background-color: #fff;
+		border: 1px solid #d1d1d1;
+		outline: 0;
+	}
+	&_hide {
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: -1px;
+		right: -1px;
+		z-index: 100;
+		height: 130px;
+		overflow: auto;
+		background-color: #fff;
+		border: 1px solid #d1d1d1;
+		@extend %clear_a;
+		&.open {
+			display: block;
+		}
+		&_left {
+			width: 45%;
+			float: left;
+			padding: 12px 16px 2px;
+		}
+		&_right {
+			overflow: hidden;
+			padding: 12px 29px 2px;
+			border-left: 1px solid #d1d1d1;
+		}
+		&_in {
+			padding: 12px 16px 2px;
+		}
+		&_name {
+			margin-bottom: 14px;
+			font-weight: 700;
+		}
+		.office__settings_checkbox {
+			margin-bottom: 11px;
 		}
 	}
 	&_down {
