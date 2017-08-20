@@ -302,7 +302,8 @@ $(document).ready(function() {
 
 		last = count;
 		var currentSlide = slider.slick('slickCurrentSlide');
-
+		
+		
 		slider.on('afterChange', function(){
 
 			var thisSlide = slider.slick('slickCurrentSlide');
@@ -339,13 +340,17 @@ $(document).ready(function() {
 		hideSliderArrow($('.js-slider-arrow'));
 	}
 
-	if ($('div').is('.slider__grid_medium')) {
-		hideSliderArrow($('.slider__grid_medium'));
+	// if ($('div').is('.slider__grid_medium')) {
+	// 	hideSliderArrow($('.slider__grid_medium'));
+	// }
+
+	if ($('div').is('.slider__grid_small')) {
+		hideSliderArrow($('.slider__grid_small'));
 	}
 
-	// if ($('div').is('.category__slider')) {
-	// 	hideSliderArrow($('.category__slider'));
-	// }
+	if ($('div').is('.category__slider')) {
+		hideSliderArrow($('.category__slider'));
+	}
 
 	$('.slider__sidebar').slick({
 		infinite: true,
@@ -835,10 +840,16 @@ $(document).ready(function() {
     $('.scrollbar-inner').scrollbar();
 
     // Страница категорий category.html - доработать скрипт меню
-    $('.category__top_link1').on('click', function(event) {
-    	event.preventDefault();
-		$(this).parent().find('.category__top_list2').toggleClass('open');
-	});
+ //    $('.category__top_link1').on('click tap', function(event) {
+ //    	event.preventDefault();
+ //    	var wrap = $(this).closest('.category__top_item1');
+ //    	var other = wrap.siblings('.category__top_item1');
+ //    	var trigger = $('.category__top_link1');
+ //    	var list = $('.category__top_list2');
+
+ //    	$(this).toggleClass('active');
+	// 	wrap.find(list).toggleClass('open');
+	// });
 
 	// Страница категорий category.html - Хелп Покупайте, участвуйте в розыгрышах
     $('.category__top_into_wrap i').on('click touchend', function(event) {
