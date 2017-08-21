@@ -2033,9 +2033,8 @@
 	p {
 		text-align: justify;
 	}
-	.search {
-		margin-top: 47px;
-		padding: 0 15px;
+	.header__search {
+		margin-top: 49px;
 		white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -2075,7 +2074,8 @@
 	}
 	@media (max-width: 767px) {
 		&_message {
-			padding: 40px 20px;
+			margin: 0 -20px;
+			padding: 30px 20px;
 			&_first {
 				font-size: 24px;
 			}
@@ -2083,8 +2083,11 @@
 				font-size: 26px;
 			}
 		}
-		.search {
-			padding: 0;
+		h1 {
+			margin: 0 0 20px;
+		}
+		.header__search {
+			margin-top: 30px;
 		}
 		.search_btn {
 			right: 0;
@@ -2124,6 +2127,7 @@
 		padding: 0;
 		p {
 			float: none;
+			padding-top: 0;
 			margin-right: 0;
 		}
 		&_btn {
@@ -10634,7 +10638,7 @@
 	.main__content_center {
 		position: relative;
 		padding-bottom: 60px;
-		overflow: initial;
+		// overflow: initial;
 		&_first {
 			position: relative;
 		}
@@ -10667,6 +10671,7 @@
 		}
 		.to_top {
 			top: auto;
+			right: 0;
 			bottom: 0;
 		}
 		@media (max-width: 767px) {
