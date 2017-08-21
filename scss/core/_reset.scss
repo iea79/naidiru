@@ -366,6 +366,7 @@ p {
     display: block;
     cursor: pointer;
     background: transparent url('../img/close.svg') no-repeat;
+    background-size: 14px 14px;
     border: 0;
     outline: 0;
     &:hover {

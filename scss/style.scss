@@ -816,8 +816,7 @@
 		i {
 			display: inline-block;
 			vertical-align: middle;
-			margin-right: 9px;
-		}
+ 		}
 	}
 	&_terms {
 		position: relative;
@@ -6157,7 +6156,7 @@
 		&_text {
 			padding-top: 3px;
 			height: 42px;
-			width: 217px;
+			// width: 217px;
 		}
 		.confirm__btn {
 			position: relative;
@@ -10056,12 +10055,18 @@
 // Страница бренда brand.html ///////////////
 // ==========================================
 .brand {
+	.section__title {
+		text-align: left;
+	}
 	@media (max-width: 767px) {
 		.white__line {
 			padding: 18px 0;
 		}
 		h1 {
 			display: none;
+		}
+		.section__title {
+			text-align: center;
 		}
 	}
 }
@@ -10629,7 +10634,7 @@
 			display: none;
 		}
 	}
-}git
+}
 // end sidebar
 
 
@@ -11264,6 +11269,12 @@
 			}
 			&_left {
 				margin-right: 20px;
+			}
+			.tooltip__text {
+				left: 5px;
+				&_big {
+					left: -6px;	
+				}
 			}
 		}
 	}
