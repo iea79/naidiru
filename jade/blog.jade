@@ -12,14 +12,14 @@ block content
 
 
 			// begin breadcrumb
-			.breadcrumb.ind
+			.breadcrumb
 				li
 					a(href="/") Главная
 				li
 					a(href="#") Блог
 			// end breadcrumb
 
-			h1.ind Блог (Советы, лайфхаки)
+			h1 Блог (Советы, лайфхаки)
 
 
 			// begin blog__top
@@ -28,7 +28,7 @@ block content
 					a.blog__top_big(href="#")
 						img(src="img/blog-img1.jpg", alt="#")
 						.blog__top_big_name Какой телевизор лучше выбрать. Мнение специалиста в этой области. Супер распродажа!
-				.blog__top_right.ind
+				.blog__top_right
 					a.blog__top_item(href="#")
 						img(src="img/blog-img2.jpg", alt="#")
 						.blog__top_item_text
@@ -104,7 +104,7 @@ block content
 						.slider__grid_name
 							|Магазин: 
 							a(href="#") Lamoda
-						|Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+						a.slider__grid_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
 				// Slide 2
 				.slider__item.mb_20
@@ -117,8 +117,8 @@ block content
 						.slider__grid_name
 							|Магазин: 
 							a(href="#") Lamoda
-						|Смартфон Самсунг со скидкой -45%!
-				<a href="#" class="btn btn__danger">Больше скидок  &gt;&gt;</a>
+						a.slider__grid_link(href="#") Смартфон Самсунг со скидкой -45%!
+				a(href="#", class="btn btn__danger blog__sidebar_btn") Больше скидок  &gt;&gt;
 
 			.sidebar__section
 				.sidebar__section_name Найдите купон для магазина
@@ -181,7 +181,7 @@ block content
 				button.b__hashtag_more.btn.btn__primary.js-more-link(data-text-open="- Скрыть разделы" data-text-close="+ Показать больше") + Показать больше
 
 
-			h2.b__article_h1.ind Самые популярные статьи
+			h2.b__article_h1 Самые популярные статьи
 
 			.b__article
 				.b__article_item

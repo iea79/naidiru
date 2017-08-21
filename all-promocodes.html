@@ -118,23 +118,21 @@
         <div class="white__line">
           <div class="container_center">
             <!-- begin breadcrumb-->
-            <div class="breadcrumb ind">
+            <div class="breadcrumb">
               <li><a href="/">Главная</a></li>
               <li><a href="#">Все скидки и промокоды</a></li>
             </div>
             <!-- end breadcrumb-->
             
-            <h1 class="ind"> <span class="desktop">Все-все самые лучшие скидки от Ваших любимых магазинов</span><span class="laptop">Все супер-скидки</span></h1>
-            <!-- begin all-promocodes__top-->
-            <div class="all-promocodes__top">
-              <div class="all-promocodes__top_right_top social__down">
-                <div class="all-promocodes__top_right_subscribe">Все супер-скидки</div><a href="#" class="sm_social_trigger">Поделиться</a>
+            <h1><span class="desktop">Все-все самые лучшие скидки от Ваших любимых магазинов</span>
+              <div class="all-promocodes__top_right_top">
+                <div class="all-promocodes__top_right_subscribe">Все супер-скидки</div><a href="#" data-toggle="modal" data-target="#modal__social" class="sm_social_trigger">Поделиться</a>
                 <div class="sm_social">
                   <div class="sm_social_icon">
                     <div data-services="vkontakte" class="ya-share2"></div>
                   </div>
                   <div class="sm_social_icon">
-                    <div data-services="facebook" class="ya-share2">				</div>
+                    <div data-services="facebook" class="ya-share2"></div>
                   </div>
                   <div class="sm_social_icon">
                     <div data-services="odnoklassniki" class="ya-share2"></div>
@@ -147,6 +145,9 @@
                   </div>
                 </div>
               </div>
+            </h1>
+            <!-- begin all-promocodes__top-->
+            <div class="all-promocodes__top">
               <div class="all-promocodes__top_left"><img src="img/promo-img1.jpg" alt="#"/>
                 <div class="all-promocodes__top_left_text">Покупайте <br>и участвуйте <br>в ежемесячных <br>розыгрышах</div>
               </div>
@@ -231,7 +232,7 @@
                 </div>
               </div>
               <div class="sidebar__section js-more-wrapper">
-                <div class="sidebar__section_name">Лучшие скидки</div>
+                <h2 class="sidebar__section_name">Лучшие скидки</h2>
                 <div class="sidebar__section_p">Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.</div>
                 <div class="sidebar__section_p">Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши</div>
                 <div class="js-more-text">
@@ -1596,5 +1597,56 @@
       </div>
     </div>
     <!-- end modal modal__forgot-password-->
+    
+    <!-- http://joxi.ru/ZrJVq8eS956oEr-->
+    <!-- Button trigger modal modal__social-->
+    <!-- a(href="#", data-toggle="modal", data-target="#modal__social") Click to open modal-->
+    <!-- begin Modal modal__social-->
+    <div id="modal__social" class="modal fade modal__social">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal__social_wrap">
+            <div class="modal-body">
+              <p>Поделиться в соц.сетях:</p>
+              <div class="sm_social">
+                <div class="sm_social_icon">
+                  <div data-services="vkontakte" class="ya-share2"></div>
+                </div>
+                <div class="sm_social_icon">
+                  <div data-services="facebook" class="ya-share2"></div>
+                </div>
+                <div class="sm_social_icon">
+                  <div data-services="odnoklassniki" class="ya-share2"></div>
+                </div>
+                <div class="sm_social_icon">
+                  <div data-services="gplus" class="ya-share2"></div>
+                </div>
+                <div class="sm_social_icon">
+                  <div data-services="twitter" class="ya-share2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="close"></button>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__social-->
+    
+    <!-- http://joxi.ru/J2be5M4tXeoe0m-->
+    <!-- Button trigger modal modal__video-->
+    <!-- a(href="#", data-toggle="modal", data-target="#modal__video") Click to open modal-->
+    <!-- begin Modal modal__video-->
+    <div id="modal__video" class="modal fade modal__video">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal__video_wrap">
+            <div class="modal-body"><iframe src="https://www.youtube.com/embed/yAnMys0lYyo" frameborder="0" allowfullscreen></iframe></div>
+          </div>
+          <button data-dismiss="modal" class="close"></button>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__video-->
   </body>
 </html>

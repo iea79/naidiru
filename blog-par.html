@@ -117,14 +117,14 @@
       <main class="main__content">
         <div class="container_center">
           <!-- begin breadcrumb-->
-          <div class="breadcrumb ind mt_40">
+          <div class="breadcrumb mt_40">
             <li><a href="/">Главная</a></li>
             <li><a href="blog.html">Блог</a></li>
             <li><a href="#">#Мода                   			</a></li>
           </div>
           <!-- end breadcrumb-->
           
-          <h1 class="ind">#Мода</h1>
+          <h1>#Мода</h1>
         </div>
         <div class="container_center main">
           <!-- begin sidebar-->
@@ -152,31 +152,26 @@
                 </div>
               </div>
               <!-- end sidebar__coupon-->
+              
             </div>
             <div class="sidebar__section">
               <div class="sidebar__section_name">Лучшие предложения для Вас:</div>
-              <!-- begin slider__grid -->
-              <div class="slider">
-                <!-- Slide 1-->
-                <div class="slider__item mb_30">
-                  <div class="slider__grid_img"><img src="img/most1.png" alt="#"/></div>
-                  <div class="slider__grid_text">
-                    <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
-                  </div>
+              <!-- Slide 1-->
+              <div class="slider__item mb_30"><a href="#" class="slider__grid_img"><img src="img/most1.png" alt="#"/></a>
+                <div class="slider__grid_text">
+                  <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div><a href="#" class="slider__grid_link">Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!</a>
                 </div>
-                <!-- Slide 2-->
-                <div class="slider__item mb_20">
-                  <div class="slider__grid_img"><img src="img/most2.png" alt="#"/>
-                    <div class="slider__grid_overlay">
-                       
-                      1240р. <span>2120р.</span>
-                    </div>
-                  </div>
-                  <div class="slider__grid_text">
-                    <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div>Смартфон Самсунг со скидкой -45%!
-                  </div>
-                </div><a href="#" class="btn btn__danger">Больше скидок  &gt;&gt;</a>
               </div>
+              <!-- Slide 2-->
+              <div class="slider__item mb_20"><a href="#" class="slider__grid_img"><img src="img/most2.png" alt="#"/>
+                  <div class="slider__grid_overlay">
+                     
+                    1240р. <span>2120р.</span>
+                  </div></a>
+                <div class="slider__grid_text">
+                  <div class="slider__grid_name">Магазин: <a href="#">Lamoda</a></div><a href="#" class="slider__grid_link">Смартфон Самсунг со скидкой -45%!</a>
+                </div>
+              </div><a href="#" class="btn btn__danger blog__sidebar_btn">Больше скидок  &gt;&gt;</a>
             </div>
             <div class="sidebar__section">
               <div class="sidebar__section_name">Найдите купон для магазина</div>
@@ -1021,5 +1016,56 @@
       </div>
     </div>
     <!-- end modal modal__forgot-password-->
+    
+    <!-- http://joxi.ru/ZrJVq8eS956oEr-->
+    <!-- Button trigger modal modal__social-->
+    <!-- a(href="#", data-toggle="modal", data-target="#modal__social") Click to open modal-->
+    <!-- begin Modal modal__social-->
+    <div id="modal__social" class="modal fade modal__social">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal__social_wrap">
+            <div class="modal-body">
+              <p>Поделиться в соц.сетях:</p>
+              <div class="sm_social">
+                <div class="sm_social_icon">
+                  <div data-services="vkontakte" class="ya-share2"></div>
+                </div>
+                <div class="sm_social_icon">
+                  <div data-services="facebook" class="ya-share2"></div>
+                </div>
+                <div class="sm_social_icon">
+                  <div data-services="odnoklassniki" class="ya-share2"></div>
+                </div>
+                <div class="sm_social_icon">
+                  <div data-services="gplus" class="ya-share2"></div>
+                </div>
+                <div class="sm_social_icon">
+                  <div data-services="twitter" class="ya-share2"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button data-dismiss="modal" class="close"></button>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__social-->
+    
+    <!-- http://joxi.ru/J2be5M4tXeoe0m-->
+    <!-- Button trigger modal modal__video-->
+    <!-- a(href="#", data-toggle="modal", data-target="#modal__video") Click to open modal-->
+    <!-- begin Modal modal__video-->
+    <div id="modal__video" class="modal fade modal__video">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal__video_wrap">
+            <div class="modal-body"><iframe src="https://www.youtube.com/embed/yAnMys0lYyo" frameborder="0" allowfullscreen></iframe></div>
+          </div>
+          <button data-dismiss="modal" class="close"></button>
+        </div>
+      </div>
+    </div>
+    <!-- end modal modal__video-->
   </body>
 </html>

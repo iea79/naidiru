@@ -12,7 +12,7 @@ block content
 
 
 			// begin breadcrumb
-			.breadcrumb.ind
+			.breadcrumb
 				li
 					a(href="/") Главная
 				li
@@ -20,27 +20,27 @@ block content
 			// end breadcrumb
 
 
-			h1.ind 
+			h1
 				span.desktop Все-все самые лучшие скидки от Ваших любимых магазинов
-				span.laptop Все супер-скидки
-
-
-			// begin all-promocodes__top
-			.all-promocodes__top
-				.all-promocodes__top_right_top.social__down
+				.all-promocodes__top_right_top
 					.all-promocodes__top_right_subscribe Все супер-скидки
-					a.sm_social_trigger(href="#") Поделиться
+					a(href="#", class="sm_social_trigger", data-toggle="modal", data-target="#modal__social") Поделиться
 					.sm_social
 						.sm_social_icon
 							.ya-share2(data-services="vkontakte")
 						.sm_social_icon
-							.ya-share2(data-services="facebook")				
+							.ya-share2(data-services="facebook")
 						.sm_social_icon
 							.ya-share2(data-services="odnoklassniki")
 						.sm_social_icon
 							.ya-share2(data-services="gplus")
 						.sm_social_icon
 							.ya-share2(data-services="twitter")
+
+
+
+			// begin all-promocodes__top
+			.all-promocodes__top
 				.all-promocodes__top_left
 					img(src="img/promo-img1.jpg", alt="#")
 					.all-promocodes__top_left_text Покупайте <br>и участвуйте <br>в ежемесячных <br>розыгрышах
@@ -151,7 +151,7 @@ block content
 							a.sidebar__section_list_link(href="#") Wildberries
 						a.sidebar__section_more.js-more-link(href="#" data-text-close="+ Показать больше" data-text-open="- Скрыть магазины") + Показать больше
 				.sidebar__section.js-more-wrapper
-					.sidebar__section_name Лучшие скидки
+					h2.sidebar__section_name Лучшие скидки
 					.sidebar__section_p Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.
 					.sidebar__section_p Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши
 					.js-more-text

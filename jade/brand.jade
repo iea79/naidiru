@@ -12,13 +12,13 @@ block content
 
 
 			// begin breadcrumb
-			.breadcrumb.ind
+			.breadcrumb
 				li
 					a(href="/") Главная
 				li
 					a(href="office-shops.html") Все магазины
 				li
-					a(href="#") Обувь и Аксессуары
+					a(href="#") Lamoda
 			// end breadcrumb
 
 
@@ -29,15 +29,15 @@ block content
 			.brand__top
 				
 				// сообщение
-				// .brand__top_right_reg Чтобы добавить магазин в список "Любимых", нужно: <br>
-					a(href="#") войти или зарегистрироваться &gt;
+				.brand__top_right_reg Чтобы добавить магазин в список "Любимых", нужно: <br>
+					a(href="#", data-toggle="modal", data-target="#modal__log-in") войти или зарегистрироваться &gt;
 
 				.brand__top_left
 					.brand__top_logo
 						img(src="img/sale-list1.png", alt="#")
 					.brand__top_rate_wrap
 						.brand__top_coupons Купоны Ламода
-						.brand__top_rate
+						a.brand__top_rate(href="#")
 							.brand__top_stars
 								.brand__top_stars_full(style="width: 90%")
 							.brand__top_reviews
@@ -49,10 +49,12 @@ block content
 						.brand__top_prize_outside
 							.brand__top_prize_note Дарим подарки <br>
 								span каждый месяц
-							a.brand__top_link(href="prize.html", target="_blank") Узнать о розыгрыше &gt;
+							.brand__top_prize_note Не участвует <br>
+								|в акции
+							a.brand__top_link(href="prize.html", target="_blank") Узнать об акции &gt;
 							.brand__top_down
 								.brand__top_down_in Войти / Регистрация<br>
-									span чтобы участвовать в акциях
+									span чтобы участвовать в ежемесячных акциях
 								.brand__top_down_arrow
 						// Пользователь авторизирован
 						.brand__top_prize_inside
@@ -63,7 +65,7 @@ block content
 								.brand__top_down_arrow
 								.brand__top_down_question
 				.brand__top_right_top.social__down
-					a.sm_social_trigger(href="#") Поделиться
+					a(href="#", class="sm_social_trigger", data-toggle="modal", data-target="#modal__social") Поделиться
 					.sm_social
 						.sm_social_icon
 							.ya-share2(data-services="vkontakte")
@@ -80,9 +82,9 @@ block content
 							span.del в список Любимых
 						.brand__top_right_subscribe_out Убрать 
 							span.del магазин 
-							span из 
+							|из 
 							span.del списка 
-							span Любимых
+							|Любимых
 				.brand__top_right
 					// begin slider__grid
 					.slider.slider__grid_medium.js-slider-arrow
@@ -213,8 +215,8 @@ block content
 			.sidebar__section_wrap
 				.sidebar__section.js-more-wrapper
 					.sidebar__section_name Как получить скидку?
-					.sidebar__section_video
-						<iframe src="https://www.youtube.com/embed/yAnMys0lYyo" frameborder="0" allowfullscreen></iframe>
+					button(class="btn sidebar__section_video", data-toggle="modal", data-target="#modal__video")
+						img(src="img/video.jpg", alt="#")
 				.sidebar__section
 					.sidebar__section_name Тип промокода:
 					form.promocode__type_form(action="#")
@@ -571,7 +573,7 @@ block content
 					
 			
 				.sale__list_wrap
-					h3 Похожие промокоды
+					h2 Похожие промокоды
 						
 					// begin sale__list 
 					.sale__list.js_more_wrap
@@ -646,7 +648,7 @@ block content
 
 
 				sale__list_wrap
-					h3 Промокоды похожих магазинов
+					h2 Промокоды похожих магазинов
 						
 					// begin sale__list 
 					.sale__list.js_more_wrap
@@ -780,7 +782,7 @@ block content
 
 
 				sale__list_wrap
-					h3 Промокоды похожих магазинов
+					h2 Промокоды похожих магазинов
 						
 					// begin sale__list 
 					.sale__list.js_more_wrap
@@ -1067,7 +1069,7 @@ block content
 			//  brand__info Блок 1
 			.brand__info_item
 				.brand__info_about
-					.brand__info_name Об интернет-магазине Ламода
+					h2.brand__info_name Об интернет-магазине Ламода
 					.brand__info_p Интернет-магазин одежды и обуви Ларедут Laredoute – это интернет-магазин изысканной французской моды, который специализируется на товарах для женщин и мужчин, а также их детей.
 					.brand__info_p Магазин гарантирует 100% французское качество и подлинность всех марок. Достоинства онлайн-магазина: хорошее качество Магазин гарантирует 100% французское качество и подлинность всех марок. Достоинства онлайн-магазина: хорошее качество...
 					a.brand__info_link(href="#") Показать полностью
@@ -1105,7 +1107,7 @@ block content
 				
 				.brand__trigger Об интернет-магазине
 				.brand__info_about_down.brand__info_mobil
-					.brand__info_name Об интернет-магазине Ламода
+					h2.brand__info_name Об интернет-магазине Ламода
 					.brand__info_p Интернет-магазин одежды и обуви Ларедут Laredoute – это интернет-магазин изысканной французской моды, который специализируется на товарах для женщин и мужчин, а также их детей.
 					.brand__info_p Магазин гарантирует 100% французское качество и подлинность всех марок. Достоинства онлайн-магазина: хорошее качество Магазин гарантирует 100% французское качество и подлинность всех марок. Достоинства онлайн-магазина: хорошее качество...
 					a.brand__info_link(href="#") Показать полностью
@@ -1113,7 +1115,7 @@ block content
 
 			//  brand__info Блок 2
 			.brand__info_item
-				.brand__trigger.mt_20 Как использовать промокод?
+				h3.brand__trigger.mt_20 Как использовать промокод?
 				.brand__info_name Как использовать промокод Ламода? (3 шага)
 				.brand__info_use.brand__info_mobil
 					.brand__info_use_item
@@ -1151,7 +1153,7 @@ block content
 
 				.brand__trigger.mt_20 Способы оплаты
 				.brand__info_conditions_item
-					.brand__info_conditions_name Способы оплаты:
+					h3.brand__info_conditions_name Способы оплаты:
 					.brand__payment.brand__info_mobil
 						.brand__payment_item 
 							span.bold При получении:<br>
@@ -1164,7 +1166,7 @@ block content
 					
 			.brand__info_item.brand__info_conditions
 
-				.brand__trigger.mt_20 Доставка магазина
+				h3.brand__trigger.mt_20 Доставка магазина
 				.brand__info_conditions_item
 					.brand__info_conditions_name Доставка
 					.brand__delivery.brand__info_mobil
@@ -1180,7 +1182,7 @@ block content
 
 				.brand__trigger.mt_20 Условия возрата
 				.brand__info_conditions_item
-					.brand__info_conditions_name Условия возврата
+					h3.brand__info_conditions_name Условия возврата
 					.brand__return.brand__info_mobil
 						.brand__return_item Товар можно вернуть в течение:
 							span.bold 30 дней
@@ -1231,7 +1233,7 @@ block content
 	.white__line
 		.container_center
 
-			.section__title Люди также смотрят
+			h3.section__title Люди также смотрят
 
 			.category__box
 				// begin category__row

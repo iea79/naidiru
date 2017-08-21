@@ -2182,12 +2182,16 @@
 // ======================================
 
 .blog {
+	.white__line {
+		margin-bottom: 50px;
+	}
 	h1 {
 		margin: 23px 0 27px !important;
 	}
 	@media (max-width: 767px) {
 		.white__line {
-			padding-top: 17px;
+			padding: 17px 20px 30px;
+			margin-bottom: 30px;
 		}
 		h1 {
 			margin: 13px 0 20px !important;
@@ -2201,9 +2205,17 @@
 		}
 	}
 	&.blog-article {
+		h3 {
+			margin: 63px 0 35px;
+			font-size: 23px;
+		}
 		@media (max-width: 767px) {
 			h1 {
 				text-align: left;
+			}
+			h3 {
+				margin: 30px 0 20px;
+				font-size: 18px;
 			}
 		}
 	}
@@ -2343,22 +2355,29 @@
 	.main__content_sidebar {
 		width: 280px;
 	}
+	.slider__grid_img {
+		display: block;
+	}
+	&__sidebar_btn {
+		width: 190px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 22px;
+		display: block;
+	}
+	.slider__grid_link {
+		color: $main-color;
+	}
 }
 
 .sidebar__section {
 	padding-top: 26px;
-	padding-bottom: 45px;
+	padding-bottom: 16px;
 	border-bottom: 1px solid #dadada;
 	&:last-child {border-bottom: 0;}
 	&_name {
 		margin-bottom: 26px;
 		font-size: 18px;
-	}
-	.btn {
-		width: 190px;
-		margin-left: auto;
-		margin-right: auto;
-		display: block;
 	}
 	.columns__list {
 		@include columns-text(110px, 2, 50px, 0px, solid, #000);
@@ -2439,6 +2458,7 @@
 // Список хештегов
 .b__hashtag {
 	position: relative;
+	margin-bottom: 30px;
 	&_list {
 		margin-left: -20px;
 		display: inline-block;
@@ -2798,7 +2818,9 @@
 
 
 // Блог Статья blog-article.html ///////////////
-// =============================================// begin b__article_text_top
+// =============================================
+
+// begin b__article_text_top
 .b__article_top {
 	margin-bottom: 34px;
 	@include flexbox();
@@ -3019,6 +3041,7 @@
 			&_btn {
 				width: 169px;
 				height: 41px;
+				padding: 13px;
 				font-size: 13px;
 			}
 		}
@@ -3147,7 +3170,8 @@
 // begin b__article_com
 .b__article_com {
 	padding-top: 35px;
-	&_h {
+	h3.b__article_com_h {
+		margin-top: 0;
 		margin-bottom: 15px;
 		font-size: 23px;
 	}
@@ -3485,7 +3509,7 @@
 			}
 		}
 		.columns__list {
-			@include columns-text(100px, 4, 75px, 0px, solid, #000);
+			@include columns-text(150px, 4, 0, 0px, solid, #000);
 		}
 	}
 	@media (max-width: 767px) {
@@ -3503,8 +3527,11 @@
 			}
 		}
 		.columns__list {
+			width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+			text-align: center;
 			@include columns-text(100px, 2, 0px, 0px, solid, #000);
-			// text-align: center;
 		}
 	}
 	@media (max-width: 479px) {
@@ -3512,6 +3539,10 @@
 			.grid__wrapper {
 				@include flex-basis(49.8%);
 			}
+		}
+		.columns__list {
+			width: 200px;
+			@include columns-text(200px, 1, 0px, 0px, solid, #000);
 		}
 	}
 }
@@ -3531,6 +3562,11 @@
 		}
 		h1 {
 			margin-top: 0;
+		}
+		&__menu {
+			width: auto;
+			margin: 0 -20px;
+			@include box-sizing(content-box);
 		}
 	}
 }
@@ -3598,18 +3634,26 @@
 	}
 	&_item {
 		float: left;
-		padding: 5px 2px;
+		// padding: 5px 2px;
 		margin-left: 44px;
-		border-bottom: 2px solid transparent;
-		&.active,
-		&:hover {
-			border-bottom: 2px solid $warning-color;
-		}
+		// border-bottom: 2px solid transparent;
+		// &.active,
+		// &:hover {
+		// 	border-bottom: 2px solid $warning-color;
+		// }
 	}
 	&_link {
 		color: $main-color;
 		&:hover {
 			text-decoration: none;
+		}
+		&_wrap {
+			padding: 5px 2px;
+			border-bottom: 2px solid transparent;
+			&.active,
+			&:hover {
+				border-bottom: 2px solid $warning-color;
+			}
 		}
 	}
 	.checkbox {
@@ -3640,9 +3684,11 @@
 	}
 	@media (max-width: 767px) {
 		display: none;
-		margin: 20px 0 0;
-		padding-bottom: 10px;
+		padding: 10px 0 20px;
 		border-bottom: 1px solid #dadada;
+		&_top {
+			margin-bottom: 0;
+		}
 		&_left {
 			margin-bottom: 10px;
 		}
@@ -3653,7 +3699,17 @@
 			float: none;
 			margin-left: 0;
 			margin-bottom: 0;
-			text-align: center;
+			// text-align: center;
+			display: block;
+		}
+		&_link {
+			&_wrap {
+				width: 165px;
+				margin-left: auto;
+				margin-right: auto;
+				display: block;
+				text-align: center;
+			}
 		}
 		.checkbox {
 			text-align: center;
@@ -3715,11 +3771,24 @@
 	text-align: center;
 	border-top: 1px solid #d1d1d1;
 	border-bottom: 1px solid #d1d1d1;
-	span {
-		margin-left: 15px;
-		font-family: Tahoma;
-		font-size: 16px;
+	&:hover {
+		text-decoration: none;
 	}
+	&:after {
+		content: url('../img/arrow-right.png');
+		margin-left: 17px;
+		display: inline-block;
+	}
+	&.active {
+		&:after {
+			@include rotate(90deg);			
+		}
+	}
+	// &.active {
+	// 	&:after {
+	// 		content: url('../img/arrow-down.png');
+	// 	}
+	// }
 	@media (max-width: 767px) {
 		display: block;
 	}
@@ -3897,9 +3966,19 @@
 // Страница Все промокоды all-promocodes.html ///////////////
 // ==========================================================
 .all-promocodes {
+	h1 {
+		position: relative;
+	}
 	@media (max-width: 767px) {
 		.white__line {
 			padding-bottom: 0 !important;
+		}
+		h1 {
+			width: 280px;
+			margin: 0 auto;
+			.desktop {
+				display: none;
+			}
 		}
 	}
 }
@@ -3940,9 +4019,6 @@
 		}
 		.main__content_center {
 			overflow: initial;
-		}
-		h1 {
-			display: none;
 		}
 	}
 }
@@ -4024,18 +4100,19 @@
 			top: 0;
 			right: 0;
 			z-index: 3;
-			width: 280px;
+			width: 145px;
 			height: 22px;
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 29px;
-			visibility: hidden;
+			// visibility: hidden;
 			@include flexbox();
 			@include justify-content(space-between);
 			.sm_social {
 				height: 27px;
 				@include trs(.3);
 				&_trigger {
+					display: none;
 					padding-top: 3px;
 					padding-left: 23px;
 					color: #292929;
@@ -4048,7 +4125,8 @@
 			}
 		}
 		&_subscribe{
-			font-size: 14px;
+			display: none;
+			font-size: 18px;
 		}
 	}
 	@media (max-width: 1199px) {
@@ -4066,6 +4144,9 @@
 		}
 		&_right {
 			display: none;
+			&_top {
+				top: -35px;
+			}
 		}
 	}
 	@media (max-width: 767px) {
@@ -4086,29 +4167,19 @@
 			&_top {
 				position: relative;
 				top: -11px;
-				margin-bottom: 19px;
+				width: auto;
+				margin-bottom: 24px;
 				visibility: visible;
 				.sm_social {
 					display: none;
 					&_trigger {
 						height: 22px;
-					}
-				}
-				&.open {
-					height: 57px;
-					padding-bottom: 74px;
-					margin-bottom: 0;
-					.sm_social {
-						position: absolute;
-						bottom: 14px;
-						left: 68px;
 						display: block;
 					}
 				}
 			}
 			&_subscribe {
-				background-size: 24px 16px;
-				font-size: 18px;				
+				display: block;		
 			}
 		}
 	}
@@ -8264,16 +8335,6 @@
 						height: 19px;
 					}
 				}
-				&.open {
-					height: 57px;
-					padding-bottom: 40px;
-					.sm_social {
-						position: absolute;
-						bottom: 0;
-						left: 60px;
-						display: block;
-					}
-				}
 			}
 			&_subscribe {
 				padding-left: 33px;
@@ -10037,6 +10098,7 @@
 	}
 	&_rate {
 		width: 100%;
+		color: $main-color;
 		@extend %clear_a;
 	}
 	&_stars {
@@ -10080,7 +10142,7 @@
 			padding: 7px 0 6px;
 			margin: 0 auto 6px;
 			color: #fff;
-			font-size: 18px;
+			font-size: 17px;
 			text-align: center;
 			background-color: $danger-color;
 			span {
@@ -10549,19 +10611,18 @@
 	}
 }
 
-.sidebar__section {
+.sidebar__section {	
 	&_video {
-		width: 100%;
-		padding-bottom: 58.6%;
-		position: relative;
-		padding-top: 5px;
-		padding-right: 6px;
-		iframe {
-			top: 0;
-			left: 0;
+		padding: 0;
+		cursor: pointer;
+		img {
 			width: 100%;
-			height: 100%;
-			position: absolute;
+			height: auto;
+		}
+	}
+	@media (max-width: 1199px) {
+		&_video {
+			display: none;
 		}
 	}
 }
@@ -10731,6 +10792,7 @@
 			left: 0;
 			height: 31px;
 			padding-right: 30px;
+			font-size: 14px;
 			@include flexbox();
 			@include align-items(center);
 			&:before {
