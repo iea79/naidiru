@@ -606,8 +606,7 @@ $(document).ready(function() {
  //    });
 
     // Blog article - b__article_com.html767 - Написать комментарий
-    $('.b__article_com_trigger').on('click', function(event) {
-    	event.preventDefault();
+    $('.b__article_com_trigger').on('click tap', function() {
 		$('.b__article_com_trigger').toggleClass('active');
 		$('.b__article_com_first').toggleClass('open');
 	});
@@ -663,19 +662,23 @@ $(document).ready(function() {
     // });
 
     // office.html - office__menu767
-	var touch4 = $('.office__menu_trigger');
-    var menu4 = $('.main__content_sidebar');
+	// var touch4 = $('.office__menu_trigger');
+ //    var menu4 = $('.main__content_sidebar');
  
-    $(touch4).on('click', function(e) {
-        e.preventDefault();
-        menu4.slideToggle();
-    });
-    $(window).resize(function(){
-        var wid = $(window).width();
-        if(wid > 760 && menu4.is(':hidden')) {
-            menu4.removeAttr('style');
-        }
-    });
+ //    $(touch4).on('click', function(e) {
+ //        e.preventDefault();
+ //        menu4.slideToggle();
+ //    });
+ //    $(window).resize(function(){
+ //        var wid = $(window).width();
+ //        if(wid > 760 && menu4.is(':hidden')) {
+ //            menu4.removeAttr('style');
+ //        }
+ //    });
+ 	$('.office__menu_trigger').on('tap', function() {
+ 		$(this).toggleClass('active');
+ 		$(this).parent().find('.office__menu').toggleClass('open');
+ 	});
 
      // Открытие уведомлений
     $('.office__top_alarm_number').on('click touchend', function(event) {
@@ -908,7 +911,7 @@ $(document).ready(function() {
 
 
 	// Страница авторизации autorization.html Появление блока Восстановить пароль
-    $('.sign__restore-password').on('click touchend', function(event) {
+    $('.sign__restore-password').on('click tap', function(event) {
     	event.preventDefault();
     	$('.recovery').toggleClass('open');
 	});
