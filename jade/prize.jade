@@ -49,18 +49,21 @@ block content
 					.prize__steps_h3 Как участвовать в акции?
 					.prize__steps_center.prize__steps_center_flex
 						.prize__steps_center_item-last
-							.prize__steps_number 1
-							img(src="img/condition-prize-1.png")
+							.prize__steps_img
+								.prize__steps_number 1
+								img(src="img/condition-prize-1.png")
 							.prize__steps_p Зарегистрируйтесь и <br>покупайте в интернет-магазинах <br>через нас
 								.prize__steps_p_treangle
 						.prize__steps_center_item-last.prize__steps_center_item-last_center
-							.prize__steps_number.prize__steps_number_second 2
-							img(src="img/condition-prize-1.png")
+							.prize__steps_img
+								.prize__steps_number 2
+								img(src="img/condition-prize-2.png")
 							.prize__steps_p Подтверждайте покупки чеком и <br>получайте баллы. <br>5000 баллов = 5000 р. (общая сумма покупки / чек)
 								.prize__steps_p_treangle
 						.prize__steps_center_item-last
-							.prize__steps_number 3
-							img(src="img/condition-prize-1.png")
+							.prize__steps_img
+								.prize__steps_number 3
+								img(src="img/condition-prize-3.png")
 							.prize__steps_p Накопите 5000 баллов, <br>обменяйте их на ШопКарту <br>и участвуйте в акции.
 								.prize__steps_p_treangle
 					.prize__steps_reg.prize__steps_reg-last
@@ -71,7 +74,7 @@ block content
 
 		.container_center 
 			// begin prize__list 
-			.prize__list_wrap#pm2
+			.prize__list_wrap.prize__list_wrap_pm2#pm2
 				.prize__section_name Подарки этого месяца - Акция №6 (Апрель 2017 год)
 				.prize__list.grid.grid__2
 					.grid__wrapper
@@ -82,9 +85,6 @@ block content
 								.prize__list_h 1 место              
 								.prize__list_p Подарок: 
 									span.product Смартфон Apple iPhone S5fhb
-								.prize__list_p Стоимость: 
-									span.price 5 000 
-									span рублей
 					.grid__wrapper
 						.prize__list_item
 							.prize__list_left
@@ -93,9 +93,6 @@ block content
 								.prize__list_h 2-5 место              
 								.prize__list_p Подарок: 
 									span.product Смарт-часы Samsung LD245 или Asus G21 gjdnbgj
-								.prize__list_p Стоимость: 
-									span.price 2 000 
-									span рублей
 					.grid__wrapper
 						.prize__list_item
 							.prize__list_left
@@ -104,35 +101,31 @@ block content
 								.prize__list_h 6-15 место             
 								.prize__list_p Подарок: 
 									span.product Кожаный чехол для телефона
-								.prize__list_p Стоимость: 
-									span.price 1 000 
-									span рублей
 					.grid__wrapper
 						.prize__list_item
 							.prize__list_left
-								img(src="img/prize-img4.png", alt="#")
+								.prize__list_warant
+									.prize__list_warant_count
+										|500
+										span баллов
+									.prize__list_warant_bottom каждому участнику
 							.prize__list_right
-								.prize__list_h 16-25 место              
-								.prize__list_p Подарок: 
-									span.product Органический супер шампунь от Yves Rocher
-								.prize__list_p Стоимость: 
-									span.price 200
-									span рублей  
+								.prize__list_h.prize__list_h_sm Гарантированный подарок              
+								.prize__list_p Подарок: 500 баллов на счет в Личный кабинет, каждому участнику акции.
 			// end prize__list
 
 
 			.line
 
 			// begin prize__winners
-			.prize__winners_wrap#pm3
+			.prize__winners_wrap.prize__winners_wrap_pm3#pm3
 				.prize__section_name Обладатели подарка (Март 2017 год)     
-				.prize__winners
+				.prize__winners.js-more-wrapper
 					.prize__winners_table_wrap
 						.prize__winners_table
 							.prize__winners_tr
 								.prize__winners_th Место
-								.prize__winners_th Победитель
-								.prize__winners_th ШопКарта
+								.prize__winners_th Обладатели подарка
 								.prize__winners_th Подарок победителя
 							.prize__winners_tr
 								.prize__winners_td 1 место
@@ -140,7 +133,6 @@ block content
 									.prize__winners_td_in
 										img.prize__winners_img(src="img/user-sm1.png", alt="#")
 										span.user__name Анна
-								.prize__winners_td # A17_487524
 								.prize__winners_td Смартфон Apple iPhone S5fhb
 							.prize__winners_tr
 								.prize__winners_td 2 место
@@ -148,7 +140,6 @@ block content
 									.prize__winners_td_in
 										img.prize__winners_img(src="img/user-sm2.png", alt="#")
 										span.user__name Светлана
-								.prize__winners_td # A17_8521417
 								.prize__winners_td Смарт-часы Samsung LD245
 							.prize__winners_tr
 								.prize__winners_td 3 место
@@ -156,7 +147,6 @@ block content
 									.prize__winners_td_in
 										img.prize__winners_img(src="img/user-sm3.png", alt="#")
 										span.user__name Алексей
-								.prize__winners_td # A17_487524
 								.prize__winners_td Смартфон Apple iPhone S5fhb
 							.prize__winners_tr
 								.prize__winners_td 4 место
@@ -164,7 +154,6 @@ block content
 									.prize__winners_td_in
 										img.prize__winners_img(src="img/user-sm4.png", alt="#")
 										span.user__name Александра
-								.prize__winners_td # A17_487841
 								.prize__winners_td Смартфон Asus G21 gjdnbgj
 							.prize__winners_tr
 								.prize__winners_td 5 место
@@ -172,10 +161,23 @@ block content
 									.prize__winners_td_in
 										img.prize__winners_img(src="img/user-sm1.png", alt="#")
 										span.user__name Мария
-								.prize__winners_td # A17_487465 
+								.prize__winners_td Смарт-часы Samsung LD24j		
+							.prize__winners_tr
+								.prize__winners_td 4 место
+								.prize__winners_td
+									.prize__winners_td_in
+										img.prize__winners_img(src="img/user-sm4.png", alt="#")
+										span.user__name Александра
+								.prize__winners_td Смартфон Asus G21 gjdnbgj
+							.prize__winners_tr
+								.prize__winners_td 5 место
+								.prize__winners_td
+									.prize__winners_td_in
+										img.prize__winners_img(src="img/user-sm1.png", alt="#")
+										span.user__name Мария
 								.prize__winners_td Смарт-часы Samsung LD24j		
 					.prize__winners_link
-						a(href="#") + Показать больше обладателей подарка
+						a.js-more-link(href="#" data-text-open="- Скрыть обладателей подарка" data-text-close="+ Показать больше обладателей подарка") + Показать больше обладателей подарка
 			// end prize__winners
 
 
@@ -185,7 +187,7 @@ block content
 				.counter__box.counter__box_second
 					.counter__box_top.counter__box_top_second
 						.counter__box_left
-							.counter__box_label Начните прямо сейчас:
+							.counter__box_label Всего зарегистрированных на сайте:
 							.counter__box_count
 								.counter__box_count_wrap
 									.counter__box_count_item 2
@@ -214,7 +216,7 @@ block content
 			
 			// begin prize__conditions
 			.prize__conditions_wrap.prize__conditions_wrap_new#pm5
-				.prize__section_name Условия ежемесячных акций 
+				h2.prize__section_name Условия ежемесячных розыгрышей 
 					a(href="#") Скачать Полные правила акции.pdf
 				.prize__conditions
 					img.prize__conditions_left(src="img/icon-sure2.png", alt="#")
@@ -226,7 +228,7 @@ block content
 							.prize__conditions_span Это нужно для того, чтобы покупка засчиталась в Вашем Личном Кабинете.
 						.prize__conditions_title - Что нужно, чтобы участовать в акции: 
 						.prize__conditions_p 1) Совершайте покупки в интернет-магазинах по промокодам через нас (Если Вы не нашли промокода, тогда просто перейдите по ссылке, на странице нужного магазина) и сохраняйте чеки от покупок в данном интернет-магазине.
-						.prize__conditions_p 2) Зайдите в свой Личный кабинет, чтобы убедиться, что покупка засчиталась в Вашем аккаунте, ее можно проверить по №заказа. Далее, сфотографируйте полученный чекот покупки в интернет-магазине так, чтобы там было видно, следующую информацию: Стоимость заказа, Дата покупки, № заказа (если на чеке эта информация есть), Названиеинтернет-магазина, где была совершена покупка. Если Вы, по каким-то причинам не можете прислать фото чека в одном экземпляре или, если Ваша покупка не засчиталась, то, пожалуйста, 
+						.prize__conditions_p 2) Зайдите в свой Личный кабинет, чтобы убедиться, что покупка засчиталась в Вашем аккаунте, ее можно проверить по №заказа. Далее, сфотографируйте полученный чек от покупки в интернет-магазине так, чтобы там было видно, следующую информацию: Стоимость заказа, Дата покупки, № заказа (если на чеке эта информация есть), Названиеинтернет-магазина, где была совершена покупка. Если Вы, по каким-то причинам не можете прислать фото чека в одном экземпляре или, если Ваша покупка не засчиталась, то, пожалуйста, 
 							a.prize__conditions_link(href="#") свяжитесь с нами, 
 							.prize__conditions_span для решения этой проблемы.
 						.prize__conditions_p 3) Пришлите этот чек нам, просто найдите Вашу покупку по №заказа в блоке “История Ваших покупок” и нажмите на кнопку “Подтвердить чеком”, которая находиться на одной линией с этой покупкой.
@@ -324,7 +326,7 @@ block content
 			
 			// begin prize__people 
 			.prize__people
-				.prize__people_name Начните прямо сейчас:
+				h2.prize__people_name Начните прямо сейчас:
 				// begin category__box_grid
 				.category__row_grid.scrollbar-inner
 					.grid

@@ -49,7 +49,7 @@ $(document).ready(function() {
 	});
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	$('a.scroll__link').click( function(){ 
+	$('a.scroll__link,.prize__menu_link').click( function(){ 
 		var scroll_el = $(this).attr('href'); 
 		if ($(scroll_el).length != 0) {
 		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);

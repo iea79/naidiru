@@ -8039,12 +8039,14 @@
 			font-size: 18px;
 		}
 		&_trigger {
+			position: relative;
 			display: none;
 			width: 100%;
 			padding: 11px 0 10px;
 			color: #292929;
 			font-size: 17px;
-			text-align: center;
+			// text-align: center;
+			padding-left: 45px;
 			background-color: #f1f1f1;
 			&:hover {
 				text-decoration: none;
@@ -8054,17 +8056,25 @@
 				width: 10px;
 				height: 14px;
 				margin-right: 14px;
+				position: absolute;
+				left: 18px;
+				top: 12px;
 			}
 			&.active {
 				&:before {
-					content: url('../img/arrow-yellow2.svg');
-					width: 14px;
-					height: 10px;
-					margin-right: 10px;
+					@include rotate(90deg);
 				}
 			}
-			.close {
+			.text-close {
 				display: none;
+			}
+			&.active {
+				.text-close {
+					display: inline-block;
+				}
+				.text-show {
+					display: none;
+				}
 			}
 		}
 	}
@@ -9167,8 +9177,9 @@
 		padding-right: 20px;
 	}
 	@media (max-width: 767px) {
-		margin: 0;
-		display: none;
+		margin: 0 0 20px;
+		padding: 0;
+		// display: none;
 		&_item {
 			margin-top: 0;
 			margin-left: 0;
@@ -9190,7 +9201,7 @@
 	padding: 28px 52px 40px;
 	background-color: #f9f9f9;
 	&_wrap {
-		padding-top: 47px;
+		padding-top: 30px;
 	}
 	&_wrap-last{
 		background-image: url(../img/prize_2-bg.jpg);
@@ -9211,14 +9222,20 @@
 		background-image: url(../img/trangle-prize.png);
 		background-position: 0 0;
 		background-repeat: no-repeat;
+		height: 100%;
+		background-size: 20px 100%;
 	}
 	&_h3 {
 		font-size: 25px;
+		color: #fff;
+	}
+	&_img {
+		position: relative;
+		display: inline-block;
 	}
 	&_center {
 		position: relative;
 		width: 838px;
-		height: 451px;
 		margin-left: 65px;
 		margin-bottom: 292px;
 		&_name {
@@ -9268,8 +9285,12 @@
 			padding: 30px 0;
 			width: 270px;
 			background: transparent;
+			margin: 43px 0 0;
+			display: inline-block;
+			vertical-align: top;
 			&_center {
-				width: 350px;
+				width: 380px;
+				margin: 43px 6% 0;
 			}
 			.prize__steps_p {
 				font-size: 14px;
@@ -9278,9 +9299,9 @@
 	}
 	&_number {
 		position: absolute;
-		top: 40px;
+		top: 16px;
 		font-weight: bold;
-		left: 6%;
+		left: -12px;
 		padding: 15px 20px;
 		background-color: #2893e5;
 		color: #fff;
@@ -9291,12 +9312,12 @@
 		}
 	}	
 	&_center_flex {
-		flex-wrap: wrap;
-		justify-content: space-between;
 		margin: 0 auto;
 		width: 1059px;
 		max-width: 100%;
-		@include flexbox();
+		margin-bottom: 22px;
+		@extend %clear_a;
+		text-align: center;
 		&_item-last {
 			position: relative;
 			padding: 30px 0;
@@ -9330,9 +9351,9 @@
 	&_reg-last {
 		width: 1060px;
 		max-width: 100%;
-		background-color: #fff;
+		background-color: #f1f1f1;
 		text-align: center;
-		padding: 25px 0;
+		padding: 30px 0;
 		height: auto;
 		margin: 0 auto;
 		button {
@@ -9351,24 +9372,48 @@
 		height: 464px;
 		background: url('../img/prize-girl.png') no-repeat;
 	}
+	&-last {
+		background-image: url(../img/prize_2-bg.jpg);
+		background-position: center top;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 62px 0 30px;
+		text-align: center;
+		.prize__steps_item-last_center {
+			width: 35%;
+		}
+		.prize__steps_p {
+			background-color: #2893e5;
+			margin: 17px 20px 17px 0;
+			color: #fff;
+			padding: 16px 8px;
+			position: relative;
+		}
+	}
 	@media (max-width: 1199px) {
 		padding: 28px 20px 40px;
 		&_p {
-			margin-bottom: 40px;
+			// margin-bottom: 40px;
+			min-height: 96px;
+			br {
+				display: none;
+			}
 		}
 		&_center {
 			width: 820px;
-			height: 380px;
 			margin-left: 0;
 			margin-bottom: 170px;
 			&_flex {
-				margin: 0 auto 50px;
-				width: 96%;
-				justify-content: space_around;
+				text-align: center;
+				margin: 0 0 0px;
+				width: 100%;
 			}
 			&_item {
-				&:nth-child(3) {
-					left: 160px;
+				// &:nth-child(3) {
+				// 	// left: 160px;
+				// }
+				&-last {
+					width: 28%;
 				}
 			}
 		}
@@ -9377,8 +9422,17 @@
 		}
 	}
 	@media (max-width: 991px) {
+		&_p {
+			margin: 10px auto 0 !important;
+			min-height: 80px;
+			max-width: 300px;
+			width: 100%;
+		}
+		&_h3 {
+
+		}
 		&_center {
-			width: 710px;
+			// width: 710px;
 			&_flex{
 				width: 100%;
 			}
@@ -9399,11 +9453,18 @@
 					background-size: 100px 82px;
 				}
 				&-last{
-					width: 33%;
+					width: 49%;
+					margin: 0;
+					padding-bottom: 0;
 					&_center{
-						width: 33%;
+						width: 49%;
+						margin-left: 0;
+						margin-right: 0;
 					}
 				}
+				// img {
+				// 	max-width: 100%;
+				// }
 			}
 		}
 		&_p_treangle {
@@ -9411,6 +9472,7 @@
 		}
 		&_reg {
 			height: auto;
+			margin-top: 20px;
 			&_btn {
 				float: none;
 				margin-right: 0;
@@ -9431,6 +9493,9 @@
 		&_wrap {
 			padding-top: 30px;
 		}
+		&_p {
+			min-height: auto;
+		}
 		&_center {
 			width: 100%;
 			height: 400px;
@@ -9450,9 +9515,9 @@
 					left: 75px;
 				}
 				&-last {
-					width: 48%;
+					width: 100%;
 					&_center{
-						width: 48%;
+						width: 100%;
 					}
 				}
 			}
@@ -9474,44 +9539,43 @@
 				}
 			}
 		}
-		&_number{
-			left: 16%;
-		}
 	}
 	@media (max-width: 479px) {
+		padding-left: 0;
+		padding-right: 0;
 		&_center {
 			&_item {
 				&:nth-child(3) {
 					left: 0;
 				}
 				&-last {
-					width: 319px;
 					&_center {
-						width: 319px;
 					}
+					img {
+						max-width: 80%;
+					}
+				}
+			}
+		}
+		&_number{
+			left: 5%;
+		}
+		&_reg {
+			padding: 20px;
+			&_btn {
+				display: block;
+				width: 100%;
+			}
+			&_p {
+				padding-left: 0;
+				a {
+					margin-left: 0;
 				}
 			}
 		}
 	}
 }
-.prize__steps-last{
-	background-image: url(../img/prize_2-bg.jpg);
-	background-position: center top;
-	background-repeat: no-repeat;
-	background-size: cover;
-	padding: 65px 0;
-	text-align: center;
-	.prize__steps_item-last_center {
-		width: 35%;
-	}
-	.prize__steps_p {
-		background-color: #2893e5;
-		margin: 20px 0;
-		color: #fff;
-		padding: 16px 8px;
-		position: relative;
-	}
-}
+
 // end prize__steps
 
 
@@ -9522,42 +9586,99 @@
 		.prize__section_name {
 			margin-bottom: 36px;
 		}
-	}
-	.grid__wrapper {
-		padding-bottom: 30px;
+		&_pm2 {
+			padding-top: 52px;
+			padding-bottom: 16px;
+		}
+		.grid {
+			margin-left: -32px;
+			&__wrapper {
+				padding-bottom: 37px;
+				padding-left: 32px;
+			}
+		}
 	}
 	&_item {
-		height: 199px;
+		// height: 199px;
+		min-height: 182px;
 		border: 1px solid #d1d1d1;
+		display: table;
+		width: 100%;
+		height: 100%;
 		@extend %clear_a;
+		&>* {
+			display: table-cell;
+		}
 	}
 	&_left {
-		width: 199px;
-		height: 100%;
-		padding: 15px;
-		float: left;
+		width: 180px;
+		vertical-align: middle;
+		text-align: center;
+		padding: 10px;
+		position: relative;
 		border-right: 1px solid #d1d1d1;
-		@include flexbox();
-		@include justify-content(center);
-		@include align-items(center);
+		// padding: 15px;
+		// float: left;
+		// border-right: 1px solid #d1d1d1;
+		// @include flexbox();
+		// @include justify-content(center);
+		// @include align-items(center);
 		img {
 			max-width: 100%;
 			max-height: 100%;
 		}
 	}
 	&_right {
-		height: 100%;
-		padding: 31px 32px 0;
-		overflow: hidden;
+		vertical-align: top;
+		padding: 10px 40px 10px;
 		background-color: #f2f2f2;
+		&>* {
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 	&_h {
-		margin-bottom: 20px;
 		font-size: 28px;
+		margin: 25px 0 20px;
+		&_sm {
+			font-size: 24px;
+		}
 	}
 	&_p {
 		margin-bottom: 22px;
 		font-size: 18px;
+	}
+	&_warant {
+
+		// @include justify-content(center);
+		// @include align-items(center);
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		&_count {
+			width: 100%;
+			padding-top: 15%;
+			font-size: 37px;
+			font-weight: 700;
+			span {
+				display: block;
+				font-size: 16px;
+			}
+		}
+		&_bottom {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			padding: 20px 10px;
+			font-size: 16px;
+			color: #ffffff;
+			font-weight: 700;
+			background-color: $danger-color;
+		}
 	}
 	@media (max-width: 1199px) {
 		padding: 0 20px;
@@ -9573,7 +9694,6 @@
 	}
 	@media (max-width: 991px) {
 		&_item {
-			height: 130px;
 		}
 		&_left {
 			width: 130px;
@@ -9591,23 +9711,38 @@
 		}
 	}
 	@media (max-width: 767px) {
+		padding: 0;
 		&_wrap {
 			padding: 30px 0 20px;
 			.prize__section_name {
 				margin-bottom: 20px;
 			}
 		}
+		&_h {
+			margin-top: 0;
+		}
 		.grid__wrapper {
 			@include flex-basis(100%);
 		}
 		&_item {
-			height: 130px;
+			display: block;
+			width: 100%;
 		}
 		&_left {
-			width: 130px;
+			width: 100%;
+			display: block;
+			border: 0;
+			border-bottom: 1px solid #d1d1d1;
+			min-height: 160px;
 		}
 		&_right {
-			padding: 20px 20px 0;
+			padding: 20px;
+			display: block;
+		}
+		&_warant {
+			&_count {
+				padding: 20px 20px 80px;
+			}
 		}
 	}
 	@media (max-width: 479px) {
@@ -9619,7 +9754,7 @@
 			height: auto;
 			float: none;
 			border-right: 0;
-			border-bottom: 1px solid #d1d1d1;
+			
 		}
 		&_right {
 			padding: 20px;
@@ -9695,8 +9830,10 @@
 			padding-top: 20px;
 		}
 		&_left {
+			display: none;
 			&_last{
 				width: 145px;
+				display: block;
 			}
 		}
 	}
@@ -9719,33 +9856,25 @@
 		font-size: 48px;
 	}
 	.counter__box {
-		position: absolute;
-		top: 33px;
-		right: 70px;
-		z-index: 3;
-		width: 620px;
-		height: 394px;
 		background-color: rgba(255, 255, 255, 0.65);
 		&_top_second {
-			width: 622px;
-			max-width: 100%;
-			position: static;
 			margin: 0 auto;
 			background: rgba(255,255,255,0.65);
 			border: 1px solid #d1d1d1;
+			max-width: 622px;
+			padding-bottom: 58px;
 		}
 		&_left {
 			width: 100%;
-			padding: 65px 100px 30px;
+			padding: 52px 25px 30px;
 		}
 		&_label {
 			margin-top: 0;
-			margin-bottom: 25px;
+			margin-bottom: 20px;
 			font-size: 30px;
-			text-align: left;
 		}
 		&_count {
-			margin-bottom: 37px;
+			margin-bottom: 33px;
 			font-size: 24px;
 			&_wrap {
 				font-size: 24px;
@@ -9755,18 +9884,14 @@
 			max-width: 248px;
 		}
 		&_bottom {
-			position: absolute;
-			bottom: -8px;
-			left: -43px;
-			z-index: 5;
-			width: 702px;
-			margin: 0;
+			margin: -65px auto 0px;
 			padding: 16px 20px 11px;
 			font-size: 16px;
+			max-width: 702px;
+			position: relative;
+			top: -2px;
 		}
 		&_bottom_second{
-			position: static;
-			margin: 0 auto;
 		}
 		&_rev {
 			&_quote {
@@ -9774,15 +9899,21 @@
 				overflow: hidden;
 				padding-top: 11px;
 				line-height: 1.3;
+				font-style: initial;
 			}
 		}
 	}
 	.counter__box_second{
 		position: static;
 		margin: 0 auto;
-		width: 702px;
 		background: transparent;
 		border: none;
+	}
+	&_second{
+		padding: 46px 0 26px;
+		background: url(../img/prize-bg-second.jpg) no-repeat 0 0;
+		height: auto;
+		background-size: cover;
 	}
 	@media (max-width: 1199px) {
 		&_example {
@@ -9803,43 +9934,52 @@
 			}
 			&_bottom {
 				height: auto;
-				bottom: 20px;
-				left: 20px;
-				right: 20px;
-				width: auto;
+			}
+			&_rev {
+				&_quote {
+					height: auto;
+				}
 			}
 		}
+		&_second {
+			padding: 20px 0;
+		}
 	}
-}
-.prize__counter_second{
-	padding: 40px 0 25px;
-	background: url(../img/prize-bg-second.jpg) no-repeat 0 0;
-	height: auto;
-	background-size: cover;
 }
 // end prize__counter
 
 
 // begin prize__winners
 .prize__winners {
+	width: 100%;
+	max-width: 900px;
+	&.open {
+		.prize__winners_tr {
+			&:nth-child(n+7) {
+				display: table-row;
+			}
+		}
+	}
 	&_wrap {
-		padding-top: 79px;
-		margin-bottom: 90px;
+		padding-top: 33px;
+		margin-bottom: 52px;
 		.prize__section_name {
 			margin-bottom: 35px;
 		}
 	}
 	&_table {
-		width: 1062px;
+		width: 100%;
 		display: table;
 		border-collapse: collapse;
 		&_wrap {
-			width: 100%;
 			overflow: auto;
 		}
 	}
 	&_tr {
 		display: table-row;
+		&:nth-child(n+7) {
+			display: none;
+		}
 	}
 	&_th,
 	&_td {
@@ -9848,17 +9988,17 @@
 		vertical-align: middle;
 		border: 1px solid #d1d1d1;
 		&:nth-child(1) {
-			width: 180px;
+			width: 20%;
 		}
 		&:nth-child(2) {
-			width: 249px;
+			width: 34%;
 		}
 		&:nth-child(3) {
 			width: 259px;
 		}
-		&:nth-child(4) {
-			width: 372px;
-		}
+		// &:nth-child(4) {
+		// 	width: 372px;
+		// }
 	}
 	&_th {
 		height: 50px;
@@ -9868,7 +10008,7 @@
 	&_td {
 		height: 65px;
 		.prize__winners_td_in {
-			padding-left: 50px;
+			padding-left: 23%;
 			@include flexbox();
 			@include align-items(center);
 		}
@@ -9881,8 +10021,7 @@
 	}
 	&_link {
 		text-align: right;
-		margin: 30px 0;
-		max-width: 1062px;
+		margin: 24px 0;
 	}
 	.user__name {
 		font-size: 14px;
@@ -10010,9 +10149,17 @@
 				text-align: center;
 			}
 		}
+		.faq_right {
+			display: block;
+		}
 	}
 	@media (max-width: 767px) {
 		padding-bottom: 30px;
+	}
+	@media (max-width: 479px) {
+		&_new {
+			
+		}
 	}
 }
 // end prize__faq
@@ -10208,6 +10355,9 @@
 	}
 	&_right {
 		overflow: hidden;
+		.slider__grid_medium {
+			margin-left: 0;
+		}
 		&_top {
 			position: absolute;
 			top: -30px;
