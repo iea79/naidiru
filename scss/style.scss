@@ -816,8 +816,7 @@
 		i {
 			display: inline-block;
 			vertical-align: middle;
-			margin-right: 9px;
-		}
+ 		}
 	}
 	&_terms {
 		position: relative;
@@ -2033,9 +2032,8 @@
 	p {
 		text-align: justify;
 	}
-	.search {
-		margin-top: 47px;
-		padding: 0 15px;
+	.header__search {
+		margin-top: 49px;
 		white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -2075,7 +2073,8 @@
 	}
 	@media (max-width: 767px) {
 		&_message {
-			padding: 40px 20px;
+			margin: 0 -20px;
+			padding: 30px 20px;
 			&_first {
 				font-size: 24px;
 			}
@@ -2083,8 +2082,11 @@
 				font-size: 26px;
 			}
 		}
-		.search {
-			padding: 0;
+		h1 {
+			margin: 0 0 20px;
+		}
+		.header__search {
+			margin-top: 30px;
 		}
 		.search_btn {
 			right: 0;
@@ -2124,6 +2126,7 @@
 		padding: 0;
 		p {
 			float: none;
+			padding-top: 0;
 			margin-right: 0;
 		}
 		&_btn {
@@ -6153,7 +6156,7 @@
 		&_text {
 			padding-top: 3px;
 			height: 42px;
-			width: 217px;
+			// width: 217px;
 		}
 		.confirm__btn {
 			position: relative;
@@ -10199,12 +10202,18 @@
 // Страница бренда brand.html ///////////////
 // ==========================================
 .brand {
+	.section__title {
+		text-align: left;
+	}
 	@media (max-width: 767px) {
 		.white__line {
 			padding: 18px 0;
 		}
 		h1 {
 			display: none;
+		}
+		.section__title {
+			text-align: center;
 		}
 	}
 }
@@ -10784,7 +10793,7 @@
 	.main__content_center {
 		position: relative;
 		padding-bottom: 60px;
-		overflow: initial;
+		// overflow: initial;
 		&_first {
 			position: relative;
 		}
@@ -10817,6 +10826,7 @@
 		}
 		.to_top {
 			top: auto;
+			right: 0;
 			bottom: 0;
 		}
 		@media (max-width: 767px) {
@@ -11409,6 +11419,12 @@
 			}
 			&_left {
 				margin-right: 20px;
+			}
+			.tooltip__text {
+				left: 5px;
+				&_big {
+					left: -6px;	
+				}
 			}
 		}
 	}
