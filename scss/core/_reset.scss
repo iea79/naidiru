@@ -83,6 +83,7 @@ h2 {
 	font-weight: 400;
 	@media (max-width: 767px) {
 		font-size: 18px;
+		text-align: center;
 	}
 }
 
@@ -366,7 +367,7 @@ p {
     display: block;
     cursor: pointer;
     background: transparent url('../img/close.svg') no-repeat;
-    background-size: 14px 14px;
+    background-size: 10px 10px;
     border: 0;
     outline: 0;
     &:hover {

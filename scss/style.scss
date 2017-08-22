@@ -2193,7 +2193,7 @@
 	}
 	@media (max-width: 767px) {
 		.white__line {
-			padding: 17px 20px 30px;
+			padding: 17px 0 30px;
 			margin-bottom: 30px;
 		}
 		h1 {
@@ -2255,23 +2255,20 @@
 	}
 	&_item {
 		height: 29%;
+		display: block;
 		@include flexbox();
-		@include justify-content(space-between);
+		@include align-items(center);
 		img {
 			width: 220px;
-			height: auto;
-			margin-right: 23px;
 			display: block;
-		}
-		&_text {
-			@include align-self(center);
-			@include flex-grow(1);
+			margin-right: 23px;
 		}
 		&_name {
 			max-height: 84px;
 			overflow: hidden;
 			color: $main-color;
 			font-size: 18px;
+			// @include align-self(center);
 		}
 	}
 	a {
@@ -2281,9 +2278,6 @@
 		@include flex-flow(column nowrap);
 		&_left {
 			margin-right: 0;
-			img {
-				width: 100%;
-			}
 		}
 		&_right {
 			width: 100%;
@@ -2296,32 +2290,29 @@
 		&_big {
 			&_name {
 				padding: 15px 20px 12px;
-				font-size: 14px;
+				font-size: 15px;
 			}
 		}
 		&_item {
 			height: auto;
 			img {
-				height: auto;
-				margin-top: 20px;
+				width: 125px;
 				margin-right: 15px;
 			}
 			&_name {
-				max-height: auto;
-				// overflow: visible;
 				font-size: 14px;
 			}
 		}
 	}
-	@media (max-width: 479px) {
-		&_item {
-			@include flex-flow(column nowrap);
-			@include align-items(center);
-			img {
-				margin-bottom: 15px;
-			}
-		}
-	}
+	// @media (max-width: 479px) {
+	// 	&_item {
+	// 		@include flex-flow(column nowrap);
+	// 		@include align-items(center);
+	// 		img {
+	// 			margin-bottom: 15px;
+	// 		}
+	// 	}
+	// }
 }
 // end blog__top
 
@@ -3955,10 +3946,6 @@
 		margin-bottom: 10px;
 	}
 	@media (max-width: 767px) {
-		.line {
-			margin-left: 20px;
-			margin-right: 20px;
-		}
 		.pagination {
 			margin-top: 19px;
 			margin-bottom: 5px;
@@ -4642,8 +4629,6 @@
 	}
 	@media (max-width: 767px) {
 		padding: 28px 20px 30px;
-		margin-left: 20px;
-		margin-right: 20px;
 		&_left {
 			min-height: 67px;
 			margin-bottom: 10px;
@@ -4970,6 +4955,16 @@
 			&.laptop {
 				margin-top: 20px;
 			}
+		}
+	}
+}
+
+.office-main {
+	@media (max-width: 991px) {
+		.main__content_center {
+			@include flexbox();
+			@include justify-content(center);
+			@include flex-flow(row wrap);
 		}
 	}
 }
@@ -5745,25 +5740,25 @@
 		}
 	}
 	@media (max-width: 991px) {
-		padding-left: 20px;
-		&_last {
-			padding: 42px 20px 0 !important;
-		}
-	}
-	@media (max-width: 767px) {
-		padding-right: 20px;
 		&_name {
-			margin-bottom: 18px;
-			font-size: 18px;
 			text-align: center;
-		}
-		&_how {
-			display: none;
 		}
 		&_list {
 			@include flexbox();
 			@include justify-content(center);
 			@include flex-flow(row wrap);
+		}
+		&_last {
+			padding: 42px 20px 0 !important;
+		}
+	}
+	@media (max-width: 767px) {
+		&_name {
+			margin-bottom: 18px;
+			font-size: 18px;
+		}
+		&_how {
+			display: none;
 		}
 		&_item {
 			float: none;
@@ -5884,6 +5879,10 @@
 		}
 	}
 	@media (max-width: 479px) {
+		&_left {
+			height: auto;
+			min-height: auto;
+		}
 		&_right {
 			width: 100%;
 			height: auto;
@@ -5969,14 +5968,16 @@
 		margin-bottom: 22px;
 		line-height: 1.25;
 	}
+	@media (max-width: 991px) {
+		&_name {
+			text-align: center;
+		}
+	}	
 	@media (max-width: 767px) {
 		margin-bottom: 30px;
-		padding-left: 20px;
-		padding-right: 20px;
 		&_name {
 			margin-bottom: 20px;
 			font-size: 18px;
-			text-align: center;
 		}
 		&_img {
 			float: none;
@@ -6330,11 +6331,11 @@
 			}
 		}
 	}
+	@media (max-width: 1199px) {
+		@include order(-1);
+	}
 	@media (max-width: 991px) {
 		max-width: 600px;
-		// margin-left: auto;
-		// margin-right: auto;
-		padding: 0 20px;
 		&_table,&_right {
 			display: none;
 		}
@@ -6347,6 +6348,11 @@
 		}
 		&_mobile {
 			display: block;
+		}
+		&_confirmed {
+			&_hide {
+				text-align: center;
+			}
 		}
 	}
 	@media (max-width: 479px) {
@@ -6516,13 +6522,22 @@
 		display: block;
 		text-align: right;
 	}
+	@media (max-width: 991px) {
+		&_name {
+			text-align: center;
+		}
+		&_list {
+			@include justify-content(center);
+		}
+		&_show {
+			text-align: center !important;
+		}
+	}
 	@media (max-width: 767px) {
-		margin-left: 20px;
-		margin-right: 20px;
+		padding-bottom: 0;
 		&_name {
 			margin-bottom: 0;
 			font-size: 18px;
-			text-align: center;
 		}
 		&_list {
 			margin-left: -10px;
@@ -6562,11 +6577,18 @@
 		font-weight: 400;
 		@include border-radius(0);
 	}
+	@media (max-width: 991px) {
+		&_name {
+			text-align: center;
+		}
+	}
 	@media (max-width: 767px) {
-		padding: 30px 20px 20px;
+		padding: 30px 0 20px;
 		&_name {
 			font-size: 18px;
-			text-align: center;
+		}
+		&_btn {
+			margin: 0 auto 30px;
 		}
 	}
 }
@@ -6590,8 +6612,6 @@
 	}
 	@media (max-width: 767px) {
 		margin-bottom: 20px;
-		padding-left: 20px;
-		padding-right: 20px;
 		&_left {
 			float: none;
 			margin-bottom: 20px;
@@ -6629,7 +6649,7 @@
 		font-weight: 700;
 	}
 	@media (max-width: 767px) {
-		padding: 20px 20px 0;
+		padding: 20px 0 0;
 		&_left {
 			width: 45px;
 			float: none;
@@ -7295,8 +7315,6 @@
 	}
 	@media (max-width: 767px) {
 		&_section {
-			padding-left: 20px;
-			padding-right: 20px;
 			margin-bottom: 30px;
 			&_name {
 				font-size: 16px;
@@ -7526,8 +7544,6 @@
 	}
 	@media (max-width: 767px) {
 		&_section {
-			margin-left: 20px;
-			margin-right: 20px;
 			&:last-child {
 				margin-bottom: 20px;
 			}
@@ -8635,13 +8651,26 @@
 	&_left {
 		width: 63%;
 		float: left;
-		border-bottom: 2px solid $input_border_color;
 	}
 	&_right {
 		overflow: hidden;
 		padding-left: 5%;
 		.faq_list {
 			border: 0;
+		}
+	}
+	@media (max-width: 1279px) {
+		&_left {
+			width: 60%;
+		}
+	}
+	@media (max-width: 1199px) {
+		&_left {
+			width: 55%;
+		}
+		&_right {
+			padding-left: 3%;
+
 		}
 	}
 	@media (max-width: 991px) {
@@ -8657,6 +8686,7 @@
 		}
 		&_right {
 			display: none;
+
 		}
 	}
 	@media (max-width: 767px) {
@@ -8664,7 +8694,7 @@
 			padding: 32px 0 20px;
 		}
 		h1 {
-			margin: 0 20px 26px;
+			margin: 0 0 26px;
 		}
 	}
 }
@@ -8803,11 +8833,11 @@
 			display: block;
 		}
 	}
-	// @media (max-width: 991px) {
-	// 	&_list {
-	// 		border-left: 1px solid $input_border_color;
-	// 	}
-	// }
+	@media (max-width: 1199px) {
+		&_list {
+			padding: 55px 50px 44px;
+		}
+	}
 	@media (max-width: 767px) {
 		&_list {
 			padding: 30px 20px;
@@ -8874,9 +8904,14 @@
 	}
 	@media (max-width: 767px) {
 		.faq_list {
-			padding: 30px 20px;
+			padding: 30px 0 30px 20px;
 			border: 0;
 			border-top: 1px solid $input_border_color;
+		}
+	}
+	@media (max-width: 479px) {
+		.faq_list {
+			padding: 30px 0;
 		}
 	}
 }
