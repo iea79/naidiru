@@ -11170,19 +11170,22 @@
 		}
 		&_left {
 			position: relative;
-			width: 85px;
+			width: 110px;
 			height: 100%;
-			padding-right: 25px;
 			display: table-cell;
 			vertical-align: top;
 			img {
-				min-width: 85px;
+				width: 85px;
+				height: 85px;
 				display: block;
+				margin-right: 25px;
+				max-width: none;
 			}
 		}
 		&_right {
 			display: table-cell;
 			vertical-align: middle;
+			width: 80%;
 		}
 		&_name {
 			margin-bottom: 8px;
@@ -11202,7 +11205,7 @@
 		.tooltip__help {
 			position: absolute;
 			top: 5px;
-			right: 21px;
+			left: 65px;
 		}
 		.tooltip__text {
 			width: 309px;
@@ -11244,7 +11247,7 @@
 				margin-left: 20px;
 			}
 			&_left {
-				margin-right: 20px;
+				// margin-right: 20px;
 			}
 			.tooltip__text {
 				left: 5px;
@@ -11304,6 +11307,18 @@
 				padding: 10px 15px 7px;
 				font-size: 14px;
 			}
+			.tooltip__help {
+				left: 54px;
+			}
+			&_left {
+				// padding-right: 20px;
+				width: 90px;
+				img {
+					width: 70px;
+					height: 70px;
+					margin-right: 20px;
+				}
+			}
 		}
 	}
 	@media (max-width: 479px) {
@@ -11315,11 +11330,8 @@
 			&_left {
 				display: table-cell;
 				width: 90px;
-				padding-right: 20px;
+				// padding-right: 20px;
 				margin: 0;
-				img {
-					min-width: 70px;
-				}
 			}
 			&_right {
 				display: table-cell;
@@ -11329,7 +11341,7 @@
 				left: 53px;
 			}
 			.tooltip__help {
-				right: 16px;
+				// left: 70px;
 				.tooltip__text {
 					right: auto;
 					left: 5px;
