@@ -1,7 +1,7 @@
 .modal__subscribe {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -104,10 +104,11 @@
 .modal__presentation {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
-	.presentation__slider {	
+	.presentation__slider {
+		display: none;	
 		&_conten {
 			display: table;
 			width: 100%;
@@ -134,6 +135,15 @@
 			width: 100%;
 			margin-bottom: 40px;
 			text-align: center;
+		}
+		&_soc {
+			text-align: center;
+			margin-top: 10px;
+			a {
+				display: inline-block;
+				vertical-align: top;
+				margin: 5px;
+			}
 		}
 	}
 	.btn {
@@ -249,6 +259,9 @@
 				margin-bottom: 25px;
 				font-size: 20px;
 			}
+			&_wiget {
+				margin: auto;
+			}
 		}
 		.btn {
 			padding-left: 10px;
@@ -285,7 +298,7 @@
 .modal__no-purchase {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -389,7 +402,7 @@
 .modal__del-check {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -492,7 +505,7 @@
 .modal__shopcard {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -599,7 +612,7 @@
 .modal__confirm {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -903,7 +916,7 @@
 .modal__no-subscription {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -1008,7 +1021,7 @@
 .modal__del-account {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -1180,7 +1193,7 @@
 .modal__open-action {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -1418,7 +1431,7 @@
 .modal__show-code {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -1710,7 +1723,7 @@
 .modal__forgot-password {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -1906,7 +1919,7 @@
 .modal__social {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
@@ -1963,7 +1976,7 @@
 .modal__video {
 	&.in {
 		.modal-dialog {
-			@include transform(translate(0, 5%));
+			// @include transform(translate(0, 5%));
 		}
 	}
 	&_bg {
