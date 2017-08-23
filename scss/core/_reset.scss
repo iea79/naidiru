@@ -431,3 +431,19 @@ p {
 		}
 	}
 }
+.tooltipster-content {
+	.tooltip__text {
+		display: block;
+		position: relative;
+		border: none;
+		padding: 0;
+		background-color: transparent;
+		&:before {
+			content: '';
+			display: none;
+		}
+		&_big {
+			display: none;
+		}
+	}
+}

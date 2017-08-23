@@ -17,9 +17,10 @@
     <script src="js/slick.min.js"></script>
     <script src="js/tooltipster.bundle.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/sticky-kit.js"></script>
     <script src="js/function.js"></script>
   </head>
-  <body>
+  <body class="sales__page">
     <div class="wrapper">
       <!-- begin header -->
       <header class="header">
@@ -120,26 +121,26 @@
         <div class="white__line">
           <div class="container_center">
             <!-- begin breadcrumb-->
-            <div class="breadcrumb ind">
+            <div class="breadcrumb">
               <li><a href="/">Главная</a></li>
               <li><a href="#">Страница распродаж			</a></li>
             </div>
             <!-- end breadcrumb-->
             <div>
               <div class="b__hashtag_list b__hashtag_list-nothash b__hashtag_list-last">
-                <div class="b__hashtag_label">Показать:</div><a href="#" class="b__hashtag_link"> <span>Поделиться </span></a><a href="#" class="b__hashtag_item ib b__hashtag_item_new">Одежда и обувь</a><a href="#" class="b__hashtag_item ib b__hashtag_item_new">Лучшие предложения</a><a href="#" class="b__hashtag_item ib b__hashtag_item_new">Техника и Электроника</a><a href="#" class="b__hashtag_item ib b__hashtag_item_new">Детские товары и Игрушки</a>
+                <div class="b__hashtag_label">Показать:</div><a href="#" class="b__hashtag_link"> <span>Поделиться </span></a><a href="#1" class="b__hashtag_item ib b__hashtag_item_new js-scroll-to">Одежда и обувь</a><a href="#2" class="b__hashtag_item ib b__hashtag_item_new js-scroll-to">Лучшие предложения</a><a href="#3" class="b__hashtag_item ib b__hashtag_item_new js-scroll-to">Техника и Электроника</a><a href="#4" class="b__hashtag_item ib b__hashtag_item_new js-scroll-to">Детские товары и Игрушки</a>
                 <select>
-                  <option> <a href="#">Одежда и обувь</a></option>
-                  <option> <a href="#">Лучшие предложения</a></option>
-                  <option> <a href="#">Техника и Электроника</a></option>
-                  <option> <a href="#">Детские товары и Игрушки</a></option>
+                  <option data-href="#1" class="js-scroll-to">Одежда и обувь</option>
+                  <option data-href="#2" class="js-scroll-to">Лучшие предложения</option>
+                  <option data-href="#3" class="js-scroll-to">Техника и Электроника</option>
+                  <option data-href="#4" class="js-scroll-to">Детские товары и Игрушки</option>
                 </select>
               </div>
             </div>
           </div>
         </div>
         <div class="container_center sales__page">
-          <h1 class="ind">Лучшие предложения сегодня</h1>
+          <h1 id="1" class="ind">Лучшие предложения сегодня</h1>
           <div class="sales__page_aside">
             <!-- begin b__article_top -->
             <div class="b__article_top">
@@ -151,6 +152,7 @@
                 <div data-services="gplus" class="b__article_social_icon ya-share2"></div>
                 <div data-services="moimir" class="b__article_social_icon ya-share2"></div>
               </div>
+              <div class="b__article_totop to_top">наверх</div>
             </div>
             <!-- end b__article_top-->
           </div>
@@ -293,7 +295,7 @@
               </div>
             </div>
             <div class="new__sales_page_wrapper">
-              <h2 class="ind">Скидки на одежду и обувь</h2>
+              <h2 id="2" class="ind">Скидки на одежду и обувь</h2>
               <!-- begin slider__grid -->
               <div class="sales__page_grid">
                 <!-- Slide 1-->
@@ -336,7 +338,7 @@
                   </div>
                 </div>
               </div>
-              <h2 class="ind">Скидки на технику и электронику</h2>
+              <h2 id="3" class="ind">Скидки на технику и электронику</h2>
               <!-- begin slider__grid -->
               <div class="sales__page_grid">
                 <!-- Slide 1-->
@@ -384,9 +386,9 @@
         </div>
         <div class="white__line">
           <div class="container_center">
-            <h2 class="ind">Узнайте больше</h2>
+            <div id="4" class="ind mt_reset">Узнайте больше</div>
             <!-- begin sales__more_grid-->
-            <div class="sales__more_grid">
+            <div class="sales__more_grid scrollbar-inner">
               <div class="grid__wrapper">
                 <div class="grid__item">
                   <div class="sales__more_img"><img src="img/smore1.jpg" alt="#"/></div>
@@ -424,7 +426,7 @@
               <p>С 24 по 27 ноября 2016 года Вы можете принять участие в тотальной распродаже многочисленных видов товаров от электро бытовой техники до косметики и парфюмерии, одежды и обуви от популярных интернет магазинов. На странице скидок Вы найдете полный список магазинов участвующих в Черной пятнице 2016 в России, такие как: Ламода, М.Видео, Wildberries, Media Markt, Ebay, myToys, Летуаль, Adidas, Reebok, ECCO, Связной, 003, Nike, Quelle, Бонприкс.Как действовать по максимому в день распродаж Черной пятницы? Вот несколько правил для выгодного шоппинга: Обязательно подпишитесь на рассылку Найди.ру, с помощью которых вы будете в курсе всех выгодных предложений. (Рассылка приходит 1 раз в неделю, и отписаться сможете в любой момент). Подготовка списка товаров, которые вы планировали, делайте <span class="sales__page_description_dott">...</span></p>
               <p class="sales__page_description_moretext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><a href="#" data-text-close="Показать полностью" data-text-open="Скрыть" class="js-more-link sales__page_description_more">Показать полностью</a>
             </div>
-            <h2 class="ind">Популярные интернет-магазины</h2>
+            <h3 class="ind">Популярные интернет-магазины</h3>
             <div class="column sales__page_column"><a href="#" class="sales__page_column_link">Lamoda</a><a href="#" class="sales__page_column_link">Снежная королева</a><a href="#" class="sales__page_column_link">Nike</a><a href="#" class="sales__page_column_link">Алиэкспресс</a><a href="#" class="sales__page_column_link">М.видео</a><a href="#" class="sales__page_column_link">Техносила</a><a href="#" class="sales__page_column_link">Quiksiver</a><a href="#" class="sales__page_column_link">Юлмарт</a><a href="#" class="sales__page_column_link">Lamoda</a><a href="#" class="sales__page_column_link">Снежная королева</a><a href="#" class="sales__page_column_link">Nike</a><a href="#" class="sales__page_column_link">Алиэкспресс</a><a href="#" class="sales__page_column_link">М.видео</a><a href="#" class="sales__page_column_link">Техносила</a><a href="#" class="sales__page_column_link">Quiksiver</a><a href="#" class="sales__page_column_link">Юлмарт</a><a href="#" class="sales__page_column_link">Lamoda</a><a href="#" class="sales__page_column_link">Снежная королева</a><a href="#" class="sales__page_column_link">Nike</a><a href="#" class="sales__page_column_link">Алиэкспресс</a></div>
           </div>
         </div>

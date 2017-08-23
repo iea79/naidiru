@@ -17,6 +17,7 @@
     <script src="js/slick.min.js"></script>
     <script src="js/tooltipster.bundle.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/sticky-kit.js"></script>
     <script src="js/function.js"></script>
   </head>
   <body class="office office-news">
@@ -167,10 +168,9 @@
                 <div class="office__top_center_message office__top_center_message_red">
                   <p> <span class="large">Вы накопили: <span class="bold points">2120 </span></span><span class="bold">баллов</span></p>
                   <p>До ШопКарты Вам осталось накопить: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
-                  <div class="tooltip__help big">
-                    <div class="tooltip__text">Отлично! Теперь Вы можете поменять баллы на лотерею и это можно будет сделать в любое время, даже через месяц.   Перед тем, как получать лотерею, посмотрите, какие призы будут <a href="#">разыграны в этом месяце &gt; </a><br><br>Если вы решили участвовать в этом месяце, тогда найдите кнопку “Получить лотерею” в одном из блоков ниже.
-                      <div class="tooltip__text_big"></div>
-                    </div>
+                  <div data-tooltip-content="#tooltip-html" class="tooltip__help big tooltip"></div>
+                  <div id="tooltip-html" class="tooltip__text">Отлично! Теперь Вы можете поменять баллы на лотерею и это можно будет сделать в любое время, даже через месяц.   Перед тем, как получать лотерею, посмотрите, какие призы будут <a href="#">разыграны в этом месяце &gt; </a><br><br>Если вы решили участвовать в этом месяце, тогда найдите кнопку “Получить лотерею” в одном из блоков ниже.
+                    <div class="tooltip__text_big"></div>
                   </div>
                 </div>
                 <div class="sm_social">

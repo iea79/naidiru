@@ -49,10 +49,14 @@ $(document).ready(function() {
 	});
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	$('a.scroll__link,.prize__menu_link').click( function(){ 
+	$('body').on('tap', '.scroll__link,.prize__menu_link,.js-scroll-to', function(){ 
 		var scroll_el = $(this).attr('href'); 
+		var data_scroll_el = $(this).data('href');
 		if ($(scroll_el).length != 0) {
-		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+			$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+		} 
+		if ($(data_scroll_el).length != 0) {
+			$('html, body').animate({ scrollTop: $(data_scroll_el).offset().top }, 500);
 		}
 		return false;
 	});
@@ -586,73 +590,75 @@ $(document).ready(function() {
     });
 
     // All shops - shops__categories767
-	var touch1 = $('.shops__categories_trigger');
-    var menu1 = $('.shops__categories');
- 
-    $(touch1).on('click', function(e) {
-        e.preventDefault();
-        menu1.slideToggle();
-    });
-    $(window).resize(function(){
-        var wid = $(window).width();
-        if(wid > 760 && menu1.is(':hidden')) {
-            menu1.removeAttr('style');
-        }
-    });
+	$('.shops__categories_trigger').on('click tap', function() {
+		$(this).toggleClass('active');
+		$(this).parent().find('.shops__categories').slideToggle();
+	});
 
-    // All shops - shops__sort767
-	var touch2 = $('.shops__sort_trigger');
-    var menu2 = $('.shops__sort');
- 
-    $(touch2).on('click', function(e) {
-        e.preventDefault();
-        menu2.slideToggle();
-    });
-    $(window).resize(function(){
-        var wid = $(window).width();
-        if(wid > 760 && menu2.is(':hidden')) {
-            menu2.removeAttr('style');
-        }
-    });
+	$('.shops__sort_trigger').on('click tap', function() {
+		$(this).toggleClass('active');
+		$(this).parent().find('.shops__sort').slideToggle();
+	});
 
-    // Blog article - b__article_com.html767 Написать комментарий
-	// var touch3 = $('.b__article_com_trigger');
- //    var menu3 = $('.b__article_com_first');
- 
- //    $(touch3).on('click', function(e) {
- //        e.preventDefault();
- //        menu3.slideToggle();
- //    });
- //    $(window).resize(function(){
- //        var wid = $(window).width();
- //        if(wid > 760 && menu3.is(':hidden')) {
- //            menu3.removeAttr('style');
- //        }
- //    });
+
 
     // Blog article - b__article_com.html767 - Написать комментарий
     $('.b__article_com_trigger').on('click tap', function() {
-		$('.b__article_com_trigger').toggleClass('active');
+		$(this).toggleClass('active');
 		$('.b__article_com_first').toggleClass('open');
 	});
 
     // Страница Все магазины all-shops.html - Сортировка по алфавиту
-    $('.shops__sort_trigger_abc').on('click touchend', function(event) {
+    $('.shops__sort_trigger_abc').on('click tap', function(event) {
     	event.preventDefault();
+    	if ($(window).width() <= 767) {
+    		$('.shops__sort_abc').insertAfter($(this).parent());
+    	}
 		$('.shops__sort_abc').toggleClass('open');
 	});
 
     // Страница Все промокоды all-promocodes.html - Фильтр промокодов
-    $('.sale__list_trigger').on('click', function(event) {
+    $('.sale__list_trigger').on('click tap', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).parent().find('.sidebar__section_wrap').toggleClass('open');
 	});
 
-    $('.sale__list_save').on('click', function(event) {
+    $('.sale__list_save').on('click tap', function(event) {
     	event.preventDefault();
-    	$(this).toggleClass('active');
+    	if ($(this).hasClass('active')) {
+	    	$(this).removeClass('active').html('Сохранить');
+    	} else {
+    		$(this).addClass('active').html('Сохранен');
+    	}
     });
+
+	if ($('.sale__list_save').hasClass('active')) {
+		$('.sale__list_save').html('Сохранен');
+	} else {
+    	$('.sale__list_save').html('Сохранить');
+	}
+
+	$('.office__support_trigger').on('click tap', function(event) {
+		event.preventDefault();
+		$(this).toggleClass('hide');
+		$(this).parent().find('.office__news_support').toggleClass('open');
+	});
+   	
+   	$('.office__edit_trigger').on('click tap', function(event) {
+   		event.preventDefault();
+   		$('.office__edit_hide').removeClass('open')
+   		$(this).siblings('.office__edit_hide').toggleClass('open');
+   	});
+	$(document).mouseup(function (el){
+		var div = $(".office__edit_trigger");
+		var drop = $('.office__edit_hide');
+
+		if (!div.is(el.target)
+		    && div.has(el.target).length === 0) {
+			drop.removeClass('open');
+		}
+	});
 
 	 // Страница Все промокоды all-promocodes.html - всплывашка при нажатии на звезду
     $('sale__list_save').on('click touchend', function(event) {
@@ -738,7 +744,7 @@ $(document).ready(function() {
 	});
 
 	// Подсказки
-    $('.tooltip__help').on('click', function() {
+    $('.tooltip__help:not(.tooltip)').on('click', function() {
     	$(this).find('.tooltip__text').addClass('open');
     });
     $('.tooltip__text').mouseleave(function() {
@@ -798,6 +804,9 @@ $(document).ready(function() {
     	trigger: 'click',
     	animation: 'fade',
     	theme: 'tooltipster-noir',
+    	contentCloning: true,
+    	contentAsHTML: true,
+    	interactive: true
     });
 
     $('.js-more-text').hide();
@@ -828,15 +837,18 @@ $(document).ready(function() {
     	}
     });
 
-    $('.office__settings_shops').on('change', '.checkbox__input', function() {
+    $('.office__settings_section_info').on('change', '.checkbox__input', function() {
 
+    	var wrap = $(this).closest('.office__settings_section_info');
+    	var wrapCheck = wrap.find('.js-settings-checked');
+    	var wrapUncheck = wrap.find('.js-settings-unchecked');
     	var checked = $(this).is(':checked');
     	var checkbox = $(this).closest('.office__settings_checkbox');
 
     	if (checked) {
-	    	checkbox.appendTo('.office__settings_checked_shop');
+	    	checkbox.appendTo(wrapCheck);
     	} else {		
-	    	checkbox.appendTo('.office__settings_unchecked_shop');
+	    	checkbox.appendTo(wrapUncheck);
     	}
     });
 
@@ -1004,6 +1016,10 @@ $(document).ready(function() {
 		}
 	}
 
+	$('.sales__page_aside').stick_in_parent({
+        recalc_every: true,
+    });
+
 	if ('order' in document.documentElement.style) {
 	    // Flexbox-совместимый браузер.
 	    // Используем `order` или `flex-direction: column-reverse`.
@@ -1024,7 +1040,6 @@ $(document).ready(function() {
 		    
 		    $('.office__history').insertAfter('.sidebar__section:last-child');
 
-		    $('.office__shops_top_btn').append('.office__shops_top');
 	    }
 	}
 

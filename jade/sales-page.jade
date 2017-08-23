@@ -1,5 +1,9 @@
 //- Подключаем общий шаблон
 extends template.jade
+
+block variables
+	- bodyClass = "sales__page"
+
 //- Меняем Home на название страницы
 block title
 	title Страница распродаж
@@ -18,7 +22,7 @@ block content
 
 
 			// begin breadcrumb
-			.breadcrumb.ind
+			.breadcrumb
 				li
 					a(href="/") Главная
 				li
@@ -30,22 +34,18 @@ block content
 					.b__hashtag_label Показать:
 					a.b__hashtag_link(href="#") 
 						span Поделиться 
-					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Одежда и обувь
-					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Лучшие предложения
-					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Техника и Электроника
-					a.b__hashtag_item.ib.b__hashtag_item_new(href="#") Детские товары и Игрушки
+					a.b__hashtag_item.ib.b__hashtag_item_new.js-scroll-to(href="#1") Одежда и обувь
+					a.b__hashtag_item.ib.b__hashtag_item_new.js-scroll-to(href="#2") Лучшие предложения
+					a.b__hashtag_item.ib.b__hashtag_item_new.js-scroll-to(href="#3") Техника и Электроника
+					a.b__hashtag_item.ib.b__hashtag_item_new.js-scroll-to(href="#4") Детские товары и Игрушки
 					select
-						option 
-							a(href="#") Одежда и обувь
-						option 
-							a(href="#") Лучшие предложения
-						option 
-							a(href="#") Техника и Электроника
-						option 
-							a(href="#") Детские товары и Игрушки
+						option.js-scroll-to(data-href="#1") Одежда и обувь
+						option.js-scroll-to(data-href="#2") Лучшие предложения
+						option.js-scroll-to(data-href="#3") Техника и Электроника
+						option.js-scroll-to(data-href="#4") Детские товары и Игрушки
 	.container_center.sales__page
 
-		h1.ind Лучшие предложения сегодня
+		h1.ind#1 Лучшие предложения сегодня
 
 		.sales__page_aside
 			// begin b__article_top 
@@ -57,6 +57,7 @@ block content
 					.b__article_social_icon.ya-share2(data-services="odnoklassniki")
 					.b__article_social_icon.ya-share2(data-services="gplus")
 					.b__article_social_icon.ya-share2(data-services="moimir")
+				.b__article_totop.to_top наверх
 			// end b__article_top
 
 		.sales__page_content
@@ -240,7 +241,7 @@ block content
 						a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -4#5%!
 
 			.new__sales_page_wrapper
-				h2.ind Скидки на одежду и обувь
+				h2.ind#2 Скидки на одежду и обувь
 
 				// begin slider__grid 
 				.sales__page_grid
@@ -296,7 +297,7 @@ block content
 								a(href="#") Lamoda
 							a.slider__grid_text_link(href="#") Смартфон Самсунг со скидкой -45%!
 
-				h2.ind Скидки на технику и электронику
+				h2.ind#3 Скидки на технику и электронику
 
 				// begin slider__grid 
 				.sales__page_grid
@@ -354,10 +355,10 @@ block content
 	.white__line
 		.container_center
 
-			h2.ind Узнайте больше
+			.ind.mt_reset#4 Узнайте больше
 
 			// begin sales__more_grid
-			.sales__more_grid
+			.sales__more_grid.scrollbar-inner
 				.grid__wrapper
 					.grid__item
 						.sales__more_img
@@ -400,7 +401,7 @@ block content
 
 				a(href="#" data-text-close="Показать полностью" data-text-open="Скрыть").js-more-link.sales__page_description_more Показать полностью
 			
-			h2.ind Популярные интернет-магазины
+			h3.ind Популярные интернет-магазины
 
 			.column.sales__page_column
 				a(href="#").sales__page_column_link Lamoda

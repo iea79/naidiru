@@ -76,11 +76,7 @@ block content
 						p До ШопКарты Вам осталось накопить: <br>
 							span.large.bold.points__left 2880 
 							span.bold баллов
-						.tooltip__help.big
-							.tooltip__text Отлично! Теперь Вы можете поменять баллы на лотерею и это можно будет сделать в любое время, даже через месяц.   Перед тем, как получать лотерею, посмотрите, какие призы будут 
-								a(href="#") разыграны в этом месяце &gt; 
-								<br><br>Если вы решили участвовать в этом месяце, тогда найдите кнопку “Получить лотерею” в одном из блоков ниже.
-								.tooltip__text_big
+
 					.sm_social
 						.sm_social_icon
 							.ya-share2(data-services="vkontakte")
@@ -317,7 +313,7 @@ block content
 								button.close
 			
 			.office__settings_section
-				.office__settings_section_info.office__settings_shops
+				.office__settings_section_info
 					.office__settings_section_top
 						.office__settings_section_h2 Вы подписаны на эти магазины
 
@@ -326,7 +322,7 @@ block content
 							|и второе нажать на сердечки этих магазинов. И выбранные Вами магазины автоматически сохранятся тут и на этой странице: 
 							a(href="office-shops.html" target="_blank") Любимые магазины.
 
-						.office__settings_col.office__settings_checked_shop
+						.office__settings_col.js-settings-checked
 							.office__settings_checkbox.checkbox
 								input.checkbox__input(type="checkbox" checked id="os4")
 								label.checkbox__label(for="os4") Lamoda
@@ -354,7 +350,7 @@ block content
 					.office__settings_section_bottom
 						.office__settings_section_h3 Рекомендуем подписаться на эти магазины
 
-						.office__settings_col.office__settings_unchecked_shop
+						.office__settings_col.js-settings-unchecked
 							.office__settings_checkbox.checkbox
 								input.checkbox__input(type="checkbox" id="os11")
 								label.checkbox__label(for="os11") Снежная королева
@@ -401,12 +397,12 @@ block content
 							a(href="all-categories.html" target="_blank") выбрать категории 
 							|и второе нажать на сердечки этих категорий. И выбранные Вами категории автоматически сохранятся тут.
 
-						.office__settings_col
+						.office__settings_col.js-settings-checked
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os23")
+								input.checkbox__input(type="checkbox" checked id="os23")
 								label.checkbox__label(for="os23") Одежда
 							.office__settings_checkbox.checkbox
-								input.checkbox__input(type="checkbox" id="os24")
+								input.checkbox__input(type="checkbox" checked id="os24")
 								label.checkbox__label(for="os24") Обувь
 
 					.line
@@ -414,7 +410,7 @@ block content
 					.office__settings_section_bottom
 						.office__settings_section_h3 Рекомендуем подписаться на эти категории
 
-						.office__settings_col
+						.office__settings_col.js-settings-unchecked
 							.office__settings_checkbox.checkbox
 								input.checkbox__input(type="checkbox" id="os25")
 								label.checkbox__label(for="os25") Аксессуары
