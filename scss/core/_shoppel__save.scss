@@ -39,7 +39,7 @@
 	}
 	&_text-block {
 		overflow: hidden;
-		padding: 20px 33px 20px 134px;
+		padding: 29px 33px 20px 134px;
 	}
 	&_left {
 		padding: 0;
@@ -56,9 +56,10 @@
 		}
 	}
 	&_right {
-		padding: 33px 38px 52px;
+		padding: 43px 38px 39px;
 		float: right;
 		width: 295px;
+		margin-left: 40px;
 		background-color: #dadada;
 		font-size: 14px;
 		position: relative;
@@ -68,9 +69,11 @@
 			background-image: url(../img/triangle-sales.png);
 			background-position: left center;
 			background-repeat: no-repeat;
+			background-size: 40px 100%;
 			position: absolute;
 			left: -40px;
 			top: 0;
+			bottom: 0;
 			padding: 74px 20px;
 		}
 		.btn {
@@ -96,8 +99,22 @@
 		@extend %clear_all;
 		padding-left: 110px;
 		font-size: 13px;
+		padding-bottom: 20px;
 	}
 	.btn {}
+	@media (max-width: 1280px) {
+		&_left {
+
+		}
+		&_right {
+			padding: 60px 38px 56px;
+		}
+		&_text {
+			&-block {
+				padding: 29px 33px 40px 134px;
+			}
+		}
+	}
 	@media (max-width: 1199px) {
 		&_text-block {
 			// width: 65%;
@@ -109,26 +126,28 @@
 			}
 		}
 	}
+	// @media (max-width: 991px) {
+	// 	&_text-block {
+	// 		width: 100%;
+	// 	}
+	// 	&_right {
+	// 		width: 100%;
+	// 		text-align: center;
+	// 		&:before {
+	// 			display: none;
+	// 		}
+	// 		.btn {
+	// 			width: 200px;
+	// 		}
+	// 	}
+	// }
 	@media (max-width: 991px) {
-		&_text-block {
-			width: 100%;
-		}
-		&_right {
-			width: 100%;
-			text-align: center;
-			&:before {
-				display: none;
-			}
-			.btn {
-				width: 200px;
-			}
-		}
-	}
-	@media (max-width: 767px) {
 		background: #dadada;
-		padding: 25px 0;
+		padding: 25px 0 25px 20px;
 		text-align: center;
 		position: relative;
+		max-width: 100%;
+		@include flex-grow(2);
 		&:before {
 			content: '';
 			position: absolute;
@@ -159,6 +178,26 @@
 				height: auto;
 			}
 		}
+		&_left {
+			@include flex-basis(100%);
+			float: none;
+			background-color: transparent;
+		}
+		&_right {
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			margin: 0 auto;
+			left: 0;
+		}
+		&_text {
+			@include flex-basis(100%);
+			float: none;
+			&-block {
+				overflow: auto;
+				margin-bottom: 100px;
+			}
+		}
 		&_top {
 			background-color: transparent;
 		}
@@ -185,3 +224,4 @@
 		}
 	}
 }
+

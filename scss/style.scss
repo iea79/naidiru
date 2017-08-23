@@ -56,6 +56,20 @@
   background-color: #ffffff;
 }
 
+.home {
+	.simple__grid {
+		margin-left: -20px;
+		.grid__wrapper {
+			margin-bottom: 20px;
+		}
+		&_wrap {
+			&+.scroll-element.scroll-x {
+				left: 0;			
+			}
+		}
+	}
+}
+
 .home__promo {
 	@extend %clear_a;
 	&_code {
@@ -180,7 +194,7 @@
 	}
 	@media (max-width: 767px) {
 		&_code {
-			padding: 0 20px;
+			// padding: 0 20px;
 			&_title {
 				padding-left: 10px;
 				padding-right: 10px;
@@ -208,8 +222,8 @@
 			}
 		}
 		&_shop {
-			padding-left: 15px;
-			padding-right: 15px;
+			padding-left: 0;
+			padding-right: 0;
 			&_title {
 				margin-bottom: 20px;
 				font-size: 18px;
@@ -307,6 +321,7 @@
 			&_grid {
 				.grid__wrapper {
 					@include flex-basis(50%);
+					float: left;
 					img {
 					}
 				}
@@ -799,8 +814,8 @@
 		}
 	}
 	@media (max-width: 600px) {
-		padding-right: 10px;
-		padding-left: 10px;
+		// padding-right: 10px;
+		// padding-left: 10px;
 		// padding-bottom: 47px;
 		&_row {
 			font-size: 12px;
@@ -846,6 +861,7 @@
 			display: inline-block;
 			vertical-align: middle;
 			height: auto;
+			width: 99%;
 			&:before {
 				content: '';
 				display: inline-block;
@@ -1176,6 +1192,11 @@
 			display: none;
 		}
 	}
+	@media (max-width: 479px) {
+		@include box-sizing(content-box);
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 }
 
 .counter__box {
@@ -1363,7 +1384,7 @@
 	@media (max-width: 767px) {
 		&>* {
 		}
-		margin: 20px;
+		margin: 20px 0;
 		// margin-right: 20px;
 		&_top {
 		}
@@ -1810,12 +1831,29 @@
 			}
 		}
 	}
-	&.blog-article {
+	&-article {
 		h3 {
 			margin: 63px 0 35px;
 			font-size: 23px;
 		}
+		@media (max-width: 991px) {
+			.main__content_center {
+				overflow: initial;
+				.white__line {
+					@include box-sizing(content-box);
+					margin-left: -20px;
+					margin-right: -20px;
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
+		}
 		@media (max-width: 767px) {
+			.main__content_center {
+				.white__line {
+					margin-top: 0;
+				}
+			}
 			h1 {
 				text-align: left;
 			}
@@ -2036,7 +2074,7 @@
 			}
 			&_label {
 				font-size: 17px;
-				margin-left: 10px;
+				margin-left: 20px;
 			}
 		}
 	}
@@ -2668,6 +2706,7 @@
 	}
 	@media (max-width: 600px) {
 		.sale__list {
+			padding: 0;
 			&_wrap {
 				padding: 0;
 			}
@@ -3325,6 +3364,7 @@
 	display: none;
 	&.open {
 		display: block;
+		padding-top: 25px;
 	}
 	&_list {
 		margin-bottom: 5px;
@@ -3432,6 +3472,7 @@
 		}
 		.grid__item {
 			position: relative;
+			// padding-bottom: 38px;
 			&_like {
 				position: absolute;
 				top: 32px;
@@ -3452,18 +3493,30 @@
 			// 		background: url('../img/heart-red.png') no-repeat;
 			// 	}
 			// }
+			img {
+				border-left: 2px solid #dadada;
+				border-right: 2px solid #dadada;
+			}
 			&_rate {
-				position: absolute;
-				bottom: 12px;
-				left: 0;
-				right: 0;
+				// position: absolute;
+				text-align: center;
+				// bottom: 2px;
+				// left: 2px;
+				// right: 2px;
+				border: 2px solid #dadada;
+				border-top: 0;
+				padding: 10px 5px;
+				background-color: #fff;
 				color: $main-color;
-				@include flexbox();
-				@include justify-content(center);
+				display: block;
+				// @include flexbox();
+				// @include justify-content(center);
 				&_number {
 					padding-top: 2px;
 					font-size: 12px;
 					margin-left: 5px;
+					display: inline-block;
+					vertical-align: middle;
 				}
 			}
 			&_stars {
@@ -3471,6 +3524,8 @@
 				height: 15px;
 				background: url('../img/rate-star-empty.svg') repeat-x;
 				background-size: 15px 15px;
+				display: inline-block;
+				vertical-align: middle;
 				&_full {
 					width: 0;
 					height: 100%;
@@ -3493,10 +3548,11 @@
 		}
 	}
 	&_link {
-		margin-bottom: 8px;
+		padding-bottom: 8px;
 		display: block;
 		color: $main-color;
 		font-size: 14px;
+		border-bottom: 2px solid #dadada;
 	}
 	@media (max-width: 1199px) {
 		&_grid {
@@ -3762,12 +3818,14 @@
 			display: block;
 			margin-top: -11px;
 			margin-bottom: 0 !important;
-			margin-left: 0;
+			margin-left: auto;
+			margin-right: auto;
 			width: auto;
 			max-width: 310px;
 			.grid {
 				width: auto;
 				text-align: center;
+				margin-right: -20px;
 			}
 		}
 		&_right {
@@ -4125,6 +4183,9 @@
 		}
 	}
 	@media (max-width: 600px) {
+		.main__content_center {
+			overflow: initial;
+		}
 		.sale__list {
 			&_first {
 				&.enter {
@@ -4765,6 +4826,7 @@
 				-mos-border-image: url('../img/frame-red.png') 13 14 round;
 				-o-border-image: url('../img/frame-red.png') 13 14 round;
 				border-image: url('../img/frame-red.png') 13 14 round;
+				padding-right: 50px;
 			}
 		}
 		.tooltip__help {
@@ -6804,6 +6866,7 @@
 	&_row {
 		width: 100%;
 		margin-bottom: 18px;
+		position: relative;
 		@extend %clear_a;
 		&_id {
 			position: absolute;
@@ -7259,6 +7322,7 @@
 			float: left;
 			width: 25%;
 			margin-bottom: 12px;
+			padding-right: 15px;
 		}
 	}
 	@media (max-width: 1279px) {
@@ -7374,12 +7438,13 @@
 		}
 	}
 	@media (max-width: 767px) {
+		position: relative;
 		padding: 26px 20px;
-		@include flexbox();
-		@include flex-flow(column wrap);
-		@include align-items(center);
+		// @include flexbox();
+		// @include flex-flow(column wrap);
+		// @include align-items(center);
 		&_text {
-			margin-bottom: 15px;
+			margin-bottom: 55px;
 			text-align: center;
 			&.coupon {
 				margin-bottom: 0;
@@ -7387,9 +7452,13 @@
 		}
 		&_btn {
 			width: 260px;
+			position: absolute;
+			left: 50%;
+			bottom: 20px;
+			margin-left: -130px !important;
 			margin-left: 0;
 			float: none;
-			@include order(1);
+			// @include order(1);
 			br {
 				display: block;
 			}
@@ -7400,6 +7469,10 @@
 			.office__shops_top {
 				margin-bottom: 30px;
 			}
+		}
+		&_btn {
+			width: 240px;
+			margin-left: -120px !important;
 		}
 	}
 }
@@ -7674,6 +7747,17 @@
 					width: auto;
 				}
 			}
+		}
+		&_header {
+			height: auto;
+		}
+		&_wrap {
+			@include box-sizing(content-box);
+			margin-left: -20px;
+			margin-right: -20px;
+		}
+		&_img {
+			max-width: 80%;
 		}
 	}
 }
@@ -12522,12 +12606,14 @@
 				margin: 15px 0 0;
 			}
 			&__dropdown {
-				max-width: 100%;
+				width: 100%;
 				margin-left: 0;
 			}
 		}
 		.b__hashtag_link{
 			display: block;
+			padding-top: 1px;
+			height: 19px;
 		}
 	}	
 }

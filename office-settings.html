@@ -17,6 +17,7 @@
     <script src="js/slick.min.js"></script>
     <script src="js/tooltipster.bundle.min.js"></script>
     <script src="js/jquery.formstyler.min.js"></script>
+    <script src="js/sticky-kit.js"></script>
     <script src="js/function.js"></script>
   </head>
   <body class="office">
@@ -167,11 +168,6 @@
                 <div class="office__top_center_message">
                   <p> <span class="large">Вы накопили: <span class="bold points">2120 </span></span><span class="bold">баллов</span></p>
                   <p>До ШопКарты Вам осталось накопить: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
-                  <div class="tooltip__help big">
-                    <div class="tooltip__text">Отлично! Теперь Вы можете поменять баллы на лотерею и это можно будет сделать в любое время, даже через месяц.   Перед тем, как получать лотерею, посмотрите, какие призы будут <a href="#">разыграны в этом месяце &gt; </a><br><br>Если вы решили участвовать в этом месяце, тогда найдите кнопку “Получить лотерею” в одном из блоков ниже.
-                      <div class="tooltip__text_big"></div>
-                    </div>
-                  </div>
                 </div>
                 <div class="sm_social">
                   <div class="sm_social_icon">
@@ -446,11 +442,11 @@
               </div>
             </div>
             <div class="office__settings_section">
-              <div class="office__settings_section_info office__settings_shops">
+              <div class="office__settings_section_info">
                 <div class="office__settings_section_top">
                   <div class="office__settings_section_h2">Вы подписаны на эти магазины</div>
                   <div class="office__settings_section_p">Чтобы получать скидки, только от любимых магазинов на емайл, нужно: первое - <a href="all-shops.html" target="_blank">найти любимые магазины </a>и второе нажать на сердечки этих магазинов. И выбранные Вами магазины автоматически сохранятся тут и на этой странице: <a href="office-shops.html" target="_blank">Любимые магазины.</a></div>
-                  <div class="office__settings_col office__settings_checked_shop">
+                  <div class="office__settings_col js-settings-checked">
                     <div class="office__settings_checkbox checkbox">
                       <input type="checkbox" checked="checked" id="os4" class="checkbox__input"/>
                       <label for="os4" class="checkbox__label">Lamoda</label>
@@ -484,7 +480,7 @@
                 <div class="line"></div>
                 <div class="office__settings_section_bottom">
                   <div class="office__settings_section_h3">Рекомендуем подписаться на эти магазины</div>
-                  <div class="office__settings_col office__settings_unchecked_shop">
+                  <div class="office__settings_col js-settings-unchecked">
                     <div class="office__settings_checkbox checkbox">
                       <input type="checkbox" id="os11" class="checkbox__input"/>
                       <label for="os11" class="checkbox__label">Снежная королева</label>
@@ -542,13 +538,13 @@
                 <div class="office__settings_section_top">
                   <div class="office__settings_section_h2">Вы подписаны на эти категории</div>
                   <div class="office__settings_section_p">Чтобы получать скидки, только на определенную группу товаров, нужно: первое - <a href="all-categories.html" target="_blank">выбрать категории </a>и второе нажать на сердечки этих категорий. И выбранные Вами категории автоматически сохранятся тут.</div>
-                  <div class="office__settings_col">
+                  <div class="office__settings_col js-settings-checked">
                     <div class="office__settings_checkbox checkbox">
-                      <input type="checkbox" id="os23" class="checkbox__input"/>
+                      <input type="checkbox" checked="checked" id="os23" class="checkbox__input"/>
                       <label for="os23" class="checkbox__label">Одежда</label>
                     </div>
                     <div class="office__settings_checkbox checkbox">
-                      <input type="checkbox" id="os24" class="checkbox__input"/>
+                      <input type="checkbox" checked="checked" id="os24" class="checkbox__input"/>
                       <label for="os24" class="checkbox__label">Обувь</label>
                     </div>
                   </div>
@@ -556,7 +552,7 @@
                 <div class="line"></div>
                 <div class="office__settings_section_bottom">
                   <div class="office__settings_section_h3">Рекомендуем подписаться на эти категории</div>
-                  <div class="office__settings_col">
+                  <div class="office__settings_col js-settings-unchecked">
                     <div class="office__settings_checkbox checkbox">
                       <input type="checkbox" id="os25" class="checkbox__input"/>
                       <label for="os25" class="checkbox__label">Аксессуары</label>
