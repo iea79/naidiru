@@ -112,9 +112,8 @@ footer.footer
 		.modal-content
 
 			btn(class="close", data-dismiss="modal")
-
-			.presentation__slider
-				// Slide main 
+			// Slide main 
+			.presentation__slider_item_first-screen
 				.presentation__slider_item
 					
 					.presentation__slider_title Добро пожаловать на сайт Найди.ру
@@ -129,38 +128,12 @@ footer.footer
 							p Теперь, Вам не будут страшны повышение цен, потому что, Вы знаете, где брать промокоды. <br>И нет ничего сложного в том, чтобы выиграть подарок мечты, потому что у Вас есть шанс на победу.
 
 							p Но сначала, Вам нужно понять, как работает сайт, поэтому предлагаем посмотреть увлекательную инструкцию.
-				// Slide 1 
-				.presentation__slider_item
-					
-					.presentation__slider_title Заполните данные и подтвердите емайл
 
-					.presentation__slider_conten
-						.presentation__slider_left
-							img(src="img/present_slide1.jpg", alt="#" width="353")
-						.presentation__slider_right
-							
-							p Мы отправили Вам письмо на указаную при регистрации почту, пожалуйста, подтвердите емайл, если вы не сделали это ранее. Важно! Не подтвержденный емайлом аккаунт удалиться через 5 дней.
-
-							p Если Вы не получили письмо в течение 15 мин., пожалуйста, напишите нам.
-
-
+					.presentation__sliderfoot.presentation__sliderfoot_first
+						button.btn.modal-footer_close(data-dismiss="modal") Я знаю, как работает Найди.ру
+						button.btn.btn__danger.presentation__slider_start Посмотреть инструкцию
 
 			.presentation__slider
-				// Slide main 
-				.presentation__slider_item
-					
-					.presentation__slider_title Добро пожаловать на сайт Найди.ру
-
-					.presentation__slider_conten
-						.presentation__slider_left
-							img(src="img/present_slide.jpg", alt="#" width="265")
-						.presentation__slider_right
-							
-							p Ура! Поздравляем! Вы стали частью, нашего большого дружного сообщества! <br>И Вы не поверите, но мы Вас тут все ждали...
-
-							p Теперь, Вам не будут страшны повышение цен, потому что, Вы знаете, где брать промокоды. <br>И нет ничего сложного в том, чтобы выиграть подарок мечты, потому что у Вас есть шанс на победу.
-
-							p Но сначала, Вам нужно понять, как работает сайт, поэтому предлагаем посмотреть увлекательную инструкцию.
 				// Slide 1 
 				.presentation__slider_item
 					
@@ -204,17 +177,11 @@ footer.footer
 							img(src="img/present_slide3.jpg", alt="#" width="385")
 						.presentation__slider_right
 							
-
-							p Участвовать в акции просто, совершайте покупки по промокодам через нас и сохраняйте чеки.
-
 							p Участвовать в розыгрыше просто, совершайте покупки по промокодам через нас и сохраняйте чеки.
-
 
 							p Если Вы не нашли подходящий промокод у магазина, но хотите получить баллы за покупку, зайдите на страницу магазина и перейдите на сайт магазина по ссылке, которая находиться в верхней части сайта.
 
 							p Подробнее о том, 
-
-								a(href="#") как использовать промокод &gt;
 
 								a(href="#") как использовать промокод &gt;
 
@@ -244,18 +211,12 @@ footer.footer
 							img(src="img/present_slide5.jpg", alt="#" width="393")
 						.presentation__slider_right
 							
-
-							p Накопите 5000 баллов и поменяйте их на ШопКарту. 5000 баллов = 5000 руб.- (общая сумма покупки).
-
 							p Накопите 5000 баллов и поменяйте их на лотерейный билет. 5000 баллов = 5000 руб.- (общая сумма покупки).
 
 
 							p Если Вы совершите покупку на сумму 5000 руб., то Вы сможете получить лотерею сразу, после подтверждения покупки чеком.
 
 							p 
-
-								a(href="#") Узнайте более подробнее о розыгрышах, призах и победителях &gt;
-
 								a(href="#") Узнайте более подробнее о розыгрышах, призах и победителях &gt;
 
 					
@@ -288,7 +249,19 @@ footer.footer
 
 					.presentation__slider_conten
 						.presentation__slider_left
-							img(src="img/present_slide7.jpg", alt="#" width="282")
+							script(type="text/javascript" src="//vk.com/js/api/openapi.js?146")
+							// VK Widget
+							#vk_groups.presentation__slider_wiget
+								script(type="text/javascript")
+									|VK.Widgets.Group("vk_groups", {mode: 3, width: "280"}, 45154409);
+							
+							.presentation__slider_soc
+								a(href="#").icon__fb
+								a(href="#").icon__google
+								a(href="#").icon__odnoklassniki
+								a(href="#").icon__twitter
+								a(href="#").icon__instagramm
+
 						.presentation__slider_right
 							
 							p 1) Чтобы магазин, был всегда у Вас на виду, пометьте его сердечком и он сохраниться на транице 
@@ -303,9 +276,6 @@ footer.footer
 
 							p 4) Рассказывайте о нас друзьям и помните, чем больше участников, тем больше победителей и круче призы.
 					
-			.presentation__sliderfoot.presentation__sliderfoot_first
-				button.btn.modal-footer_close(data-dismiss="modal") Я знаю, как работает Найди.ру
-				button.btn.btn__danger.modal-footer_next Посмотреть инструкцию
 			.presentation__sliderfoot.presentation__sliderfoot_next
 				button.btn.modal-footer_prev Предыдущая
 				span.presentation__sliderfoot_next_count
