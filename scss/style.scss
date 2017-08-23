@@ -5143,23 +5143,23 @@
 				border-image: url('../img/frame-red.png') 13 14 repeat;
 			}
 		}
-		// .tooltip__help {
-		// 	position: absolute;
-		// 	top: 19px;
-		// 	right: 22px;
-		// }
-		// .tooltip__text {
-		// 	top: 4px;
-		// 	right: 5px;
-		// 	left: auto;
-		// 	width: 459px;
-		// 	padding: 18px 24px 15px;
-		// 	&_big {
-		// 		top: -5px;
-		// 		right: -6px;
-		// 		left: auto;
-		// 	}
-		// }
+		.tooltip__help {
+			position: absolute;
+			top: 19px;
+			right: 22px;
+		}
+		.tooltip__text {
+			top: 4px;
+			right: 5px;
+			left: auto;
+			width: 459px;
+			padding: 18px 24px 15px;
+			&_big {
+				top: -5px;
+				right: -6px;
+				left: auto;
+			}
+		}
 		.bold {
 			font-weight: 700;
 		}
