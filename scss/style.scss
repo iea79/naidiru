@@ -4367,26 +4367,8 @@
 	}
 	.slider {
 		.slick {
-			// &-arrow {
-			// 	// background-color: #fff;
-			// 	// top: 44px;
-			// 	// top: 19%;
-			// 	// width: 38px;
-			// 	// height: 105px;
-			// }
-			// &-prev {
-			// 	left: 0;
-			// 	background: #fff image-url('slide-prev-dark.svg') no-repeat 4px center;
-			// 	background-size: 17px 30px;
-			// 	@include border-right-radius(8px);
-			// }
-			// &-next {
-			// 	right: 0;
-			// 	background: #fff image-url('slide-next-dark.svg') no-repeat 17px center;
-			// 	background-size: 17px 30px;
-			// 	@include border-left-radius(8px);
-			// }
 			&-dots {
+				bottom: -52px;
 				display: none !important;
 			}
 		}
