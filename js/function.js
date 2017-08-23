@@ -536,7 +536,7 @@ $(document).ready(function() {
 		}
 	}
 
-	$('body').on('click', '.home__promo_code_title', function(event) {
+	$('body').on('tap', '.home__promo_code_title', function(event) {
 		event.preventDefault();
 		if (winWidth <= 767) {
 			$('.home__promo_code').toggleClass('open');
@@ -620,7 +620,7 @@ $(document).ready(function() {
 	});
 
     // Страница Все магазины all-shops.html - Сортировка по алфавиту
-    $('.shops__sort_trigger_abc').on('click tap', function(event) {
+    $('.shops__sort_trigger_abc').on('tap', function(event) {
     	event.preventDefault();
     	if ($(window).width() <= 767) {
     		$('.shops__sort_abc').insertAfter($(this).parent());
@@ -629,7 +629,7 @@ $(document).ready(function() {
 	});
 
     // Страница Все промокоды all-promocodes.html - Фильтр промокодов
-    $('.sale__list_trigger').on('click tap', function(event) {
+    $('.sale__list_trigger').on('tap', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).parent().find('.sidebar__section_wrap').toggleClass('open');
@@ -812,12 +812,23 @@ $(document).ready(function() {
 
     // Всплывающие подсказки. к элементу добавить класс tooltip и в атрибуте title написать нужный текст
     $('.tooltip').tooltipster({
-    	trigger: 'click',
+    	// trigger: 'click',
     	animation: 'fade',
     	theme: 'tooltipster-noir',
     	contentCloning: true,
     	contentAsHTML: true,
-    	interactive: true
+    	interactive: true,
+		trigger: 'custom',
+		triggerOpen: {
+		    click: true,
+		    // tap: true
+		},
+		triggerClose: {
+		    click: true,
+		    // tap: true,
+		    mouseleave: true,
+		    scroll: true
+		}
     });
 
     $('.js-more-text').hide();
@@ -958,10 +969,10 @@ $(document).ready(function() {
     	$(this).toggleClass('active');
 	});
 
-    $('.faq_question').on('click tap', function(event) {
+    $('.faq_question').on('tap', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
-		$(this).siblings('.faq_answer').toggleClass('open');
+		$(this).closest('.faq_item').find('.faq_answer').toggleClass('open');
 	});
 
 	// Страница бренда brand.html - Скрытые информационные блоки в мобильной части - Доработатьg
@@ -973,7 +984,7 @@ $(document).ready(function() {
 
 
 	// Страница авторизации autorization.html Появление блока Восстановить пароль
-    $('.sign__restore-password').on('click tap', function(event) {
+    $('.sign__restore-password').on('tap', function(event) {
     	event.preventDefault();
     	$('.recovery').toggleClass('open');
 	});

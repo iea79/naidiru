@@ -4152,11 +4152,39 @@
 				}
 			}
 		}
+		.sidebar__section_wrap {
+				.sidebar__section {
+					padding: 0;
+					&:first-child {
+						display: none;
+					}
+					&:nth-child(2) {				
+					}
+				}
+			&.open {		
+				.sidebar__section {
+					&:first-child {
+						
+					}
+					&:nth-child(2) {				
+						display: block !important;
+						padding: 10px 0 25px;
+					}
+				}
+			}
+			.promocode__type_row {
+				height: auto;
+			}
+		}
 	}
 	@media (max-width: 1199px) {
 		.sale__list {
 			&_trigger {
 				display: block !important;
+				@include box-sizing(content-box);
+				margin-left: -20px;
+				margin-right: -20px;
+				width: auto;
 			}
 			&_right {
 				font-size: 0;
@@ -10354,6 +10382,9 @@
 				top: -76px;
 			}
 		}
+		&_down {
+			display: none;
+		}
 	}
 	@media (max-width: 990px) {
 		.slider {
@@ -10397,7 +10428,8 @@
 			}
 		}
 		&_left {
-			width: 290px;
+			width: 100%;
+			max-width: 400px;
 			height: auto;
 			float: none;
 			margin: -11px auto 9px;
@@ -10406,7 +10438,8 @@
 			&_top {
 				position: relative;
 				top: 0;
-				width: 280px;
+				width: 100%;
+				max-width: 400px;
 				height: 17px;
 				margin: 0 auto 16px;
 				@include flex-flow(row-reverse wrap);
@@ -10464,14 +10497,20 @@
 			display: block;
 		}
 		&_rate {
+			white-space: nowrap;
 			&_wrap {
-				overflow: hidden;
+				float: right;
 			}
 		}
 		&_stars {
-			float: left;
+			// float: left;
+			display: inline-block;
+			vertical-align: middle;
 		}
 		&_reviews {
+			display: inline-block;
+			margin-bottom: 0;
+			vertical-align: middle;
 			.reviews_number {
 				display: none;
 				&.brackets {
@@ -11127,18 +11166,23 @@
 			margin-left: 50px;
 			margin-bottom: 20px;
 			color: #454545;
-			@include flexbox();
-			@include align-items(center);
+			display: table;
 		}
 		&_left {
 			position: relative;
 			width: 85px;
 			height: 100%;
-			margin-right: 25px;
+			padding-right: 25px;
+			display: table-cell;
+			vertical-align: top;
 			img {
 				min-width: 85px;
 				display: block;
 			}
+		}
+		&_right {
+			display: table-cell;
+			vertical-align: middle;
 		}
 		&_name {
 			margin-bottom: 8px;
@@ -11158,7 +11202,7 @@
 		.tooltip__help {
 			position: absolute;
 			top: 5px;
-			right: -4px;
+			right: 21px;
 		}
 		.tooltip__text {
 			width: 309px;
@@ -11542,9 +11586,20 @@
 		margin-bottom: 15px;
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
+		background-color: #dadada;
 		@extend %clear_a;
 		&:last-child {
 			margin-bottom: 0;
+		}
+		&.open {
+			height: auto;
+			.brand__info_completed_rules {
+				overflow: auto;
+				white-space: normal;
+			}
+			// .brand__info_completed_more {
+			// 	position: static;
+			// }
 		}
 	}
 	&_left {
@@ -11559,6 +11614,7 @@
 	&_right {
 		padding: 13px 120px 11px 24px;
 		overflow: hidden;
+		background-color: #fff;
 	}
 	&_action {
 		width: 100%;
