@@ -7616,7 +7616,7 @@
 .office__manual {
 	padding: 43px 92px 60px;
 	color: #fff;
-	background: url('../img/pattern-promo.jpg') no-repeat;
+	background: url('../img/pattern-promo.gif') no-repeat;
 	background-size: cover;
 	&_wrap {
 		padding: 32px 0;
@@ -7759,6 +7759,14 @@
 		h1 {
 			text-align: center;
 			display: block;
+		}
+		@media (max-width: 767px) {
+			.main__content_center {
+				padding-top: 0;
+			}
+			h1 {
+				margin-top: 30px;
+			}
 		}
 	}
 }
@@ -9602,10 +9610,11 @@
 			padding-top: 20px;
 		}
 		&_left {
-			display: none;
 			&_last{
 				width: 145px;
 				display: block;
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}
@@ -10206,7 +10215,7 @@
 	.slider {
 		&__grid {
 			&_medium {
-				padding-bottom: 0;
+				padding-bottom: 40px;
 				margin-top: 2px;
 			}	
 			&_overlay {
@@ -10234,6 +10243,9 @@
 			}
 		}
 		.slick {
+			// &-slider {
+			// 	padding-bottom: 40px;
+			// }
 			&-arrow {
 				top: 21%;
 				width: 34px;
@@ -10257,7 +10269,13 @@
 				@include border-left-radius(8px);
 			}
 			&-dots {
-				display: none !important;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				width: 100%;
+				text-align: center;
+				// display: none !important;
 			}
 		}
 		&__item {
@@ -11760,7 +11778,7 @@
 }
 
 .promo__footer {
-	padding: 50px 0;
+	padding: 38px 0;
 	@extend %clear_a;
 	&_img {
 		width: 511px;
@@ -11769,6 +11787,14 @@
 		img {
 			width: 100%;
 			height: auto;
+		}
+	}
+	.accordeon {
+		max-width: 450px;
+	}
+	.faq_item {
+		&:first-child {
+			margin-top: 18px;
 		}
 	}
 	@media (max-width : 1280px) {
@@ -11851,8 +11877,8 @@
 }
 
 .used {
-	background-image: url(../img/pattern-promo.jpg);
-	background-clip: center;
+	background-image: url(../img/pattern-promo.gif);
+	// background-size: cover;
 	padding-bottom: 100px;
 	@media (max-width : 767px) {
 		padding-bottom: 10px;

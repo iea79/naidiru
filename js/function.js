@@ -589,6 +589,17 @@ $(document).ready(function() {
     	buttonToTop();
     });
 
+    $('.brand__top_right_subscribe').on('tap', function() {
+    	event.preventDefault();
+    	$(this).toggleClass('active');
+    });
+
+    $('.promo__pop_info_trigger').on('tap', function(event) {
+    	event.preventDefault();
+    	$(this).toggleClass('active');
+    	$(this).siblings('.promo__pop_info_hide').toggleClass('open')
+    });
+
     // All shops - shops__categories767
 	$('.shops__categories_trigger').on('click tap', function() {
 		$(this).toggleClass('active');
