@@ -755,12 +755,12 @@ $(document).ready(function() {
 	});
 
 	// Подсказки
-    $('.tooltip__help:not(.tooltip)').on('click', function() {
-    	$(this).find('.tooltip__text').addClass('open');
-    });
-    $('.tooltip__text').mouseleave(function() {
-    	$(this).removeClass('open');
-    });
+    // $('.tooltip__help:not(.tooltip)').on('click', function() {
+    // 	$(this).find('.tooltip__text').addClass('open');
+    // });
+    // $('.tooltip__text').mouseleave(function() {
+    // 	$(this).removeClass('open');
+    // });
 
     // office-news.html Галочка на новостях - Удаление/восстановление
     // Вызов блока .office__news_item_hide с кнопкой Удаления

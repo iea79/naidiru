@@ -75,10 +75,9 @@ block content
 							span.bold ШопКарты
 						.tooltip__help.big.tooltip(data-tooltip-content="#tooltip-html")
 
-						#tooltip-html.tooltip__text Отлично! Теперь Вы можете поменять баллы на лотерею и это можно будет сделать в любое время, даже через месяц.   Перед тем, как получать лотерею, посмотрите, какие призы будут 
+						#tooltip-html.tooltip__text Отлично! Теперь Вы можете поменять баллы на ШопКарту и это можно будет сделать в любое время, даже через месяц.   Перед тем, как получать ШопКарту, посмотрите, какие подарки будут 
 							a(href="#") разыграны в этом месяце &gt; 
-							<br><br>Если вы решили участвовать в этом месяце, тогда найдите кнопку “Получить лотерею” в одном из блоков ниже.
-							.tooltip__text_big
+							<br><br>Если вы решили участвовать в этом месяце, тогда найдите кнопку “Получить ШопКарту” в одном из блоков ниже.
 
 					.sm_social
 						.sm_social_icon
@@ -322,10 +321,9 @@ block content
 							.office__lotteries_last_name Делайте покупки и меняйте чеки на ШопКарты
 							.office__lotteries_last_p Получите ШопКарту прямо сейчас, нажав на кнопку ниже &darr;
 							button(class="btn btn__danger", data-toggle="modal", data-target="#modal__shopcard") Получить ШопКарту
-							.tooltip__help.big
-								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
-									a(href="#") Подробнее об акции &gt;
-									.tooltip__text_big
+							.tooltip__help.big.tooltip(data-tooltip-content="#th4")
+							#th4.tooltip__text Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+								a(href="#") Подробнее об акции &gt;
 				// end office__lotteries
 
 			// end office__main_yes
@@ -350,10 +348,9 @@ block content
 								span.office__lotteries_last_points баллов
 							button(class="btn") Получить ШопКарту
 							.office__lotteries_last_down т.е. накопить чеки = 5000 рублей
-							.tooltip__help.big
-								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
-									a(href="#") Подробнее об акции &gt;
-									.tooltip__text_big
+							.tooltip__help.big.tooltip(data-tooltip-content="#th4")
+							#th4.tooltip__text Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+								a(href="#") Подробнее об акции &gt;
 				// end office__lotteries
 
 
@@ -408,10 +405,9 @@ block content
 								span.office__lotteries_last_points баллов
 							button(class="btn") Получить ШопКарту
 							.office__lotteries_last_down т.е. накопить чеки = 5000 рублей
-							.tooltip__help.big
-								.tooltip__text.tooltip__big Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. <br>
-									a(href="#") Подробнее об акции &gt;
-									.tooltip__text_big
+							.tooltip__help.big.tooltip(data-tooltip-content="#th4")
+							#th4.tooltip__text Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
+								a(href="#") Подробнее об акции &gt;
 				// end office__lotteries
 
 			// end office__main_no
@@ -493,11 +489,10 @@ block content
 									.office__history_th Интернет-магазин
 									.office__history_th Дата покупки
 									.office__history_th № заказа
-										a(href="#", class="office__history_help tooltip",data-tooltip-content="#tooltip_content")
-										.tooltip_templates
-											#tooltip_content 
-												span.bold Как узнать номер моего заказа? <br>
-												span Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".
+										a(href="#", class="office__history_help tooltip",data-tooltip-content="#th2")
+										#th2.tooltip__text 
+											span.bold Как узнать номер моего заказа? <br>
+											|Номер заказа отображается на сайте магазина сразу после оформления покупки. Он же дублируется письмом на указанную почту или приходит на телефон в виде СМС - оповещения. Также его можно найти в чеке. <br><br>Если Вы, все равно не знаете свой №заказа, то тогда Вам нужно зайти в свой аккаунт на сайте интернет-магазина и уже там, постараться найти номер Вашего заказа в разделе "История покупок".
 									.office__history_th Сумма   
 									.office__history_th Статус
 								.office__history_tr

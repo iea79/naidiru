@@ -341,9 +341,6 @@
 		text-align: left;
 		position: relative;
 		@extend %clear_a;
-		&:nth-child(n+6) {
-			display: none;
-		}
 		&_title {
 			font-size: 22px;
 			margin-bottom: 7px;
@@ -488,21 +485,6 @@
 			right: 17px;
 			margin-left: 10px;
 			@include trs(.3);
-		}
-		.tooltip__text {
-			bottom: 4px;
-			left: 4px;
-			width: 309px;
-			background-color: #fff;
-			a {
-				padding-left: 0;
-				display: inline;
-				color: $primary-color;
-			}
-			&:before {
-				bottom: -5px;
-				left: -5px;
-			}
 		}
 	}
 	.code {
@@ -967,6 +949,11 @@
 			}
 			a {
 				margin-left: 5px;
+			}
+		}
+		&_row {
+			&:nth-child(n+7) {
+				display: none;
 			}
 		}
 	}
@@ -4120,15 +4107,6 @@
 		}
 		&_info {
 			margin-bottom: 0;
-			.tooltip__text {
-				bottom: 4px;
-				left: 4px;
-				width: 295px;
-				&:before {
-					bottom: -5px;
-					left: -5px;
-				}
-			}
 		}
 	}
 	@media (max-width: 1280px) {
@@ -4136,19 +4114,6 @@
 			&_bottom {
 				a {
 					display: none;
-				}
-			}
-			&_info {
-				.tooltip__text {
-					right: 4px;
-					left: auto;
-					&:before {
-						right: -5px;
-						left: auto;
-					}
-					a {
-						display: inline;
-					}
 				}
 			}
 		}
@@ -4844,21 +4809,6 @@
 			top: 19px;
 			right: 22px;
 		}
-		.tooltip__text {
-			top: 4px;
-			right: 5px;
-			left: auto;
-			width: 459px;
-			padding: 18px 24px 15px;
-			&_big {
-				top: -5px;
-				right: -6px;
-				left: auto;
-			}
-		}
-		.bold {
-			font-weight: 700;
-		}
 		.large {
 			font-size: 18px;
 		}
@@ -5428,18 +5378,6 @@
 		position: absolute;
 		top: 7px;
 		right: 8px;
-	}
-	.tooltip__text {
-		top: 4px;
-		right: 5px;
-		width: 256px;
-		padding: 18px 24px 15px;
-		text-align: left;
-		font-weight: 400;
-		&_big {
-			top: -5px;
-			right: -6px;	
-		}
 	}
 	@media (max-width: 991px) {
 		&_name {
@@ -7164,17 +7102,6 @@
 		right: 0;
 		top: 14%;
 	}
-	.tooltip__text {
-		top: 4px;
-		right: 5px;
-		width: 363px;
-		padding: 18px 24px 15px;
-		text-align: left;
-		&_big {
-			top: -5px;
-			right: -6px;	
-		}
-	}
 	@media (max-width: 1279px) {
 		width: 267px;
 		&_icon {
@@ -7202,9 +7129,6 @@
 			&_add {
 				width: 33px;
 			}
-		}
-		.tooltip__text {
-			width: 280px;
 		}
 	}
 }
@@ -7490,37 +7414,6 @@
 	}
 }
 // end office__shops_top
-
-
-.office {
-	.sale__list {
-		&_info {
-			.tooltip__text {
-				width: 245px;
-			}
-		}
-	}
-	@media (max-width: 1365px) {
-		.sale__list {
-			&_info {
-				.tooltip__text {
-					bottom: 4px;
-					right: 4px;
-					left: auto;
-					width: 295px;
-					&:before {
-						bottom: -5px;
-						right: -5px;
-						left: auto;
-					}
-					a {
-						display: inline;
-					}
-				}
-			}
-		}
-	}
-}
 
 
 // begin shops__box
@@ -7930,15 +7823,6 @@
 				position: absolute;
 				top: -5px;
 				right: -2px;
-			}
-			.tooltip__text {
-				top: 4px;
-				right: 5px;
-				width: 202px;
-				&_big {
-					top: -5px;
-					right: -6px;	
-				}
 			}
 		}
 		&_name {
@@ -10744,22 +10628,6 @@
 		}
 		&_bottom {
 			display: none;
-			&_text {
-				display: none;
-				position: absolute;
-				top: -75px;
-				right: -290px;
-				z-index: 3;
-				width: 309px;
-				height: 91px;
-				padding: 14px 15px 12px;
-				font-size: 14px;
-				background-color: #fff;
-				border: 1px solid #d1d1d1;
-				&.open {
-					display: block;
-				}
-			}
 		}
 		&_center {
 		    padding: 50px 26px 20px 31px;
@@ -10797,15 +10665,6 @@
 				top: 5px;
 				right: 0;
 				margin-left: 10px;
-			}
-			.tooltip__text {
-				top: 4px;
-				left: 4px;
-				width: 309px;
-				&:before {
-					top: -5px;
-					left: -5px;
-				}
 			}
 		}
 	}
@@ -11219,15 +11078,6 @@
 			top: 5px;
 			left: 65px;
 		}
-		.tooltip__text {
-			width: 309px;
-			top: 4px;
-			right: 5px;
-			&_big {
-				top: -5px;
-				right: -6px;	
-			}
-		}
 	}
 	&_name {
 		margin-bottom: 20px;
@@ -11257,15 +11107,6 @@
 		&_plus {
 			&_item {
 				margin-left: 20px;
-			}
-			&_left {
-				// margin-right: 20px;
-			}
-			.tooltip__text {
-				left: 5px;
-				&_big {
-					left: -6px;	
-				}
 			}
 		}
 	}
@@ -11351,18 +11192,6 @@
 			}
 			&_answer {
 				left: 53px;
-			}
-			.tooltip__help {
-				// left: 70px;
-				.tooltip__text {
-					right: auto;
-					left: 5px;
-					width: 235px;
-					.tooltip__text_big {
-						right: auto;
-						left: -6px;
-					}
-				}
 			}
 		}
 	}
@@ -12752,11 +12581,6 @@
 		}
 		&__trigon {
 			display: none;
-		}
-	}
-	@media (max-width: 479px) {
-		.tooltip__text {
-			width: 255px;
 		}
 	}
 }
