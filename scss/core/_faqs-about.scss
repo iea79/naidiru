@@ -16,7 +16,7 @@
   }
   &__description {
     max-width: 613px;
-    width: 100%;
+    @include flex-basis(100%);
     h2 {
       margin-bottom: 11px;
       font-size: 21px;

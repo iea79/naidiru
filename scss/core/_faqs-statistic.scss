@@ -104,6 +104,7 @@
     &__triggers {
       @include flex-flow(row nowrap);
       li {
+        @include flex-basis(100%);
         width: 50%;
       }
     }
@@ -163,6 +164,7 @@
       @include flex-flow(row wrap);
       text-align: center;
       p {
+        @include flex-basis(100%);
         width: 100%;
         display: block;
       }

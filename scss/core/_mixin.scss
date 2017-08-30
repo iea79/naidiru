@@ -120,11 +120,15 @@
 	}
 	@supports (display: -webkit-flex) or
 	          (display: -moz-flex) or
+	          (display: -ms-flexbox) or
+	          (display: -webkit-box) or
+	          (display: -ms-flex) or
 	          (display: flex) {
 
 		display: -webkit-box;
 		display: -moz-box;
 		display: -ms-flexbox;
+		display: -ms-flex;
 		display: -webkit-flex;
 		display: flex;
 		&>* {

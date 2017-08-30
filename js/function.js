@@ -444,7 +444,7 @@ $(document).ready(function() {
 
 	// Login box
 	if (winWidth<=991) {	
-		$('.login__box_avatar').on('tap', function(event) {
+		$('.login__box_avatar').on('click', function(event) {
 			event.preventDefault();
 			
 			$('.login__box').toggleClass('open');
@@ -553,6 +553,23 @@ $(document).ready(function() {
 			$('.body__overlay').hide();
 		}
 	});
+
+	headerSearchOffset($('.header__search_down'))
+
+	function headerSearchOffset(el) {
+		var search = $('.header__search');
+		var width = search.width();
+		var coordinate = search.offset();
+		console.log(coordinate);
+		el.css({
+			left: coordinate.left,
+			top: coordinate.top + 10,
+			width: width
+		});
+		// $('.header__search_down_list').offset(function(search, coordinate) {
+		// 	// return $('.header__search');
+		// })
+	}
 
 	// Code open
 	// $('.code__btn').on('click', function(event) {
