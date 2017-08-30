@@ -810,26 +810,31 @@ $(document).ready(function() {
         $(this).closest('.office__edit_note').addClass('hide');
     });
 
+
     // Всплывающие подсказки. к элементу добавить класс tooltip и в атрибуте title написать нужный текст
     $('.tooltip').tooltipster({
-    	// trigger: 'click',
-    	animation: 'fade',
+    	animation: 'grow',
     	theme: 'tooltipster-noir',
-    	contentCloning: true,
-    	contentAsHTML: true,
     	interactive: true,
+    	zIndex: 121,
 		trigger: 'custom',
 		triggerOpen: {
-		    click: true,
-		    // tap: true
+		    mouseenter: true,
+		    tap: true
 		},
 		triggerClose: {
 		    click: true,
-		    // tap: true,
+		    tap: true,
 		    mouseleave: true,
 		    scroll: true
 		}
     });
+
+    // Всплывающие подсказки с html контентом. к элементу добавить класс tooltip_html и вложить блок с контентом и классом tooltip__text
+    if ($('.tooltip_html')) {
+	    tooltipsterHtml($('.tooltip_html'));
+    }
+
 
     $('.js-more-text').hide();
 
@@ -1066,3 +1071,34 @@ $(document).ready(function() {
 	}
 
 });
+
+function tooltipsterHtml(el) {
+
+    el.each(function(index, el) {
+    	
+	    $(this).tooltipster({
+	    	// trigger: 'click',
+	    	animation: 'grow',
+	    	theme: 'tooltipster-noir',
+	    	contentCloning: true,
+	    	contentAsHTML: true,
+	    	content: $(this).find('.tooltip__text'),
+	    	interactive: true,
+	    	// multiple: true,
+	    	zIndex: 121,
+			trigger: 'custom',
+			triggerOpen: {
+			    mouseenter: true,
+			    tap: true
+			},
+			triggerClose: {
+			    // click: true,
+			    tap: true,
+			    mouseleave: true,
+			    scroll: true
+			}
+	    });
+    });
+
+}
+
