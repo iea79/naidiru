@@ -2659,9 +2659,10 @@
 			}
 		}
 		&_right {
+			width: 217px;
 			padding: 41px 24px;
 			&_btn {
-				width: 169px;
+				width: 100%;
 				height: 41px;
 				padding: 13px;
 				font-size: 13px;
@@ -2670,7 +2671,7 @@
 		&_save {
 			position: absolute;
 			top: 5px;
-			right: 0;
+			right: 24px;
 		}
 	}
 	@media (max-width: 767px) {
@@ -5969,9 +5970,6 @@
 		cursor: pointer;
 		background: url('../img/question.svg') no-repeat;
 		background-size: 15px 15px;
-	}
-	.tooltip_templates {
-		display: none;
 	}
 	@media (max-width: 1365px) {
 		&_right {
@@ -10665,13 +10663,14 @@
 			height: 31px;
 			padding-right: 30px;
 			font-size: 14px;
-			@include flexbox();
-			@include align-items(center);
+			line-height: 31px;
+			display: block;
 			&:before {
 				content: '';
 				height: 17px;
 				padding: 7px 25px;
 				display: block;
+				float: left;
 				margin-right: 20px;
 				color: #fff;
 				font-size: 15px;
@@ -10689,7 +10688,7 @@
 	@media (max-width: 991px) {
 		.sale__list {
 			&_top {
-				span,
+				font-size: 0;
 				.tooltip__help {
 					display: none;
 				}
@@ -10702,7 +10701,6 @@
 	@media (max-width: 600px) {
 		.sale__list {
 			&_top {
-				top: 4px;
 				height: 15px;
 				&:before {
 					height: 100%;
