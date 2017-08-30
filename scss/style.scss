@@ -412,7 +412,8 @@
 			margin-right: 7px;
 			@include trs(.3);
 		}
-		&:hover,&.active {
+		&:hover,
+		&.active {
 			// color: $warning-color;
 			text-decoration: none;
 			&:before {
