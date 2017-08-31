@@ -121,7 +121,7 @@
           <div class="container_center">
             
             <!-- begin office__top-->
-            <div class="office__top">
+            <div class="office__top shops">
               <div class="office__top_left">
                 <div class="office__top_user">
                   <div class="office__top_user_img"><img src="img/rev2.png" alt="#"/></div>
@@ -168,7 +168,7 @@
               <div class="office__top_center">
                 <div class="office__top_center_message">
                   <p> <span class="large">Вы накопили: <span class="bold points">2120 </span></span><span class="bold">баллов</span></p>
-                  <p>До ШопКарты Вам осталось накопить: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
+                  <p>До ШопКарты нужно накопить: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
                 </div>
                 <div class="sm_social">
                   <div class="sm_social_icon">
@@ -434,7 +434,8 @@
                     </div>
                     <div class="office__edit_row">
                       <div class="office__edit_label">Страна</div>
-                      <select name="country" class="office__edit_select">
+                      <select name="country" data-placeholder="Не выбрано" data-visible-options="5" class="office__edit_select">
+                        <option value="#"></option>
                         <option value="#">Россия</option>
                         <option value="#">Страна №2</option>
                       </select>
@@ -445,7 +446,8 @@
                     </div>
                     <div class="office__edit_row">
                       <div class="office__edit_label">Пол</div>
-                      <select name="gender" class="office__edit_select">
+                      <select name="gender" data-placeholder="Не выбрано" class="office__edit_select">
+                        <option value="#"></option>
                         <option value="#">Мужчина</option>
                         <option value="#">Женщина</option>
                       </select>
@@ -474,7 +476,7 @@
                       <input type="text" placeholder="234582" id="oe7"/>
                     </div>
                     <div class="office__edit_row last">
-                      <div class="office__edit_label">Выберите соц.сеть и выполняйте быстрый вход</div>
+                      <div class="office__edit_label"> <span>Выберите соц.сеть и </span>выполняйте быстрый вход</div>
                       <div class="lg_social">
                         <div class="lg_social_icon">
                           <button class="lg_social_icon_add btn"></button>
@@ -543,30 +545,84 @@
                       <div for="oe10" class="office__edit_label">Что бы Вы хотели тут выиграть? (через запятую)</div>
                       <input type="text" placeholder="Смартфон, PlayStation, Робот-пылесос ..." id="oe10"/>
                     </div>
-                    <div class="office__edit_row">
+                    <div class="office__edit_row">            
                       <div class="office__edit_label">Ваши интересы</div>
-                      <select name="interest" class="office__edit_select">
-                        <option value="#">Люблю шоппинг (Шоппинг)</option>
-                        <option value="#">Спорт – это всегда мое (Спорт)</option>
-                        <option value="#">Путешествую по всему миру (Путешествия)</option>
-                        <option value="#">Люблю вкусненько готовить</option>
-                        <option value="#">Для меня главное уют в доме (Домашний уют)</option>
-                        <option value="#">Часто читаю книги (Книги)</option>
-                        <option value="#">Хожу на рыбалку (Рыбалка)</option>
-                        <option value="#">Люблю рукодельничать (Рукоделие)</option>
-                        <option value="#">У меня талант петь и танцевать (Танцы и Музыка)</option>
-                        <option value="#">Интересуюсь инновациями и гаджетами (Гаджеты)</option>
-                        <option value="#">Увлекаюсь автомобилями (Автомобили)</option>
-                        <option value="#">Играю в игры (Игры)</option>
-                        <option value="#">Люблю очень цветы и свой сад (Цветы и сад)</option>
-                        <option value="#">Искусство – это мое, люблю рисовать (Творчество)</option>
-                        <option value="#">Не представляю свою жизнь, без интернета (Интернет)</option>
-                        <option value="#">Люблю поваляться перед телевизором (Телевизор)</option>
-                      </select>
+                      <button class="office__edit_trigger">Не выбрано
+                        <div class="jq-selectbox__trigger"></div>
+                      </button>
+                      <div class="office__edit_hide">
+                        <div class="office__edit_hide_in">
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe57" class="checkbox__input"/>
+                            <label for="oe57" class="checkbox__label">Люблю шоппинг (Шоппинг)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe58" class="checkbox__input"/>
+                            <label for="oe58" class="checkbox__label">Спорт – это всегда мое (Спорт)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe59" class="checkbox__input"/>
+                            <label for="oe59" class="checkbox__label">Путешествую по всему миру (Путешествия)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe60" class="checkbox__input"/>
+                            <label for="oe60" class="checkbox__label">У Люблю вкусненько готовить</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe61" class="checkbox__input"/>
+                            <label for="oe61" class="checkbox__label">Для меня главное уют в доме (Домашний уют)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe62" class="checkbox__input"/>
+                            <label for="oe62" class="checkbox__label">Часто читаю книги (Книги)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe63" class="checkbox__input"/>
+                            <label for="oe63" class="checkbox__label">Хожу на рыбалку (Рыбалка)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe64" class="checkbox__input"/>
+                            <label for="oe64" class="checkbox__label">Люблю рукодельничать (Рукоделие)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe65" class="checkbox__input"/>
+                            <label for="oe65" class="checkbox__label">У меня талант петь и танцевать (Танцы и Музыка)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe66" class="checkbox__input"/>
+                            <label for="oe66" class="checkbox__label">Интересуюсь инновациями и гаджетами (Гаджеты)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe67" class="checkbox__input"/>
+                            <label for="oe67" class="checkbox__label">Увлекаюсь автомобилями (Автомобили)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe68" class="checkbox__input"/>
+                            <label for="oe68" class="checkbox__label">Играю в игры (Игры)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe69" class="checkbox__input"/>
+                            <label for="oe69" class="checkbox__label">Люблю очень цветы и свой сад (Цветы и сад)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe70" class="checkbox__input"/>
+                            <label for="oe70" class="checkbox__label">Искусство – это мое, люблю рисовать (Творчество)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe71" class="checkbox__input"/>
+                            <label for="oe71" class="checkbox__label">Не представляю свою жизнь, без интернета (Интернет)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe72" class="checkbox__input"/>
+                            <label for="oe72" class="checkbox__label">Люблю поваляться перед телевизором (Телевизор)</label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="office__edit_row">
                       <div class="office__edit_label">Сколько у Вас детей?</div>
-                      <select name="children" class="office__edit_select">
+                      <select name="children" data-placeholder="Не выбрано" data-visible-options="5" class="office__edit_select">
+                        <option value="#"></option>
                         <option value="#">У меня нет детей</option>
                         <option value="#">Один единственный и любимый</option>
                         <option value="#">У меня, пока два чудо-ребенка</option>
@@ -576,7 +632,8 @@
                     </div>
                     <div class="office__edit_row">
                       <div class="office__edit_label">Ваше семейное положение?</div>
-                      <select name="country" class="office__edit_select">
+                      <select name="country" data-placeholder="Не выбрано" data-visible-options="5" class="office__edit_select">
+                        <option value="#"></option>
                         <option value="#">Замужем / женат</option>
                         <option value="#">Не замужем / не женат</option>
                         <option value="#">Пока встречаюсь</option>
@@ -591,7 +648,8 @@
                     </div>
                     <div class="office__edit_row">
                       <div class="office__edit_label">Кем Вы работаете?</div>
-                      <select name="occupation" class="office__edit_select">
+                      <select name="occupation" data-placeholder="Не выбрано" data-visible-options="5" class="office__edit_select">
+                        <option value="#"></option>
                         <option value="#">Работаю в офисе, всегда онлайн</option>
                         <option value="#">Весь в делах, выхожу в интернет вечером</option>
                         <option value="#">Работаю, но выхожу в интернет, когда захочу</option>
@@ -611,142 +669,142 @@
                         <div class="office__edit_hide_left">
                           <div class="office__edit_hide_name">Девочка</div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe15" class="checkbox__input"/>
+                            <input type="checkbox" id="oe15" class="checkbox__input"/>
                             <label for="oe15" class="checkbox__label">0 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe16" class="checkbox__input"/>
+                            <input type="checkbox" id="oe16" class="checkbox__input"/>
                             <label for="oe16" class="checkbox__label">1 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe17" class="checkbox__input"/>
+                            <input type="checkbox" id="oe17" class="checkbox__input"/>
                             <label for="oe17" class="checkbox__label">2 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe18" class="checkbox__input"/>
+                            <input type="checkbox" id="oe18" class="checkbox__input"/>
                             <label for="oe18" class="checkbox__label">3 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe19" class="checkbox__input"/>
+                            <input type="checkbox" id="oe19" class="checkbox__input"/>
                             <label for="oe19" class="checkbox__label">4 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe20" class="checkbox__input"/>
+                            <input type="checkbox" id="oe20" class="checkbox__input"/>
                             <label for="oe20" class="checkbox__label">5 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe21" class="checkbox__input"/>
+                            <input type="checkbox" id="oe21" class="checkbox__input"/>
                             <label for="oe21" class="checkbox__label">6 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe22" class="checkbox__input"/>
+                            <input type="checkbox" id="oe22" class="checkbox__input"/>
                             <label for="oe22" class="checkbox__label">7 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe23" class="checkbox__input"/>
+                            <input type="checkbox" id="oe23" class="checkbox__input"/>
                             <label for="oe23" class="checkbox__label">8 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe24" class="checkbox__input"/>
+                            <input type="checkbox" id="oe24" class="checkbox__input"/>
                             <label for="oe24" class="checkbox__label">9 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe25" class="checkbox__input"/>
+                            <input type="checkbox" id="oe25" class="checkbox__input"/>
                             <label for="oe25" class="checkbox__label">10 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe26" class="checkbox__input"/>
+                            <input type="checkbox" id="oe26" class="checkbox__input"/>
                             <label for="oe26" class="checkbox__label">11 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe27" class="checkbox__input"/>
+                            <input type="checkbox" id="oe27" class="checkbox__input"/>
                             <label for="oe27" class="checkbox__label">12 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe28" class="checkbox__input"/>
+                            <input type="checkbox" id="oe28" class="checkbox__input"/>
                             <label for="oe28" class="checkbox__label">13 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe29" class="checkbox__input"/>
+                            <input type="checkbox" id="oe29" class="checkbox__input"/>
                             <label for="oe29" class="checkbox__label">14 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe30" class="checkbox__input"/>
+                            <input type="checkbox" id="oe30" class="checkbox__input"/>
                             <label for="oe30" class="checkbox__label">15 лет - Дев.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe31" class="checkbox__input"/>
+                            <input type="checkbox" id="oe31" class="checkbox__input"/>
                             <label for="oe31" class="checkbox__label">16 лет - Дев.</label>
                           </div>
                         </div>
                         <div class="office__edit_hide_right">
                           <div class="office__edit_hide_name">Мальчик</div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe32" class="checkbox__input"/>
+                            <input type="checkbox" id="oe32" class="checkbox__input"/>
                             <label for="oe32" class="checkbox__label">0 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe33" class="checkbox__input"/>
+                            <input type="checkbox" id="oe33" class="checkbox__input"/>
                             <label for="oe33" class="checkbox__label">1 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe34" class="checkbox__input"/>
+                            <input type="checkbox" id="oe34" class="checkbox__input"/>
                             <label for="oe34" class="checkbox__label">2 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe35" class="checkbox__input"/>
+                            <input type="checkbox" id="oe35" class="checkbox__input"/>
                             <label for="oe35" class="checkbox__label">3 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe36" class="checkbox__input"/>
+                            <input type="checkbox" id="oe36" class="checkbox__input"/>
                             <label for="oe36" class="checkbox__label">4 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe37" class="checkbox__input"/>
+                            <input type="checkbox" id="oe37" class="checkbox__input"/>
                             <label for="oe37" class="checkbox__label">5 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe38" class="checkbox__input"/>
+                            <input type="checkbox" id="oe38" class="checkbox__input"/>
                             <label for="oe38" class="checkbox__label">6 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe39" class="checkbox__input"/>
+                            <input type="checkbox" id="oe39" class="checkbox__input"/>
                             <label for="oe39" class="checkbox__label">7 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe40" class="checkbox__input"/>
+                            <input type="checkbox" id="oe40" class="checkbox__input"/>
                             <label for="oe40" class="checkbox__label">8 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe41" class="checkbox__input"/>
+                            <input type="checkbox" id="oe41" class="checkbox__input"/>
                             <label for="oe41" class="checkbox__label">9 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe42" class="checkbox__input"/>
+                            <input type="checkbox" id="oe42" class="checkbox__input"/>
                             <label for="oe42" class="checkbox__label">10 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe43" class="checkbox__input"/>
+                            <input type="checkbox" id="oe43" class="checkbox__input"/>
                             <label for="oe43" class="checkbox__label">11 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe44" class="checkbox__input"/>
+                            <input type="checkbox" id="oe44" class="checkbox__input"/>
                             <label for="oe44" class="checkbox__label">12 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe45" class="checkbox__input"/>
+                            <input type="checkbox" id="oe45" class="checkbox__input"/>
                             <label for="oe45" class="checkbox__label">13 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe46" class="checkbox__input"/>
+                            <input type="checkbox" id="oe46" class="checkbox__input"/>
                             <label for="oe46" class="checkbox__label">14 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe47" class="checkbox__input"/>
+                            <input type="checkbox" id="oe47" class="checkbox__input"/>
                             <label for="oe47" class="checkbox__label">15 лет - Мал.</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe48" class="checkbox__input"/>
+                            <input type="checkbox" id="oe48" class="checkbox__input"/>
                             <label for="oe48" class="checkbox__label">16 лет - Мал.</label>
                           </div>
                         </div>
@@ -754,41 +812,41 @@
                     </div>
                     <div class="office__edit_row">            
                       <div class="office__edit_label">Есть ли у Вас питомец? Кто этот домосед?</div>
-                      <button class="office__edit_trigger">У меня нет дома домоседов
+                      <button class="office__edit_trigger">Не выбрано
                         <div class="jq-selectbox__trigger"></div>
                       </button>
                       <div class="office__edit_hide">
                         <div class="office__edit_hide_in">
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe49" class="checkbox__input"/>
+                            <input type="checkbox" id="oe49" class="checkbox__input"/>
                             <label for="oe49" class="checkbox__label">Нет у меня дома никого</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe50" class="checkbox__input"/>
+                            <input type="checkbox" id="oe50" class="checkbox__input"/>
                             <label for="oe50" class="checkbox__label">О да, господин кот, всегда «ждет» меня дома</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe51" class="checkbox__input"/>
+                            <input type="checkbox" id="oe51" class="checkbox__input"/>
                             <label for="oe51" class="checkbox__label">У меня собака и он мой друг</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe52" class="checkbox__input"/>
+                            <input type="checkbox" id="oe52" class="checkbox__input"/>
                             <label for="oe52" class="checkbox__label">У меня только рыбки в аквариуме или черепашки</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe53" class="checkbox__input"/>
+                            <input type="checkbox" id="oe53" class="checkbox__input"/>
                             <label for="oe53" class="checkbox__label">У меня попугай, скажу больше, он поет мне песни</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe54" class="checkbox__input"/>
+                            <input type="checkbox" id="oe54" class="checkbox__input"/>
                             <label for="oe54" class="checkbox__label">У меня пушистик: кролик, хомячок, морская свинка</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe55" class="checkbox__input"/>
+                            <input type="checkbox" id="oe55" class="checkbox__input"/>
                             <label for="oe55" class="checkbox__label">Люблю экзотику, это мое сокровище</label>
                           </div>
                           <div class="office__settings_checkbox">
-                            <input type="checkbox" checked="checked" id="oe56" class="checkbox__input"/>
+                            <input type="checkbox" id="oe56" class="checkbox__input"/>
                             <label for="oe56" class="checkbox__label">Вы про моих любимчиков? О их много…</label>
                           </div>
                         </div>
@@ -1316,7 +1374,7 @@
             <div class="modal-footer">
               <div class="modal-footer_input_wrap">
                 <input type="email" placeholder="Введите ваш e-mail" class="modal-footer_input"/>
-                <btn class="btn btn__danger modal-footer_input_btn">Подписаться</btn>
+                <button class="btn btn__danger modal-footer_input_btn">Подписаться</button>
               </div>
               <div class="modal-footer_p">Не пропускайте лучших скидок</div>
             </div>
@@ -1363,7 +1421,7 @@
             <div class="modal-footer">
               <div class="modal-footer_input_wrap">
                 <input type="email" placeholder="Введите ваш e-mail" class="modal-footer_input"/>
-                <btn class="btn btn__danger modal-footer_input_btn">Подписаться</btn>
+                <button class="btn btn__danger modal-footer_input_btn">Подписаться</button>
               </div>
               <div class="modal-footer_p">Не пропускайте лучших скидок</div>
             </div>
