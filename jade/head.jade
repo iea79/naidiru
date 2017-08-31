@@ -7,7 +7,6 @@ head
 	meta(name="description" content="")
 	meta(name="viewport" content="width=device-width, initial-scale=1.0")
 
-	//- link(href="css/core/formstyler.css" rel="stylesheet")
 	link(href="css/style.css" rel="stylesheet")
 
 	script(src="js/jquery.js")
@@ -23,3 +22,6 @@ head
 	script(src="js/jquery.formstyler.min.js")
 	script(src="js/sticky-kit.js")
 	script(src="js/function.js")
+
+	script.
+		document.documentElement.setAttribute('data-browser', navigator.userAgent);

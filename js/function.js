@@ -991,8 +991,7 @@ $(document).ready(function() {
     	$(this).toggleClass('active');
 	});
 
-    $('.faq_question').on('tap', function(event) {
-    	event.preventDefault();
+    $('.faq_question').on('click', function() {
     	$(this).toggleClass('active');
 		$(this).closest('.faq_item').find('.faq_answer').toggleClass('open');
 	});
@@ -1006,7 +1005,7 @@ $(document).ready(function() {
 
 
 	// Страница авторизации autorization.html Появление блока Восстановить пароль
-    $('.sign__restore-password').on('tap', function(event) {
+    $('.sign__restore-password').on('click', function(event) {
     	event.preventDefault();
     	$('.recovery').toggleClass('open');
 	});

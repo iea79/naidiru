@@ -1,5 +1,5 @@
 .faqs-version {
-    // max-width: 1300px;
+    max-width: 1300px;
     margin: 0 auto;
     padding-left: 20px;
     padding-right: 20px;
@@ -19,6 +19,7 @@
     padding-left: 40px;
     @include flexbox();
     @include align-items(center);
+    @extend %clear_a;
     &_number {
       font-size: 18px;
       font-family: $main_font_family;
@@ -52,6 +53,7 @@
     padding-right: 60px;
     @include flexbox();
     @include justify-content(space-between);
+    @extend %clear_a;
   }
   &__placing {
     align-items: center;
@@ -111,12 +113,12 @@
         }
       }
       .faqs-version__placing_description {
-        @include flexbox();
-        @include justify-content(center);
-        @include flex-flow(column nowrap);
+        // @include flexbox();
+        // @include justify-content(center);
+        // @include flex-flow(column nowrap);
         max-width: 100%;
         height: 100%;
-        padding-left: 60px;
+        padding: 40px 60px;
         background-color: #f1f1f1;
         b {
           padding-top: 29px;
@@ -130,7 +132,7 @@
       margin-top: -40px;
       padding-left: 60px;
       padding-right: 60px;
-
+      @extend %clear_all;
       b {
         font-size: 15px;
         font-weight: bold;
@@ -250,7 +252,10 @@
   }
   @media (max-width: 1280px) {
     &__placement {
-      @include flex-flow(column nowrap);
+      @include flex-flow(row wrap);
+      &>* {
+        @include flex-basis(100%);
+      }
     }
     &__placing {
       &--full {
@@ -258,6 +263,7 @@
         .faqs-version__placing_description {
           padding: 20px;
           width: 100%;
+          height: auto;
         }
         .faqs-version__placing_image {
           width: 100%;
@@ -363,9 +369,16 @@
       @include justify-content(center);
       @include align-items(center);
       @include flex-flow(row wrap);
+      @include browser("Android 4.1" "Android 4.2" "Android 4.3" "iPhone OS 7" "iPhone OS 8") {
+        text-align: center;
+      }
       &_number {
         display: block;
         margin: 0 auto 10px;
+        @include browser("Android 4.1" "Android 4.2" "Android 4.3" "iPhone OS 7" "iPhone OS 8") {
+          font-size: 20px;
+          padding-top: 10px;
+        }
       }
       &_title {
         width: 100%;
