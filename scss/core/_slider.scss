@@ -7,7 +7,7 @@
 			height: 105px;
 			@include trs(.3);
 			&:hover {
-				opacity: .9;
+				@include opacity(.9);
 			}
 		}
 		&-prev {
@@ -31,22 +31,6 @@
 		&.slick-slider {
 			display: block;
 		}
-	&__fullwide {
-		img {
-			width: 100%;
-		}
-		&_lg {
-		}
-		&_sm {
-			display: none !important;
-		}
-		.slider__item {
-			position: relative;
-		}
-		.slick-arrow {
-			display: block !important;
-		}
-	}
 	&__item {
 
 	}
@@ -59,7 +43,7 @@
 			background-color: transparent;
 			display: block;
 			position: absolute;
-			top: 50%;
+			// top: 50%;
 			margin-top: -20px;
 			width: 23px;
 			height: 40px;
@@ -72,7 +56,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 			&:hover {
-				opacity: .5;
+				@include opacity(.5);
 			}
 		}
 		&-prev {
@@ -108,7 +92,7 @@
 					cursor: pointer;
 					@include trs(.3);
 					&:hover {
-						opacity: .5;
+						@include opacity(.5);
 					}
 				}
 				&.slick-active {
@@ -133,6 +117,11 @@
 				display: block;
 				width: 100%;
 			}
+			&:hover,
+			&:active,
+			&:focus {
+				cursor: pointer;
+			}
 		}
 		&_overlay {
 			position: absolute;
@@ -155,8 +144,9 @@
 			padding: 16px 8px;
 			font-size: 18px;
 			line-height: 1.3;
-			&_link {
-				color: #292929;
+			&_link:hover {
+				cursor: pointer;
+				text-decoration: underline;
 			}
 		}
 		&_name {
@@ -170,7 +160,7 @@
 		.slick {
 			&-arrow {
 				// background-color: #fff;
-				top: 94px;
+				top: 21%;
 				// width: 43px;
 				// height: 132px;
 				// @include trs(.3);
@@ -194,7 +184,7 @@
 				bottom: 0;
 				right: 0;
 				left: 0;
-				padding: 0px 0 8px;
+				padding: 8px 0;
 				border-top: 1px solid #d1d1d1;
 				border-bottom: 1px solid #d1d1d1;
 				margin-top: 19px;
@@ -213,7 +203,7 @@
 						cursor: pointer;
 						@include trs(.3);
 						&:hover {
-							opacity: .5;
+							@include opacity(.5);
 						}
 					}
 					&.slick-active {
@@ -236,6 +226,7 @@
 			@include slider-arrows;
 			.slick {			
 				&-arrow {
+					top: 20%;
 				}
 				&-prev {
 				}
@@ -253,11 +244,36 @@
 			@include slider-arrows;
 			.slick {			
 				&-arrow {
+					top: 18%;
+					height: 105px; 
 				}
 				&-prev {
 				}
 				&-next {
 				}
+			}
+		}
+	}
+	&__fullwide {
+		img {
+			width: 100%;
+		}
+		&_lg {
+		}
+		&_sm {
+			display: none !important;
+		}
+		.slider__item {
+			position: relative;
+		}
+		.slick-arrow {
+			top: 50%;
+			display: block !important;
+		}
+		.slick {
+			&-dots {
+				border-top: 0;
+				border-bottom: 0;
 			}
 		}
 	}
@@ -374,7 +390,7 @@
 			}
 			.slick {
 				&-arrow {
-					top: 53px;
+					top: 23%;
 				}
 			}
 			&_small {
@@ -390,7 +406,7 @@
 				}
 				.slick {
 					&-arrow {
-						top: 53px;
+						top: 21%;
 					}
 				}
 			}
@@ -407,7 +423,6 @@
 				}
 				.slick {
 					&-arrow {
-						top: 53px;
 					}
 				}
 			}
@@ -419,7 +434,6 @@
 			.slick {
 				&-arrow {
 					// width: 35px;
-					top: 100px;
 				}
 				&-next {
 					// right: 20px;
