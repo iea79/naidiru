@@ -224,6 +224,11 @@ p {
 
 .dn {
 	display: none;
+	&_767 {
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
 }
 
 .db {

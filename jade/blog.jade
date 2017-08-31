@@ -94,18 +94,18 @@ block content
 			.sidebar__section
 				.sidebar__section_name Лучшие предложения для Вас:
 				// Slide 1
-				.slider__item.mb_30
-					a.slider__grid_img(href="#")
+				.slider__item.mb_30(onclick="location.href='#'")
+					.slider__grid_img
 						img(src="img/most1.png", alt="#")
 					.slider__grid_text
 						.slider__grid_name
 							|Магазин: 
 							a(href="#") Lamoda
-						a.slider__grid_link(href="#") Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
+						.slider__grid_link Скидка -50% на одежду и обувь для всей семьи! Супер распродажа!
 
 				// Slide 2
-				.slider__item.mb_20
-					a.slider__grid_img(href="#")
+				.slider__item.mb_20(onclick="location.href='#'")
+					.slider__grid_img
 						img(src="img/most2.png", alt="#")
 						.slider__grid_overlay 
 							|1240р. 
@@ -114,7 +114,8 @@ block content
 						.slider__grid_name
 							|Магазин: 
 							a(href="#") Lamoda
-						a.slider__grid_link(href="#") Смартфон Самсунг со скидкой -45%!
+						.slider__grid_link Смартфон Самсунг со скидкой -45%!
+
 				a(href="#", class="btn btn__danger blog__sidebar_btn") Больше скидок  &gt;&gt;
 
 			.sidebar__section
