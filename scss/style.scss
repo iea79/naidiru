@@ -12531,12 +12531,23 @@
 		}
 	}
 	@media (max-width: 991px) {
+		padding-bottom: 0;
+		&.open {
+			padding-bottom: 0;
+			.sign-in {
+				margin-bottom: 288px;
+				&.sign-up {
+					margin-bottom: 30px;
+				}
+			}
+		}
 		&-in {
 			width: auto;
 			max-width: 530px;
 			float: none;
 			margin-left: auto;
 			margin-right: auto;
+			margin-bottom: 30px;
 			&.sign-up {
 				width: auto;
 				max-width: 530px;
@@ -12557,13 +12568,13 @@
 	}
 	@media (max-width: 767px) {
 		&-in {
-			padding: 35px 20px 40px;
+			padding: 35px 20px;
 			&__name {
 				font-size: 18px;
 			}
 			&.sign-up,
 			.recovery {
-				padding: 35px 20px 40px;
+				padding: 35px 20px;
 			}
 		}
 	}
@@ -12623,28 +12634,59 @@
 		margin-top: 14px;
 		display: inline-block;
 	}
+	@media (max-width: 1279px) {
+		.lg_social {
+			width: 345px;
+			&_icon {
+				margin-left: 11px;
+				&_add {
+					width: 41px;
+				}
+			}
+		}
+	}
 	@media (max-width: 991px) {
 		padding: 30px 0 0;
 		max-width: 530px;
 		margin-left: auto;
 		margin-right: auto;
 		&__arrow {
-			width: auto;
+			width: 100%;
 			float: none;
 			padding-right: 0;
+			margin-right: 0;
 			&_in {
 				width: auto;
 				padding: 0;
 				display: block;
 				background-color: transparent;
+				text-align: center;
 			}
 		}
 		&__trigon {
 			display: none;
 		}
+		.lg_social {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			&_icon:first-child {
+				margin-left: 0;
+			}
+		}
+	}
+	@media (max-width: 479px) {
+		.lg_social {
+			width: 255px;
+			&_icon {
+				margin-left: 5px;
+				&_add {
+					width: 33px;
+				}
+			}
+		}
 	}
 }
-
 
 .b__hashtag_list-last {
 	.jq-selectbox {
@@ -12674,9 +12716,7 @@
 		color: #000;
 		display: none;
 	}
-}
-@media (max-width: 767px) {
-	.b__hashtag_list-last {
+	@media (max-width: 767px) {
 		padding: 20px 0;
 		font-size: 15px;
 		margin-right: 0;
@@ -12704,7 +12744,7 @@
 			padding-top: 1px;
 			height: 19px;
 		}
-	}	
+	}
 }
 
 .new__sales_page_wrapper {
@@ -12712,5 +12752,3 @@
 		display: none;
 	}
 }
-
-
