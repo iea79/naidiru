@@ -71,7 +71,7 @@
                 <input placeholder="Найти: смартфон, Nike, Aliexpress ..."/>
                 <button class="header__search_btn"></button>
               </div>
-              <div class="header__search_down hidden-box">
+              <div class="header__search_down">
                 <div class="header__search_down_list">
                   <div class="header__search_down_name">Магазины</div><a href="#" class="header__search_down_item">
                     <div class="header__search_down_left"><img src="img/shop1.jpg" alt="#"/></div><span class="header__search_down_right">Adidas</span></a><a href="#" class="header__search_down_item"><span class="header__search_down_left"><img src="img/shop6.jpg" alt="#"/></span><span class="header__search_down_right">Аснежная королева</span></a><a href="#" class="header__search_down_item">
@@ -146,7 +146,7 @@
                   </div>
                 </div>
                 <!-- end home__promo_code_grid-->
-                <div class="home__promo_code_bottom"><a href="#" class="btn btn__lg btn__danger">Зарегистрироваться</a><span>Уже зарегистрированы? <a href="#"> <b>Войти в аккаунт &gt;</b></a></span></div>
+                <div class="home__promo_code_bottom"><a href="#" data-toggle="modal" data-target="#modal__sign-up" class="btn btn__lg btn__danger">Зарегистрироваться</a><span>Уже зарегистрированы? <a href="#" data-toggle="modal" data-target="#modal__log-in"> <b>Войти в аккаунт &gt;</b></a></span></div>
               </div>
               <div class="home__promo_shop box box__gray">
                 <div class="home__promo_shop_title">Самые лучшие магазины</div>
@@ -169,9 +169,9 @@
           <h2 class="section__title">Лучшие предложения для вас</h2>
           <!-- begin sale__list -->
           <div class="sale__list js_more_wrap">
-            <div class="sale__list_reg">Нужно:<a href="#">войти или зарегистрироваться</a></div>
+            <div class="sale__list_reg">Нужно:<a href="#" data-toggle="modal" data-target="#modal__log-in">войти или зарегистрироваться</a></div>
             <!-- Row 1-->
-            <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
+            <div class="sale__list_row js_more_item"><a href="#" data-toggle="modal" data-target="#modal__show-code" class="sale__list_mob-link"></a>
               <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list1.png" alt="#"/></a>
                 <div class="btn btn__success">Новый</div>
               </div>
@@ -180,7 +180,7 @@
                   <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
                 </div>Использовано: 1283 раза
               </div>
-              <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</a>
+              <div class="sale__list_center"><a href="#" data-toggle="modal" data-target="#modal__show-code" class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</a>
                 <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
                 <div class="sale__list_terms">Условия: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum perspiciatis sint nihil culpa totam quam optio magni suscipit beatae ab praesentium blanditiis maiores obcaecati, harum nam ipsa repellat vitae assumenda! Ullam, fugit rerum natus tempora, non ducimus omnis sed voluptate fuga eius cum quaerat repudiandae mollitia vel, porro impedit sunt, iure delectus incidunt facilis aut adipisci minus earum quia illum. Delectus blanditiis dolores atque ipsum, quo distinctio saepe nulla, doloremque vitae dolorem optio! Tempora enim aliquam autem vero, nemo inventore ducimus similique, aperiam cumque nobis fuga odio. Natus, corporis asperiores, adipisci, aspernatur tenetur quia ex voluptatibus aperiam excepturi voluptate ullam.<a href="#" class="sale__list_more">Подробнее</a></div>
                 <div class="sale__list_bottom">
@@ -193,13 +193,13 @@
               </div>
             </div>
             <!-- Row 2-->
-            <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
+            <div class="sale__list_row js_more_item"><a href="#" data-toggle="modal" data-target="#modal__open-action" class="sale__list_mob-link"></a>
               <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list2.png" alt="#"/></a>
                 <div class="btn btn__danger">Горящий</div>
               </div>
               <div class="sale__list_right"><a href="#" class="sale__list_save active">Сохранить</a><a href="#" data-toggle="modal" data-target="#modal__open-action" class="btn btn__primary code__wrap_btn">Открыть акцию</a>Использовано: 1283 раза
               </div>
-              <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</a>
+              <div class="sale__list_center"><a href="#" data-toggle="modal" data-target="#modal__open-action" class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</a>
                 <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
                 <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода, промокод действителен после промокода пол промокод действителен после промокода пол<a href="#" class="sale__list_more">Подробнее</a></div>
                 <div class="sale__list_bottom">
@@ -212,7 +212,7 @@
               </div>
             </div>
             <!-- Row 3-->
-            <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
+            <div class="sale__list_row js_more_item"><a href="#" data-toggle="modal" data-target="#modal__show-code" class="sale__list_mob-link"></a>
               <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list3.png" alt="#"/></a>
                 <div class="btn btn__warning">Бесплатная доставка</div>
               </div>
@@ -221,7 +221,7 @@
                   <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
                 </div>Использовано: 1283 раза
               </div>
-              <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</a>
+              <div class="sale__list_center"><a href="#" data-toggle="modal" data-target="#modal__show-code" class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</a>
                 <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
                 <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода, промокод действителен после промокода пол...<a href="#" class="sale__list_more">Подробнее</a></div>
                 <div class="sale__list_bottom">
@@ -234,7 +234,7 @@
               </div>
             </div>
             <!-- Row 4-->
-            <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
+            <div class="sale__list_row js_more_item"><a href="#" data-toggle="modal" data-target="#modal__show-code" class="sale__list_mob-link"></a>
               <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list4.png" alt="#"/></a>
                 <div class="btn btn__warning">Подарок</div>
               </div>
@@ -243,7 +243,7 @@
                   <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
                 </div>Использовано: 1283 раза
               </div>
-              <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</a>
+              <div class="sale__list_center"><a href="#" data-toggle="modal" data-target="#modal__show-code" class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</a>
                 <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
                 <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода, промокод действителен после промокода пол...<a href="#" class="sale__list_more">Подробнее</a></div>
                 <div class="sale__list_bottom">
@@ -256,7 +256,7 @@
               </div>
             </div>
             <!-- Row 5-->
-            <div class="sale__list_row js_more_item"><a href="#" class="sale__list_mob-link"></a>
+            <div class="sale__list_row js_more_item"><a href="#" data-toggle="modal" data-target="#modal__show-code" class="sale__list_mob-link"></a>
               <div class="sale__list_left"><a href="#" class="sale__list_img"><img src="img/sale-list5.png" alt="#"/></a>
                 <div class="btn btn__warning">-50% скидка</div>
               </div>
@@ -265,7 +265,7 @@
                   <div class="code__field">D146SAFR</div><a href="#" data-toggle="modal" data-target="#modal__show-code" class="btn btn__primary code__btn">Показать код</a>
                 </div>Использовано: 1283 раза
               </div>
-              <div class="sale__list_center"><a href="#" class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</a>
+              <div class="sale__list_center"><a href="#" data-toggle="modal" data-target="#modal__show-code" class="sale__list_row_title">Скидка до -50% на одежду и обувь от известных брендов!</a>
                 <div class="sale__list_deadline"><i class="icon__time_end"></i>Заканчивается через 15 дней</div>
                 <div class="sale__list_terms">Условия: Промокод действителен после ввода промокода, промокод действителен после промокода пол...<a href="#" class="sale__list_more">Подробнее</a></div>
                 <div class="sale__list_bottom">
@@ -497,8 +497,8 @@
                     <div class="counter__box_count_item">2</div>
                   </div>человек
                 </div>
-                <div class="counter__box_auth"><a href="#" class="btn btn__danger btn__lg">Зарегистрироваться</a>
-                  <p>Уже зарегистрированы? <a href="#"> <b>Войти &gt;</b></a></p>
+                <div class="counter__box_auth"><a href="#" data-toggle="modal" data-target="#modal__sign-up" class="btn btn__lg btn__danger">Зарегистрироваться</a>
+                  <p>Уже зарегистрированы? <a href="#" data-toggle="modal" data-target="#modal__log-in"> <b>Войти &gt;</b></a></p>
                 </div>
               </div>
               <div class="counter__box_right"><img src="img/counter.jpg" alt=""/></div>
@@ -1005,7 +1005,7 @@
             <div class="modal-footer">
               <div class="modal-footer_input_wrap">
                 <input type="email" placeholder="Введите ваш e-mail" class="modal-footer_input"/>
-                <btn class="btn btn__danger modal-footer_input_btn">Подписаться</btn>
+                <button class="btn btn__danger modal-footer_input_btn">Подписаться</button>
               </div>
               <div class="modal-footer_p">Не пропускайте лучших скидок</div>
             </div>
@@ -1052,7 +1052,7 @@
             <div class="modal-footer">
               <div class="modal-footer_input_wrap">
                 <input type="email" placeholder="Введите ваш e-mail" class="modal-footer_input"/>
-                <btn class="btn btn__danger modal-footer_input_btn">Подписаться</btn>
+                <button class="btn btn__danger modal-footer_input_btn">Подписаться</button>
               </div>
               <div class="modal-footer_p">Не пропускайте лучших скидок</div>
             </div>

@@ -34,7 +34,7 @@ block content
 							.category__top_item1
 								a.category__top_link1(href="#") Одежда
 							.category__top_item1
-								a.category__top_link1.active(href="#") Бытовая техника
+								a.category__top_link1(href="#") Бытовая техника
 								.category__top_list2
 									.category__top_item2
 										a.category__top_link2.active(href="#") Кухонные комбайны
@@ -51,8 +51,8 @@ block content
 						.category__top_into
 							.category__top_into_name Покупайте
 							.category__top_into_p и участвуйте в ежемесячных акциях
-							a.btn.btn__danger.category__top_into_btn(href="#") Войти
-							a.category__top_into_link(href="#") зарегистрироваться
+							a(href="#", class="btn btn__danger category__top_into_btn", data-toggle="modal", data-target="#modal__log-in") Войти
+							a(href="#", class="category__top_into_link", data-toggle="modal", data-target="#modal__sign-up") зарегистрироваться
 						.category__top_into_down
 						.tooltip__help.big.tooltip_html
 							.tooltip__text Покупайте в магазине через нас и получайте баллы за чеки. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
@@ -88,94 +88,94 @@ block content
 					.slider.category__slider.js-slider-arrow
 						// Slide 1
 						.category__slider_wrap
-							.category__slider_item
-								a.category__slider_img(href="#")
+							.category__slider_item(onclick="location.href='#'")
+								.category__slider_img
 									img(src="img/cat-sl1.jpg", alt="#")
-								a.category__slider_info(href="#") Кухонные комбайны
-								a.btn.category__slider_btn(href="#") Все купоны 
+								.category__slider_info Кухонные комбайны
+								button.btn.category__slider_btn Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
 								.category__slider_help Покупайте и участвуйте в ежемесячных акциях. 
 									a(href="#") Подробнее об акции &gt;
 						// Slide 2
 						.category__slider_wrap
-							.category__slider_item
-								a.category__slider_img(href="#")
+							.category__slider_item(onclick="location.href='#'")
+								.category__slider_img
 									img(src="img/cat-sl2.jpg", alt="#")
 								a.category__slider_info(href="#") 
 									span Все скидки на 
 									|Телевизоры
-								a.btn.category__slider_btn(href="#") Все купоны 
+								button.btn.category__slider_btn Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
 								.category__slider_help Покупайте и участвуйте в ежемесячных акциях. 
 									a(href="#") Подробнее об акции &gt;
 						// Slide 3
 						.category__slider_wrap
-							.category__slider_item
-								a.category__slider_img(href="#")
+							.category__slider_item(onclick="location.href='#'")
+								.category__slider_img
 									img(src="img/cat-sl3.jpg", alt="#")
 								a.category__slider_info(href="#") Samsung <br> 
 									span все скидки марки
-								a.btn.category__slider_btn(href="#") Все купоны 
+								button.btn.category__slider_btn Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
 								.category__slider_help Покупайте и участвуйте в ежемесячных акциях. 
 									a(href="#") Подробнее об акции &gt;
 						// Slide 4
 						.category__slider_wrap
-							.category__slider_item
-								a.category__slider_img(href="#")
+							.category__slider_item(onclick="location.href='#'")
+								.category__slider_img
 									img(src="img/cat-sl4.jpg", alt="#")
 								a.category__slider_info(href="#") Кухонные комбайны
-								a.btn.category__slider_btn(href="#") Все купоны 
+								button.btn.category__slider_btn Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
 								.category__slider_help Покупайте и участвуйте в ежемесячных акциях. 
 									a(href="#") Подробнее об акции &gt;
 						// Slide 5
 						.category__slider_wrap
-							.category__slider_item
-								a.category__slider_img(href="#")
+							.category__slider_item(onclick="location.href='#'")
+								.category__slider_img
 									img(src="img/cat-sl1.jpg", alt="#")
 								a.category__slider_info(href="#") Кухонные комбайны
-								a.btn.category__slider_btn(href="#") Все купоны 
+								button.btn.category__slider_btn Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
 								.category__slider_help Покупайте и участвуйте в ежемесячных акциях. 
 									a(href="#") Подробнее об акции &gt;
 						// Slide 6
 						.category__slider_wrap
-							.category__slider_item
-								a.category__slider_img(href="#")
+							.category__slider_item(onclick="location.href='#'")
+								.category__slider_img
 									img(src="img/cat-sl2.jpg", alt="#")
 								a.category__slider_info(href="#")
 									span Все скидки на 
 									|Телевизоры
-								a.btn.category__slider_btn(href="#") Все купоны 
+								button.btn.category__slider_btn Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
 								.category__slider_help Покупайте и участвуйте в ежемесячных акциях. 
 									a(href="#") Подробнее об акции &gt;
 						// Slide 7
 						.category__slider_wrap
-							.category__slider_item
-								a.category__slider_img(href="#")
+							.category__slider_item(onclick="location.href='#'")
+								.category__slider_img
 									img(src="img/cat-sl3.jpg", alt="#")
 								a.category__slider_info(href="#") Samsung <br> 
 									span все скидки марки
-								a.btn.category__slider_btn(href="#") Все купоны 
+								button.btn.category__slider_btn Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
 								.category__slider_help Покупайте и участвуйте в ежемесячных акциях. 
 									a(href="#") Подробнее об акции &gt;
 						// Slide 8
 						.category__slider_wrap
-							.category__slider_item
-								a.category__slider_img(href="#")
+							.category__slider_item(onclick="location.href='#'")
+								.category__slider_img
 									img(src="img/cat-sl4.jpg", alt="#")
 								a.category__slider_info(href="#") Кухонные комбайны
-								a.btn.category__slider_btn(href="#") Все купоны 
+								button.btn.category__slider_btn Все купоны 
 									span &gt;&gt;
 								button.btn.category__slider_hellip
 								.category__slider_help Покупайте и участвуйте в ежемесячных акциях. 
@@ -246,7 +246,7 @@ block content
 							a.sidebar__section_list_link(href="#") Wildberries
 
 				.sidebar__section.js-more-wrapper
-					.sidebar__section_name Кухонные комбайны
+					h2.sidebar__section_name Кухонные комбайны
 					.sidebar__section_p Кухонный комбайн состоит из корпуса, оборудованного системой управления и двигателем, и съемной чаши.
 					.sidebar__section_p Модели различаются между собой по объему чаши — существуют миниатюрные устройства с объемом чаши
 					.js-more-text
@@ -295,11 +295,11 @@ block content
 				.sale__list.js_more_wrap.sale__list_first
 
 					.sale__list_reg Нужно:
-						a(href="autorization.html") войти или зарегистрироваться
-					
+						a(href="#", data-toggle="modal", data-target="#modal__log-in") войти или зарегистрироваться
+										
 					// Row 1
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list4.png", alt="#")
@@ -311,7 +311,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -328,7 +328,7 @@ block content
 					
 					// Row 2
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list6.png", alt="#")
@@ -340,7 +340,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от брендов!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -357,7 +357,7 @@ block content
 
 					// Row 3
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list4.png", alt="#")
@@ -369,7 +369,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -386,7 +386,7 @@ block content
 					
 					// Row 4
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list6.png", alt="#")
@@ -398,7 +398,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от брендов!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -412,7 +412,7 @@ block content
 										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
 											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
-				
+
 
 				.sale__list_ad
 					.sale__list_ad_left
@@ -457,12 +457,12 @@ block content
 					.sale__list_add_p Совершайте покупки через нас, копите баллы и меняйте их на лотерейки. Выигрывайте подарки!
 					button.btn.btn__danger.sale__list_add_btn Участвовать
 
-				
+
 				.sale__list.js_more_wrap
 
 					// Row 5
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list4.png", alt="#")
@@ -474,7 +474,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -491,7 +491,7 @@ block content
 					
 					// Row 6
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list6.png", alt="#")
@@ -503,7 +503,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от брендов!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -520,7 +520,7 @@ block content
 
 					// Row 7
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list4.png", alt="#")
@@ -532,7 +532,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -549,7 +549,7 @@ block content
 					
 					// Row 8
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list6.png", alt="#")
@@ -561,7 +561,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от брендов!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -578,7 +578,7 @@ block content
 
 					// Row 9
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list4.png", alt="#")
@@ -590,7 +590,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -607,7 +607,7 @@ block content
 					
 					// Row 10
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list6.png", alt="#")
@@ -619,7 +619,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от брендов!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -636,7 +636,7 @@ block content
 
 					// Row 11
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list4.png", alt="#")
@@ -648,7 +648,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -662,10 +662,9 @@ block content
 										.tooltip__text Покупайте в магазине через нас и получайте баллы. Меняйте баллы на ШопКарты и участвуйте в ежемесячных акциях. 
 											a(href="#") Подробнее об акции &gt;
 								a(href="#") Все промокоды Bon prix
-					
 					// Row 12
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list6.png", alt="#")
@@ -677,7 +676,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от брендов!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -694,7 +693,7 @@ block content
 
 					// Row 13
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list4.png", alt="#")
@@ -706,7 +705,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от лучших магазинов магазинов России! Успейте купить!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -723,7 +722,7 @@ block content
 					
 					// Row 14
 					.sale__list_row.js_more_item
-						a(href="#").sale__list_mob-link
+						a(href="#", class="sale__list_mob-link", data-toggle="modal", data-target="#modal__show-code")
 						.sale__list_left
 							a.sale__list_img(href="#")
 								img(src="img/sale-list6.png", alt="#")
@@ -735,7 +734,7 @@ block content
 								a(href="#", class="btn btn__primary code__btn", data-toggle="modal", data-target="#modal__show-code") Показать код
 							| Использовано: 1283 раза
 						.sale__list_center
-							a.sale__list_row_title(href="#") Скидка до -50% на одежду и обувь от брендов!
+							a(href="#", class="sale__list_row_title", data-toggle="modal", data-target="#modal__show-code") Скидка до -50% на одежду и обувь от брендов!
 							.sale__list_deadline
 								i.icon__time_end
 								| Заканчивается через 15 дней
@@ -1057,11 +1056,11 @@ block content
 		.lots
 			h3 Покупайте в магазинах и получайте подарки
 			p Покупайте в интернет-магазинах и копите баллы. Меняйте баллы на ШопКарты и получайте подарки. 
-				a(href="#") Подробнее о акции &gt;
+				a(href="#") Подробнее об акции &gt;
 			p + Никогда не пропускайте! Получайте лучшие скидки магазинов к себе на почту.
 
-			a(href="#", class="btn btn__danger") Зарегистрироваться
+			a(href="#", class="btn btn__danger", data-toggle="modal", data-target="#modal__sign-up") Зарегистрироваться
 
 			p У вас есть свой аккаунт?
-				a(href="#" class="lots_a") Войдите
+				a(href="#", class="lots_a", data-toggle="modal", data-target="#modal__log-in")  Войдите
 		// end lots

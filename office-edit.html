@@ -71,7 +71,7 @@
                 <input placeholder="Найти: смартфон, Nike, Aliexpress ..."/>
                 <button class="header__search_btn"></button>
               </div>
-              <div class="header__search_down hidden-box">
+              <div class="header__search_down">
                 <div class="header__search_down_list">
                   <div class="header__search_down_name">Магазины</div><a href="#" class="header__search_down_item">
                     <div class="header__search_down_left"><img src="img/shop1.jpg" alt="#"/></div><span class="header__search_down_right">Adidas</span></a><a href="#" class="header__search_down_item"><span class="header__search_down_left"><img src="img/shop6.jpg" alt="#"/></span><span class="header__search_down_right">Аснежная королева</span></a><a href="#" class="header__search_down_item">
@@ -121,7 +121,7 @@
           <div class="container_center">
             
             <!-- begin office__top-->
-            <div class="office__top">
+            <div class="office__top shops">
               <div class="office__top_left">
                 <div class="office__top_user">
                   <div class="office__top_user_img"><img src="img/rev2.png" alt="#"/></div>
@@ -168,7 +168,7 @@
               <div class="office__top_center">
                 <div class="office__top_center_message">
                   <p> <span class="large">Вы накопили: <span class="bold points">2120 </span></span><span class="bold">баллов</span></p>
-                  <p>До ШопКарты Вам осталось накопить: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
+                  <p>До ШопКарты нужно накопить: <br><span class="large bold points__left">2880 </span><span class="bold">баллов</span></p>
                 </div>
                 <div class="sm_social">
                   <div class="sm_social_icon">
@@ -434,7 +434,8 @@
                     </div>
                     <div class="office__edit_row">
                       <div class="office__edit_label">Страна</div>
-                      <select name="country" class="office__edit_select">
+                      <select name="country" data-placeholder="Не выбрано" data-visible-options="5" class="office__edit_select">
+                        <option value="#"></option>
                         <option value="#">Россия</option>
                         <option value="#">Страна №2</option>
                       </select>
@@ -445,7 +446,8 @@
                     </div>
                     <div class="office__edit_row">
                       <div class="office__edit_label">Пол</div>
-                      <select name="gender" class="office__edit_select">
+                      <select name="gender" data-placeholder="Не выбрано" class="office__edit_select">
+                        <option value="#"></option>
                         <option value="#">Мужчина</option>
                         <option value="#">Женщина</option>
                       </select>
@@ -474,7 +476,7 @@
                       <input type="text" placeholder="234582" id="oe7"/>
                     </div>
                     <div class="office__edit_row last">
-                      <div class="office__edit_label">Выберите соц.сеть и выполняйте быстрый вход</div>
+                      <div class="office__edit_label"> <span>Выберите соц.сеть и </span>выполняйте быстрый вход</div>
                       <div class="lg_social">
                         <div class="lg_social_icon">
                           <button class="lg_social_icon_add btn"></button>
@@ -543,30 +545,84 @@
                       <div for="oe10" class="office__edit_label">Что бы Вы хотели тут выиграть? (через запятую)</div>
                       <input type="text" placeholder="Смартфон, PlayStation, Робот-пылесос ..." id="oe10"/>
                     </div>
-                    <div class="office__edit_row">
+                    <div class="office__edit_row">            
                       <div class="office__edit_label">Ваши интересы</div>
-                      <select name="interest" class="office__edit_select">
-                        <option value="#">Люблю шоппинг (Шоппинг)</option>
-                        <option value="#">Спорт – это всегда мое (Спорт)</option>
-                        <option value="#">Путешествую по всему миру (Путешествия)</option>
-                        <option value="#">Люблю вкусненько готовить</option>
-                        <option value="#">Для меня главное уют в доме (Домашний уют)</option>
-                        <option value="#">Часто читаю книги (Книги)</option>
-                        <option value="#">Хожу на рыбалку (Рыбалка)</option>
-                        <option value="#">Люблю рукодельничать (Рукоделие)</option>
-                        <option value="#">У меня талант петь и танцевать (Танцы и Музыка)</option>
-                        <option value="#">Интересуюсь инновациями и гаджетами (Гаджеты)</option>
-                        <option value="#">Увлекаюсь автомобилями (Автомобили)</option>
-                        <option value="#">Играю в игры (Игры)</option>
-                        <option value="#">Люблю очень цветы и свой сад (Цветы и сад)</option>
-                        <option value="#">Искусство – это мое, люблю рисовать (Творчество)</option>
-                        <option value="#">Не представляю свою жизнь, без интернета (Интернет)</option>
-                        <option value="#">Люблю поваляться перед телевизором (Телевизор)</option>
-                      </select>
+                      <button class="office__edit_trigger">Не выбрано
+                        <div class="jq-selectbox__trigger"></div>
+                      </button>
+                      <div class="office__edit_hide">
+                        <div class="office__edit_hide_in">
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe57" class="checkbox__input"/>
+                            <label for="oe57" class="checkbox__label">Люблю шоппинг (Шоппинг)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe58" class="checkbox__input"/>
+                            <label for="oe58" class="checkbox__label">Спорт – это всегда мое (Спорт)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe59" class="checkbox__input"/>
+                            <label for="oe59" class="checkbox__label">Путешествую по всему миру (Путешествия)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe60" class="checkbox__input"/>
+                            <label for="oe60" class="checkbox__label">У Люблю вкусненько готовить</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe61" class="checkbox__input"/>
+                            <label for="oe61" class="checkbox__label">Для меня главное уют в доме (Домашний уют)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe62" class="checkbox__input"/>
+                            <label for="oe62" class="checkbox__label">Часто читаю книги (Книги)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe63" class="checkbox__input"/>
+                            <label for="oe63" class="checkbox__label">Хожу на рыбалку (Рыбалка)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe64" class="checkbox__input"/>
+                            <label for="oe64" class="checkbox__label">Люблю рукодельничать (Рукоделие)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe65" class="checkbox__input"/>
+                            <label for="oe65" class="checkbox__label">У меня талант петь и танцевать (Танцы и Музыка)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe66" class="checkbox__input"/>
+                            <label for="oe66" class="checkbox__label">Интересуюсь инновациями и гаджетами (Гаджеты)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe67" class="checkbox__input"/>
+                            <label for="oe67" class="checkbox__label">Увлекаюсь автомобилями (Автомобили)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe68" class="checkbox__input"/>
+                            <label for="oe68" class="checkbox__label">Играю в игры (Игры)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe69" class="checkbox__input"/>
+                            <label for="oe69" class="checkbox__label">Люблю очень цветы и свой сад (Цветы и сад)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe70" class="checkbox__input"/>
+                            <label for="oe70" class="checkbox__label">Искусство – это мое, люблю рисовать (Творчество)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe71" class="checkbox__input"/>
+                            <label for="oe71" class="checkbox__label">Не представляю свою жизнь, без интернета (Интернет)</label>
+                          </div>
+                          <div class="office__settings_checkbox">
+                            <input type="checkbox" id="oe72" class="checkbox__input"/>
+                            <label for="oe72" class="checkbox__label">Люблю поваляться перед телевизором (Телевизор)</label>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="office__edit_row">
                       <div class="office__edit_label">Сколько у Вас детей?</div>
-                      <select name="children" class="office__edit_select">
+                      <select name="children" data-placeholder="Не выбрано" data-visible-options="5" class="office__edit_select">
+                        <option value="#"></option>
                         <option value="#">У меня нет детей</option>
                         <option value="#">Один единственный и любимый</option>
                         <option value="#">У меня, пока два чудо-ребенка</option>
@@ -576,7 +632,8 @@
                     </div>
                     <div class="office__edit_row">
                       <div class="office__edit_label">Ваше семейное положение?</div>
-                      <select name="country" class="office__edit_select">
+                      <select name="country" data-placeholder="Не выбрано" data-visible-options="5" class="office__edit_select">
+                        <option value="#"></option>
                         <option value="#">Замужем / женат</option>
                         <option value="#">Не замужем / не женат</option>
                         <option value="#">Пока встречаюсь</option>
@@ -591,7 +648,8 @@
                     </div>
                     <div class="office__edit_row">
                       <div class="office__edit_label">Кем Вы работаете?</div>
-                      <select name="occupation" class="office__edit_select">
+                      <select name="occupation" data-placeholder="Не выбрано" data-visible-options="5" class="office__edit_select">
+                        <option value="#"></option>
                         <option value="#">Работаю в офисе, всегда онлайн</option>
                         <option value="#">Весь в делах, выхожу в интернет вечером</option>
                         <option value="#">Работаю, но выхожу в интернет, когда захочу</option>
@@ -754,7 +812,7 @@
                     </div>
                     <div class="office__edit_row">            
                       <div class="office__edit_label">Есть ли у Вас питомец? Кто этот домосед?</div>
-                      <button class="office__edit_trigger">У меня нет дома домоседов
+                      <button class="office__edit_trigger">Не выбрано
                         <div class="jq-selectbox__trigger"></div>
                       </button>
                       <div class="office__edit_hide">
@@ -1315,7 +1373,7 @@
             <div class="modal-footer">
               <div class="modal-footer_input_wrap">
                 <input type="email" placeholder="Введите ваш e-mail" class="modal-footer_input"/>
-                <btn class="btn btn__danger modal-footer_input_btn">Подписаться</btn>
+                <button class="btn btn__danger modal-footer_input_btn">Подписаться</button>
               </div>
               <div class="modal-footer_p">Не пропускайте лучших скидок</div>
             </div>
@@ -1362,7 +1420,7 @@
             <div class="modal-footer">
               <div class="modal-footer_input_wrap">
                 <input type="email" placeholder="Введите ваш e-mail" class="modal-footer_input"/>
-                <btn class="btn btn__danger modal-footer_input_btn">Подписаться</btn>
+                <button class="btn btn__danger modal-footer_input_btn">Подписаться</button>
               </div>
               <div class="modal-footer_p">Не пропускайте лучших скидок</div>
             </div>

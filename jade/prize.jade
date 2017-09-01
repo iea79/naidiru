@@ -39,9 +39,6 @@ block content
 			// end prize__menu
 
 
-			.line
-
-
 			// begin prize__steps
 		.prize__steps_wrap#pm1
 			.prize__steps.prize__steps-last
@@ -67,9 +64,9 @@ block content
 							.prize__steps_p Накопите 5000 баллов, <br>обменяйте их на ШопКарту <br>и участвуйте в акции.
 								.prize__steps_p_treangle
 					.prize__steps_reg.prize__steps_reg-last
-						button.btn.btn__danger.prize__steps_reg_btn Зарегистрироваться
+						button(href="#", class="btn btn__danger prize__steps_reg_btn", data-toggle="modal", data-target="#modal__sign-up") Зарегистрироваться
 						.prize__steps_reg_p Уже зарегистрированы?
-							a(href="#") Войти в аккаунт &gt;
+							a(href="#", data-toggle="modal", data-target="#modal__log-in") Войти в аккаунт &gt;
 			// end prize__steps
 
 		.container_center 
@@ -198,9 +195,9 @@ block content
 									.counter__box_count_item 2
 								|человек
 							.counter__box_auth
-								a(href="#").btn.btn__danger.btn__lg Зарегистрироваться
+								a(href="#", class="btn btn__danger btn__lg", data-toggle="modal", data-target="#modal__sign-up") Зарегистрироваться
 								p Уже зарегистрированы? 
-									a(href="#") 
+									a(href="#", data-toggle="modal", data-target="#modal__log-in") 
 										b Войти &gt;
 
 					.counter__box_bottom.counter__box_bottom_second
@@ -295,15 +292,17 @@ block content
 						.round_social_name Мы в социальных сетях:
 						.round_social
 							.round_social_icon
-								.ya-share2(data-services="vkontakte")
+								a(href="#").icon__vk
 							.round_social_icon
-								.ya-share2(data-services="facebook")
+								a(href="#").icon__fb
 							.round_social_icon
-								.ya-share2(data-services="gplus")
+								a(href="#").icon__google
 							.round_social_icon
-								.ya-share2(data-services="odnoklassniki")
+								a(href="#").icon__odnoklassniki
 							.round_social_icon
-								.ya-share2(data-services="twitter")
+								a(href="#").icon__twitter
+							.round_social_icon
+								a(href="#").icon__instagramm
 							a.round_social_icon(href="#")
 					.prize__faq_question
 						.prize__faq_question_name Есть вопросы?
@@ -400,11 +399,11 @@ block content
 		.lots
 			h3 Покупайте в магазинах и получайте подарки
 			p Покупайте в интернет-магазинах и копите баллы. Меняйте баллы на ШопКарты и получайте подарки. 
-				a(href="#") Подробнее о акции &gt;
+				a(href="#") Подробнее об акции &gt;
 			p + Никогда не пропускайте! Получайте лучшие скидки магазинов к себе на почту.
 
-			a(href="#", class="btn btn__danger") Зарегистрироваться
+			a(href="#", class="btn btn__danger", data-toggle="modal", data-target="#modal__sign-up") Зарегистрироваться
 
 			p У вас есть свой аккаунт?
-				a(href="#" class="lots_a") Войдите
+				a(href="#", class="lots_a", data-toggle="modal", data-target="#modal__log-in")  Войдите
 		// end lots

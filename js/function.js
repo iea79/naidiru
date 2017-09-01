@@ -1043,7 +1043,7 @@ $(document).ready(function() {
 	// Страница авторизации autorization.html Появление блока Восстановить пароль
     $('.sign__restore-password').on('click', function(event) {
     	event.preventDefault();
-    	$('.recovery').toggleClass('open');
+    	$('.recovery, .sign').toggleClass('open');
 	});
 
 	$('.accordeon__text').hide();

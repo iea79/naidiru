@@ -125,16 +125,16 @@
 			top: 100%;
 			z-index: 999;
 			width: 100%;
-			padding: 21px 0 16px;
 			background-color: #fff;
 			border: 1px solid #dadada;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 			&_list {
-				padding-top: 21px;
+				    padding: 16px 0;
 				border-top: 1px solid #dadada;
 			}
 			&_name {
-				margin-bottom: 16px;
+				margin-bottom: 13px;
+				padding-left: 22px;
 			}
 			&_item {
 				padding: 4px 22px;
@@ -159,8 +159,8 @@
 				}
 			}
 			&_right {
-				padding-top: 20px;
 				overflow: hidden;
+				line-height: 3.6;
 			}
 			&.open {
 				// display: block;
@@ -993,4 +993,3 @@
 		}
 	}
 }
-

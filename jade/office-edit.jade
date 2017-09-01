@@ -23,7 +23,7 @@ block content
 
 
 			// begin office__top
-			.office__top
+			.office__top.shops
 				.office__top_left
 					.office__top_user
 						.office__top_user_img
@@ -73,7 +73,7 @@ block content
 							span.large Вы накопили: 
 								span.bold.points 2120 
 							span.bold баллов
-						p До ШопКарты Вам осталось накопить: <br>
+						p До ШопКарты нужно накопить: <br>
 							span.large.bold.points__left 2880 
 							span.bold баллов
 
@@ -296,32 +296,41 @@ block content
 				.office__edit_section_info
 					.office__edit_list
 						.office__edit_list_col
+							
 							.office__edit_row
 								.office__edit_label(for="oe1") Имя
 								input(type="text", placeholder="Мария", id="oe1")
+							
 							.office__edit_row
 								.office__edit_label(for="oe2") Фамилия
 								input(type="text", placeholder="Иванова", id="oe2")
+							
 							.office__edit_row
 								.office__edit_label(for="oe3") Отчество
 								input(type="text", placeholder="Петровна", id="oe3")
+							
 							.office__edit_row
 								.office__edit_label Страна
-								select.office__edit_select(name="country")
+								select.office__edit_select(name="country", data-placeholder="Не выбрано", data-visible-options="5")
+									option(value="#")
 									option(value="#") Россия
 									option(value="#") Страна №2
+							
 							.office__edit_row
 								.office__edit_label(for="oe4") Адрес (куда присылать подарок)
 								input(type="text", placeholder="ул.Победная 5, д.25, кв.45", id="oe4")
+							
 							.office__edit_row
 								.office__edit_label Пол
-								select.office__edit_select(name="gender")
+								select.office__edit_select(name="gender", data-placeholder="Не выбрано")
+									option(value="#")
 									option(value="#") Мужчина
 									option(value="#") Женщина
 						
 						.office__edit_list_col
 							.office__edit_row_id ID Вашего аккаунта: 
 								b 05768
+							
 							.office__edit_row.photo
 								img.office__edit_row_left(src="img/no-photo.png", alt="#")
 								.office__edit_row_right
@@ -329,17 +338,23 @@ block content
 									.file__upload
 										a.download__file(href="#") Выберите файл
 										input(type="file")
+							
 							.office__edit_row
 								.office__edit_label(for="oe5") Дата рождения
 								input(type="text", placeholder="25.05.1992", id="oe5")
+							
 							.office__edit_row
 								.office__edit_label(for="oe6") Город
 								input(type="text", placeholder="Москва", id="oe6")
+							
 							.office__edit_row
 								.office__edit_label(for="oe7") Почтовый индекс
 								input(type="text", placeholder="234582", id="oe7")
+							
 							.office__edit_row.last
-								.office__edit_label Выберите соц.сеть и выполняйте быстрый вход
+								.office__edit_label 
+									span Выберите соц.сеть и 
+									|выполняйте быстрый вход
 								.lg_social
 									.lg_social_icon
 										button.lg_social_icon_add.btn
@@ -388,29 +403,67 @@ block content
 							.office__edit_row
 								.office__edit_label(for="oe10") Что бы Вы хотели тут выиграть? (через запятую)
 								input(type="text", placeholder="Смартфон, PlayStation, Робот-пылесос ...", id="oe10")
-							.office__edit_row
+
+							.office__edit_row             
 								.office__edit_label Ваши интересы
-								select.office__edit_select(name="interest")
-									option(value="#") Люблю шоппинг (Шоппинг)
-									option(value="#") Спорт – это всегда мое (Спорт)
-									option(value="#") Путешествую по всему миру (Путешествия)
-									option(value="#") Люблю вкусненько готовить
-									option(value="#") Для меня главное уют в доме (Домашний уют)
-									option(value="#") Часто читаю книги (Книги)
-									option(value="#") Хожу на рыбалку (Рыбалка)
-									option(value="#") Люблю рукодельничать (Рукоделие)
-									option(value="#") У меня талант петь и танцевать (Танцы и Музыка)
-									option(value="#") Интересуюсь инновациями и гаджетами (Гаджеты)
-									option(value="#") Увлекаюсь автомобилями (Автомобили)
-									option(value="#") Играю в игры (Игры)
-									option(value="#") Люблю очень цветы и свой сад (Цветы и сад)
-									option(value="#") Искусство – это мое, люблю рисовать (Творчество)
-									option(value="#") Не представляю свою жизнь, без интернета (Интернет)
-									option(value="#") Люблю поваляться перед телевизором (Телевизор)
+								button.office__edit_trigger Не выбрано
+									.jq-selectbox__trigger
+								.office__edit_hide
+									.office__edit_hide_in
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe57")
+											label.checkbox__label(for="oe57") Люблю шоппинг (Шоппинг)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe58")
+											label.checkbox__label(for="oe58") Спорт – это всегда мое (Спорт)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe59")
+											label.checkbox__label(for="oe59") Путешествую по всему миру (Путешествия)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe60")
+											label.checkbox__label(for="oe60") У Люблю вкусненько готовить
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe61")
+											label.checkbox__label(for="oe61") Для меня главное уют в доме (Домашний уют)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe62")
+											label.checkbox__label(for="oe62") Часто читаю книги (Книги)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe63")
+											label.checkbox__label(for="oe63") Хожу на рыбалку (Рыбалка)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe64")
+											label.checkbox__label(for="oe64") Люблю рукодельничать (Рукоделие)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe65")
+											label.checkbox__label(for="oe65") У меня талант петь и танцевать (Танцы и Музыка)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe66")
+											label.checkbox__label(for="oe66") Интересуюсь инновациями и гаджетами (Гаджеты)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe67")
+											label.checkbox__label(for="oe67") Увлекаюсь автомобилями (Автомобили)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe68")
+											label.checkbox__label(for="oe68") Играю в игры (Игры)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe69")
+											label.checkbox__label(for="oe69") Люблю очень цветы и свой сад (Цветы и сад)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe70")
+											label.checkbox__label(for="oe70") Искусство – это мое, люблю рисовать (Творчество)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe71")
+											label.checkbox__label(for="oe71") Не представляю свою жизнь, без интернета (Интернет)
+										.office__settings_checkbox
+											input.checkbox__input(type="checkbox" id="oe72")
+											label.checkbox__label(for="oe72") Люблю поваляться перед телевизором (Телевизор)
+
 
 							.office__edit_row
 								.office__edit_label Сколько у Вас детей?
-								select.office__edit_select(name="children")
+								select.office__edit_select(name="children", data-placeholder="Не выбрано", data-visible-options="5")
+									option(value="#")
 									option(value="#") У меня нет детей
 									option(value="#") Один единственный и любимый
 									option(value="#") У меня, пока два чудо-ребенка
@@ -419,7 +472,8 @@ block content
 							
 							.office__edit_row
 								.office__edit_label Ваше семейное положение?
-								select.office__edit_select(name="country")
+								select.office__edit_select(name="country", data-placeholder="Не выбрано", data-visible-options="5")
+									option(value="#")
 									option(value="#") Замужем / женат
 									option(value="#") Не замужем / не женат
 									option(value="#") Пока встречаюсь
@@ -432,7 +486,8 @@ block content
 							
 							.office__edit_row
 								.office__edit_label Кем Вы работаете?
-								select.office__edit_select(name="occupation")
+								select.office__edit_select(name="occupation", data-placeholder="Не выбрано", data-visible-options="5")
+									option(value="#")
 									option(value="#") Работаю в офисе, всегда онлайн
 									option(value="#") Весь в делах, выхожу в интернет вечером
 									option(value="#") Работаю, но выхожу в интернет, когда захочу
@@ -556,7 +611,7 @@ block content
 							
 							.office__edit_row             
 								.office__edit_label Есть ли у Вас питомец? Кто этот домосед?
-								button.office__edit_trigger У меня нет дома домоседов
+								button.office__edit_trigger Не выбрано
 									.jq-selectbox__trigger
 								.office__edit_hide
 									.office__edit_hide_in
