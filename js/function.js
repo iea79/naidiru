@@ -985,7 +985,7 @@ $(document).ready(function() {
 	}
 
 	// Страница категорий category.html - Поделиться в соц.сетях
-    $('.sm_social_trigger').on('click touchend', function(event) {
+    $('.sm_social_trigger').on('click', function(event) {
     	event.preventDefault();
 		$('.category__top_right_top').toggleClass('open');
 	});
