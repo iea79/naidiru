@@ -1636,6 +1636,15 @@
 			margin-top: 45px;
 		}
 	}
+	@media (max-width: 767px) {
+		.section__title.section__title_link,
+		.section__title.section__title_btn {
+			margin-top: 5px;
+		}
+		.white__line {
+			padding-bottom: 0;
+		}
+	}
 }
 
 // begin Error 404
@@ -3437,6 +3446,8 @@
 		}
 	}
 	@media (max-width: 767px) {
+		margin-left: 20px;
+		margin-right: 20px;
 		&_list {
 			@include flexbox();
 			@include justify-content(center);
@@ -5643,7 +5654,7 @@
 			position: absolute;
 			bottom: 0;
 			left: 0;	
-			width: 99px;
+			width: 120px;
 			height: 26px;
 			padding-top: 5px;
 			text-align: center;
@@ -6625,12 +6636,12 @@
 		vertical-align: middle;
 	}
 	&_name {
-		margin-bottom: 18px;
+		margin-bottom: 18px !important;
 		font-size: 18px;
 		display: block;
 	}
 	&_p {
-		margin-bottom: 18px;
+		margin-bottom: 18px !important;
 		font-size: 14px;
 	}
 	&_restore {
@@ -6774,7 +6785,7 @@
 			}
 			&_head {
 				height: 74px;
-				padding: 17px 10px 0 76px;
+				padding: 17px 10px 0 72px;
 				background-position: 12px center;
 				background-size: 48px 48px;
 			}
@@ -7724,7 +7735,7 @@
 		padding: 30px 20px 50px;
 		&_name {
 			font-size: 18px;
-			margin-bottom: 20px;
+			margin: 0 20px 20px;
 			text-align: center;
 		}
 		&_item {
@@ -7855,12 +7866,15 @@
 				width: 10px;
 				height: 14px;
 				margin-right: 14px;
+				margin-top: -7px;
 				display: inline-block;
 			}
 			&.active {
 				&:before {
 					width: 18px;
 					height: 18px;
+					margin-right: 10px;
+					margin-top: 0;
 					text-align: center;
 					@include rotate(90deg);
 				}
@@ -8126,7 +8140,6 @@
 		&_list1 {
 			&_trigger {
 				text-align: center;
-				padding-left: 22px;
 			}
 		}
 		&_right {
@@ -8979,17 +8992,18 @@
 	&_name {
 		margin-bottom: 26px;
 		font-size: 21px;
-	}
-	@media (max-width: 1199px) {
-		&_name {
-			// padding-left: 20px;
-			// padding-right: 20px;
+		br {
+			display: none;
 		}
 	}
 	@media (max-width: 767px) {
 		&_name {
 			margin-bottom: 20px;
 			font-size: 18px;
+			text-align: center;
+			br {
+				display: inline;
+			}
 		}
 	}
 }
@@ -9340,6 +9354,9 @@
 	@media (max-width: 767px) {
 		&_wrap {
 			padding-top: 0;
+		}
+		&_h3 {
+			font-size: 18px;
 		}
 		&_p {
 			min-height: auto;
@@ -10509,7 +10526,7 @@
 				margin: 0 auto 16px;
 				@include flex-flow(row-reverse wrap);
 				.sm_social {
-					display: none;
+					display: none !important;
 					&_trigger {
 						display: block;
 						float: right;

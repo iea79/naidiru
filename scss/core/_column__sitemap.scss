@@ -27,6 +27,9 @@
 		// width: 96%;
 		vertical-align: top;
 		margin-bottom: 30px;
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 	&_link {
 		display: block;
