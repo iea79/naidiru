@@ -669,11 +669,10 @@ $(document).ready(function() {
    	
    	$('.office__edit_trigger').on('click', function(event) {
    		event.preventDefault();
-   		$('.office__edit_hide').removeClass('open')
    		$(this).siblings('.office__edit_hide').toggleClass('open');
    	});
 	$(document).mouseup(function (el){
-		var div = $(".office__edit_trigger");
+		var div = $(".office__edit_trigger").closest('.office__edit_row');
 		var drop = $('.office__edit_hide');
 
 		if (!div.is(el.target)
@@ -930,7 +929,7 @@ $(document).ready(function() {
     	$(this).closest('.sale__list_row').remove();
     });
 
-    $('.grid__item_like').on('click touchend', function(event) {
+    $('.grid__item_like').on('click', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
     });
@@ -1075,6 +1074,8 @@ $(document).ready(function() {
 		    
 		    $('.office__history').insertAfter('.sidebar__section:last-child');
 
+		    $('.b__article_top_left.b__article_social').insertAfter('.b__article_top_right');
+
 	    }
 	}
 
@@ -1151,37 +1152,4 @@ function tooltipsterHtml(el) {
     });
 
 }
-
-$(function () {
-})
-
-// $(function(){
-// 	var two_modal = function(id_modal_1,id_modal_2,id_modal_3) {
-// 	  var show_modal_2 = false;
-// 	  var show_modal_3 = false;
-// 	  $('a[href="' + id_modal_2 + '"]').click(function(e) {
-// 	    e.preventDefault();
-// 	    show_modal_2 = true;
-// 	    $(id_modal_1).modal('hide');
-// 	  });
-// 	  $('a[href="' + id_modal_3 + '"]').click(function(e) {
-// 	    e.preventDefault();
-// 	    show_modal_3 = true;
-// 	    // скрыть текущее модальное окно
-// 	    $(id_modal_1).modal('hide');
-// 	  });
-// 	  // при скрытии текущего модального окна открыть другое, если значение переменной show_modal_2 равно true
-// 	  $(id_modal_1).on('hidden.bs.modal', function (e) {
-// 	    if (show_modal_2) {
-// 	      show_modal_2 = false;
-// 	      $(id_modal_2).modal('show');
-// 	    }
-// 	    if (show_modal_3) {
-// 	      show_modal_3 = false;
-// 	      $(id_modal_3).modal('show');
-// 	    }
-// 	  })
-	 
-// 	}('#modal__log-in', '#modal__sign-up','#modal__forgot-password');
-// });
 

@@ -298,16 +298,16 @@ block content
 						.office__edit_list_col
 							
 							.office__edit_row
-								.office__edit_label(for="oe1") Имя
-								input(type="text", placeholder="Мария", id="oe1")
+								.office__edit_label Имя
+								input(type="text", placeholder="Мария")
 							
 							.office__edit_row
-								.office__edit_label(for="oe2") Фамилия
-								input(type="text", placeholder="Иванова", id="oe2")
+								.office__edit_label Фамилия
+								input(type="text", placeholder="Иванова")
 							
 							.office__edit_row
-								.office__edit_label(for="oe3") Отчество
-								input(type="text", placeholder="Петровна", id="oe3")
+								.office__edit_label Отчество
+								input(type="text", placeholder="Петровна")
 							
 							.office__edit_row
 								.office__edit_label Страна
@@ -317,8 +317,8 @@ block content
 									option(value="#") Страна №2
 							
 							.office__edit_row
-								.office__edit_label(for="oe4") Адрес (куда присылать подарок)
-								input(type="text", placeholder="ул.Победная 5, д.25, кв.45", id="oe4")
+								.office__edit_label Адрес (куда присылать подарок)
+								input(type="text", placeholder="ул.Победная 5, д.25, кв.45")
 							
 							.office__edit_row
 								.office__edit_label Пол
@@ -340,16 +340,16 @@ block content
 										input(type="file")
 							
 							.office__edit_row
-								.office__edit_label(for="oe5") Дата рождения
-								input(type="text", placeholder="25.05.1992", id="oe5")
+								.office__edit_label Дата рождения
+								input(type="text", placeholder="25.05.1992")
 							
 							.office__edit_row
-								.office__edit_label(for="oe6") Город
-								input(type="text", placeholder="Москва", id="oe6")
+								.office__edit_label Город
+								input(type="text", placeholder="Москва")
 							
 							.office__edit_row
-								.office__edit_label(for="oe7") Почтовый индекс
-								input(type="text", placeholder="234582", id="oe7")
+								.office__edit_label Почтовый индекс
+								input(type="text", placeholder="234582")
 							
 							.office__edit_row.last
 								.office__edit_label 
@@ -381,14 +381,14 @@ block content
 				.office__edit_section_info
 					.office__edit_list
 						.office__edit_list_col
+							.office__edit_label Электронная почта (e-mail)
 							.office__edit_row
-								.office__edit_label(for="oe8") Электронная почта (e-mail)
-								input(type="email", placeholder="емайл@mail.ru", id="oe8")
+								input(type="email", placeholder="емайл@mail.ru")
 						
 						.office__edit_list_col
+							.office__edit_label Номер телефона
 							.office__edit_row
-								.office__edit_label(for="oe9") Номер телефона
-								input(type="tel", placeholder="+7 012 345 67 89", id="oe9")
+								input(type="tel", placeholder="+7 012 345 67 89")
 					
 					.office__edit_down
 						button.btn.btn__danger.office__edit_btn Сохранить изменения
@@ -400,13 +400,13 @@ block content
 				.office__edit_section_info
 					.office__edit_list
 						.office__edit_list_col
+							.office__edit_label Что бы Вы хотели тут выиграть? (через запятую)
 							.office__edit_row
-								.office__edit_label(for="oe10") Что бы Вы хотели тут выиграть? (через запятую)
-								input(type="text", placeholder="Смартфон, PlayStation, Робот-пылесос ...", id="oe10")
+								input(type="text", placeholder="Смартфон, PlayStation, Робот-пылесос ...")
 
+							.office__edit_label Ваши интересы
 							.office__edit_row             
-								.office__edit_label Ваши интересы
-								button.office__edit_trigger Не выбрано
+								.office__edit_trigger Не выбрано
 									.jq-selectbox__trigger
 								.office__edit_hide
 									.office__edit_hide_in
@@ -460,8 +460,8 @@ block content
 											label.checkbox__label(for="oe72") Люблю поваляться перед телевизором (Телевизор)
 
 
+							.office__edit_label Сколько у Вас детей?
 							.office__edit_row
-								.office__edit_label Сколько у Вас детей?
 								select.office__edit_select(name="children", data-placeholder="Не выбрано", data-visible-options="5")
 									option(value="#")
 									option(value="#") У меня нет детей
@@ -470,8 +470,8 @@ block content
 									option(value="#") Три ребенка в семье
 									option(value="#") Больше четырех детей
 							
+							.office__edit_label Ваше семейное положение?
 							.office__edit_row
-								.office__edit_label Ваше семейное положение?
 								select.office__edit_select(name="country", data-placeholder="Не выбрано", data-visible-options="5")
 									option(value="#")
 									option(value="#") Замужем / женат
@@ -480,12 +480,12 @@ block content
 									option(value="#") Рано мне еще замуж
 						
 						.office__edit_list_col
+							.office__edit_label Какой магазин Вы хотите увидеть на сайте? (через запятую)
 							.office__edit_row
-								.office__edit_label(for="oe11") Какой магазин Вы хотите увидеть на сайте? (через запятую)
-								input(type="text", placeholder="Forever 21, Amazon, Victoria's secret, Asos ...", id="oe11")
+								input(type="text", placeholder="Forever 21, Amazon, Victoria's secret, Asos ...")
 							
+							.office__edit_label Кем Вы работаете?
 							.office__edit_row
-								.office__edit_label Кем Вы работаете?
 								select.office__edit_select(name="occupation", data-placeholder="Не выбрано", data-visible-options="5")
 									option(value="#")
 									option(value="#") Работаю в офисе, всегда онлайн
@@ -497,9 +497,9 @@ block content
 									option(value="#") Я пенсионер, уже отработал свое
 									option(value="#") Я не работаю, но ищу работу
 							
+							.office__edit_label Какой возраст и пол детей?
 							.office__edit_row
-								.office__edit_label Какой возраст и пол детей?
-								button.office__edit_trigger Девочка - 2 года, Мальчик - 12 лет
+								.office__edit_trigger Девочка - 2 года, Мальчик - 12 лет
 									.jq-selectbox__trigger
 								.office__edit_hide
 									.office__edit_hide_left
@@ -609,9 +609,9 @@ block content
 											input.checkbox__input(type="checkbox" id="oe48")
 											label.checkbox__label(for="oe48") 16 лет - Мал.
 							
+							.office__edit_label Есть ли у Вас питомец? Кто этот домосед?
 							.office__edit_row             
-								.office__edit_label Есть ли у Вас питомец? Кто этот домосед?
-								button.office__edit_trigger Не выбрано
+								.office__edit_trigger Не выбрано
 									.jq-selectbox__trigger
 								.office__edit_hide
 									.office__edit_hide_in
@@ -651,16 +651,16 @@ block content
 					.office__edit_list
 						.office__edit_list_col
 							.office__edit_row.icon__sure
-								.office__edit_label(for="oe12") Новый пароль
-								input(type="password", id="oe12")
+								.office__edit_label Новый пароль
+								input(type="password")
 							.office__edit_row.icon__sure
-								.office__edit_label(for="oe13") Повторите новый пароль
-								input(type="password", id="oe13")
+								.office__edit_label Повторите новый пароль
+								input(type="password")
 						
 						.office__edit_list_col
 							.office__edit_row.icon__sure
-								.office__edit_label(for="oe14") Старый пароль
-								input(type="password", id="oe14")
+								.office__edit_label Старый пароль
+								input(type="password")
 					
 					.office__edit_down
 						button.btn.btn__danger.office__edit_btn Изменить пароль
