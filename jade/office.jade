@@ -35,7 +35,7 @@ block content
 							.office__top_notification_in
 								.office__top_notification_name Оповещения
 									a.office__top_notification_link(href="#") Показать все
-								a.office__top_notification_item(href="#")
+								a.office__top_notification_item.active(href="/office.html")
 									.office__top_notification_left
 										img(src="img/most1.png", alt="#")
 									.office__top_notification_right Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!
@@ -49,7 +49,7 @@ block content
 									.office__top_notification_right Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.
 							img.office__top_notification_trigon(src="img/tri-area2.png", alt="#")
 
-				.office__top_right
+				.office__top_right.mobile__hide
 					.sm_social
 						.sm_social_icon
 							.ya-share2(data-services="vkontakte")
@@ -120,7 +120,7 @@ block content
 				.sidebar__section_name Поменяйте чек на ШопКарту
 				p Чтобы получить ШопКарту, нужно подтвердить покупку чеком
 				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
-			.sidebar__section
+			.sidebar__section.sidebar__section_winer
 				.sidebar__section_name Лента обладателей подарка
 				.office__winners_wrap
 					.office__winners.scrollbar-inner
@@ -477,6 +477,29 @@ block content
 									|Не подтвержден
 								a(href="#").confirm__btn.btn.btn__danger.active Подтвердить чеком
 								.office__history_mobile_descr Чтобы получить лотерею, нужно подтвердить покупку чеком
+						// item 3
+						.office__history_mobile_item
+							.office__history_mobile_link Заказ № 
+								span Rfeh152121fedf4
+							.office__history_mobile_drop
+								.office__history_mobile_name Информация о покупке
+								.office__history_mobile_row
+									b Магазин: 
+									|Снежная королев
+								.office__history_mobile_row
+									b Дата покупки:  
+									|23.05.2017
+								.office__history_mobile_row
+									b № заказа:  
+									|Rfeh152121fedf4
+								.office__history_mobile_row
+									b Сумма покупки:  
+									|20 120 р.
+								.office__history_mobile_row
+									b Статус:  
+									|Не подтвержден
+								a(href="#").confirm__btn.btn.btn__danger.active Подтвердить чеком
+								.office__history_mobile_descr Чтобы получить лотерею, нужно подтвердить покупку чеком
 					// end Mobile history
 					span.office__history_note Если Вы не видите свою покупку, <br>
 						a.office__history_link(href="#") напишите нам!
@@ -513,7 +536,7 @@ block content
 									.office__history_td 132 648 р.
 									.office__history_td Не подтвержден
 
-							.office__history_confirmed
+							.office__history_confirmed.hide
 								.office__history_confirmed_name Подтвержденные покупки
 								.office__history_table
 									.office__history_tr
@@ -546,7 +569,7 @@ block content
 												b Статус:  
 												|Не подтвержден
 								// end Mobile history
-							a.office__history_confirmed_hide.js-more-link(href="#" data-text-open="+ Показать подтвержденные покупки" data-text-close="- Скрыть подтвержденные покупки") - Скрыть подтвержденные покупки
+							a.office__history_confirmed_hide.js-more-link.active(href="#" data-text-open="- Скрыть подтвержденные покупки" data-text-close="+ Показать подтвержденные покупки") + Показать подтвержденные покупки
 						.office__history_right
 							.office__history_right_text Чтобы получить ШопКарту, нужно подтвердить покупку чеком
 							button(class="confirm__btn btn btn__danger", data-toggle="modal", data-target="#modal__confirm") Подтвердить чеком

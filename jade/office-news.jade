@@ -51,7 +51,7 @@ block content
 									.office__top_notification_right Вы получили 5000 баллов, Вы можете обменять их на ШопКарту прямо сейчас! <br>Узнайте подробнее о том, как обменять баллы на ШопКарту.
 							img.office__top_notification_trigon(src="img/tri-area2.png", alt="#")
 
-				.office__top_right
+				.office__top_right.mobile__hide
 					.sm_social
 						.sm_social_icon
 							.ya-share2(data-services="vkontakte")
@@ -122,7 +122,7 @@ block content
 				.sidebar__section_name Поменяйте чек на ШопКарту
 				p Чтобы получить ШопКарту, нужно подвердить покупку чеком
 				button(class="btn btn__danger" data-toggle="modal" data-target="#modal__no-purchase") Отправить чек
-			.sidebar__section
+			.sidebar__section.sidebar__section_winer
 				.sidebar__section_name Лента обладателей подарка
 				.office__winners_wrap
 					.office__winners.scrollbar-inner
@@ -447,10 +447,10 @@ block content
 						a.office__news_support_link.tooltip(href="#" title="Шоппел - это супергерой Найди.ру. Она знает все о выгодных покупках и с большим удовольствием научит вас экономить. Задайте ей вопрос и она ответит на него в ближайшее время.") Кто такая Шоппел?
 					.office__news_subscription
 						//- img.office__news_subscription_img(src="img/subscription.jpg", alt="#")
-						script(type="text/javascript" src="//vk.com/js/api/openapi.js?146")
-						#vk_groups
-						script(type="text/javascript").
-							VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, width: "340", height: "455"}, 45154409);
+						#vk_groups_big.vk_groups_big
+							script(type="text/javascript" src="//vk.com/js/api/openapi.js?146")
+							script(type="text/javascript").
+								VK.Widgets.Group("vk_groups_big", {mode: 4, wide: 1, width: "340", height: "455"}, 45154409);
 
 				// end office__news_right
 

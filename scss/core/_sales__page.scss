@@ -49,7 +49,7 @@
 	}
 	&_aside {
 		float: right;
-		width: 14%;
+		width: 10%;
 		min-width: 70px;
 		padding-top: 20px;
 		.b__article {
@@ -98,6 +98,8 @@
 	&_content {
 		overflow: hidden;
 		padding-top: 20px;
+		margin-left: -40px;
+		padding-left: 40px;
 	}
 	&_grid {
 		@include flexbox();
@@ -326,10 +328,10 @@
 					}
 				}
 				&_social {
-					display: none;
+					display: none !important;
 				}
 				&_totop {
-					font-size: 0;
+					font-size: 0 !important;
 					&:before {
 						content: '';
 						width: 32px;

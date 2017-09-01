@@ -111,7 +111,7 @@ footer.footer
 	.modal-dialog
 		.modal-content
 
-			btn(class="close", data-dismiss="modal")
+			a(href="#")(class="close", data-dismiss="modal")
 			// Slide main 
 			.presentation__slider_item_first-screen
 				.presentation__slider_item
@@ -141,7 +141,7 @@ footer.footer
 
 					.presentation__slider_conten
 						.presentation__slider_left
-							img(src="img/present_slide1.jpg", alt="#" width="353")
+							img(src="img/present_slide1.png", alt="#" width="360")
 						.presentation__slider_right
 							
 							p Мы отправили Вам письмо на указаную при регистрации почту, пожалуйста, подтвердите емайл, если вы не сделали это ранее. Важно! Не подтвержденный емайлом аккаунт удалиться через 5 дней.
@@ -157,7 +157,7 @@ footer.footer
 
 					.presentation__slider_conten
 						.presentation__slider_left
-							img(src="img/present_slide2.jpg", alt="#" width="219")
+							img(src="img/present_slide2.png", alt="#" width="224")
 						.presentation__slider_right
 							
 							p Вы наверное знаете, что такое кэшбэк. Так вот, всем известно, что часть денег от своих покупок на кэшбэк-сервисах копяться очень долго и скучно. И кажется, что ожидать ответ о подтверждении заказа, можно вечно. Согласитесь, ждать по полгода, как “Хатико”, свой кэшбэк - это чересчур долго. Бывает даже такое, что заказ могут просто отклонить, ну а это обиднее всего :(
@@ -199,7 +199,7 @@ footer.footer
 							p Отправьте нам фото чека и получите баллы. За счет этого Вам не нужно будет ждать ответа о подтверждение покупки, потому что Вы ее подтверждаете сами.
 
 							p 
-								img(src="img/present_slide4-2.jpg", alt="#")
+								img(src="img/present_slide4-2.png", alt="#")
 					
 				// Slide 5 
 				.presentation__slider_item
@@ -227,7 +227,7 @@ footer.footer
 
 					.presentation__slider_conten
 						.presentation__slider_left
-							img(src="img/present_slide6.jpg", alt="#" width="282")
+							img(src="img/present_slide6.png", alt="#" width="283")
 						.presentation__slider_right
 							
 							p Это проще простого, сначала: 
@@ -311,7 +311,7 @@ footer.footer
 					button.btn.btn__danger.modal-footer_left(data-dismiss="modal") Мне все понятно
 					button.btn.modal-footer_right Хочу написать Вам
 
-			btn(class="close", data-dismiss="modal")
+			button(class="close", data-dismiss="modal")
 // end modal modal__no-purchase
 
 
@@ -335,7 +335,7 @@ footer.footer
 					button.btn.modal-footer_left Да, удалить чек
 					button.btn.btn__danger.modal-footer_right(data-dismiss="modal") Нет, не нужно удалять
 
-			btn(class="close", data-dismiss="modal")
+			button(class="close", data-dismiss="modal")
 // end modal modal__del-check
 
 
@@ -368,7 +368,7 @@ footer.footer
 					button.btn.modal-footer_right(data-dismiss="modal") Нет, получу ШопКарту <br>в следующий раз
 
 
-			btn(class="close", data-dismiss="modal")
+			button(class="close", data-dismiss="modal")
 // end modal modal__shopcard
 
 
@@ -388,8 +388,8 @@ footer.footer
 							label.modal-body_label № заказа и магазин
 							select.modal-body_select
 								option(value="#") (Lamoda) - RU12345-678910
-								option(value="#") (Lamoda) - RU12345-678910
-								option(value="#") (Lamoda) - RU12345-678910
+								option(value="#") (Lamoda) - RU12345-678911
+								option(value="#") (Lamoda) - RU12345-678912
 						.modal-body_top_row
 							.file__upload
 								a.download__file(href="#") Выберите файл
@@ -413,7 +413,7 @@ footer.footer
 					button.btn.btn__danger.modal__confirm_btn Отправить чек
 					
 					
-			btn(class="close", data-dismiss="modal")
+			button(class="close", data-dismiss="modal")
 
 
 // begin modal__down  
@@ -451,7 +451,7 @@ footer.footer
 					button.btn.btn__danger.modal-footer_left(data-dismiss="modal") Нет, я пошутил
 					button.btn.modal-footer_right Да, но так надо
 
-			btn(class="close", data-dismiss="modal")
+			button(class="close", data-dismiss="modal")
 // end modal modal__no-subscription
 
 
@@ -503,7 +503,7 @@ footer.footer
 						button.btn.modal-footer_right Все кончено, я ухожу
 					.modal-footer_down Если вы удалите свой аккаунт, то вы больше не сможете его восстановить!
 
-			btn(class="close", data-dismiss="modal")
+			button(class="close", data-dismiss="modal")
 // end modal modal__del-account
 
 
@@ -566,10 +566,10 @@ footer.footer
 						
 					.modal-body_center
 						a.btn.modal-body_center_btn(href="#") Перейти в магазин
-						.modal-body_center_in
+						.modal-body_center_in.js-more-wrapper
 							.modal-body_center_p Условия акции: 
-							.modal-body_center_conditions Промокод действителен после ввода промокод после ввода промокод
-							a.modal-body_center_link(href="#") Подробнее
+							.modal-body_center_conditions Промокод действителен после ввода промокод после ввода промокод промокод действителен после ввода промокод после ввода промокод
+							a.modal-body_center_link.js-more-link(href="#" data-text-open="Скрыть" data-text-close="Подробнее") Подробнее
 					.modal-body_down
 						.modal-body_down_left
 							img(src="img/gift2.svg", alt="#")

@@ -254,7 +254,7 @@ select {
     }
     &__label {
         position: relative; 
-        height: 17px;
+        min-height: 17px;
         padding-left: 30px;
         display: inline-block;
         font-size: 14px;

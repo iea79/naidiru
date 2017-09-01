@@ -134,7 +134,7 @@
                   <div class="office__top_alarm_number">1</div>
                   <div class="office__top_notification">
                     <div class="office__top_notification_in">
-                      <div class="office__top_notification_name">Оповещения<a href="#" class="office__top_notification_link">Показать все</a></div><a href="#" class="office__top_notification_item">
+                      <div class="office__top_notification_name">Оповещения<a href="#" class="office__top_notification_link">Показать все</a></div><a href="/office.html" class="office__top_notification_item active">
                         <div class="office__top_notification_left"><img src="img/most1.png" alt="#"/></div>
                         <div class="office__top_notification_right">Акция в Снежной Королеве! <br>Только сегодня при заказе платья в подарок холодильник и посудомоечная машина. <br>Успейте купить!</div></a><a href="#" class="office__top_notification_item">
                         <div class="office__top_notification_left"><img src="img/icon-sure4.png" alt="#"/></div>
@@ -145,7 +145,7 @@
                   </div>
                 </div>
               </div>
-              <div class="office__top_right">
+              <div class="office__top_right mobile__hide">
                 <div class="sm_social">
                   <div class="sm_social_icon">
                     <div data-services="vkontakte" class="ya-share2"></div>
@@ -217,7 +217,7 @@
               <p>Чтобы получить ШопКарту, нужно подтвердить покупку чеком</p>
               <button data-toggle="modal" data-target="#modal__no-purchase" class="btn btn__danger">Отправить чек</button>
             </div>
-            <div class="sidebar__section">
+            <div class="sidebar__section sidebar__section_winer">
               <div class="sidebar__section_name">Лента обладателей подарка</div>
               <div class="office__winners_wrap">
                 <div class="office__winners scrollbar-inner">
@@ -563,6 +563,19 @@
                       <div class="office__history_mobile_descr">Чтобы получить лотерею, нужно подтвердить покупку чеком</div>
                     </div>
                   </div>
+                  <!-- item 3-->
+                  <div class="office__history_mobile_item">
+                    <div class="office__history_mobile_link">Заказ № <span>Rfeh152121fedf4</span></div>
+                    <div class="office__history_mobile_drop">
+                      <div class="office__history_mobile_name">Информация о покупке</div>
+                      <div class="office__history_mobile_row"><b>Магазин: </b>Снежная королев</div>
+                      <div class="office__history_mobile_row"><b>Дата покупки:  </b>23.05.2017</div>
+                      <div class="office__history_mobile_row"><b>№ заказа:  </b>Rfeh152121fedf4</div>
+                      <div class="office__history_mobile_row"><b>Сумма покупки:  </b>20 120 р.</div>
+                      <div class="office__history_mobile_row"><b>Статус:  </b>Не подтвержден</div><a href="#" class="confirm__btn btn btn__danger active">Подтвердить чеком</a>
+                      <div class="office__history_mobile_descr">Чтобы получить лотерею, нужно подтвердить покупку чеком</div>
+                    </div>
+                  </div>
                 </div>
                 <!-- end Mobile history--><span class="office__history_note">Если Вы не видите свою покупку, <br><a href="#" class="office__history_link">напишите нам!</a></span>
               </div>
@@ -600,7 +613,7 @@
                         <div class="office__history_td">Не подтвержден</div>
                       </div>
                     </div>
-                    <div class="office__history_confirmed">
+                    <div class="office__history_confirmed hide">
                       <div class="office__history_confirmed_name">Подтвержденные покупки</div>
                       <div class="office__history_table">
                         <div class="office__history_tr">
@@ -627,7 +640,7 @@
                         </div>
                       </div>
                       <!-- end Mobile history-->
-                    </div><a href="#" data-text-open="+ Показать подтвержденные покупки" data-text-close="- Скрыть подтвержденные покупки" class="office__history_confirmed_hide js-more-link">- Скрыть подтвержденные покупки</a>
+                    </div><a href="#" data-text-open="- Скрыть подтвержденные покупки" data-text-close="+ Показать подтвержденные покупки" class="office__history_confirmed_hide js-more-link active">+ Показать подтвержденные покупки</a>
                   </div>
                   <div class="office__history_right">
                     <div class="office__history_right_text">Чтобы получить ШопКарту, нужно подтвердить покупку чеком</div>
@@ -880,8 +893,7 @@
     <!-- begin Modal modal__presentation -->
     <div id="modal__presentation" class="modal fade modal__presentation">
       <div class="modal-dialog">
-        <div class="modal-content">
-          <btn data-dismiss="modal" class="close"></btn>
+        <div class="modal-content"><a href="#" data-dismiss="modal" class="close"></a>
           <!-- Slide main -->
           <div class="presentation__slider_item_first-screen">
             <div class="presentation__slider_item">
@@ -905,7 +917,7 @@
             <div class="presentation__slider_item">
               <div class="presentation__slider_title">Заполните данные и подтвердите емайл</div>
               <div class="presentation__slider_conten">
-                <div class="presentation__slider_left"><img src="img/present_slide1.jpg" alt="#" width="353"/></div>
+                <div class="presentation__slider_left"><img src="img/present_slide1.png" alt="#" width="360"/></div>
                 <div class="presentation__slider_right">
                   <p>Мы отправили Вам письмо на указаную при регистрации почту, пожалуйста, подтвердите емайл, если вы не сделали это ранее. Важно! Не подтвержденный емайлом аккаунт удалиться через 5 дней.</p>
                   <p>Если Вы не получили письмо в течение 15 мин., пожалуйста, напишите нам.</p>
@@ -917,7 +929,7 @@
             <div class="presentation__slider_item">
               <div class="presentation__slider_title">Почему мы делаем розыгрыши ежемесячно?</div>
               <div class="presentation__slider_conten">
-                <div class="presentation__slider_left"><img src="img/present_slide2.jpg" alt="#" width="219"/></div>
+                <div class="presentation__slider_left"><img src="img/present_slide2.png" alt="#" width="224"/></div>
                 <div class="presentation__slider_right">
                   <p>Вы наверное знаете, что такое кэшбэк. Так вот, всем известно, что часть денег от своих покупок на кэшбэк-сервисах копяться очень долго и скучно. И кажется, что ожидать ответ о подтверждении заказа, можно вечно. Согласитесь, ждать по полгода, как “Хатико”, свой кэшбэк - это чересчур долго. Бывает даже такое, что заказ могут просто отклонить, ну а это обиднее всего :(</p>
                   <p>И мы решили, что лучше всего будет, если мы в течение месяца, будем собирать тот самый кэшбэк среди всех участников и разыгрывать его в виде призов, каждое 5 число нового месяца. </p>
@@ -944,7 +956,7 @@
                 <div class="presentation__slider_left"><img src="img/present_slide4.jpg" alt="#" width="327"/></div>
                 <div class="presentation__slider_right">
                   <p>Отправьте нам фото чека и получите баллы. За счет этого Вам не нужно будет ждать ответа о подтверждение покупки, потому что Вы ее подтверждаете сами.</p>
-                  <p> <img src="img/present_slide4-2.jpg" alt="#"/></p>
+                  <p> <img src="img/present_slide4-2.png" alt="#"/></p>
                 </div>
               </div>
             </div>
@@ -964,7 +976,7 @@
             <div class="presentation__slider_item">
               <div class="presentation__slider_title">Сделайте первую покупку</div>
               <div class="presentation__slider_conten">
-                <div class="presentation__slider_left"><img src="img/present_slide6.jpg" alt="#" width="282"/></div>
+                <div class="presentation__slider_left"><img src="img/present_slide6.png" alt="#" width="283"/></div>
                 <div class="presentation__slider_right">
                   <p>
                     Это проще простого, сначала: 
@@ -1026,7 +1038,7 @@
               <button class="btn modal-footer_right">Хочу написать Вам</button>
             </div>
           </div>
-          <btn data-dismiss="modal" class="close"></btn>
+          <button data-dismiss="modal" class="close"></button>
         </div>
       </div>
     </div>
@@ -1050,7 +1062,7 @@
               <button data-dismiss="modal" class="btn btn__danger modal-footer_right">Нет, не нужно удалять</button>
             </div>
           </div>
-          <btn data-dismiss="modal" class="close"></btn>
+          <button data-dismiss="modal" class="close"></button>
         </div>
       </div>
     </div>
@@ -1076,7 +1088,7 @@
               <button data-dismiss="modal" class="btn modal-footer_right">Нет, получу ШопКарту <br>в следующий раз</button>
             </div>
           </div>
-          <btn data-dismiss="modal" class="close"></btn>
+          <button data-dismiss="modal" class="close"></button>
         </div>
       </div>
     </div>
@@ -1097,8 +1109,8 @@
                   <label class="modal-body_label">№ заказа и магазин</label>
                   <select class="modal-body_select">
                     <option value="#">(Lamoda) - RU12345-678910</option>
-                    <option value="#">(Lamoda) - RU12345-678910</option>
-                    <option value="#">(Lamoda) - RU12345-678910</option>
+                    <option value="#">(Lamoda) - RU12345-678911</option>
+                    <option value="#">(Lamoda) - RU12345-678912</option>
                   </select>
                 </div>
                 <div class="modal-body_top_row">
@@ -1129,7 +1141,7 @@
               <button class="btn btn__danger modal__confirm_btn">Отправить чек</button>
             </div>
           </div>
-          <btn data-dismiss="modal" class="close"></btn>
+          <button data-dismiss="modal" class="close"></button>
         </div>
       </div>
     </div>
@@ -1163,7 +1175,7 @@
               <button class="btn modal-footer_right">Да, но так надо</button>
             </div>
           </div>
-          <btn data-dismiss="modal" class="close"></btn>
+          <button data-dismiss="modal" class="close"></button>
         </div>
       </div>
     </div>
@@ -1222,7 +1234,7 @@
               <div class="modal-footer_down">Если вы удалите свой аккаунт, то вы больше не сможете его восстановить!</div>
             </div>
           </div>
-          <btn data-dismiss="modal" class="close"></btn>
+          <button data-dismiss="modal" class="close"></button>
         </div>
       </div>
     </div>
@@ -1288,9 +1300,9 @@
                 <div class="modal-body_top_p">2. Вставьте его в специальное поле при оформлении заказа.</div>
               </div>
               <div class="modal-body_center"><a href="#" class="btn modal-body_center_btn">Перейти в магазин</a>
-                <div class="modal-body_center_in">
+                <div class="modal-body_center_in js-more-wrapper">
                   <div class="modal-body_center_p">Условия акции: </div>
-                  <div class="modal-body_center_conditions">Промокод действителен после ввода промокод после ввода промокод</div><a href="#" class="modal-body_center_link">Подробнее</a>
+                  <div class="modal-body_center_conditions">Промокод действителен после ввода промокод после ввода промокод промокод действителен после ввода промокод после ввода промокод</div><a href="#" data-text-open="Скрыть" data-text-close="Подробнее" class="modal-body_center_link js-more-link">Подробнее</a>
                 </div>
               </div>
               <div class="modal-body_down">

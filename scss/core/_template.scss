@@ -38,6 +38,12 @@
 	display: block !important;
 }
 
+.mobile__hide {
+	@media (max-width: 767px) {
+		display: none !important;
+	}
+}
+
 // Main wrappers ======================================
 // ====================================================
 .wrapper {
