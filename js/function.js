@@ -600,7 +600,7 @@ $(document).ready(function() {
     	buttonToTop();
     });
 
-    $('.brand__top_right_subscribe').on('tap', function() {
+    $('.brand__top_right_subscribe').on('tap', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
     });
@@ -1081,6 +1081,16 @@ $(document).ready(function() {
 	promoHeight();
 	headerSearchOffset($('.header__search_down'))
 
+	$('.js_other_modal').on('click', function(event) {
+		event.preventDefault();
+		var thisModal = $(this).closest('.modal').attr('id');
+		var otherModal = $(this).attr('href');
+
+		$('#'+thisModal).modal('hide');
+		$(otherModal).modal('show');
+
+	});
+
 });
 
 $(window).resize(function() {
@@ -1093,21 +1103,21 @@ function headerSearchOffset(el) {
 	var search = $('.header__search');
 	var width = search.width();
 	var coordinate = search.offset();
-	console.log(coordinate);
 	el.css({
 		left: coordinate.left,
 		top: coordinate.top + 10,
 		width: width
 	});
-	// $('.header__search_down_list').offset(function(search, coordinate) {
-	// 	// return $('.header__search');
-	// })
 }
 
 function promoHeight() {
 	if ($(window).width() <= 1199 ) {
 		$.each($('.sale__list_row'), function(index, el) {
-			$(this).find('.sale__list_left').height($(this).height());
+			$(this).find('.sale__list_left').css('height', $(this).height());
+		});
+	} else {
+		$.each($('.sale__list_row'), function(index, el) {
+			$(this).find('.sale__list_left').removeAttr('style');
 		});
 	}
 }
@@ -1141,4 +1151,37 @@ function tooltipsterHtml(el) {
     });
 
 }
+
+$(function () {
+})
+
+// $(function(){
+// 	var two_modal = function(id_modal_1,id_modal_2,id_modal_3) {
+// 	  var show_modal_2 = false;
+// 	  var show_modal_3 = false;
+// 	  $('a[href="' + id_modal_2 + '"]').click(function(e) {
+// 	    e.preventDefault();
+// 	    show_modal_2 = true;
+// 	    $(id_modal_1).modal('hide');
+// 	  });
+// 	  $('a[href="' + id_modal_3 + '"]').click(function(e) {
+// 	    e.preventDefault();
+// 	    show_modal_3 = true;
+// 	    // скрыть текущее модальное окно
+// 	    $(id_modal_1).modal('hide');
+// 	  });
+// 	  // при скрытии текущего модального окна открыть другое, если значение переменной show_modal_2 равно true
+// 	  $(id_modal_1).on('hidden.bs.modal', function (e) {
+// 	    if (show_modal_2) {
+// 	      show_modal_2 = false;
+// 	      $(id_modal_2).modal('show');
+// 	    }
+// 	    if (show_modal_3) {
+// 	      show_modal_3 = false;
+// 	      $(id_modal_3).modal('show');
+// 	    }
+// 	  })
+	 
+// 	}('#modal__log-in', '#modal__sign-up','#modal__forgot-password');
+// });
 

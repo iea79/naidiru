@@ -71,7 +71,7 @@
                 <input placeholder="Найти: смартфон, Nike, Aliexpress ..."/>
                 <button class="header__search_btn"></button>
               </div>
-              <div class="header__search_down hidden-box">
+              <div class="header__search_down">
                 <div class="header__search_down_list">
                   <div class="header__search_down_name">Магазины</div><a href="#" class="header__search_down_item">
                     <div class="header__search_down_left"><img src="img/shop1.jpg" alt="#"/></div><span class="header__search_down_right">Adidas</span></a><a href="#" class="header__search_down_item"><span class="header__search_down_left"><img src="img/shop6.jpg" alt="#"/></span><span class="header__search_down_right">Аснежная королева</span></a><a href="#" class="header__search_down_item">
@@ -135,7 +135,7 @@
               <div class="brand__top_left">
                 <div class="brand__top_logo"><img src="img/sale-list1.png" alt="#"/></div>
                 <div class="brand__top_rate_wrap">
-                  <div class="brand__top_coupons">Купоны Ламода</div><a href="#" class="brand__top_rate">
+                  <div class="brand__top_coupons">Купоны Ламода</div><a href="#b1" class="brand__top_rate js-scroll-to">
                     <div class="brand__top_stars">
                       <div style="width: 90%" class="brand__top_stars_full"></div>
                     </div>
@@ -609,7 +609,7 @@
                 <!-- end sale__list-->
               </div>
               <div class="sale__list_wrap">
-                <h2>Похожие промокоды</h2>
+                <h2 class="sale__list_h2">Похожие промокоды</h2>
                 <!-- begin sale__list -->
                 <div class="sale__list js_more_wrap">
                   <!-- Row 7-->
@@ -872,8 +872,8 @@
         <div class="white__line">
           <div class="container_center">
             <!-- begin brand__com-->
-            <div class="brand__com">
-              <div class="brand__com_name">Отзывы покупателей <span class="shop__name">магазина Ламода </span><span class="number__reviews">(1282)</span></div>
+            <div id="b1" class="brand__com">
+              <h2 class="brand__com_name">Отзывы покупателей <span class="shop__name">магазина Ламода </span><span class="number__reviews">(1282)</span></h2>
               <div class="brand__com_rate">
                 <div class="brand__com_rate_stars">
                   <div style="width: 90%;" class="brand__com_rate_stars_full"></div>
@@ -1045,7 +1045,7 @@
                 <div class="js-more-text">
                   <div class="brand__info_p">Интернет-магазин одежды и обуви Ларедут Laredoute – это интернет-магазин изысканной французской моды, который специализируется на товарах для женщин и мужчин, а также их детей.</div>
                   <div class="brand__info_p">Магазин гарантирует 100% французское качество и подлинность всех марок. Достоинства онлайн-магазина: хорошее качество Магазин гарантирует 100% французское качество и подлинность всех марок. Достоинства онлайн-магазина: хорошее качество...</div>
-                </div><a href="#" data-text-open="Скрыть" data-text-close="Показать полностью" class="brand__info_link js-more-link">Показать полностью</a>
+                </div><a href="#" data-text-open="Скрыть текст" data-text-close="Показать полностью" class="brand__info_link js-more-link">Показать полностью</a>
               </div>
               <div class="brand__info_plus">
                 <div class="brand__info_name">Преимущества магазина:</div>
@@ -1113,7 +1113,7 @@
             </div>
             <!--  brand__info Блок 3-->
             <div class="brand__info_item brand__info_conditions">
-              <div class="brand__trigger mt_20">Контакты магазина</div>
+              <h3 class="brand__trigger mt_20">Контакты магазина</h3>
               <div class="brand__info_conditions_item">
                 <div class="brand__info_conditions_name">Контакты магазина:</div>
                 <div class="brand__contact brand__info_mobil">
@@ -1801,7 +1801,7 @@
           <div class="modal__log-in_wrap">
             <div class="modal-header"> 
               <div class="modal-header_name">Войти в аккаунт</div>
-              <div class="modal-header_out">Не зарегистрированы? <br>Присоединяйтесь... <a href="#" data-toggle="modal" data-target="#modal__sign-up">Регистрация &gt;</a></div>
+              <div class="modal-header_out">Не зарегистрированы? <br>Присоединяйтесь... <a href="#modal__sign-up" class="js_other_modal">Регистрация &gt;</a></div>
             </div>
             <div class="modal-body">
               <div class="modal-body_row">
@@ -1813,7 +1813,7 @@
                 <input type="password" id="li2" placeholder="Введите пароль" class="modal-body_input"/>
               </div>
               <button class="btn btn__danger modal-body_btn">Войти в аккаунт</button>
-              <div class="modal-body_down">Забыли пароль? <a href="#" data-toggle="modal" data-target="#modal__forgot-password">Восстановить пароль</a></div>
+              <div class="modal-body_down">Забыли пароль? <a href="#modal__forgot-password" class="js_other_modal">Восстановить пароль</a></div>
             </div>
             <div class="modal-footer">
               <div class="modal-footer_in">
@@ -1859,7 +1859,7 @@
           <div class="modal__sign-up_wrap">
             <div class="modal-header"> 
               <div class="modal-header_name">Регистрация на сайте</div>
-              <div class="modal-header_out">Уже зарегистрированы? <br><a href="#" data-toggle="modal" data-target="#modal__sign-up">Войти в аккаунт &gt;</a></div>
+              <div class="modal-header_out">Уже зарегистрированы? <br><a href="#modal__log-in" class="js_other_modal">Войти в аккаунт &gt;</a></div>
             </div>
             <div class="modal-body">
               <div class="modal-body_row">
@@ -1914,7 +1914,7 @@
           <div class="modal__forgot-password_wrap">
             <div class="modal-header"> 
               <div class="modal-header_name">Забыли пароль</div>
-              <div class="modal-header_out">Не зарегистрированы? <br>Присоединяйтесь... <a href="#" data-toggle="modal" data-target="#modal__sign-up">Регистрация &gt;</a></div>
+              <div class="modal-header_out">Не зарегистрированы? <br>Присоединяйтесь... <a href="#modal__sign-up" class="js_other_modal">Регистрация &gt;</a></div>
             </div>
             <div class="modal-body">
               <div class="modal-body_row">
@@ -1922,7 +1922,7 @@
                 <input type="email" id="li1" placeholder="Введите Ваш e-mail" class="modal-body_input"/>
               </div>
               <button class="btn btn__danger modal-body_btn">Восстановить пароль</button>
-              <div class="modal-body_down">Вспомнили пароль? <a href="#" data-toggle="modal" data-target="#modal__log-in">Войти в аккаунт &gt;</a></div>
+              <div class="modal-body_down">Вспомнили пароль? <a href="#modal__log-in" class="js_other_modal">Войти в аккаунт &gt;</a></div>
             </div>
             <div class="modal-footer">
               <div class="modal-footer_in">

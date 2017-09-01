@@ -597,7 +597,7 @@ footer.footer
 				.modal-header 
 					.modal-header_name Войти в аккаунт
 					.modal-header_out Не зарегистрированы? <br>Присоединяйтесь... 
-						a(href="#", data-toggle="modal", data-target="#modal__sign-up") Регистрация &gt;
+						a(href="#modal__sign-up" class="js_other_modal") Регистрация &gt;
 				.modal-body
 					.modal-body_row
 						label(class="modal-body_label", for="li1") E-mail
@@ -607,7 +607,7 @@ footer.footer
 						input(class="modal-body_input", type="password", id="li2", placeholder="Введите пароль")
 					button.btn.btn__danger.modal-body_btn Войти в аккаунт
 					.modal-body_down Забыли пароль? 
-						a(href="#", data-toggle="modal", data-target="#modal__forgot-password") Восстановить пароль
+						a(href="#modal__forgot-password" class="js_other_modal") Восстановить пароль
 				.modal-footer
 					.modal-footer_in
 						.modal-footer_p Или войдите через соц.сети:
@@ -641,7 +641,7 @@ footer.footer
 				.modal-header 
 					.modal-header_name Регистрация на сайте
 					.modal-header_out Уже зарегистрированы? <br>
-						a(href="#", data-toggle="modal", data-target="#modal__sign-up") Войти в аккаунт &gt;
+						a(href="#modal__log-in" class="js_other_modal") Войти в аккаунт &gt;
 				.modal-body
 					.modal-body_row
 						label(class="modal-body_label", for="li1") E-mail
@@ -683,14 +683,14 @@ footer.footer
 				.modal-header 
 					.modal-header_name Забыли пароль
 					.modal-header_out Не зарегистрированы? <br>Присоединяйтесь... 
-						a(href="#", data-toggle="modal", data-target="#modal__sign-up") Регистрация &gt;
+						a(href="#modal__sign-up" class="js_other_modal") Регистрация &gt;
 				.modal-body
 					.modal-body_row
 						label(class="modal-body_label", for="li1") E-mail
 						input(class="modal-body_input", type="email", id="li1", placeholder="Введите Ваш e-mail")
 					button.btn.btn__danger.modal-body_btn Восстановить пароль
 					.modal-body_down Вспомнили пароль? 
-						a(href="#", data-toggle="modal", data-target="#modal__log-in") Войти в аккаунт &gt;
+						a(href="#modal__log-in" class="js_other_modal") Войти в аккаунт &gt;
 				.modal-footer
 					.modal-footer_in
 						.modal-footer_p Или войдите через соц.сети:
