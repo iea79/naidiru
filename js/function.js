@@ -565,23 +565,6 @@ $(document).ready(function() {
 		}
 	});
 
-	headerSearchOffset($('.header__search_down'))
-
-	function headerSearchOffset(el) {
-		var search = $('.header__search');
-		var width = search.width();
-		var coordinate = search.offset();
-		console.log(coordinate);
-		el.css({
-			left: coordinate.left,
-			top: coordinate.top + 10,
-			width: width
-		});
-		// $('.header__search_down_list').offset(function(search, coordinate) {
-		// 	// return $('.header__search');
-		// })
-	}
-
 	// Code open
 	// $('.code__btn').on('click', function(event) {
 	// 	event.preventDefault();
@@ -1096,8 +1079,30 @@ $(document).ready(function() {
 	}
 
 	promoHeight();
+	headerSearchOffset($('.header__search_down'))
 
 });
+
+$(window).resize(function() {
+	headerSearchOffset($('.header__search_down'))
+	promoHeight();
+});
+
+
+function headerSearchOffset(el) {
+	var search = $('.header__search');
+	var width = search.width();
+	var coordinate = search.offset();
+	console.log(coordinate);
+	el.css({
+		left: coordinate.left,
+		top: coordinate.top + 10,
+		width: width
+	});
+	// $('.header__search_down_list').offset(function(search, coordinate) {
+	// 	// return $('.header__search');
+	// })
+}
 
 function promoHeight() {
 	if ($(window).width() <= 1199 ) {
