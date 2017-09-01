@@ -241,9 +241,10 @@
 	}
 	@media (max-width: 480px) {
 		&_code {
+			// display: none !important;
 			&.open {
 				.home__promo_code_grid,.home__promo_code_bottom {
-					display: block;
+					display: block !important;
 				}
 				.home__promo_code_title {
 					&:before {
@@ -274,7 +275,7 @@
 			}
 			&_grid {
 				margin-bottom: 0;
-				display: none;
+				display: none !important;
 				.grid__wrapper {
 					@include flex-basis(100%);
 					position: relative;
@@ -1616,6 +1617,14 @@
 
 // Страница 404 ошибка 404.html ///////////////
 // ============================================
+
+.error__page {
+	.white__line {
+		.section__title {
+			margin-top: 45px;
+		}
+	}
+}
 
 // begin Error 404
 .error__pages {

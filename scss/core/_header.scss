@@ -139,7 +139,7 @@
 			&_item {
 				padding: 4px 22px;
 				margin-top: 3px;
-				display: block;
+				display: table;
 				@extend %clear_a;
 				&:hover {
 					background-color: $muted-color;
@@ -160,7 +160,9 @@
 			}
 			&_right {
 				overflow: hidden;
-				line-height: 3.6;
+				color: $main-color;
+				display: table-cell;
+				vertical-align: middle;
 			}
 			&.open {
 				// display: block;
@@ -420,6 +422,11 @@
 			&_btn {
 				&:hover {
 				}
+			}
+		}
+		&__search {
+			&_down {
+			    margin-top: 36px;
 			}
 		}
 	}
@@ -866,6 +873,9 @@
 				right: 18px;
 				top: 21px;
 				cursor: pointer;
+			}
+			&_down {
+				text-align: left;
 			}
 		}
 	}
