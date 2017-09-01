@@ -1,5 +1,8 @@
 extends template.jade
 
+block variables
+	- bodyClass = "error__page"
+
 block title
 	title 404 ошибка
 
@@ -46,7 +49,7 @@ block content
 
 			// begin Popular categories & shops
 			// begin grid__duble
-			.grid.grid__duble.mb_40
+			.grid.grid__duble
 				.grid__wrapper
 					.section__title.section__title_link Популярные категории
 						a(href="#") Все категории
