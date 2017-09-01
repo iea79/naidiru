@@ -997,6 +997,14 @@ $(document).ready(function() {
 		$('.category__top_list1_wrap').toggleClass('open');
 	});
 
+	$('.modal__del-account input:radio').change(function() {
+		var check = $(this).prop('checked');
+		if (check) {
+			$('.modal-body_form > .modal-body_row > .modal-body_row').addClass('hidden-box');
+			$(this).closest('.modal-body_row').find('.modal-body_row').removeClass('hidden-box');
+		}
+	});
+
 	// Страница категорий category.html - Подписаться на категорию
  //    $('.category__top_list1_trigger').on('click touchend', function(event) {
  //    	event.preventDefault();
