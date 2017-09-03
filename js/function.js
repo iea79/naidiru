@@ -1060,12 +1060,15 @@ $(document).ready(function() {
         recalc_every: true,
     });
 
+
 	if ('order' in document.documentElement.style) {
+		document.documentElement.setAttribute('data-browser', 'flexible');
 	    // Flexbox-совместимый браузер.
 	    // Используем `order` или `flex-direction: column-reverse`.
 	    // $('.footer').append('Используем `order`')
 	} else {
 	    // Браузер без поддержки Flexbox, в том числе IE 9/10.
+		document.documentElement.setAttribute('data-browser', 'not-flex');
 	    if ($(window).width() <= 767) {
 
 		    $('.faqs-version__unik').each(function(index, val) {

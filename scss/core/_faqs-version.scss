@@ -369,13 +369,13 @@
       @include justify-content(center);
       @include align-items(center);
       @include flex-flow(row wrap);
-      @include browser("Android 4.1" "Android 4.2" "Android 4.3" "iPhone OS 7" "iPhone OS 8") {
+      @include browser("not-flex") {
         text-align: center;
       }
       &_number {
         display: block;
         margin: 0 auto 10px;
-        @include browser("Android 4.1" "Android 4.2" "Android 4.3" "iPhone OS 7" "iPhone OS 8") {
+        @include browser("not-flex") {
           font-size: 20px;
           padding-top: 10px;
         }

@@ -6716,7 +6716,7 @@
 		// 	display: table;
 		// }
 		&_info {
-			@include browser("Android 4.2" "Android 4.3") {
+			@include browser("not-flex") {
 				padding: 10px;
 			}
 		}
@@ -10000,7 +10000,7 @@
 		}
 		&_td {
 			.prize__winners_td_in {
-				@include browser("Android 4.1" "Android 4.2" "Android 4.3" "iPhone OS 7" "iPhone OS 8" "MSIE 9") {
+				@include browser("not-flex") {
 					text-align: left;
 				}
 			}
