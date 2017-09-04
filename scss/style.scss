@@ -3761,13 +3761,29 @@
 		@include flex-grow(1);
 	}
 	@media (max-width: 1199px) {
-		.container_center.main {
-			@include flex-flow(column nowrap);
+		.container_center {
+			// @include flex-basis(100%);
+			// overflow: auto;
+			&.main {
+				@include flex-flow(row wrap);
+			}
+			.sale__list {
+				white-space: normal;
+			}
 		}
-		.main__content_sidebar {
-			display: block;
-			margin-right: 0;
-			@include flex-basis(auto);
+		.main__content {
+			&_sidebar {
+				float: none;
+				display: block;
+				margin-right: 0;
+				@include flex-basis(100%);
+			}
+			&_center {
+				float: none;
+				display: block;
+				margin-right: 0;
+				@include flex-basis(100%);
+			}
 		}
 	}
 	@media (max-width: 767px) {
@@ -3868,6 +3884,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 29px;
+			// display: none !important;
 			// visibility: hidden;
 			@include flexbox();
 			@include justify-content(space-between);
@@ -3875,7 +3892,7 @@
 				height: 27px;
 				@include trs(.3);
 				&_trigger {
-					display: none;
+					display: none !important;
 					padding-top: 3px;
 					padding-left: 23px;
 					color: #292929;
@@ -3888,18 +3905,34 @@
 			}
 		}
 		&_subscribe{
-			display: none;
+			display: none !important;
 			font-size: 18px;
 		}
 	}
 	@media (max-width: 1199px) {
 		&_center {
-			display: none;
+			display: none !important;
+		}
+		&_left {
+			@include browser('not-flex') {
+				float: left;
+				width: 78%;
+			}
+		}
+		&_right {
+			@include browser('not-flex') {
+				float: left;
+				width: 20%;
+			}
 		}
 	}
 	@media (max-width: 991px) {
 		padding-bottom: 38px;
 		&_left {
+			@include browser('not-flex') {
+				float: none;
+				width: 100%;
+			}
 			img {
 				width: 100%;
 				height: auto;
@@ -3921,7 +3954,7 @@
 			display: none !important;
 		}
 		&_center {
-			display: block;
+			display: block !important;
 			margin-top: -11px;
 			margin-bottom: 0 !important;
 			margin-left: auto;
@@ -3945,13 +3978,13 @@
 					display: none !important;
 					&_trigger {
 						height: 22px;
-						display: block;
+						display: block !important;
 						float: right;
 					}
 				}
 			}
 			&_subscribe {
-				display: block;
+				display: block !important;
 				float: left;	
 			}
 		}

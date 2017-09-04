@@ -94,8 +94,13 @@
       font-size: 28px;
     }
   }
+  @media (max-width: 1280px) {
+    &__triggers {
 
-  @media (max-width: 1000px) {
+    }
+  }
+
+  @media (max-width: 1280px) {
     min-height: auto;
     padding-bottom: 50px;
     &__title {
@@ -104,8 +109,28 @@
     &__triggers {
       @include flex-flow(row nowrap);
       li {
-        @include flex-basis(100%);
+        @include flex-basis(25%);
+        // width: 50%;
+      }
+    }
+    &__more {
+
+    }
+    &__age {
+      @include browser('not-flex') {
+        float: left;
         width: 50%;
+        margin-right: 0;
+      }
+    }
+    &__percentage {
+      @include browser('not-flex') {
+        float: left;
+        width: 50%;
+        &>* {
+          display: inline-block;
+          vertical-align: middle;
+        }
       }
     }
   }
@@ -116,6 +141,11 @@
     }
     &__age {
       margin-right: 0;
+    }
+    &__triggers {
+      li {
+        @include flex-basis(50%);
+      }
     }
   }
   @media (max-width: 767px) {

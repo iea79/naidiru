@@ -35,9 +35,14 @@
   @media (max-width: 1350px) {
     padding: 50px;
     @include flex-flow(column nowrap);
+
     &__image {
-      max-width: 100%;
+      max-width: none;
+      width: 100%;
       text-align: center;
+      img {
+        display: inline-block;
+      }
     }
     &__description {
       max-width: 100%;
