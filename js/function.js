@@ -578,7 +578,7 @@ $(document).ready(function() {
 		}
 	}
 
-	$('body').on('tap', '.home__promo_code_title', function(event) {
+	$('.home__promo_code_title').on('click', function(event) {
 		event.preventDefault();
 		if (winWidth <= 767) {
 			$('.home__promo_code').toggleClass('open');
@@ -631,24 +631,24 @@ $(document).ready(function() {
     	buttonToTop();
     });
 
-    $('.brand__top_right_subscribe').on('tap', function(event) {
+    $('.brand__top_right_subscribe').on('click', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
     });
 
-    $('.promo__pop_info_trigger').on('tap', function(event) {
+    $('.promo__pop_info_trigger').on('click', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
     	$(this).siblings('.promo__pop_info_hide').toggleClass('open')
     });
 
     // All shops - shops__categories767
-	$('.shops__categories_trigger').on('click tap', function() {
+	$('.shops__categories_trigger').on('click ', function() {
 		$(this).toggleClass('active');
 		$(this).parent().find('.shops__categories').slideToggle();
 	});
 
-	$('.shops__sort_trigger').on('click tap', function() {
+	$('.shops__sort_trigger').on('click ', function() {
 		$(this).toggleClass('active');
 		$(this).parent().find('.shops__sort').slideToggle();
 	});
@@ -656,13 +656,13 @@ $(document).ready(function() {
 
 
     // Blog article - b__article_com.html767 - Написать комментарий
-    $('.b__article_com_trigger').on('click tap', function() {
+    $('.b__article_com_trigger').on('click', function() {
 		$(this).toggleClass('active');
 		$('.b__article_com_first').toggleClass('open');
 	});
 
     // Страница Все магазины all-shops.html - Сортировка по алфавиту
-    $('.shops__sort_trigger_abc').on('tap', function(event) {
+    $('.shops__sort_trigger_abc').on('click', function(event) {
     	event.preventDefault();
     	if ($(window).width() <= 767) {
     		$('.shops__sort_abc').insertAfter($(this).parent());
@@ -671,7 +671,7 @@ $(document).ready(function() {
 	});
 
     // Страница Все промокоды all-promocodes.html - Фильтр промокодов
-    $('.sale__list_trigger').on('tap', function(event) {
+    $('.sale__list_trigger').on('click', function(event) {
     	event.preventDefault();
     	$(this).toggleClass('active');
 		$(this).parent().find('.sidebar__section_wrap').toggleClass('open');
@@ -785,7 +785,7 @@ $(document).ready(function() {
  //            menu4.removeAttr('style');
  //        }
  //    });
- 	$('.office__menu_trigger').on('tap', function() {
+ 	$('.office__menu_trigger').on('click', function() {
 	 		$(this).toggleClass('active');
 	 		$(this).parent().find('.office__menu').toggleClass('open');
  	});
