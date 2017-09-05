@@ -281,6 +281,19 @@ select {
         width: 12px;
         height: 9px;
         display: inline-block;
+        @include browser("not-flex") {
+            top: -2px;
+        }
+    }
+}
+
+.office {
+    .checkbox {
+        &__input:checked + .checkbox__label:after {
+            @include browser("not-flex") {
+                top: 0;
+            }
+        }
     }
 }
 // Конец чекбокса
