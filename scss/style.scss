@@ -5763,16 +5763,22 @@
 		&_left {
 			height: auto;
 			min-height: auto;
+			overflow: auto;
 		}
 		&_right {
 			width: 100%;
 			height: auto;
+
 			margin-bottom: 0;
 			display: block;
 			float: none;
+			@include browser("not-flex") {
+				height: 180px;
+			}
 			img {
 				max-width: 100%;
 				min-height: auto;
+				display: block;
 			}
 		}
 	}
