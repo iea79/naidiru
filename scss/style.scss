@@ -10184,7 +10184,6 @@
 			@include flexbox();
 			@include align-items(center);
 			@include browser("not-flex") {
-				display: table-cell;
 				text-align: left;
 			}
 		}
@@ -10195,7 +10194,7 @@
 		margin-right: 14px;
 		display: inline-block;
 		@include browser("not-flex") {
-			vertical-align: middle;
+			vertical-align: middle !important;
 		}
 	}
 	&_link {
@@ -10206,16 +10205,13 @@
 		font-size: 14px;
 		text-align: left;
 		@include browser("not-flex") {
-			display: inline-block;
-			vertical-align: middle;
+			vertical-align: middle !important;
 		}
 	}
 	@media (max-width: 1199px) {
 		&_table {
 			width: 100%;
 			&_wrap {
-				// padding-left: 20px;
-				// padding-right: 20px;
 			}
 		}
 	}
