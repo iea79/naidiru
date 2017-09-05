@@ -8,6 +8,8 @@ $(document).ready(function() {
 	} else {
 	    // Браузер без поддержки Flexbox, в том числе IE 9/10.
 		document.documentElement.setAttribute('data-browser', 'not-flex');
+		// setEqualHeight($(".category__box_grid .grid__wrapper", '20'));
+		setEqualHeight();
 	    if ($(window).width() <= 767) {
 
 		    $('.faqs-version__unik').each(function(index, val) {
@@ -698,6 +700,7 @@ $(document).ready(function() {
    	
    	$('.office__edit_trigger').on('click', function(event) {
    		event.preventDefault();
+   		$('.office__edit_hide').not(this).removeClass('open');
    		$(this).siblings('.office__edit_hide').toggleClass('open');
    	});
 	$(document).mouseup(function (el){
@@ -709,6 +712,18 @@ $(document).ready(function() {
 			drop.removeClass('open');
 		}
 	});
+	if ($(window).width() <= 1280) {
+		$(document).on('touchend', function (el){
+			var div = $(".office__edit_trigger").closest('.office__edit_row');
+			var drop = $('.office__edit_hide');
+
+			if (!div.is(el.target)
+			    && div.has(el.target).length === 0) {
+				drop.removeClass('open');
+			}
+		});
+	}
+
 
 	 // Страница Все промокоды all-promocodes.html - всплывашка при нажатии на звезду
     $('sale__list_save').on('click touchend', function(event) {
@@ -1164,3 +1179,14 @@ function tooltipsterHtml(el) {
 
 }
 
+function setEqualHeight() {
+	var tallestcolumn = 0;
+	var columns = $('.category__box_grid .grid__wrapper');
+	columns.each( function() {
+		currentHeight = $(this).height();
+		if(currentHeight > tallestcolumn) {
+			tallestcolumn = currentHeight;
+		}
+	});
+	columns.css('minHeight', tallestcolumn + 30);
+}
