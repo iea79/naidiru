@@ -281,6 +281,9 @@ select {
         width: 12px;
         height: 9px;
         display: inline-block;
+        @include browser("not-flex") {
+            top: -2px;
+        }
     }
 }
 // Конец чекбокса

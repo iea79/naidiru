@@ -1050,6 +1050,10 @@
 		padding-right: 10%;
 		margin-bottom: -25px;
 		@include justify-content(center);
+		@include browser("not-flex") {
+			display: block;
+			@extend %clear_a;
+		}
 		.grid__wrapper {
 			@include flex-basis(33%);
 		}
@@ -1085,6 +1089,9 @@
 		}
 		.columns__list {
 		}
+	}
+	@media (max-width: 1199px) {
+		
 	}
 	@media (max-width: 991px) {
 		&_grid {
@@ -3556,6 +3563,9 @@
 		color: $main-color;
 		padding: 0;
 		@include justify-content(flex-start);
+		@include browser("not-flex") {
+			display: block;
+		}
 		.grid__wrapper {
 			margin-top: 27px;
 			@include flex-basis(14.285%);
@@ -3750,15 +3760,25 @@
 .brand {
 	.container_center.main {
 		@include flexbox();
+		@include browser("not-flex") {
+			display: block;
+		}
 	}
 	.main__content_sidebar {
 		min-width: 200px;
 		margin-right: 40px;
 		display: block;
 		@include flex-basis(200px);
+		@include browser("not-flex") {
+			width: 200px;
+			float: left;
+		}
 	}
 	.main__content_center {
 		@include flex-grow(1);
+		@include browser("not-flex") {
+			overflow: hidden;
+		}
 	}
 	@media (max-width: 1199px) {
 		.container_center.main {
@@ -3768,6 +3788,18 @@
 			display: block;
 			margin-right: 0;
 			@include flex-basis(auto);
+			@include browser("not-flex") {
+				float: none !important;
+				margin-right: 0;
+				display: block;
+				width: 100% !important;
+			}
+		}
+		.main__content_center {
+			@include browser("not-flex") {
+				display: block;
+				width: 100% !important;
+			}
 		}
 	}
 	@media (max-width: 767px) {
@@ -3820,9 +3852,23 @@
 	margin-top: 26px;
 	@include flexbox();
 	@include justify-content(space-between);
+	@include browser("not-flex") {
+		width: 100%;
+		display: block;
+		@extend %clear_a;
+	}
 	&_left {
 		position: relative;
 		@include flex-grow(1);
+		@include browser("not-flex") {
+			width: 62.78%;
+			float: left;
+			display: block;
+		}
+		img {
+			width: 100%;
+			height: auto;
+		}
 		&_text {
 			position: absolute;
 			top: 47px;
@@ -3835,7 +3881,7 @@
 	&_center {
 		width: 240px;
 		margin-left: 20px;
-		margin-right: -20px;
+		// margin-right: -20px;
 		.category__box_grid.grid__2 {
 			@include justify-content(center);
 			.grid__wrapper {
@@ -3843,11 +3889,19 @@
 				float: left;
 			}
 		}
+		@include browser("not-flex") {
+			width: 18.67%;
+			float: left;
+		}
 	}
 	&_right {
 		margin-left: 20px;
 		text-align: center;
 		cursor: pointer;
+		@include browser("not-flex") {
+			overflow: hidden;
+
+		}
 		&:hover {
 			text-decoration: none;
 		}
@@ -3875,7 +3929,7 @@
 				height: 27px;
 				@include trs(.3);
 				&_trigger {
-					display: none;
+					display: none !important;
 					padding-top: 3px;
 					padding-left: 23px;
 					color: #292929;
@@ -3888,13 +3942,24 @@
 			}
 		}
 		&_subscribe{
-			display: none;
+			display: none !important;
 			font-size: 18px;
 		}
 	}
 	@media (max-width: 1199px) {
+		&_left {
+			@include browser("not-flex") {
+				width: 100%;
+				float: none;
+			}
+		}
 		&_center {
-			display: none;
+			display: none !important;
+		}
+		&_right {
+			@include browser("not-flex") {
+				display: none !important;
+			}
 		}
 	}
 	@media (max-width: 991px) {
@@ -3921,12 +3986,12 @@
 			display: none !important;
 		}
 		&_center {
-			display: block;
+			display: block !important;
 			margin-top: -11px;
 			margin-bottom: 0 !important;
 			margin-left: auto;
 			margin-right: auto;
-			width: auto;
+			width: auto !important;
 			max-width: 310px;
 			.grid {
 				width: auto;
@@ -3945,13 +4010,13 @@
 					display: none !important;
 					&_trigger {
 						height: 22px;
-						display: block;
+						display: block !important;
 						float: right;
 					}
 				}
 			}
 			&_subscribe {
-				display: block;
+				display: block !important;
 				float: left;	
 			}
 		}
@@ -3995,6 +4060,7 @@
 		}
 	}
 	@media (max-width: 1199px) {
+
 		.sidebar__section {
 			padding: 10px 0 32px;
 			&_wrap {
@@ -7880,18 +7946,29 @@
 	.breadcrumb {
 		margin-top: 6px;
 	}
-	@media (max-width: 767px) {
+	@media (max-width: 1199px) {
+		.white__line {
+			@include browser("not-flex") {
+				padding-top: 30px;
+			}
+		}
 		h1 {
+			@include browser("not-flex") {
+				margin-top: 30px !important;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		.main__content_center {
+			padding-top: 0;
+		}
+		h1 {
+			margin-top: 0 !important;
+			margin-bottom: 15px;
 			text-align: center;
 			display: block;
-		}
-		@media (max-width: 767px) {
-			.main__content_center {
-				padding-top: 0;
-			}
-			h1 {
-				margin-top: 0;
-				margin-bottom: 15px;
+			@include browser("not-flex") {
+				margin-top: 0 !important;
 			}
 		}
 	}
@@ -7904,10 +7981,17 @@
 	width: 100%;
 	padding-top: 2px;
 	@include flexbox();
+	@include browser("not-flex") {
+		display: block;
+	}
 	&_left {
 		min-width: 200px;
 		@include flex-basis(200px);
 		margin-right: 40px;
+		@include browser("not-flex") {
+			width: 200px !important;
+			float: left !important;
+		}
 	}
 	&_list1 {
 		@extend %clear_a;
@@ -8056,6 +8140,9 @@
 		position: relative;
 		@include flex-grow(1);
 		overflow: hidden;
+		@include browser("not-flex") {
+			overflow: hidden;
+		}
 		&_top {
 			position: absolute;
 			top: 0;
@@ -8069,7 +8156,7 @@
 				padding-top: 3px;
 				@include trs(.3);
 				&_trigger {
-					display: none;
+					display: none !important;
 					padding-left: 23px;
 					color: #292929;
 					font-size: 13px;
@@ -8087,6 +8174,9 @@
 			cursor: pointer;
 			background: url('../img/heart.svg') no-repeat 0 2px;
 			background-size: 32px 26px;
+			@include browser("not-flex") {
+				margin-left: 20px;
+			}
 			&_out {
 				display: none;
 			}
@@ -8106,7 +8196,7 @@
 			}
 		}
 		&_reg {
-			display: none;
+			display: none !important;
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -8124,6 +8214,9 @@
 		margin-bottom: 28px;
 		margin-top: 23px;
 		background: url('../img/category-bg.jpg') no-repeat center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
 		background-size: cover;
 		img {
 			display: none;
@@ -8133,12 +8226,20 @@
 		@include flex-flow(row wrap);
 		&_left {
 			margin-right: 0;
-			float: none;
+			float: none !important;
 			@include flex-basis(100%);
 			@include order(1);
+			@include browser("not-flex") {
+				width: 100% !important;
+			}
 		}
 		&_right {
 			width: 100%;
+			&_top {
+				@include browser("not-flex") {
+					top: 30px !important;
+				}
+			}
 		}
 		&_list1 {
 			margin-left: -15px;
@@ -8219,10 +8320,13 @@
 				min-height: 19px;
 				margin: 15px auto 0;
 				@include flex-flow(row-reverse wrap);
+				@include browser("not-flex") {
+					top: 0 !important;
+				}
 				.sm_social {
-					display: none;
+					display: none !important;
 					&_trigger {
-						display: inline-block;
+						display: inline-block !important;
 						float: right;
 						height: 19px;
 					}
@@ -8315,6 +8419,9 @@
 		margin-bottom: 25px;
 		font-size: 18px;
 		border-bottom: 1px solid #dadada;
+		@include browser("not-flex") {
+			margin-top: 30px;
+		}
 	}
 	&_wrap {
 		width: 280px !important;
@@ -8423,12 +8530,22 @@
 			left: 20px;
 		}
 	}
+	@media (max-width: 1199px)  {
+		&_name {
+			@include browser("not-flex") {
+				margin-top: 30px;
+			}
+		}
+	}
 	@media (max-width: 767px) {
 		&_name {
 			padding: 30px 0 15px;
 			margin-bottom: 0;
 			text-align: center;
 			border: 0;
+			@include browser("not-flex") {
+				margin-top: 0; 
+			}
 		}
 		.slick-prev,
 		.slick-next {
@@ -8499,6 +8616,9 @@
 		}
 		h1 {
 			margin-top: 30px;
+		}
+		.category__top_left {
+
 		}
 	}
 }
@@ -10347,16 +10467,25 @@
 			width: 410px;
 			@include flexbox();
 			@include justify-content(space-between);
+			@extend %clear_all;
+			@include browser("not-flex") {
+				display: block;
+				@extend %clear_all;
+			}
 			.sm_social {
 				height: 27px;
 				padding-top: 3px;
 				@include trs(.3);
 				&_trigger {
-					display: none;
+					display: none !important;
 					padding-left: 23px;
 					color: #292929;
 					font-size: 13px;
 					background: url('../img/share.png') no-repeat 0 0;
+					@include browser("not-flex") {
+						float: left;
+						font-size: 13px;
+					}
 					&:hover {
 						text-decoration: none;
 					}
@@ -10367,20 +10496,25 @@
 			position: relative;
 			width: 170px;
 			padding-left: 42px;
+			margin-left: 20px;
 			font-size: 14px;
 			cursor: pointer;
 			background: url('../img/heart.svg') no-repeat 0 2px;
 			background-size: 32px 26px;
+			@include browser("not-flex") {
+				width: 160px;
+				float: right !important;
+				font-size: 13px;
+			}
 			&_out {
 				display: none;
 			}
-			&:hover {
+			&:hover,
+			&.active {
 				background: url('../img/heart-red.svg') no-repeat 0 2px;
 				background-size: 32px 26px;
 			}
 			&.active {
-				background: url('../img/heart-red.svg') no-repeat 0 2px;
-				background-size: 32px 26px;
 				.brand__top_right_subscribe_in {
 					display: none;
 				}
@@ -10516,18 +10650,6 @@
 				}
 			}
 		}
-		&_right {
-			&_subscribe {
-				&:hover {
-					background: url(../img/heart.svg) no-repeat;
-				}
-				&.active {
-					&:hover {
-						background: url(../img/heart-red.svg) no-repeat;
-					}
-				}
-			}
-		}
 	}
 	@media (max-width: 1199px) {
 		.slider {
@@ -10543,15 +10665,19 @@
 				}
 			}
 		}
-	}
-	@media (max-width: 991px) {
 		&_right {
 			&_top {
 				top: -70px;
 				width: 360px;
+				.sm_social {
+					float: left;
+				}
 			}
 			&_reg {
 				top: -76px;
+			}
+			&_subscribe {
+				float: right;
 			}
 		}
 		&_down {
@@ -10610,10 +10736,13 @@
 				height: 17px;
 				margin: 0 auto 16px;
 				@include flex-flow(row-reverse wrap);
+				@include browser("not-flex") {
+					display: block;
+				}
 				.sm_social {
 					display: none !important;
 					&_trigger {
-						display: block;
+						display: block !important;
 						float: right;
 						height: 18px;
 					}
@@ -10631,9 +10760,13 @@
 			}
 			&_subscribe {
 				padding-left: 30px;
+				margin-left: 0;
 				font-size: 13px;
 				background-position: 0 0;
 				background-size: 24px 16px;
+				@include browser("not-flex") {
+					margin-left: 0 !important;
+				}
 				&_in,
 				&_out {
 					.del {
@@ -10643,7 +10776,7 @@
 				&:hover,
 				&.active {
 					background-position: 0 0;
-					background-size: 24px 16px;
+					background-size: 24px 16px !important;
 				}
 			}
 			&_reg {
