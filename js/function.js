@@ -1,5 +1,34 @@
 $(document).ready(function() {
 
+	if ('order' in document.documentElement.style) {
+		document.documentElement.setAttribute('data-browser', 'flexible');
+	    // Flexbox-совместимый браузер.
+	    // Используем `order` или `flex-direction: column-reverse`.
+	    // $('.footer').append('Используем `order`')
+	} else {
+	    // Браузер без поддержки Flexbox, в том числе IE 9/10.
+		document.documentElement.setAttribute('data-browser', 'not-flex');
+	    if ($(window).width() <= 767) {
+
+		    $('.faqs-version__unik').each(function(index, val) {
+		    	var img = $(this).find('.faqs-version__unik_image');
+		    	var text = $(this).find('.faqs-version__unik_description')
+		    	 img.insertBefore(text);
+		    });
+
+		    $('.sidebar__section_winer').remove();
+
+		    $('.category__top_left').insertAfter('.category__top_right');
+
+		    $('.category__top_right .sm_social_trigger').insertAfter('.category__top_right .category__top_right_subscribe')
+		    
+		    $('.office__history').insertAfter('.sidebar__section:last-child');
+
+		    $('.b__article_top_left.b__article_social').insertAfter('.b__article_top_right');
+
+	    }
+	}
+
 	// First screen full height
 	function setHeiHeight() {
 	    $('.full__height').css({
@@ -1060,35 +1089,6 @@ $(document).ready(function() {
         recalc_every: true,
     });
 
-
-	if ('order' in document.documentElement.style) {
-		document.documentElement.setAttribute('data-browser', 'flexible');
-	    // Flexbox-совместимый браузер.
-	    // Используем `order` или `flex-direction: column-reverse`.
-	    // $('.footer').append('Используем `order`')
-	} else {
-	    // Браузер без поддержки Flexbox, в том числе IE 9/10.
-		document.documentElement.setAttribute('data-browser', 'not-flex');
-	    if ($(window).width() <= 767) {
-
-		    $('.faqs-version__unik').each(function(index, val) {
-		    	var img = $(this).find('.faqs-version__unik_image');
-		    	var text = $(this).find('.faqs-version__unik_description')
-		    	 img.insertBefore(text);
-		    });
-
-		    $('.sidebar__section_winer').remove();
-
-		    $('.category__top_left').insertAfter('.category__top_right');
-
-		    $('.category__top_right .sm_social_trigger').insertAfter('.category__top_right .category__top_right_subscribe')
-		    
-		    $('.office__history').insertAfter('.sidebar__section:last-child');
-
-		    $('.b__article_top_left.b__article_social').insertAfter('.b__article_top_right');
-
-	    }
-	}
 
 	promoHeight();
 	headerSearchOffset($('.header__search_down'))

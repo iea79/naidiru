@@ -3781,24 +3781,45 @@
 		}
 	}
 	@media (max-width: 1199px) {
-		.container_center.main {
-			@include flex-flow(column nowrap);
+		.container_center {
+			// @include flex-basis(100%);
+			// overflow: auto;
+			&.main {
+				@include flex-flow(row wrap);
+			}
+			.sale__list {
+				white-space: normal;
+			}
 		}
 		.main__content_sidebar {
 			display: block;
 			margin-right: 0;
 			@include flex-basis(auto);
-			@include browser("not-flex") {
-				float: none !important;
-				margin-right: 0;
-				display: block;
-				width: 100% !important;
-			}
+			// @include browser("not-flex") {
+			// 	float: none !important;
+			// 	margin-right: 0;
+			// 	display: block;
+			// 	width: 100% !important;
+			// }
 		}
 		.main__content_center {
 			@include browser("not-flex") {
 				display: block;
 				width: 100% !important;
+			}
+		}
+		.main__content {
+			&_sidebar {
+				float: none;
+				display: block;
+				margin-right: 0;
+				@include flex-basis(100%);
+			}
+			&_center {
+				float: none;
+				display: block;
+				margin-right: 0;
+				@include flex-basis(100%);
 			}
 		}
 	}
@@ -3850,12 +3871,12 @@
 .all-promocodes__top {
 	position: relative;
 	margin-top: 26px;
+	@extend %clear_a;
 	@include flexbox();
 	@include justify-content(space-between);
 	@include browser("not-flex") {
 		width: 100%;
 		display: block;
-		@extend %clear_a;
 	}
 	&_left {
 		position: relative;
@@ -3922,6 +3943,7 @@
 			margin-left: auto;
 			margin-right: auto;
 			margin-bottom: 29px;
+			// display: none !important;
 			// visibility: hidden;
 			@include flexbox();
 			@include justify-content(space-between);
@@ -3947,24 +3969,40 @@
 		}
 	}
 	@media (max-width: 1199px) {
-		&_left {
-			@include browser("not-flex") {
-				width: 100%;
-				float: none;
-			}
-		}
+		// &_left {
+		// 	@include browser("not-flex") {
+		// 		width: 100%;
+		// 		float: none;
+		// 	}
+		// }
 		&_center {
 			display: none !important;
 		}
+		// &_right {
+		// 	@include browser("not-flex") {
+		// 		display: none !important;
+		// 	}
+		// }
+		&_left {
+			@include browser('not-flex') {
+				float: left;
+				width: 78%;
+			}
+		}
 		&_right {
-			@include browser("not-flex") {
-				display: none !important;
+			@include browser('not-flex') {
+				float: left;
+				width: 20%;
 			}
 		}
 	}
 	@media (max-width: 991px) {
 		padding-bottom: 38px;
 		&_left {
+			@include browser('not-flex') {
+				float: none;
+				width: 100%;
+			}
 			img {
 				width: 100%;
 				height: auto;
@@ -4991,6 +5029,7 @@
 			margin-top: 40px;
 			display: inline-block;
 			vertical-align: middle;
+			float: left;
 		}
 		&_links {
 			display: inline-block;
