@@ -3176,7 +3176,7 @@
 		margin-bottom: 35px;
 	}
 	.category__box_grid {
-		// width: 100%;
+		width: auto;
 		padding: 0;
 		@include justify-content(flex-start);
 		.grid__wrapper {
