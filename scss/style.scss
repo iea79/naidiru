@@ -10144,7 +10144,7 @@
 		margin-right: 14px;
 		display: inline-block;
 		@include browser("not-flex") {
-			vertical-align: middle;
+			vertical-align: middle !important;
 		}
 	}
 	&_link {
@@ -10156,7 +10156,7 @@
 		text-align: left;
 		@include browser("not-flex") {
 			display: inline-block;
-			vertical-align: middle;
+			vertical-align: middle !important;
 		}
 	}
 	@media (max-width: 1199px) {
