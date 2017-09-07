@@ -29,6 +29,19 @@ $(document).ready(function() {
 		    $('.b__article_top_left.b__article_social').insertAfter('.b__article_top_right');
 
 	    }
+
+	    function movePartners() {
+		    if ($(window).width() <= 1100) {
+		    	$('.faqs-contact__partners').first().insertAfter('.faqs-contact__form');
+		    } else {
+		    	$('.faqs-contact__partners').first().insertBefore('.faqs-contact__form');
+		    }
+	    }
+	    movePartners();
+	    $(window).resize(function(event) {
+	    	movePartners();
+	    });
+
 	}
 
 	// First screen full height
