@@ -426,14 +426,9 @@
         @include browser("not-flex") {
             float: none;
             text-align: center;
-            margin: 0;
+            margin: 0 0 20px;
             position: inherit !important;
-            width: 100% !important;
-            // img {
-            //     display: block;
-            //     margin-left: auto;
-            //     margin-right: auto;
-            // }     
+            width: 100% !important;  
         }
       }
       &_description {
