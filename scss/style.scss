@@ -6646,21 +6646,20 @@
 	margin-bottom: 70px;
 	@include flexbox();
 	&_left {
+		width: 64.8%;
 		padding-right: 50px;
 		@include flex-grow(1);
 		@include browser("not-flex") {
-			overflow: hidden;
-			display: block !important;
+			width: 64.8%;
 		}
 		&.column {
 			@include columns-text(220px, 2, 22px, 0, solid, #000);
 		}
 	}
 	&_right {
+		width: 35.2%;
 		@include browser("not-flex") {
-			width: 340px;
-			float: right;
-			display: block;
+			width: 35.2%;
 		}
 	}
 	&_item {
@@ -6791,25 +6790,49 @@
 			}
 		}
 	}
-	@media (max-width: 1279px) {
+	@media (max-width: 1280px) {
 		&_left {
+			// @include browser("not-flex") {
+			// 	width: 61.4%;
+			// }
 			&.column {
 				@include columns-text(240px, 1, 0, 0, solid, #000);
 			}
+		}
+		&_right {
+			// @include browser("not-flex") {
+			// 	width: 38.6%;
+			// }
 		}
 	}
 	@media (max-width: 1199px) {
 		&_left {
+			// @include browser("not-flex") {
+			// 	width: 69.1%;
+			// }
 			&.column {
 				@include columns-text(220px, 2, 22px, 0, solid, #000);
 			}
 		}
+		&_right {
+			// @include browser("not-flex") {
+			// 	width: 30.9%;
+			// }
+		}
 	}
 	@media (max-width: 930px) {
 		&_left {
+			// @include browser("not-flex") {
+			// 	width: 50%;
+			// }
 			&.column {
 				@include columns-text(240px, 1, 0, 0, solid, #000);
 			}
+		}
+		&_right {
+			// @include browser("not-flex") {
+			// 	width: 50%;
+			// }
 		}
 	}
 	@media (max-width: 767px) {
@@ -6817,12 +6840,15 @@
 		@include justify-content(center);
 		@include flex-flow(row wrap);
 		&_left {
+			width: 100%;
 			padding-right: 0;
 			margin-bottom: 30px;
+			// @include browser("not-flex") {
+			// 	display: block !important;
+			// }
 			&.column {
-				@include columns-text(240px, auto, 22px, 0, solid, #000);
-				display: inline-block;
-				width: 100%;
+				@include columns-text(200px, 2, 22px, 0, solid, #000);
+				display: block;
 				.office__news_list {
 					display: inline-block;
 					width: 100%;
@@ -6836,12 +6862,21 @@
 				// }
 			}
 		}
+		&_right {
+			width: 100%;
+			@include browser("not-flex") {
+				width: 100%;
+			}
+		}
 	}
 	@media (max-width: 479px) {
 		padding-left: 0;
 		padding-right: 0;
 		&_left {
 			margin-bottom: 0;
+			&.column {
+				@include columns-text(200px, 1, 0, 0, solid, #000);
+			}
 		}
 		&_item {
 			border-left: 0;
@@ -6919,7 +6954,7 @@
 // begin office__news_right
 .office__news {
 	&_support {
-		width: 338px;
+		width: 100%;
 		position: relative;
 		margin-bottom: 40px;
 		background-color: #fff;
@@ -6950,7 +6985,7 @@
 				@include border-radius(0);
 			}
 			button {
-				width: 220px;
+				width: 65%;
 				height: 42px;
 				display: block;
 				margin: 16px auto 28px;
@@ -6967,31 +7002,31 @@
 				text-decoration: none;
 			}
 		}
-		&_definition {
-			display: none;
-			position: absolute;
-			// top: -130px;
-			top: -90px;
-			right: 0;
-			z-index: 10;
-			width: 485px;
-			height: 90px;
-			padding: 19px 35px;
-			font-size: 14px;
-			background-color: #fff;
-			border: 1px solid #d1d1d1;
-			.trigon {
-				position: absolute;
-				bottom: -11px;
-				right: 50px;
-				width: 14px;
-				height: 11px;
-				background: url('../img/tri-area3.png') no-repeat;
-			}
-			&.open {
-				display: block;
-			}
-		}
+		// &_definition {
+		// 	display: none;
+		// 	position: absolute;
+		// 	// top: -130px;
+		// 	top: -90px;
+		// 	right: 0;
+		// 	z-index: 10;
+		// 	width: 485px;
+		// 	height: 90px;
+		// 	padding: 19px 35px;
+		// 	font-size: 14px;
+		// 	background-color: #fff;
+		// 	border: 1px solid #d1d1d1;
+		// 	.trigon {
+		// 		position: absolute;
+		// 		bottom: -11px;
+		// 		right: 50px;
+		// 		width: 14px;
+		// 		height: 11px;
+		// 		background: url('../img/tri-area3.png') no-repeat;
+		// 	}
+		// 	&.open {
+		// 		display: block;
+		// 	}
+		// }
 		&_h {
 			margin-bottom: 11px;
 			font-size: 15px;
@@ -7015,6 +7050,11 @@
 				width: auto;
 				height: auto;
 				text-align: center;
+			}
+			&_body {
+				textarea {
+					min-height: 150px;
+				}
 			}
 		}
 		&_subscription {
