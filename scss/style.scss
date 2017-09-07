@@ -6644,6 +6644,7 @@
 // begin office__news_left
 .office__news {
 	margin-bottom: 70px;
+	 @extend %clear_a;
 	@include flexbox();
 	&_left {
 		width: 64.8%;
@@ -6651,6 +6652,7 @@
 		@include flex-grow(1);
 		@include browser("not-flex") {
 			width: 64.8%;
+			float: left;
 		}
 		&.column {
 			@include columns-text(220px, 2, 22px, 0, solid, #000);
@@ -6792,47 +6794,26 @@
 	}
 	@media (max-width: 1280px) {
 		&_left {
-			// @include browser("not-flex") {
-			// 	width: 61.4%;
-			// }
-			&.column {
-				@include columns-text(240px, 1, 0, 0, solid, #000);
-			}
+			width: 61.4%;
 		}
 		&_right {
-			// @include browser("not-flex") {
-			// 	width: 38.6%;
-			// }
+			width: 38.6%;
 		}
 	}
 	@media (max-width: 1199px) {
 		&_left {
-			// @include browser("not-flex") {
-			// 	width: 69.1%;
-			// }
-			&.column {
-				@include columns-text(220px, 2, 22px, 0, solid, #000);
-			}
+			width: 69.1%;
 		}
 		&_right {
-			// @include browser("not-flex") {
-			// 	width: 30.9%;
-			// }
+			width: 30.9%;
 		}
 	}
-	@media (max-width: 930px) {
+	@media (max-width: 991px) {
 		&_left {
-			// @include browser("not-flex") {
-			// 	width: 50%;
-			// }
-			&.column {
-				@include columns-text(240px, 1, 0, 0, solid, #000);
-			}
+			width: 55.8%;
 		}
 		&_right {
-			// @include browser("not-flex") {
-			// 	width: 50%;
-			// }
+			width: 44.2%;
 		}
 	}
 	@media (max-width: 767px) {
@@ -6843,30 +6824,9 @@
 			width: 100%;
 			padding-right: 0;
 			margin-bottom: 30px;
-			// @include browser("not-flex") {
-			// 	display: block !important;
-			// }
-			&.column {
-				@include columns-text(200px, 2, 22px, 0, solid, #000);
-				display: block;
-				.office__news_list {
-					display: inline-block;
-					width: 100%;
-					.office__news_item {
-						display: inline-block;
-						width: 100%;
-					}
-				}
-				// @include browser("Android 4.1" "Android 4.2" "Android 4.3" "iPhone OS 7" "iPhone OS 8") {
-				// 	padding-bottom: 220px;
-				// }
-			}
 		}
 		&_right {
 			width: 100%;
-			@include browser("not-flex") {
-				width: 100%;
-			}
 		}
 	}
 	@media (max-width: 479px) {
