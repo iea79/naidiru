@@ -238,6 +238,19 @@
 			margin-bottom: 18px;
 		}
 	}
+	@media (max-width: 1280px) {
+		@include browser('not-flex') {
+			&_content {
+				max-width: 100%;
+			}
+			&_aside {
+				.ya-share2__container_size_m .ya-share2__icon {
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+			}
+		}
+	}
 	@media (max-width: 991px) {
 		&_grid {
 			margin-left: -20px;
@@ -314,6 +327,9 @@
 				// position: absolute;
 				// margin-top: 20px;
 				z-index: 200;
+				.b__article_totop {
+					padding-top: 50px;
+				}
 			}
 			.b__article {
 				&_top {
@@ -380,6 +396,9 @@
 		}
 		&_content {
 			overflow: initial;
+			@include browser('not-flex') {
+				max-width: none;
+			}
 			// position: relative;
 			// z-index: 1;
 			// padding-top: 0;

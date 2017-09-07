@@ -94,11 +94,6 @@
       font-size: 28px;
     }
   }
-  @media (max-width: 1280px) {
-    &__triggers {
-
-    }
-  }
 
   @media (max-width: 1280px) {
     min-height: auto;
@@ -114,22 +109,35 @@
       }
     }
     &__more {
-
+      @include browser('not-flex') {
+        text-align: center;
+      }
     }
     &__age {
       @include browser('not-flex') {
-        float: left;
-        width: 50%;
-        margin-right: 0;
+        display: inline-block;
+        width: auto;
+        margin-right: 50px;
+        vertical-align: sub;
+        p:not([class]) {
+          font-size: 42px;
+        }
+      }
+      &_info {
+        text-align: left;
       }
     }
     &__percentage {
       @include browser('not-flex') {
-        float: left;
-        width: 50%;
+        // float: left;
+        // width: 50%;
+        display: inline-block;
         &>* {
           display: inline-block;
           vertical-align: middle;
+        }
+        p:not([class]) {
+          font-size: 28px;
         }
       }
     }
@@ -177,6 +185,12 @@
     &__age {
       padding-top: 0;
       margin-right: 0;
+      @include browser('not-flex') {
+        margin-right: 0;
+        p:not([class]) {
+          font-size: 40px;
+        }
+      }
     }
   }
   @media (max-width: 600px) {

@@ -59,12 +59,21 @@
     align-items: center;
     margin-top: 55px;
     margin-bottom: 80px;
+    @extend %clear_a;
     @include flexbox();
+    &:last-child {
+        margin-bottom: 40px;
+    }
     &_image {
       width: 100%;
       min-width: 260px;
       max-width: 260px;
       margin-right: 42px;
+      @include browser("not-flex") {
+        width: 260px;
+        float: left;
+        display: block !important;
+      }
       img {
         width: 100%;
         height: 185px;
@@ -74,6 +83,9 @@
     &_description {
       max-width: 280px;
       padding-right: 20px;
+      @include browser("not-flex") {
+        vertical-align: middle;
+      }
       b {
         font-size: 15px;
         font-weight: bold;
@@ -181,60 +193,23 @@
     }
   }
   &__unik {
+    @extend %clear_a;
     @include flexbox();
     @include align-items(center);
-    &--1 {
-      position: relative;
-      top: 45px;
-      left: 61px;
-    }
-    &--2 {
-      position: relative;
-      left: 262px;
-      .faqs-version__unik_description {
-        margin-right: 68px;
-      }
-      .faqs-version__unik_image {
-        position: relative;
-        top: -31px;
-      }
-    }
-    &--3 {
-      position: relative;
-      top: -23px;
-      left: 60px;
-      .faqs-version__unik_image {
-        margin-right: 78px;
-      }
-      .faqs-version__unik_description {
-        position: relative;
-        top: 17px;
-      }
-    }
-    &--4 {
-      position: relative;
-      left:188px;
-      top: -15px;
-      .faqs-version__unik_description {
-        margin-right: 60px;
-      }
-      .faqs-version__unik_image {
-        position: relative;
-        top: -5px;
-      }
-    }
-    &--5 {
-      position: relative;
-      left: 61px;
-      top: -10px;
-    }
     &_image {
       margin-right: 50px;
-
+      @include browser("not-flex") {
+        float: left;
+        display: block !important;
+      }
     }
     &_description {
       border-left: 3px solid #0eb2d1;
       padding-left: 20px;
+      @include browser("not-flex") {
+        overflow: hidden !important;
+        display: block !important;
+      }
       b,
       p,
       li {
@@ -249,6 +224,83 @@
         font-size: 14px;
       }
     }
+    &--1 {
+      position: relative;
+      top: 45px;
+      left: 61px;
+      @extend %clear_a;
+      @include browser("not-flex") {
+        .faqs-version__unik_image {
+          width: 60.53%;
+        }
+      }
+    }
+    &--2 {
+      position: relative;
+      left: 262px;
+      @extend %clear_a;
+      .faqs-version__unik_description {
+        margin-right: 68px;
+        @include order(-1);
+      }
+      .faqs-version__unik_image {
+        position: relative;
+        top: -31px;
+      }
+      @include browser("not-flex") {
+        .faqs-version__unik_image {
+          width: 56.67%;
+        }
+      }
+    }
+    &--3 {
+      position: relative;
+      top: -23px;
+      left: 60px;
+      @extend %clear_a;
+      .faqs-version__unik_image {
+        margin-right: 78px;
+      }
+      .faqs-version__unik_description {
+        position: relative;
+        top: 17px;
+      }
+      @include browser("not-flex") {
+        .faqs-version__unik_image {
+          width: 58.76%;
+        }
+      }
+    }
+    &--4 {
+      position: relative;
+      left:188px;
+      top: -15px;
+      @extend %clear_a;
+      .faqs-version__unik_description {
+        margin-right: 60px;
+        @include order(-1);
+      }
+      .faqs-version__unik_image {
+        position: relative;
+        top: -5px;
+      }
+      @include browser("not-flex") {
+        .faqs-version__unik_image {
+          width: 50.35%;
+        }
+      }
+    }
+    &--5 {
+      position: relative;
+      left: 61px;
+      top: -10px;
+      @extend %clear_a;
+      @include browser("not-flex") {
+        .faqs-version__unik_image {
+          width: 51.9%;
+        }
+      }
+    }
   }
   @media (max-width: 1280px) {
     &__placement {
@@ -258,6 +310,11 @@
       }
     }
     &__placing {
+        margin-bottom: 0;
+        @include browser("not-flex") {
+            display: table;
+            float: left;
+        }
       &--full {
         @include flex-flow(row wrap);
         .faqs-version__placing_description {
@@ -266,21 +323,29 @@
           height: auto;
         }
         .faqs-version__placing_image {
-          width: 100%;
-          max-width: none;
-          min-width: initial;
-          text-align: center;
-          img {
-            display: inline-block;
-            width: auto;
-            height: auto;
+            width: 100%;
+            max-width: none;
             min-width: initial;
-          }
+            text-align: center;
+            @include browser("not-flex") {
+                float: left;
+            }
+            img {
+                display: inline-block;
+                width: auto;
+                height: auto;
+                min-width: initial;
+            }
         }
       }
       &_description {
         max-width: 100%;
         padding-right: 0;
+        @include browser("not-flex") {
+            overflow: hidden;
+            display: table-cell !important;
+            vertical-align: middle;
+        }
       }
     }
     &__more-info {
@@ -308,12 +373,9 @@
         position: inherit;
       }
       &--2,
-      &--4 {
-        .faqs-version__unik_image {
-          @include order(1);
-        }
+      &--4 {        
         .faqs-version__unik_description {
-          @include order(2);
+          @include order(0);
         }
       }
     }
@@ -339,17 +401,39 @@
     }
     &__placing {
       margin: 20px 0;
+      @include browser("not-flex") {
+        display: block !important;
+        float: none;
+    }
       &_description--full  {
         margin-top: 0;
         padding: 0;
+        .faqs-version__placing_image {
+            @include browser("not-flex") {
+                float: none;
+                display: block !important;
+            }
+        }
       }
     }
     &__unik {
       padding: 0 !important;
-      @include flex-flow(column nowrap);
+      @include flex-flow(row wrap);
       &_image {
+        width: 100%;
         margin-bottom: 20px;
         padding-right: 0;
+        @include browser("not-flex") {
+            float: none;
+            text-align: center;
+            margin: 0;
+            position: inherit !important;
+            // img {
+            //     display: block;
+            //     margin-left: auto;
+            //     margin-right: auto;
+            // }     
+        }
       }
       &_description {
         width: 100%;
