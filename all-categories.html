@@ -6,6 +6,14 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script>
+      if ('flex' in document.documentElement.style) {
+      	document.documentElement.setAttribute('data-browser', 'flexible');
+      } else {
+      	document.documentElement.setAttribute('data-browser', 'not-flex');
+      }
+      
+    </script>
     <link href="css/style.css" rel="stylesheet"/>
     <script src="js/jquery.js"></script>
     <script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>

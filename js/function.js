@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-	if ('order' in document.documentElement.style) {
-		document.documentElement.setAttribute('data-browser', 'flexible');
+	if ('flex' in document.documentElement.style) {
+		// document.documentElement.setAttribute('data-browser', 'flexible');
 	    // Flexbox-совместимый браузер.
 	    // Используем `order` или `flex-direction: column-reverse`.
 	    // $('.footer').append('Используем `order`')
 	} else {
 	    // Браузер без поддержки Flexbox, в том числе IE 9/10.
-		document.documentElement.setAttribute('data-browser', 'not-flex');
+		// document.documentElement.setAttribute('data-browser', 'not-flex');
 		// setEqualHeight($(".category__box_grid .grid__wrapper", '20'));
 		setEqualHeight();
 	    if ($(window).width() <= 767) {
