@@ -3954,8 +3954,9 @@
 	}
 	&_left {
 		position: relative;
-		width: 62.78%;
+		width: 66%;
 		float: left;
+		padding-right: 20px;
 		// @include flex-grow(1);
 		img {
 			width: 100%;
@@ -3971,14 +3972,15 @@
 		}
 	}
 	&_center {
-		width: 18.67%;
+		width: 16%;
 		float: left;
 		@include box-sizing(border-box);
 		.category__box_grid.grid__2 {
-			width: 100%;
+			width: auto;
 			display: block;
-			margin-right: -20px;
-			margin-left: 0;
+			float: none;
+			// margin-right: -20px;
+			// margin-left: 0;
 			.grid__wrapper {
 				width: 50%;
 				float: left;
@@ -4051,6 +4053,7 @@
 		&_left {
 			float: left;
 			width: 78%;
+			padding-right: 0;
 		}
 		&_center {
 			display: none !important;
@@ -4077,7 +4080,7 @@
 		}
 		&_center {
 			display: block !important;
-			float: none;
+			float: none !important;
 			margin-top: -11px;
 			margin-bottom: 0 !important;
 			margin-left: auto;
@@ -4086,7 +4089,18 @@
 			max-width: 310px;
 			.category__box_grid.grid__2 {
 				text-align: center;
-				margin-left: -10px !important;
+				// margin-left: -10px !important;
+				.grid__wrapper {
+					@include browser("not-flex") {
+						margin-bottom: 0;
+						&:last-child {
+							display: block !important;
+						}
+					}
+				}
+			}
+			.sidebar__coupon_list {
+				margin: 0 auto;
 			}
 		}
 		&_right {
@@ -4769,7 +4783,11 @@
 				// @include flex-basis(160px);
 				padding-left: 27px;
 				white-space: normal;
-				// width: 160px;
+				width: 160px;
+				float: left;
+				@supports not (display: flex) {
+					display: inline-block !important;
+				}
 			}
 			&__item {
 				text-align: center;
