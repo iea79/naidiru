@@ -3881,11 +3881,13 @@
 				margin-right: 0;
 				@include flex-basis(100%);
 				@include browser("not-flex") {
+					float: none;
 					display: block;
 					width: 100% !important;
 				}
 			}
 			&_center {
+				overflow: initial;
 				float: none;
 				display: block;
 				margin-right: 0;
@@ -3893,6 +3895,7 @@
 				@include browser("not-flex") {
 					display: block;
 					width: 100% !important;
+					overflow: initial;
 				}
 			}
 		}
@@ -6662,23 +6665,24 @@
 // begin office__news_left
 .office__news {
 	margin-bottom: 70px;
+	 @extend %clear_a;
 	@include flexbox();
 	&_left {
+		width: 64.8%;
 		padding-right: 50px;
 		@include flex-grow(1);
 		@include browser("not-flex") {
-			overflow: hidden;
-			display: block !important;
-		}
-		&.column {
-			@include columns-text(220px, 2, 22px, 0, solid, #000);
+			width: 64.8%;
+			float: left;
 		}
 	}
+	&_list {
+		@include columns-text(220px, 2, 22px, 0, solid, #000);
+	}
 	&_right {
+		width: 35.2%;
 		@include browser("not-flex") {
-			width: 340px;
-			float: right;
-			display: block;
+			width: 35.2%;
 		}
 	}
 	&_item {
@@ -6690,6 +6694,8 @@
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
 		z-index: 5;
+		display: inline-block;
+		vertical-align: middle;
 		@extend %clear_a;
 		&_img {
 			width: 100%;
@@ -6809,25 +6815,28 @@
 			}
 		}
 	}
-	@media (max-width: 1279px) {
+	@media (max-width: 1280px) {
 		&_left {
-			&.column {
-				@include columns-text(240px, 1, 0, 0, solid, #000);
-			}
+			width: 61.4%;
+		}
+		&_right {
+			width: 38.6%;
 		}
 	}
 	@media (max-width: 1199px) {
 		&_left {
-			&.column {
-				@include columns-text(220px, 2, 22px, 0, solid, #000);
-			}
+			width: 69.1%;
+		}
+		&_right {
+			width: 30.9%;
 		}
 	}
-	@media (max-width: 930px) {
+	@media (max-width: 991px) {
 		&_left {
-			&.column {
-				@include columns-text(240px, 1, 0, 0, solid, #000);
-			}
+			width: 55.8%;
+		}
+		&_right {
+			width: 44.2%;
 		}
 	}
 	@media (max-width: 767px) {
@@ -6835,24 +6844,12 @@
 		@include justify-content(center);
 		@include flex-flow(row wrap);
 		&_left {
+			width: 100%;
 			padding-right: 0;
 			margin-bottom: 30px;
-			&.column {
-				@include columns-text(240px, auto, 22px, 0, solid, #000);
-				display: inline-block;
-				width: 100%;
-				.office__news_list {
-					display: inline-block;
-					width: 100%;
-					.office__news_item {
-						display: inline-block;
-						width: 100%;
-					}
-				}
-				// @include browser("Android 4.1" "Android 4.2" "Android 4.3" "iPhone OS 7" "iPhone OS 8") {
-				// 	padding-bottom: 220px;
-				// }
-			}
+		}
+		&_right {
+			width: 100%;
 		}
 	}
 	@media (max-width: 479px) {
@@ -6860,6 +6857,9 @@
 		padding-right: 0;
 		&_left {
 			margin-bottom: 0;
+		}
+		&_list {
+			@include columns-text(200px, 1, 0, 0, solid, #000);			
 		}
 		&_item {
 			border-left: 0;
@@ -6937,7 +6937,7 @@
 // begin office__news_right
 .office__news {
 	&_support {
-		width: 338px;
+		width: 100%;
 		position: relative;
 		margin-bottom: 40px;
 		background-color: #fff;
@@ -6968,7 +6968,7 @@
 				@include border-radius(0);
 			}
 			button {
-				width: 220px;
+				width: 65%;
 				height: 42px;
 				display: block;
 				margin: 16px auto 28px;
@@ -6985,31 +6985,31 @@
 				text-decoration: none;
 			}
 		}
-		&_definition {
-			display: none;
-			position: absolute;
-			// top: -130px;
-			top: -90px;
-			right: 0;
-			z-index: 10;
-			width: 485px;
-			height: 90px;
-			padding: 19px 35px;
-			font-size: 14px;
-			background-color: #fff;
-			border: 1px solid #d1d1d1;
-			.trigon {
-				position: absolute;
-				bottom: -11px;
-				right: 50px;
-				width: 14px;
-				height: 11px;
-				background: url('../img/tri-area3.png') no-repeat;
-			}
-			&.open {
-				display: block;
-			}
-		}
+		// &_definition {
+		// 	display: none;
+		// 	position: absolute;
+		// 	// top: -130px;
+		// 	top: -90px;
+		// 	right: 0;
+		// 	z-index: 10;
+		// 	width: 485px;
+		// 	height: 90px;
+		// 	padding: 19px 35px;
+		// 	font-size: 14px;
+		// 	background-color: #fff;
+		// 	border: 1px solid #d1d1d1;
+		// 	.trigon {
+		// 		position: absolute;
+		// 		bottom: -11px;
+		// 		right: 50px;
+		// 		width: 14px;
+		// 		height: 11px;
+		// 		background: url('../img/tri-area3.png') no-repeat;
+		// 	}
+		// 	&.open {
+		// 		display: block;
+		// 	}
+		// }
 		&_h {
 			margin-bottom: 11px;
 			font-size: 15px;
@@ -7033,6 +7033,11 @@
 				width: auto;
 				height: auto;
 				text-align: center;
+			}
+			&_body {
+				textarea {
+					min-height: 150px;
+				}
 			}
 		}
 		&_subscription {
