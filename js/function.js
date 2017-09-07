@@ -1,13 +1,13 @@
 $(document).ready(function() {
 
-	if ('order' in document.documentElement.style) {
-		document.documentElement.setAttribute('data-browser', 'flexible');
+	if ('flex' in document.documentElement.style) {
+		// document.documentElement.setAttribute('data-browser', 'flexible');
 	    // Flexbox-совместимый браузер.
 	    // Используем `order` или `flex-direction: column-reverse`.
 	    // $('.footer').append('Используем `order`')
 	} else {
 	    // Браузер без поддержки Flexbox, в том числе IE 9/10.
-		document.documentElement.setAttribute('data-browser', 'not-flex');
+		// document.documentElement.setAttribute('data-browser', 'not-flex');
 		// setEqualHeight($(".category__box_grid .grid__wrapper", '20'));
 		setEqualHeight();
 	    if ($(window).width() <= 767) {
@@ -29,6 +29,19 @@ $(document).ready(function() {
 		    $('.b__article_top_left.b__article_social').insertAfter('.b__article_top_right');
 
 	    }
+
+	    function movePartners() {
+		    if ($(window).width() <= 1100) {
+		    	$('.faqs-contact__partners').first().insertAfter('.faqs-contact__form');
+		    } else {
+		    	$('.faqs-contact__partners').first().insertBefore('.faqs-contact__form');
+		    }
+	    }
+	    movePartners();
+	    $(window).resize(function(event) {
+	    	movePartners();
+	    });
+
 	}
 
 	// First screen full height
