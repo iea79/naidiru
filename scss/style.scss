@@ -6670,9 +6670,9 @@
 	&_left {
 		width: 64.8%;
 		padding-right: 50px;
-		@include flex-grow(1);
+		// @include flex-grow(1);
 		@include browser("not-flex") {
-			width: 64.8%;
+			// width: 64.8%;
 			float: left;
 		}
 	}
