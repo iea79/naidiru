@@ -163,7 +163,7 @@
 		.modal-content {
 			// top: 0;
 			width: 100%;
-			padding-top: 100px;
+			padding-top: 0;
 			height: auto;
 			position: static;
 			@include border-radius(0);
@@ -178,7 +178,8 @@
 				bottom: 20px;
 				left: 20px;
 				border: none;
-				background-size: auto;
+				// background-size: auto;
+				background-image: none;
 			}
 		}
 		&_wrap {
@@ -263,8 +264,11 @@
 				@include box-sizing(content-box);
 				padding: 96px 70px 32px;
 				margin: -50px -51px -32px;
-				background: #fff url('../img/present_bg.jpg') left top no-repeat;
+				background: #fff url('../img/present_bg.gif') left top no-repeat;
 				background-size: cover;
+				@include browser("not-flex") {
+					background: #fff url('../img/present_bg.png') left top no-repeat;
+				}
 				.presentation__sliderfoot_first {
 					margin-top: 20px;
 					margin-bottom: 10px;
@@ -1538,7 +1542,8 @@
 				}
 			}
 			&_center {
-				padding: 11px 20px;
+				// padding: 11px 20px;
+				padding: 11px 20px 30px;
 				&_p,
 				&_conditions,
 				&_link {
@@ -1554,6 +1559,7 @@
 				}
 			}
 			&_down {
+				display: none;
 				padding: 15px 20px 20px;
 				&_left {
 					float: none;
@@ -1569,6 +1575,7 @@
 			}
 		}
 		.modal-footer {
+			display: none;
 			padding: 0 20px 30px;
 			&_input {
 				padding: 9px 12px;
@@ -1818,7 +1825,8 @@
 				}
 			}
 			&_center {
-				padding: 14px 20px 11px;
+				// padding: 14px 20px 11px;
+				padding: 14px 20px 30px;
 				&_p,
 				&_conditions,
 				&_link {
@@ -1834,6 +1842,7 @@
 				}
 			}
 			&_down {
+				display: none;
 				padding: 15px 20px 20px;
 				&_left {
 					float: none;
@@ -1849,6 +1858,7 @@
 			}
 		}
 		.modal-footer {
+			display: none;
 			padding: 0 20px 30px;
 			&_input {
 				padding: 9px 12px;
