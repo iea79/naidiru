@@ -113,6 +113,10 @@
 		.slider {
 			&__item {
 				@include flex-basis(24.9%);
+				&:hover {
+					cursor: default;
+					text-decoration: none;
+				}
 				&_promo {
 					width: 68px;
 					height: 68px;
@@ -139,6 +143,7 @@
 				&_img {
 					display: block;
 					overflow: initial;
+					cursor: pointer;
 					img {
 						display: block;
 						width: 100%;
@@ -154,9 +159,32 @@
 				&_text {
 					font-size: 15px;
 					padding: 10px 0 0;
+					&_link {
+						color: $main-color;
+						cursor: pointer;
+						&:hover,
+						&:active {
+							cursor: pointer;
+							text-decoration: underline;
+						}
+					}
 				}
 				&_name {
 					font-size: 13px;
+				}
+				&_link {
+					display: inline;
+					text-decoration: none;
+					outline: 0;
+					color: $link-color;
+					font-weight: 700;
+					cursor: pointer;
+					&:hover {
+						text-decoration: underline;
+					}
+					&:focus {
+						outline: 0;
+					}
 				}
 			}
 		}
@@ -454,11 +482,15 @@
 			width: 33.3%;
 		}
 		.grid__item {
-			cursor: pointer;
+			&:hover {
+				cursor: default;
+				text-decoration: none;
+			}
 		}
 	}
 	&_img {
 		margin-bottom: 27px;
+		cursor: pointer;
 		img {
 			display: block;
 			width: 100%;
@@ -466,17 +498,19 @@
 	}
 	&_title {
 		font-size: 18px;
+		color: $main-color;
 		overflow: hidden;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		// margin-bottom: 15px;
 		&:hover {
 			@include opacity(.8);
+			cursor: pointer;
 		}
 	}
 	&_text {
-		cursor: default;
 		font-size: 14px;
+		color: $main-color;
 		p {
 			margin: 15px 0;
 		}

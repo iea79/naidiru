@@ -2121,8 +2121,15 @@
 	.main__content_sidebar {
 		width: 280px;
 	}
+	.slider__item {
+		&:hover {
+			cursor: default;
+			text-decoration: none;
+		}
+	}
 	.slider__grid_img {
 		display: block;
+		cursor: pointer;
 	}
 	&__sidebar_btn {
 		width: 190px;
@@ -2131,9 +2138,29 @@
 		margin-bottom: 22px;
 		display: block;
 	}
-	.slider__grid_link:hover {
+	.slider__grid_name {
+		display: inline-block;
+	}
+	.slider__grid_link {
+		display: inline;
+		text-decoration: none;
+		outline: 0;
+		color: $link-color;
+		font-weight: 700;
 		cursor: pointer;
-		text-decoration: underline;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:focus {
+			outline: 0;
+		}
+	}
+	.slider__grid_text_link {
+		color: $main-color;
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
 	}
 }
 
