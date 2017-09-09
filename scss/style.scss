@@ -2124,8 +2124,15 @@
 	.main__content_sidebar {
 		width: 280px;
 	}
+	.slider__item {
+		&:hover {
+			cursor: default;
+			text-decoration: none;
+		}
+	}
 	.slider__grid_img {
 		display: block;
+		cursor: pointer;
 	}
 	&__sidebar_btn {
 		width: 190px;
@@ -2134,9 +2141,29 @@
 		margin-bottom: 22px;
 		display: block;
 	}
-	.slider__grid_link:hover {
+	.slider__grid_name {
+		display: inline-block;
+	}
+	.slider__grid_link {
+		display: inline;
+		text-decoration: none;
+		outline: 0;
+		color: $link-color;
+		font-weight: 700;
 		cursor: pointer;
-		text-decoration: underline;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:focus {
+			outline: 0;
+		}
+	}
+	.slider__grid_text_link {
+		color: $main-color;
+		&:hover {
+			cursor: pointer;
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -5562,7 +5589,7 @@
 				text-align: center;
 			}
 			&:nth-child(3) {
-				display: none;
+				display: none !important;
 			}
 		}
 		&__item {
@@ -5607,11 +5634,6 @@
 				&:nth-child(1) {
 					margin-right: 0;
 				}
-				// &:nth-child(2) {
-				// 	@include browser("not-flex") {
-				// 		display: block !important;
-				// 	}
-				// }
 			}
 		}
 		.sidebar__section {
@@ -6945,11 +6967,14 @@
 		// @include flex-flow(row wrap);
 		&_left {
 			width: 100%;
+			float: none;
 			padding-right: 0;
 			margin-bottom: 30px;
 		}
 		&_right {
 			width: 100%;
+			float: none;
+			display: block !important;
 		}
 	}
 	@media (max-width: 479px) {
