@@ -492,9 +492,16 @@ footer.footer
 									textarea.modal-body_textarea(name="del-account-area", placeholder="Ваше сообщение ...")
 							.modal-body_row
 								input(type="radio", id="da05", name="del-account")
-								label(for="da05") Я не понимаю, для чего мне ваш сайт и как им пользоваться
+								label(for="da05") Другая причина
 								.modal-body_row.hidden-box
 									textarea.modal-body_textarea(name="del-account-area", placeholder="Ваше сообщение ...")
+
+					//  modal-body_down - вариант №1 - Мне не нравиться ваша рассылка, больше не хочу ее получать
+					.modal-body_down
+						.modal-body_down_p Поверьте, это не повод удалять аккаунт. Вы можете просто отписаться от нашей рассылки 
+							a(href="#") здесь.
+
+					//  modal-body_down - вариант №2 - Спасибо за экономию, но я трачу много денег на шоппинг
 					.modal-body_down
 						.modal-body_down_p Мы рады, что вы были с нами столько времени и нам очень жаль, что вы уходите.
 
@@ -504,6 +511,20 @@ footer.footer
 							a(href="#") отписаться от нашей рассылки.
 
 						.modal-body_down_p И мы не будем больше напоминать вам о скидках. А это значит, что ваши расходы уменьшатся.
+
+					//  modal-body_down - вариант №3 - Я ни разу не выиграл, больше не хочу участвовать в ваших розыгрышах
+					.modal-body_down
+						.modal-body_down_p Да, это обидно. Мы вас понимаем, но вы должны знать, что удача всегда приходит в самый неожиданный момент, тогда, когда вы ее не ждете.
+
+						.modal-body_down_p Может быть, стоит дать ей еще один шанс и она обязательно придет к вам!
+
+					//  modal-body_down - вариант №4 - Я не понимаю, для чего мне ваш сайт и как им пользоваться
+					.modal-body_down
+						.modal-body_down_p Такое бывает, но это не стоит того, чтобы отказаться от скидок на совсем.
+						.modal-body_down_p Если Вы не знаете, как использовать промокоды, полную инструкцию по их использованию, вы найдете 
+							a(href="#") здесь. 
+							|Но, если дело в розыгрышах и вы не знаете их условия, вы можете подробно с ними ознакомиться 
+							a(href="#") здесь.
 				
 				.modal-footer
 					.modal-footer_top
@@ -531,17 +552,20 @@ footer.footer
 							img(src="img/shop6.jpg", alt="#")
 						.modal-body_top_p Код не требуется
 						a.btn.modal-body_top_btn(href="#") Перейти в магазин
-					.modal-body_center 
-						.modal-body_center_p Условия акции: 
-						.modal-body_center_conditions Промокод действителен после ввода промокод после ввода промокод
-						a.modal-body_center_link(href="#") Подробнее
+
+					.modal-body_center
+						.modal-body_center_in.js-more-wrapper
+							.modal-body_center_p Условия акции: 
+							.modal-body_center_conditions Промокод действителен после ввода промокод после ввода промокод промокод действителен после ввода промокод после ввода промокод
+							a.modal-body_center_link.js-more-link(href="#" data-text-open="Скрыть" data-text-close="Подробнее") Подробнее
+
 					.modal-body_down
 						.modal-body_down_left
 							img(src="img/gift2.svg", alt="#")
 						.modal-body_down_right
-							.modal-body_down_name Розыгрыш каждый месяц (получайте ценные призы)
-							.modal-body_down_p Покупайте, меняйте баллы на лотереи и участвуйте в розыгрышах. 
-							a(href="#") Подробнее о розыгрыше &gt;				
+							.modal-body_down_name Акция каждый месяц (получайте ценные призы)
+							.modal-body_down_p Покупайте, меняйте баллы на ШопКарты и участвуйте в акциях. 
+							a(href="#") Подробнее об акции &gt;				
 				.modal-footer
 					.modal-footer_input_wrap
 						input.modal-footer_input(type="email", placeholder="Введите ваш e-mail")
@@ -578,13 +602,14 @@ footer.footer
 							.modal-body_center_p Условия акции: 
 							.modal-body_center_conditions Промокод действителен после ввода промокод после ввода промокод промокод действителен после ввода промокод после ввода промокод
 							a.modal-body_center_link.js-more-link(href="#" data-text-open="Скрыть" data-text-close="Подробнее") Подробнее
+					
 					.modal-body_down
 						.modal-body_down_left
 							img(src="img/gift2.svg", alt="#")
 						.modal-body_down_right
-							.modal-body_down_name Розыгрыш каждый месяц (получайте ценные призы)
-							.modal-body_down_p Покупайте, меняйте баллы на лотереи и участвуйте в розыгрышах. 
-							a(href="#") Подробнее о розыгрыше &gt;				
+							.modal-body_down_name Акция каждый месяц (получайте ценные призы)
+							.modal-body_down_p Покупайте, меняйте баллы на Шопкарты и участвуйте в акциях. 
+							a(href="#") Подробнее об акции &gt;				
 				.modal-footer
 					.modal-footer_input_wrap
 						input.modal-footer_input(type="email", placeholder="Введите ваш e-mail")
