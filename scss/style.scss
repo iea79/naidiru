@@ -2026,7 +2026,7 @@
 			vertical-align: middle;
 		}
 		&_img {
-			width: 243px;
+			width: 48%;
 			display: table-cell;
 			padding-right: 23px;
 		}
@@ -2056,6 +2056,9 @@
 		}
 		&_item {
 			margin-top: 20px;
+			&_img {
+				width: 240px;
+			}
 		}
 	}
 	@media (max-width: 767px) {
@@ -3704,10 +3707,16 @@
 				cursor: pointer;
 				background: url('../img/heart.svg') no-repeat center 8px;
 				background-size: 17px 15px;
-				&:hover,
+				&:hover {
+					background-image: url('../img/heart-red.svg');
+				}
 				&.active {
-					background: url('../img/heart-red.svg') no-repeat center 8px;
-					background-size: 17px 15px;
+					background-image: url('../img/heart-red.svg');
+					@media (max-width: 1280px) {
+						&:hover {
+							background-image: url('../img/heart.svg');
+						}
+					}
 				}
 			}
 			img {
@@ -4828,11 +4837,16 @@
 	&_grid {
 		width: 100%;
 		margin-bottom: 15px;
-		.grid {
+		.scroll-y {
+			display: none !important;
+		}
+		&>div {
 			white-space: nowrap;	
 			margin-bottom: 10px;
 			margin-left: -27px;
-			display: block !important;
+			display: block !important;			
+		}
+		.grid {
 			// @include flex-flow(row nowrap);
 			// @include justify-content(flex-start);
 			&__wrapper {
@@ -4868,8 +4882,10 @@
 	}
 	@media (max-width: 767px) {
 		&_grid {
-			.grid {
+			&>div {
 				margin-left: -10px;
+			}
+			.grid {
 				&__wrapper {
 					padding-left: 10px;
 					width: 143px;
@@ -10827,10 +10843,16 @@
 			&_out {
 				display: none;
 			}
-			&:hover,
+			&:hover {
+				background-image: url('../img/heart-red.svg');
+			}
 			&.active {
-				background: url('../img/heart-red.svg') no-repeat 0 2px;
-				background-size: 32px 26px;
+				background-image: url('../img/heart-red.svg');
+				&:hover {
+					@media (max-width: 1280px) {
+						background-image: url('../img/heart.svg');
+					}
+				}
 			}
 			&.active {
 				.brand__top_right_subscribe_in {

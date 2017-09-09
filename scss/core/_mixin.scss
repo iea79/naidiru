@@ -114,13 +114,13 @@
 // @TODO: Add docs to flexbox!
 // 
 @mixin flexbox() {
-	@supports (display: flex) {	
+	@include browser("flexible") {	
 		display: -webkit-box;
 		display: -moz-box;
 		display: -webkit-flex;
-		display: flex;
 		display: -ms-flexbox;
 		display: -ms-flex;
+		display: flex;
 		&>* {
 			display: block;
 		}
