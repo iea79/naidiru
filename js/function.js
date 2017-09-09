@@ -682,11 +682,11 @@ $(document).ready(function() {
     	}
     });
 
-	if ($('.sale__list_save').hasClass('active')) {
-		$('.sale__list_save').html('Сохранен');
-	} else {
-    	$('.sale__list_save').html('Сохранить');
-	}
+	// if ($('.sale__list_save').hasClass('active')) {
+	// 	$('.sale__list_save').html('Сохранен');
+	// } else {
+ //    	$('.sale__list_save').html('Сохранить');
+	// }
 
 	$('.office__support_trigger').on('click', function(event) {
 		event.preventDefault();

@@ -440,7 +440,6 @@
 	}
 }
 
-
 .sales__more {
 	&_grid {
 		padding-top: 11px;
@@ -454,7 +453,9 @@
 			float: left;
 			width: 33.3%;
 		}
-		.grid__item {}
+		.grid__item {
+			cursor: pointer;
+		}
 	}
 	&_img {
 		margin-bottom: 27px;
@@ -469,11 +470,28 @@
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		// margin-bottom: 15px;
+		&:hover {
+			@include opacity(.8);
+		}
 	}
 	&_text {
+		cursor: default;
 		font-size: 14px;
 		p {
 			margin: 15px 0;
+		}
+	}
+	&_link {
+		text-decoration: none;
+		outline: 0;
+		cursor: pointer;
+		color: $link-color;
+		@include trs(.3);
+		&:hover {
+			text-decoration: underline;
+		}
+		&:focus {
+			outline: 0;
 		}
 	}
 	@media (max-width: 991px) {
