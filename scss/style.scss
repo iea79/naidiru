@@ -4780,17 +4780,21 @@
 			white-space: nowrap;	
 			margin-bottom: 10px;
 			margin-left: -27px;
-			@include flex-flow(row nowrap);
-			@include justify-content(flex-start);
+			display: block !important;
+			// @include flex-flow(row nowrap);
+			// @include justify-content(flex-start);
 			&__wrapper {
 				// @include flex-basis(160px);
+				width: 160px;
 				padding-left: 27px;
 				white-space: normal;
-				width: 160px;
-				float: left;
-				@supports not (display: flex) {
-					display: inline-block !important;
-				}
+				display: inline-block;
+				vertical-align: top;
+				// width: 160px;
+				// float: left;
+				// @supports not (display: flex) {
+				// 	display: inline-block !important;
+				// }
 			}
 			&__item {
 				text-align: center;
@@ -4816,6 +4820,7 @@
 				margin-left: -10px;
 				&__wrapper {
 					padding-left: 10px;
+					width: 143px;
 				}
 			}
 			&.scroll-wrapper {
@@ -6335,9 +6340,18 @@
 // begin office_checks
 .office__checks {
 	padding-bottom: 30px;
-	&.open {
+	&.js-more-wrapper {
 		.office__checks_item {
-			display: inline-block;
+			&:nth-child(n+6) {
+				display: none;
+			}
+		}
+		&.open {
+			.office__checks_item {
+				&:nth-child(n+6) {
+					display: inline-block;
+				}
+			}
 		}
 	}
 	&_name {
@@ -6347,6 +6361,7 @@
 	&_list {
 		margin-left: -20px;
 		margin-bottom: 20px;
+		white-space: nowrap;
 		// @include flexbox();
 		// @include justify-content(flex-start);
 		// @include flex-flow(row wrap);
@@ -6357,10 +6372,8 @@
 		z-index: 1;
 		margin-left: 20px;
 		margin-top: 22px;
-		float: left;
-		&:nth-child(n+6) {
-			display: none;
-		}
+		display: inline-block;
+		// float: left;
 		&.active {
 			.office__checks_edit_btn {
 				z-index: 6;
@@ -6666,24 +6679,27 @@
 .office__news {
 	margin-bottom: 70px;
 	 @extend %clear_a;
-	@include flexbox();
+	// @include flexbox();
+	// @include flex-flow(row nowrap);
 	&_left {
 		width: 64.8%;
 		padding-right: 50px;
-		@include flex-grow(1);
-		@include browser("not-flex") {
-			width: 64.8%;
-			float: left;
-		}
+		float: left;
+		// @include flex-grow(1);
+		// @include browser("not-flex") {
+		// 	width: 64.8%;
+		// 	float: left;
+		// }
 	}
 	&_list {
 		@include columns-text(220px, 2, 22px, 0, solid, #000);
 	}
 	&_right {
 		width: 35.2%;
-		@include browser("not-flex") {
-			width: 35.2%;
-		}
+		float: right;
+		// @include browser("not-flex") {
+		// 	width: 35.2%;
+		// }
 	}
 	&_item {
 		position: relative;
@@ -6841,8 +6857,8 @@
 	}
 	@media (max-width: 767px) {
 		margin-bottom: 0;
-		@include justify-content(center);
-		@include flex-flow(row wrap);
+		// @include justify-content(center);
+		// @include flex-flow(row wrap);
 		&_left {
 			width: 100%;
 			padding-right: 0;
@@ -7246,6 +7262,11 @@
 		&.selected {
 			color: $main-color;
 		}
+		&.open {
+			&+.office__edit_hide {
+				display: block;
+			}
+		}
 	}
 	&_hide {
 		display: none;
@@ -7259,9 +7280,6 @@
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
 		@extend %clear_a;
-		&.open {
-			display: block;
-		}
 		&_left {
 			width: 45%;
 			float: left;
@@ -8296,6 +8314,9 @@
 		@include browser("not-flex") {
 			display: block !important;
 			overflow: hidden;
+			@media (max-width: 479px) {
+				overflow: initial;
+			}
 		}
 		&_top {
 			position: absolute;
@@ -8594,6 +8615,10 @@
 		padding: 10px 10px 18px;
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
+		display: block;
+		&:hover {
+			text-decoration: none;
+		}
 	}
 	&_img {
 		width: 94px;
@@ -8663,6 +8688,10 @@
 		font-size: 14px;
 		background-color: #fff;
 		border: 1px solid #d1d1d1;
+		color: #000;
+		.link {
+			color: #2fa8e6;
+		}
 		&.open {
 			display: block;
 		}
