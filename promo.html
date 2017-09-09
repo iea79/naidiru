@@ -8,9 +8,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script>
       if ('flex' in document.documentElement.style) {
-        document.documentElement.setAttribute('data-browser', 'flexible');
+          // Flexbox-совместимый браузер.
+        if (navigator.userAgent.search(/UCBrowser/) > -1) {
+            notOrderFlex();
+            document.documentElement.setAttribute('data-browser', 'not-flex');
+        } else {        
+            document.documentElement.setAttribute('data-browser', 'flexible');
+        }
       } else {
+          // Браузер без поддержки Flexbox, в том числе IE 9/10.
         document.documentElement.setAttribute('data-browser', 'not-flex');
+        notOrderFlex();
       }
       
     </script>
