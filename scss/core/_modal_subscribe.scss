@@ -267,6 +267,7 @@
 			height: 210px;
 		}
 		&_item {
+			// width: 100%;
 			&_first-screen {
 				@include box-sizing(content-box);
 				padding: 96px 70px 32px;
@@ -476,12 +477,12 @@
 		background-color: #fff;
 	}
 	.close {
-		position: absolute;
-		top: 20px;
-		right: 21px;
-		width: 14px;
-		height: 14px;
-		display: block;
+		// position: absolute;
+		// top: 20px;
+		// right: 21px;
+		// width: 14px;
+		// height: 14px;
+		// display: block;
 	}
 	.modal-dialog {
 		max-width: 580px;
@@ -580,12 +581,12 @@
 		background-color: #fff;
 	}
 	.close {
-		position: absolute;
-		top: 20px;
-		right: 21px;
-		width: 14px;
-		height: 14px;
-		display: block;
+		// position: absolute;
+		// top: 20px;
+		// right: 21px;
+		// width: 14px;
+		// height: 14px;
+		// display: block;
 	}
 	.modal-dialog {
 		max-width: 580px;
@@ -683,12 +684,12 @@
 		background-color: #fff;
 	}
 	.close {
-		position: absolute;
-		top: 20px;
-		right: 21px;
-		width: 14px;
-		height: 14px;
-		display: block;
+		// position: absolute;
+		// top: 20px;
+		// right: 21px;
+		// width: 14px;
+		// height: 14px;
+		// display: block;
 	}
 	.modal-dialog {
 		max-width: 580px;
@@ -790,12 +791,12 @@
 		background-color: #fff;
 	}
 	.close {
-		position: absolute;
-		top: 20px;
-		right: 21px;
-		width: 14px;
-		height: 14px;
-		display: block;
+		// position: absolute;
+		// top: 20px;
+		// right: 21px;
+		// width: 14px;
+		// height: 14px;
+		// display: block;
 	}
 	.modal-dialog {
 		max-width: 580px;
@@ -1105,12 +1106,12 @@
 		background-color: #fff;
 	}
 	.close {
-		position: absolute;
-		top: 20px;
-		right: 21px;
-		width: 14px;
-		height: 14px;
-		display: block;
+		// position: absolute;
+		// top: 20px;
+		// right: 21px;
+		// width: 14px;
+		// height: 14px;
+		// display: block;
 	}
 	.modal-dialog {
 		max-width: 631px;
@@ -1210,12 +1211,12 @@
 		background-color: #fff;
 	}
 	.close {
-		position: absolute;
-		top: 20px;
-		right: 21px;
-		width: 14px;
-		height: 14px;
-		display: block;
+		// position: absolute;
+		// top: 20px;
+		// right: 21px;
+		// width: 14px;
+		// height: 14px;
+		// display: block;
 	}
 	.modal-dialog {
 		max-width: 700px;
@@ -1385,12 +1386,12 @@
 		background-color: #fff;
 	}
 	.close {
-		position: absolute;
-		top: 20px;
-		right: 21px;
-		width: 14px;
-		height: 14px;
-		display: block;
+		// position: absolute;
+		// top: 20px;
+		// right: 21px;
+		// width: 14px;
+		// height: 14px;
+		// display: block;
 	}
 	.modal-dialog {
 		max-width: 580px;
@@ -1649,12 +1650,12 @@
 		background-color: #fff;
 	}
 	.close {
-		position: absolute;
-		top: 20px;
-		right: 21px;
-		width: 14px;
-		height: 14px;
-		display: block;
+		// position: absolute;
+		// top: 20px;
+		// right: 21px;
+		// width: 14px;
+		// height: 14px;
+		// display: block;
 	}
 	.modal-dialog {
 		max-width: 580px;
@@ -1956,12 +1957,12 @@
 		background-color: #fff;
 	}
 	.close {
-		position: absolute;
-		top: 20px;
-		right: 21px;
-		width: 14px;
-		height: 14px;
-		display: block;
+		// position: absolute;
+		// top: 20px;
+		// right: 21px;
+		// width: 14px;
+		// height: 14px;
+		// display: block;
 	}
 	.modal-dialog {
 		max-width: 580px;
@@ -1996,7 +1997,7 @@
 		border-top: 1px solid #d1d1d1;
 		border-bottom: 1px solid #d1d1d1;
 		&_row {
-			width: 320px;
+			max-width: 320px;
 			margin: 13px auto 0;
 		}
 		&_label {
@@ -2031,7 +2032,7 @@
 		padding: 22px 20px 28px;
 		border-top: 0;
 		&_in {
-			width: 338px;
+			max-width: 338px;
 			margin-left: auto;
 			margin-right: auto;
 		}
@@ -2062,6 +2063,7 @@
 			text-align: center;
 			&_name {
 				float: none;
+				margin-top: 10px;
 				margin-right: 0;
 				margin-bottom: 10px;
 			}
@@ -2076,7 +2078,8 @@
 			}
 		}
 		.lg_social {
-			width: 267px;
+			max-width: 267px;
+			width: 100%;
 			&_icon {
 				margin-left: 5px;
 				&_add {
@@ -2084,12 +2087,12 @@
 				}
 			}
 			.tooltip__text {
-				width: 280px;
+				max-width: 280px;
 			}
 		}
 		.modal-footer {
 			&_in {
-				width: 280px;
+				max-width: 280px;
 			}
 		}
 	}
@@ -2099,6 +2102,14 @@
 				width: 100%;
 			}
 		}
+		.lg_social {
+			&_icon {
+				&_add {
+					width: 30px;
+					height: 30px;
+				}
+			}
+		}
 	}
 }
 
@@ -2106,10 +2117,10 @@
 .modal__sign-up {
 	.modal-body {
 		&_row {
-			width: 340px;
+			max-width: 340px;
 		}
 		&_btn {
-			width: 245px;
+			max-width: 245px;
 			margin: 20px auto 0;
 		}
 	}
@@ -2228,13 +2239,13 @@
 		background-color: #fff;
 	}
 	.close {
-		position: absolute;
-		top: 14px;
-		right: 14px;
-		width: 14px;
-		height: 14px;
-		display: block;
-		background-size: 14px 14px;
+		// position: absolute;
+		// top: 14px;
+		// right: 14px;
+		// width: 14px;
+		// height: 14px;
+		// display: block;
+		// background-size: 14px 14px;
 	}
 	.modal-dialog {
 		max-width: 780px;
@@ -2263,8 +2274,8 @@
 			max-width: auto;
 		}
 		.close {
-			top: 9px;
-			right: 8px;
+			// top: 9px;
+			// right: 8px;
 		}
 		.modal-body {
 			padding: 35px 20px 30px;

@@ -24,6 +24,7 @@
 		@include flex-flow(row nowrap);
 		.grid__wrapper {
 			// width: 25%;
+			float: left;
 		}
 		.grid__item {}
 	}
