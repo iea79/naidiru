@@ -38,12 +38,25 @@ $(document).ready(function() {
 		$('.modal').on('show.bs.modal', function() {
 			// $('.wrapper').css('position', 'absolute');
 			// $('.wrapper').bind('touchmove', false);
+			var winScrollTop = $(window).scrollTop();
+			$(window).bind('scroll',function () {
+			  $(window).scrollTop(winScrollTop);
+			});
+			setTimeout(function() {			
+				$('body').removeClass('modal-open')
+				$('html').addClass('modal-open');
+				$('body').css('top', '-'+winScrollTop+'px');
+			}, 200);
 		});
 		$('.modal').on('hide.bs.modal', function() {
 			// $('.wrapper').removeAttr('style');
 			// $('.wrapper').bind('touchmove', true);
+			$(window).unbind('scroll');
+			$('html').removeClass('modal-open');
+			$('body').removeAttr('style');
 		});
 	}
+
 
 	function notOrderFlex() {
 		setEqualHeight();

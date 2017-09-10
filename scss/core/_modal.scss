@@ -17,6 +17,10 @@
         // overflow-y: auto;
         overflow: hidden;
         @media (max-width: 767px) {
+            body {
+                position: absolute;
+                width: 100%;
+            }
             // overflow: none;
             // overflow: auto;
             // .wrapper {
