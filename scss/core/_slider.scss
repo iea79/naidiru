@@ -243,6 +243,9 @@
 				&__item {
 					width: 170px;
 					padding: 0 10px;
+					&:hover {
+						text-decoration: none;
+					}
 				}
 			}
 			@include slider-arrows;

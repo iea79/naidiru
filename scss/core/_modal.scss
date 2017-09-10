@@ -16,13 +16,18 @@
         // overflow-x: hidden;
         // overflow-y: auto;
         overflow: hidden;
-        .wrapper {
-            // position: fixed;
-            // top: 0;
-            // right: 0;
-            // bottom: 0;
-            // left: 0;
-            // overflow: hidden;
+        @media (max-width: 767px) {
+            // overflow: none;
+            // overflow: auto;
+            // .wrapper {
+            //     position: absolute;
+            //     width: 100%;
+            //     // top: 0;
+            //     // right: 0;
+            //     // bottom: 0;
+            //     // left: 0;
+            //     // overflow: hidden;
+            // }
         }
     }
     &:before {

@@ -213,8 +213,9 @@ block content
 			
 			// begin prize__conditions
 			.prize__conditions_wrap.prize__conditions_wrap_new#pm5
-				h2.prize__section_name Условия ежемесячных розыгрышей 
-					a(href="#") Скачать Полные правила акции.pdf
+				.prize__terms
+					h2.prize__section_name.prize__terms_title Условия ежемесячных розыгрышей 
+					a.prize__terms_link(href="#") Скачать Полные правила акции.pdf
 				.prize__conditions
 					img.prize__conditions_left(src="img/icon-sure2.png", alt="#")
 					.prize__conditions_right
@@ -328,7 +329,7 @@ block content
 				h2.prize__people_name Начните прямо сейчас:
 				// begin category__box_grid
 				.category__row_grid.scrollbar-inner
-					div
+					.category__row_grid_wrap
 						.grid__wrapper
 							a.grid__item(href="#")
 								img(src="img/shop1.jpg", alt="#")
@@ -361,7 +362,7 @@ block content
 
 				// begin category__row
 				.category__row_grid.scrollbar-inner
-					div
+					.category__row_grid_wrap
 						.grid__wrapper
 							a.grid__item(href="#")
 								img(src="img/cat-img8.jpg", alt="#")

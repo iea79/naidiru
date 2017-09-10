@@ -680,16 +680,21 @@
 			&:hover {
 				// color: $warning-color;
 				text-decoration: none;
-				&:before {
-					content: image-url('star-white.svg');
-				}
+				// &:before {
+				// 	content: image-url('star-white.svg');
+				// }
+				background-image: image-url('star-white.svg');
 			}
 			&.active {
 				// color: $warning-color;
+				background-image: image-url('star-red.svg');
 				text-decoration: none;
-				&:before {
-					content: image-url('star-red.svg');
+				&:hover {
+					// background-image: image-url('star-white.svg');
 				}
+				// &:before {
+				// 	content: image-url('star-red.svg');
+				// }
 			}
 		}
 	}
@@ -2730,7 +2735,7 @@
 			.ya-share2__icon {
 				width: 24px !important;
 				height: 24px !important;
-				background-size: 24px 24px;
+				background-size: 24px 24px  !important;
 			}
 		}
 		&_comments {
@@ -2974,7 +2979,7 @@
 			.ya-share2__icon {
 				width: 24px !important;
 				height: 24px !important;
-				background-size: 24px 24px;
+				background-size: 24px 24px !important;
 			}
 		}
 	}
@@ -3723,6 +3728,9 @@
 			z-index: 1;
 			display: block;
 			@include trs(0);
+			&:hover {
+				text-decoration: none;
+			}
 			&_like {
 				position: absolute;
 				top: 24px;
@@ -3914,14 +3922,14 @@
 // Страница Все промокоды all-promocodes.html ///////////////
 // ==========================================================
 .all-promocodes {
-	h1 {
+	&_title {
 		position: relative;
 	}
 	@media (max-width: 767px) {
 		.white__line {
 			padding-bottom: 0 !important;
 		}
-		h1 {
+		&_title {
 			width: 280px;
 			margin: 0 auto;
 			.desktop {
@@ -4867,7 +4875,7 @@
 		.scroll-y {
 			display: none !important;
 		}
-		&>div {
+		&_wrap {
 			white-space: nowrap;	
 			margin-bottom: 10px;
 			margin-left: -27px;
@@ -4902,9 +4910,6 @@
 					margin-bottom: 8px;
 				}
 			}
-		}
-		.scroll-x {
-			bottom: 10px !important;
 		}
 	}
 	@media (max-width: 767px) {
@@ -5939,11 +5944,13 @@
 			display: block;
 			float: none;
 			@include browser("not-flex") {
-				height: 180px;
+				// height: 180px;
+				img {				
+					min-height: initial;
+				}
 			}
 			img {
 				max-width: 100%;
-				min-height: auto;
 				display: block;
 			}
 		}
@@ -8484,6 +8491,9 @@
 			&:hover {
 				background: url('../img/heart-red.svg') no-repeat 0 2px;
 				background-size: 32px 26px;
+				@media (max-width: 1280px) {
+					background-image: url('../img/heart.svg');
+				}
 			}
 			&.active {
 				background: url('../img/heart-red.svg') no-repeat 0 2px;
@@ -8493,6 +8503,11 @@
 				}
 				.category__top_right_subscribe_out {
 					display: inline-block;
+				}
+				@media (max-width: 1280px) {
+					&:hover {					
+						background-image: url('../img/heart-red.svg');
+					}
 				}
 			}
 		}
@@ -9466,6 +9481,26 @@
 		h1 {
 			margin-top: 0;
 			margin-bottom: 20px;
+		}
+	}
+	&__terms {
+		@extend %clear_a;
+		&_title {
+			float: left;
+		}
+		&_link {
+			float: right;
+			
+		}
+		@media (max-width: 767px) {
+			text-align: center;
+			&_title,&_link {
+				float: none;
+			}
+			&_link {
+				display: inline-block;
+				margin-bottom: 20px;
+			}
 		}
 	}
 }
@@ -10870,12 +10905,15 @@
 			}
 			&:hover {
 				background-image: url('../img/heart-red.svg');
+				@media (max-width: 1280px) {
+					background-image: url('../img/heart.svg');
+				}
 			}
 			&.active {
 				background-image: url('../img/heart-red.svg');
 				&:hover {
 					@media (max-width: 1280px) {
-						background-image: url('../img/heart.svg');
+						background-image: url('../img/heart-red.svg');
 					}
 				}
 			}
