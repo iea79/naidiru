@@ -88,12 +88,15 @@
 	text-align: center;
 	position: relative;
 	&_btn {
-		padding-left: 240px;
-		padding-right: 240px;
+		// padding-left: 240px;
+		// padding-right: 240px;
+		@extend %clear_a;
+		position: relative;
 		.btn {
-			float: right;
+			// float: right;
 			top: -5px;
-			right: 50px;
+			// right: 50px;
+			right: 0;
 			position: absolute;
 			width: 170px;
 		}
@@ -111,8 +114,12 @@
 	}
 	@media (max-width: 991px) {
 		&_btn {
-			padding-left: 10px;
-			padding-right: 10px;
+			// padding-left: 10px;
+			// padding-right: 10px;
+			margin-bottom: 23px;
+			.section__title {
+				margin-bottom: 10px;
+			}
 			.btn {
 				position: static;
 				display: block;
@@ -128,6 +135,7 @@
 		font-size: 18px;
 		&_btn {
 			text-align: center;
+			margin-bottom: 5px;
 			.btn {
 				display: none;
 			}

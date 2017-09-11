@@ -36,23 +36,13 @@ $(document).ready(function() {
 
 	if (isXsWidth()) {
 		$('.modal').on('show.bs.modal', function() {
-			// $('.wrapper').css('position', 'absolute');
-			// $('.wrapper').bind('touchmove', false);
-			var winScrollTop = $(window).scrollTop();
-			$(window).bind('scroll',function () {
-			  $(window).scrollTop(winScrollTop);
+			$('body').css('position', 'fixed');
+			$('body').css({
+				position: 'fixed',
+				width: '100%'
 			});
-			setTimeout(function() {			
-				$('body').removeClass('modal-open')
-				$('html').addClass('modal-open');
-				$('body').css('top', '-'+winScrollTop+'px');
-			}, 200);
 		});
 		$('.modal').on('hide.bs.modal', function() {
-			// $('.wrapper').removeAttr('style');
-			// $('.wrapper').bind('touchmove', true);
-			$(window).unbind('scroll');
-			$('html').removeClass('modal-open');
 			$('body').removeAttr('style');
 		});
 	}
@@ -111,15 +101,11 @@ $(document).ready(function() {
 		var winHeight = $(window).height();
 		var headHeight = $('.header').height();
 		var menuHeight = winHeight - headHeight;
-		// console.log(headHeight);
-		// console.log(menuHeight);
 		if (winWidth<=991) {	
 			return menuHeight;
 		} else {
-			// if (!$(this).hasClass('open')) {
-				$('.login__box_drop').removeAttr('style');
-				$('body').removeClass('body-overflow');
-			// }
+			$('.login__box_drop').removeAttr('style');
+			$('body').removeClass('body-overflow');
 		}
 	}
 	
@@ -129,14 +115,10 @@ $(document).ready(function() {
 
 	$(window).resize(function() {
 
-		// $('.login__box,.mobile__menu').removeClass('open').removeAttr('style');
-		// $('body').removeClass('body-overflow');
 		resizeMenu();
 
 		setHeiHeight();
-		// if (winWidth<=991) {	
-			setMenuHei();
-		// }
+		setMenuHei();
 	});
 
 	// Reset link whte attribute href="#"
@@ -264,15 +246,10 @@ $(document).ready(function() {
 		var itemCount = $.each(sliderItem, function(index, val) {
 			 count =+ index;
 		});
-		// var currentSlide = slider.slick('slickCurrentSlide');
 		$('.presentation__sliderfoot_next_count').find('.current').text(1);
 		$('.presentation__sliderfoot_next_count').find('.total').text(itemCount.length);
 
 		$('.presentation__sliderfoot_next').show();
-
-		slider.on('beforeChange', function() {
-			// $('.presentation__sliderfoot_next').slideUp(500);
-		});
 
 		slider.on('afterChange', function(){
 			var current = slider.slick('slickCurrentSlide');
@@ -718,12 +695,6 @@ $(document).ready(function() {
     		$(this).addClass('active').html('Сохранен');
     	}
     });
-
-	// if ($('.sale__list_save').hasClass('active')) {
-	// 	$('.sale__list_save').html('Сохранен');
-	// } else {
- //    	$('.sale__list_save').html('Сохранить');
-	// }
 
 	$('.office__support_trigger').on('click', function(event) {
 		event.preventDefault();
