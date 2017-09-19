@@ -420,3 +420,9 @@ p {
 		}
 	}
 }
+
+.tablet-hide {
+	@media (max-width: 1280px) {
+		display: none !important;
+	}
+}
